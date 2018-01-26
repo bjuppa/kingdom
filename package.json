@@ -1,0 +1,20 @@
+{
+  "name": "kingdom",
+  "version": "0.1.0",
+  "description": "A CSS framework for consistent spacing and typography.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/bjuppa/kingdom.git"
+  },
+  "keywords": ["css", "typography", "spacing", "responsive-locks", "breakpoints"],
+  "author": "Björn Nilsved",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/bjuppa/kingdom/issues"
+  },
+  "homepage": "https://github.com/bjuppa/kingdom#readme"
+}
