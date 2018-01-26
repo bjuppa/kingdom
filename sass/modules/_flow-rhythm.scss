@@ -1,0 +1,59 @@
+$vertical-rhythm-base: 2rem !default;
+$font-size-normal: $vertical-rhythm-base / 1.5 !default; // This makes the default line height 1.5
+$baseline-shift-factor-normal: 0.71 !default; // This shifts text down to the baseline, adjust it to your liking (it's relative em and differs for every font)
+
+// Find the next vertical rhythm multiple fitting the required size
+// Make sure the supplied $size-to-fit and $vertical-rhythm-base are of the same unit (preferably rem)
+@function flow-fitting-lines($size-to-fit, $vertical-rhythm-base: $vertical-rhythm-base) {
+  @return ceil($size-to-fit / $vertical-rhythm-base);
+}
+
+// Set a line-height from a desired font-size to follow a vertical rhythm
+@mixin flow-vertical-rhythm($font-size: $font-size-normal, $vertical-rhythm-base: $vertical-rhythm-base) {
+  /* Make the line height the next vertical rhythm multiple fitting the font-size */
+  font-size: $font-size;
+  line-height: flow-fitting-lines($font-size, $vertical-rhythm-base) * $vertical-rhythm-base;
+}
+
+// Set a font-size from a desired line-height and a number of vertical-rhytm lines to cover
+@mixin flow-font-size-from-line-height($line-height: 1.1, $lines: 2, $vertical-rhythm-base: $vertical-rhythm-base) {
+  /* Make the font size match the desired line-height covering the number of lines */
+  font-size: $lines * $vertical-rhythm-base / $line-height;
+  line-height: $lines * $vertical-rhythm-base;
+}
+
+// Remove any vertical shift applied by flow-baseline-rhythm()
+@mixin flow-baseline-rhythm-reset() {
+  position: initial;
+  top: initial;
+}
+
+// Apply vertical rhythm and shift text down to the baseline
+// $baseline-shift-factor is relative em and differs for every font (hint: start at 0.71 and adjust to your liking)
+@mixin flow-baseline-rhythm($font-size: $font-size-normal, $baseline-shift-factor: $baseline-shift-factor-normal, $vertical-rhythm-base: $vertical-rhythm-base) {
+  @include flow-vertical-rhythm($font-size, $vertical-rhythm-base);
+  /* Shift #{$font-size} text down to the baseline using a factor #{$baseline-shift-factor} */
+  position: relative;
+  top: calc((#{flow-fitting-lines($font-size, $vertical-rhythm-base)} * #{$vertical-rhythm-base} - 1em * #{$baseline-shift-factor}) / 2);
+  p, blockquote, address, li, dt, dd {
+    /* Reset the baseline shift on some default elements within a shifted element to avoid shifting twice */
+    @include flow-baseline-rhythm-reset();
+  }
+}
+
+// Apply a responsive increase in discrete steps
+@mixin responsive-rhythm($start-multiple: 5, $end-multiple: 15, $from-viewport-width: 600px, $to-viewport-width: 1800px, $properties: height, $rhythm-base: $vertical-rhythm-base, $media: screen) {
+  $breakpoint-step-size: round(($to-viewport-width - $from-viewport-width) / ($end-multiple - $start-multiple));
+
+  @each $property in $properties {
+    #{$property}: $start-multiple * $rhythm-base;
+  }
+
+  @for $i from $start-multiple + 1 through $end-multiple {
+    @media #{$media} and (min-width: $from-viewport-width + ($i - $start-multiple) * $breakpoint-step-size) {
+      @each $property in $properties {
+        #{$property}: $i * $rhythm-base;
+      }
+    }
+  }
+}
