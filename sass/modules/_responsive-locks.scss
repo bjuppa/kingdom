@@ -1,0 +1,66 @@
+// Inspired by Indrek Paas http://www.sassmeister.com/gist/7f22e44ace49b5124eec
+// and Florens Verschelde https://fvsch.com/code/css-locks/
+//
+// Make sure to use the same units for viewport widths and the min and max values
+// When following a vertical rhythm the best results are achieved with pixel values
+@import "strip-unit";
+
+// Set up responsive transitions happening between two viewport widths, not affecting anything outside the "lock"
+// Use this function to line up several transitions after each other
+// $properties-with-values can be one or more sass lists consisting of a property name followed by its min and max values to scale between
+// Example $properties-with-values: (font-size 16px 32px) (line-height 20px 36px)
+@mixin responsive-linear-transition($from-viewport-width, $to-viewport-width, $properties-with-values, $media: screen) {
+  @media #{$media} and (min-width: $from-viewport-width) {
+    @each $property, $start-value, $end-value in $properties-with-values {
+      @if (type_of($end-value) != null) {
+        /* Responsive linear transition:
+           #{$property} scaling between viewport widths
+              |   |  _#{$end-value}
+              |  /|  _
+              | / |  _
+              |/  |  _#{$start-value}
+              |   |  _
+           #{$from-viewport-width} #{$to-viewport-width}
+        */
+        #{$property}: calc(#{$start-value} + #{strip-unit($end-value - $start-value)} * (100vw - #{$from-viewport-width}) / #{strip-unit($to-viewport-width - $from-viewport-width)});
+      } @else {
+        /* Fixed value during transition: */
+        #{$property}: $start-value;
+      }
+    }
+  }
+}
+
+// Set up one responsive transition between two viewport widths, with the start and end values kept constant outside the "lock"
+@mixin responsive-lock($from-viewport-width, $to-viewport-width, $properties, $start-value, $end-value, $media: screen) {
+  /* Responsive lock:
+      #{$properties} constant outside and scaling between viewport widths
+         |   |___#{$end-value}
+         |  /|  _
+         | / |  _
+      ___|/  |  _#{$start-value}
+         |   |  _
+      #{$from-viewport-width} #{$to-viewport-width}
+  */
+
+  // Properties for use below the lower responsive lock at #{$from-viewport-width} viewport width
+  @each $property in $properties {
+    #{$property}: $start-value;
+  }
+
+  // Build a list of lists of properties for the linear part of the lock
+  $properties-with-values: ();
+  @each $property in $properties {
+    // Add each property with the min and max values
+    $properties-with-values: append($properties-with-values, ($property $start-value $end-value));
+  }
+
+  @include responsive-linear-transition($from-viewport-width, $to-viewport-width, $properties-with-values, $media);
+
+  @media #{$media} and (min-width: $to-viewport-width) {
+    // Properties for use above the upper responsive lock at #{$to-viewport-width} viewport width
+    @each $property in $properties {
+      #{$property}: $end-value;
+    }
+  }
+}
