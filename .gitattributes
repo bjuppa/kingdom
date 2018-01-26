@@ -6,3 +6,4 @@
 .gitignore export-ignore
 
 .editorconfig export-ignore
+.development.md export-ignore
