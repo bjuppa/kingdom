@@ -1,6 +1,7 @@
 * text=auto
 
 /composer.lock -merge
+/package-lock.json -merge
 
 .gitattributes export-ignore
 .gitignore export-ignore
