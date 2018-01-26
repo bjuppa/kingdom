@@ -1,0 +1,74 @@
+/* CSS reset */
+// For inspiration on other resets you may want to do/include, check out:
+// https://github.com/necolas/normalize.css
+// https://github.com/shankariyerr/tinyreset
+
+$font-family-normal: sans-serif !default;
+$font-size-root: 100% !default;
+$text-color: black !default;
+$body-background-color: white !default;
+
+:root {
+  font-family: $font-family-normal;
+  font-size: $font-size-root;
+  color: $text-color;
+}
+
+html, body {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: $body-background-color;
+}
+
+// Reset the default box-sizing to border-box but make it easy to override when needed
+// https://css-tricks.com/box-sizing/
+html {
+  box-sizing: border-box;
+}
+
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
+// Fallback for browsers that don't support the hidden attribute
+// https://medium.com/@matuzo/writing-html-with-accessibility-in-mind-a62026493412
+[hidden] {
+  display: none;
+}
+
+// Correct display type
+article,
+aside,
+footer,
+header,
+nav,
+section,
+figcaption,
+figure,
+main,
+details,
+menu,
+hgroup // hgroup is deprecated but may be useful to include anyway
+{
+  display: block;
+}
+
+// Remove the border on images inside links in IE 10-
+img {
+  border-style: none;
+}
+
+// Correct svg overflow in IE
+svg:not(:root) {
+  overflow: hidden;
+}
+
+// Responsive images
+// https://alligator.io/css/minimal-css-reset/
+img {
+  max-width: 100%;
+  height: auto;
+}
