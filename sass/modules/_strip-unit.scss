@@ -1,0 +1,6 @@
+// Strip any unit from a sass value
+// From Hugo Giraudel
+
+@function strip-unit($value) {
+  @return $value / ($value * 0 + 1);
+}
