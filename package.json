@@ -10,11 +10,20 @@
     "type": "git",
     "url": "git+https://github.com/bjuppa/kingdom.git"
   },
-  "keywords": ["css", "typography", "spacing", "responsive-locks", "breakpoints"],
+  "keywords": [
+    "css",
+    "typography",
+    "spacing",
+    "responsive-locks",
+    "breakpoints"
+  ],
   "author": "Björn Nilsved",
   "license": "MIT",
   "bugs": {
     "url": "https://github.com/bjuppa/kingdom/issues"
   },
-  "homepage": "https://github.com/bjuppa/kingdom#readme"
+  "homepage": "https://github.com/bjuppa/kingdom#readme",
+  "devDependencies": {
+    "laravel-mix": "^2.0.0"
+  }
 }
