@@ -5,10 +5,10 @@ A CSS framework for consistent spacing and typography.
 "If content is king, context is the kingdom"
 
 
-## CSS Reset
+## Level—1 CSS Reset
 
 
-## Level—1 Vertical Space
+## Level—2 Vertical Space
 - Horizontal spacing is controlled with `margin-top`.
 - Keep `margin-bottom` at `0`.
 - Control margin on elements *from the outside* (using CSS combinators) so that elements don’t set their own spacing.
@@ -44,7 +44,7 @@ Utility classes and mixins for cancelling out default vertical spacing (`margin-
 * `.no-vertical-spacing-after` using adjacent sibling combinator (`+ *`)
 
 
-## Level 2—Vertical Rhythm
+## Level 3—Vertical Rhythm
 - Avoid setting font-size on `:root` (assume `16px`).
 - Set `font-size` and `line-height` on `body` — this line-height becomes the *vertical rhythm base*.
 - Have all elements inherit `font-family`, `font-size` and `line-height`.
@@ -116,7 +116,7 @@ Utility classes setting vertical margins, padding, or borders should be adapted 
 Adding negative margin to the bottom is recommended if there is no padding to adjust.
 
 
-## Level 3—Baseline Rhythm
+## Level 4—Baseline Rhythm
 - Shift text in blocks down to their baseline using `position: relative`.
 - Default to a font common to all browsers as the shift factor is font-specific.
 - Use CSS vars to scope the line-height and shift factor.
