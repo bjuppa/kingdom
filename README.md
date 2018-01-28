@@ -21,11 +21,10 @@ Reset `margin` on all elements to `0` using universal selector (`*`).
 Set `margin-top` to `$vertical-space-base` using adjacent sibling combinator (`* + *`) for default horizontal spacing.
 
 Remove vertical spacing from:
-* all elements after `h1`-`h6`/`hgroup`/`script`/`template`/`map`/`input[type=hidden]`
+* all elements after `h1`-`h6`/`dt`/`hgroup`/`script`/`template`/`map`/`input[type=hidden]`
 * last-child `script`/`template`/`map`/`input[type=hidden]`
 * `textarea`/`select` after `label`
 * `input` after `label` where input's `type` is not `button`|`reset`|`submit`
-* `dd` after `dt`
 
 Remove all vertical spacing inside:
 * `figure`
