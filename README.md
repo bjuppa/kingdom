@@ -85,18 +85,15 @@ Mixin for calculating `line-height` from a `font-size`:
 ceil(font-size*$min-line-height-factor/$vertical-rhythm-base)*$vertical-rhythm-base`
 ```
 
-Mixins for fitting element `height to nearest multiple of the vertical rhythm base:
+Mixins for fitting element `height` to nearest multiple of the vertical rhythm base:
 * From `em/rem/px`
 * From `vh/vw` (`%=vh`)
 
 Every `$font-size-N` should have a corresponding `$line-height-N`.
 
 Make `$font-size-1` = `$body-leading/$body-line-height-factor`
-Make `$font-size-2` = `$font-size-1*$modular-scale`
-Make `$font-size-3` = `$font-size-2*$modular-scale`
-Make `$font-size-4` = `$font-size-3*$modular-scale`
-Make `$font-size-5` = `$font-size-4*$modular-scale`
-Make `$font-size-6` = `$font-size-5*$modular-scale`
+
+Make `$font-size-N` = `$font-size-(N-1)*$modular-scale`
 
 Utility classes and mixins for text sizes:
 * `.text-1` to `.text-6` setting `font-size` and `line-height`.
