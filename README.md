@@ -5,10 +5,10 @@ A CSS framework for consistent spacing and typography.
 "If content is king, context is the kingdom"
 
 
-## Level—1 CSS Reset
+## Level 1—CSS Reset
 
 
-## Level—2 Vertical Space
+## Level 2—Vertical Spacing
 - Horizontal spacing is controlled with `margin-top`.
 - Keep `margin-bottom` at `0`.
 - Control margin on elements *from the outside* (using CSS combinators) so that elements don’t set their own spacing.
