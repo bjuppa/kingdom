@@ -64,13 +64,15 @@ Make `$modular-scale = pow($font-size-N/$font-size-1, 1/(N-1))`
 Example modular scale: ((2*2/1,2)/(2/1,5))^(1/(5-1)) = 1,257…
 
 Defaults:
-* $body-line-height-factor: 1.5
-* $min-line-height-factor: 1.2
-* $desired-body-font-size: 18px
-* $modular-scale: 1.257
+* `$body-line-height-factor: 1.5`
+* `$min-line-height-factor: 1.2`
+* `$desired-body-font-size: 18px`
+* `$modular-scale: 1.257`
 
 Make `$body-leading = (round($desired-body-font-size*$body-line-height-factor)/16px) rem`
+
 Make `$vertical-rhythm-base = $body-leading`
+
 Make `$vertical-space-base = $vertical-rhythm-base`
 
 Mixin for calculating `font-size` from a desired number of `$lines` and a desired `$line-height-factor`:
