@@ -8,6 +8,8 @@ $body-leading: round($desired-body-font-size*$body-line-height-factor)/16px*1rem
 $vertical-rhythm-base: $body-leading;
 $vertical-space-base: $vertical-rhythm-base;
 
+@import "modules/flow-rhythm";
+
 @import "L2-spacing";
 
 /* Kingdom CSS Level 3 - Vertical Rhythm */
