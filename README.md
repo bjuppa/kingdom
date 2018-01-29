@@ -6,7 +6,9 @@ A CSS framework for consistent spacing and typography.
 
 
 ## Level 1—CSS Reset
-
+Defaults:
+* `$text-color: black`
+* `$body-background-color: white`
 
 ## Level 2—Vertical Spacing
 - Horizontal spacing is controlled with `margin-top`.
