@@ -2,6 +2,7 @@
 
 $text-color: black !default;
 $body-background-color: white !default;
+$body-padding: 0 .5rem;
 
 // For inspiration on other resets you may want to do/include, check out:
 // https://github.com/necolas/normalize.css
@@ -10,11 +11,11 @@ $body-background-color: white !default;
 body {
   color: $text-color;
   background-color: $body-background-color;
+  padding: $body-padding;
 }
 
 html, body {
   margin: 0;
-  padding: 0;
 }
 
 // Reset the default box-sizing to border-box but make it easy to override when needed
