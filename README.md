@@ -10,6 +10,7 @@ Defaults:
 * `$text-color: black`
 * `$body-background-color: white`
 
+
 ## Level 2—Vertical Spacing
 - Horizontal spacing is controlled with `margin-top`.
 - Keep `margin-bottom` at `0`.
