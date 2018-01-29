@@ -9,6 +9,7 @@ A CSS framework for consistent spacing and typography.
 Defaults:
 * `$text-color: black`
 * `$body-background-color: white`
+* `$body-padding: 0 .5rem`
 
 
 ## Level 2—Vertical Spacing
