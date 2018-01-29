@@ -7,17 +7,14 @@ $body-background-color: white !default;
 // https://github.com/necolas/normalize.css
 // https://github.com/shankariyerr/tinyreset
 
-:root {
+body {
   color: $text-color;
+  background-color: $body-background-color;
 }
 
 html, body {
   margin: 0;
   padding: 0;
-}
-
-body {
-  background-color: $body-background-color;
 }
 
 // Reset the default box-sizing to border-box but make it easy to override when needed
