@@ -50,7 +50,7 @@ Utility classes and mixins for cancelling out default vertical spacing (`margin-
 ## Level 3—Vertical Rhythm
 - Avoid setting font-size on `:root` (assume `16px`).
 - Set `font-size` and `line-height` on `body` — this line-height becomes the *vertical rhythm base*.
-- Have all elements inherit `font-family`, `font-size` and `line-height`.
+- Have all elements inherit `font-size` and `line-height`.
 - Whenever `line-height` is set, also set `—line-height` for use with `calc()`.
 - Specifically set `font-size` and the corresponding `line-height` on headings and other elements with differing text sizes.
 
@@ -121,6 +121,7 @@ Adding negative margin to the bottom is recommended if there is no padding to ad
 ## Level 4—Baseline Rhythm
 - Shift text in blocks down to their baseline using `position: relative`.
 - Default to a font common to all browsers as the shift factor is font-specific.
+- Have all elements inherit `font-family`.
 - Use CSS vars to scope the line-height and shift factor.
 - When setting `font-family`, also set `-—baseline-shift-factor` for use with `calc()`.
 
