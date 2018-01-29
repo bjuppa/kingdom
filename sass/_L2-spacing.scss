@@ -1,0 +1,22 @@
+/* Kingdom CSS Level 2 - Vertical Spacing */
+
+$vertical-space-base: 1em !default;
+
+@import "L1-reset";
+
+* {
+  /* Reset all margins */
+  margin: 0;
+}
+
+* + * {
+  /* Set default vertical spacing between all adjacent elements */
+  margin-top: $vertical-space-base;
+}
+
+h1, h2, h3, h4, h5, h6, dt, hgroup, script, template, map, input[type=hidden] {
+  > * {
+    /* Reset the default vertical spacing after some elements */
+    margin-top: 0;
+  }
+}
