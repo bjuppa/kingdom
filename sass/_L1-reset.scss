@@ -1,16 +1,13 @@
-/* CSS reset */
+/* Kingdom CSS Reset - Level 1 */
+
+$text-color: black !default;
+$body-background-color: white !default;
+
 // For inspiration on other resets you may want to do/include, check out:
 // https://github.com/necolas/normalize.css
 // https://github.com/shankariyerr/tinyreset
 
-$font-family-normal: sans-serif !default;
-$font-size-root: 100% !default;
-$text-color: black !default;
-$body-background-color: white !default;
-
 :root {
-  font-family: $font-family-normal;
-  font-size: $font-size-root;
   color: $text-color;
 }
 
