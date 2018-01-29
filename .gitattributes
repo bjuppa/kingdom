@@ -2,7 +2,7 @@
 
 .gitattributes export-ignore
 .gitignore export-ignore
-
 .editorconfig export-ignore
 .development.md export-ignore
 /webpack.mix.js export-ignore
+/resources export-ignore
