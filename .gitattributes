@@ -8,3 +8,4 @@
 
 .editorconfig export-ignore
 .development.md export-ignore
+/webpack.mix.js export-ignore
