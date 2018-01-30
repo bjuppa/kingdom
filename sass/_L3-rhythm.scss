@@ -59,9 +59,7 @@ $line-height-6: flow-line-height($font-size-6) !default;
 }
 
 .text-inherit {
-  font-size: inherit;
-  line-height: inherit;
-  //TODO: handle --line-height
+  @include flow-text(inherit, inherit);
 }
 
 .text-small {
@@ -71,7 +69,6 @@ $line-height-6: flow-line-height($font-size-6) !default;
 .text-body {
   @extend .text-1;
 }
-
 
 // Apply text properties to elements...
 
