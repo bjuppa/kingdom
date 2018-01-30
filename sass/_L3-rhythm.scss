@@ -115,3 +115,10 @@ hr {
   border: 0; // Remove user agent borders
   background-color: $hr-color;
 }
+
+.visualize-vertical-rhythm {
+  // This doesn't work very well when $vertical-rhythm-base doesn't correspond to a whole pixel value
+  $grid-color: rgba(red, 0.15);
+  background-image: linear-gradient($grid-color, $grid-color 1px, transparent 1px);
+  background-size: 1px $vertical-rhythm-base;
+}
