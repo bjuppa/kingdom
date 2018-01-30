@@ -56,9 +56,9 @@ Utility classes and mixins for cancelling out default vertical spacing (`margin-
 
 Use `1rem`=`1em`=`16px` as a base for conversions.
 
-Mixins for converting `font-size` from `px`/`percentage`/`factor`/`em` to `rem` and from `rem`/`percentage`/`factor`/`em` to `px`.
+Function for converting `font-size` from `px`/`percentage`/`factor`/`em` to `rem` and from `rem`/`percentage`/`factor`/`em` to `px`.
 
-Mixin for converting length values from `px`/`em` to `rem`.
+Function for converting length values from `px`/`em` to `rem`.
 
 ### How to come up with a modular scale?
 Make `$font-size-5=2*$body-leading/$min-line-height-factor` (for `h2` to fill 2 rows)
