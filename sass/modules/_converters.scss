@@ -1,0 +1,43 @@
+$px-rem-ratio: 16 !default;
+$px-in-ratio: 96 !default;
+
+@import "strip-unit";
+
+// Convert css length value to approximate equivalent in rem
+@function length-rem($length) {
+  @if (index('em' 'rem', unit($length)) != null) {
+    @return strip-unit($length)*1rem;
+  }
+
+  //TODO: handle in, mm, cm, pt, pc https://developer.mozilla.org/en-US/docs/Web/CSS/length
+
+  @return $length/($px-rem-ratio*1px)*1rem;
+}
+
+// Convert font-size to approximate equivalent in rem
+@function font-size-rem($font-size) {
+  @if (index('em' 'rem', unit($font-size)) != null) {
+    $font-size: strip-unit($font-size);
+  } @else if (unit($font-size) == '%') {
+    $font-size: $font-size/100%;
+  }
+
+  //TODO: handle xx-small, x-small, small, medium, large, x-large, xx-large
+  //TODO: handle larger, smaller
+  //TODO: handle ex
+
+  @if (unit($font-size) == 'px') {
+    $font-size: $font-size/($px-rem-ratio*1px);
+  }
+
+  @return $font-size*1rem;
+}
+
+// Convert font-size to approximate equivalent in px
+@function font-size-px($font-size) {
+  @if (unit($font-size) == 'px') {
+    @return $font-size;
+  }
+
+  @return strip-unit(font-size-rem($font-size))*$px-rem-ratio*1px;
+}
