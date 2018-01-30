@@ -1,44 +1,32 @@
 $vertical-rhythm-base: 2rem !default;
-$font-size-normal: $vertical-rhythm-base / 1.5 !default; // This makes the default line height 1.5
+$body-line-height-factor: 1.5 !default;
+$min-line-height-factor: 1.2 !default;
 $baseline-shift-factor-normal: 0.71 !default; // This shifts text down to the baseline, adjust it to your liking (it's relative em and differs for every font)
 
+@import "converters";
+
+$font-size-normal: $vertical-rhythm-base / $body-line-height-factor !default;
+
 // Find the next vertical rhythm multiple fitting the required size
-// Make sure the supplied $size-to-fit and $vertical-rhythm-base are of the same unit (preferably rem)
-@function flow-fitting-lines($size-to-fit, $vertical-rhythm-base: $vertical-rhythm-base) {
-  @return ceil($size-to-fit / $vertical-rhythm-base);
+@function flow-lines($size-to-fit, $vertical-rhythm-base: $vertical-rhythm-base) {
+  @return ceil(length-rem($size-to-fit) / length-rem($vertical-rhythm-base));
 }
 
-// Set a line-height from a desired font-size to follow a vertical rhythm
-@mixin flow-vertical-rhythm($font-size: $font-size-normal, $vertical-rhythm-base: $vertical-rhythm-base) {
-  /* Make the line height the next vertical rhythm multiple fitting the font-size */
+// Get a font-size comfortably covering a number of vertical rhythm lines
+@function flow-font-size($lines: 1, $line-height-factor: $body-line-height-factor, $vertical-rhythm-base: $vertical-rhythm-base) {
+  @return $lines*$vertical-rhythm-base/$line-height-factor;
+}
+
+// Get a line-height fitting a font-size into the vertical rhythm
+@function flow-line-height($font-size: $font-size-normal, $min-line-height-factor: $min-line-height-factor, $vertical-rhythm-base: $vertical-rhythm-base) {
+  @return ceil(font-size-rem($font-size)*$min-line-height-factor/length-rem($vertical-rhythm-base))*$vertical-rhythm-base;
+}
+
+@mixin flow-text($font-size, $line-height) {
   font-size: $font-size;
-  line-height: flow-fitting-lines($font-size, $vertical-rhythm-base) * $vertical-rhythm-base;
-}
-
-// Set a font-size from a desired line-height and a number of vertical-rhytm lines to cover
-@mixin flow-font-size-from-line-height($line-height: 1.1, $lines: 2, $vertical-rhythm-base: $vertical-rhythm-base) {
-  /* Make the font size match the desired line-height covering the number of lines */
-  font-size: $lines * $vertical-rhythm-base / $line-height;
-  line-height: $lines * $vertical-rhythm-base;
-}
-
-// Remove any vertical shift applied by flow-baseline-rhythm()
-@mixin flow-baseline-rhythm-reset() {
-  position: initial;
-  top: initial;
-}
-
-// Apply vertical rhythm and shift text down to the baseline
-// $baseline-shift-factor is relative em and differs for every font (hint: start at 0.71 and adjust to your liking)
-@mixin flow-baseline-rhythm($font-size: $font-size-normal, $baseline-shift-factor: $baseline-shift-factor-normal, $vertical-rhythm-base: $vertical-rhythm-base) {
-  @include flow-vertical-rhythm($font-size, $vertical-rhythm-base);
-  /* Shift #{$font-size} text down to the baseline using a factor #{$baseline-shift-factor} */
-  position: relative;
-  top: calc((#{flow-fitting-lines($font-size, $vertical-rhythm-base)} * #{$vertical-rhythm-base} - 1em * #{$baseline-shift-factor}) / 2);
-  p, blockquote, address, li, dt, dd {
-    /* Reset the baseline shift on some default elements within a shifted element to avoid shifting twice */
-    @include flow-baseline-rhythm-reset();
-  }
+  line-height: $line-height;
+  --line-height: $line-height;
+  line-height: var(--line-height);
 }
 
 // Apply a responsive increase in discrete steps
