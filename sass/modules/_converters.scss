@@ -57,3 +57,8 @@ $relative-font-sizes: (
 
   @return strip-unit(font-size-rem($font-size))*$px-rem-ratio*1px;
 }
+
+// Convert font-size to approximate relative size
+@function font-size-em($font-size) {
+  @return font-size-rem($font-size)/1rem*1em;
+}
