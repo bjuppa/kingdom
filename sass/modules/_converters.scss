@@ -1,5 +1,6 @@
 $px-rem-ratio: 16 !default;
 $px-in-ratio: 96 !default;
+$px-cm-ratio: 37.8 !default;
 $em-ex-ratio: 0.5 !default;
 $em-ch-ratio: 0.5 !default;
 $absolute-font-sizes: (
@@ -30,6 +31,13 @@ $relative-font-sizes: (
     @return strip-unit($length)*1rem;
   }
 
+  @if (unit($length) == 'in') {
+    $length: strip-unit($length)*$px-in-ratio*1px;
+  } @else if (unit($length) == 'cm') {
+    $length: strip-unit($length)*$px-cm-ratio*1px;
+  } @else if (unit($length) == 'mm') {
+    $length: strip-unit($length)*$px-cm-ratio*0.1px;
+  }
   //TODO: handle in, mm, cm, pt, pc https://developer.mozilla.org/en-US/docs/Web/CSS/length
 
   @return $length/($px-rem-ratio*1px)*1rem;
