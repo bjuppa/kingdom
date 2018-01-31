@@ -1,8 +1,25 @@
 $vertical-space-base: 1em !default;
+$desired-body-font-size: 18px !default;
+$body-line-height-factor: 1.5 !default;
+$min-line-height-factor: 1.2 !default;
+$modular-scale: 1.257 !default;
+$font-size-small: 80% !default;
+
+@import "modules/converters";
+
+$font-sizes: font-size-rem($desired-body-font-size) !default;
+@while length($font-sizes) < 6 {
+  $font-sizes: append($font-sizes, nth($font-sizes, length($font-sizes)) * $modular-scale);
+}
+
+$line-heights: $body-line-height-factor !default;
+@while length($line-heights) < 6 {
+  $line-heights: append($line-heights, (length($line-heights) + 1) * ($min-line-height-factor - $body-line-height-factor) / 5 + (6 * $body-line-height-factor - $min-line-height-factor) / 5);
+}
 
 @import "L1-reset";
 
-/* Kingdom CSS Level 2 - Vertical Spacing */
+/* Kingdom CSS Level 2 - Vertical Spacing & Sizing */
 
 * {
   margin: 0;
@@ -57,4 +74,64 @@ figure, picture, object, select, table, audio, video, map {
   * {
     @extend .kingdom-spacing-reset;
   }
+}
+
+@import "modules/text";
+
+// Helpers for text sizing
+
+@for $i from 1 through 6 {
+  .text-#{$i} {
+    @include set-text(nth($font-sizes, $i), nth($line-heights, $i));
+  }
+}
+
+.text-inherit {
+  @include set-text(inherit, inherit);
+}
+
+.text-small {
+  font-size: $font-size-small;
+}
+
+.text-body {
+  @extend .text-1;
+}
+
+// Apply text properties to elements...
+
+body {
+  @extend .text-body;
+}
+
+* {
+  @extend .text-inherit;
+}
+
+small {
+  @extend .text-small;
+}
+
+h1 {
+  @extend .text-6;
+}
+
+h2 {
+  @extend .text-5;
+}
+
+h3 {
+  @extend .text-4;
+}
+
+h4 {
+  @extend .text-3;
+}
+
+h5 {
+  @extend .text-2;
+}
+
+h6 {
+  @extend .text-1;
 }
