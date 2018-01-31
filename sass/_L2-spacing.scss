@@ -8,12 +8,12 @@ $font-size-small: 80% !default;
 @import "modules/converters";
 
 $font-sizes: font-size-rem($desired-body-font-size) !default;
-@while length($font-sizes) < 6 {
+@while (length($font-sizes) < 6) {
   $font-sizes: append($font-sizes, nth($font-sizes, length($font-sizes)) * $modular-scale);
 }
 
 $line-heights: $body-line-height-factor !default;
-@while length($line-heights) < 6 {
+@while (length($line-heights) < 6) {
   $line-heights: append($line-heights, (length($line-heights) + 1) * ($min-line-height-factor - $body-line-height-factor) / 5 + (6 * $body-line-height-factor - $min-line-height-factor) / 5);
 }
 
