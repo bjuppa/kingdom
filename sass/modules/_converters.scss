@@ -31,6 +31,13 @@ $relative-font-sizes: (
     @return strip-unit($length)*1rem;
   }
 
+  @if(unit($length) == 'pc') {
+    $length: strip-unit($length)*12pt;
+  }
+  @if(unit($length) == 'pt') {
+    $length: (strip-unit($length)/72)*1in;
+  }
+
   @if (unit($length) == 'in') {
     $length: strip-unit($length)*$px-in-ratio*1px;
   } @else if (unit($length) == 'cm') {
@@ -38,7 +45,6 @@ $relative-font-sizes: (
   } @else if (unit($length) == 'mm') {
     $length: strip-unit($length)*$px-cm-ratio*0.1px;
   }
-  //TODO: handle in, mm, cm, pt, pc https://developer.mozilla.org/en-US/docs/Web/CSS/length
 
   @return $length/($px-rem-ratio*1px)*1rem;
 }
