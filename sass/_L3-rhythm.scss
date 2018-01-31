@@ -15,9 +15,9 @@ $vertical-space-base: $vertical-rhythm-base;
 $font-sizes: flow-font-size(1, $body-line-height-factor),
 flow-font-size(1, ($min-line-height-factor + $body-line-height-factor)/2),
 flow-font-size(1, $min-line-height-factor),
-flow-font-size(2, $body-line-height-factor),
 flow-font-size(2, $min-line-height-factor),
-flow-font-size(3, $min-line-height-factor) !default;
+flow-font-size(3, $min-line-height-factor),
+flow-font-size(4, $min-line-height-factor) !default;
 
 $line-heights: ();
 @each $font-size in $font-sizes {
