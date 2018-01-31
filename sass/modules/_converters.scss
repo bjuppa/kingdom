@@ -1,5 +1,18 @@
 $px-rem-ratio: 16 !default;
 $px-in-ratio: 96 !default;
+$absolute-font-sizes: (
+  xx-small: 55%,
+  x-small: 60%,
+  small: 80%,
+  medium: 100%,
+  large: 110%,
+  x-large: 150%,
+  xx-large: 200%
+);
+$relative-font-sizes: (
+  smaller: 80%,
+  larger: 110%,
+);
 
 @import "strip-unit";
 
@@ -16,15 +29,17 @@ $px-in-ratio: 96 !default;
 
 // Convert font-size to approximate equivalent in rem
 @function font-size-rem($font-size) {
+  @if map-has_key($absolute-font-sizes, $font-size) {
+    $font-size: map-get($absolute-font-sizes, $font-size);
+  } @else if map-has_key($relative-font-sizes, $font-size) {
+    $font-size: map-get($relative-font-sizes, $font-size);
+  }
+
   @if (index('em' 'rem', unit($font-size)) != null) {
     $font-size: strip-unit($font-size);
   } @else if (unit($font-size) == '%') {
     $font-size: $font-size/100%;
   }
-
-  //TODO: handle xx-small, x-small, small, medium, large, x-large, xx-large
-  //TODO: handle larger, smaller
-  //TODO: handle ex
 
   @if (unit($font-size) == 'px') {
     $font-size: $font-size/($px-rem-ratio*1px);
