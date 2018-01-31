@@ -1,0 +1,8 @@
+@mixin set-text($font-size, $line-height) {
+  font-size: $font-size;
+  line-height: $line-height;
+  --line-height: $line-height;
+  @if ($line-height != inherit) {
+    line-height: var(--line-height);
+  }
+}

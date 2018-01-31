@@ -22,15 +22,6 @@ $font-size-normal: $vertical-rhythm-base / $body-line-height-factor !default;
   @return ceil(font-size-rem($font-size)*$min-line-height-factor/length-rem($vertical-rhythm-base))*$vertical-rhythm-base;
 }
 
-@mixin flow-text($font-size, $line-height) {
-  font-size: $font-size;
-  line-height: $line-height;
-  --line-height: $line-height;
-  @if ($line-height != inherit) {
-    line-height: var(--line-height);
-  }
-}
-
 // Apply a responsive increase in discrete steps
 @mixin responsive-rhythm($start-multiple: 5, $end-multiple: 15, $from-viewport-width: 600px, $to-viewport-width: 1800px, $properties: height, $rhythm-base: $vertical-rhythm-base, $media: screen) {
   $breakpoint-step-size: round(($to-viewport-width - $from-viewport-width) / ($end-multiple - $start-multiple));
