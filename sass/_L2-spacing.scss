@@ -2,7 +2,7 @@ $vertical-space-base: 1em !default;
 $desired-body-font-size: 18px !default;
 $body-line-height-factor: 1.5 !default;
 $min-line-height-factor: 1.2 !default;
-$modular-scale: 1.257 !default;
+$modular-scale: 1.2 !default;
 $font-size-smaller: 100%/$modular-scale !default;
 
 @import "modules/converters";
