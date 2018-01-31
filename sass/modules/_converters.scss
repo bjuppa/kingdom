@@ -1,6 +1,7 @@
 $px-rem-ratio: 16 !default;
 $px-in-ratio: 96 !default;
 $em-ex-ratio: 0.5 !default;
+$em-ch-ratio: 0.5 !default;
 $absolute-font-sizes: (
   xx-small: 55%,
   x-small: 60%,
@@ -19,6 +20,12 @@ $relative-font-sizes: (
 
 // Convert css length value to approximate equivalent in rem
 @function length-rem($length) {
+  @if (unit($length) == 'ex') {
+    $length: strip-unit($length)*$em-ex-ratio*1em;
+  } @else if (unit($length) == 'ch') {
+    $length: strip-unit($length)*$em-ch-ratio*1em;
+  }
+
   @if (index('em' 'rem', unit($length)) != null) {
     @return strip-unit($length)*1rem;
   }
@@ -36,6 +43,8 @@ $relative-font-sizes: (
     $font-size: map-get($relative-font-sizes, $font-size);
   } @else if (unit($font-size) == 'ex') {
     $font-size: strip-unit($font-size)*$em-ex-ratio*1em;
+  } @else if (unit($font-size) == 'ch') {
+    $font-size: strip-unit($font-size)*$em-ch-ratio*1em;
   }
 
   @if (index('em' 'rem', unit($font-size)) != null) {
