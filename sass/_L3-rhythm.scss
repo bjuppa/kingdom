@@ -1,7 +1,6 @@
+$desired-body-font-size: 18px !default;
 $body-line-height-factor: 1.5 !default;
 $min-line-height-factor: 1.2 !default;
-$desired-body-font-size: 18px !default;
-$modular-scale: 1.257 !default;
 $hr-height: 1px !default;
 $hr-color: currentColor;
 
@@ -11,102 +10,23 @@ $body-leading: round(font-size-px($desired-body-font-size)*$body-line-height-fac
 $vertical-rhythm-base: $body-leading;
 $vertical-space-base: $vertical-rhythm-base;
 
-$font-size-1: $body-leading/$body-line-height-factor !default;
-$font-size-2: $font-size-1*$modular-scale !default;
-$font-size-3: $font-size-2*$modular-scale !default;
-$font-size-4: $font-size-3*$modular-scale !default;
-$font-size-5: $font-size-4*$modular-scale !default;
-$font-size-6: $font-size-5*$modular-scale !default;
-$font-size-small: 80% !default;
-
 @import "modules/flow-rhythm";
 
-$line-height-1: flow-line-height($font-size-1) !default;
-$line-height-2: flow-line-height($font-size-2) !default;
-$line-height-3: flow-line-height($font-size-3) !default;
-$line-height-4: flow-line-height($font-size-4) !default;
-$line-height-5: flow-line-height($font-size-5) !default;
-$line-height-6: flow-line-height($font-size-6) !default;
+$font-sizes: flow-font-size(1, $body-line-height-factor),
+flow-font-size(1, ($min-line-height-factor + $body-line-height-factor)/2),
+flow-font-size(1, $min-line-height-factor),
+flow-font-size(2, $body-line-height-factor),
+flow-font-size(2, $min-line-height-factor),
+flow-font-size(3, $min-line-height-factor) !default;
+
+$line-heights: ();
+@each $font-size in $font-sizes {
+  $line-heights: append($line-heights, flow-line-height($font-size));
+}
 
 @import "L2-spacing";
 
 /* Kingdom CSS Level 3 - Vertical Rhythm */
-
-// Helpers for text sizing
-
-.text-1 {
-  @include flow-text($font-size-1, $line-height-1);
-}
-
-.text-2 {
-  @include flow-text($font-size-2, $line-height-2);
-}
-
-.text-3 {
-  @include flow-text($font-size-3, $line-height-3);
-}
-
-.text-4 {
-  @include flow-text($font-size-4, $line-height-4);
-}
-
-.text-5 {
-  @include flow-text($font-size-5, $line-height-5);
-}
-
-.text-6 {
-  @include flow-text($font-size-6, $line-height-6);
-}
-
-.text-inherit {
-  @include flow-text(inherit, inherit);
-}
-
-.text-small {
-  font-size: $font-size-small;
-}
-
-.text-body {
-  @extend .text-1;
-}
-
-// Apply text properties to elements...
-
-body {
-  @extend .text-body;
-}
-
-* {
-  @extend .text-inherit;
-}
-
-small {
-  @extend .text-small;
-}
-
-h1 {
-  @extend .text-6;
-}
-
-h2 {
-  @extend .text-5;
-}
-
-h3 {
-  @extend .text-4;
-}
-
-h4 {
-  @extend .text-3;
-}
-
-h5 {
-  @extend .text-2;
-}
-
-h6 {
-  @extend .text-1;
-}
 
 hr {
   // Fit thematic break into the vertical rhythm
