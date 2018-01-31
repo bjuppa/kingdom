@@ -67,3 +67,21 @@ img {
   max-width: 100%;
   height: auto;
 }
+
+// Prevent smaller inline elements from affecting the line height of their parents //
+sub,
+sup {
+  font-size: 75%;
+  line-height: 0;
+  position: relative;
+  vertical-align: baseline;
+}
+sub {
+  bottom: -0.25em;
+}
+sup {
+  top: -0.5em;
+}
+small {
+  font-size: 80%;
+}
