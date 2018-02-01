@@ -28,9 +28,8 @@ html {
   box-sizing: inherit;
 }
 
-// Fallback for browsers that don't support the hidden attribute
-// https://medium.com/@matuzo/writing-html-with-accessibility-in-mind-a62026493412
-[hidden] {
+// Make sure hidden elements are not displayed
+[hidden], template {
   display: none;
 }
 
