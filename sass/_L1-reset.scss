@@ -75,7 +75,7 @@ sup {
   vertical-align: baseline;
 
   a &, u & {
-    display: inline-block; // Remove underlines
+    display: inline-block; // Remove underline
     // Make sure vertical margins are reset when block level element
     margin-top: 0;
     margin-bottom: 0;
