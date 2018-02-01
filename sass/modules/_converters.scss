@@ -63,6 +63,8 @@ $relative-font-sizes: (
     $font-size: strip-unit($font-size)*$em-ch-ratio*1em;
   } @else if (unit($font-size) == '%') {
     $font-size: ($font-size/100%)*1em;
+  } @else if (unitless($font-size)) {
+    $font-size: $font-size*1em;
   }
 
   @return length-rem($font-size);
