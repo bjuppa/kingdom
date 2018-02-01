@@ -1,0 +1,86 @@
+/* Utilities for spacing */
+
+.m-0 {
+  margin: 0;
+}
+
+.mt-0 {
+  margin-top: 0;
+}
+
+.mb-0 {
+  margin-bottom: 0;
+}
+
+.my-0 {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+$number-of-vertical-margin-utilities: 8 !default;
+@for $i from 1 through $number-of-vertical-margin-utilities {
+  .mt-#{$i} {
+    margin-top: $i*$vertical-space-base;
+  }
+}
+
+//TODO: generate horizontal margin utilities (x-axis, left & right)
+
+.p-0 {
+  padding: 0;
+}
+
+.pt-0 {
+  padding-top: 0;
+}
+
+.pb-0 {
+  padding-bottom: 0;
+}
+
+.px-0 {
+  padding-left: 0;
+  padding-right: 0;
+}
+
+.py-0 {
+  padding-top: 0;
+  padding-bottom: 0;
+}
+
+$number-of-vertical-padding-utilities: 4 !default;
+@for $i from 1 through $number-of-vertical-padding-utilities {
+  $length: $i*$vertical-space-base;
+  .p-#{$i} {
+    padding: $length;
+  }
+
+  .pt-#{$i} {
+    padding-top: $length;
+  }
+
+  .pb-#{$i} {
+    padding-bottom: $length;
+  }
+
+  .px-#{$i} {
+    padding-left: $length;
+    padding-right: $length;
+  }
+
+  .py-#{$i} {
+    padding-top: $length;
+    padding-bottom: $length;
+  }
+}
+
+//TODO: loop to generate fraction horizontal padding (only x-axis) and margin utilities (x-axis, left & right)
+.px-1\/2 {
+  $length: 0.5*$vertical-space-base;
+  padding-left: $length;
+  padding-right: $length;
+}
+
+
+//TODO: generate height utilities .h-1 (or lines-1) etc
+//TODO: generate width utilities .w-1 etc

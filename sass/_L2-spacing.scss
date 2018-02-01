@@ -59,7 +59,6 @@ a, abbr, b, bdo, cite, code, dfn, em, i, kbd, q, samp, small, span, strong, sub,
   @extend .kingdom-spacing-reset;
 }
 
-
 textarea, select, input:not([type="button"]):not([type="reset"]):not([type="submit"]) {
   // Reset vertical spacing on non-button form elements, should they become block level elements
   @extend .kingdom-spacing-reset;
@@ -74,7 +73,7 @@ figure, picture, object, select, table, audio, video, map {
 
 @import "modules/text";
 
-// Helpers for text sizing
+/* Helpers for text sizing */
 
 @for $i from 1 through 6 {
   .text-#{$i} {
@@ -140,10 +139,3 @@ h5 {
 h6 {
   @extend .text-x-small;
 }
-
-// Helpers for spacing
-
-//TODO: add utilities for vertical spacing (margin-top)
-
-//TODO: add utilities for vertical padding
-
