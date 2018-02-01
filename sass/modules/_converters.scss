@@ -31,10 +31,10 @@ $relative-font-sizes: (
     @return strip-unit($length)*1rem;
   }
 
-  @if(unit($length) == 'pc') {
+  @if (unit($length) == 'pc') {
     $length: strip-unit($length)*12pt;
   }
-  @if(unit($length) == 'pt') {
+  @if (unit($length) == 'pt') {
     $length: (strip-unit($length)/72)*1in;
   }
 
@@ -43,7 +43,9 @@ $relative-font-sizes: (
   } @else if (unit($length) == 'cm') {
     $length: strip-unit($length)*$px-cm-ratio*1px;
   } @else if (unit($length) == 'mm') {
-    $length: strip-unit($length)*$px-cm-ratio*0.1px;
+    $length: strip-unit($length)*$px-cm-ratio*1px/10;
+  } @else if (unit($length) == 'q') {
+    $length: strip-unit($length)*$px-cm-ratio*1px/40;
   }
 
   @return $length/($px-rem-ratio*1px)*1rem;
@@ -59,17 +61,11 @@ $relative-font-sizes: (
     $font-size: strip-unit($font-size)*$em-ex-ratio*1em;
   } @else if (unit($font-size) == 'ch') {
     $font-size: strip-unit($font-size)*$em-ch-ratio*1em;
-  }
-
-  @if (index('em' 'rem', unit($font-size)) != null) {
-    $font-size: strip-unit($font-size);
   } @else if (unit($font-size) == '%') {
-    $font-size: $font-size/100%;
-  } @else if (unit($font-size) == 'px') {
-    $font-size: $font-size/($px-rem-ratio*1px);
+    $font-size: ($font-size/100%)*1em;
   }
 
-  @return $font-size*1rem;
+  @return length-rem($font-size);
 }
 
 // Convert font-size to approximate equivalent in px
