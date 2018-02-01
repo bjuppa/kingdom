@@ -54,7 +54,7 @@ dt, li, hgroup, h1, h2, h3, h4, h5, h6 {
   }
 }
 
-script, template, map, [type="hidden"], [hidden] {
+template, [type="hidden"], [hidden] {
   // Reset vertical spacing on element's adjacent siblings, and if last among its siblings on the element itself
   // Effect is correct spacing around "hidden" or empty elements
   + *, &:last-child {
