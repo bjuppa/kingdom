@@ -68,12 +68,13 @@ img {
   height: auto;
 }
 
-// Prevent smaller inline elements from affecting the line height of their parents
+// Prevent sub- and superscript from affecting the line height of their parents
 sub,
 sup {
   line-height: 0;
   position: relative;
   vertical-align: baseline;
+  display: inline-block; // Don't render text-decoration
 }
 sub {
   bottom: -0.25em;
