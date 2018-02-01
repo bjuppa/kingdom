@@ -54,8 +54,11 @@ dt, li, hgroup, h1, h2, h3, h4, h5, h6 {
   }
 }
 
-//TODO: Reset vertical spacing on text-elements (span, sub, sup, small, etc.), should they become block level elements
-// https://developer.mozilla.org/en-US/docs/Web/HTML/Inline_elements#Elements
+a, abbr, b, bdo, cite, code, dfn, em, i, kbd, q, samp, small, span, strong, sub, sup, time, var {
+  // Reset vertical spacing on text-elements, should they become block level elements
+  @extend .kingdom-spacing-reset;
+}
+
 
 textarea, select, input:not([type="button"]):not([type="reset"]):not([type="submit"]) {
   // Reset vertical spacing on non-button form elements, should they become block level elements
