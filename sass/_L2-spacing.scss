@@ -117,6 +117,10 @@ small {
   @extend .text-small;
 }
 
+sub, sup {
+  @extend .text-x-small;
+}
+
 h1 {
   @extend .text-4;
 }
