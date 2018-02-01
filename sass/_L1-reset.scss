@@ -74,10 +74,19 @@ sup {
   line-height: 0;
   position: relative;
   vertical-align: baseline;
+
+  a &, u & {
+    display: inline-block; // Remove underlines
+    // Make sure vertical margins are reset when block level element
+    margin-top: 0;
+    margin-bottom: 0;
+  }
 }
+
 sub {
   bottom: -0.25em;
 }
+
 sup {
   top: -0.5em;
 }

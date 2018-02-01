@@ -26,7 +26,7 @@ $line-heights: $body-line-height-factor !default;
 }
 
 * + * {
-  /* Set default vertical spacing between all adjacent elements */
+  /* Set default vertical spacing between all adjacent block level elements */
   margin-top: $vertical-space-base;
 }
 
