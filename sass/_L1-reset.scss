@@ -68,8 +68,7 @@ img {
 }
 
 // Prevent sub- and superscript from affecting the line height of their parents
-sub,
-sup {
+sub, sup {
   line-height: 0;
   position: relative;
   vertical-align: baseline;
