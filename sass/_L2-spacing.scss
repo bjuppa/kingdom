@@ -54,19 +54,12 @@ dt, li, hgroup, h1, h2, h3, h4, h5, h6 {
   }
 }
 
-[type="hidden"] {
-  // Reset vertical spacing on element's adjacent siblings, and if last among its siblings on the element itself
-  // Effect is correct spacing around "hidden" or empty elements
-  + *, &:last-child {
-    @extend .kingdom-spacing-reset;
-  }
-}
+//TODO: Reset vertical spacing on text-elements (span, sub, sup, small, etc.), should they become block level elements
+// https://developer.mozilla.org/en-US/docs/Web/HTML/Inline_elements#Elements
 
 textarea, select, input:not([type="button"]):not([type="reset"]):not([type="submit"]) {
-  // Reset vertical spacing on non-button form elements when preceded by label
-  label + & {
-    @extend .kingdom-spacing-reset;
-  }
+  // Reset vertical spacing on non-button form elements, should they become block level elements
+  @extend .kingdom-spacing-reset;
 }
 
 figure, picture, object, select, table, audio, video, map {
