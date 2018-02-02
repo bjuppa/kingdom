@@ -73,16 +73,12 @@ figure, picture, object, select, table, audio, video, map {
 
 @import "modules/text";
 
-/* Helpers for text sizing */
+/* Utilities for text sizing */
 
 @for $i from 1 through 6 {
   .text-#{$i} {
     @include set-text(nth($font-sizes, $i), nth($line-heights, $i));
   }
-}
-
-.text-inherit {
-  @include set-text(inherit, inherit);
 }
 
 .text-small {
@@ -113,14 +109,18 @@ figure, picture, object, select, table, audio, video, map {
   @extend .text-1;
 }
 
-// Apply text properties to elements...
-
-body {
-  @extend .text-body;
+.text-inherit {
+  @include set-text(inherit, inherit);
 }
+
+// Apply text properties to elements...
 
 * {
   @extend .text-inherit;
+}
+
+body {
+  @extend .text-body;
 }
 
 small {
