@@ -59,6 +59,7 @@ a, abbr, b, bdo, cite, code, dfn, em, i, kbd, q, samp, small, span, strong, sub,
   @extend .kingdom-spacing-reset;
 }
 
+//TODO: is the input:not selector too specific?
 textarea, select, input:not([type="button"]):not([type="reset"]):not([type="submit"]) {
   // Reset vertical spacing on non-button form elements, should they become block level elements
   @extend .kingdom-spacing-reset;
