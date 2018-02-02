@@ -87,11 +87,26 @@ figure, picture, object, select, table, audio, video, map {
 
 .text-small {
   font-size: font-size-em($font-size-smaller);
+  display: inline;
+  line-height: 0;
+}
+
+.text-small-block {
+  font-size: font-size-rem($font-size-smaller);
+  display: block;
 }
 
 .text-x-small {
   $font-size-smaller: font-size-em($font-size-smaller);
   font-size: $font-size-smaller*strip-unit($font-size-smaller);
+  display: inline;
+  line-height: 0;
+}
+
+.text-x-small-block {
+  $font-size-smaller: font-size-em($font-size-smaller);
+  font-size: font-size-rem($font-size-smaller*strip-unit($font-size-smaller));
+  display: block;
 }
 
 .text-body {
@@ -133,9 +148,9 @@ h4 {
 }
 
 h5 {
-  @extend .text-small;
+  @extend .text-small-block;
 }
 
 h6 {
-  @extend .text-x-small;
+  @extend .text-x-small-block;
 }
