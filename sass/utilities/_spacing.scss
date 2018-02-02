@@ -74,9 +74,14 @@ $number-of-vertical-padding-utilities: 4 !default;
   }
 }
 
-//TODO: loop to generate fraction horizontal padding (only x-axis) and margin utilities (x-axis, left & right)
-.px-1\/2 {
+.px-sm {
   $length: 0.5*$vertical-space-base;
+  padding-left: $length;
+  padding-right: $length;
+}
+
+.px-xs {
+  $length: 0.25*$vertical-space-base;
   padding-left: $length;
   padding-right: $length;
 }
