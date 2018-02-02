@@ -67,6 +67,11 @@ img {
   height: auto;
 }
 
+// Prevent small from affecting the line height of their parents
+small {
+  line-height: 0;
+}
+
 // Prevent sub- and superscript from affecting the line height of their parents
 sub, sup {
   line-height: 0;
