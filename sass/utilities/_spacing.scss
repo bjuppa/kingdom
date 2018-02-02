@@ -24,7 +24,25 @@ $number-of-vertical-margin-utilities: 8 !default;
   }
 }
 
-//TODO: generate horizontal margin utilities (x-axis, left & right)
+$number-of-horizontal-margin-utilities: 6 !default;
+@for $i from 1 through $number-of-horizontal-margin-utilities {
+  $length: $i*$vertical-space-base;
+
+  .mx-#{$i} {
+    margin-left: $length;
+    margin-right: $length;
+  }
+
+  .ml-#{$i} {
+    margin-left: $length;
+  }
+
+  .mr-#{$i} {
+    margin-right: $length;
+  }
+}
+
+// TODO: s and xs horizontal margin utils
 
 .p-0 {
   padding: 0;
@@ -51,6 +69,7 @@ $number-of-vertical-margin-utilities: 8 !default;
 $number-of-vertical-padding-utilities: 4 !default;
 @for $i from 1 through $number-of-vertical-padding-utilities {
   $length: $i*$vertical-space-base;
+
   .p-#{$i} {
     padding: $length;
   }
