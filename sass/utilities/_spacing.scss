@@ -17,15 +17,17 @@
   margin-bottom: 0;
 }
 
-$number-of-vertical-margin-utilities: 8 !default;
-@for $i from 1 through $number-of-vertical-margin-utilities {
+$vertical-margin-utilities: 1 2 3 4 6 9 !default;
+@each $i in $vertical-margin-utilities {
+  $length: $i*$vertical-space-base;
+
   .mt-#{$i} {
-    margin-top: $i*$vertical-space-base;
+    margin-top: $length;
   }
 }
 
-$number-of-horizontal-margin-utilities: 6 !default;
-@for $i from 1 through $number-of-horizontal-margin-utilities {
+$horizontal-margin-utilities: 1 2 3 4 6 !default;
+@each $i in $horizontal-margin-utilities {
   $length: $i*$vertical-space-base;
 
   .mx-#{$i} {
@@ -64,8 +66,8 @@ $number-of-horizontal-margin-utilities: 6 !default;
   padding-bottom: 0;
 }
 
-$number-of-vertical-padding-utilities: 4 !default;
-@for $i from 1 through $number-of-vertical-padding-utilities {
+$padding-utilities: 1 2 3 4 !default;
+@each $i in $padding-utilities {
   $length: $i*$vertical-space-base;
 
   .p-#{$i} {
