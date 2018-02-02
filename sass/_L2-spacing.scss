@@ -88,7 +88,7 @@ figure, picture, object, select, table, audio, video, map {
 }
 
 .text-small-block {
-  font-size: font-size-rem($font-size-smaller);
+  font-size: font-size-em($font-size-smaller);
   display: block;
 }
 
@@ -101,7 +101,7 @@ figure, picture, object, select, table, audio, video, map {
 
 .text-x-small-block {
   $font-size-smaller: font-size-em($font-size-smaller);
-  font-size: font-size-rem($font-size-smaller*strip-unit($font-size-smaller));
+  font-size: $font-size-smaller*strip-unit($font-size-smaller);
   display: block;
 }
 
