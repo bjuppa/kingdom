@@ -2,14 +2,6 @@
 
 @import "../modules/sizing";
 
-.m-0 {
-  margin: 0;
-}
-
-.mt-0 {
-  margin-top: 0;
-}
-
 .mb-0 {
   margin-bottom: 0;
 }
@@ -19,7 +11,7 @@
   margin-bottom: 0;
 }
 
-$vertical-margin-utilities: 1 2 3 4 6 9 !default;
+$vertical-margin-utilities: 2 3 4 6 9 !default;
 @each $multiple in $vertical-margin-utilities {
   .mt-#{$multiple} {
     @include set-length(margin-top, $multiple);

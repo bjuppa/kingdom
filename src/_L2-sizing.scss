@@ -27,54 +27,62 @@ $line-heights: $body-line-height-factor !default;
   --spacing-base: $spacing-base;
 }
 
-* {
+.m-0 {
   margin: 0;
 }
 
-* + * {
-  /* Set default vertical spacing between all adjacent block level elements */
-  @include set-length(margin-top);
-}
-
-.kingdom-spacing-reset {
+.mt-0 {
   /* Reset vertical spacing */
   margin-top: 0;
 }
 
+.mt-1 {
+  @include set-length(margin-top);
+}
+
+* {
+  @extend .m-0;
+}
+
+* + * {
+  /* Set default vertical spacing between all adjacent block level elements */
+  @extend .mt-1;
+}
+
 .kingdom-spacing-reset-children > * {
-  @extend .kingdom-spacing-reset;
+  @extend .mt-0;
 }
 
 .kingdom-spacing-reset-within * {
-  @extend .kingdom-spacing-reset;
+  @extend .mt-0;
 }
 
 .kingdom-spacing-reset-after + * {
-  @extend .kingdom-spacing-reset;
+  @extend .mt-0;
 }
 
 dt, li, hgroup, h1, h2, h3, h4, h5, h6 {
   // Reset vertical spacing on adjacent siblings
   + * {
-    @extend .kingdom-spacing-reset;
+    @extend .mt-0;
   }
 }
 
 a, abbr, b, bdo, cite, code, dfn, em, i, kbd, q, samp, small, span, strong, sub, sup, time, var {
   // Reset vertical spacing on text-elements, should they become block level elements
-  @extend .kingdom-spacing-reset;
+  @extend .mt-0;
 }
 
 //TODO: is the input:not selector too specific?
 textarea, select, input:not([type="button"]):not([type="reset"]):not([type="submit"]) {
   // Reset vertical spacing on non-button form elements, should they become block level elements
-  @extend .kingdom-spacing-reset;
+  @extend .mt-0;
 }
 
 figure, picture, object, select, table, audio, video, map {
   // Reset all vertical spacing deep inside
   * {
-    @extend .kingdom-spacing-reset;
+    @extend .mt-0;
   }
 }
 

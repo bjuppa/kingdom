@@ -90,17 +90,12 @@ sup {
   --spacing-base: 1.6875rem;
 }
 
+.m-0,
 * {
   margin: 0;
 }
 
-* + * {
-  /* Set default vertical spacing between all adjacent block level elements */
-  margin-top: 1.6875rem;
-  margin-top: calc(1 * var(--spacing-base, 1.6875rem));
-}
-
-.kingdom-spacing-reset,
+.mt-0,
 .kingdom-spacing-reset-children > *,
 .kingdom-spacing-reset-within *,
 .kingdom-spacing-reset-after + *,
@@ -145,6 +140,16 @@ video *,
 map * {
   /* Reset vertical spacing */
   margin-top: 0;
+}
+
+.mt-1,
+* + * {
+  margin-top: 1.6875rem;
+  margin-top: calc(1 * var(--spacing-base, 1.6875rem));
+}
+
+* + * {
+  /* Set default vertical spacing between all adjacent block level elements */
 }
 
 /* Utilities for text sizing */
@@ -247,14 +252,6 @@ hr {
 
 /* Utilities for spacing */
 
-.m-0 {
-  margin: 0;
-}
-
-.mt-0 {
-  margin-top: 0;
-}
-
 .mb-0 {
   margin-bottom: 0;
 }
@@ -262,11 +259,6 @@ hr {
 .my-0 {
   margin-top: 0;
   margin-bottom: 0;
-}
-
-.mt-1 {
-  margin-top: 1.6875rem;
-  margin-top: calc(1 * var(--spacing-base, 1.6875rem));
 }
 
 .mt-2 {
