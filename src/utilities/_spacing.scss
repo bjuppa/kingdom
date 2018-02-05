@@ -87,8 +87,8 @@ $padding-utilities: 1 2 3 4 !default;
 }
 
 $fraction-spacing-utilities: (
-  'sm': 1/2,
-  'xs': 1/4,
+  '1\\/2': 1/2,
+  '1\\/4': 1/4,
 ) !default;
 @each $suffix, $factor in $fraction-spacing-utilities {
   .px-#{$suffix} {

@@ -523,50 +523,50 @@ hr {
   padding-bottom: calc(4 * var(--spacing-base, 1.6875rem));
 }
 
-.px-sm {
+.px-1\/2 {
   padding-left: 0.84375rem;
   padding-left: calc(0.5 * var(--spacing-base, 1.6875rem));
   padding-right: 0.84375rem;
   padding-right: calc(0.5 * var(--spacing-base, 1.6875rem));
 }
 
-.mx-sm {
+.mx-1\/2 {
   margin-left: 0.84375rem;
   margin-left: calc(0.5 * var(--spacing-base, 1.6875rem));
   margin-right: 0.84375rem;
   margin-right: calc(0.5 * var(--spacing-base, 1.6875rem));
 }
 
-.ml-sm {
+.ml-1\/2 {
   margin-left: 0.84375rem;
   margin-left: calc(0.5 * var(--spacing-base, 1.6875rem));
 }
 
-.mr-sm {
+.mr-1\/2 {
   margin-right: 0.84375rem;
   margin-right: calc(0.5 * var(--spacing-base, 1.6875rem));
 }
 
-.px-xs {
+.px-1\/4 {
   padding-left: 0.421875rem;
   padding-left: calc(0.25 * var(--spacing-base, 1.6875rem));
   padding-right: 0.421875rem;
   padding-right: calc(0.25 * var(--spacing-base, 1.6875rem));
 }
 
-.mx-xs {
+.mx-1\/4 {
   margin-left: 0.421875rem;
   margin-left: calc(0.25 * var(--spacing-base, 1.6875rem));
   margin-right: 0.421875rem;
   margin-right: calc(0.25 * var(--spacing-base, 1.6875rem));
 }
 
-.ml-xs {
+.ml-1\/4 {
   margin-left: 0.421875rem;
   margin-left: calc(0.25 * var(--spacing-base, 1.6875rem));
 }
 
-.mr-xs {
+.mr-1\/4 {
   margin-right: 0.421875rem;
   margin-right: calc(0.25 * var(--spacing-base, 1.6875rem));
 }
