@@ -96,9 +96,9 @@ sup {
 }
 
 .mt-0,
-.kingdom-spacing-reset-children > *,
-.kingdom-spacing-reset-within *,
-.kingdom-spacing-reset-after + *,
+.mt-0-children > *,
+.mt-0-within *,
+.mt-0-after + *,
 dt + *,
 li + *,
 hgroup + *,
@@ -146,10 +146,6 @@ map * {
 * + * {
   margin-top: 1em;
   margin-top: calc(1 * var(--spacing-base, 1em));
-}
-
-* + * {
-  /* Set default vertical spacing between all adjacent block level elements */
 }
 
 /* Utilities for text sizing */

@@ -45,19 +45,19 @@ $line-heights: $body-line-height-factor !default;
 }
 
 * + * {
-  /* Set default vertical spacing between all adjacent block level elements */
+  // Set default vertical spacing between all adjacent block level elements
   @extend .mt-1;
 }
 
-.kingdom-spacing-reset-children > * {
+.mt-0-children > * {
   @extend .mt-0;
 }
 
-.kingdom-spacing-reset-within * {
+.mt-0-within * {
   @extend .mt-0;
 }
 
-.kingdom-spacing-reset-after + * {
+.mt-0-after + * {
   @extend .mt-0;
 }
 
