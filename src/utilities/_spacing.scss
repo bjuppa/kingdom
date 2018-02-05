@@ -2,6 +2,8 @@ $vertical-space-base: 1rem !default;
 
 /* Utilities for spacing */
 
+@import "../modules/sizing";
+
 .m-0 {
   margin: 0;
 }
@@ -20,29 +22,24 @@ $vertical-space-base: 1rem !default;
 }
 
 $vertical-margin-utilities: 1 2 3 4 6 9 !default;
-@each $i in $vertical-margin-utilities {
-  $length: $i*$vertical-space-base;
-
-  .mt-#{$i} {
-    margin-top: $length;
+@each $multiple in $vertical-margin-utilities {
+  .mt-#{$multiple} {
+    @include set-length(margin-top, $multiple);
   }
 }
 
 $horizontal-margin-utilities: 1 2 3 4 6 !default;
-@each $i in $horizontal-margin-utilities {
-  $length: $i*$vertical-space-base;
-
-  .mx-#{$i} {
-    margin-left: $length;
-    margin-right: $length;
+@each $multiple in $horizontal-margin-utilities {
+  .mx-#{$multiple} {
+    @include set-length(margin-left margin-right, $multiple);
   }
 
-  .ml-#{$i} {
-    margin-left: $length;
+  .ml-#{$multiple} {
+    @include set-length(margin-left, $multiple);
   }
 
-  .mr-#{$i} {
-    margin-right: $length;
+  .mr-#{$multiple} {
+    @include set-length(margin-right, $multiple);
   }
 }
 
@@ -69,55 +66,46 @@ $horizontal-margin-utilities: 1 2 3 4 6 !default;
 }
 
 $padding-utilities: 1 2 3 4 !default;
-@each $i in $padding-utilities {
-  $length: $i*$vertical-space-base;
-
-  .p-#{$i} {
-    padding: $length;
+@each $multiple in $padding-utilities {
+  .p-#{$multiple} {
+    @include set-length(padding, $multiple);
   }
 
-  .pt-#{$i} {
-    padding-top: $length;
+  .pt-#{$multiple} {
+    @include set-length(padding-top, $multiple);
   }
 
-  .pb-#{$i} {
-    padding-bottom: $length;
+  .pb-#{$multiple} {
+    @include set-length(padding-bottom, $multiple);
   }
 
-  .px-#{$i} {
-    padding-left: $length;
-    padding-right: $length;
+  .px-#{$multiple} {
+    @include set-length(padding-left padding-right, $multiple);
   }
 
-  .py-#{$i} {
-    padding-top: $length;
-    padding-bottom: $length;
+  .py-#{$multiple} {
+    @include set-length(padding-top padding-bottom, $multiple);
   }
 }
 
 $fraction-spacing-utilities: (
-  'sm': $vertical-space-base/2,
-  'xs': $vertical-space-base/4,
+  'sm': 1/2,
+  'xs': 1/4,
 ) !default;
-@each $suffix, $length in $fraction-spacing-utilities {
+@each $suffix, $factor in $fraction-spacing-utilities {
   .px-#{$suffix} {
-    padding-left: $length;
-    padding-right: $length;
+    @include set-length(padding-left padding-right, $factor);
   }
 
   .mx-#{$suffix} {
-    margin-left: $length;
-    margin-right: $length;
+    @include set-length(margin-left margin-right, $factor);
   }
 
   .ml-#{$suffix} {
-    margin-left: $length;
+    @include set-length(margin-left, $factor);
   }
 
   .mr-#{$suffix} {
-    margin-right: $length;
+    @include set-length(margin-right, $factor);
   }
 }
-
-//TODO: generate height utilities .h-1 (or lines-1) etc
-//TODO: generate width utilities .w-1 etc

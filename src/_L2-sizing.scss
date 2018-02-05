@@ -21,13 +21,15 @@ $line-heights: $body-line-height-factor !default;
 
 /* Kingdom CSS Level 2 - Sizing and Spacing */
 
+@import "modules/sizing";
+
 * {
   margin: 0;
 }
 
 * + * {
   /* Set default vertical spacing between all adjacent block level elements */
-  margin-top: $vertical-space-base;
+  @include set-length(margin-top);
 }
 
 .kingdom-spacing-reset {
@@ -71,8 +73,6 @@ figure, picture, object, select, table, audio, video, map {
     @extend .kingdom-spacing-reset;
   }
 }
-
-@import "modules/sizing";
 
 /* Utilities for text sizing */
 

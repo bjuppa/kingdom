@@ -1,3 +1,12 @@
+$vertical-space-base: 1rem !default;
+
+@mixin set-length($properties, $factor: 1, $length-base: $vertical-space-base) {
+  @each $property in $properties {
+    #{$property}: $factor * $length-base;
+    #{$property}: calc(#{$factor} * var(--spacing-base, #{$vertical-space-base}))
+  }
+}
+
 @mixin set-text($font-size, $line-height) {
   font-size: $font-size;
   line-height: $line-height;
