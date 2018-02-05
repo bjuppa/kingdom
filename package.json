@@ -16,8 +16,12 @@
     "css",
     "typography",
     "spacing",
+    "sizing",
+    "vertical rhythm",
+    "baseline",
     "responsive-locks",
-    "breakpoints"
+    "breakpoints",
+    "utilities"
   ],
   "author": "Björn Nilsved",
   "license": "MIT",
