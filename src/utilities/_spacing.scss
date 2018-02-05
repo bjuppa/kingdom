@@ -1,21 +1,9 @@
 /* Utilities for spacing */
-
 @import "../modules/sizing";
-
-.mb-0 {
-  margin-bottom: 0;
-}
 
 .my-0 {
   margin-top: 0;
   margin-bottom: 0;
-}
-
-$vertical-margin-utilities: 2 3 4 6 9 !default;
-@each $multiple in $vertical-margin-utilities {
-  .mt-#{$multiple} {
-    @include set-length(margin-top, $multiple);
-  }
 }
 
 $horizontal-margin-utilities: 1 2 3 4 6 !default;
@@ -33,16 +21,19 @@ $horizontal-margin-utilities: 1 2 3 4 6 !default;
   }
 }
 
+$vertical-margin-utilities: 2 3 4 6 9 !default;
+@each $multiple in $vertical-margin-utilities {
+  .mt-#{$multiple} {
+    @include set-length(margin-top, $multiple);
+  }
+}
+
+.mb-0 {
+  margin-bottom: 0;
+}
+
 .p-0 {
   padding: 0;
-}
-
-.pt-0 {
-  padding-top: 0;
-}
-
-.pb-0 {
-  padding-bottom: 0;
 }
 
 .px-0 {
@@ -55,18 +46,18 @@ $horizontal-margin-utilities: 1 2 3 4 6 !default;
   padding-bottom: 0;
 }
 
+.pt-0 {
+  padding-top: 0;
+}
+
+.pb-0 {
+  padding-bottom: 0;
+}
+
 $padding-utilities: 1 2 3 4 !default;
 @each $multiple in $padding-utilities {
   .p-#{$multiple} {
     @include set-length(padding, $multiple);
-  }
-
-  .pt-#{$multiple} {
-    @include set-length(padding-top, $multiple);
-  }
-
-  .pb-#{$multiple} {
-    @include set-length(padding-bottom, $multiple);
   }
 
   .px-#{$multiple} {
@@ -75,6 +66,14 @@ $padding-utilities: 1 2 3 4 !default;
 
   .py-#{$multiple} {
     @include set-length(padding-top padding-bottom, $multiple);
+  }
+
+  .pt-#{$multiple} {
+    @include set-length(padding-top, $multiple);
+  }
+
+  .pb-#{$multiple} {
+    @include set-length(padding-bottom, $multiple);
   }
 }
 

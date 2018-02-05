@@ -234,38 +234,9 @@ h6 {
 
 /* Utilities for spacing */
 
-.mb-0 {
-  margin-bottom: 0;
-}
-
 .my-0 {
   margin-top: 0;
   margin-bottom: 0;
-}
-
-.mt-2 {
-  margin-top: 2em;
-  margin-top: calc(2 * var(--spacing-base, 1em));
-}
-
-.mt-3 {
-  margin-top: 3em;
-  margin-top: calc(3 * var(--spacing-base, 1em));
-}
-
-.mt-4 {
-  margin-top: 4em;
-  margin-top: calc(4 * var(--spacing-base, 1em));
-}
-
-.mt-6 {
-  margin-top: 6em;
-  margin-top: calc(6 * var(--spacing-base, 1em));
-}
-
-.mt-9 {
-  margin-top: 9em;
-  margin-top: calc(9 * var(--spacing-base, 1em));
 }
 
 .mx-1 {
@@ -353,16 +324,37 @@ h6 {
   margin-right: calc(6 * var(--spacing-base, 1em));
 }
 
+.mt-2 {
+  margin-top: 2em;
+  margin-top: calc(2 * var(--spacing-base, 1em));
+}
+
+.mt-3 {
+  margin-top: 3em;
+  margin-top: calc(3 * var(--spacing-base, 1em));
+}
+
+.mt-4 {
+  margin-top: 4em;
+  margin-top: calc(4 * var(--spacing-base, 1em));
+}
+
+.mt-6 {
+  margin-top: 6em;
+  margin-top: calc(6 * var(--spacing-base, 1em));
+}
+
+.mt-9 {
+  margin-top: 9em;
+  margin-top: calc(9 * var(--spacing-base, 1em));
+}
+
+.mb-0 {
+  margin-bottom: 0;
+}
+
 .p-0 {
   padding: 0;
-}
-
-.pt-0 {
-  padding-top: 0;
-}
-
-.pb-0 {
-  padding-bottom: 0;
 }
 
 .px-0 {
@@ -375,19 +367,17 @@ h6 {
   padding-bottom: 0;
 }
 
+.pt-0 {
+  padding-top: 0;
+}
+
+.pb-0 {
+  padding-bottom: 0;
+}
+
 .p-1 {
   padding: 1em;
   padding: calc(1 * var(--spacing-base, 1em));
-}
-
-.pt-1 {
-  padding-top: 1em;
-  padding-top: calc(1 * var(--spacing-base, 1em));
-}
-
-.pb-1 {
-  padding-bottom: 1em;
-  padding-bottom: calc(1 * var(--spacing-base, 1em));
 }
 
 .px-1 {
@@ -404,19 +394,19 @@ h6 {
   padding-bottom: calc(1 * var(--spacing-base, 1em));
 }
 
+.pt-1 {
+  padding-top: 1em;
+  padding-top: calc(1 * var(--spacing-base, 1em));
+}
+
+.pb-1 {
+  padding-bottom: 1em;
+  padding-bottom: calc(1 * var(--spacing-base, 1em));
+}
+
 .p-2 {
   padding: 2em;
   padding: calc(2 * var(--spacing-base, 1em));
-}
-
-.pt-2 {
-  padding-top: 2em;
-  padding-top: calc(2 * var(--spacing-base, 1em));
-}
-
-.pb-2 {
-  padding-bottom: 2em;
-  padding-bottom: calc(2 * var(--spacing-base, 1em));
 }
 
 .px-2 {
@@ -433,19 +423,19 @@ h6 {
   padding-bottom: calc(2 * var(--spacing-base, 1em));
 }
 
+.pt-2 {
+  padding-top: 2em;
+  padding-top: calc(2 * var(--spacing-base, 1em));
+}
+
+.pb-2 {
+  padding-bottom: 2em;
+  padding-bottom: calc(2 * var(--spacing-base, 1em));
+}
+
 .p-3 {
   padding: 3em;
   padding: calc(3 * var(--spacing-base, 1em));
-}
-
-.pt-3 {
-  padding-top: 3em;
-  padding-top: calc(3 * var(--spacing-base, 1em));
-}
-
-.pb-3 {
-  padding-bottom: 3em;
-  padding-bottom: calc(3 * var(--spacing-base, 1em));
 }
 
 .px-3 {
@@ -462,19 +452,19 @@ h6 {
   padding-bottom: calc(3 * var(--spacing-base, 1em));
 }
 
+.pt-3 {
+  padding-top: 3em;
+  padding-top: calc(3 * var(--spacing-base, 1em));
+}
+
+.pb-3 {
+  padding-bottom: 3em;
+  padding-bottom: calc(3 * var(--spacing-base, 1em));
+}
+
 .p-4 {
   padding: 4em;
   padding: calc(4 * var(--spacing-base, 1em));
-}
-
-.pt-4 {
-  padding-top: 4em;
-  padding-top: calc(4 * var(--spacing-base, 1em));
-}
-
-.pb-4 {
-  padding-bottom: 4em;
-  padding-bottom: calc(4 * var(--spacing-base, 1em));
 }
 
 .px-4 {
@@ -487,6 +477,16 @@ h6 {
 .py-4 {
   padding-top: 4em;
   padding-top: calc(4 * var(--spacing-base, 1em));
+  padding-bottom: 4em;
+  padding-bottom: calc(4 * var(--spacing-base, 1em));
+}
+
+.pt-4 {
+  padding-top: 4em;
+  padding-top: calc(4 * var(--spacing-base, 1em));
+}
+
+.pb-4 {
   padding-bottom: 4em;
   padding-bottom: calc(4 * var(--spacing-base, 1em));
 }
