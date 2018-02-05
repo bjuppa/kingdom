@@ -1,6 +1,6 @@
 # Kingdom
 
-A CSS framework for consistent spacing and typography.
+A CSS framework for consistent sizing, spacing and typography.
 
 "If content is king, context is the kingdom"
 
@@ -12,7 +12,7 @@ Defaults:
 * `$body-padding: 0 .5rem`
 
 
-## Level 2—Vertical Spacing
+## Level 2—Sizing and Spacing
 - Horizontal spacing is controlled with `margin-top`.
 - Keep `margin-bottom` at `0`.
 - Control margin on elements *from the outside* (using CSS combinators) so that elements don’t set their own spacing.

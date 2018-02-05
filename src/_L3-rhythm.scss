@@ -24,7 +24,7 @@ $line-heights: ();
   $line-heights: append($line-heights, flow-line-height($font-size));
 }
 
-@import "L2-spacing";
+@import "L2-sizing";
 
 /* Kingdom CSS Level 3 - Vertical Rhythm */
 
