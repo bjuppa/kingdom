@@ -23,6 +23,10 @@ $line-heights: $body-line-height-factor !default;
 
 @import "modules/sizing";
 
+:root {
+  --spacing-base: $vertical-space-base;
+}
+
 * {
   margin: 0;
 }
