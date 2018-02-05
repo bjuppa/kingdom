@@ -8,7 +8,7 @@ $hr-color: currentColor;
 
 $body-leading: round(font-size-px($desired-body-font-size)*$body-line-height-factor)/font-size-px(1)*1rem !default;
 $vertical-rhythm-base: $body-leading;
-$vertical-space-base: $vertical-rhythm-base;
+$spacing-base: $vertical-rhythm-base;
 
 @import "modules/flow-rhythm";
 

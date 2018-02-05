@@ -1,4 +1,4 @@
-$vertical-space-base: 1em !default;
+$spacing-base: 1em !default;
 $desired-body-font-size: 18px !default;
 $body-line-height-factor: 1.5 !default;
 $min-line-height-factor: 1.2 !default;
@@ -24,7 +24,7 @@ $line-heights: $body-line-height-factor !default;
 @import "modules/sizing";
 
 :root {
-  --spacing-base: $vertical-space-base;
+  --spacing-base: $spacing-base;
 }
 
 * {

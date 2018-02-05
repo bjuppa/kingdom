@@ -18,11 +18,11 @@ Defaults:
 - Control margin on elements *from the outside* (using CSS combinators) so that elements don’t set their own spacing.
 
 Defaults:
-* `$vertical-space-base: 1em`
+* `$spacing-base: 1em`
 
 Reset `margin` on all elements to `0` using universal selector (`*`).
 
-Set `margin-top` to `$vertical-space-base` using adjacent sibling combinator (`* + *`) for default horizontal spacing.
+Set `margin-top` to `$spacing-base` using adjacent sibling combinator (`* + *`) for default horizontal spacing.
 
 Remove vertical spacing from:
 * all elements after `h1`-`h6`/`dt`/`li`/`hgroup`/`script`/`template`/`map`/`input[type=hidden]`
@@ -77,7 +77,7 @@ Make `$body-leading = (round($desired-body-font-size*$body-line-height-factor)/1
 
 Make `$vertical-rhythm-base = $body-leading`
 
-Make `$vertical-space-base = $vertical-rhythm-base`
+Make `$spacing-base = $vertical-rhythm-base`
 
 Mixin for calculating `font-size` from a desired number of `$lines` and a desired `$line-height-factor`:
 ```
