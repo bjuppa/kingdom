@@ -43,15 +43,16 @@ $line-heights: $body-line-height-factor !default;
   @extend .mt-1;
 }
 
-%mt-0-children > * {
+//TODO: move mt-0 composits to spacing utilities
+.mt-0-children > * {
   @extend %mt-0;
 }
 
-%mt-0-within * {
+.mt-0-within * {
   @extend %mt-0;
 }
 
-%mt-0-after + * {
+.mt-0-after + * {
   @extend %mt-0;
 }
 
