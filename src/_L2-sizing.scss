@@ -28,8 +28,6 @@ $line-heights: $body-line-height-factor !default;
   --spacing-base: $spacing-base;
 }
 
-@import "placeholders/_spacing.scss";
-
 .mt-1 {
   @include set-length(margin-top);
 }
