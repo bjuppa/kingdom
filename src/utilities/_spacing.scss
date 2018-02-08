@@ -9,7 +9,7 @@
 $horizontal-margin-utilities: 1 2 3 4 6 !default;
 @each $multiple in $horizontal-margin-utilities {
   .mx-#{$multiple} {
-    @include set-length(margin-left margin-right, $multiple);
+    @extend %mx-#{$multiple};
   }
 
   .ml-#{$multiple} {

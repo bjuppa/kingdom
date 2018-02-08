@@ -18,6 +18,13 @@
   margin-right: 0;
 }
 
+//TODO: add the fraction horizontal units
+@each $suffix, $factor in map-merge-natural-numbers() {
+  %mx-#{$suffix} {
+    @include set-length(margin-left margin-right, $factor);
+  }
+}
+
 %mt-0 {
   /* #{&} Reset vertical spacing */
   margin-top: 0;
