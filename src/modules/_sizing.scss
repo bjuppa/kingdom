@@ -19,7 +19,7 @@ $spacing-base: 1rem !default;
 // TODO: move map-merge-natural-numbers to separate module
 @function map-merge-natural-numbers($map: (), $max: 32) {
   @for $i from 1 through $max {
-    $map: map-merge($map, ($i: $i));
+    $map: map-merge($map, (#{$i}: $i));
   }
 
   @return $map;
