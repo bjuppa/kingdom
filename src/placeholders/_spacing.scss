@@ -1,3 +1,5 @@
+$vertical-padding-fractions: ('1\\/2': 1/2);
+
 $horizontal-spacing-fractions: (
   '1\\/8': 1/8,
   '1\\/6': 1/6,
@@ -76,14 +78,32 @@ $horizontal-spacing-fractions: (
   padding: 0;
 }
 
+@each $suffix, $factor in map-merge-natural-numbers($vertical-padding-fractions) {
+  %p-#{$suffix} {
+    @include set-length(padding, $factor);
+  }
+}
+
 %py-0 {
   padding-top: 0;
   padding-bottom: 0;
 }
 
+@each $suffix, $factor in map-merge-natural-numbers($vertical-padding-fractions) {
+  %py-#{$suffix} {
+    @include set-length(padding-top padding-bottom, $factor);
+  }
+}
+
 %px-0 {
   padding-left: 0;
   padding-right: 0;
+}
+
+@each $suffix, $factor in map-merge-natural-numbers($horizontal-spacing-fractions) {
+  %px-#{$suffix} {
+    @include set-length(padding-left padding-right, $factor);
+  }
 }
 
 %pt-0 {
@@ -92,4 +112,14 @@ $horizontal-spacing-fractions: (
 
 %pb-0 {
   padding-bottom: 0;
+}
+
+@each $suffix, $factor in map-merge-natural-numbers() {
+  %pt-#{$suffix} {
+    @include set-length(padding-top, $factor);
+  }
+
+  %pb-#{$suffix} {
+    @include set-length(padding-bottom, $factor);
+  }
 }
