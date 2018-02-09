@@ -87,7 +87,7 @@ $fraction-spacing-utilities: (
   }
 
   .mx-#{$suffix} {
-    @include set-length(margin-left margin-right, $factor);
+    @extend %mx-#{$suffix};
   }
 
   .ml-#{$suffix} {
