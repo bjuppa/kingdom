@@ -55,3 +55,13 @@ $horizontal-spacing-fractions: (
   /* #{&} */
   margin-right: 0;
 }
+
+@each $suffix, $factor in map-merge-natural-numbers($horizontal-spacing-fractions) {
+  %ml-#{$suffix} {
+    @include set-length(margin-left, $factor);
+  }
+
+  %mr-#{$suffix} {
+    @include set-length(margin-right, $factor);
+  }
+}
