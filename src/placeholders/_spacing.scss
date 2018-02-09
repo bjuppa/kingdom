@@ -41,6 +41,12 @@ $horizontal-spacing-fractions: (
   margin-top: 0;
 }
 
+@each $suffix, $factor in map-merge-natural-numbers() {
+  %mt-#{$suffix} {
+    @include set-length(margin-top, $factor);
+  }
+}
+
 %mb-0 {
   /* #{&} */
   margin-bottom: 0;
