@@ -1,9 +1,7 @@
-$vertical-padding-fractions: ('1\\/2': 1/2);
-
-$horizontal-spacing-fractions: (
+$spacing-fractions: (
   '1\\/8': 1/8,
   '1\\/6': 1/6,
-  '1\\/4': 2/8,
+  '1\\/4': 1/4,
   '1\\/3': 1/3,
   '1\\/2': 1/2,
   '2\\/3': 2/3,
@@ -12,8 +10,18 @@ $horizontal-spacing-fractions: (
   '7\\/8': 7/8,
 ) !default;
 
+//TODO: replace usage of $vertical-padding-fractions with $spacing-fractions - but also check if 2 times the fraction is a whole number
+$vertical-padding-fractions: ('1\\/2': 1/2) !default;
+
 /* Placeholders for spacing */
 @import "../modules/sizing";
+
+// Margin placeholders are ordered with all sides in combination first (only 0) (`m`), being overwritten by:
+// 1. Vertical margin (only 0) (`my`)
+// 2. Horizontal margin (`mx`)
+// 3. Top margin (only multiples) (`mt`)
+// 4. Bottom margin (only 0) (`mb`)
+// 5. Left and right margins (`ml` and `mr`)
 
 %m-0 {
   /* #{&} */
@@ -32,7 +40,7 @@ $horizontal-spacing-fractions: (
   margin-right: 0;
 }
 
-@each $suffix, $factor in map-merge-natural-numbers($horizontal-spacing-fractions) {
+@each $suffix, $factor in map-merge-natural-numbers($spacing-fractions) {
   %mx-#{$suffix} {
     @include set-length(margin-left margin-right, $factor);
   }
@@ -64,7 +72,7 @@ $horizontal-spacing-fractions: (
   margin-right: 0;
 }
 
-@each $suffix, $factor in map-merge-natural-numbers($horizontal-spacing-fractions) {
+@each $suffix, $factor in map-merge-natural-numbers($spacing-fractions) {
   %ml-#{$suffix} {
     @include set-length(margin-left, $factor);
   }
@@ -73,6 +81,12 @@ $horizontal-spacing-fractions: (
     @include set-length(margin-right, $factor);
   }
 }
+
+// Padding placeholders are ordered with all sides in combination first (`p`), being overwritten by:
+// 1. Vertical padding (`py`)
+// 2. Horizontal padding (`px`)
+// 3. Top and bottom paddings (`pt` and `pb`)
+// 4. Asymmetric vertical padding, where top and bottom add up to a multiple
 
 %p-0 {
   padding: 0;
@@ -100,7 +114,7 @@ $horizontal-spacing-fractions: (
   padding-right: 0;
 }
 
-@each $suffix, $factor in map-merge-natural-numbers($horizontal-spacing-fractions) {
+@each $suffix, $factor in map-merge-natural-numbers($spacing-fractions) {
   %px-#{$suffix} {
     @include set-length(padding-left padding-right, $factor);
   }
@@ -123,3 +137,18 @@ $horizontal-spacing-fractions: (
     @include set-length(padding-bottom, $factor);
   }
 }
+
+@each $suffix, $fraction in $spacing-fractions {
+  $counter-fraction: ceil($fraction) - $fraction + floor($fraction);
+  %pt-#{$suffix} {
+    @include set-length(padding-top, $fraction);
+    @include set-length(padding-bottom, $counter-fraction);
+  }
+
+  %pb-#{$suffix} {
+    @include set-length(padding-bottom, $fraction);
+    @include set-length(padding-top, $counter-fraction);
+  }
+}
+
+//TODO: create mt placeholders that compensate with padding-top and a rounded up padding-bottom
