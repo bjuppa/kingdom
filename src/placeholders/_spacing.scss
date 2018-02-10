@@ -42,6 +42,7 @@ $spacing-fractions: (
 
 @each $suffix, $factor in map-merge-natural-numbers($spacing-fractions) {
   %mx-#{$suffix} {
+    /* #{&} */
     @include set-length(margin-left margin-right, $factor);
   }
 }
@@ -53,6 +54,7 @@ $spacing-fractions: (
 
 @each $suffix, $factor in map-merge-natural-numbers() {
   %mt-#{$suffix} {
+    /* #{&} */
     @include set-length(margin-top, $factor);
   }
 }
@@ -74,10 +76,12 @@ $spacing-fractions: (
 
 @each $suffix, $factor in map-merge-natural-numbers($spacing-fractions) {
   %ml-#{$suffix} {
+    /* #{&} */
     @include set-length(margin-left, $factor);
   }
 
   %mr-#{$suffix} {
+    /* #{&} */
     @include set-length(margin-right, $factor);
   }
 }
@@ -89,18 +93,21 @@ $spacing-fractions: (
 // 4. Asymmetric vertical padding, where top and bottom add up to a multiple
 
 %p-0 {
+  /* #{&} */
   padding: 0;
 }
 
 @each $suffix, $factor in map-merge-natural-numbers($spacing-fractions) {
   @if (round($factor*2) == $factor*2) {
     %p-#{$suffix} {
+      /* #{&} */
       @include set-length(padding, $factor);
     }
   }
 }
 
 %py-0 {
+  /* #{&} */
   padding-top: 0;
   padding-bottom: 0;
 }
@@ -108,36 +115,43 @@ $spacing-fractions: (
 @each $suffix, $factor in map-merge-natural-numbers($spacing-fractions) {
   @if (round($factor*2) == $factor*2) {
     %py-#{$suffix} {
+      /* #{&} */
       @include set-length(padding-top padding-bottom, $factor);
     }
   }
 }
 
 %px-0 {
+  /* #{&} */
   padding-left: 0;
   padding-right: 0;
 }
 
 @each $suffix, $factor in map-merge-natural-numbers($spacing-fractions) {
   %px-#{$suffix} {
+    /* #{&} */
     @include set-length(padding-left padding-right, $factor);
   }
 }
 
 %pt-0 {
+  /* #{&} */
   padding-top: 0;
 }
 
 %pb-0 {
+  /* #{&} */
   padding-bottom: 0;
 }
 
 @each $suffix, $factor in map-merge-natural-numbers() {
   %pt-#{$suffix} {
+    /* #{&} */
     @include set-length(padding-top, $factor);
   }
 
   %pb-#{$suffix} {
+    /* #{&} */
     @include set-length(padding-bottom, $factor);
   }
 }
@@ -145,11 +159,13 @@ $spacing-fractions: (
 @each $suffix, $fraction in $spacing-fractions {
   $counter-fraction: ceil($fraction) - $fraction + floor($fraction);
   %pt-#{$suffix} {
+    /* #{&} */
     @include set-length(padding-top, $fraction);
     @include set-length(padding-bottom, $counter-fraction);
   }
 
   %pb-#{$suffix} {
+    /* #{&} */
     @include set-length(padding-bottom, $fraction);
     @include set-length(padding-top, $counter-fraction);
   }
