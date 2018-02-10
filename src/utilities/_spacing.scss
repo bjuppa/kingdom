@@ -2,8 +2,7 @@
 @import "../modules/sizing";
 
 .my-0 {
-  margin-top: 0;
-  margin-bottom: 0;
+  @extend %my-0;
 }
 
 $horizontal-margin-utilities: 1 2 3 4 6 !default;
@@ -13,67 +12,65 @@ $horizontal-margin-utilities: 1 2 3 4 6 !default;
   }
 
   .ml-#{$multiple} {
-    @include set-length(margin-left, $multiple);
+    @extend %ml-#{$multiple};
   }
 
   .mr-#{$multiple} {
-    @include set-length(margin-right, $multiple);
+    @extend %mr-#{$multiple};
   }
 }
 
 $vertical-margin-utilities: 2 3 4 6 9 !default;
 @each $multiple in $vertical-margin-utilities {
   .mt-#{$multiple} {
-    @include set-length(margin-top, $multiple);
+    @extend %mt-#{$multiple};
   }
 }
 
 .mb-0 {
-  margin-bottom: 0;
+  @extend %mb-0;
 }
 
 .p-0 {
-  padding: 0;
+  @extend %p-0;
 }
 
 .px-0 {
-  padding-left: 0;
-  padding-right: 0;
+  @extend %px-0;
 }
 
 .py-0 {
-  padding-top: 0;
-  padding-bottom: 0;
+  @extend %py-0;
 }
 
 .pt-0 {
-  padding-top: 0;
+  @extend %pt-0;
 }
 
 .pb-0 {
-  padding-bottom: 0;
+  @extend %pb-0;
 }
 
 $padding-utilities: 1 2 3 4 !default;
 @each $multiple in $padding-utilities {
   .p-#{$multiple} {
-    @include set-length(padding, $multiple);
+    @extend %p-#{$multiple};
   }
 
   .px-#{$multiple} {
-    @include set-length(padding-left padding-right, $multiple);
+    @extend %px-#{$multiple};
   }
 
   .py-#{$multiple} {
-    @include set-length(padding-top padding-bottom, $multiple);
+    @extend %py-#{$multiple};
   }
 
   .pt-#{$multiple} {
-    @include set-length(padding-top, $multiple);
+    @extend %pt-#{$multiple};
   }
 
   .pb-#{$multiple} {
-    @include set-length(padding-bottom, $multiple);
+    @extend %pb-#{$multiple};
   }
 }
 
@@ -83,7 +80,7 @@ $fraction-spacing-utilities: (
 ) !default;
 @each $suffix, $factor in $fraction-spacing-utilities {
   .px-#{$suffix} {
-    @include set-length(padding-left padding-right, $factor);
+    @extend %px-#{$suffix};
   }
 
   .mx-#{$suffix} {
@@ -91,10 +88,10 @@ $fraction-spacing-utilities: (
   }
 
   .ml-#{$suffix} {
-    @include set-length(margin-left, $factor);
+    @extend %ml-#{$suffix};
   }
 
   .mr-#{$suffix} {
-    @include set-length(margin-right, $factor);
+    @extend %mr-#{$suffix};
   }
 }

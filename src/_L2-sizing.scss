@@ -21,15 +21,8 @@ $line-heights: $body-line-height-factor !default;
 
 /* Kingdom CSS Level 2 - Sizing and Spacing */
 
-// TODO: remove import and use placeholders instead
-@import "modules/sizing";
-
 :root {
   --spacing-base: $spacing-base;
-}
-
-.mt-1 {
-  @include set-length(margin-top);
 }
 
 * {
@@ -38,7 +31,7 @@ $line-heights: $body-line-height-factor !default;
 
 * + * {
   // Set default vertical spacing between all adjacent block level elements
-  @extend .mt-1;
+  @extend %mt-1;
 }
 
 //TODO: move mt-0 composits to spacing utilities
@@ -80,6 +73,7 @@ figure, picture, object, select, table, audio, video, map {
 }
 
 /* Utilities for text sizing */
+@import "modules/sizing";
 
 @for $i from 1 through 6 {
   .text-#{$i} {
