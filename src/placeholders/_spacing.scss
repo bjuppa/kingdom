@@ -25,20 +25,17 @@ $spacing-fractions: (
 
 /* %m-0 */
 %m-0 {
-  /* #{&} */
   margin: 0;
 }
 
 /* %my-0 */
 %my-0 {
-  /* #{&} */
   margin-top: 0;
   margin-bottom: 0;
 }
 
 /* %mx-0 */
 %mx-0 {
-  /* #{&} */
   margin-left: 0;
   margin-right: 0;
 }
@@ -46,53 +43,45 @@ $spacing-fractions: (
 @each $suffix, $factor in map-merge-natural-numbers($spacing-fractions) {
   /* %mx-#{$suffix} */
   %mx-#{$suffix} {
-    /* #{&} */
     @include set-length(margin-left margin-right, $factor);
   }
 }
 
 /* %mt-0 Reset vertical spacing */
 %mt-0 {
-  /* #{&} */
   margin-top: 0;
 }
 
 @each $suffix, $factor in map-merge-natural-numbers() {
   /* %mt-#{$suffix} */
   %mt-#{$suffix} {
-    /* #{&} */
     @include set-length(margin-top, $factor);
   }
 }
 
 /* %mb-0 */
 %mb-0 {
-  /* #{&} */
   margin-bottom: 0;
 }
 
 /* %ml-0 */
 %ml-0 {
-  /* #{&} */
   margin-left: 0;
 }
 
 /* %mr-0 */
 %mr-0 {
-  /* #{&} */
   margin-right: 0;
 }
 
 @each $suffix, $factor in map-merge-natural-numbers($spacing-fractions) {
   /* %ml-#{$suffix} */
   %ml-#{$suffix} {
-    /* #{&} */
     @include set-length(margin-left, $factor);
   }
 
   /* %mr-#{$suffix} */
   %mr-#{$suffix} {
-    /* #{&} */
     @include set-length(margin-right, $factor);
   }
 }
@@ -105,7 +94,6 @@ $spacing-fractions: (
 
 /* %p-0 */
 %p-0 {
-  /* #{&} */
   padding: 0;
 }
 
@@ -113,7 +101,6 @@ $spacing-fractions: (
   @if (round($factor*2) == $factor*2) {
     /* %p-#{$suffix} */
     %p-#{$suffix} {
-      /* #{&} */
       @include set-length(padding, $factor);
     }
   }
@@ -121,7 +108,6 @@ $spacing-fractions: (
 
 /* %py-0 */
 %py-0 {
-  /* #{&} */
   padding-top: 0;
   padding-bottom: 0;
 }
@@ -130,7 +116,6 @@ $spacing-fractions: (
   @if (round($factor*2) == $factor*2) {
     /* %py-#{$suffix} */
     %py-#{$suffix} {
-      /* #{&} */
       @include set-length(padding-top padding-bottom, $factor);
     }
   }
@@ -138,7 +123,6 @@ $spacing-fractions: (
 
 /* %px-0 */
 %px-0 {
-  /* #{&} */
   padding-left: 0;
   padding-right: 0;
 }
@@ -146,33 +130,28 @@ $spacing-fractions: (
 @each $suffix, $factor in map-merge-natural-numbers($spacing-fractions) {
   /* %px-#{$suffix} */
   %px-#{$suffix} {
-    /* #{&} */
     @include set-length(padding-left padding-right, $factor);
   }
 }
 
 /* %pt-0 */
 %pt-0 {
-  /* #{&} */
   padding-top: 0;
 }
 
 /* %pb-0 */
 %pb-0 {
-  /* #{&} */
   padding-bottom: 0;
 }
 
 @each $suffix, $factor in map-merge-natural-numbers() {
   /* %pt-#{$suffix} */
   %pt-#{$suffix} {
-    /* #{&} */
     @include set-length(padding-top, $factor);
   }
 
   /* %pb-#{$suffix} */
   %pb-#{$suffix} {
-    /* #{&} */
     @include set-length(padding-bottom, $factor);
   }
 }
@@ -181,13 +160,11 @@ $spacing-fractions: (
   $counter-fraction: ceil($fraction) - $fraction + floor($fraction);
   /* %pt-#{$suffix} */
   %pt-#{$suffix} {
-    /* #{&} */
     @include set-length(padding-top, $fraction);
     @include set-length(padding-bottom, $counter-fraction);
   }
   /* %pb-#{$suffix} */
   %pb-#{$suffix} {
-    /* #{&} */
     @include set-length(padding-bottom, $fraction);
     @include set-length(padding-top, $counter-fraction);
   }
