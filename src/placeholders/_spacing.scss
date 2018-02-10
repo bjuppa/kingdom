@@ -13,9 +13,6 @@ $spacing-fractions: (
   '3\\/2': 3/2,
 ) !default;
 
-//TODO: replace usage of $vertical-padding-fractions with $spacing-fractions - but also check if 2 times the fraction is a whole number
-$vertical-padding-fractions: ('1\\/2': 1/2) !default;
-
 /* Placeholders for spacing */
 @import "../modules/sizing";
 
@@ -95,9 +92,11 @@ $vertical-padding-fractions: ('1\\/2': 1/2) !default;
   padding: 0;
 }
 
-@each $suffix, $factor in map-merge-natural-numbers($vertical-padding-fractions) {
-  %p-#{$suffix} {
-    @include set-length(padding, $factor);
+@each $suffix, $factor in map-merge-natural-numbers($spacing-fractions) {
+  @if (round($factor*2) == $factor*2) {
+    %p-#{$suffix} {
+      @include set-length(padding, $factor);
+    }
   }
 }
 
@@ -106,9 +105,11 @@ $vertical-padding-fractions: ('1\\/2': 1/2) !default;
   padding-bottom: 0;
 }
 
-@each $suffix, $factor in map-merge-natural-numbers($vertical-padding-fractions) {
-  %py-#{$suffix} {
-    @include set-length(padding-top padding-bottom, $factor);
+@each $suffix, $factor in map-merge-natural-numbers($spacing-fractions) {
+  @if (round($factor*2) == $factor*2) {
+    %py-#{$suffix} {
+      @include set-length(padding-top padding-bottom, $factor);
+    }
   }
 }
 
