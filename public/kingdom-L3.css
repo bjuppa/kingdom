@@ -240,9 +240,6 @@ sup {
 
 /* %mt-0 Reset vertical spacing */
 
-.mt-0-children > *,
-.mt-0-within *,
-.mt-0-after + *,
 dt + *,
 li + *,
 hgroup + *,
@@ -281,7 +278,10 @@ select *,
 table *,
 audio *,
 video *,
-map * {
+map *,
+.mt-0,
+.mt-0-children > *,
+.mt-0-within * {
   margin-top: 0;
 }
 
