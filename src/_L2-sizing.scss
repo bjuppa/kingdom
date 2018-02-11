@@ -34,19 +34,6 @@ $line-heights: $body-line-height-factor !default;
   @extend %mt-1;
 }
 
-//TODO: move mt-0 composits to spacing utilities
-.mt-0-children > * {
-  @extend %mt-0;
-}
-
-.mt-0-within * {
-  @extend %mt-0;
-}
-
-.mt-0-after + * {
-  @extend %mt-0;
-}
-
 dt, li, hgroup, h1, h2, h3, h4, h5, h6 {
   // Reset vertical spacing on adjacent siblings
   + * {

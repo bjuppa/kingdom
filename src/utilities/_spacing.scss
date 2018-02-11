@@ -20,6 +20,22 @@ $horizontal-margin-utilities: 1 2 3 4 6 !default;
   }
 }
 
+.mt-0 {
+  @extend %mt-0;
+}
+
+.mt-0-children > * {
+  @extend %mt-0;
+}
+
+.mt-0-within * {
+  @extend %mt-0;
+}
+
+.mt-0-after + * {
+  @extend %mt-0;
+}
+
 $vertical-margin-utilities: 2 3 4 6 9 !default;
 @each $multiple in $vertical-margin-utilities {
   .mt-#{$multiple} {
