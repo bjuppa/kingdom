@@ -238,7 +238,7 @@ sup {
 
 /* %mx-32 */
 
-/* %mt-0 Reset vertical spacing */
+/* %mt-0 */
 
 dt + *,
 li + *,
@@ -270,7 +270,7 @@ time,
 var,
 textarea,
 select,
-input:not([type="button"]):not([type="reset"]):not([type="submit"]),
+input,
 figure *,
 picture *,
 object *,
@@ -282,12 +282,17 @@ map *,
 .mt-0,
 .mt-0-children > *,
 .mt-0-within * {
+  /* Reset vertical spacing */
   margin-top: 0;
 }
 
 /* %mt-1 */
 
-* + * {
+* + *,
+[type="button"],
+[type="reset"],
+[type="submit"] {
+  /* Default vertical spacing */
   margin-top: 1em;
   margin-top: calc(1 * var(--spacing-base, 1em));
 }

@@ -48,14 +48,18 @@ $spacing-fractions: (
   }
 }
 
-/* %mt-0 Reset vertical spacing */
+/* %mt-0 */
 %mt-0 {
+  /* Reset vertical spacing */
   margin-top: 0;
 }
 
 @each $suffix, $factor in map-merge-natural-numbers() {
   /* %mt-#{$suffix} */
   %mt-#{$suffix} {
+    @if $factor == 1 {
+      /* Default vertical spacing */
+    }
     @include set-length(margin-top, $factor);
   }
 }
