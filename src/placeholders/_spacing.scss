@@ -163,16 +163,26 @@ $spacing-fractions: (
 
 @each $suffix, $fraction in $spacing-fractions {
   $counter-fraction: ceil($fraction) - $fraction + floor($fraction);
-  /* %pt-#{$suffix} */
+  /* %pt-#{$suffix} Compensates with padding-bottom */
   %pt-#{$suffix} {
     @include set-length(padding-top, $fraction);
     @include set-length(padding-bottom, $counter-fraction);
   }
-  /* %pb-#{$suffix} */
+  /* %pb-#{$suffix} Compensates with padding-top */
   %pb-#{$suffix} {
     @include set-length(padding-bottom, $fraction);
     @include set-length(padding-top, $counter-fraction);
   }
 }
 
-//TODO: create mt placeholders that compensate with padding-top and a rounded up padding-bottom
+// Fractional vertical margin placeholders compensate with top and bottom padding
+// Placed last to overwrite all other spacing properties
+@each $suffix, $fraction in $spacing-fractions {
+  $counter-fraction: ceil($fraction) - $fraction;
+  /* %mt-#{$suffix} Compensates with vertical padding */
+  %mt-#{$suffix} {
+    @include set-length(margin-top, $fraction);
+    @include set-length(padding-top, $counter-fraction);
+    @include set-length(padding-bottom, ceil($counter-fraction));
+  }
+}
