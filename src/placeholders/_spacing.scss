@@ -14,6 +14,7 @@ $spacing-fractions: (
 ) !default;
 
 /* Placeholders for spacing */
+@import "../modules/data-generators";
 @import "../modules/sizing";
 
 // Margin placeholders are ordered with all sides in combination first (only 0) (`m`), being overwritten by:
