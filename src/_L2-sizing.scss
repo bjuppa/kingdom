@@ -46,10 +46,14 @@ a, abbr, b, bdo, cite, code, dfn, em, i, kbd, q, samp, small, span, strong, sub,
   @extend %mt-0;
 }
 
-//TODO: is the input:not selector too specific?
-textarea, select, input:not([type="button"]):not([type="reset"]):not([type="submit"]) {
-  // Reset vertical spacing on non-button form elements, should they become block level elements
+textarea, select, input {
+  // Reset vertical spacing on form elements, should they become block level elements
   @extend %mt-0;
+}
+
+[type="button"], [type="reset"], [type="submit"] {
+  // Add vertical spacing to button-type form elements, should they become block level elements
+  @extend %mt-1;
 }
 
 figure, picture, object, select, table, audio, video, map {
