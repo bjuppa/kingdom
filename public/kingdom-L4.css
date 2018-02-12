@@ -1994,5 +1994,12 @@ hr {
 
 /* Utilities for spacing */
 
+.mx-auto,
+.mx-auto-children > * {
+  /* Horizontally center a block */
+  margin-left: auto;
+  margin-right: auto;
+}
+
 /* Utilities for sizing */
 
