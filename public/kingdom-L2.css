@@ -632,7 +632,21 @@ sup {
 
 /* %mx-2\/3 */
 
+.mx-2\/3 {
+  margin-left: 0.66666667em;
+  margin-left: calc(0.66666667 * var(--spacing-base, 1em));
+  margin-right: 0.66666667em;
+  margin-right: calc(0.66666667 * var(--spacing-base, 1em));
+}
+
 /* %mx-3\/4 */
+
+.mx-3\/4 {
+  margin-left: 0.75em;
+  margin-left: calc(0.75 * var(--spacing-base, 1em));
+  margin-right: 0.75em;
+  margin-right: calc(0.75 * var(--spacing-base, 1em));
+}
 
 /* %mx-5\/6 */
 
@@ -952,11 +966,31 @@ map *,
 
 /* %ml-2\/3 */
 
+.ml-2\/3 {
+  margin-left: 0.66666667em;
+  margin-left: calc(0.66666667 * var(--spacing-base, 1em));
+}
+
 /* %mr-2\/3 */
+
+.mr-2\/3 {
+  margin-right: 0.66666667em;
+  margin-right: calc(0.66666667 * var(--spacing-base, 1em));
+}
 
 /* %ml-3\/4 */
 
+.ml-3\/4 {
+  margin-left: 0.75em;
+  margin-left: calc(0.75 * var(--spacing-base, 1em));
+}
+
 /* %mr-3\/4 */
+
+.mr-3\/4 {
+  margin-right: 0.75em;
+  margin-right: calc(0.75 * var(--spacing-base, 1em));
+}
 
 /* %ml-5\/6 */
 
@@ -1393,7 +1427,21 @@ map *,
 
 /* %px-2\/3 */
 
+.px-2\/3 {
+  padding-left: 0.66666667em;
+  padding-left: calc(0.66666667 * var(--spacing-base, 1em));
+  padding-right: 0.66666667em;
+  padding-right: calc(0.66666667 * var(--spacing-base, 1em));
+}
+
 /* %px-3\/4 */
+
+.px-3\/4 {
+  padding-left: 0.75em;
+  padding-left: calc(0.75 * var(--spacing-base, 1em));
+  padding-right: 0.75em;
+  padding-right: calc(0.75 * var(--spacing-base, 1em));
+}
 
 /* %px-5\/6 */
 
@@ -1720,9 +1768,23 @@ map *,
 
 /* %pt-2\/3 Compensates with padding-bottom */
 
+.pt-2\/3 {
+  padding-top: 0.66666667em;
+  padding-top: calc(0.66666667 * var(--spacing-base, 1em));
+  padding-bottom: 0.33333333em;
+  padding-bottom: calc(0.33333333 * var(--spacing-base, 1em));
+}
+
 /* %pb-2\/3 Compensates with padding-top */
 
 /* %pt-3\/4 Compensates with padding-bottom */
+
+.pt-3\/4 {
+  padding-top: 0.75em;
+  padding-top: calc(0.75 * var(--spacing-base, 1em));
+  padding-bottom: 0.25em;
+  padding-bottom: calc(0.25 * var(--spacing-base, 1em));
+}
 
 /* %pb-3\/4 Compensates with padding-top */
 
@@ -1788,7 +1850,27 @@ map *,
 
 /* %mt-2\/3 Compensates with vertical padding */
 
+.mt-2\/3 {
+  margin-top: 0.66666667em;
+  margin-top: calc(0.66666667 * var(--spacing-base, 1em));
+  padding-top: 0.33333333em;
+  padding-top: calc(0.33333333 * var(--spacing-base, 1em));
+  padding-bottom: 1em;
+  padding-bottom: calc(1 * var(--spacing-base, 1em));
+  height: auto;
+}
+
 /* %mt-3\/4 Compensates with vertical padding */
+
+.mt-3\/4 {
+  margin-top: 0.75em;
+  margin-top: calc(0.75 * var(--spacing-base, 1em));
+  padding-top: 0.25em;
+  padding-top: calc(0.25 * var(--spacing-base, 1em));
+  padding-bottom: 1em;
+  padding-bottom: calc(1 * var(--spacing-base, 1em));
+  height: auto;
+}
 
 /* %mt-5\/6 Compensates with vertical padding */
 

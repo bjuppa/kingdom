@@ -628,7 +628,21 @@ sup {
 
 /* %mx-2\/3 */
 
+.mx-2\/3 {
+  margin-left: 0.66666667rem;
+  margin-left: calc(0.66666667 * var(--spacing-base, 1rem));
+  margin-right: 0.66666667rem;
+  margin-right: calc(0.66666667 * var(--spacing-base, 1rem));
+}
+
 /* %mx-3\/4 */
+
+.mx-3\/4 {
+  margin-left: 0.75rem;
+  margin-left: calc(0.75 * var(--spacing-base, 1rem));
+  margin-right: 0.75rem;
+  margin-right: calc(0.75 * var(--spacing-base, 1rem));
+}
 
 /* %mx-5\/6 */
 
@@ -905,11 +919,31 @@ sup {
 
 /* %ml-2\/3 */
 
+.ml-2\/3 {
+  margin-left: 0.66666667rem;
+  margin-left: calc(0.66666667 * var(--spacing-base, 1rem));
+}
+
 /* %mr-2\/3 */
+
+.mr-2\/3 {
+  margin-right: 0.66666667rem;
+  margin-right: calc(0.66666667 * var(--spacing-base, 1rem));
+}
 
 /* %ml-3\/4 */
 
+.ml-3\/4 {
+  margin-left: 0.75rem;
+  margin-left: calc(0.75 * var(--spacing-base, 1rem));
+}
+
 /* %mr-3\/4 */
+
+.mr-3\/4 {
+  margin-right: 0.75rem;
+  margin-right: calc(0.75 * var(--spacing-base, 1rem));
+}
 
 /* %ml-5\/6 */
 
@@ -1346,7 +1380,21 @@ sup {
 
 /* %px-2\/3 */
 
+.px-2\/3 {
+  padding-left: 0.66666667rem;
+  padding-left: calc(0.66666667 * var(--spacing-base, 1rem));
+  padding-right: 0.66666667rem;
+  padding-right: calc(0.66666667 * var(--spacing-base, 1rem));
+}
+
 /* %px-3\/4 */
+
+.px-3\/4 {
+  padding-left: 0.75rem;
+  padding-left: calc(0.75 * var(--spacing-base, 1rem));
+  padding-right: 0.75rem;
+  padding-right: calc(0.75 * var(--spacing-base, 1rem));
+}
 
 /* %px-5\/6 */
 
@@ -1673,9 +1721,23 @@ sup {
 
 /* %pt-2\/3 Compensates with padding-bottom */
 
+.pt-2\/3 {
+  padding-top: 0.66666667rem;
+  padding-top: calc(0.66666667 * var(--spacing-base, 1rem));
+  padding-bottom: 0.33333333rem;
+  padding-bottom: calc(0.33333333 * var(--spacing-base, 1rem));
+}
+
 /* %pb-2\/3 Compensates with padding-top */
 
 /* %pt-3\/4 Compensates with padding-bottom */
+
+.pt-3\/4 {
+  padding-top: 0.75rem;
+  padding-top: calc(0.75 * var(--spacing-base, 1rem));
+  padding-bottom: 0.25rem;
+  padding-bottom: calc(0.25 * var(--spacing-base, 1rem));
+}
 
 /* %pb-3\/4 Compensates with padding-top */
 
@@ -1741,7 +1803,27 @@ sup {
 
 /* %mt-2\/3 Compensates with vertical padding */
 
+.mt-2\/3 {
+  margin-top: 0.66666667rem;
+  margin-top: calc(0.66666667 * var(--spacing-base, 1rem));
+  padding-top: 0.33333333rem;
+  padding-top: calc(0.33333333 * var(--spacing-base, 1rem));
+  padding-bottom: 1rem;
+  padding-bottom: calc(1 * var(--spacing-base, 1rem));
+  height: auto;
+}
+
 /* %mt-3\/4 Compensates with vertical padding */
+
+.mt-3\/4 {
+  margin-top: 0.75rem;
+  margin-top: calc(0.75 * var(--spacing-base, 1rem));
+  padding-top: 0.25rem;
+  padding-top: calc(0.25 * var(--spacing-base, 1rem));
+  padding-bottom: 1rem;
+  padding-bottom: calc(1 * var(--spacing-base, 1rem));
+  height: auto;
+}
 
 /* %mt-5\/6 Compensates with vertical padding */
 
