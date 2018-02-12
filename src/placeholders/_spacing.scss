@@ -184,5 +184,6 @@ $spacing-fractions: (
     @include set-length(margin-top, $fraction);
     @include set-length(padding-top, $counter-fraction);
     @include set-length(padding-bottom, ceil($counter-fraction));
+    height: auto;
   }
 }
