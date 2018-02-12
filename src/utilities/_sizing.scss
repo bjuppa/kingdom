@@ -1,4 +1,4 @@
-/* Utilities for sizing */
+// Utilities for sizing
 @import "../modules/sizing";
 @import "../modules/data-generators";
 
@@ -35,4 +35,8 @@ $fraction-sizing-utilities: (
   .w-#{$suffix} {
     @extend %w-#{$suffix};
   }
+}
+
+.h-px {
+  @extend %h-px;
 }

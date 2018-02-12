@@ -329,6 +329,12 @@ sup {
   height: calc(64 * var(--spacing-base, 1rem));
 }
 
+/* %h-px */
+
+.h-px {
+  height: 1px;
+}
+
 /* %w-1\/8 */
 
 .w-1\/8 {
@@ -855,6 +861,7 @@ sup {
 
 /* %mt-1 */
 
+.h-px + *,
 .mt-1 {
   /* Default vertical spacing */
   margin-top: 1rem;
@@ -1926,7 +1933,10 @@ sup {
 
 /* %mt-3\/2 Compensates with vertical padding */
 
-/* Utilities for spacing */
+.h-px {
+  /* Fit 1px into vertical flow */
+  margin-bottom: -1px;
+}
 
 .mx-auto,
 .mx-auto-children > * {
@@ -1934,6 +1944,4 @@ sup {
   margin-left: auto;
   margin-right: auto;
 }
-
-/* Utilities for sizing */
 

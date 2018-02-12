@@ -188,3 +188,11 @@ $spacing-fractions: (
     height: auto;
   }
 }
+
+%h-px {
+  /* Fit 1px into vertical flow */
+  margin-bottom: -1px;
+  + * {
+    @extend %mt-1;
+  }
+}

@@ -329,6 +329,13 @@ sup {
   height: calc(64 * var(--spacing-base, 1.6875rem));
 }
 
+/* %h-px */
+
+hr,
+.h-px {
+  height: 1px;
+}
+
 /* %w-1\/8 */
 
 .w-1\/8 {
@@ -898,6 +905,8 @@ map *,
 
 /* %mt-1 */
 
+hr + *,
+.h-px + *,
 * + *,
 [type="button"],
 [type="reset"],
@@ -1973,6 +1982,12 @@ map *,
 
 /* %mt-3\/2 Compensates with vertical padding */
 
+hr,
+.h-px {
+  /* Fit 1px into vertical flow */
+  margin-bottom: -1px;
+}
+
 /* Kingdom CSS Level 2 - Sizing and Spacing */
 
 :root {
@@ -2066,8 +2081,6 @@ h6 {
 /* Kingdom CSS Level 3 - Vertical Rhythm */
 
 hr {
-  height: 1px;
-  margin-bottom: -1px;
   border: 0;
   background-color: currentColor;
 }
@@ -2083,14 +2096,10 @@ hr {
   font-family: inherit;
 }
 
-/* Utilities for spacing */
-
 .mx-auto,
 .mx-auto-children > * {
   /* Horizontally center a block */
   margin-left: auto;
   margin-right: auto;
 }
-
-/* Utilities for sizing */
 

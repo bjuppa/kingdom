@@ -1,8 +1,6 @@
 $desired-body-font-size: 18px !default;
 $body-line-height-factor: 1.5 !default;
 $min-line-height-factor: 1.2 !default;
-$hr-height: 1px !default;
-$hr-color: currentColor;
 
 @import "modules/converters";
 
@@ -29,11 +27,9 @@ $line-heights: ();
 /* Kingdom CSS Level 3 - Vertical Rhythm */
 
 hr {
-  // Fit thematic break into the vertical rhythm
-  height: $hr-height; // Give the <hr> a fixed height to reset user agent styles
-  margin-bottom: -$hr-height; // This negative margin pulls the succeeding element closer
-  border: 0; // Remove user agent borders
-  background-color: $hr-color;
+  @extend %h-px;
+  border: 0;
+  background-color: currentColor;
 }
 
 .visualize-vertical-rhythm {

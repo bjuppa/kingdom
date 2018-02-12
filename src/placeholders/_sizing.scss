@@ -26,6 +26,11 @@ $sizing-fractions: (
   }
 }
 
+/* %h-px */
+%h-px {
+  height: 1px;
+}
+
 @each $suffix, $factor in map-merge-natural-numbers($sizing-fractions, $max-sizing-multiple) {
   /* %w-#{$suffix} */
   %w-#{$suffix} {
