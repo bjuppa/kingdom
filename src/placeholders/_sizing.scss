@@ -1,0 +1,19 @@
+$max-sizing-multiple: 64 !default;
+
+/* Placeholders for sizing */
+@import "../modules/data-generators";
+@import "../modules/sizing";
+
+@each $suffix, $factor in map-merge-natural-numbers((), $max-sizing-multiple) {
+  /* %h-#{$suffix} */
+  %h-#{$suffix} {
+    @include set-length(height, $factor);
+  }
+}
+
+@each $suffix, $factor in map-merge-natural-numbers((), $max-sizing-multiple) {
+  /* %w-#{$suffix} */
+  %w-#{$suffix} {
+    @include set-length(width, $factor);
+  }
+}

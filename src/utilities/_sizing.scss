@@ -2,16 +2,16 @@
 @import "../modules/sizing";
 @import "../modules/data-generators";
 
-$sizing-multiples: map-merge-natural-numbers((40: 40, 48: 48, 56: 56, 64: 64)) !default;
-
-@each $suffix, $multiple in $sizing-multiples {
+$vertical-sizing-utilities: map-merge-natural-numbers((36: 36, 40: 40, 48: 48, 56: 56, 64: 64)) !default;
+@each $suffix, $multiple in $vertical-sizing-utilities {
   .h-#{$suffix} {
-    @include set-length(height, $multiple);
+    @extend %h-#{$suffix};
   }
 }
 
-@each $suffix, $multiple in $sizing-multiples {
+$horizontal-sizing-utilities: map-merge-natural-numbers((36: 36, 40: 40, 48: 48, 56: 56, 64: 64)) !default;
+@each $suffix, $multiple in $horizontal-sizing-utilities {
   .w-#{$suffix} {
-    @include set-length(width, $multiple);
+    @extend %w-#{$suffix};
   }
 }
