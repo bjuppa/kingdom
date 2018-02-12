@@ -1,3 +1,4 @@
+$max-spacing-multiple: 32 !default;
 $spacing-fractions: (
   '1\\/8': 1/8,
   '1\\/6': 1/6,
@@ -41,7 +42,7 @@ $spacing-fractions: (
   margin-right: 0;
 }
 
-@each $suffix, $factor in map-merge-natural-numbers($spacing-fractions) {
+@each $suffix, $factor in map-merge-natural-numbers($spacing-fractions, $max-spacing-multiple) {
   /* %mx-#{$suffix} */
   %mx-#{$suffix} {
     @include set-length(margin-left margin-right, $factor);
@@ -54,7 +55,7 @@ $spacing-fractions: (
   margin-top: 0;
 }
 
-@each $suffix, $factor in map-merge-natural-numbers() {
+@each $suffix, $factor in map-merge-natural-numbers((), $max-spacing-multiple) {
   /* %mt-#{$suffix} */
   %mt-#{$suffix} {
     @if $factor == 1 {
@@ -79,7 +80,7 @@ $spacing-fractions: (
   margin-right: 0;
 }
 
-@each $suffix, $factor in map-merge-natural-numbers($spacing-fractions) {
+@each $suffix, $factor in map-merge-natural-numbers($spacing-fractions, $max-spacing-multiple) {
   /* %ml-#{$suffix} */
   %ml-#{$suffix} {
     @include set-length(margin-left, $factor);
@@ -102,7 +103,7 @@ $spacing-fractions: (
   padding: 0;
 }
 
-@each $suffix, $factor in map-merge-natural-numbers($spacing-fractions) {
+@each $suffix, $factor in map-merge-natural-numbers($spacing-fractions, $max-spacing-multiple) {
   @if (round($factor*2) == $factor*2) {
     /* %p-#{$suffix} */
     %p-#{$suffix} {
@@ -117,7 +118,7 @@ $spacing-fractions: (
   padding-bottom: 0;
 }
 
-@each $suffix, $factor in map-merge-natural-numbers($spacing-fractions) {
+@each $suffix, $factor in map-merge-natural-numbers($spacing-fractions, $max-spacing-multiple) {
   @if (round($factor*2) == $factor*2) {
     /* %py-#{$suffix} */
     %py-#{$suffix} {
@@ -132,7 +133,7 @@ $spacing-fractions: (
   padding-right: 0;
 }
 
-@each $suffix, $factor in map-merge-natural-numbers($spacing-fractions) {
+@each $suffix, $factor in map-merge-natural-numbers($spacing-fractions, $max-spacing-multiple) {
   /* %px-#{$suffix} */
   %px-#{$suffix} {
     @include set-length(padding-left padding-right, $factor);
@@ -149,7 +150,7 @@ $spacing-fractions: (
   padding-bottom: 0;
 }
 
-@each $suffix, $factor in map-merge-natural-numbers() {
+@each $suffix, $factor in map-merge-natural-numbers((), $max-spacing-multiple) {
   /* %pt-#{$suffix} */
   %pt-#{$suffix} {
     @include set-length(padding-top, $factor);
@@ -175,8 +176,8 @@ $spacing-fractions: (
   }
 }
 
-// Fractional vertical margin placeholders compensate with top and bottom padding
-// Placed last to overwrite all other spacing properties
+// Fractional vertical margin placeholders compensate with top and bottom padding and remove any set height
+// Placed last to overwrite all other spacing/sizing properties
 @each $suffix, $fraction in $spacing-fractions {
   $counter-fraction: ceil($fraction) - $fraction;
   /* %mt-#{$suffix} Compensates with vertical padding */
