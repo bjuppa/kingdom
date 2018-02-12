@@ -111,4 +111,8 @@ $fraction-spacing-utilities: (
   .px-#{$suffix} {
     @extend %px-#{$suffix};
   }
+
+  .pt-#{$suffix} {
+    @extend %pt-#{$suffix};
+  }
 }
