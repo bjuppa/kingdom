@@ -245,6 +245,12 @@ sup {
 
 /* %mt-1 */
 
+.mt-1 {
+  /* Default vertical spacing */
+  margin-top: 1rem;
+  margin-top: calc(1 * var(--spacing-base, 1rem));
+}
+
 /* %mt-2 */
 
 .mt-2 {

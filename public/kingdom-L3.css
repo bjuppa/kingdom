@@ -291,7 +291,8 @@ map *,
 * + *,
 [type="button"],
 [type="reset"],
-[type="submit"] {
+[type="submit"],
+.mt-1 {
   /* Default vertical spacing */
   margin-top: 1.6875rem;
   margin-top: calc(1 * var(--spacing-base, 1.6875rem));
