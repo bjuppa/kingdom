@@ -1318,3 +1318,365 @@ h6 {
 
 /* Utilities for spacing */
 
+/* Utilities for sizing */
+
+.h-40 {
+  height: 40em;
+  height: calc(40 * var(--spacing-base, 1em));
+}
+
+.h-48 {
+  height: 48em;
+  height: calc(48 * var(--spacing-base, 1em));
+}
+
+.h-56 {
+  height: 56em;
+  height: calc(56 * var(--spacing-base, 1em));
+}
+
+.h-64 {
+  height: 64em;
+  height: calc(64 * var(--spacing-base, 1em));
+}
+
+.h-1 {
+  height: 1em;
+  height: calc(1 * var(--spacing-base, 1em));
+}
+
+.h-2 {
+  height: 2em;
+  height: calc(2 * var(--spacing-base, 1em));
+}
+
+.h-3 {
+  height: 3em;
+  height: calc(3 * var(--spacing-base, 1em));
+}
+
+.h-4 {
+  height: 4em;
+  height: calc(4 * var(--spacing-base, 1em));
+}
+
+.h-5 {
+  height: 5em;
+  height: calc(5 * var(--spacing-base, 1em));
+}
+
+.h-6 {
+  height: 6em;
+  height: calc(6 * var(--spacing-base, 1em));
+}
+
+.h-7 {
+  height: 7em;
+  height: calc(7 * var(--spacing-base, 1em));
+}
+
+.h-8 {
+  height: 8em;
+  height: calc(8 * var(--spacing-base, 1em));
+}
+
+.h-9 {
+  height: 9em;
+  height: calc(9 * var(--spacing-base, 1em));
+}
+
+.h-10 {
+  height: 10em;
+  height: calc(10 * var(--spacing-base, 1em));
+}
+
+.h-11 {
+  height: 11em;
+  height: calc(11 * var(--spacing-base, 1em));
+}
+
+.h-12 {
+  height: 12em;
+  height: calc(12 * var(--spacing-base, 1em));
+}
+
+.h-13 {
+  height: 13em;
+  height: calc(13 * var(--spacing-base, 1em));
+}
+
+.h-14 {
+  height: 14em;
+  height: calc(14 * var(--spacing-base, 1em));
+}
+
+.h-15 {
+  height: 15em;
+  height: calc(15 * var(--spacing-base, 1em));
+}
+
+.h-16 {
+  height: 16em;
+  height: calc(16 * var(--spacing-base, 1em));
+}
+
+.h-17 {
+  height: 17em;
+  height: calc(17 * var(--spacing-base, 1em));
+}
+
+.h-18 {
+  height: 18em;
+  height: calc(18 * var(--spacing-base, 1em));
+}
+
+.h-19 {
+  height: 19em;
+  height: calc(19 * var(--spacing-base, 1em));
+}
+
+.h-20 {
+  height: 20em;
+  height: calc(20 * var(--spacing-base, 1em));
+}
+
+.h-21 {
+  height: 21em;
+  height: calc(21 * var(--spacing-base, 1em));
+}
+
+.h-22 {
+  height: 22em;
+  height: calc(22 * var(--spacing-base, 1em));
+}
+
+.h-23 {
+  height: 23em;
+  height: calc(23 * var(--spacing-base, 1em));
+}
+
+.h-24 {
+  height: 24em;
+  height: calc(24 * var(--spacing-base, 1em));
+}
+
+.h-25 {
+  height: 25em;
+  height: calc(25 * var(--spacing-base, 1em));
+}
+
+.h-26 {
+  height: 26em;
+  height: calc(26 * var(--spacing-base, 1em));
+}
+
+.h-27 {
+  height: 27em;
+  height: calc(27 * var(--spacing-base, 1em));
+}
+
+.h-28 {
+  height: 28em;
+  height: calc(28 * var(--spacing-base, 1em));
+}
+
+.h-29 {
+  height: 29em;
+  height: calc(29 * var(--spacing-base, 1em));
+}
+
+.h-30 {
+  height: 30em;
+  height: calc(30 * var(--spacing-base, 1em));
+}
+
+.h-31 {
+  height: 31em;
+  height: calc(31 * var(--spacing-base, 1em));
+}
+
+.h-32 {
+  height: 32em;
+  height: calc(32 * var(--spacing-base, 1em));
+}
+
+.w-40 {
+  width: 40em;
+  width: calc(40 * var(--spacing-base, 1em));
+}
+
+.w-48 {
+  width: 48em;
+  width: calc(48 * var(--spacing-base, 1em));
+}
+
+.w-56 {
+  width: 56em;
+  width: calc(56 * var(--spacing-base, 1em));
+}
+
+.w-64 {
+  width: 64em;
+  width: calc(64 * var(--spacing-base, 1em));
+}
+
+.w-1 {
+  width: 1em;
+  width: calc(1 * var(--spacing-base, 1em));
+}
+
+.w-2 {
+  width: 2em;
+  width: calc(2 * var(--spacing-base, 1em));
+}
+
+.w-3 {
+  width: 3em;
+  width: calc(3 * var(--spacing-base, 1em));
+}
+
+.w-4 {
+  width: 4em;
+  width: calc(4 * var(--spacing-base, 1em));
+}
+
+.w-5 {
+  width: 5em;
+  width: calc(5 * var(--spacing-base, 1em));
+}
+
+.w-6 {
+  width: 6em;
+  width: calc(6 * var(--spacing-base, 1em));
+}
+
+.w-7 {
+  width: 7em;
+  width: calc(7 * var(--spacing-base, 1em));
+}
+
+.w-8 {
+  width: 8em;
+  width: calc(8 * var(--spacing-base, 1em));
+}
+
+.w-9 {
+  width: 9em;
+  width: calc(9 * var(--spacing-base, 1em));
+}
+
+.w-10 {
+  width: 10em;
+  width: calc(10 * var(--spacing-base, 1em));
+}
+
+.w-11 {
+  width: 11em;
+  width: calc(11 * var(--spacing-base, 1em));
+}
+
+.w-12 {
+  width: 12em;
+  width: calc(12 * var(--spacing-base, 1em));
+}
+
+.w-13 {
+  width: 13em;
+  width: calc(13 * var(--spacing-base, 1em));
+}
+
+.w-14 {
+  width: 14em;
+  width: calc(14 * var(--spacing-base, 1em));
+}
+
+.w-15 {
+  width: 15em;
+  width: calc(15 * var(--spacing-base, 1em));
+}
+
+.w-16 {
+  width: 16em;
+  width: calc(16 * var(--spacing-base, 1em));
+}
+
+.w-17 {
+  width: 17em;
+  width: calc(17 * var(--spacing-base, 1em));
+}
+
+.w-18 {
+  width: 18em;
+  width: calc(18 * var(--spacing-base, 1em));
+}
+
+.w-19 {
+  width: 19em;
+  width: calc(19 * var(--spacing-base, 1em));
+}
+
+.w-20 {
+  width: 20em;
+  width: calc(20 * var(--spacing-base, 1em));
+}
+
+.w-21 {
+  width: 21em;
+  width: calc(21 * var(--spacing-base, 1em));
+}
+
+.w-22 {
+  width: 22em;
+  width: calc(22 * var(--spacing-base, 1em));
+}
+
+.w-23 {
+  width: 23em;
+  width: calc(23 * var(--spacing-base, 1em));
+}
+
+.w-24 {
+  width: 24em;
+  width: calc(24 * var(--spacing-base, 1em));
+}
+
+.w-25 {
+  width: 25em;
+  width: calc(25 * var(--spacing-base, 1em));
+}
+
+.w-26 {
+  width: 26em;
+  width: calc(26 * var(--spacing-base, 1em));
+}
+
+.w-27 {
+  width: 27em;
+  width: calc(27 * var(--spacing-base, 1em));
+}
+
+.w-28 {
+  width: 28em;
+  width: calc(28 * var(--spacing-base, 1em));
+}
+
+.w-29 {
+  width: 29em;
+  width: calc(29 * var(--spacing-base, 1em));
+}
+
+.w-30 {
+  width: 30em;
+  width: calc(30 * var(--spacing-base, 1em));
+}
+
+.w-31 {
+  width: 31em;
+  width: calc(31 * var(--spacing-base, 1em));
+}
+
+.w-32 {
+  width: 32em;
+  width: calc(32 * var(--spacing-base, 1em));
+}
+

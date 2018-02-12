@@ -1,6 +1,17 @@
 /* Utilities for sizing */
-
 @import "../modules/sizing";
+@import "../modules/data-generators";
 
-//TODO: generate height utilities .h-1 (or lines-1) etc
-//TODO: generate width utilities .w-1 etc
+$sizing-multiples: map-merge-natural-numbers((40: 40, 48: 48, 56: 56, 64: 64)) !default;
+
+@each $suffix, $multiple in $sizing-multiples {
+  .h-#{$suffix} {
+    @include set-length(height, $multiple);
+  }
+}
+
+@each $suffix, $multiple in $sizing-multiples {
+  .w-#{$suffix} {
+    @include set-length(width, $multiple);
+  }
+}
