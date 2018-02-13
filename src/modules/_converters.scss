@@ -48,6 +48,10 @@ $relative-font-sizes: (
     $length: strip-unit($length)*$px-cm-ratio*1px/40;
   }
 
+  @if unit($length) != 'px' {
+    @error "Can't convert " + $length + " to rem - it needs to be pixel based";
+  }
+
   @return $length/($px-rem-ratio*1px)*1rem;
 }
 
@@ -57,7 +61,9 @@ $relative-font-sizes: (
     $font-size: map-get($absolute-font-sizes, $font-size);
   } @else if map-has_key($relative-font-sizes, $font-size) {
     $font-size: map-get($relative-font-sizes, $font-size);
-  } @else if (unit($font-size) == 'ex') {
+  }
+
+  @if (unit($font-size) == 'ex') {
     $font-size: strip-unit($font-size)*$em-ex-ratio*1em;
   } @else if (unit($font-size) == 'ch') {
     $font-size: strip-unit($font-size)*$em-ch-ratio*1em;
