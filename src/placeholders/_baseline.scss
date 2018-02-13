@@ -1,3 +1,5 @@
+$baseline-shift-elements: p blockquote address li dt dd h1 h2 h3 h4 h5 h6 !default;
+
 @supports (top: calc((var(--line-height) - 1em * var(--baseline-shift-factor)) / 2)) {
   /* %baseline-shift */
   %baseline-shift {
