@@ -2109,6 +2109,25 @@ body * {
 
 /* %font-headings */
 
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: Verdana, sans-serif;
+  --baseline-shift-factor: 0.75;
+}
+
+h1 *,
+h2 *,
+h3 *,
+h4 *,
+h5 *,
+h6 * {
+  font-family: inherit;
+}
+
 /* Kingdom CSS Level 2 - Sizing and Spacing */
 
 :root {

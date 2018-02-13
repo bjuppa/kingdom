@@ -1,9 +1,16 @@
+$body-font-stack: 'Times New Roman';
+$headings-font-stack: Verdana;
+
 @import "L3-rhythm";
 
 /* Kingdom CSS Level 4 - Baseline Rhythm */
 
 body {
   @extend %font-body;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  @extend %font-headings;
 }
 
 @import "placeholders/baseline";
