@@ -1,0 +1,13 @@
+@supports (top: calc((var(--line-height) - 1em * var(--baseline-shift-factor)) / 2)) {
+  /* %baseline-shift */
+  %baseline-shift {
+    position: relative;
+    top: calc((var(--line-height) - 1em * var(--baseline-shift-factor)) / 2);
+  }
+
+  /* %no-baseline-shift */
+  %baseline-shift-off {
+    position: initial;
+    top: initial;
+  }
+}
