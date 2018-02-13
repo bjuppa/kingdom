@@ -5,6 +5,10 @@ $font-stacks: (
 
 @mixin set-font($stack-name) {
   $stack: map-get($font-stacks, $stack-name);
+  @if($stack == null) {
+    @error "Missing font stack: " + $stack-name;
+  }
+
   font-family: map-get($stack, font-family);
   --baseline-shift-factor: map-get($stack, baseline-shift-factor);
 
