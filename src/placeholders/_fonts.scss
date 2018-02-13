@@ -1,0 +1,15 @@
+$body-font-stack: 'Times New Roman' !default;
+$headings-font-stack: 'Times New Roman' !default;
+
+/* Placeholders for fonts */
+@import "../modules/text";
+
+/* %font-body */
+%font-body {
+  @include set-font($body-font-stack);
+}
+
+/* %font-headings */
+%font-headings {
+  @include set-font($headings-font-stack);
+}

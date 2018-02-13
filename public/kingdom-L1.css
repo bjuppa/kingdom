@@ -2015,6 +2015,12 @@ sup {
   --line-height: inherit;
 }
 
+/* Placeholders for fonts */
+
+/* %font-body */
+
+/* %font-headings */
+
 .mx-auto,
 .mx-auto-children > * {
   /* Horizontally center a block */

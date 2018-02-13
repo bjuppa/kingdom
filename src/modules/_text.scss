@@ -7,4 +7,8 @@ $font-stacks: (
   $stack: map-get($font-stacks, $stack-name);
   font-family: map-get($stack, font-family);
   --baseline-shift-factor: map-get($stack, baseline-shift-factor);
+
+  * {
+    font-family: inherit;
+  }
 }
