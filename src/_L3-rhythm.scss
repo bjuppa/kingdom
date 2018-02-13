@@ -37,4 +37,5 @@ hr {
   $grid-color: rgba(red, 0.15);
   background-image: linear-gradient($grid-color, $grid-color 1px, transparent 1px);
   background-size: 1px $vertical-rhythm-base;
+  background-size: 1px var(--spacing-base, $vertical-rhythm-base);
 }

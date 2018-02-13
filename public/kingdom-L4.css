@@ -2088,6 +2088,7 @@ hr {
 .visualize-vertical-rhythm {
   background-image: linear-gradient(rgba(255, 0, 0, 0.15), rgba(255, 0, 0, 0.15) 1px, transparent 1px);
   background-size: 1px 1.6875rem;
+  background-size: 1px var(--spacing-base, 1.6875rem);
 }
 
 /* Kingdom CSS Level 4 - Baseline Rhythm */
