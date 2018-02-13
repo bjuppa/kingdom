@@ -3,10 +3,20 @@ $font-stacks: (
   Verdana: (font-family: (Verdana, sans-serif), baseline-shift-factor: 0.75),
 ) !default;
 
+// Add fonts to the global $font-stacks
+// Use between including this module and usage of set-font()
+// Example usage:
+// @include register-font-stack('Georgia', (Georgia, serif), 0.62);
+@mixin register-font-stack($stack-name, $font-family, $baseline-shift-factor) {
+  $stack: (font-family: $font-family, baseline-shift-factor: $baseline-shift-factor);
+  $font-stacks: map-merge($font-stacks, ($stack-name: $stack)) !global;
+}
+
+// Apply one of the defined font stacks
 @mixin set-font($stack-name) {
   $stack: map-get($font-stacks, $stack-name);
   @if($stack == null) {
-    @error "Missing font stack: " + $stack-name;
+    @error "Missing font stack: " + $stack-name + " - add it using mixin register-font-stack()";
   }
 
   font-family: map-get($stack, font-family);
