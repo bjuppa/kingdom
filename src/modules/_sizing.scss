@@ -3,15 +3,20 @@ $spacing-base: 1rem !default;
 @mixin set-length($properties, $factor: 1, $length-base: $spacing-base) {
   @each $property in $properties {
     #{$property}: $factor * $length-base;
-    #{$property}: calc(#{$factor} * var(--spacing-base, #{$spacing-base}))
+    #{$property}: calc(#{$factor} * var(--spacing-base, #{$spacing-base}));
   }
 }
 
 @mixin set-text($font-size, $line-height) {
   font-size: $font-size;
   line-height: $line-height;
-  --line-height: $line-height;
-  @if ($line-height != inherit) {
+  @if type-of($line-height) != 'number' or unitless($line-height) {
+    --line-height: $line-height;
+  } @else {
+    $factor: round($line-height/$spacing-base);
+    --line-height: calc(#{$factor} * var(--spacing-base, #{$spacing-base}));
+  }
+  @if type-of($line-height) == 'number' {
     line-height: var(--line-height);
   }
 }

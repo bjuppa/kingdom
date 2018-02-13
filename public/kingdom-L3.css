@@ -2002,7 +2002,7 @@ body,
 h4 {
   font-size: 1.125rem;
   line-height: 1.6875rem;
-  --line-height: 1.6875rem;
+  --line-height: calc(1 * var(--spacing-base, 1.6875rem));
   line-height: var(--line-height);
 }
 
@@ -2010,7 +2010,7 @@ h4 {
 h3 {
   font-size: 1.25rem;
   line-height: 1.6875rem;
-  --line-height: 1.6875rem;
+  --line-height: calc(1 * var(--spacing-base, 1.6875rem));
   line-height: var(--line-height);
 }
 
@@ -2018,7 +2018,7 @@ h3 {
 h2 {
   font-size: 1.40625rem;
   line-height: 1.6875rem;
-  --line-height: 1.6875rem;
+  --line-height: calc(1 * var(--spacing-base, 1.6875rem));
   line-height: var(--line-height);
 }
 
@@ -2026,21 +2026,21 @@ h2 {
 h1 {
   font-size: 2.8125rem;
   line-height: 3.375rem;
-  --line-height: 3.375rem;
+  --line-height: calc(2 * var(--spacing-base, 1.6875rem));
   line-height: var(--line-height);
 }
 
 .text-5 {
   font-size: 4.21875rem;
   line-height: 5.0625rem;
-  --line-height: 5.0625rem;
+  --line-height: calc(3 * var(--spacing-base, 1.6875rem));
   line-height: var(--line-height);
 }
 
 .text-6 {
   font-size: 5.625rem;
   line-height: 6.75rem;
-  --line-height: 6.75rem;
+  --line-height: calc(4 * var(--spacing-base, 1.6875rem));
   line-height: var(--line-height);
 }
 
