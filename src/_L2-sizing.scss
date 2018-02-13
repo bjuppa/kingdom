@@ -63,85 +63,44 @@ figure, picture, object, select, table, audio, video, map {
   }
 }
 
-/* Utilities for text sizing */
-@import "modules/sizing";
-
-@for $i from 1 through 6 {
-  .text-#{$i} {
-    @include set-text(nth($font-sizes, $i), nth($line-heights, $i));
-  }
-}
-
-.text-small {
-  font-size: font-size-em($font-size-smaller);
-  display: inline;
-  line-height: 0;
-}
-
-.text-small-block {
-  font-size: font-size-em($font-size-smaller);
-  display: block;
-}
-
-.text-x-small {
-  $font-size-smaller: font-size-em($font-size-smaller);
-  font-size: $font-size-smaller*strip-unit($font-size-smaller);
-  display: inline;
-  line-height: 0;
-}
-
-.text-x-small-block {
-  $font-size-smaller: font-size-em($font-size-smaller);
-  font-size: $font-size-smaller*strip-unit($font-size-smaller);
-  display: block;
-}
-
-.text-body {
-  @extend .text-1;
-}
-
-.text-inherit {
-  @include set-text(inherit, inherit);
-}
-
 // Apply text properties to elements...
 
 * {
-  @extend .text-inherit;
+  @extend %text-inherit;
 }
 
 body {
-  @extend .text-body;
+  @extend %text-1;
 }
 
 small {
-  @extend .text-small;
+  @extend %text-small;
 }
 
 sub, sup {
-  @extend .text-x-small;
+  @extend %text-x-small;
 }
 
 h1 {
-  @extend .text-4;
+  @extend %text-4;
 }
 
 h2 {
-  @extend .text-3;
+  @extend %text-3;
 }
 
 h3 {
-  @extend .text-2;
+  @extend %text-2;
 }
 
 h4 {
-  @extend .text-1;
+  @extend %text-1;
 }
 
 h5 {
-  @extend .text-small-block;
+  @extend %text-small-block;
 }
 
 h6 {
-  @extend .text-x-small-block;
+  @extend %text-x-small-block;
 }

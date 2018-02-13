@@ -1988,47 +1988,51 @@ hr,
   margin-bottom: -1px;
 }
 
-/* Kingdom CSS Level 2 - Sizing and Spacing */
+/* Placeholders for text */
 
-:root {
-  --spacing-base: 1.6875rem;
-}
+/* %text-1 */
 
-/* Utilities for text sizing */
-
-.text-1,
-.text-body,
 body,
-h4 {
+h4,
+.text-1,
+.text-body {
   font-size: 1.125rem;
   line-height: 1.6875rem;
   --line-height: calc(1 * var(--spacing-base, 1.6875rem));
   line-height: var(--line-height);
 }
 
-.text-2,
-h3 {
+/* %text-2 */
+
+h3,
+.text-2 {
   font-size: 1.25rem;
   line-height: 1.6875rem;
   --line-height: calc(1 * var(--spacing-base, 1.6875rem));
   line-height: var(--line-height);
 }
 
-.text-3,
-h2 {
+/* %text-3 */
+
+h2,
+.text-3 {
   font-size: 1.40625rem;
   line-height: 1.6875rem;
   --line-height: calc(1 * var(--spacing-base, 1.6875rem));
   line-height: var(--line-height);
 }
 
-.text-4,
-h1 {
+/* %text-4 */
+
+h1,
+.text-4 {
   font-size: 2.8125rem;
   line-height: 3.375rem;
   --line-height: calc(2 * var(--spacing-base, 1.6875rem));
   line-height: var(--line-height);
 }
+
+/* %text-5 */
 
 .text-5 {
   font-size: 4.21875rem;
@@ -2037,6 +2041,8 @@ h1 {
   line-height: var(--line-height);
 }
 
+/* %text-6 */
+
 .text-6 {
   font-size: 5.625rem;
   line-height: 6.75rem;
@@ -2044,38 +2050,54 @@ h1 {
   line-height: var(--line-height);
 }
 
-.text-small,
-small {
+/* %text-small */
+
+small,
+.text-small {
   font-size: 0.83333333em;
   display: inline;
   line-height: 0;
 }
 
-.text-small-block,
-h5 {
+/* %text-small-block */
+
+h5,
+.text-small-block {
   font-size: 0.83333333em;
   display: block;
 }
 
-.text-x-small,
+/* %text-x-small */
+
 sub,
-sup {
+sup,
+.text-x-small {
   font-size: 0.69444444em;
   display: inline;
   line-height: 0;
 }
 
-.text-x-small-block,
-h6 {
+/* %text-x-small-block */
+
+h6,
+.text-x-small-block {
   font-size: 0.69444444em;
   display: block;
 }
 
-.text-inherit,
-* {
+/* %text-inherit */
+
+*,
+.text-inherit {
   font-size: inherit;
   line-height: inherit;
   --line-height: inherit;
+}
+
+/* Kingdom CSS Level 2 - Sizing and Spacing */
+
+:root {
+  --spacing-base: 1.6875rem;
 }
 
 /* Kingdom CSS Level 3 - Vertical Rhythm */

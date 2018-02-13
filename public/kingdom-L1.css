@@ -1938,6 +1938,83 @@ sup {
   margin-bottom: -1px;
 }
 
+/* Placeholders for text */
+
+/* %text-1 */
+
+.text-1,
+.text-body {
+  font-size: medium;
+  line-height: 1.5;
+  --line-height: 1.5;
+  line-height: var(--line-height);
+}
+
+/* %text-2 */
+
+.text-2 {
+  font-size: large;
+  line-height: 1.4;
+  --line-height: 1.4;
+  line-height: var(--line-height);
+}
+
+/* %text-3 */
+
+.text-3 {
+  font-size: x-large;
+  line-height: 1.3;
+  --line-height: 1.3;
+  line-height: var(--line-height);
+}
+
+/* %text-4 */
+
+.text-4 {
+  font-size: xx-large;
+  line-height: 1.2;
+  --line-height: 1.2;
+  line-height: var(--line-height);
+}
+
+/* %text-small */
+
+.text-small {
+  font-size: 0.8em;
+  display: inline;
+  line-height: 0;
+}
+
+/* %text-small-block */
+
+.text-small-block {
+  font-size: 0.8em;
+  display: block;
+}
+
+/* %text-x-small */
+
+.text-x-small {
+  font-size: 0.64em;
+  display: inline;
+  line-height: 0;
+}
+
+/* %text-x-small-block */
+
+.text-x-small-block {
+  font-size: 0.64em;
+  display: block;
+}
+
+/* %text-inherit */
+
+.text-inherit {
+  font-size: inherit;
+  line-height: inherit;
+  --line-height: inherit;
+}
+
 .mx-auto,
 .mx-auto-children > * {
   /* Horizontally center a block */

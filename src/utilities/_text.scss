@@ -1,0 +1,31 @@
+// Utilities for text
+
+@for $i from 1 through length($font-sizes) {
+  .text-#{$i} {
+    @extend %text-#{$i}
+  }
+}
+
+.text-small {
+  @extend %text-small;
+}
+
+.text-small-block {
+  @extend %text-small-block;
+}
+
+.text-x-small {
+  @extend %text-x-small;
+}
+
+.text-x-small-block {
+  @extend %text-x-small-block;
+}
+
+.text-body {
+  @extend %text-1;
+}
+
+.text-inherit {
+  @extend %text-inherit;
+}
