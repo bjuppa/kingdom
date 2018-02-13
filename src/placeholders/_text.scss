@@ -1,7 +1,7 @@
 //TODO: combine $font-sizes and $line-heights in a map
 $font-sizes: medium large x-large xx-large !default;
 $line-heights: 1.5 1.4 1.3 1.2 !default;
-$font-size-smaller: 80% !default;
+$font-size-smaller: smaller !default;
 
 /* Placeholders for text */
 @import "../modules/sizing";
