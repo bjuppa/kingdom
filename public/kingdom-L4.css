@@ -2100,7 +2100,7 @@ h6,
 
 body {
   font-family: "Times New Roman", serif;
-  --baseline-shift-factor: 0.61111114;
+  --baseline-shift-factor: 0.62;
 }
 
 body * {
@@ -2149,7 +2149,7 @@ hr {
     top: calc((var(--line-height) - 1em * var(--baseline-shift-factor)) / 2);
   }
 
-  /* %no-baseline-shift */
+  /* %baseline-shift-off */
 
   p p,
   blockquote p,
