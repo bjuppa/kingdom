@@ -1,0 +1,10 @@
+$font-stacks: (
+  'Times New Roman': (font-family: ('Times New Roman', serif), baseline-shift-factor: 0.61111114),
+  'Verdana': (font-family: (Verdana, sans-serif), baseline-shift-factor: 0.71),
+) !default;
+
+@mixin set-font($stack-name) {
+  $stack: map-get($font-stacks, $stack-name);
+  font-family: map-get($stack, font-family);
+  --baseline-shift-factor: map-get($stack, baseline-shift-factor);
+}

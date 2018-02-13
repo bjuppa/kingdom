@@ -1,14 +1,14 @@
-$baseline-font-family: Times New Roman, Times, Georgia, serif !default;
-$baseline-shift-factor: 0.61111114 !default;
+$body-font-stack: 'Times New Roman' !default;
 $baseline-shift-elements: p blockquote address li dt dd h1 h2 h3 h4 h5 h6 !default;
 
 @import "L3-rhythm";
 
 /* Kingdom CSS Level 4 - Baseline Rhythm */
 
+@import "modules/_text.scss";
+
 body {
-  font-family: $baseline-font-family;
-  --baseline-shift-factor: $baseline-shift-factor;
+  @include set-font($body-font-stack);
 }
 
 * {
