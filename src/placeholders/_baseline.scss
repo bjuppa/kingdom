@@ -3,6 +3,10 @@
   %baseline-shift {
     position: relative;
     top: calc((var(--line-height) - 1em * var(--baseline-shift-factor)) / 2);
+
+    & & {
+      @extend %baseline-shift-off;
+    }
   }
 
   /* %no-baseline-shift */
