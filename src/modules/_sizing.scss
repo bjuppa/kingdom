@@ -10,7 +10,7 @@ $spacing-base: 1rem !default;
 @mixin set-text($font-size, $line-height) {
   font-size: $font-size;
   line-height: $line-height;
-  @if unit($line-height) == unit($spacing-base) {
+  @if type-of($line-height) == 'number' and unit($line-height) == unit($spacing-base) {
     $factor: round($line-height/$spacing-base);
     --line-height: calc(#{$factor} * var(--spacing-base, #{$spacing-base}));
   } @else {
