@@ -2128,8 +2128,6 @@ hr {
 
 .border {
   border: 1px solid black;
-  position: relative;
-  top: -1px;
   margin-bottom: -2px;
 }
 
@@ -2156,8 +2154,6 @@ hr {
 .border.h-48,
 .border.h-56,
 .border.h-64 {
-  position: initial;
-  top: initial;
   margin-bottom: 0;
 }
 

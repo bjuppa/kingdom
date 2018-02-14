@@ -2,13 +2,13 @@
 
 .border {
   border: 1px solid black;
-  position: relative;
-  top: -1px;
+  //position: relative;
+  //top: -1px;
   margin-bottom: -2px;
 
   &%height-multiple {
-    position: initial;
-    top: initial;
+    //position: initial;
+    //top: initial;
     margin-bottom: 0;
   }
 }
