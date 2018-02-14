@@ -33,7 +33,7 @@ $border-style: solid !default;
 
   @if index($sides, bottom) {
     > %baseline-shift:last-child {
-      @extend %pb-1;
+      @extend %pb-1 !optional;
     }
   }
 }
