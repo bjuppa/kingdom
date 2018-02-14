@@ -2110,3 +2110,38 @@ h6,
   margin-right: auto;
 }
 
+.border {
+  border: 1px solid black;
+  position: relative;
+  top: -1px;
+  margin-bottom: -2px;
+}
+
+.border.h-1,
+.border.h-2,
+.border.h-3,
+.border.h-4,
+.border.h-5,
+.border.h-6,
+.border.h-7,
+.border.h-8,
+.border.h-9,
+.border.h-10,
+.border.h-12,
+.border.h-14,
+.border.h-16,
+.border.h-18,
+.border.h-20,
+.border.h-24,
+.border.h-28,
+.border.h-32,
+.border.h-36,
+.border.h-40,
+.border.h-48,
+.border.h-56,
+.border.h-64 {
+  position: initial;
+  top: initial;
+  margin-bottom: 0;
+}
+
