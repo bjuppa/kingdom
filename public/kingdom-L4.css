@@ -91,7 +91,8 @@ input,
 optgroup,
 select,
 textarea,
-label {
+label,
+output {
   font-family: inherit;
   font-size: inherit;
   line-height: inherit;
@@ -99,7 +100,6 @@ label {
   padding: 0;
   display: inline-block;
   vertical-align: baseline;
-  background: none;
 }
 
 select {
