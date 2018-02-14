@@ -4,6 +4,9 @@ $spacing-base: 1rem !default;
   @each $property in $properties {
     #{$property}: $factor * $length-base;
     #{$property}: calc(#{$factor} * var(--spacing-base, #{$spacing-base}));
+    @if ($property == height and round($factor) == $factor) {
+      @extend %height-multiple !optional;
+    }
   }
 }
 
