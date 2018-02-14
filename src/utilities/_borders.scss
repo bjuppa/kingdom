@@ -27,3 +27,7 @@
 .border {
   @extend %border;
 }
+
+.border-0 {
+  @extend %border-0;
+}

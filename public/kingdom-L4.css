@@ -1702,6 +1702,18 @@ hr + *,
 .border > h4:last-child,
 .border > h5:last-child,
 .border > h6:last-child,
+.border-0 > p:last-child,
+.border-0 > blockquote:last-child,
+.border-0 > address:last-child,
+.border-0 > li:last-child,
+.border-0 > dt:last-child,
+.border-0 > dd:last-child,
+.border-0 > h1:last-child,
+.border-0 > h2:last-child,
+.border-0 > h3:last-child,
+.border-0 > h4:last-child,
+.border-0 > h5:last-child,
+.border-0 > h6:last-child,
 .pb-1 {
   padding-bottom: 1.6875rem;
   padding-bottom: calc(1 * var(--spacing-base, 1.6875rem));
@@ -2358,6 +2370,35 @@ h6 * {
   position: initial;
   top: initial;
   margin-bottom: 0;
+}
+
+/* %border-0 */
+
+.border-0 {
+  border-top-width: 0px;
+  border-top-style: solid;
+  border-top-color: currentColor;
+  --border-top-width: 0px;
+  border-top-width: var(--border-top-width);
+  border-bottom-width: 0px;
+  border-bottom-style: solid;
+  border-bottom-color: currentColor;
+  --border-bottom-width: 0px;
+  border-bottom-width: var(--border-bottom-width);
+  border-left-width: 0px;
+  border-left-style: solid;
+  border-left-color: currentColor;
+  --border-left-width: 0px;
+  border-left-width: var(--border-left-width);
+  border-right-width: 0px;
+  border-right-style: solid;
+  border-right-color: currentColor;
+  --border-right-width: 0px;
+  border-right-width: var(--border-right-width);
+  position: initial;
+  top: initial;
+  margin-bottom: 0px;
+  margin-bottom: calc(0px - var(--border-top-width, 0px) - var(--border-bottom-width, 0px));
 }
 
 /* Kingdom CSS Level 2 - Sizing and Spacing */

@@ -37,3 +37,8 @@ $border-color: currentColor !default;
 %border {
   @include set-border();
 }
+
+/* %border-0 */
+%border-0 {
+  @include set-border($width: 0px);
+}

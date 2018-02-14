@@ -2,6 +2,8 @@ $border-color: currentColor !default;
 $border-width: 1px !default;
 $border-style: solid !default;
 
+@import '../modules/strip-unit';
+
 @mixin set-border($sides: top bottom left right, $color: $border-color, $width: $border-width, $style: $border-style) {
   @each $side in $sides {
     border-#{$side}-width: $width;
@@ -13,9 +15,14 @@ $border-style: solid !default;
   }
 
   @if index($sides, top) {
-    position: relative;
-    top: -$width;
-    top: calc(0px - var(--border-top-width));
+    @if strip-unit($width) > 0 {
+      position: relative;
+      top: -$width;
+      top: calc(0px - var(--border-top-width));
+    } @else {
+      position: initial;
+      top: initial;
+    }
   }
 
   @if index($sides, top) or index($sides, bottom) {
@@ -23,7 +30,7 @@ $border-style: solid !default;
     margin-bottom: calc(0px - var(--border-top-width, 0px) - var(--border-bottom-width, 0px));
   }
 
-  @if index($sides, top) {
+  @if index($sides, top) and strip-unit($width) > 0 {
     &%height-multiple {
       position: initial;
       top: initial;
