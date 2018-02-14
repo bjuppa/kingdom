@@ -35,9 +35,7 @@ html {
 *,
 *::before,
 *::after {
-  border-width: 0;
-  border-style: solid;
-  border-color: $border-color;
+  border: 0 solid $border-color;
 }
 
 // Make sure elements are not displayed
@@ -112,9 +110,7 @@ label {
   font-size: inherit;
   line-height: inherit;
   margin: 0;
-  padding-top: 0;
-  padding-bottom: 0;
-  border-width: 0;
+  padding: 0;
   display: inline-block;
   vertical-align: baseline;
   background: none;
@@ -122,6 +118,7 @@ label {
 
 select {
   border-width: 1px;
+  border-color: transparent;
 }
 
 @import "placeholders/sizing";

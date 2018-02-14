@@ -26,9 +26,7 @@ html {
 *,
 *::before,
 *::after {
-  border-width: 0;
-  border-style: solid;
-  border-color: currentColor;
+  border: 0 solid currentColor;
 }
 
 [hidden],
@@ -98,9 +96,7 @@ label {
   font-size: inherit;
   line-height: inherit;
   margin: 0;
-  padding-top: 0;
-  padding-bottom: 0;
-  border-width: 0;
+  padding: 0;
   display: inline-block;
   vertical-align: baseline;
   background: none;
@@ -108,6 +104,7 @@ label {
 
 select {
   border-width: 1px;
+  border-color: transparent;
 }
 
 /* Placeholders for sizing */
@@ -2132,8 +2129,6 @@ h6,
 
 .border-l {
   border-left-width: 1px;
-  border-left-style: solid;
-  border-left-color: currentColor;
   --border-left-width: 1px;
   border-left-width: var(--border-left-width);
 }
@@ -2142,8 +2137,6 @@ h6,
 
 .border-r {
   border-right-width: 1px;
-  border-right-style: solid;
-  border-right-color: currentColor;
   --border-right-width: 1px;
   border-right-width: var(--border-right-width);
 }
@@ -2152,13 +2145,9 @@ h6,
 
 .border-lr {
   border-left-width: 1px;
-  border-left-style: solid;
-  border-left-color: currentColor;
   --border-left-width: 1px;
   border-left-width: var(--border-left-width);
   border-right-width: 1px;
-  border-right-style: solid;
-  border-right-color: currentColor;
   --border-right-width: 1px;
   border-right-width: var(--border-right-width);
 }
@@ -2167,8 +2156,6 @@ h6,
 
 .border-t {
   border-top-width: 1px;
-  border-top-style: solid;
-  border-top-color: currentColor;
   --border-top-width: 1px;
   border-top-width: var(--border-top-width);
   position: relative;
@@ -2210,8 +2197,6 @@ h6,
 
 .border-b {
   border-bottom-width: 1px;
-  border-bottom-style: solid;
-  border-bottom-color: currentColor;
   --border-bottom-width: 1px;
   border-bottom-width: var(--border-bottom-width);
   margin-bottom: -1px;
@@ -2222,13 +2207,9 @@ h6,
 
 .border-tb {
   border-top-width: 1px;
-  border-top-style: solid;
-  border-top-color: currentColor;
   --border-top-width: 1px;
   border-top-width: var(--border-top-width);
   border-bottom-width: 1px;
-  border-bottom-style: solid;
-  border-bottom-color: currentColor;
   --border-bottom-width: 1px;
   border-bottom-width: var(--border-bottom-width);
   position: relative;
@@ -2270,23 +2251,15 @@ h6,
 
 .border {
   border-top-width: 1px;
-  border-top-style: solid;
-  border-top-color: currentColor;
   --border-top-width: 1px;
   border-top-width: var(--border-top-width);
   border-bottom-width: 1px;
-  border-bottom-style: solid;
-  border-bottom-color: currentColor;
   --border-bottom-width: 1px;
   border-bottom-width: var(--border-bottom-width);
   border-left-width: 1px;
-  border-left-style: solid;
-  border-left-color: currentColor;
   --border-left-width: 1px;
   border-left-width: var(--border-left-width);
   border-right-width: 1px;
-  border-right-style: solid;
-  border-right-color: currentColor;
   --border-right-width: 1px;
   border-right-width: var(--border-right-width);
   position: relative;
@@ -2328,23 +2301,15 @@ h6,
 
 .border-0 {
   border-top-width: 0px;
-  border-top-style: solid;
-  border-top-color: currentColor;
   --border-top-width: 0px;
   border-top-width: var(--border-top-width);
   border-bottom-width: 0px;
-  border-bottom-style: solid;
-  border-bottom-color: currentColor;
   --border-bottom-width: 0px;
   border-bottom-width: var(--border-bottom-width);
   border-left-width: 0px;
-  border-left-style: solid;
-  border-left-color: currentColor;
   --border-left-width: 0px;
   border-left-width: var(--border-left-width);
   border-right-width: 0px;
-  border-right-style: solid;
-  border-right-color: currentColor;
   --border-right-width: 0px;
   border-right-width: var(--border-right-width);
   position: initial;
