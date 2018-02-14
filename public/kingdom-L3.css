@@ -29,6 +29,10 @@ html {
   border: 0 solid currentColor;
 }
 
+hr {
+  border-top-width: 1px;
+}
+
 [hidden],
 template {
   display: none;

@@ -26,7 +26,9 @@ html {
   box-sizing: border-box;
 }
 
-*, *:before, *:after {
+*,
+*:before,
+*:after {
   box-sizing: inherit;
 }
 
@@ -36,6 +38,10 @@ html {
 *::before,
 *::after {
   border: 0 solid $border-color;
+}
+
+hr {
+  border-top-width: 1px;
 }
 
 // Make sure elements are not displayed
