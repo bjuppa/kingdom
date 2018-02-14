@@ -2051,6 +2051,7 @@ sup {
   border-right-width: var(--border-right-width);
   position: relative;
   top: -2px;
+  top: calc(0px - var(--border-top-width));
   margin-bottom: -4px;
   margin-bottom: calc(0px - var(--border-top-width, 0px) - var(--border-bottom-width, 0px));
 }
