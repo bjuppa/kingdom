@@ -1,5 +1,6 @@
 $body-font-stack: 'Times New Roman' !default;
 $headings-font-stack: 'Times New Roman' !default;
+$forms-font-stack: 'Verdana' !default;
 
 /* Placeholders for fonts */
 @import "../modules/fonts";
@@ -12,4 +13,9 @@ $headings-font-stack: 'Times New Roman' !default;
 /* %font-headings */
 %font-headings {
   @include set-font($headings-font-stack);
+}
+
+/* %font-forms */
+%font-forms {
+  @include set-font($forms-font-stack)
 }

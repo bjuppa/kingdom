@@ -84,6 +84,28 @@ sup {
   top: -0.5em;
 }
 
+button,
+input,
+optgroup,
+select,
+textarea,
+label {
+  font-family: inherit;
+  font-size: inherit;
+  line-height: inherit;
+  margin: 0;
+  padding-top: 0;
+  padding-bottom: 0;
+  border-width: 0;
+  display: inline;
+  vertical-align: baseline;
+  background: none;
+}
+
+select {
+  border-width: 1px;
+}
+
 /* Placeholders for sizing */
 
 /* %h-1 */
@@ -2096,6 +2118,8 @@ h6,
 /* %font-body */
 
 /* %font-headings */
+
+/* %font-forms */
 
 /* %border-l */
 
