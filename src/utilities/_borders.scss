@@ -1,20 +1,8 @@
 // Utilities for borders
-
 $border-width: 2px !default;
 
+@import "../modules/borders";
+
 .border {
-  border: $border-width solid black;
-  position: relative;
-  top: -$border-width;
-  margin-bottom: -2*$border-width;
-
-  > %baseline-shift:last-child {
-    @extend %pb-1;
-  }
-
-  &%height-multiple {
-    position: initial;
-    top: initial;
-    margin-bottom: 0;
-  }
+  @include set-border(top bottom left right, $border-width);
 }

@@ -1,0 +1,26 @@
+@mixin set-border($sides: top bottom left right, $width: 1px, $style: solid, $color: currentColor) {
+  @each $side in $sides {
+    border-#{$side}-width: $width;
+    border-#{$side}-style: $style;
+    border-#{$side}-color: $color;
+
+    --border-#{$side}-width: $width;
+    border-#{$side}-width: var(--border-#{$side}-width);
+  }
+
+  position: relative;
+  top: -$width;
+
+  margin-bottom: -2*$width;
+  //margin-bottom: calc(0 - var(--border-top-width, 0) - var(--border-bottom-width, 0));
+
+  &%height-multiple {
+    position: initial;
+    top: initial;
+    margin-bottom: 0;
+  }
+
+  > %baseline-shift:last-child {
+    @extend %pb-1;
+  }
+}
