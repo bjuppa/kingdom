@@ -1666,7 +1666,19 @@ hr + *,
 
 /* %pb-1 */
 
-.pb-1 {
+.pb-1,
+.border > p:last-child,
+.border > blockquote:last-child,
+.border > address:last-child,
+.border > li:last-child,
+.border > dt:last-child,
+.border > dd:last-child,
+.border > h1:last-child,
+.border > h2:last-child,
+.border > h3:last-child,
+.border > h4:last-child,
+.border > h5:last-child,
+.border > h6:last-child {
   padding-bottom: 1.6875rem;
   padding-bottom: calc(1 * var(--spacing-base, 1.6875rem));
 }

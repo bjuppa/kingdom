@@ -8,6 +8,10 @@ $border-width: 2px !default;
   top: -$border-width;
   margin-bottom: -2*$border-width;
 
+  > %baseline-shift:last-child {
+    @extend %pb-1;
+  }
+
   &%height-multiple {
     position: initial;
     top: initial;
