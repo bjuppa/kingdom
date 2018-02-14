@@ -1,33 +1,29 @@
 // Utilities for borders
-$border-width: 1px !default;
-$border-color: currentColor !default;
-
-@import "../modules/borders";
 
 .border-l {
-  @include set-border(left);
+  @extend %border-l;
 }
 
 .border-r {
-  @include set-border(right);
+  @extend %border-r;
 }
 
 .border-lr {
-  @include set-border(left right);
+  @extend %border-lr;
 }
 
 .border-t {
-  @include set-border(top);
+  @extend %border-t;
 }
 
 .border-b {
-  @include set-border(bottom);
+  @extend %border-b;
 }
 
 .border-tb {
-  @include set-border(top bottom);
+  @extend %border-tb;
 }
 
 .border {
-  @include set-border();
+  @extend %border;
 }

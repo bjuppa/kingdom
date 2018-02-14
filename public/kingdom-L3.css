@@ -2100,31 +2100,7 @@ h6,
 
 /* %font-headings */
 
-/* Kingdom CSS Level 2 - Sizing and Spacing */
-
-:root {
-  --spacing-base: 1.6875rem;
-}
-
-/* Kingdom CSS Level 3 - Vertical Rhythm */
-
-hr {
-  border: 0;
-  background-color: currentColor;
-}
-
-.visualize-vertical-rhythm {
-  background-image: linear-gradient(rgba(255, 0, 0, 0.15), rgba(255, 0, 0, 0.15) 1px, transparent 1px);
-  background-size: 1px 1.6875rem;
-  background-size: 1px var(--spacing-base, 1.6875rem);
-}
-
-.mx-auto,
-.mx-auto-children > * {
-  /* Horizontally center a block */
-  margin-left: auto;
-  margin-right: auto;
-}
+/* %border-l */
 
 .border-l {
   border-left-width: 1px;
@@ -2134,6 +2110,8 @@ hr {
   border-left-width: var(--border-left-width);
 }
 
+/* %border-r */
+
 .border-r {
   border-right-width: 1px;
   border-right-style: solid;
@@ -2141,6 +2119,8 @@ hr {
   --border-right-width: 1px;
   border-right-width: var(--border-right-width);
 }
+
+/* %border-lr */
 
 .border-lr {
   border-left-width: 1px;
@@ -2155,6 +2135,8 @@ hr {
   border-right-width: var(--border-right-width);
 }
 
+/* %border-t */
+
 .border-t {
   border-top-width: 1px;
   border-top-style: solid;
@@ -2168,33 +2150,35 @@ hr {
   margin-bottom: calc(0px - var(--border-top-width, 0px) - var(--border-bottom-width, 0px));
 }
 
-.border-t.h-1,
-.border-t.h-2,
-.border-t.h-3,
-.border-t.h-4,
-.border-t.h-5,
-.border-t.h-6,
-.border-t.h-7,
-.border-t.h-8,
-.border-t.h-9,
-.border-t.h-10,
-.border-t.h-12,
-.border-t.h-14,
-.border-t.h-16,
-.border-t.h-18,
-.border-t.h-20,
-.border-t.h-24,
-.border-t.h-28,
-.border-t.h-32,
-.border-t.h-36,
-.border-t.h-40,
-.border-t.h-48,
-.border-t.h-56,
-.border-t.h-64 {
+.h-1.border-t,
+.h-2.border-t,
+.h-3.border-t,
+.h-4.border-t,
+.h-5.border-t,
+.h-6.border-t,
+.h-7.border-t,
+.h-8.border-t,
+.h-9.border-t,
+.h-10.border-t,
+.h-12.border-t,
+.h-14.border-t,
+.h-16.border-t,
+.h-18.border-t,
+.h-20.border-t,
+.h-24.border-t,
+.h-28.border-t,
+.h-32.border-t,
+.h-36.border-t,
+.h-40.border-t,
+.h-48.border-t,
+.h-56.border-t,
+.h-64.border-t {
   position: initial;
   top: initial;
   margin-bottom: 0;
 }
+
+/* %border-b */
 
 .border-b {
   border-bottom-width: 1px;
@@ -2205,6 +2189,8 @@ hr {
   margin-bottom: -1px;
   margin-bottom: calc(0px - var(--border-top-width, 0px) - var(--border-bottom-width, 0px));
 }
+
+/* %border-tb */
 
 .border-tb {
   border-top-width: 1px;
@@ -2224,33 +2210,35 @@ hr {
   margin-bottom: calc(0px - var(--border-top-width, 0px) - var(--border-bottom-width, 0px));
 }
 
-.border-tb.h-1,
-.border-tb.h-2,
-.border-tb.h-3,
-.border-tb.h-4,
-.border-tb.h-5,
-.border-tb.h-6,
-.border-tb.h-7,
-.border-tb.h-8,
-.border-tb.h-9,
-.border-tb.h-10,
-.border-tb.h-12,
-.border-tb.h-14,
-.border-tb.h-16,
-.border-tb.h-18,
-.border-tb.h-20,
-.border-tb.h-24,
-.border-tb.h-28,
-.border-tb.h-32,
-.border-tb.h-36,
-.border-tb.h-40,
-.border-tb.h-48,
-.border-tb.h-56,
-.border-tb.h-64 {
+.h-1.border-tb,
+.h-2.border-tb,
+.h-3.border-tb,
+.h-4.border-tb,
+.h-5.border-tb,
+.h-6.border-tb,
+.h-7.border-tb,
+.h-8.border-tb,
+.h-9.border-tb,
+.h-10.border-tb,
+.h-12.border-tb,
+.h-14.border-tb,
+.h-16.border-tb,
+.h-18.border-tb,
+.h-20.border-tb,
+.h-24.border-tb,
+.h-28.border-tb,
+.h-32.border-tb,
+.h-36.border-tb,
+.h-40.border-tb,
+.h-48.border-tb,
+.h-56.border-tb,
+.h-64.border-tb {
   position: initial;
   top: initial;
   margin-bottom: 0;
 }
+
+/* %border-tb */
 
 .border {
   border-top-width: 1px;
@@ -2280,31 +2268,57 @@ hr {
   margin-bottom: calc(0px - var(--border-top-width, 0px) - var(--border-bottom-width, 0px));
 }
 
-.border.h-1,
-.border.h-2,
-.border.h-3,
-.border.h-4,
-.border.h-5,
-.border.h-6,
-.border.h-7,
-.border.h-8,
-.border.h-9,
-.border.h-10,
-.border.h-12,
-.border.h-14,
-.border.h-16,
-.border.h-18,
-.border.h-20,
-.border.h-24,
-.border.h-28,
-.border.h-32,
-.border.h-36,
-.border.h-40,
-.border.h-48,
-.border.h-56,
-.border.h-64 {
+.h-1.border,
+.h-2.border,
+.h-3.border,
+.h-4.border,
+.h-5.border,
+.h-6.border,
+.h-7.border,
+.h-8.border,
+.h-9.border,
+.h-10.border,
+.h-12.border,
+.h-14.border,
+.h-16.border,
+.h-18.border,
+.h-20.border,
+.h-24.border,
+.h-28.border,
+.h-32.border,
+.h-36.border,
+.h-40.border,
+.h-48.border,
+.h-56.border,
+.h-64.border {
   position: initial;
   top: initial;
   margin-bottom: 0;
+}
+
+/* Kingdom CSS Level 2 - Sizing and Spacing */
+
+:root {
+  --spacing-base: 1.6875rem;
+}
+
+/* Kingdom CSS Level 3 - Vertical Rhythm */
+
+hr {
+  border: 0;
+  background-color: currentColor;
+}
+
+.visualize-vertical-rhythm {
+  background-image: linear-gradient(rgba(255, 0, 0, 0.15), rgba(255, 0, 0, 0.15) 1px, transparent 1px);
+  background-size: 1px 1.6875rem;
+  background-size: 1px var(--spacing-base, 1.6875rem);
+}
+
+.mx-auto,
+.mx-auto-children > * {
+  /* Horizontally center a block */
+  margin-left: auto;
+  margin-right: auto;
 }
 

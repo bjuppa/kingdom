@@ -1,0 +1,39 @@
+$border-width: 1px !default;
+$border-color: currentColor !default;
+
+@import "../modules/borders";
+
+/* %border-l */
+%border-l {
+  @include set-border(left);
+}
+
+/* %border-r */
+%border-r {
+  @include set-border(right);
+}
+
+/* %border-lr */
+%border-lr {
+  @include set-border(left right);
+}
+
+/* %border-t */
+%border-t {
+  @include set-border(top);
+}
+
+/* %border-b */
+%border-b {
+  @include set-border(bottom);
+}
+
+/* %border-tb */
+%border-tb {
+  @include set-border(top bottom);
+}
+
+/* %border-tb */
+%border {
+  @include set-border();
+}
