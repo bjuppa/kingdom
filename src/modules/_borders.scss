@@ -1,4 +1,8 @@
-@mixin set-border($sides: top bottom left right, $width: 1px, $style: solid, $color: currentColor) {
+$border-color: currentColor !default;
+$border-width: 1px !default;
+$border-style: solid !default;
+
+@mixin set-border($sides: top bottom left right, $color: $border-color, $width: $border-width, $style: $border-style) {
   @each $side in $sides {
     border-#{$side}-width: $width;
     border-#{$side}-style: $style;
@@ -19,13 +23,17 @@
     margin-bottom: calc(0px - var(--border-top-width, 0px) - var(--border-bottom-width, 0px));
   }
 
-  &%height-multiple {
-    position: initial;
-    top: initial;
-    margin-bottom: 0;
+  @if index($sides, top) {
+    &%height-multiple {
+      position: initial;
+      top: initial;
+      margin-bottom: 0;
+    }
   }
 
-  > %baseline-shift:last-child {
-    @extend %pb-1;
+  @if index($sides, bottom) {
+    > %baseline-shift:last-child {
+      @extend %pb-1;
+    }
   }
 }

@@ -2126,6 +2126,132 @@ hr {
   margin-right: auto;
 }
 
+.border-l {
+  border-left-width: 2px;
+  border-left-style: solid;
+  border-left-color: currentColor;
+  --border-left-width: 2px;
+  border-left-width: var(--border-left-width);
+}
+
+.border-r {
+  border-right-width: 2px;
+  border-right-style: solid;
+  border-right-color: currentColor;
+  --border-right-width: 2px;
+  border-right-width: var(--border-right-width);
+}
+
+.border-lr {
+  border-left-width: 2px;
+  border-left-style: solid;
+  border-left-color: currentColor;
+  --border-left-width: 2px;
+  border-left-width: var(--border-left-width);
+  border-right-width: 2px;
+  border-right-style: solid;
+  border-right-color: currentColor;
+  --border-right-width: 2px;
+  border-right-width: var(--border-right-width);
+}
+
+.border-t {
+  border-top-width: 2px;
+  border-top-style: solid;
+  border-top-color: currentColor;
+  --border-top-width: 2px;
+  border-top-width: var(--border-top-width);
+  position: relative;
+  top: -2px;
+  top: calc(0px - var(--border-top-width));
+  margin-bottom: -2px;
+  margin-bottom: calc(0px - var(--border-top-width, 0px) - var(--border-bottom-width, 0px));
+}
+
+.border-t.h-1,
+.border-t.h-2,
+.border-t.h-3,
+.border-t.h-4,
+.border-t.h-5,
+.border-t.h-6,
+.border-t.h-7,
+.border-t.h-8,
+.border-t.h-9,
+.border-t.h-10,
+.border-t.h-12,
+.border-t.h-14,
+.border-t.h-16,
+.border-t.h-18,
+.border-t.h-20,
+.border-t.h-24,
+.border-t.h-28,
+.border-t.h-32,
+.border-t.h-36,
+.border-t.h-40,
+.border-t.h-48,
+.border-t.h-56,
+.border-t.h-64 {
+  position: initial;
+  top: initial;
+  margin-bottom: 0;
+}
+
+.border-b {
+  border-bottom-width: 2px;
+  border-bottom-style: solid;
+  border-bottom-color: currentColor;
+  --border-bottom-width: 2px;
+  border-bottom-width: var(--border-bottom-width);
+  margin-bottom: -2px;
+  margin-bottom: calc(0px - var(--border-top-width, 0px) - var(--border-bottom-width, 0px));
+}
+
+.border-tb {
+  border-top-width: 2px;
+  border-top-style: solid;
+  border-top-color: currentColor;
+  --border-top-width: 2px;
+  border-top-width: var(--border-top-width);
+  border-bottom-width: 2px;
+  border-bottom-style: solid;
+  border-bottom-color: currentColor;
+  --border-bottom-width: 2px;
+  border-bottom-width: var(--border-bottom-width);
+  position: relative;
+  top: -2px;
+  top: calc(0px - var(--border-top-width));
+  margin-bottom: -4px;
+  margin-bottom: calc(0px - var(--border-top-width, 0px) - var(--border-bottom-width, 0px));
+}
+
+.border-tb.h-1,
+.border-tb.h-2,
+.border-tb.h-3,
+.border-tb.h-4,
+.border-tb.h-5,
+.border-tb.h-6,
+.border-tb.h-7,
+.border-tb.h-8,
+.border-tb.h-9,
+.border-tb.h-10,
+.border-tb.h-12,
+.border-tb.h-14,
+.border-tb.h-16,
+.border-tb.h-18,
+.border-tb.h-20,
+.border-tb.h-24,
+.border-tb.h-28,
+.border-tb.h-32,
+.border-tb.h-36,
+.border-tb.h-40,
+.border-tb.h-48,
+.border-tb.h-56,
+.border-tb.h-64 {
+  position: initial;
+  top: initial;
+  margin-bottom: 0;
+}
+
 .border {
   border-top-width: 2px;
   border-top-style: solid;
