@@ -2134,6 +2134,7 @@ h6,
   position: relative;
   top: -2px;
   margin-bottom: -4px;
+  margin-bottom: calc(0px - var(--border-top-width, 0px) - var(--border-bottom-width, 0px));
 }
 
 .border.h-1,

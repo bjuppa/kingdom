@@ -12,7 +12,7 @@
   top: -$width;
 
   margin-bottom: -2*$width;
-  //margin-bottom: calc(0 - var(--border-top-width, 0) - var(--border-bottom-width, 0));
+  margin-bottom: calc(0px - var(--border-top-width, 0px) - var(--border-bottom-width, 0px));
 
   &%height-multiple {
     position: initial;
