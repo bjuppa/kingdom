@@ -106,11 +106,6 @@ output {
   vertical-align: baseline;
 }
 
-select {
-  border-width: 1px;
-  border-color: transparent;
-}
-
 /* Placeholders for sizing */
 
 /* %h-1 */
