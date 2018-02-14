@@ -2327,8 +2327,10 @@ hr {
 }
 
 .border {
-  border: 1px solid black;
-  margin-bottom: -2px;
+  border: 2px solid black;
+  position: relative;
+  top: -2px;
+  margin-bottom: -4px;
 }
 
 .border.h-1,
@@ -2354,6 +2356,8 @@ hr {
 .border.h-48,
 .border.h-56,
 .border.h-64 {
-  margin-bottom: 0;
+  -webkit-box-sizing: content-box;
+          box-sizing: content-box;
+  top: -2px;
 }
 
