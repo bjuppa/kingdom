@@ -23,6 +23,14 @@ html {
           box-sizing: inherit;
 }
 
+*,
+*::before,
+*::after {
+  border-width: 0;
+  border-style: solid;
+  border-color: currentColor;
+}
+
 [hidden],
 template {
   display: none;
@@ -41,10 +49,6 @@ details,
 menu,
 hgroup {
   display: block;
-}
-
-img {
-  border-style: none;
 }
 
 svg:not(:root) {

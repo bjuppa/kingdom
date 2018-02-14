@@ -1,11 +1,13 @@
 $text-color: black !default;
 $body-background-color: white !default;
+$border-color: currentColor !default;
 $body-padding: 0 !default;
 
 /* Kingdom CSS Level 1 - Reset */
 
 // For inspiration on other resets you may want to do/include, check out:
 // https://github.com/necolas/normalize.css
+// https://github.com/tailwindcss/tailwindcss/blob/master/css/preflight.css
 // https://github.com/shankariyerr/tinyreset
 
 body {
@@ -28,6 +30,16 @@ html {
   box-sizing: inherit;
 }
 
+// Set a default border style to allow just setting border-width when needed
+// https://github.com/tailwindcss/tailwindcss/blob/master/css/preflight.css
+*,
+*::before,
+*::after {
+  border-width: 0;
+  border-style: solid;
+  border-color: $border-color;
+}
+
 // Make sure elements are not displayed
 [hidden], template {
   display: none;
@@ -48,11 +60,6 @@ menu,
 hgroup // hgroup is deprecated but may be useful to include anyway
 {
   display: block;
-}
-
-// Remove the border on images inside links in IE 10-
-img {
-  border-style: none;
 }
 
 // Correct svg overflow in IE
