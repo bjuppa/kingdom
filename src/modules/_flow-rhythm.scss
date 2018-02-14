@@ -4,6 +4,7 @@ $min-line-height-factor: 1.2 !default;
 $baseline-shift-factor-normal: 0.71 !default; // This shifts text down to the baseline, adjust it to your liking (it's relative em and differs for every font)
 
 @import "converters";
+@import "sizing";
 
 $font-size-normal: $vertical-rhythm-base / $body-line-height-factor !default;
 
@@ -26,15 +27,11 @@ $font-size-normal: $vertical-rhythm-base / $body-line-height-factor !default;
 @mixin responsive-rhythm($start-multiple: 5, $end-multiple: 15, $from-viewport-width: 600px, $to-viewport-width: 1800px, $properties: height, $rhythm-base: $vertical-rhythm-base, $media: screen) {
   $breakpoint-step-size: round(($to-viewport-width - $from-viewport-width) / ($end-multiple - $start-multiple));
 
-  @each $property in $properties {
-    #{$property}: $start-multiple * $rhythm-base;
-  }
+  @include set-length($properties, $start-multiple, $rhythm-base);
 
   @for $i from $start-multiple + 1 through $end-multiple {
     @media #{$media} and (min-width: $from-viewport-width + ($i - $start-multiple) * $breakpoint-step-size) {
-      @each $property in $properties {
-        #{$property}: $i * $rhythm-base;
-      }
+      @include set-length($properties, $i, $rhythm-base);
     }
   }
 }
