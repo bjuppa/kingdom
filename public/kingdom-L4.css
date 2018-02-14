@@ -2356,8 +2356,8 @@ hr {
 .border.h-48,
 .border.h-56,
 .border.h-64 {
-  -webkit-box-sizing: content-box;
-          box-sizing: content-box;
-  top: -2px;
+  position: initial;
+  top: initial;
+  margin-bottom: 0;
 }
 

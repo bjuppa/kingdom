@@ -9,7 +9,8 @@ $border-width: 2px !default;
   margin-bottom: -2*$border-width;
 
   &%height-multiple {
-    box-sizing: content-box;
-    top: -$border-width;
+    position: initial;
+    top: initial;
+    margin-bottom: 0;
   }
 }
