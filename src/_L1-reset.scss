@@ -123,6 +123,12 @@ output {
   //vertical-align: baseline;
 }
 
+select {
+  // Touching the borders on select removes the default styling in Safari.
+  // Reverting borders on select will bring back default styling.
+  //border: revert;
+}
+
 @import "placeholders/sizing";
 @import "placeholders/spacing";
 @import "placeholders/text";
