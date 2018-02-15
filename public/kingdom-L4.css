@@ -1713,29 +1713,17 @@ hr + *,
 .border-tb > h5:last-child,
 .border-tb > h6:last-child,
 .border > p:last-child,
-input:not([type='checkbox']) > p:last-child,
 .border > blockquote:last-child,
-input:not([type='checkbox']) > blockquote:last-child,
 .border > address:last-child,
-input:not([type='checkbox']) > address:last-child,
 .border > li:last-child,
-input:not([type='checkbox']) > li:last-child,
 .border > dt:last-child,
-input:not([type='checkbox']) > dt:last-child,
 .border > dd:last-child,
-input:not([type='checkbox']) > dd:last-child,
 .border > h1:last-child,
-input:not([type='checkbox']) > h1:last-child,
 .border > h2:last-child,
-input:not([type='checkbox']) > h2:last-child,
 .border > h3:last-child,
-input:not([type='checkbox']) > h3:last-child,
 .border > h4:last-child,
-input:not([type='checkbox']) > h4:last-child,
 .border > h5:last-child,
-input:not([type='checkbox']) > h5:last-child,
 .border > h6:last-child,
-input:not([type='checkbox']) > h6:last-child,
 .border-0 > p:last-child,
 .border-0 > blockquote:last-child,
 .border-0 > address:last-child,
@@ -2338,8 +2326,7 @@ input.border-tb:not([type='checkbox']),
 
 /* %border-tb */
 
-.border,
-input:not([type='checkbox']) {
+.border {
   border-top-width: 1px;
   --border-top-width: 1px;
   border-top-width: var(--border-top-width);
@@ -2360,52 +2347,29 @@ input:not([type='checkbox']) {
 }
 
 .h-1.border,
-input:not([type='checkbox']),
+input.border:not([type='checkbox']),
 .h-2.border,
-input.h-2:not([type='checkbox']),
 .h-3.border,
-input.h-3:not([type='checkbox']),
 .h-4.border,
-input.h-4:not([type='checkbox']),
 .h-5.border,
-input.h-5:not([type='checkbox']),
 .h-6.border,
-input.h-6:not([type='checkbox']),
 .h-7.border,
-input.h-7:not([type='checkbox']),
 .h-8.border,
-input.h-8:not([type='checkbox']),
 .h-9.border,
-input.h-9:not([type='checkbox']),
 .h-10.border,
-input.h-10:not([type='checkbox']),
 .h-12.border,
-input.h-12:not([type='checkbox']),
 .h-14.border,
-input.h-14:not([type='checkbox']),
 .h-16.border,
-input.h-16:not([type='checkbox']),
 .h-18.border,
-input.h-18:not([type='checkbox']),
 .h-20.border,
-input.h-20:not([type='checkbox']),
 .h-24.border,
-input.h-24:not([type='checkbox']),
 .h-28.border,
-input.h-28:not([type='checkbox']),
 .h-32.border,
-input.h-32:not([type='checkbox']),
 .h-36.border,
-input.h-36:not([type='checkbox']),
 .h-40.border,
-input.h-40:not([type='checkbox']),
 .h-48.border,
-input.h-48:not([type='checkbox']),
 .h-56.border,
-input.h-56:not([type='checkbox']),
-.h-64.border,
-input.h-64:not([type='checkbox']),
-input.border:not([type='checkbox']) {
+.h-64.border {
   position: initial;
   top: initial;
   margin-bottom: 0;
@@ -2628,5 +2592,9 @@ hr {
   /* Horizontally center a block */
   margin-left: auto;
   margin-right: auto;
+}
+
+input:not([type='checkbox']) {
+  border-width: 1px;
 }
 

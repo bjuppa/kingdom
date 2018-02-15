@@ -2,5 +2,6 @@
 
 input:not([type='checkbox']) {
   @extend %h-1;
-  @extend %border;
+  //@extend %border;
+  border-width: 1px;
 }
