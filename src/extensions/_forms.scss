@@ -1,0 +1,6 @@
+// Opinionated form styles
+
+input:not([type='checkbox']) {
+  @extend %h-1;
+  @extend %border;
+}
