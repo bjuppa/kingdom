@@ -110,7 +110,9 @@ output {
 /* %h-1 */
 
 .h-1,
-input:not([type='checkbox']) {
+input:not([type='checkbox']),
+button,
+select {
   height: 1.6875rem;
   height: calc(1 * var(--spacing-base, 1.6875rem));
 }
@@ -2242,6 +2244,8 @@ h6 * {
 
 .h-1.border-t,
 input.border-t:not([type='checkbox']),
+button.border-t,
+select.border-t,
 .h-2.border-t,
 .h-3.border-t,
 .h-4.border-t,
@@ -2297,6 +2301,8 @@ input.border-t:not([type='checkbox']),
 
 .h-1.border-tb,
 input.border-tb:not([type='checkbox']),
+button.border-tb,
+select.border-tb,
 .h-2.border-tb,
 .h-3.border-tb,
 .h-4.border-tb,
@@ -2348,6 +2354,8 @@ input.border-tb:not([type='checkbox']),
 
 .h-1.border,
 input.border:not([type='checkbox']),
+button.border,
+select.border,
 .h-2.border,
 .h-3.border,
 .h-4.border,
@@ -2595,6 +2603,14 @@ hr {
 }
 
 input:not([type='checkbox']) {
+  border-width: 1px;
+}
+
+button {
+  border-width: 1px;
+}
+
+select {
   border-width: 1px;
 }
 

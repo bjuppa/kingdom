@@ -2,6 +2,19 @@
 
 input:not([type='checkbox']) {
   @extend %h-1;
-  //@extend %border;
+  border-width: 1px;
+}
+
+input[type='button'] {
+  //TODO: find out why buttons have wrong height
+}
+
+button {
+  @extend %h-1;
+  border-width: 1px;
+}
+
+select {
+  @extend %h-1;
   border-width: 1px;
 }
