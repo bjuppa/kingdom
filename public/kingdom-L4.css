@@ -101,7 +101,8 @@ output {
   font-size: inherit;
   line-height: inherit;
   margin: 0;
-  padding: 0;
+  padding-top: 0;
+  padding-bottom: 0;
 }
 
 /* Placeholders for sizing */
