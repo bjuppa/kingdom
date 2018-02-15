@@ -105,6 +105,13 @@ output {
   padding-bottom: 0;
 }
 
+button,
+html [type="button"],
+[type="reset"],
+[type="submit"] {
+  -webkit-appearance: button;
+}
+
 /* Placeholders for sizing */
 
 /* %h-1 */
@@ -927,6 +934,7 @@ map *,
 
 .h-px + *,
 * + *,
+button,
 [type="button"],
 [type="reset"],
 [type="submit"],

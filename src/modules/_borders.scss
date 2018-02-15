@@ -1,4 +1,5 @@
 $border-width: 1px !default;
+$body-line-height-factor: 1.5 !default;
 
 @import '../modules/strip-unit';
 
@@ -38,4 +39,10 @@ $border-width: 1px !default;
       @extend %pb-1 !optional;
     }
   }
+}
+
+@mixin set-border-preserving-line-height($line-height: $body-line-height-factor, $width: $border-width) {
+  line-height: font-size-rem($line-height) - length-rem(2 * $width);
+  line-height: calc(var(--line-height, #{$line-height}) - 2 * #{$width});
+  border-width: $width;
 }

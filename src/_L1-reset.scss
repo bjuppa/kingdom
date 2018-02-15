@@ -123,6 +123,15 @@ output {
   //vertical-align: baseline;
 }
 
+// Correct the inability to style clickable types in iOS and Safari.
+// https://github.com/necolas/normalize.css
+button,
+html [type="button"],
+[type="reset"],
+[type="submit"] {
+  -webkit-appearance: button;
+}
+
 select {
   // Touching the borders on select removes the default styling in Safari.
   // Reverting borders on select will bring back default styling.

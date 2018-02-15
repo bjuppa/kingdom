@@ -51,7 +51,7 @@ textarea, select, input {
   @extend %mt-0;
 }
 
-[type="button"], [type="reset"], [type="submit"] {
+button, [type="button"], [type="reset"], [type="submit"] {
   // Add vertical spacing to button-type form elements, should they become block level elements
   @extend %mt-1;
 }

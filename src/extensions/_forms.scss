@@ -1,20 +1,26 @@
 // Opinionated form styles
 
-input:not([type='checkbox']) {
-  @extend %h-1;
-  border-width: 1px;
+input:not([type='checkbox']):not([type='radio']) {
+  @include set-border-preserving-line-height($vertical-rhythm-base);
 }
 
-input[type='button'] {
-  //TODO: find out why buttons have wrong height
+[type='checkbox'],
+[type='radio'] {
+
 }
 
-button {
-  @extend %h-1;
-  border-width: 1px;
+button,
+[type='button'],
+[type='reset'],
+[type="submit"] {
+  @include set-border-preserving-line-height($vertical-rhythm-base);
+}
+
+// https://github.com/tailwindcss/tailwindcss/blob/master/css/preflight.css
+textarea {
+  resize: vertical;
 }
 
 select {
-  @extend %h-1;
-  border-width: 1px;
+  @include set-border-preserving-line-height($vertical-rhythm-base);
 }
