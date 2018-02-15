@@ -34,7 +34,7 @@ html {
 
 // Set a default border style to allow just setting border-width when needed
 // https://github.com/tailwindcss/tailwindcss/blob/master/css/preflight.css
-*,
+*:not(select),
 *::before,
 *::after {
   border: 0 solid $border-color;
@@ -119,8 +119,6 @@ output {
   margin: 0;
   padding-top: 0;
   padding-bottom: 0;
-  //display: inline-block;
-  //vertical-align: baseline;
 }
 
 // Correct the inability to style clickable types in iOS and Safari.
@@ -130,12 +128,6 @@ html [type="button"],
 [type="reset"],
 [type="submit"] {
   -webkit-appearance: button;
-}
-
-select {
-  // Touching the borders on select removes the default styling in Safari.
-  // Reverting borders on select will bring back default styling.
-  //border: revert;
 }
 
 @import "placeholders/sizing";
