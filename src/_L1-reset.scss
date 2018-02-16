@@ -53,7 +53,7 @@ hr {
 
 // Make sure elements are not displayed
 [hidden], template {
-  display: none;
+  display: none !important;
 }
 
 // Correct svg overflow in IE
