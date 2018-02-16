@@ -103,6 +103,7 @@ html [type="button"],
 [type="reset"],
 [type="submit"] {
   -webkit-appearance: button;
+  // When buttons' font-size or line-height reaches 22px Safari will stop rendering default style
 }
 
 // Reset form elements
