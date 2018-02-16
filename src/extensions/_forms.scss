@@ -12,7 +12,7 @@ input:not([type='checkbox']):not([type='radio']) {
 button,
 [type='button'],
 [type='reset'],
-[type="submit"] {
+[type='submit'] {
   @include set-border-preserving-line-height($vertical-rhythm-base);
 }
 
@@ -22,5 +22,10 @@ textarea {
 }
 
 select {
-  @include set-border-preserving-line-height($vertical-rhythm-base);
+  //TODO: investigate how to make select fit into the vertical rhythm
+  //@include set-border-preserving-line-height($vertical-rhythm-base);
+  //@extend %h-1;
+  //@extend %border;
+  border: 1px solid black;
+  height: $vertical-rhythm-base;
 }
