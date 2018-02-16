@@ -96,6 +96,15 @@ sup {
   top: -0.5em;
 }
 
+// Correct the inability to style clickable types in iOS and Safari.
+// https://github.com/necolas/normalize.css
+button,
+html [type="button"],
+[type="reset"],
+[type="submit"] {
+  -webkit-appearance: button;
+}
+
 // Reset form elements
 button,
 input,
@@ -110,15 +119,6 @@ output {
   margin: 0;
   padding-top: 0;
   padding-bottom: 0;
-}
-
-// Correct the inability to style clickable types in iOS and Safari.
-// https://github.com/necolas/normalize.css
-button,
-html [type="button"],
-[type="reset"],
-[type="submit"] {
-  -webkit-appearance: button;
 }
 
 @import "placeholders/sizing";
