@@ -55,6 +55,11 @@ hr {
   display: none !important;
 }
 
+// https://github.com/suitcss/base
+[tabindex="-1"]:focus {
+  outline: none !important;
+}
+
 // Correct svg overflow in IE
 svg:not(:root) {
   overflow: hidden;
@@ -201,6 +206,24 @@ textarea {
 [type="search"]::-webkit-search-cancel-button,
 [type="search"]::-webkit-search-decoration {
   -webkit-appearance: none;
+}
+
+// Work around a Firefox/IE bug where a transparent `button` background results in a loss of the default `button` focus styles.
+// https://github.com/suitcss/base
+button:focus {
+  outline: 1px dotted;
+  outline: 5px auto -webkit-focus-ring-color;
+}
+
+// https://github.com/tailwindcss/tailwindcss/blob/master/css/preflight.css
+input::placeholder, textarea::placeholder {
+  color: inherit;
+  opacity: .5;
+}
+
+// https://github.com/tailwindcss/tailwindcss/blob/master/css/preflight.css
+button, [role=button] {
+  cursor: pointer;
 }
 
 @import "placeholders/sizing";
