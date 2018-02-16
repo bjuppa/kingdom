@@ -1,4 +1,6 @@
 $border-width: 1px !default;
+$border-color: currentColor !default;
+$border-style: solid !default;
 $body-line-height-factor: 1.5 !default;
 
 @import '../modules/strip-unit';
@@ -46,4 +48,10 @@ $body-line-height-factor: 1.5 !default;
   line-height: font-size-rem($line-height) - length-rem(2 * $width);
   line-height: calc(var(--line-height, #{$line-height}) - 2 * #{$width});
   border-width: $width;
+}
+
+// Set a default border style to allow just setting border-width when needed
+// https://github.com/tailwindcss/tailwindcss/blob/master/css/preflight.css
+@mixin reset-border($color: $border-color, $style: $border-style) {
+  border: 0 $style $border-color;
 }
