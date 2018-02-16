@@ -32,12 +32,10 @@ hr {
   background-color: $border-color;
 }
 
-input {
-  // TODO: still 1px off in Chrome & Opera
+input, button {
   font: inherit; // Inline inputs must inherit font to fit in lines
   padding-top: 0;
   padding-bottom: 0;
-  height: $vertical-rhythm-base;
   @include set-border-preserving-line-height($vertical-rhythm-base);
 }
 

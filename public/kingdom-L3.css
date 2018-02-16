@@ -2458,11 +2458,11 @@ hr {
   background-color: currentColor;
 }
 
-input {
+input,
+button {
   font: inherit;
   padding-top: 0;
   padding-bottom: 0;
-  height: 1.6875rem;
   line-height: 1.5625rem;
   line-height: calc(var(--line-height, 1.6875rem) - 2px);
   border-width: 1px;
