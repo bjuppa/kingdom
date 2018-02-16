@@ -16,11 +16,6 @@ button,
   @include set-border-preserving-line-height($vertical-rhythm-base);
 }
 
-// https://github.com/tailwindcss/tailwindcss/blob/master/css/preflight.css
-textarea {
-  resize: vertical;
-}
-
 select {
   //TODO: investigate how to make select fit into the vertical rhythm
   //@include set-border-preserving-line-height($vertical-rhythm-base);
