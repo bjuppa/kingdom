@@ -1,4 +1,3 @@
-$spacing-base: 1em !default;
 $desired-body-font-size: 18px !default;
 $body-line-height-factor: 1.5 !default;
 $min-line-height-factor: 1.2 !default;
@@ -16,6 +15,8 @@ $line-heights: $body-line-height-factor !default;
 @while (length($line-heights) < 6) {
   $line-heights: append($line-heights, (length($line-heights) + 1) * ($min-line-height-factor - $body-line-height-factor) / 5 + (6 * $body-line-height-factor - $min-line-height-factor) / 5);
 }
+
+$spacing-base: font-size-rem(nth($line-heights, 1)) !default;
 
 @import "L1-reset";
 
