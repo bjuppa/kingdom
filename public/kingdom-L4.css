@@ -23,7 +23,50 @@ html {
           box-sizing: inherit;
 }
 
-*,
+address,
+article,
+aside,
+blockquote,
+canvas,
+dd,
+details,
+div,
+dl,
+dt,
+fieldset,
+figcaption,
+figure,
+footer,
+form,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+header,
+hgroup,
+hr,
+li,
+main,
+menu,
+nav,
+noscript,
+ol,
+output,
+p,
+pre,
+section,
+table,
+tbody,
+tfoot,
+thead,
+ul,
+video {
+  display: block;
+  border: 0 solid currentColor;
+}
+
 *::before,
 *::after {
   border: 0 solid currentColor;
@@ -38,21 +81,6 @@ template {
   display: none;
 }
 
-article,
-aside,
-footer,
-header,
-nav,
-section,
-figcaption,
-figure,
-main,
-details,
-menu,
-hgroup {
-  display: block;
-}
-
 svg:not(:root) {
   overflow: hidden;
 }
@@ -60,6 +88,7 @@ svg:not(:root) {
 img {
   max-width: 100%;
   height: auto;
+  border: 0 solid currentColor;
 }
 
 small {
@@ -91,6 +120,13 @@ sup {
 }
 
 button,
+html [type="button"],
+[type="reset"],
+[type="submit"] {
+  -webkit-appearance: button;
+}
+
+button,
 input,
 optgroup,
 select,
@@ -103,13 +139,6 @@ output {
   margin: 0;
   padding-top: 0;
   padding-bottom: 0;
-}
-
-button,
-html [type="button"],
-[type="reset"],
-[type="submit"] {
-  -webkit-appearance: button;
 }
 
 /* Placeholders for sizing */
@@ -2607,7 +2636,7 @@ input:not([type='checkbox']):not([type='radio']) {
 button,
 [type='button'],
 [type='reset'],
-[type="submit"] {
+[type='submit'] {
   line-height: 1.5625rem;
   line-height: calc(var(--line-height, 1.6875rem) - 2 * 1px);
   border-width: 1px;
@@ -2618,8 +2647,7 @@ textarea {
 }
 
 select {
-  line-height: 1.5625rem;
-  line-height: calc(var(--line-height, 1.6875rem) - 2 * 1px);
-  border-width: 1px;
+  border: 1px solid black;
+  height: 1.6875rem;
 }
 
