@@ -1,3 +1,6 @@
+// Lists of and mixins for different types of elements
+// https://developer.mozilla.org/en-US/docs/Web/Guide/HTML/Content_categories
+
 $html-block-elements: address,
 article,
 aside,
@@ -28,7 +31,9 @@ p,
 pre,
 section,
 table,
+tbody, // Not in https://developer.mozilla.org/en-US/docs/Web/HTML/Block-level_elements
 tfoot,
+thead, // Not in https://developer.mozilla.org/en-US/docs/Web/HTML/Block-level_elements
 ul,
 video !default;
 
@@ -65,6 +70,7 @@ time,
 tt,
 var !default;
 
+//TODO: add parameters that add and remove elements from the default list
 @mixin block-level-elements() {
   $elements: $html-block-elements;
   #{$elements} {
