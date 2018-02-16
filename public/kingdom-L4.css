@@ -78,7 +78,7 @@ hr {
 
 [hidden],
 template {
-  display: none;
+  display: none !important;
 }
 
 svg:not(:root) {
@@ -133,7 +133,6 @@ select,
 textarea,
 label,
 output {
-  font-family: inherit;
   font-size: inherit;
   line-height: inherit;
   margin: 0;
