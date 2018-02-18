@@ -2477,6 +2477,7 @@ select {
 
 select {
   height: 1.6875rem;
+  vertical-align: top;
 }
 
 .visualize-vertical-rhythm {
