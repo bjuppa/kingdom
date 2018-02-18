@@ -32,11 +32,10 @@ hr {
   background-color: $border-color;
 }
 
-input, button, select {
-  //font: inherit; //Inline inputs must inherit font to fit in lines
-  @include set-border-preserving-line-height($vertical-rhythm-base);
-  border-color: $border-color; //Setting border-color forces select out of Safari default styling
-  border-style: $border-style; // For unification
+input, button {
+  @include set-border-preserving-line-height($vertical-rhythm-base, 2px);
+  //border-color: $border-color;
+  //border-style: $border-style;
 }
 
 [type='checkbox'], [type='radio'] {
@@ -45,7 +44,10 @@ input, button, select {
 }
 
 select {
-  height: $vertical-rhythm-base;
+  -webkit-appearance: menulist-button; //Force select out of Safari default styling
+  @include set-border-preserving-line-height($vertical-rhythm-base, 1px);
+  //border-color: $border-color;
+  //border-style: $border-style;
 }
 
 .visualize-vertical-rhythm {
