@@ -38,8 +38,12 @@ input, button, select {
   padding-bottom: 0;
   @include set-border-preserving-line-height($vertical-rhythm-base);
   border-color: $border-color; //Setting border-color forces select out of Safari default styling
+  border-style: $border-style; //Unification
   max-height: $vertical-rhythm-base; //Setting max-height just in case, should the input become a block
-  border-style: $border-style;
+}
+
+select {
+  height: $vertical-rhythm-base; // TODO: Setting height on select fixes size, but only when the select is surrounded by <hr>, it also seems to be connected to font-family...
 }
 
 .visualize-vertical-rhythm {

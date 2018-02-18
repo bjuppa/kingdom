@@ -2547,8 +2547,12 @@ select {
   line-height: calc(var(--line-height, 1.6875rem) - 2px);
   border-width: 1px;
   border-color: currentColor;
-  max-height: 1.6875rem;
   border-style: solid;
+  max-height: 1.6875rem;
+}
+
+select {
+  height: 1.6875rem;
 }
 
 .visualize-vertical-rhythm {
