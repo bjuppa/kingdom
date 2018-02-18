@@ -2540,9 +2540,9 @@ hr {
 input,
 button {
   vertical-align: bottom;
-  line-height: 1.4375rem;
-  line-height: calc(var(--line-height, 1.6875rem) - 4px);
-  border-width: 2px;
+  line-height: 1.5625rem;
+  line-height: calc(var(--line-height, 1.6875rem) - 2px);
+  border-width: 1px;
   padding-top: 0;
   padding-bottom: 0;
   height: 1.6875rem;
@@ -2569,6 +2569,13 @@ select {
   height: var(--line-height, 1.6875rem);
   max-height: 1.6875rem;
   max-height: var(--line-height, 1.6875rem);
+}
+
+input,
+button,
+select {
+  border-color: currentColor;
+  border-style: solid;
 }
 
 .visualize-vertical-rhythm {
