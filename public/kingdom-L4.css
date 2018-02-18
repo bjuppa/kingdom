@@ -2540,20 +2540,24 @@ hr {
 input,
 button,
 select {
-  font: inherit;
-  padding-top: 0;
-  padding-bottom: 0;
+  vertical-align: bottom;
   line-height: 1.5625rem;
   line-height: calc(var(--line-height, 1.6875rem) - 2px);
   border-width: 1px;
+  padding-top: 0;
+  padding-bottom: 0;
   max-height: 1.6875rem;
   border-color: currentColor;
   border-style: solid;
 }
 
+[type='checkbox'],
+[type='radio'] {
+  vertical-align: baseline;
+}
+
 select {
   height: 1.6875rem;
-  vertical-align: top;
 }
 
 .visualize-vertical-rhythm {

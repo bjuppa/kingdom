@@ -33,17 +33,18 @@ hr {
 }
 
 input, button, select {
-  font: inherit; //Inline inputs must inherit font to fit in lines
-  padding-top: 0;
-  padding-bottom: 0;
+  //font: inherit; //Inline inputs must inherit font to fit in lines
   @include set-border-preserving-line-height($vertical-rhythm-base);
   border-color: $border-color; //Setting border-color forces select out of Safari default styling
   border-style: $border-style; // For unification
 }
 
+[type='checkbox'], [type='radio'] {
+  vertical-align: baseline;
+}
+
 select {
   height: $vertical-rhythm-base;
-  vertical-align: top;
 }
 
 .visualize-vertical-rhythm {
