@@ -2546,9 +2546,9 @@ select {
   line-height: 1.5625rem;
   line-height: calc(var(--line-height, 1.6875rem) - 2px);
   border-width: 1px;
+  max-height: 1.6875rem;
   border-color: currentColor;
   border-style: solid;
-  max-height: 1.6875rem;
 }
 
 select {
