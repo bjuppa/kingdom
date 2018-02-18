@@ -217,7 +217,7 @@ input::placeholder, textarea::placeholder {
 }
 
 // https://github.com/tailwindcss/tailwindcss/blob/master/css/preflight.css
-button, [role=button] {
+button, [role=button], [type='button'], [type='reset'], [type='submit'] {
   cursor: pointer;
 }
 
