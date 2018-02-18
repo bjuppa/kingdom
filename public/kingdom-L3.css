@@ -2459,13 +2459,15 @@ hr {
 }
 
 input,
-button {
+button,
+select {
   font: inherit;
   padding-top: 0;
   padding-bottom: 0;
   line-height: 1.5625rem;
   line-height: calc(var(--line-height, 1.6875rem) - 2px);
   border-width: 1px;
+  max-height: 1.6875rem;
 }
 
 .visualize-vertical-rhythm {

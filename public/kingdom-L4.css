@@ -2535,13 +2535,15 @@ hr {
 }
 
 input,
-button {
+button,
+select {
   font: inherit;
   padding-top: 0;
   padding-bottom: 0;
   line-height: 1.5625rem;
   line-height: calc(var(--line-height, 1.6875rem) - 2px);
   border-width: 1px;
+  max-height: 1.6875rem;
 }
 
 .visualize-vertical-rhythm {
@@ -2727,25 +2729,5 @@ button {
   /* Horizontally center a block */
   margin-left: auto;
   margin-right: auto;
-}
-
-input:not([type='checkbox']):not([type='radio']) {
-  line-height: 1.5625rem;
-  line-height: calc(var(--line-height, 1.6875rem) - 2px);
-  border-width: 1px;
-}
-
-button,
-[type='button'],
-[type='reset'],
-[type='submit'] {
-  line-height: 1.5625rem;
-  line-height: calc(var(--line-height, 1.6875rem) - 2px);
-  border-width: 1px;
-}
-
-select {
-  border: 1px solid black;
-  height: 1.6875rem;
 }
 

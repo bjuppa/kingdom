@@ -32,11 +32,16 @@ hr {
   background-color: $border-color;
 }
 
-input, button {
+input, button, select {
   font: inherit; // Inline inputs must inherit font to fit in lines
   padding-top: 0;
   padding-bottom: 0;
   @include set-border-preserving-line-height($vertical-rhythm-base);
+  max-height: $vertical-rhythm-base;
+}
+
+select {
+  // TODO: make select fit the vertical rhythm in Safari
 }
 
 .visualize-vertical-rhythm {
