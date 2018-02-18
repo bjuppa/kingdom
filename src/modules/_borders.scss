@@ -51,7 +51,10 @@ $body-line-height-factor: 1.5 !default;
   border-width: $width;
   padding-top: 0;
   padding-bottom: 0;
-  max-height: $vertical-rhythm-base; //Setting max-height just in case
+  height: font-size-rem($line-height);
+  height: var(--line-height, font-size-rem($line-height));
+  max-height: font-size-rem($line-height);
+  max-height: var(--line-height, font-size-rem($line-height));
 }
 
 // Set a default border style to allow just setting border-width when needed

@@ -2470,7 +2470,10 @@ select {
   border-width: 1px;
   padding-top: 0;
   padding-bottom: 0;
+  height: 1.6875rem;
+  height: var(--line-height, 1.6875rem);
   max-height: 1.6875rem;
+  max-height: var(--line-height, 1.6875rem);
   border-color: currentColor;
   border-style: solid;
 }
@@ -2478,6 +2481,7 @@ select {
 [type='checkbox'],
 [type='radio'] {
   vertical-align: baseline;
+  height: auto;
 }
 
 select {
