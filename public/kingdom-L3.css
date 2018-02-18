@@ -229,7 +229,10 @@ textarea::placeholder {
 }
 
 button,
-[role=button] {
+[role=button],
+[type='button'],
+[type='reset'],
+[type='submit'] {
   cursor: pointer;
 }
 
@@ -2469,6 +2472,7 @@ select {
   border-width: 1px;
   border-color: currentColor;
   max-height: 1.6875rem;
+  border-style: solid;
 }
 
 .visualize-vertical-rhythm {

@@ -39,6 +39,7 @@ input, button, select {
   @include set-border-preserving-line-height($vertical-rhythm-base);
   border-color: $border-color; //Setting border-color forces select out of Safari default styling
   max-height: $vertical-rhythm-base; //Setting max-height just in case, should the input become a block
+  border-style: $border-style;
 }
 
 .visualize-vertical-rhythm {
