@@ -2476,6 +2476,7 @@ select {
   max-height: var(--line-height, 1.6875rem);
   border-color: currentColor;
   border-style: solid;
+  border-radius: 0.2109375rem;
 }
 
 [type='checkbox'],
