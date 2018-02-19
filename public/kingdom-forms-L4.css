@@ -2775,3 +2775,9 @@ textarea::placeholder {
   opacity: .5;
 }
 
+form > label,
+form > button,
+form > [type='submit'] {
+  display: block;
+}
+
