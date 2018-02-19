@@ -2501,6 +2501,14 @@ button,
   background: transparent;
 }
 
+button:active,
+[type='button']:active,
+[type='reset']:active,
+[type='submit']:active {
+  color: currentColor;
+  border-color: transparent;
+}
+
 .visualize-vertical-rhythm {
   background-image: linear-gradient(rgba(255, 0, 0, 0.15), rgba(255, 0, 0, 0.15) 1px, transparent 1px);
   background-size: 1px 1.6875rem;

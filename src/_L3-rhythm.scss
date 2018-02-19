@@ -57,6 +57,11 @@ button,
 [type='reset'],
 [type='submit'] {
   background: transparent;
+
+  &:active {
+    color: currentColor;
+    border-color: transparent;
+  }
 }
 
 .visualize-vertical-rhythm {
