@@ -2462,7 +2462,8 @@ hr {
 }
 
 input,
-button {
+button,
+select {
   vertical-align: bottom;
   line-height: 1.5625rem;
   line-height: calc(var(--line-height, 1.6875rem) - 2px);
@@ -2473,6 +2474,8 @@ button {
   height: var(--line-height, 1.6875rem);
   max-height: 1.6875rem;
   max-height: var(--line-height, 1.6875rem);
+  border-color: currentColor;
+  border-style: solid;
 }
 
 [type='checkbox'],
@@ -2483,23 +2486,18 @@ button {
 
 select {
   -webkit-appearance: menulist-button;
-  vertical-align: bottom;
-  line-height: 1.5625rem;
-  line-height: calc(var(--line-height, 1.6875rem) - 2px);
-  border-width: 1px;
-  padding-top: 0;
-  padding-bottom: 0;
-  height: 1.6875rem;
-  height: var(--line-height, 1.6875rem);
-  max-height: 1.6875rem;
-  max-height: var(--line-height, 1.6875rem);
 }
 
 input,
-button,
 select {
-  border-color: currentColor;
-  border-style: solid;
+  background: initial;
+}
+
+button,
+[type='button'],
+[type='reset'],
+[type='submit'] {
+  background: transparent;
 }
 
 .visualize-vertical-rhythm {
