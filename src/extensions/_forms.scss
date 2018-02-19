@@ -1,5 +1,15 @@
 // Opinionated form styles
 
+input, button, select {
+  border-color: $border-color;
+  border-style: $border-style;
+  border-radius: $vertical-rhythm-base/8;
+}
+
+input, select {
+  background: initial;
+}
+
 input:not([type='checkbox']):not([type='radio']) {
 
 }
@@ -9,13 +19,18 @@ input:not([type='checkbox']):not([type='radio']) {
 
 }
 
+select {
+
+}
+
 button,
 [type='button'],
 [type='reset'],
 [type='submit'] {
+  background: transparent;
 
-}
-
-select {
-
+  &:active {
+    color: currentColor;
+    border-color: transparent;
+  }
 }

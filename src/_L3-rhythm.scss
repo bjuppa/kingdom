@@ -34,9 +34,6 @@ hr {
 
 input, button, select {
   @include set-border-preserving-line-height($vertical-rhythm-base, 1px);
-  border-color: $border-color;
-  border-style: $border-style;
-  border-radius: $vertical-rhythm-base/8;
 }
 
 [type='checkbox'], [type='radio'] {
@@ -46,22 +43,6 @@ input, button, select {
 
 select {
   -webkit-appearance: menulist-button; //Force select out of Safari default styling
-}
-
-input, select {
-  background: initial;
-}
-
-button,
-[type='button'],
-[type='reset'],
-[type='submit'] {
-  background: transparent;
-
-  &:active {
-    color: currentColor;
-    border-color: transparent;
-  }
 }
 
 .visualize-vertical-rhythm {
