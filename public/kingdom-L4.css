@@ -204,30 +204,6 @@ button:focus {
   outline: 5px auto -webkit-focus-ring-color;
 }
 
-input::-webkit-input-placeholder,
-textarea::-webkit-input-placeholder {
-  color: inherit;
-  opacity: .5;
-}
-
-input:-ms-input-placeholder,
-textarea:-ms-input-placeholder {
-  color: inherit;
-  opacity: .5;
-}
-
-input::-ms-input-placeholder,
-textarea::-ms-input-placeholder {
-  color: inherit;
-  opacity: .5;
-}
-
-input::placeholder,
-textarea::placeholder {
-  color: inherit;
-  opacity: .5;
-}
-
 button,
 [role=button],
 [type='button'],

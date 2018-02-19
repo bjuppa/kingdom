@@ -34,3 +34,8 @@ button,
     border-color: transparent;
   }
 }
+
+input::placeholder, textarea::placeholder {
+  color: inherit;
+  opacity: .5;
+}
