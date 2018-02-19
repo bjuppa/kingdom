@@ -2527,13 +2527,16 @@ textarea::placeholder {
   opacity: .5;
 }
 
-form > label,
-form > button,
-form > [type='submit'] {
+form label {
   display: block;
 }
 
-form.inline > * {
+form label ~ label + button,
+form label ~ label + [type='submit'] {
+  display: block;
+}
+
+form.inline * {
   display: inline-block;
 }
 

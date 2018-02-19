@@ -41,13 +41,20 @@ input::placeholder, textarea::placeholder {
 }
 
 form {
-  > label, > button, > [type='submit'] {
-    // Forms are stacked by default
+  label {
+    // Labels make the form stack
     display: block;
   }
 
+  label ~ label {
+    // A submit preceded by multiple labels will stack
+    + button, + [type='submit'] {
+      display: block;
+    }
+  }
+
   &.inline {
-    > * {
+    * {
       // Reset to inline form
       display: inline-block;
     }
