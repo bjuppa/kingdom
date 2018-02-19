@@ -2781,3 +2781,7 @@ form > [type='submit'] {
   display: block;
 }
 
+form.inline > * {
+  display: inline-block;
+}
+
