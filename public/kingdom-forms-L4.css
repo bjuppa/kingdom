@@ -1026,7 +1026,8 @@ video *,
 map *,
 .mt-0,
 .mt-0-children > *,
-.mt-0-within * {
+.mt-0-within *,
+label:only-of-type ~ * {
   /* Reset vertical spacing */
   margin-top: 0;
 }
@@ -2788,17 +2789,6 @@ button,
   display: block;
 }
 
-label:only-of-type ~ button,
-label:only-of-type ~
-[type='button'],
-label:only-of-type ~
-[type='reset'],
-label:only-of-type ~
-[type='submit'] {
-  display: inline-block;
-  margin-top: 0;
-}
-
 button:active,
 [type='button']:active,
 [type='reset']:active,
@@ -2835,7 +2825,16 @@ label {
   display: block;
 }
 
-form.inline-form * {
+label:only-of-type ~ * {
+  /* Forms with just one label have the rest of their contents inline */
+  display: inline-block;
+}
+
+form.form-inline {
+  /* Make form contents go inline */
+}
+
+form.form-inline * {
   display: inline-block;
 }
 

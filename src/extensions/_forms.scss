@@ -32,12 +32,6 @@ button,
   // Buttons go on their own line
   display: block;
 
-  label:only-of-type ~ & {
-    // Forms with just one input have their buttons inline
-    display: inline-block;
-    margin-top: 0;
-  }
-
   &:active {
     color: currentColor;
     border-color: transparent;
@@ -50,14 +44,19 @@ input::placeholder, textarea::placeholder {
 }
 
 label {
-  // Labels go on their own line above their inputs
+  // Labels go on their own line before their inputs
   display: block;
 }
 
-form {
-  &.inline-form {
-    * {
-      display: inline-block;
-    }
+label:only-of-type ~ * {
+  /* Forms with just one label have the rest of their contents inline */
+  display: inline-block;
+  @extend %mt-0;
+}
+
+form.form-inline {
+  /* Make form contents go inline */
+  * {
+    display: inline-block;
   }
 }
