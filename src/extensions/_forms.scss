@@ -1,9 +1,11 @@
 // Opinionated form styles
+$input-border-width: 1px !default;
 
 input, button, select {
   border-color: $border-color;
   border-style: $border-style;
   border-radius: $spacing-base/8;
+  border-width: $input-border-width;
 }
 
 input, select {

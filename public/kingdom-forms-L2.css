@@ -2485,6 +2485,7 @@ select {
   border-color: currentColor;
   border-style: solid;
   border-radius: 0.1875rem;
+  border-width: 1px;
 }
 
 input,
