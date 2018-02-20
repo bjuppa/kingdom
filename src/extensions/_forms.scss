@@ -29,6 +29,15 @@ button,
 [type='submit'] {
   background: transparent;
 
+  // Buttons go on their own line
+  display: block;
+
+  label:only-of-type ~ & {
+    // Forms with just one input have their buttons inline
+    display: inline-block;
+    margin-top: 0;
+  }
+
   &:active {
     color: currentColor;
     border-color: transparent;
@@ -40,22 +49,14 @@ input::placeholder, textarea::placeholder {
   opacity: .5;
 }
 
+label {
+  // Labels go on their own line above their inputs
+  display: block;
+}
+
 form {
-  label {
-    // Labels make the form stack
-    display: block;
-  }
-
-  label ~ label {
-    // A submit preceded by multiple labels will stack
-    + button, + [type='submit'] {
-      display: block;
-    }
-  }
-
-  &.inline {
+  &.inline-form {
     * {
-      // Reset to inline form
       display: inline-block;
     }
   }

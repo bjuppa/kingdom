@@ -2493,6 +2493,18 @@ button,
 [type='reset'],
 [type='submit'] {
   background: transparent;
+  display: block;
+}
+
+label:only-of-type ~ button,
+label:only-of-type ~
+[type='button'],
+label:only-of-type ~
+[type='reset'],
+label:only-of-type ~
+[type='submit'] {
+  display: inline-block;
+  margin-top: 0;
 }
 
 button:active,
@@ -2527,16 +2539,11 @@ textarea::placeholder {
   opacity: .5;
 }
 
-form label {
+label {
   display: block;
 }
 
-form label ~ label + button,
-form label ~ label + [type='submit'] {
-  display: block;
-}
-
-form.inline * {
+form.inline-form * {
   display: inline-block;
 }
 
