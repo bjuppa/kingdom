@@ -2527,6 +2527,8 @@ select {
   border-style: solid;
   border-radius: 0.2109375rem;
   border-width: 1px;
+  padding-top: 0;
+  padding-bottom: 0;
 }
 
 input,

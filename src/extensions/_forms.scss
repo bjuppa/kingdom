@@ -6,6 +6,8 @@ input, button, select {
   border-style: $border-style;
   border-radius: $spacing-base/8;
   border-width: $input-border-width;
+  padding-top: 0;
+  padding-bottom: 0;
 }
 
 input, select {
