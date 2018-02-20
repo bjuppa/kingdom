@@ -2351,6 +2351,50 @@ button,
   margin-right: auto;
 }
 
+.block,
+.block-children > * {
+  display: block;
+}
+
+.inline-block,
+.inline-block-children > *,
+.inline-block-within * {
+  display: inline-block;
+}
+
+.inline,
+.inline-within * {
+  display: inline;
+}
+
+.table {
+  display: table;
+}
+
+.table-row {
+  display: table-row;
+}
+
+.table-cell {
+  display: table-cell;
+}
+
+.hidden {
+  display: none;
+}
+
+.flex {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.inline-flex {
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+}
+
 input,
 button,
 select {
