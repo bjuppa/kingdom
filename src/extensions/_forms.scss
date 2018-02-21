@@ -3,6 +3,9 @@ $input-border-color: $border-color !default;
 $input-border-width: 1px !default;
 $input-border-radius: $spacing-base/8 !default;
 $input-border-style: solid !default;
+$input-background: initial !default;
+$button-background: transparent !default;
+
 
 input, button, select {
   border-color: $input-border-color;
@@ -15,7 +18,7 @@ input, button, select {
 }
 
 input, select {
-  background: initial;
+  background: $input-background;
 }
 
 input:not([type='checkbox']):not([type='radio']) {
@@ -35,14 +38,14 @@ button,
 [type='button'],
 [type='reset'],
 [type='submit'] {
-  background: transparent;
+  background: $button-background;
 
   // Buttons go on their own line
   display: block;
 
   &:active {
-    color: currentColor;
-    border-color: transparent;
+    color: currentColor; //Avoid clicked button "disappearing" when browser inverts text color on a transparent background
+    border-color: transparent; //Visualise button activation
   }
 }
 
@@ -57,7 +60,7 @@ label {
 }
 
 label:only-of-type ~ * {
-  /* Forms with just one label have the rest of their contents inline */
+  /* Elements containing just one label have the rest of their contents inline */
   display: inline-block;
   @extend %mt-0;
 }

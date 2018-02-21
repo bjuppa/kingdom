@@ -2483,9 +2483,9 @@ input,
 button,
 select {
   border-color: currentColor;
+  border-width: 1px;
   border-style: solid;
   border-radius: 0.1875rem;
-  border-width: 1px;
   outline-offset: -2px;
   padding-top: 0;
   padding-bottom: 0;
@@ -2541,7 +2541,7 @@ label {
 }
 
 label:only-of-type ~ * {
-  /* Forms with just one label have the rest of their contents inline */
+  /* Elements containing just one label have the rest of their contents inline */
   display: inline-block;
 }
 
