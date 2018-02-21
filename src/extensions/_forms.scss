@@ -1,11 +1,14 @@
 // Opinionated form styles
+$input-border-color: $border-color !default;
 $input-border-width: 1px !default;
+$input-border-radius: $spacing-base/8 !default;
+$input-border-style: solid !default;
 
 input, button, select {
-  border-color: $border-color;
-  border-style: $border-style;
-  border-radius: $spacing-base/8;
+  border-color: $input-border-color;
   border-width: $input-border-width;
+  border-style: $input-border-style;
+  border-radius: $input-border-radius;
   outline-offset: -2px; //Same focus ring size for same border in Safari
   padding-top: 0;
   padding-bottom: 0;
