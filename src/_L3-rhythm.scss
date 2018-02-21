@@ -43,6 +43,13 @@ input, button, select {
   height: auto;
 }
 
+textarea {
+  vertical-align: top;
+  @include set-border($width: $input-border-width);
+  padding-top: 0;
+  padding-bottom: 0;
+}
+
 select {
   -webkit-appearance: menulist-button; //Force select out of Safari default styling
 }

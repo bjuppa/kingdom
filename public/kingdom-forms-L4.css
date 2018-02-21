@@ -1844,6 +1844,18 @@ button,
 .border-0 > h4:last-child,
 .border-0 > h5:last-child,
 .border-0 > h6:last-child,
+textarea > p:last-child,
+textarea > blockquote:last-child,
+textarea > address:last-child,
+textarea > li:last-child,
+textarea > dt:last-child,
+textarea > dd:last-child,
+textarea > h1:last-child,
+textarea > h2:last-child,
+textarea > h3:last-child,
+textarea > h4:last-child,
+textarea > h5:last-child,
+textarea > h6:last-child,
 .pb-1 {
   padding-bottom: 1.6875rem;
   padding-bottom: calc(1 * var(--spacing-base, 1.6875rem));
@@ -2534,6 +2546,57 @@ select {
 [type='radio'] {
   vertical-align: baseline;
   height: auto;
+}
+
+textarea {
+  vertical-align: top;
+  border-top-width: 1px;
+  --border-top-width: 1px;
+  border-top-width: var(--border-top-width);
+  border-bottom-width: 1px;
+  --border-bottom-width: 1px;
+  border-bottom-width: var(--border-bottom-width);
+  border-left-width: 1px;
+  --border-left-width: 1px;
+  border-left-width: var(--border-left-width);
+  border-right-width: 1px;
+  --border-right-width: 1px;
+  border-right-width: var(--border-right-width);
+  position: relative;
+  top: -1px;
+  top: calc(0px - var(--border-top-width));
+  margin-bottom: -2px;
+  margin-bottom: calc(0px - var(--border-top-width, 0px) - var(--border-bottom-width, 0px));
+  padding-top: 0;
+  padding-bottom: 0;
+}
+
+textarea.h-1,
+textarea.h-2,
+textarea.h-3,
+textarea.h-4,
+textarea.h-5,
+textarea.h-6,
+textarea.h-7,
+textarea.h-8,
+textarea.h-9,
+textarea.h-10,
+textarea.h-12,
+textarea.h-14,
+textarea.h-16,
+textarea.h-18,
+textarea.h-20,
+textarea.h-24,
+textarea.h-28,
+textarea.h-32,
+textarea.h-36,
+textarea.h-40,
+textarea.h-48,
+textarea.h-56,
+textarea.h-64 {
+  position: initial;
+  top: initial;
+  margin-bottom: 0;
 }
 
 select {
