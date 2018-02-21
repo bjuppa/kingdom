@@ -17,11 +17,10 @@ $body-line-height-factor: 1.5 !default;
       position: relative;
       top: -$width;
       top: calc(0px - var(--border-top-width));
-      vertical-align: top;
+      vertical-align: top; //Get rid of space after a bordered inline-block
     } @else {
       position: initial;
       top: initial;
-      vertical-align: initial;
     }
   }
 
