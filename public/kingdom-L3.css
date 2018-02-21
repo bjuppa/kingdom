@@ -2267,6 +2267,7 @@ h6,
   position: relative;
   top: -1px;
   top: calc(0px - var(--border-top-width));
+  vertical-align: top;
   margin-bottom: -1px;
   margin-bottom: calc(0px - var(--border-top-width, 0px) - var(--border-bottom-width, 0px));
 }
@@ -2321,6 +2322,7 @@ h6,
   position: relative;
   top: -1px;
   top: calc(0px - var(--border-top-width));
+  vertical-align: top;
   margin-bottom: -2px;
   margin-bottom: calc(0px - var(--border-top-width, 0px) - var(--border-bottom-width, 0px));
 }
@@ -2371,6 +2373,7 @@ h6,
   position: relative;
   top: -1px;
   top: calc(0px - var(--border-top-width));
+  vertical-align: top;
   margin-bottom: -2px;
   margin-bottom: calc(0px - var(--border-top-width, 0px) - var(--border-bottom-width, 0px));
 }
@@ -2420,6 +2423,7 @@ h6,
   border-right-width: var(--border-right-width);
   position: initial;
   top: initial;
+  vertical-align: initial;
   margin-bottom: 0px;
   margin-bottom: calc(0px - var(--border-top-width, 0px) - var(--border-bottom-width, 0px));
 }
@@ -2460,7 +2464,6 @@ select {
 }
 
 textarea {
-  vertical-align: top;
   border-top-width: 1px;
   --border-top-width: 1px;
   border-top-width: var(--border-top-width);
@@ -2476,6 +2479,7 @@ textarea {
   position: relative;
   top: -1px;
   top: calc(0px - var(--border-top-width));
+  vertical-align: top;
   margin-bottom: -2px;
   margin-bottom: calc(0px - var(--border-top-width, 0px) - var(--border-bottom-width, 0px));
   padding-top: 0;
