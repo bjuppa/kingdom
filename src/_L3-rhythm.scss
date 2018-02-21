@@ -35,6 +35,7 @@ hr {
 $input-border-width: 1px !default;
 input, button, select {
   @include set-border-preserving-line-height($vertical-rhythm-base, $input-border-width);
+  outline-offset: -2px; //Same focus ring size for same border in Safari
 }
 
 [type='checkbox'], [type='radio'] {

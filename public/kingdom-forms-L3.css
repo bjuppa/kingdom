@@ -2451,6 +2451,7 @@ select {
   height: var(--line-height, 1.6875rem);
   max-height: 1.6875rem;
   max-height: var(--line-height, 1.6875rem);
+  outline-offset: -2px;
 }
 
 [type='checkbox'],
@@ -2527,6 +2528,7 @@ select {
   border-style: solid;
   border-radius: 0.2109375rem;
   border-width: 1px;
+  outline-offset: -2px;
   padding-top: 0;
   padding-bottom: 0;
 }

@@ -6,6 +6,7 @@ input, button, select {
   border-style: $border-style;
   border-radius: $spacing-base/8;
   border-width: $input-border-width;
+  outline-offset: -2px; //Same focus ring size for same border in Safari
   padding-top: 0;
   padding-bottom: 0;
 }
