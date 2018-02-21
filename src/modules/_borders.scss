@@ -27,20 +27,29 @@ $body-line-height-factor: 1.5 !default;
   @if index($sides, top) or index($sides, bottom) {
     margin-bottom: 0 - if(index($sides, top), $width, 0) - if(index($sides, bottom), $width, 0);
     margin-bottom: calc(0px - var(--border-top-width, 0px) - var(--border-bottom-width, 0px));
+    &%height-multiple {
+      //A fixed-height element should not compensate margin for next element
+      margin-bottom: 0;
+    }
   }
 
   @if index($sides, top) and strip-unit($width) > 0 {
     &%height-multiple {
+      //A fixed-height element should not be shifted up
       position: initial;
       top: initial;
-      margin-bottom: 0;
     }
   }
 
   @if index($sides, bottom) {
     > %baseline-shift:last-child {
+      //If the last child of a bordered element is baseline shifted, it's text lies on the bottom border unless padded
       @extend %pb-1 !optional;
     }
+  }
+
+  > %baseline-shift {
+    //Textual elements within a bordered element needs some horizontal margins
   }
 }
 
