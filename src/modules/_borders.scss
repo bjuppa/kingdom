@@ -28,7 +28,7 @@ $body-line-height-factor: 1.5 !default;
     margin-bottom: 0 - if(index($sides, top), $width, 0) - if(index($sides, bottom), $width, 0);
     margin-bottom: calc(0px - var(--border-top-width, 0px) - var(--border-bottom-width, 0px));
     &%height-multiple {
-      //A fixed-height element should not compensate margin for next element
+      //A fixed-height element should not compensate margin for next element (when box-sizing is border-box)
       margin-bottom: 0;
     }
   }
@@ -39,17 +39,6 @@ $body-line-height-factor: 1.5 !default;
       position: initial;
       top: initial;
     }
-  }
-
-  @if index($sides, bottom) {
-    > %baseline-shift:last-child {
-      //If the last child of a bordered element is baseline shifted, it's text lies on the bottom border unless padded
-      @extend %pb-1 !optional;
-    }
-  }
-
-  > %baseline-shift {
-    //Textual elements within a bordered element needs some horizontal margins
   }
 }
 
@@ -71,4 +60,31 @@ $body-line-height-factor: 1.5 !default;
 // https://github.com/tailwindcss/tailwindcss/blob/master/css/preflight.css
 @mixin reset-border($color: $border-color, $style: $border-style) {
   border: 0 $style $border-color;
+}
+
+@mixin spacing-for-textual-elements-inside-border($sides: top bottom left right, $textual-elements: p ol ul, $suffix: '1\\/2') {
+  //If the last child of a bordered element is baseline shifted, it's text lies on the bottom border
+  @if index($sides, bottom) {
+    > %baseline-shift:last-child {
+      @extend %pb-1 !optional;
+    }
+  }
+
+  @each $textual-element in $textual-elements {
+    //Textual elements within a bordered element needs some horizontal spacing
+    @if index($sides, left) and index($sides, right) {
+      > #{$textual-element} {
+        @extend %mx-#{$suffix} !optional;
+      }
+    } @else if index($sides, left) {
+      > #{$textual-element} {
+        @extend %ml-#{$suffix} !optional;
+      }
+    } @else if index($sides, right) {
+      > #{$textual-element} {
+        @extend %mr-#{$suffix} !optional;
+      }
+    }
+  }
+
 }

@@ -849,6 +849,12 @@ hr,
 
 /* %mx-1\/2 */
 
+.border-lr > p,
+.border-lr > ol,
+.border-lr > ul,
+.border > p,
+.border > ol,
+.border > ul,
 .mx-1\/2 {
   margin-left: 0.84375rem;
   margin-left: calc(0.5 * var(--spacing-base, 1.6875rem));
@@ -1181,6 +1187,9 @@ button,
 
 /* %ml-1\/2 */
 
+.border-l > p,
+.border-l > ol,
+.border-l > ul,
 .ml-1\/2 {
   margin-left: 0.84375rem;
   margin-left: calc(0.5 * var(--spacing-base, 1.6875rem));
@@ -1188,6 +1197,9 @@ button,
 
 /* %mr-1\/2 */
 
+.border-r > p,
+.border-r > ol,
+.border-r > ul,
 .mr-1\/2 {
   margin-right: 0.84375rem;
   margin-right: calc(0.5 * var(--spacing-base, 1.6875rem));
@@ -2431,7 +2443,7 @@ h6,
   top: initial;
 }
 
-/* %border-tb */
+/* %border */
 
 .border {
   border-top-width: 1px;

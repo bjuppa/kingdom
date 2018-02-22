@@ -844,6 +844,12 @@ button,
 
 /* %mx-1\/2 */
 
+.border-lr > p,
+.border-lr > ol,
+.border-lr > ul,
+.border > p,
+.border > ol,
+.border > ul,
 .mx-1\/2 {
   margin-left: 0.5rem;
   margin-left: calc(0.5 * var(--spacing-base, 1rem));
@@ -1132,6 +1138,9 @@ label:only-of-type ~ * {
 
 /* %ml-1\/2 */
 
+.border-l > p,
+.border-l > ol,
+.border-l > ul,
 .ml-1\/2 {
   margin-left: 0.5rem;
   margin-left: calc(0.5 * var(--spacing-base, 1rem));
@@ -1139,6 +1148,9 @@ label:only-of-type ~ * {
 
 /* %mr-1\/2 */
 
+.border-r > p,
+.border-r > ol,
+.border-r > ul,
 .mr-1\/2 {
   margin-right: 0.5rem;
   margin-right: calc(0.5 * var(--spacing-base, 1rem));
@@ -2352,7 +2364,7 @@ label:only-of-type ~ * {
   top: initial;
 }
 
-/* %border-tb */
+/* %border */
 
 .border {
   border-top-width: 1px;

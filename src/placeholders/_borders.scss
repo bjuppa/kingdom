@@ -5,37 +5,50 @@ $border-color: currentColor !default;
 
 /* %border-l */
 %border-l {
-  @include set-border(left);
+  $sides: left;
+  @include set-border($sides);
+  @include spacing-for-textual-elements-inside-border($sides);
 }
 
 /* %border-r */
 %border-r {
-  @include set-border(right);
+  $sides: right;
+  @include set-border($sides);
+  @include spacing-for-textual-elements-inside-border($sides);
 }
 
 /* %border-lr */
 %border-lr {
-  @include set-border(left right);
+  $sides: left right;
+  @include set-border($sides);
+  @include spacing-for-textual-elements-inside-border($sides);
 }
 
 /* %border-t */
 %border-t {
-  @include set-border(top);
+  $sides: top;
+  @include set-border($sides);
+  @include spacing-for-textual-elements-inside-border($sides);
 }
 
 /* %border-b */
 %border-b {
-  @include set-border(bottom);
+  $sides: bottom;
+  @include set-border($sides);
+  @include spacing-for-textual-elements-inside-border($sides);
 }
 
 /* %border-tb */
 %border-tb {
-  @include set-border(top bottom);
+  $sides: top bottom;
+  @include set-border($sides);
+  @include spacing-for-textual-elements-inside-border($sides);
 }
 
-/* %border-tb */
+/* %border */
 %border {
   @include set-border();
+  @include spacing-for-textual-elements-inside-border();
 }
 
 /* %border-0 */
