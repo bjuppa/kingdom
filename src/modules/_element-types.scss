@@ -1,6 +1,7 @@
 // Lists of and mixins for different types of elements
 // https://developer.mozilla.org/en-US/docs/Web/Guide/HTML/Content_categories
 
+// Elements that are set to display: block by default
 $html-block-elements: address,
 article,
 aside,
@@ -37,6 +38,19 @@ thead, // Not in https://developer.mozilla.org/en-US/docs/Web/HTML/Block-level_e
 ul,
 video !default;
 
+// Block elements that usually contain just phrasing content or some kind of list items
+$html-text-block-elements: address,
+blockquote,
+dl,
+figcaption,
+h1, h2, h3, h4, h5, h6,
+ol,
+p,
+pre,
+ul !default;
+
+// TODO: are the inline elements perhaps "phrasing content"?
+// https://developer.mozilla.org/en-US/docs/Web/Guide/HTML/Content_categories#Phrasing_content
 $html-inline-elements: a,
 abr,
 acronym,

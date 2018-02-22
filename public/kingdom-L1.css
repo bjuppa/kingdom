@@ -844,11 +844,33 @@ button,
 
 /* %mx-1\/2 */
 
-.border-lr > p,
+.border-lr > address,
+.border-lr > blockquote,
+.border-lr > dl,
+.border-lr > figcaption,
+.border-lr > h1,
+.border-lr > h2,
+.border-lr > h3,
+.border-lr > h4,
+.border-lr > h5,
+.border-lr > h6,
 .border-lr > ol,
+.border-lr > p,
+.border-lr > pre,
 .border-lr > ul,
-.border > p,
+.border > address,
+.border > blockquote,
+.border > dl,
+.border > figcaption,
+.border > h1,
+.border > h2,
+.border > h3,
+.border > h4,
+.border > h5,
+.border > h6,
 .border > ol,
+.border > p,
+.border > pre,
 .border > ul,
 .mx-1\/2 {
   margin-left: 0.5rem;
@@ -1137,8 +1159,19 @@ button,
 
 /* %ml-1\/2 */
 
-.border-l > p,
+.border-l > address,
+.border-l > blockquote,
+.border-l > dl,
+.border-l > figcaption,
+.border-l > h1,
+.border-l > h2,
+.border-l > h3,
+.border-l > h4,
+.border-l > h5,
+.border-l > h6,
 .border-l > ol,
+.border-l > p,
+.border-l > pre,
 .border-l > ul,
 .ml-1\/2 {
   margin-left: 0.5rem;
@@ -1147,8 +1180,19 @@ button,
 
 /* %mr-1\/2 */
 
-.border-r > p,
+.border-r > address,
+.border-r > blockquote,
+.border-r > dl,
+.border-r > figcaption,
+.border-r > h1,
+.border-r > h2,
+.border-r > h3,
+.border-r > h4,
+.border-r > h5,
+.border-r > h6,
 .border-r > ol,
+.border-r > p,
+.border-r > pre,
 .border-r > ul,
 .mr-1\/2 {
   margin-right: 0.5rem;

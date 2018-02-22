@@ -4,6 +4,7 @@ $border-style: solid !default;
 $body-line-height-factor: 1.5 !default;
 
 @import '../modules/strip-unit';
+@import '../modules/element-types';
 
 @mixin set-border($sides: top bottom left right, $width: $border-width) {
   @each $side in $sides {
@@ -62,7 +63,7 @@ $body-line-height-factor: 1.5 !default;
   border: 0 $style $border-color;
 }
 
-@mixin spacing-for-textual-elements-inside-border($sides: top bottom left right, $textual-elements: p ol ul, $suffix: '1\\/2') {
+@mixin spacing-for-textual-elements-inside-border($sides: top bottom left right, $suffix: '1\\/2') {
   //If the last child of a bordered element is baseline shifted, it's text lies on the bottom border
   @if index($sides, bottom) {
     > %baseline-shift:last-child {
@@ -70,18 +71,18 @@ $body-line-height-factor: 1.5 !default;
     }
   }
 
-  @each $textual-element in $textual-elements {
+  @each $element in $html-text-block-elements {
     //Textual elements within a bordered element needs some horizontal spacing
     @if index($sides, left) and index($sides, right) {
-      > #{$textual-element} {
+      > #{$element} {
         @extend %mx-#{$suffix} !optional;
       }
     } @else if index($sides, left) {
-      > #{$textual-element} {
+      > #{$element} {
         @extend %ml-#{$suffix} !optional;
       }
     } @else if index($sides, right) {
-      > #{$textual-element} {
+      > #{$element} {
         @extend %mr-#{$suffix} !optional;
       }
     }
