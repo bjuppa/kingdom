@@ -826,24 +826,6 @@ button,
 
 /* %mx-1\/4 */
 
-.mx-1\/4 {
-  margin-left: 0.25rem;
-  margin-left: calc(0.25 * var(--spacing-base, 1rem));
-  margin-right: 0.25rem;
-  margin-right: calc(0.25 * var(--spacing-base, 1rem));
-}
-
-/* %mx-1\/3 */
-
-.mx-1\/3 {
-  margin-left: 0.33333333rem;
-  margin-left: calc(0.33333333 * var(--spacing-base, 1rem));
-  margin-right: 0.33333333rem;
-  margin-right: calc(0.33333333 * var(--spacing-base, 1rem));
-}
-
-/* %mx-1\/2 */
-
 .border-lr > address,
 .border-lr > blockquote,
 .border-lr > dl,
@@ -872,6 +854,24 @@ button,
 .border > p,
 .border > pre,
 .border > ul,
+.mx-1\/4 {
+  margin-left: 0.25rem;
+  margin-left: calc(0.25 * var(--spacing-base, 1rem));
+  margin-right: 0.25rem;
+  margin-right: calc(0.25 * var(--spacing-base, 1rem));
+}
+
+/* %mx-1\/3 */
+
+.mx-1\/3 {
+  margin-left: 0.33333333rem;
+  margin-left: calc(0.33333333 * var(--spacing-base, 1rem));
+  margin-right: 0.33333333rem;
+  margin-right: calc(0.33333333 * var(--spacing-base, 1rem));
+}
+
+/* %mx-1\/2 */
+
 .mx-1\/2 {
   margin-left: 0.5rem;
   margin-left: calc(0.5 * var(--spacing-base, 1rem));
@@ -1132,6 +1132,20 @@ label:only-of-type ~ * {
 
 /* %ml-1\/4 */
 
+.border-l > address,
+.border-l > blockquote,
+.border-l > dl,
+.border-l > figcaption,
+.border-l > h1,
+.border-l > h2,
+.border-l > h3,
+.border-l > h4,
+.border-l > h5,
+.border-l > h6,
+.border-l > ol,
+.border-l > p,
+.border-l > pre,
+.border-l > ul,
 .ml-1\/4 {
   margin-left: 0.25rem;
   margin-left: calc(0.25 * var(--spacing-base, 1rem));
@@ -1139,6 +1153,20 @@ label:only-of-type ~ * {
 
 /* %mr-1\/4 */
 
+.border-r > address,
+.border-r > blockquote,
+.border-r > dl,
+.border-r > figcaption,
+.border-r > h1,
+.border-r > h2,
+.border-r > h3,
+.border-r > h4,
+.border-r > h5,
+.border-r > h6,
+.border-r > ol,
+.border-r > p,
+.border-r > pre,
+.border-r > ul,
 .mr-1\/4 {
   margin-right: 0.25rem;
   margin-right: calc(0.25 * var(--spacing-base, 1rem));
@@ -1160,20 +1188,6 @@ label:only-of-type ~ * {
 
 /* %ml-1\/2 */
 
-.border-l > address,
-.border-l > blockquote,
-.border-l > dl,
-.border-l > figcaption,
-.border-l > h1,
-.border-l > h2,
-.border-l > h3,
-.border-l > h4,
-.border-l > h5,
-.border-l > h6,
-.border-l > ol,
-.border-l > p,
-.border-l > pre,
-.border-l > ul,
 .ml-1\/2 {
   margin-left: 0.5rem;
   margin-left: calc(0.5 * var(--spacing-base, 1rem));
@@ -1181,20 +1195,6 @@ label:only-of-type ~ * {
 
 /* %mr-1\/2 */
 
-.border-r > address,
-.border-r > blockquote,
-.border-r > dl,
-.border-r > figcaption,
-.border-r > h1,
-.border-r > h2,
-.border-r > h3,
-.border-r > h4,
-.border-r > h5,
-.border-r > h6,
-.border-r > ol,
-.border-r > p,
-.border-r > pre,
-.border-r > ul,
 .mr-1\/2 {
   margin-right: 0.5rem;
   margin-right: calc(0.5 * var(--spacing-base, 1rem));
