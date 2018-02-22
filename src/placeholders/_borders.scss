@@ -3,52 +3,54 @@ $border-color: currentColor !default;
 
 @import "../modules/borders";
 
+//TODO: move spacing of text blocks to a spacing utility instead of including by default here
+
 /* %border-l */
 %border-l {
   $sides: left;
   @include set-border($sides);
-  @include spacing-for-textual-elements-inside-border($sides);
+  @include space-text-blocks-inside-border($sides);
 }
 
 /* %border-r */
 %border-r {
   $sides: right;
   @include set-border($sides);
-  @include spacing-for-textual-elements-inside-border($sides);
+  @include space-text-blocks-inside-border($sides);
 }
 
 /* %border-lr */
 %border-lr {
   $sides: left right;
   @include set-border($sides);
-  @include spacing-for-textual-elements-inside-border($sides);
+  @include space-text-blocks-inside-border($sides);
 }
 
 /* %border-t */
 %border-t {
   $sides: top;
   @include set-border($sides);
-  @include spacing-for-textual-elements-inside-border($sides);
+  @include space-text-blocks-inside-border($sides);
 }
 
 /* %border-b */
 %border-b {
   $sides: bottom;
   @include set-border($sides);
-  @include spacing-for-textual-elements-inside-border($sides);
+  @include space-text-blocks-inside-border($sides);
 }
 
 /* %border-tb */
 %border-tb {
   $sides: top bottom;
   @include set-border($sides);
-  @include spacing-for-textual-elements-inside-border($sides);
+  @include space-text-blocks-inside-border($sides);
 }
 
 /* %border */
 %border {
   @include set-border();
-  @include spacing-for-textual-elements-inside-border();
+  @include space-text-blocks-inside-border();
 }
 
 /* %border-0 */
