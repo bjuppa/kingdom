@@ -4,6 +4,11 @@ A CSS framework for consistent sizing, spacing and typography.
 
 "If content is king, context is the kingdom"
 
+## Browserstack
+We're using [Browserstack](http://browserstack.com/) for testing across web browsers,
+please check out their amazing services!
+
+![Browserstack logo](resources/images/browserstack-logo-600x315.png)
 
 ## Level 1—CSS Reset
 Defaults:
