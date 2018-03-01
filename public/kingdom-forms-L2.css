@@ -2665,7 +2665,7 @@ input,
 textarea,
 button,
 select {
-  border-color: currentColor;
+  border-color: rgba(0, 0, 0, 0.25);
   border-width: 1px;
   border-style: solid;
   border-radius: 0.1875rem;
