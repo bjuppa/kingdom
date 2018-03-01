@@ -3031,7 +3031,7 @@ select {
 input,
 textarea,
 select {
-  background: initial;
+  background: white;
 }
 
 input,
