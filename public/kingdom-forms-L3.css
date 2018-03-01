@@ -2793,6 +2793,7 @@ select {
 }
 
 input,
+textarea,
 select {
   background: initial;
 }
