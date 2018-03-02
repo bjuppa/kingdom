@@ -3017,7 +3017,6 @@ select {
 
 input,
 textarea,
-button,
 select {
   border-color: rgba(0, 0, 0, 0.25);
   border-width: 1px;
@@ -3043,17 +3042,62 @@ textarea {
 button,
 [type='button'],
 [type='reset'],
-[type='submit'] {
+[type='submit'],
+.button-prime,
+.button-plain,
+.button-petty,
+.button-destructive {
   background: transparent;
+  color: blue;
+  border-color: blue;
+  border-width: 1px;
+  border-style: solid;
+  border-radius: 0.2109375rem;
+  padding: 0 0.2109375rem;
   display: block;
 }
 
 button:active,
 [type='button']:active,
 [type='reset']:active,
-[type='submit']:active {
-  color: currentColor;
+[type='submit']:active,
+.button-prime:active,
+.button-plain:active,
+.button-petty:active,
+.button-destructive:active {
+  color: blue;
   border-color: transparent;
+}
+
+.button-prime {
+  background: blue;
+  border-color: blue;
+  color: white;
+}
+
+.button-prime:active {
+  color: white;
+}
+
+.button-petty {
+  border: transparent;
+  background: transparent;
+  text-decoration: underline;
+}
+
+.button-destructive {
+  color: red;
+  border-color: red;
+}
+
+.button-destructive:active {
+  color: red;
+}
+
+.button-destructive.button-prime {
+  background: red;
+  border-color: red;
+  color: white;
 }
 
 input::-webkit-input-placeholder,

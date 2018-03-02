@@ -1,14 +1,23 @@
 // Opinionated form styles
+$primary-color: blue !default;
+$destructive-color: red !default;
+
 $input-border-color: rgba(black, .25) !default;
 $input-border-width: 1px !default;
 $input-border-radius: $spacing-base/8 !default;
 $input-border-style: solid !default;
 $input-background: white !default;
-$input-box-shadow: inset 0 2px 4px 0 rgba($input-border-color, .08) !default;
+$input-box-shadow: inset 0 2px 4px 0 rgba(black, .08) !default;
+
+$button-color: $primary-color !default;
+$button-destructive-color: $destructive-color !default;
+$button-border-color: $button-color !default;
+$button-border-width: $input-border-width !default;
+$button-border-radius: $input-border-radius !default;
+$button-border-style: $input-border-style !default;
 $button-background: transparent !default;
 
-
-input, textarea, button, select {
+input, textarea, select {
   border-color: $input-border-color;
   border-width: $input-border-width;
   border-style: $input-border-style;
@@ -39,18 +48,68 @@ select {
 
 }
 
-button,
-[type='button'],
-[type='reset'],
-[type='submit'] {
+%button {
   background: $button-background;
+  color: $button-color;
+
+  border-color: $button-border-color;
+  border-width: $button-border-width;
+  border-style: $button-border-style;
+  border-radius: $button-border-radius;
+
+  padding: 0 $spacing-base/8;
 
   // Buttons go on their own line
   display: block;
 
   &:active {
-    color: currentColor; //Avoid clicked button "disappearing" when browser inverts text color on a transparent background
+    color: $button-color; //Avoid clicked button "disappearing" when browser inverts text color on a transparent background
     border-color: transparent; //Visualise button activation
+  }
+}
+
+button,
+[type='button'],
+[type='reset'],
+[type='submit'] {
+  @extend %button;
+}
+
+.button-prime {
+  @extend %button;
+  background: $button-color;
+  border-color: $button-color;
+  color: lighten($button-color, 90%);
+
+  &:active {
+    color: lighten($button-color, 90%);
+  }
+}
+
+.button-plain {
+  @extend %button;
+}
+
+.button-petty {
+  @extend %button;
+  border: transparent;
+  background: transparent;
+  text-decoration: underline;
+}
+
+.button-destructive {
+  @extend %button;
+  color: $button-destructive-color;
+  border-color: $button-destructive-color;
+
+  &:active {
+    color: $button-destructive-color;
+  }
+
+  &.button-prime {
+    background: $button-destructive-color;
+    border-color: $button-destructive-color;
+    color: lighten($button-destructive-color, 90%);
   }
 }
 
