@@ -2612,11 +2612,21 @@ button,
 .button-destructive {
   background: transparent;
   color: blue;
-  border-color: blue;
+  vertical-align: bottom;
+  line-height: 1.375rem;
+  line-height: calc(var(--line-height, 1.5) - 2px);
   border-width: 1px;
+  padding-top: 0;
+  padding-bottom: 0;
+  height: 1.5rem;
+  height: var(--line-height, 1.5rem);
+  max-height: 1.5rem;
+  max-height: var(--line-height, 1.5rem);
+  border-color: blue;
   border-style: solid;
   border-radius: 0.125rem;
-  padding: 0 0.125rem;
+  padding-left: 0.125rem;
+  padding-right: 0.125rem;
   text-decoration: none;
   display: block;
 }

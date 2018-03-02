@@ -52,12 +52,13 @@ select {
   background: $button-background;
   color: $button-color;
 
+  @include set-border-preserving-line-height($width: $button-border-width);
   border-color: $button-border-color;
-  border-width: $button-border-width;
   border-style: $button-border-style;
   border-radius: $button-border-radius;
 
-  padding: 0 $spacing-base/8;
+  padding-left: $spacing-base/8;
+  padding-right: $spacing-base/8;
   text-decoration: none;
 
   // Buttons go on their own line
