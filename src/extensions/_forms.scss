@@ -17,7 +17,7 @@ $button-border-width: $input-border-width !default;
 $button-border-radius: $input-border-radius !default;
 $button-border-style: $input-border-style !default;
 $button-background: transparent !default;
-$button-focus-box-shadow: $input-focus-box-shadow !default;
+$button-focus-box-shadow: set_nth($input-focus-box-shadow, -1, lighten($button-color, 30%)) !default;
 
 input, select {
   @include set-border-preserving-line-height($width: $input-border-width);
@@ -78,7 +78,7 @@ input:not([type='checkbox']):not([type='radio']) {
 
   &:focus {
     outline: none;
-    box-shadow: set_nth($button-focus-box-shadow, -1, lighten($button-color, 30%));
+    box-shadow: $button-focus-box-shadow;
   }
 
 }
