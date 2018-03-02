@@ -2632,6 +2632,19 @@ button:active,
   border-color: transparent;
 }
 
+button:focus,
+[type='button']:focus,
+[type='reset']:focus,
+[type='submit']:focus,
+.button-prime:focus,
+.button-plain:focus,
+.button-petty:focus,
+.button-destructive:focus {
+  outline: none;
+  -webkit-box-shadow: 0 0 0 0.2rem #9999ff;
+          box-shadow: 0 0 0 0.2rem #9999ff;
+}
+
 .button-prime {
   background: blue;
   border-color: blue;
@@ -2655,6 +2668,11 @@ button:active,
 
 .button-destructive:active {
   color: red;
+}
+
+.button-destructive:focus {
+  -webkit-box-shadow: 0 0 0 0.2rem #ff9999;
+          box-shadow: 0 0 0 0.2rem #ff9999;
 }
 
 .button-destructive.button-prime {

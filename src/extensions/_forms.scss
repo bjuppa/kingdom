@@ -66,6 +66,13 @@ select {
     color: $button-color; //Avoid clicked button "disappearing" when browser inverts text color on a transparent background
     border-color: transparent; //Visualise button activation
   }
+
+  &:focus {
+    outline: none;
+    //TODO: extract the focus size from here to a variable
+    box-shadow: 0 0 0 .2rem lighten($button-border-color, 30%);
+  }
+
 }
 
 button,
@@ -104,6 +111,10 @@ button,
 
   &:active {
     color: $button-destructive-color;
+  }
+
+  &:focus {
+    box-shadow: 0 0 0 .2rem lighten($button-destructive-color, 30%);
   }
 
   &.button-prime {
