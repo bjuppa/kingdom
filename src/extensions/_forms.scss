@@ -52,6 +52,8 @@ input:not([type='checkbox']):not([type='radio']) {
 [type='radio'] {
   vertical-align: baseline;
   height: auto;
+  position: relative;
+  bottom: 1px;
 }
 
 %button {
