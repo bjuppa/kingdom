@@ -8,6 +8,7 @@ $input-border-radius: $spacing-base/8 !default;
 $input-border-style: solid !default;
 $input-background: white !default;
 $input-box-shadow: inset 0 2px 4px 0 rgba(black, .08) !default;
+$input-focus-box-shadow: 0 0 0 .2rem lighten($primary-color, 25%);
 
 $button-color: $primary-color !default;
 $button-destructive-color: $destructive-color !default;
@@ -16,6 +17,7 @@ $button-border-width: $input-border-width !default;
 $button-border-radius: $input-border-radius !default;
 $button-border-style: $input-border-style !default;
 $button-background: transparent !default;
+$button-focus-box-shadow: $input-focus-box-shadow !default;
 
 input, select {
   @include set-border-preserving-line-height($width: $input-border-width);
@@ -76,8 +78,7 @@ input:not([type='checkbox']):not([type='radio']) {
 
   &:focus {
     outline: none;
-    //TODO: extract the focus size from here to a variable
-    box-shadow: 0 0 0 .2rem lighten($button-border-color, 30%);
+    box-shadow: set_nth($button-focus-box-shadow, -1, lighten($button-color, 30%));
   }
 
 }
@@ -121,7 +122,7 @@ button,
   }
 
   &:focus {
-    box-shadow: 0 0 0 .2rem lighten($button-destructive-color, 30%);
+    box-shadow: set_nth($button-focus-box-shadow, -1, lighten($button-destructive-color, 30%));
   }
 
   &.button-prime {
