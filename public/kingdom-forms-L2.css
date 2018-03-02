@@ -1063,7 +1063,11 @@ button,
 [type="button"],
 [type="reset"],
 [type="submit"],
-.mt-1 {
+.mt-1,
+.button-prime,
+.button-plain,
+.button-petty,
+.button-destructive {
   /* Default vertical spacing */
   margin-top: 1.5rem;
   margin-top: calc(1 * var(--spacing-base, 1.5rem));

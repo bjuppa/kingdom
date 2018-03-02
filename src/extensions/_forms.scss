@@ -70,6 +70,7 @@ input:not([type='checkbox']):not([type='radio']) {
 
   // Buttons go on their own line
   display: block;
+  @extend %mt-1;
 
   &:active {
     color: $button-color; //Avoid clicked button "disappearing" when browser inverts text color on a transparent background

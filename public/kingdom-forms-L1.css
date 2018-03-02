@@ -1015,7 +1015,15 @@ label:only-of-type ~ * {
 /* %mt-1 */
 
 .h-px + *,
-.mt-1 {
+.mt-1,
+button,
+[type='button'],
+[type='reset'],
+[type='submit'],
+.button-prime,
+.button-plain,
+.button-petty,
+.button-destructive {
   /* Default vertical spacing */
   margin-top: 1rem;
   margin-top: calc(1 * var(--spacing-base, 1rem));
