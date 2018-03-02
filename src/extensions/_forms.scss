@@ -20,12 +20,12 @@ $button-background: transparent !default;
 $button-focus-box-shadow: set_nth($input-focus-box-shadow, -1, lighten($button-color, 30%)) !default;
 $button-horizontal-padding: $spacing-base/8 !default;
 
-input, select {
+input, select:not([size]):not([multiple]) {
   @include set-border-preserving-line-height($spacing-base, $input-border-width);
 }
 
 textarea {
-  @include set-border($width: $input-border-width);
+  @include set-border-for-auto-height($width: $input-border-width);
 }
 
 input, textarea, select {

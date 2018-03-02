@@ -6,19 +6,28 @@ $body-line-height-factor: 1.5 !default;
 @import '../modules/strip-unit';
 @import '../modules/element-types';
 
-@mixin set-border($sides: top bottom left right, $width: $border-width) {
+@mixin set-border-width($sides: top bottom left right, $width: $border-width) {
   @each $side in $sides {
     border-#{$side}-width: $width;
     --border-#{$side}-width: $width;
     border-#{$side}-width: var(--border-#{$side}-width);
+
+    @if index($sides, top) {
+      @if strip-unit($width) > 0 {
+        vertical-align: top; //Get rid of space after a bordered inline-block}
+      }
+    }
   }
+}
+
+@mixin set-border-for-auto-height($sides: top bottom left right, $width: $border-width) {
+  @include set-border-width($sides, $width);
 
   @if index($sides, top) {
     @if strip-unit($width) > 0 {
       position: relative;
       top: -$width;
       top: calc(0px - var(--border-top-width));
-      vertical-align: top; //Get rid of space after a bordered inline-block
     } @else {
       position: initial;
       top: initial;

@@ -2313,10 +2313,10 @@ h6,
   border-top-width: 1px;
   --border-top-width: 1px;
   border-top-width: var(--border-top-width);
+  vertical-align: top;
   position: relative;
   top: -1px;
   top: calc(0px - var(--border-top-width));
-  vertical-align: top;
   margin-bottom: -1px;
   margin-bottom: calc(0px - var(--border-top-width, 0px) - var(--border-bottom-width, 0px));
 }
@@ -2416,13 +2416,14 @@ h6,
   border-top-width: 1px;
   --border-top-width: 1px;
   border-top-width: var(--border-top-width);
+  vertical-align: top;
   border-bottom-width: 1px;
   --border-bottom-width: 1px;
   border-bottom-width: var(--border-bottom-width);
+  vertical-align: top;
   position: relative;
   top: -1px;
   top: calc(0px - var(--border-top-width));
-  vertical-align: top;
   margin-bottom: -2px;
   margin-bottom: calc(0px - var(--border-top-width, 0px) - var(--border-bottom-width, 0px));
 }
@@ -2486,19 +2487,22 @@ h6,
   border-top-width: 1px;
   --border-top-width: 1px;
   border-top-width: var(--border-top-width);
+  vertical-align: top;
   border-bottom-width: 1px;
   --border-bottom-width: 1px;
   border-bottom-width: var(--border-bottom-width);
+  vertical-align: top;
   border-left-width: 1px;
   --border-left-width: 1px;
   border-left-width: var(--border-left-width);
+  vertical-align: top;
   border-right-width: 1px;
   --border-right-width: 1px;
   border-right-width: var(--border-right-width);
+  vertical-align: top;
   position: relative;
   top: -1px;
   top: calc(0px - var(--border-top-width));
-  vertical-align: top;
   margin-bottom: -2px;
   margin-bottom: calc(0px - var(--border-top-width, 0px) - var(--border-bottom-width, 0px));
 }
