@@ -3054,6 +3054,7 @@ button,
   border-style: solid;
   border-radius: 0.2109375rem;
   padding: 0 0.2109375rem;
+  text-decoration: none;
   display: block;
 }
 

@@ -2700,6 +2700,7 @@ button,
   border-style: solid;
   border-radius: 0.1875rem;
   padding: 0 0.1875rem;
+  text-decoration: none;
   display: block;
 }
 
