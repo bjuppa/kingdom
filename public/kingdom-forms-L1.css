@@ -2589,15 +2589,15 @@ button,
 input,
 select {
   vertical-align: bottom;
-  line-height: 1.375rem;
-  line-height: calc(var(--line-height, 1.5) - 2px);
+  line-height: 0.875rem;
+  line-height: calc(var(--line-height, 1rem) - 2px);
   border-width: 1px;
   padding-top: 0;
   padding-bottom: 0;
-  height: 1.5rem;
-  height: var(--line-height, 1.5rem);
-  max-height: 1.5rem;
-  max-height: var(--line-height, 1.5rem);
+  height: 1rem;
+  height: var(--line-height, 1rem);
+  max-height: 1rem;
+  max-height: var(--line-height, 1rem);
 }
 
 textarea {
@@ -2706,15 +2706,15 @@ button,
   background: transparent;
   color: blue;
   vertical-align: bottom;
-  line-height: 1.375rem;
-  line-height: calc(var(--line-height, 1.5) - 2px);
+  line-height: 0.875rem;
+  line-height: calc(var(--line-height, 1rem) - 2px);
   border-width: 1px;
   padding-top: 0;
   padding-bottom: 0;
-  height: 1.5rem;
-  height: var(--line-height, 1.5rem);
-  max-height: 1.5rem;
-  max-height: var(--line-height, 1.5rem);
+  height: 1rem;
+  height: var(--line-height, 1rem);
+  max-height: 1rem;
+  max-height: var(--line-height, 1rem);
   border-color: blue;
   border-style: solid;
   border-radius: 0.125rem;
@@ -2783,6 +2783,23 @@ button:focus,
   background: red;
   border-color: red;
   color: white;
+}
+
+.button-large {
+  font-size: 1em;
+  line-height: 2rem;
+  --line-height: calc(2 * var(--spacing-base, 1rem));
+  line-height: var(--line-height);
+  vertical-align: bottom;
+  line-height: 1.875rem;
+  line-height: calc(var(--line-height, 2rem) - 2px);
+  border-width: 1px;
+  padding-top: 0;
+  padding-bottom: 0;
+  height: 2rem;
+  height: var(--line-height, 2rem);
+  max-height: 2rem;
+  max-height: var(--line-height, 2rem);
 }
 
 input::-webkit-input-placeholder,

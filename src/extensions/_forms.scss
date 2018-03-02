@@ -21,7 +21,7 @@ $button-focus-box-shadow: set_nth($input-focus-box-shadow, -1, lighten($button-c
 $button-horizontal-padding: $spacing-base/8 !default;
 
 input, select {
-  @include set-border-preserving-line-height($width: $input-border-width);
+  @include set-border-preserving-line-height($spacing-base, $input-border-width);
 }
 
 textarea {
@@ -58,7 +58,7 @@ input:not([type='checkbox']):not([type='radio']) {
   background: $button-background;
   color: $button-color;
 
-  @include set-border-preserving-line-height($width: $button-border-width);
+  @include set-border-preserving-line-height($spacing-base, $button-border-width);
   border-color: $button-border-color;
   border-style: $button-border-style;
   border-radius: $button-border-radius;
@@ -132,6 +132,11 @@ button,
     border-color: $button-destructive-color;
     color: lighten($button-destructive-color, 90%);
   }
+}
+
+.button-large {
+  @include set-text(1em, 2*$spacing-base);
+  @include set-border-preserving-line-height($spacing-base * 2, $button-border-width);
 }
 
 input::placeholder, textarea::placeholder {

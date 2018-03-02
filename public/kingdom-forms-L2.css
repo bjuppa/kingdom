@@ -2669,7 +2669,7 @@ input,
 select {
   vertical-align: bottom;
   line-height: 1.375rem;
-  line-height: calc(var(--line-height, 1.5) - 2px);
+  line-height: calc(var(--line-height, 1.5rem) - 2px);
   border-width: 1px;
   padding-top: 0;
   padding-bottom: 0;
@@ -2786,7 +2786,7 @@ button,
   color: blue;
   vertical-align: bottom;
   line-height: 1.375rem;
-  line-height: calc(var(--line-height, 1.5) - 2px);
+  line-height: calc(var(--line-height, 1.5rem) - 2px);
   border-width: 1px;
   padding-top: 0;
   padding-bottom: 0;
@@ -2862,6 +2862,23 @@ button:focus,
   background: red;
   border-color: red;
   color: white;
+}
+
+.button-large {
+  font-size: 1em;
+  line-height: 3rem;
+  --line-height: calc(2 * var(--spacing-base, 1.5rem));
+  line-height: var(--line-height);
+  vertical-align: bottom;
+  line-height: 2.875rem;
+  line-height: calc(var(--line-height, 3rem) - 2px);
+  border-width: 1px;
+  padding-top: 0;
+  padding-bottom: 0;
+  height: 3rem;
+  height: var(--line-height, 3rem);
+  max-height: 3rem;
+  max-height: var(--line-height, 3rem);
 }
 
 input::-webkit-input-placeholder,
