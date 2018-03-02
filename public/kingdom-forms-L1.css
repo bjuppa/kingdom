@@ -2579,27 +2579,112 @@ label:only-of-type ~ * {
 }
 
 input,
-textarea,
 select {
-  border-color: rgba(0, 0, 0, 0.25);
+  vertical-align: bottom;
+  line-height: 1.375rem;
+  line-height: calc(var(--line-height, 1.5) - 2px);
   border-width: 1px;
-  border-style: solid;
-  border-radius: 0.125rem;
-  outline-offset: -2px;
   padding-top: 0;
   padding-bottom: 0;
+  height: 1.5rem;
+  height: var(--line-height, 1.5rem);
+  max-height: 1.5rem;
+  max-height: var(--line-height, 1.5rem);
+}
+
+textarea {
+  border-top-width: 1px;
+  --border-top-width: 1px;
+  border-top-width: var(--border-top-width);
+  border-bottom-width: 1px;
+  --border-bottom-width: 1px;
+  border-bottom-width: var(--border-bottom-width);
+  border-left-width: 1px;
+  --border-left-width: 1px;
+  border-left-width: var(--border-left-width);
+  border-right-width: 1px;
+  --border-right-width: 1px;
+  border-right-width: var(--border-right-width);
+  position: relative;
+  top: -1px;
+  top: calc(0px - var(--border-top-width));
+  vertical-align: top;
+  margin-bottom: -2px;
+  margin-bottom: calc(0px - var(--border-top-width, 0px) - var(--border-bottom-width, 0px));
+}
+
+textarea.h-1,
+textarea.h-2,
+textarea.h-3,
+textarea.h-4,
+textarea.h-5,
+textarea.h-6,
+textarea.h-7,
+textarea.h-8,
+textarea.h-9,
+textarea.h-10,
+textarea.h-12,
+textarea.h-14,
+textarea.h-16,
+textarea.h-18,
+textarea.h-20,
+textarea.h-24,
+textarea.h-28,
+textarea.h-32,
+textarea.h-36,
+textarea.h-40,
+textarea.h-48,
+textarea.h-56,
+textarea.h-64 {
+  margin-bottom: 0;
+}
+
+textarea.h-1,
+textarea.h-2,
+textarea.h-3,
+textarea.h-4,
+textarea.h-5,
+textarea.h-6,
+textarea.h-7,
+textarea.h-8,
+textarea.h-9,
+textarea.h-10,
+textarea.h-12,
+textarea.h-14,
+textarea.h-16,
+textarea.h-18,
+textarea.h-20,
+textarea.h-24,
+textarea.h-28,
+textarea.h-32,
+textarea.h-36,
+textarea.h-40,
+textarea.h-48,
+textarea.h-56,
+textarea.h-64 {
+  position: initial;
+  top: initial;
 }
 
 input,
 textarea,
 select {
   background: white;
+  border-color: rgba(0, 0, 0, 0.25);
+  border-style: solid;
+  border-radius: 0.125rem;
 }
 
 input,
 textarea {
   -webkit-box-shadow: inset 0 2px 4px 0 rgba(0, 0, 0, 0.08);
           box-shadow: inset 0 2px 4px 0 rgba(0, 0, 0, 0.08);
+}
+
+[type='checkbox'],
+[type='radio'] {
+  vertical-align: baseline;
+  height: auto;
 }
 
 button,

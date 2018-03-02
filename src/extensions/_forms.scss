@@ -17,22 +17,28 @@ $button-border-radius: $input-border-radius !default;
 $button-border-style: $input-border-style !default;
 $button-background: transparent !default;
 
-input, textarea, select {
-  border-color: $input-border-color;
-  border-width: $input-border-width;
-  border-style: $input-border-style;
-  border-radius: $input-border-radius;
-  outline-offset: -2px; //Same focus ring size for same border in Safari
-  padding-top: 0;
-  padding-bottom: 0;
+input, select {
+  @include set-border-preserving-line-height($width: $input-border-width);
+}
+
+textarea {
+  @include set-border($width: $input-border-width);
 }
 
 input, textarea, select {
   background: $input-background;
+
+  border-color: $input-border-color;
+  border-style: $input-border-style;
+  border-radius: $input-border-radius;
 }
 
 input, textarea {
   box-shadow: $input-box-shadow;
+}
+
+select {
+
 }
 
 input:not([type='checkbox']):not([type='radio']) {
@@ -41,11 +47,8 @@ input:not([type='checkbox']):not([type='radio']) {
 
 [type='checkbox'],
 [type='radio'] {
-
-}
-
-select {
-
+  vertical-align: baseline;
+  height: auto;
 }
 
 %button {
@@ -57,8 +60,10 @@ select {
   border-style: $button-border-style;
   border-radius: $button-border-radius;
 
+  //TODO: extract button horizontal padding to variable
   padding-left: $spacing-base/8;
   padding-right: $spacing-base/8;
+  // Remove underline from links displayed as buttons
   text-decoration: none;
 
   // Buttons go on their own line
