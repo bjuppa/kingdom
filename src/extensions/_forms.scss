@@ -18,6 +18,7 @@ $button-border-radius: $input-border-radius !default;
 $button-border-style: $input-border-style !default;
 $button-background: transparent !default;
 $button-focus-box-shadow: set_nth($input-focus-box-shadow, -1, lighten($button-color, 30%)) !default;
+$button-horizontal-padding: $spacing-base/8 !default;
 
 input, select {
   @include set-border-preserving-line-height($width: $input-border-width);
@@ -62,13 +63,13 @@ input:not([type='checkbox']):not([type='radio']) {
   border-style: $button-border-style;
   border-radius: $button-border-radius;
 
-  //TODO: extract button horizontal padding to variable
-  padding-left: $spacing-base/8;
-  padding-right: $spacing-base/8;
+  padding-left: $button-horizontal-padding;
+  padding-right: $button-horizontal-padding;
+
   // Remove underline from links displayed as buttons
   text-decoration: none;
 
-  // Buttons go on their own line
+  // Buttons go on their own line and have top margin
   display: block;
   @extend %mt-1;
 
