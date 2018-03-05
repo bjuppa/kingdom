@@ -30,6 +30,7 @@ $button-destructive-color: $destructive-color !default;
 $button-destructive-text-color: lighten($button-destructive-color, 90%);
 $button-destructive-focus-box-shadow: set_nth($button-focus-box-shadow, -1, lighten($button-destructive-color, 30%)) !default;
 
+/* Inputs */
 input, select:not([size]):not([multiple]) {
   @include set-border-preserving-line-height($spacing-base, $input-border-width);
 }
@@ -65,7 +66,9 @@ input, textarea {
   bottom: 1px;
 }
 
-//Base for all buttons
+/* Buttons */
+
+/* %button base for all buttons  */
 %button {
   color: $button-color;
   background: $button-background;
@@ -106,7 +109,7 @@ button,
   @extend %button;
 }
 
-//Prominent button
+/* Prominent button */
 .button-prime {
   @extend %button;
   background: $button-color;
@@ -118,12 +121,12 @@ button,
   }
 }
 
-//Standard button
+/* Standard button */
 .button-plain {
   @extend %button;
 }
 
-//Discreet, link like button
+/* Discreet, link like button */
 .button-petty {
   @extend %button;
   border: transparent;
@@ -141,14 +144,14 @@ button,
   }
 }
 
-//Big button
+/* Big button */
 .button-large {
   @extend %button;
   @include set-text(1em, 2*$spacing-base);
   @include set-border-preserving-line-height($spacing-base * 2, $button-border-width);
 }
 
-//Cautionary button
+/* Cautionary button */
 .button-destructive {
   @extend %button;
   color: $button-destructive-color;
@@ -173,19 +176,29 @@ button,
   }
 }
 
+[type='submit'], button {
+  //TODO: make checking for button last in form stricter!
+  &:last-child {
+    display: block;
+    @extend %mt-1;
+  }
+}
+
+/* Labels */
+
 label {
   // Labels go on their own line
   display: block;
 }
 
 * + label {
-  // Add spacing before labels
+  // Add spacing above all labels
   @extend %mt-1;
 }
 
 label:not([for]) {
   & + & {
-    // Remove spacing on adjacent labels not referencing an input - i.e. presumed to contain their input, usually a checkbox or radiobutton
+    // Remove spacing between adjacent labels not referencing an input - i.e. presumed to contain their input, usually a checkbox or radiobutton
     @extend %mt-0;
   }
 }

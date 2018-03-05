@@ -1016,6 +1016,8 @@ label:not([for]) + label:not([for]) {
 
 .h-px + *,
 .mt-1,
+[type='submit']:last-child,
+button:last-child,
 * + label,
 .form-inline * {
   /* Default vertical spacing */
@@ -2586,6 +2588,8 @@ label:not([for]) + label:not([for]) {
 
 /* Kingdom CSS Extension - Forms */
 
+/* Inputs */
+
 input,
 select:not([size]):not([multiple]) {
   vertical-align: bottom;
@@ -2725,6 +2729,10 @@ textarea::placeholder {
   bottom: 1px;
 }
 
+/* Buttons */
+
+/* %button base for all buttons  */
+
 button,
 [type='button'],
 [type='reset'],
@@ -2788,6 +2796,8 @@ button:active,
           box-shadow: inset 0 2px 4px 0 rgba(0, 0, 0, 0.08);
 }
 
+/* Prominent button */
+
 .button-prime {
   background: blue;
   border-color: blue;
@@ -2797,6 +2807,10 @@ button:active,
 .button-prime:active {
   color: white;
 }
+
+/* Standard button */
+
+/* Discreet, link like button */
 
 .button-petty {
   border: transparent;
@@ -2816,6 +2830,8 @@ button:active,
   text-decoration: none;
 }
 
+/* Big button */
+
 .button-large {
   font-size: 1em;
   line-height: 2rem;
@@ -2832,6 +2848,8 @@ button:active,
   max-height: 2rem;
   max-height: var(--line-height, 2rem);
 }
+
+/* Cautionary button */
 
 .button-destructive {
   color: red;
@@ -2856,6 +2874,13 @@ button:active,
 .button-destructive.button-prime:active {
   color: white;
 }
+
+[type='submit']:last-child,
+button:last-child {
+  display: block;
+}
+
+/* Labels */
 
 label {
   display: block;
