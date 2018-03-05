@@ -1020,27 +1020,36 @@ h5 + *,
 h6 + *,
 a,
 abbr,
+acronym,
 b,
 bdo,
+big,
+br,
+button,
 cite,
 code,
 dfn,
 em,
 i,
+img,
+input,
 kbd,
+label,
+map,
+object,
 q,
 samp,
+script,
+select,
 small,
 span,
 strong,
 sub,
 sup,
-time,
-var,
 textarea,
-select,
-input,
-button,
+time,
+tt,
+var,
 figure *,
 picture *,
 object *,
@@ -1051,7 +1060,8 @@ video *,
 map *,
 .mt-0,
 .mt-0-children > *,
-.mt-0-within * {
+.mt-0-within *,
+label:not([for]) + label:not([for]) {
   /* Reset vertical spacing */
   margin-top: 0;
 }
@@ -1061,7 +1071,9 @@ map *,
 hr + *,
 .h-px + *,
 * + *,
-.mt-1 {
+.mt-1,
+* + label,
+.form-inline * {
   /* Default vertical spacing */
   margin-top: 1.6875rem;
   margin-top: calc(1 * var(--spacing-base, 1.6875rem));
@@ -3248,11 +3260,11 @@ label {
   display: block;
 }
 
-form.form-inline {
+.form-inline {
   /* Make form contents go inline */
 }
 
-form.form-inline * {
+.form-inline * {
   display: inline-block;
 }
 

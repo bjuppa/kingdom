@@ -47,7 +47,7 @@ ul !default;
 
 // https://developer.mozilla.org/en-US/docs/Web/Guide/HTML/Content_categories#Phrasing_content
 $html-inline-elements: a,
-abr,
+abbr,
 acronym,
 b,
 bdo,
@@ -79,9 +79,15 @@ time,
 tt,
 var !default;
 
-//TODO: add parameters that add and remove elements from the default list
 @mixin block-level-elements() {
   $elements: $html-block-elements;
+  #{$elements} {
+    @content;
+  }
+}
+
+@mixin inline-elements() {
+  $elements: $html-inline-elements;
   #{$elements} {
     @content;
   }

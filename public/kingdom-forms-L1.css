@@ -1006,7 +1006,8 @@ button,
 
 .mt-0,
 .mt-0-children > *,
-.mt-0-within * {
+.mt-0-within *,
+label:not([for]) + label:not([for]) {
   /* Reset vertical spacing */
   margin-top: 0;
 }
@@ -1014,7 +1015,9 @@ button,
 /* %mt-1 */
 
 .h-px + *,
-.mt-1 {
+.mt-1,
+* + label,
+.form-inline * {
   /* Default vertical spacing */
   margin-top: 1rem;
   margin-top: calc(1 * var(--spacing-base, 1rem));
@@ -2858,11 +2861,11 @@ label {
   display: block;
 }
 
-form.form-inline {
+.form-inline {
   /* Make form contents go inline */
 }
 
-form.form-inline * {
+.form-inline * {
   display: inline-block;
 }
 

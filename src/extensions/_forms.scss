@@ -175,13 +175,26 @@ input::placeholder, textarea::placeholder {
 }
 
 label {
-  // Labels go on their own line before their inputs
+  // Labels go on their own line
   display: block;
 }
 
-form.form-inline {
+* + label {
+  // Add spacing before labels
+  @extend %mt-1;
+}
+
+label:not([for]) {
+  & + & {
+    // Remove spacing on adjacent labels not referencing an input - i.e. presumed to contain their input, usually a checkbox or radiobutton
+    @extend %mt-0;
+  }
+}
+
+.form-inline {
   /* Make form contents go inline */
   * {
     display: inline-block;
+    @extend %mt-1;
   }
 }

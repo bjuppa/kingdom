@@ -31,24 +31,19 @@ $spacing-base: font-size-rem(nth($line-heights, 1)) !default;
 }
 
 * + * {
-  // Set default vertical spacing between all adjacent block level elements
+  // Set default vertical spacing between all adjacent elements
   @extend %mt-1;
 }
 
 dt, li, hgroup, h1, h2, h3, h4, h5, h6 {
-  // Reset vertical spacing on adjacent siblings
+  // Reset vertical spacing on adjacent siblings on closely related elements
   + * {
     @extend %mt-0;
   }
 }
 
-a, abbr, b, bdo, cite, code, dfn, em, i, kbd, q, samp, small, span, strong, sub, sup, time, var {
-  // Reset vertical spacing on text-elements, should they become block level elements
-  @extend %mt-0;
-}
-
-textarea, select, input, button {
-  // Reset vertical spacing on form elements, should they become block level elements
+@include inline-elements {
+  // Reset vertical spacing on inline elements
   @extend %mt-0;
 }
 
