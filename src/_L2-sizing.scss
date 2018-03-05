@@ -47,14 +47,9 @@ a, abbr, b, bdo, cite, code, dfn, em, i, kbd, q, samp, small, span, strong, sub,
   @extend %mt-0;
 }
 
-textarea, select, input {
+textarea, select, input, button {
   // Reset vertical spacing on form elements, should they become block level elements
   @extend %mt-0;
-}
-
-button, [type="button"], [type="reset"], [type="submit"] {
-  // Add vertical spacing to button-type form elements, should they become block level elements
-  @extend %mt-1;
 }
 
 figure, picture, object, select, table, audio, video, map {

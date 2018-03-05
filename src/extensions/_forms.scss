@@ -83,10 +83,7 @@ input, textarea {
   overflow: hidden;
   text-overflow: ellipsis;
 
-  // Buttons go on their own line and have top margin
-  //TODO: only make some buttons within forms block by default
-  display: block;
-  @extend %mt-1;
+  transition: $button-transition;
 
   &:focus {
     outline: $button-focus-outline;

@@ -1039,6 +1039,7 @@ var,
 textarea,
 select,
 input,
+button,
 figure *,
 picture *,
 object *,
@@ -1058,10 +1059,6 @@ map *,
 
 .h-px + *,
 * + *,
-button,
-[type="button"],
-[type="reset"],
-[type="submit"],
 .mt-1 {
   /* Default vertical spacing */
   margin-top: 1.5rem;
