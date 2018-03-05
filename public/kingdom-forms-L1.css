@@ -2728,6 +2728,8 @@ button,
   border-color: blue;
   border-style: solid;
   border-radius: 0.125rem;
+  -webkit-box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.08);
+          box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.08);
   padding-left: 0.125rem;
   padding-right: 0.125rem;
   text-decoration: none;
@@ -2774,6 +2776,8 @@ button:focus,
   border: transparent;
   background: transparent;
   text-decoration: underline;
+  -webkit-box-shadow: none;
+          box-shadow: none;
 }
 
 .button-petty:focus {

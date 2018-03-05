@@ -17,8 +17,9 @@ $button-border-width: $input-border-width !default;
 $button-border-radius: $input-border-radius !default;
 $button-border-style: $input-border-style !default;
 $button-background: transparent !default;
-$button-focus-outline: none !default;
+$button-box-shadow: 0 2px 4px 0 rgba(black, .08) !default;
 $button-focus-box-shadow: set_nth($input-focus-box-shadow, -1, lighten($button-color, 30%)) !default;
+$button-focus-outline: none !default;
 $button-horizontal-padding: $spacing-base/8 !default;
 $button-text-decoration: none !default;
 
@@ -73,7 +74,7 @@ input:not([type='checkbox']):not([type='radio']) {
   border-style: $button-border-style;
   border-radius: $button-border-radius;
 
-  //TODO: add shadow
+  box-shadow: $button-box-shadow;
 
   padding-left: $button-horizontal-padding;
   padding-right: $button-horizontal-padding;
@@ -81,6 +82,7 @@ input:not([type='checkbox']):not([type='radio']) {
   text-decoration: $button-text-decoration;
 
   // Buttons go on their own line and have top margin
+  //TODO: only make some buttons within forms block by default
   display: block;
   @extend %mt-1;
 
@@ -126,6 +128,7 @@ button,
   border: transparent;
   background: transparent;
   text-decoration: underline;
+  box-shadow: none;
 
   &:focus {
     text-decoration: none;
