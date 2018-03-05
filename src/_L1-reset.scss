@@ -205,10 +205,11 @@ textarea {
 
 // Work around a Firefox/IE bug where a transparent `button` background results in a loss of the default `button` focus styles.
 // https://github.com/suitcss/base
-//TODO: reset focus on button type inputs here too?
-button:focus {
-  outline: 1px dotted;
-  outline: 5px auto -webkit-focus-ring-color;
+button, [type='button'], [type='reset'], [type='submit'] {
+  &:focus {
+    outline: 1px dotted;
+    outline: 5px auto -webkit-focus-ring-color;
+  }
 }
 
 // https://github.com/tailwindcss/tailwindcss/blob/master/css/preflight.css
