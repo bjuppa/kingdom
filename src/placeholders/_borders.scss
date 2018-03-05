@@ -4,54 +4,45 @@ $border-color: currentColor !default;
 @import "../modules/borders";
 @import "../modules/layout";
 
-//TODO: move spacing of text blocks to a spacing utility instead of including by default here
-
 /* %border-l */
 %border-l {
   $sides: left;
   @include set-border-for-auto-height($sides);
-  @include set-space-inside($sides);
 }
 
 /* %border-r */
 %border-r {
   $sides: right;
   @include set-border-for-auto-height($sides);
-  @include set-space-inside($sides);
 }
 
 /* %border-lr */
 %border-lr {
   $sides: left right;
   @include set-border-for-auto-height($sides);
-  @include set-space-inside($sides);
 }
 
 /* %border-t */
 %border-t {
   $sides: top;
   @include set-border-for-auto-height($sides);
-  @include set-space-inside($sides);
 }
 
 /* %border-b */
 %border-b {
   $sides: bottom;
   @include set-border-for-auto-height($sides);
-  @include set-space-inside($sides);
 }
 
 /* %border-tb */
 %border-tb {
   $sides: top bottom;
   @include set-border-for-auto-height($sides);
-  @include set-space-inside($sides);
 }
 
 /* %border */
 %border {
   @include set-border-for-auto-height();
-  @include set-space-inside();
 }
 
 /* %border-0 */

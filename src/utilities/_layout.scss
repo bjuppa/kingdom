@@ -1,4 +1,5 @@
 // Utilities for layout
+@import "../modules/layout";
 
 .block,
 .block-children > * {
@@ -38,4 +39,20 @@
 
 .inline-flex {
   display: inline-flex;
+}
+
+.space-inside-l {
+  @include set-space-inside(left);
+}
+
+.space-inside-r {
+  @include set-space-inside(right);
+}
+
+.space-inside-b {
+  @include set-space-inside(bottom);
+}
+
+.space-inside {
+  @include set-space-inside();
 }

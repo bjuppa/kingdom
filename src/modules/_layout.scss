@@ -1,3 +1,4 @@
+// Add horizontal padding and make sure the last baseline-shifted element gets some bottom padding
 @mixin set-space-inside($sides: top bottom left right, $suffix: '1\\/4') {
   //If the last child of a bordered element is baseline shifted, it's text lies on the bottom border - so add bottom padding!
   @if index($sides, bottom) {

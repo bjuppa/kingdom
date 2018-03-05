@@ -1642,9 +1642,8 @@ hr + *,
 
 /* %px-1\/4 */
 
-.border-lr,
-.border,
-.px-1\/4 {
+.px-1\/4,
+.space-inside {
   padding-left: 0.421875rem;
   padding-left: calc(0.25 * var(--spacing-base, 1.6875rem));
   padding-right: 0.421875rem;
@@ -1653,14 +1652,14 @@ hr + *,
 
 /* %pl-1\/4 */
 
-.border-l {
+.space-inside-l {
   padding-left: 0.421875rem;
   padding-left: calc(0.25 * var(--spacing-base, 1.6875rem));
 }
 
 /* %pr-1\/4 */
 
-.border-r {
+.space-inside-r {
   padding-right: 0.421875rem;
   padding-right: calc(0.25 * var(--spacing-base, 1.6875rem));
 }

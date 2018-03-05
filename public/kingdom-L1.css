@@ -1586,9 +1586,8 @@ button,
 
 /* %px-1\/4 */
 
-.border-lr,
-.border,
-.px-1\/4 {
+.px-1\/4,
+.space-inside {
   padding-left: 0.25rem;
   padding-left: calc(0.25 * var(--spacing-base, 1rem));
   padding-right: 0.25rem;
@@ -1597,14 +1596,14 @@ button,
 
 /* %pl-1\/4 */
 
-.border-l {
+.space-inside-l {
   padding-left: 0.25rem;
   padding-left: calc(0.25 * var(--spacing-base, 1rem));
 }
 
 /* %pr-1\/4 */
 
-.border-r {
+.space-inside-r {
   padding-right: 0.25rem;
   padding-right: calc(0.25 * var(--spacing-base, 1rem));
 }

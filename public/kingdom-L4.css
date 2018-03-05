@@ -1642,9 +1642,8 @@ hr + *,
 
 /* %px-1\/4 */
 
-.border-lr,
-.border,
-.px-1\/4 {
+.px-1\/4,
+.space-inside {
   padding-left: 0.421875rem;
   padding-left: calc(0.25 * var(--spacing-base, 1.6875rem));
   padding-right: 0.421875rem;
@@ -1653,14 +1652,14 @@ hr + *,
 
 /* %pl-1\/4 */
 
-.border-l {
+.space-inside-l {
   padding-left: 0.421875rem;
   padding-left: calc(0.25 * var(--spacing-base, 1.6875rem));
 }
 
 /* %pr-1\/4 */
 
-.border-r {
+.space-inside-r {
   padding-right: 0.421875rem;
   padding-right: calc(0.25 * var(--spacing-base, 1.6875rem));
 }
@@ -1988,43 +1987,31 @@ hr + *,
 
 /* %pb-1 */
 
-.border-b > p:last-child,
-.border-b > blockquote:last-child,
-.border-b > address:last-child,
-.border-b > li:last-child,
-.border-b > dt:last-child,
-.border-b > dd:last-child,
-.border-b > h1:last-child,
-.border-b > h2:last-child,
-.border-b > h3:last-child,
-.border-b > h4:last-child,
-.border-b > h5:last-child,
-.border-b > h6:last-child,
-.border-tb > p:last-child,
-.border-tb > blockquote:last-child,
-.border-tb > address:last-child,
-.border-tb > li:last-child,
-.border-tb > dt:last-child,
-.border-tb > dd:last-child,
-.border-tb > h1:last-child,
-.border-tb > h2:last-child,
-.border-tb > h3:last-child,
-.border-tb > h4:last-child,
-.border-tb > h5:last-child,
-.border-tb > h6:last-child,
-.border > p:last-child,
-.border > blockquote:last-child,
-.border > address:last-child,
-.border > li:last-child,
-.border > dt:last-child,
-.border > dd:last-child,
-.border > h1:last-child,
-.border > h2:last-child,
-.border > h3:last-child,
-.border > h4:last-child,
-.border > h5:last-child,
-.border > h6:last-child,
-.pb-1 {
+.pb-1,
+.space-inside-b > p:last-child,
+.space-inside-b > blockquote:last-child,
+.space-inside-b > address:last-child,
+.space-inside-b > li:last-child,
+.space-inside-b > dt:last-child,
+.space-inside-b > dd:last-child,
+.space-inside-b > h1:last-child,
+.space-inside-b > h2:last-child,
+.space-inside-b > h3:last-child,
+.space-inside-b > h4:last-child,
+.space-inside-b > h5:last-child,
+.space-inside-b > h6:last-child,
+.space-inside > p:last-child,
+.space-inside > blockquote:last-child,
+.space-inside > address:last-child,
+.space-inside > li:last-child,
+.space-inside > dt:last-child,
+.space-inside > dd:last-child,
+.space-inside > h1:last-child,
+.space-inside > h2:last-child,
+.space-inside > h3:last-child,
+.space-inside > h4:last-child,
+.space-inside > h5:last-child,
+.space-inside > h6:last-child {
   padding-bottom: 1.6875rem;
   padding-bottom: calc(1 * var(--spacing-base, 1.6875rem));
 }
