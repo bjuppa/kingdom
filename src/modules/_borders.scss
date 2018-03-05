@@ -73,7 +73,7 @@ $body-line-height-factor: 1.5 !default;
 }
 
 // TODO: Make this add horizontal padding to the bordered element itself instead of margin within - and rename mixin accordingly (perhaps it should be moved to other module too, as no longer related to borders alone?)
-@mixin space-text-blocks-inside-border($sides: top bottom left right, $suffix: '1\\/4') {
+@mixin set-space-inside($sides: top bottom left right, $suffix: '1\\/4') {
   //If the last child of a bordered element is baseline shifted, it's text lies on the bottom border
   @if index($sides, bottom) {
     > %baseline-shift:last-child {
@@ -81,21 +81,11 @@ $body-line-height-factor: 1.5 !default;
     }
   }
 
-  @each $element in $html-text-block-elements {
-    //Textual elements within a bordered element needs some horizontal spacing
-    @if index($sides, left) and index($sides, right) {
-      > #{$element} {
-        @extend %mx-#{$suffix} !optional;
-      }
-    } @else if index($sides, left) {
-      > #{$element} {
-        @extend %ml-#{$suffix} !optional;
-      }
-    } @else if index($sides, right) {
-      > #{$element} {
-        @extend %mr-#{$suffix} !optional;
-      }
-    }
+  @if index($sides, left) and index($sides, right) {
+    @extend %px-#{$suffix} !optional;
+  } @else if index($sides, left) {
+    @extend %pl-#{$suffix} !optional;
+  } @else if index($sides, right) {
+    @extend %pr-#{$suffix} !optional;
   }
-
 }

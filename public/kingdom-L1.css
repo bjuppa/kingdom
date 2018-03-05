@@ -825,34 +825,6 @@ button,
 
 /* %mx-1\/4 */
 
-.border-lr > address,
-.border-lr > blockquote,
-.border-lr > dl,
-.border-lr > figcaption,
-.border-lr > h1,
-.border-lr > h2,
-.border-lr > h3,
-.border-lr > h4,
-.border-lr > h5,
-.border-lr > h6,
-.border-lr > ol,
-.border-lr > p,
-.border-lr > pre,
-.border-lr > ul,
-.border > address,
-.border > blockquote,
-.border > dl,
-.border > figcaption,
-.border > h1,
-.border > h2,
-.border > h3,
-.border > h4,
-.border > h5,
-.border > h6,
-.border > ol,
-.border > p,
-.border > pre,
-.border > ul,
 .mx-1\/4 {
   margin-left: 0.25rem;
   margin-left: calc(0.25 * var(--spacing-base, 1rem));
@@ -1130,20 +1102,6 @@ button,
 
 /* %ml-1\/4 */
 
-.border-l > address,
-.border-l > blockquote,
-.border-l > dl,
-.border-l > figcaption,
-.border-l > h1,
-.border-l > h2,
-.border-l > h3,
-.border-l > h4,
-.border-l > h5,
-.border-l > h6,
-.border-l > ol,
-.border-l > p,
-.border-l > pre,
-.border-l > ul,
 .ml-1\/4 {
   margin-left: 0.25rem;
   margin-left: calc(0.25 * var(--spacing-base, 1rem));
@@ -1151,20 +1109,6 @@ button,
 
 /* %mr-1\/4 */
 
-.border-r > address,
-.border-r > blockquote,
-.border-r > dl,
-.border-r > figcaption,
-.border-r > h1,
-.border-r > h2,
-.border-r > h3,
-.border-r > h4,
-.border-r > h5,
-.border-r > h6,
-.border-r > ol,
-.border-r > p,
-.border-r > pre,
-.border-r > ul,
 .mr-1\/4 {
   margin-right: 0.25rem;
   margin-right: calc(0.25 * var(--spacing-base, 1rem));
@@ -1630,13 +1574,37 @@ button,
 
 /* %px-1\/8 */
 
+/* %pl-1\/8 */
+
+/* %pr-1\/8 */
+
 /* %px-1\/6 */
+
+/* %pl-1\/6 */
+
+/* %pr-1\/6 */
 
 /* %px-1\/4 */
 
+.border-lr,
+.border,
 .px-1\/4 {
   padding-left: 0.25rem;
   padding-left: calc(0.25 * var(--spacing-base, 1rem));
+  padding-right: 0.25rem;
+  padding-right: calc(0.25 * var(--spacing-base, 1rem));
+}
+
+/* %pl-1\/4 */
+
+.border-l {
+  padding-left: 0.25rem;
+  padding-left: calc(0.25 * var(--spacing-base, 1rem));
+}
+
+/* %pr-1\/4 */
+
+.border-r {
   padding-right: 0.25rem;
   padding-right: calc(0.25 * var(--spacing-base, 1rem));
 }
@@ -1650,6 +1618,10 @@ button,
   padding-right: calc(0.33333333 * var(--spacing-base, 1rem));
 }
 
+/* %pl-1\/3 */
+
+/* %pr-1\/3 */
+
 /* %px-1\/2 */
 
 .px-1\/2 {
@@ -1658,6 +1630,10 @@ button,
   padding-right: 0.5rem;
   padding-right: calc(0.5 * var(--spacing-base, 1rem));
 }
+
+/* %pl-1\/2 */
+
+/* %pr-1\/2 */
 
 /* %px-2\/3 */
 
@@ -1668,6 +1644,10 @@ button,
   padding-right: calc(0.66666667 * var(--spacing-base, 1rem));
 }
 
+/* %pl-2\/3 */
+
+/* %pr-2\/3 */
+
 /* %px-3\/4 */
 
 .px-3\/4 {
@@ -1677,15 +1657,39 @@ button,
   padding-right: calc(0.75 * var(--spacing-base, 1rem));
 }
 
+/* %pl-3\/4 */
+
+/* %pr-3\/4 */
+
 /* %px-5\/6 */
+
+/* %pl-5\/6 */
+
+/* %pr-5\/6 */
 
 /* %px-7\/8 */
 
+/* %pl-7\/8 */
+
+/* %pr-7\/8 */
+
 /* %px-5\/4 */
+
+/* %pl-5\/4 */
+
+/* %pr-5\/4 */
 
 /* %px-4\/3 */
 
+/* %pl-4\/3 */
+
+/* %pr-4\/3 */
+
 /* %px-3\/2 */
+
+/* %pl-3\/2 */
+
+/* %pr-3\/2 */
 
 /* %px-1 */
 
@@ -1696,6 +1700,10 @@ button,
   padding-right: calc(1 * var(--spacing-base, 1rem));
 }
 
+/* %pl-1 */
+
+/* %pr-1 */
+
 /* %px-2 */
 
 .px-2 {
@@ -1704,6 +1712,10 @@ button,
   padding-right: 2rem;
   padding-right: calc(2 * var(--spacing-base, 1rem));
 }
+
+/* %pl-2 */
+
+/* %pr-2 */
 
 /* %px-3 */
 
@@ -1714,6 +1726,10 @@ button,
   padding-right: calc(3 * var(--spacing-base, 1rem));
 }
 
+/* %pl-3 */
+
+/* %pr-3 */
+
 /* %px-4 */
 
 .px-4 {
@@ -1723,61 +1739,177 @@ button,
   padding-right: calc(4 * var(--spacing-base, 1rem));
 }
 
+/* %pl-4 */
+
+/* %pr-4 */
+
 /* %px-5 */
+
+/* %pl-5 */
+
+/* %pr-5 */
 
 /* %px-6 */
 
+/* %pl-6 */
+
+/* %pr-6 */
+
 /* %px-7 */
+
+/* %pl-7 */
+
+/* %pr-7 */
 
 /* %px-8 */
 
+/* %pl-8 */
+
+/* %pr-8 */
+
 /* %px-9 */
+
+/* %pl-9 */
+
+/* %pr-9 */
 
 /* %px-10 */
 
+/* %pl-10 */
+
+/* %pr-10 */
+
 /* %px-11 */
+
+/* %pl-11 */
+
+/* %pr-11 */
 
 /* %px-12 */
 
+/* %pl-12 */
+
+/* %pr-12 */
+
 /* %px-13 */
+
+/* %pl-13 */
+
+/* %pr-13 */
 
 /* %px-14 */
 
+/* %pl-14 */
+
+/* %pr-14 */
+
 /* %px-15 */
+
+/* %pl-15 */
+
+/* %pr-15 */
 
 /* %px-16 */
 
+/* %pl-16 */
+
+/* %pr-16 */
+
 /* %px-17 */
+
+/* %pl-17 */
+
+/* %pr-17 */
 
 /* %px-18 */
 
+/* %pl-18 */
+
+/* %pr-18 */
+
 /* %px-19 */
+
+/* %pl-19 */
+
+/* %pr-19 */
 
 /* %px-20 */
 
+/* %pl-20 */
+
+/* %pr-20 */
+
 /* %px-21 */
+
+/* %pl-21 */
+
+/* %pr-21 */
 
 /* %px-22 */
 
+/* %pl-22 */
+
+/* %pr-22 */
+
 /* %px-23 */
+
+/* %pl-23 */
+
+/* %pr-23 */
 
 /* %px-24 */
 
+/* %pl-24 */
+
+/* %pr-24 */
+
 /* %px-25 */
+
+/* %pl-25 */
+
+/* %pr-25 */
 
 /* %px-26 */
 
+/* %pl-26 */
+
+/* %pr-26 */
+
 /* %px-27 */
+
+/* %pl-27 */
+
+/* %pr-27 */
 
 /* %px-28 */
 
+/* %pl-28 */
+
+/* %pr-28 */
+
 /* %px-29 */
+
+/* %pl-29 */
+
+/* %pr-29 */
 
 /* %px-30 */
 
+/* %pl-30 */
+
+/* %pr-30 */
+
 /* %px-31 */
 
+/* %pl-31 */
+
+/* %pr-31 */
+
 /* %px-32 */
+
+/* %pl-32 */
+
+/* %pr-32 */
 
 /* %pt-0 */
 

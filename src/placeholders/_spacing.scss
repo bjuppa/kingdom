@@ -138,6 +138,16 @@ $spacing-fractions: (
   %px-#{$suffix} {
     @include set-length(padding-left padding-right, $factor);
   }
+
+  /* %pl-#{$suffix} */
+  %pl-#{$suffix} {
+    @include set-length(padding-left, $factor);
+  }
+
+  /* %pr-#{$suffix} */
+  %pr-#{$suffix} {
+    @include set-length(padding-right, $factor);
+  }
 }
 
 /* %pt-0 */
