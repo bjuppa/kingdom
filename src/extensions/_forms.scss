@@ -49,6 +49,10 @@ input, textarea, select {
 
 input, textarea {
   box-shadow: $input-box-shadow;
+  &::placeholder {
+    color: inherit;
+    opacity: .5;
+  }
 }
 
 [type='checkbox'],
@@ -167,11 +171,6 @@ button,
       color: $button-destructive-text-color;
     }
   }
-}
-
-input::placeholder, textarea::placeholder {
-  color: inherit;
-  opacity: .5;
 }
 
 label {

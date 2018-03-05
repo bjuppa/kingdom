@@ -3328,6 +3328,30 @@ textarea {
           box-shadow: inset 0 2px 4px 0 rgba(0, 0, 0, 0.08);
 }
 
+input::-webkit-input-placeholder,
+textarea::-webkit-input-placeholder {
+  color: inherit;
+  opacity: .5;
+}
+
+input:-ms-input-placeholder,
+textarea:-ms-input-placeholder {
+  color: inherit;
+  opacity: .5;
+}
+
+input::-ms-input-placeholder,
+textarea::-ms-input-placeholder {
+  color: inherit;
+  opacity: .5;
+}
+
+input::placeholder,
+textarea::placeholder {
+  color: inherit;
+  opacity: .5;
+}
+
 [type='checkbox'],
 [type='radio'] {
   vertical-align: baseline;
@@ -3466,30 +3490,6 @@ button:active,
 
 .button-destructive.button-prime:active {
   color: white;
-}
-
-input::-webkit-input-placeholder,
-textarea::-webkit-input-placeholder {
-  color: inherit;
-  opacity: .5;
-}
-
-input:-ms-input-placeholder,
-textarea:-ms-input-placeholder {
-  color: inherit;
-  opacity: .5;
-}
-
-input::-ms-input-placeholder,
-textarea::-ms-input-placeholder {
-  color: inherit;
-  opacity: .5;
-}
-
-input::placeholder,
-textarea::placeholder {
-  color: inherit;
-  opacity: .5;
 }
 
 label {
