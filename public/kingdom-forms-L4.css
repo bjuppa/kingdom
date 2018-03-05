@@ -1050,8 +1050,7 @@ video *,
 map *,
 .mt-0,
 .mt-0-children > *,
-.mt-0-within *,
-label:only-of-type ~ * {
+.mt-0-within * {
   /* Reset vertical spacing */
   margin-top: 0;
 }
@@ -1069,8 +1068,8 @@ button,
 .button-prime,
 .button-plain,
 .button-petty,
-.button-destructive,
-.button-large {
+.button-large,
+.button-destructive {
   /* Default vertical spacing */
   margin-top: 1.6875rem;
   margin-top: calc(1 * var(--spacing-base, 1.6875rem));
@@ -3337,8 +3336,8 @@ button,
 .button-prime,
 .button-plain,
 .button-petty,
-.button-destructive,
-.button-large {
+.button-large,
+.button-destructive {
   background: transparent;
   color: blue;
   vertical-align: bottom;
@@ -3367,8 +3366,8 @@ button:active,
 .button-prime:active,
 .button-plain:active,
 .button-petty:active,
-.button-destructive:active,
-.button-large:active {
+.button-large:active,
+.button-destructive:active {
   color: blue;
 }
 
@@ -3379,8 +3378,8 @@ button:focus,
 .button-prime:focus,
 .button-plain:focus,
 .button-petty:focus,
-.button-destructive:focus,
-.button-large:focus {
+.button-large:focus,
+.button-destructive:focus {
   outline: none;
   -webkit-box-shadow: 0 0 0 0.2rem #9999ff;
           box-shadow: 0 0 0 0.2rem #9999ff;
@@ -3406,6 +3405,23 @@ button:focus,
   text-decoration: none;
 }
 
+.button-large {
+  font-size: 1em;
+  line-height: 3.375rem;
+  --line-height: calc(2 * var(--spacing-base, 1.6875rem));
+  line-height: var(--line-height);
+  vertical-align: bottom;
+  line-height: 3.25rem;
+  line-height: calc(var(--line-height, 3.375rem) - 2px);
+  border-width: 1px;
+  padding-top: 0;
+  padding-bottom: 0;
+  height: 3.375rem;
+  height: var(--line-height, 3.375rem);
+  max-height: 3.375rem;
+  max-height: var(--line-height, 3.375rem);
+}
+
 .button-destructive {
   color: red;
   border-color: red;
@@ -3428,23 +3444,6 @@ button:focus,
 
 .button-destructive.button-prime:active {
   color: white;
-}
-
-.button-large {
-  font-size: 1em;
-  line-height: 3.375rem;
-  --line-height: calc(2 * var(--spacing-base, 1.6875rem));
-  line-height: var(--line-height);
-  vertical-align: bottom;
-  line-height: 3.25rem;
-  line-height: calc(var(--line-height, 3.375rem) - 2px);
-  border-width: 1px;
-  padding-top: 0;
-  padding-bottom: 0;
-  height: 3.375rem;
-  height: var(--line-height, 3.375rem);
-  max-height: 3.375rem;
-  max-height: var(--line-height, 3.375rem);
 }
 
 input::-webkit-input-placeholder,
@@ -3473,11 +3472,6 @@ textarea::placeholder {
 
 label {
   display: block;
-}
-
-label:only-of-type ~ * {
-  /* Elements containing just one label have the rest of their contents inline */
-  display: inline-block;
 }
 
 form.form-inline {

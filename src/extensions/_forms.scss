@@ -12,8 +12,6 @@ $input-focus-box-shadow: 0 0 0 .2rem lighten($primary-color, 25%);
 
 $button-color: $primary-color !default;
 $button-text-color: lighten($button-color, 90%) !default;
-$button-destructive-color: $destructive-color !default;
-$button-destructive-text-color: lighten($button-destructive-color, 90%);
 $button-border-color: $button-color !default;
 $button-border-width: $input-border-width !default;
 $button-border-radius: $input-border-radius !default;
@@ -21,9 +19,12 @@ $button-border-style: $input-border-style !default;
 $button-background: transparent !default;
 $button-focus-outline: none !default;
 $button-focus-box-shadow: set_nth($input-focus-box-shadow, -1, lighten($button-color, 30%)) !default;
-$button-destructive-focus-box-shadow: set_nth($button-focus-box-shadow, -1, lighten($button-destructive-color, 30%)) !default;
 $button-horizontal-padding: $spacing-base/8 !default;
 $button-text-decoration: none !default;
+
+$button-destructive-color: $destructive-color !default;
+$button-destructive-text-color: lighten($button-destructive-color, 90%);
+$button-destructive-focus-box-shadow: set_nth($button-focus-box-shadow, -1, lighten($button-destructive-color, 30%)) !default;
 
 input, select:not([size]):not([multiple]) {
   @include set-border-preserving-line-height($spacing-base, $input-border-width);
@@ -71,6 +72,8 @@ input:not([type='checkbox']):not([type='radio']) {
   border-color: $button-border-color;
   border-style: $button-border-style;
   border-radius: $button-border-radius;
+
+  //TODO: add shadow
 
   padding-left: $button-horizontal-padding;
   padding-right: $button-horizontal-padding;
@@ -129,6 +132,13 @@ button,
   }
 }
 
+//Big button
+.button-large {
+  @extend %button;
+  @include set-text(1em, 2*$spacing-base);
+  @include set-border-preserving-line-height($spacing-base * 2, $button-border-width);
+}
+
 //Cautionary button
 .button-destructive {
   @extend %button;
@@ -154,12 +164,6 @@ button,
   }
 }
 
-.button-large {
-  @extend %button;
-  @include set-text(1em, 2*$spacing-base);
-  @include set-border-preserving-line-height($spacing-base * 2, $button-border-width);
-}
-
 input::placeholder, textarea::placeholder {
   color: inherit;
   opacity: .5;
@@ -168,13 +172,6 @@ input::placeholder, textarea::placeholder {
 label {
   // Labels go on their own line before their inputs
   display: block;
-}
-
-//TODO: remove default inlining of single input button
-label:only-of-type ~ * {
-  /* Elements containing just one label have the rest of their contents inline */
-  display: inline-block;
-  @extend %mt-0;
 }
 
 form.form-inline {
