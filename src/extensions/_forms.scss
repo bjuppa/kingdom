@@ -176,11 +176,13 @@ button,
   }
 }
 
-[type='submit'], button {
-  //TODO: make checking for button last in form stricter!
-  &:last-child {
-    display: block;
-    @extend %mt-1;
+form > {
+  [type='submit'], button {
+    &:last-child {
+      // A submit that is the last element in a form go on it's own line
+      display: block;
+      @extend %mt-1;
+    }
   }
 }
 
@@ -198,7 +200,7 @@ label {
 
 label:not([for]) {
   & + & {
-    // Remove spacing between adjacent labels not referencing an input - i.e. presumed to contain their input, usually a checkbox or radiobutton
+    // Remove spacing between adjacent labels not referencing any input - i.e. presumed to contain their input, usually a checkbox or radiobutton
     @extend %mt-0;
   }
 }

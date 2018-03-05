@@ -1016,8 +1016,8 @@ label:not([for]) + label:not([for]) {
 
 .h-px + *,
 .mt-1,
-[type='submit']:last-child,
-button:last-child,
+form > [type='submit']:last-child,
+form > button:last-child,
 * + label,
 .form-inline * {
   /* Default vertical spacing */
@@ -2875,8 +2875,8 @@ button:active,
   color: white;
 }
 
-[type='submit']:last-child,
-button:last-child {
+form > [type='submit']:last-child,
+form > button:last-child {
   display: block;
 }
 
