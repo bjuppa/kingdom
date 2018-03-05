@@ -2979,6 +2979,8 @@ select[size="12"] {
   display: inline-flex;
 }
 
+/* Kingdom CSS Extension - Forms */
+
 input,
 select:not([size]):not([multiple]) {
   vertical-align: bottom;
@@ -3119,8 +3121,8 @@ button,
   border-radius: 0.2109375rem;
   -webkit-box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.08);
           box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.08);
-  padding-left: 0.2109375rem;
-  padding-right: 0.2109375rem;
+  padding-left: 0.421875rem;
+  padding-right: 0.421875rem;
   text-decoration: none;
   display: block;
 }
