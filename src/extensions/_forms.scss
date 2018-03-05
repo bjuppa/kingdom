@@ -123,6 +123,10 @@ button,
   border: transparent;
   background: transparent;
   text-decoration: underline;
+
+  &:focus {
+    text-decoration: none;
+  }
 }
 
 //Cautionary button

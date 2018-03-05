@@ -2777,6 +2777,10 @@ button:focus,
   text-decoration: underline;
 }
 
+.button-petty:focus {
+  text-decoration: none;
+}
+
 .button-destructive {
   color: red;
   border-color: red;
