@@ -1,0 +1,16 @@
+@mixin set-space-inside($sides: top bottom left right, $suffix: '1\\/4') {
+  //If the last child of a bordered element is baseline shifted, it's text lies on the bottom border - so add bottom padding!
+  @if index($sides, bottom) {
+    > %baseline-shift:last-child {
+      @extend %pb-1 !optional;
+    }
+  }
+
+  @if index($sides, left) and index($sides, right) {
+    @extend %px-#{$suffix} !optional;
+  } @else if index($sides, left) {
+    @extend %pl-#{$suffix} !optional;
+  } @else if index($sides, right) {
+    @extend %pr-#{$suffix} !optional;
+  }
+}
