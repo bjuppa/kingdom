@@ -79,7 +79,9 @@ input, textarea {
 
   text-decoration: $button-text-decoration;
 
-  transition: $button-transition;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
 
   // Buttons go on their own line and have top margin
   //TODO: only make some buttons within forms block by default
