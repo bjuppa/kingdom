@@ -67,6 +67,8 @@ input, textarea {
   background: $button-background;
   background-clip: $button-background-clip;
 
+  display: inline-block;
+
   @include set-border-preserving-line-height($spacing-base, $button-border-width);
   border-color: $button-border-color;
   border-style: $button-border-style;
@@ -78,10 +80,6 @@ input, textarea {
   padding-right: $button-horizontal-padding;
 
   text-decoration: $button-text-decoration;
-
-  white-space: nowrap;
-  overflow: hidden;
-  text-overflow: ellipsis;
 
   transition: $button-transition;
 

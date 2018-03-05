@@ -3336,6 +3336,7 @@ button,
   color: blue;
   background: transparent;
   background-clip: padding-box;
+  display: inline-block;
   vertical-align: bottom;
   line-height: 1.5625rem;
   line-height: calc(var(--line-height, 1.6875rem) - 2px);
@@ -3354,9 +3355,6 @@ button,
   padding-left: 0.421875rem;
   padding-right: 0.421875rem;
   text-decoration: none;
-  white-space: nowrap;
-  overflow: hidden;
-  text-overflow: ellipsis;
   -webkit-transition: all 0.15s ease-in-out;
   transition: all 0.15s ease-in-out;
 }
