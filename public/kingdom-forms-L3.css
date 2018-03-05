@@ -1069,7 +1069,8 @@ button,
 .button-prime,
 .button-plain,
 .button-petty,
-.button-destructive {
+.button-destructive,
+.button-large {
   /* Default vertical spacing */
   margin-top: 1.6875rem;
   margin-top: calc(1 * var(--spacing-base, 1.6875rem));
@@ -3100,7 +3101,8 @@ button,
 .button-prime,
 .button-plain,
 .button-petty,
-.button-destructive {
+.button-destructive,
+.button-large {
   background: transparent;
   color: blue;
   vertical-align: bottom;
@@ -3129,9 +3131,9 @@ button:active,
 .button-prime:active,
 .button-plain:active,
 .button-petty:active,
-.button-destructive:active {
+.button-destructive:active,
+.button-large:active {
   color: blue;
-  border-color: transparent;
 }
 
 button:focus,
@@ -3141,7 +3143,8 @@ button:focus,
 .button-prime:focus,
 .button-plain:focus,
 .button-petty:focus,
-.button-destructive:focus {
+.button-destructive:focus,
+.button-large:focus {
   outline: none;
   -webkit-box-shadow: 0 0 0 0.2rem #9999ff;
           box-shadow: 0 0 0 0.2rem #9999ff;
@@ -3180,6 +3183,10 @@ button:focus,
 .button-destructive.button-prime {
   background: red;
   border-color: red;
+  color: white;
+}
+
+.button-destructive.button-prime:active {
   color: white;
 }
 
