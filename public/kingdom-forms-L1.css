@@ -2736,18 +2736,6 @@ button,
   display: block;
 }
 
-button:active,
-[type='button']:active,
-[type='reset']:active,
-[type='submit']:active,
-.button-prime:active,
-.button-plain:active,
-.button-petty:active,
-.button-large:active,
-.button-destructive:active {
-  color: blue;
-}
-
 button:focus,
 [type='button']:focus,
 [type='reset']:focus,
@@ -2760,6 +2748,20 @@ button:focus,
   outline: none;
   -webkit-box-shadow: 0 0 0 0.2rem #9999ff;
           box-shadow: 0 0 0 0.2rem #9999ff;
+}
+
+button:active,
+[type='button']:active,
+[type='reset']:active,
+[type='submit']:active,
+.button-prime:active,
+.button-plain:active,
+.button-petty:active,
+.button-large:active,
+.button-destructive:active {
+  color: blue;
+  -webkit-box-shadow: inset 0 2px 4px 0 rgba(0, 0, 0, 0.08);
+          box-shadow: inset 0 2px 4px 0 rgba(0, 0, 0, 0.08);
 }
 
 .button-prime {
@@ -2782,6 +2784,11 @@ button:focus,
 
 .button-petty:focus {
   text-decoration: none;
+}
+
+.button-petty:active {
+  -webkit-box-shadow: none;
+          box-shadow: none;
 }
 
 .button-large {
