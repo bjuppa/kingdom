@@ -2687,6 +2687,7 @@ input,
 textarea,
 select {
   background: white;
+  background-clip: padding-box;
   border-color: rgba(0, 0, 0, 0.25);
   border-style: solid;
   border-radius: 0.125rem;
@@ -2715,8 +2716,9 @@ button,
 .button-petty,
 .button-large,
 .button-destructive {
-  background: transparent;
   color: blue;
+  background: transparent;
+  background-clip: padding-box;
   vertical-align: bottom;
   line-height: 0.875rem;
   line-height: calc(var(--line-height, 1rem) - 2px);
