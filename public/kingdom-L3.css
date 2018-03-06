@@ -2412,7 +2412,6 @@ h6,
 .text-inherit {
   font-size: inherit;
   line-height: inherit;
-  --line-height: inherit;
 }
 
 /* Placeholders for fonts */
