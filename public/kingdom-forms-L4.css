@@ -3645,7 +3645,13 @@ label {
 
 [type="checkbox"][id] + label[for],
 [type="radio"][id] + label[for] {
-  display: inline-block;
+  display: inline;
+}
+
+[type="checkbox"][id] + label[for]:after,
+[type="radio"][id] + label[for]:after {
+  content: "\A";
+  white-space: pre;
 }
 
 /* .form-inline make a form's contents go inline */
