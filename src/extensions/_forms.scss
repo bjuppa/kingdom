@@ -60,10 +60,6 @@ input, textarea {
 [type='radio'] {
   vertical-align: baseline;
   height: auto;
-
-  // Attempt to align better with text
-  position: relative;
-  bottom: 1px;
 }
 
 /* Buttons */
