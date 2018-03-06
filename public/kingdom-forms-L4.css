@@ -3632,20 +3632,23 @@ button:active,
   color: white;
 }
 
+/* Form layout */
+
 form > [type='submit']:last-child,
 form > button:last-child {
   display: block;
 }
 
-/* Labels */
-
 label {
   display: block;
 }
 
-.form-inline {
-  /* Make form contents go inline */
+[type="checkbox"][id] + label[for],
+[type="radio"][id] + label[for] {
+  display: inline-block;
 }
+
+/* .form-inline make a form's contents go inline */
 
 .form-inline * {
   display: inline-block;
