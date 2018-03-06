@@ -30,16 +30,6 @@ $button-destructive-color: $destructive-color !default;
 $button-destructive-text-color: lighten($button-destructive-color, 90%);
 $button-destructive-focus-box-shadow: set_nth($button-focus-box-shadow, -1, lighten($button-destructive-color, 30%)) !default;
 
-/* Cursor on interactive elements */
-// https://css-tricks.com/snippets/css/give-clickable-elements-a-pointer-cursor/
-label,
-[type="checkbox"],
-[type="radio"] {
-  &:not(:disabled):not(.disabled) {
-    cursor: pointer;
-  }
-}
-
 /* Inputs */
 
 input, select:not([size]):not([multiple]) {

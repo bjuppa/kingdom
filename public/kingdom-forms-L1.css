@@ -2711,14 +2711,6 @@ form > button:last-child,
 
 /* Kingdom CSS Extension - Forms */
 
-/* Cursor on interactive elements */
-
-label:not(:disabled):not(.disabled),
-[type="checkbox"]:not(:disabled):not(.disabled),
-[type="radio"]:not(:disabled):not(.disabled) {
-  cursor: pointer;
-}
-
 /* Inputs */
 
 input,
