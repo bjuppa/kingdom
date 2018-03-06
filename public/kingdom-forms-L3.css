@@ -2994,6 +2994,11 @@ select[size] {
   --border-right-width: 1px;
   border-right-width: var(--border-right-width);
   vertical-align: top;
+  font-size: 1.32874016rem;
+  /* These have no effect in most browsers: */
+  line-height: 1.6875rem;
+  padding-top: 0;
+  padding-bottom: 0;
 }
 
 select[multiple] {

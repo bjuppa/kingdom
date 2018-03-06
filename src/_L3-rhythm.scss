@@ -56,6 +56,12 @@ textarea {
 select {
   &[multiple], &[size] {
     @include set-border-width($width: $input-border-width);
+    font-size: $vertical-rhythm-base/1.27; // Roughly make options a height fitting the flow
+
+    /* These have no effect in most browsers: */
+    line-height: $vertical-rhythm-base;
+    padding-top: 0;
+    padding-bottom: 0;
   }
   &[multiple] {
     @include set-length(height, 4);
