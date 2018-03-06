@@ -201,14 +201,6 @@ button:focus,
   outline: 5px auto -webkit-focus-ring-color;
 }
 
-button,
-[role=button],
-[type='button'],
-[type='reset'],
-[type='submit'] {
-  cursor: pointer;
-}
-
 /* Placeholders for sizing */
 
 /* %h-1 */
@@ -2808,6 +2800,14 @@ h6,
 
 /* Kingdom CSS Extension - Forms */
 
+/* Cursor on interactive elements */
+
+label:not(:disabled):not(.disabled),
+[type="checkbox"]:not(:disabled):not(.disabled),
+[type="radio"]:not(:disabled):not(.disabled) {
+  cursor: pointer;
+}
+
 /* Inputs */
 
 input,
@@ -3012,6 +3012,42 @@ button:active,
   color: blue;
   -webkit-box-shadow: inset 0 2px 4px 0 rgba(0, 0, 0, 0.08);
           box-shadow: inset 0 2px 4px 0 rgba(0, 0, 0, 0.08);
+}
+
+button:not(:disabled):not(.disabled),
+[type='button']:not(:disabled):not(.disabled),
+[type='reset']:not(:disabled):not(.disabled),
+[type='submit']:not(:disabled):not(.disabled),
+.button-prime:not(:disabled):not(.disabled),
+.button-plain:not(:disabled):not(.disabled),
+.button-petty:not(:disabled):not(.disabled),
+.button-large:not(:disabled):not(.disabled),
+.button-destructive:not(:disabled):not(.disabled) {
+  cursor: pointer;
+}
+
+button:disabled,
+[type='button']:disabled,
+[type='reset']:disabled,
+[type='submit']:disabled,
+.button-prime:disabled,
+.button-plain:disabled,
+.button-petty:disabled,
+.button-large:disabled,
+.button-destructive:disabled,
+fieldset:disabled button,
+fieldset:disabled
+[type='button'],
+fieldset:disabled
+[type='reset'],
+fieldset:disabled
+[type='submit'],
+fieldset:disabled .button-prime,
+fieldset:disabled .button-plain,
+fieldset:disabled .button-petty,
+fieldset:disabled .button-large,
+fieldset:disabled .button-destructive {
+  pointer-events: none;
 }
 
 /* Prominent button */
