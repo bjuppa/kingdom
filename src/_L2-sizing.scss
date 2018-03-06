@@ -43,6 +43,7 @@ dt, li, hgroup, h1, h2, h3, h4, h5, h6 {
 }
 
 @include inline-elements {
+  //TODO: should we really reset spacing before inline elements? It will only affect inline-blocks I guess...
   // Reset vertical spacing on inline elements
   @extend %mt-0;
 }
