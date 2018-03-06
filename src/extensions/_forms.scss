@@ -101,7 +101,7 @@ input, textarea {
     cursor: pointer;
   }
 
-  &:disabled, fieldset:disabled & {
+  &.disabled, fieldset:disabled & {
     pointer-events: none;
   }
 }
