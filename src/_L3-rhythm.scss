@@ -56,7 +56,8 @@ textarea {
 select {
   &[multiple], &[size] {
     @include set-border-width($width: $input-border-width);
-    font-size: $vertical-rhythm-base/1.27; // Roughly make options a height fitting the flow
+    // Roughly make contents a height fitting the "normal" line height that browsers put on multi-select items
+    font-size: $vertical-rhythm-base/1.27;
 
     /* These have no effect in most browsers: */
     line-height: $vertical-rhythm-base;
