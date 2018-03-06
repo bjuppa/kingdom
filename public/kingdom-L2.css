@@ -47,14 +47,15 @@ h6,
 header,
 hgroup,
 hr,
-li,
 main,
 menu,
 nav,
+ol,
 output,
 p,
 pre,
 section,
+ul,
 video {
   display: block;
   border: 0 solid currentColor;

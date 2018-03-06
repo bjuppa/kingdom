@@ -21,17 +21,17 @@ h1, h2, h3, h4, h5, h6,
 header,
 hgroup,
 hr,
-li,
+//li,
 main,
 menu, // Not in https://developer.mozilla.org/en-US/docs/Web/HTML/Block-level_elements
 nav,
 //noscript,
-//ol,
+ol,
 output,
 p,
 pre,
 section,
-//ul,
+ul,
 video !default;
 
 // Block elements that usually contain just phrasing content or some kind of list items
