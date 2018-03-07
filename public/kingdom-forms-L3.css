@@ -2779,6 +2779,10 @@ select {
   height: auto;
 }
 
+select * {
+  line-height: normal;
+}
+
 select[multiple],
 select[size] {
   min-height: 1.6875rem;
@@ -2792,11 +2796,6 @@ select[size] {
   select[size] {
     height: auto;
   }
-}
-
-select[multiple] *,
-select[size] * {
-  line-height: normal;
 }
 
 select[multiple]:not([size]) {
