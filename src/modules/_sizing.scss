@@ -1,10 +1,10 @@
 $spacing-base: 1rem !default;
 
-@mixin set-length($properties, $factor: 1, $length-base: $spacing-base) {
+@mixin set-length($properties, $factor: 1, $length-base: $spacing-base, $extend-height-multiple: false) {
   @each $property in $properties {
     #{$property}: $factor * $length-base;
     #{$property}: calc(#{$factor} * var(--spacing-base, #{$spacing-base}));
-    @if ($property == height and round($factor) == $factor) {
+    @if ($extend-height-multiple and $property == height and round($factor) == $factor) {
       @extend %height-multiple !optional;
     }
   }

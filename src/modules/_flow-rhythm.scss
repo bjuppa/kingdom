@@ -27,7 +27,7 @@ $font-size-normal: $vertical-rhythm-base / $body-line-height-factor !default;
 @mixin responsive-rhythm($start-multiple: 5, $end-multiple: 15, $from-viewport-width: 600px, $to-viewport-width: 1800px, $properties: height, $rhythm-base: $vertical-rhythm-base, $media: screen) {
   $breakpoint-step-size: round(($to-viewport-width - $from-viewport-width) / ($end-multiple - $start-multiple));
 
-  @include set-length($properties, $start-multiple, $rhythm-base);
+  @include set-length($properties, $start-multiple, $rhythm-base, $extend-height-multiple: true);
 
   @for $i from $start-multiple + 1 through $end-multiple {
     @media #{$media} and (min-width: $from-viewport-width + ($i - $start-multiple) * $breakpoint-step-size) {
