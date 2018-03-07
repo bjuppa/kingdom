@@ -33,7 +33,7 @@ hr {
 }
 
 $input-border-width: 1px !default;
-input, button, select:not([size]):not([multiple]) {
+input, button, select {
   @include set-border-preserving-line-height($vertical-rhythm-base, $input-border-width);
   outline-offset: -2px; //Same focus ring size for same border in Safari
 }
@@ -43,35 +43,22 @@ input, button, select:not([size]):not([multiple]) {
   height: auto;
 }
 
-select:not([size]):not([multiple]) {
-  -webkit-appearance: menulist-button; //Force select out of Safari default styling
+select {
+  &:not([size]):not([multiple]) {
+    -webkit-appearance: menulist-button; //Force select out of Safari default styling
+  }
+
+  &[multiple], &[size] {
+    height: auto;
+    max-height: 100%;
+    vertical-align: top;
+  }
 }
 
 textarea {
   @include set-border-for-auto-height($width: $input-border-width);
   padding-top: 0;
   padding-bottom: 0;
-}
-
-select {
-  &[multiple], &[size] {
-    @include set-border-width($width: $input-border-width);
-    // Roughly make contents a height fitting the "normal" line height that browsers put on multi-select items
-    font-size: $vertical-rhythm-base/1.27;
-
-    /* These have no effect in most browsers: */
-    line-height: $vertical-rhythm-base;
-    padding-top: 0;
-    padding-bottom: 0;
-  }
-  &[multiple] {
-    @include set-length(height, 4);
-  }
-  @for $i from 1 through 12 {
-    &[size="#{$i}"] {
-      @include set-length(height, $i);
-    }
-  }
 }
 
 .visualize-vertical-rhythm {

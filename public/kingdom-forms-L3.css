@@ -2480,20 +2480,7 @@ h6,
 .h-40.border-t,
 .h-48.border-t,
 .h-56.border-t,
-.h-64.border-t,
-select[multiple].border-t,
-select[size="1"].border-t,
-select[size="2"].border-t,
-select[size="3"].border-t,
-select[size="4"].border-t,
-select[size="5"].border-t,
-select[size="6"].border-t,
-select[size="7"].border-t,
-select[size="8"].border-t,
-select[size="9"].border-t,
-select[size="10"].border-t,
-select[size="11"].border-t,
-select[size="12"].border-t {
+.h-64.border-t {
   margin-bottom: 0;
 }
 
@@ -2519,20 +2506,7 @@ select[size="12"].border-t {
 .h-40.border-t,
 .h-48.border-t,
 .h-56.border-t,
-.h-64.border-t,
-select[multiple].border-t,
-select[size="1"].border-t,
-select[size="2"].border-t,
-select[size="3"].border-t,
-select[size="4"].border-t,
-select[size="5"].border-t,
-select[size="6"].border-t,
-select[size="7"].border-t,
-select[size="8"].border-t,
-select[size="9"].border-t,
-select[size="10"].border-t,
-select[size="11"].border-t,
-select[size="12"].border-t {
+.h-64.border-t {
   position: initial;
   top: initial;
 }
@@ -2569,20 +2543,7 @@ select[size="12"].border-t {
 .h-40.border-b,
 .h-48.border-b,
 .h-56.border-b,
-.h-64.border-b,
-select[multiple].border-b,
-select[size="1"].border-b,
-select[size="2"].border-b,
-select[size="3"].border-b,
-select[size="4"].border-b,
-select[size="5"].border-b,
-select[size="6"].border-b,
-select[size="7"].border-b,
-select[size="8"].border-b,
-select[size="9"].border-b,
-select[size="10"].border-b,
-select[size="11"].border-b,
-select[size="12"].border-b {
+.h-64.border-b {
   margin-bottom: 0;
 }
 
@@ -2626,20 +2587,7 @@ select[size="12"].border-b {
 .h-40.border-tb,
 .h-48.border-tb,
 .h-56.border-tb,
-.h-64.border-tb,
-select[multiple].border-tb,
-select[size="1"].border-tb,
-select[size="2"].border-tb,
-select[size="3"].border-tb,
-select[size="4"].border-tb,
-select[size="5"].border-tb,
-select[size="6"].border-tb,
-select[size="7"].border-tb,
-select[size="8"].border-tb,
-select[size="9"].border-tb,
-select[size="10"].border-tb,
-select[size="11"].border-tb,
-select[size="12"].border-tb {
+.h-64.border-tb {
   margin-bottom: 0;
 }
 
@@ -2665,20 +2613,7 @@ select[size="12"].border-tb {
 .h-40.border-tb,
 .h-48.border-tb,
 .h-56.border-tb,
-.h-64.border-tb,
-select[multiple].border-tb,
-select[size="1"].border-tb,
-select[size="2"].border-tb,
-select[size="3"].border-tb,
-select[size="4"].border-tb,
-select[size="5"].border-tb,
-select[size="6"].border-tb,
-select[size="7"].border-tb,
-select[size="8"].border-tb,
-select[size="9"].border-tb,
-select[size="10"].border-tb,
-select[size="11"].border-tb,
-select[size="12"].border-tb {
+.h-64.border-tb {
   position: initial;
   top: initial;
 }
@@ -2731,20 +2666,7 @@ select[size="12"].border-tb {
 .h-40.border,
 .h-48.border,
 .h-56.border,
-.h-64.border,
-select[multiple].border,
-select[size="1"].border,
-select[size="2"].border,
-select[size="3"].border,
-select[size="4"].border,
-select[size="5"].border,
-select[size="6"].border,
-select[size="7"].border,
-select[size="8"].border,
-select[size="9"].border,
-select[size="10"].border,
-select[size="11"].border,
-select[size="12"].border {
+.h-64.border {
   margin-bottom: 0;
 }
 
@@ -2770,20 +2692,7 @@ select[size="12"].border {
 .h-40.border,
 .h-48.border,
 .h-56.border,
-.h-64.border,
-select[multiple].border,
-select[size="1"].border,
-select[size="2"].border,
-select[size="3"].border,
-select[size="4"].border,
-select[size="5"].border,
-select[size="6"].border,
-select[size="7"].border,
-select[size="8"].border,
-select[size="9"].border,
-select[size="10"].border,
-select[size="11"].border,
-select[size="12"].border {
+.h-64.border {
   position: initial;
   top: initial;
 }
@@ -2831,20 +2740,7 @@ select[size="12"].border {
 .h-40.border-0,
 .h-48.border-0,
 .h-56.border-0,
-.h-64.border-0,
-select[multiple].border-0,
-select[size="1"].border-0,
-select[size="2"].border-0,
-select[size="3"].border-0,
-select[size="4"].border-0,
-select[size="5"].border-0,
-select[size="6"].border-0,
-select[size="7"].border-0,
-select[size="8"].border-0,
-select[size="9"].border-0,
-select[size="10"].border-0,
-select[size="11"].border-0,
-select[size="12"].border-0 {
+.h-64.border-0 {
   margin-bottom: 0;
 }
 
@@ -2863,7 +2759,7 @@ hr {
 
 input,
 button,
-select:not([size]):not([multiple]) {
+select {
   vertical-align: bottom;
   line-height: 1.5625rem;
   line-height: calc(var(--line-height, 1.6875rem) - 2px);
@@ -2885,6 +2781,13 @@ select:not([size]):not([multiple]) {
 
 select:not([size]):not([multiple]) {
   -webkit-appearance: menulist-button;
+}
+
+select[multiple],
+select[size] {
+  height: auto;
+  max-height: 100%;
+  vertical-align: top;
 }
 
 textarea {
@@ -2964,96 +2867,6 @@ textarea.h-56,
 textarea.h-64 {
   position: initial;
   top: initial;
-}
-
-select[multiple],
-select[size] {
-  border-top-width: 1px;
-  --border-top-width: 1px;
-  border-top-width: var(--border-top-width);
-  vertical-align: top;
-  border-bottom-width: 1px;
-  --border-bottom-width: 1px;
-  border-bottom-width: var(--border-bottom-width);
-  vertical-align: top;
-  border-left-width: 1px;
-  --border-left-width: 1px;
-  border-left-width: var(--border-left-width);
-  vertical-align: top;
-  border-right-width: 1px;
-  --border-right-width: 1px;
-  border-right-width: var(--border-right-width);
-  vertical-align: top;
-  font-size: 1.32874016rem;
-  /* These have no effect in most browsers: */
-  line-height: 1.6875rem;
-  padding-top: 0;
-  padding-bottom: 0;
-}
-
-select[multiple] {
-  height: 6.75rem;
-  height: calc(4 * var(--spacing-base, 1.6875rem));
-}
-
-select[size="1"] {
-  height: 1.6875rem;
-  height: calc(1 * var(--spacing-base, 1.6875rem));
-}
-
-select[size="2"] {
-  height: 3.375rem;
-  height: calc(2 * var(--spacing-base, 1.6875rem));
-}
-
-select[size="3"] {
-  height: 5.0625rem;
-  height: calc(3 * var(--spacing-base, 1.6875rem));
-}
-
-select[size="4"] {
-  height: 6.75rem;
-  height: calc(4 * var(--spacing-base, 1.6875rem));
-}
-
-select[size="5"] {
-  height: 8.4375rem;
-  height: calc(5 * var(--spacing-base, 1.6875rem));
-}
-
-select[size="6"] {
-  height: 10.125rem;
-  height: calc(6 * var(--spacing-base, 1.6875rem));
-}
-
-select[size="7"] {
-  height: 11.8125rem;
-  height: calc(7 * var(--spacing-base, 1.6875rem));
-}
-
-select[size="8"] {
-  height: 13.5rem;
-  height: calc(8 * var(--spacing-base, 1.6875rem));
-}
-
-select[size="9"] {
-  height: 15.1875rem;
-  height: calc(9 * var(--spacing-base, 1.6875rem));
-}
-
-select[size="10"] {
-  height: 16.875rem;
-  height: calc(10 * var(--spacing-base, 1.6875rem));
-}
-
-select[size="11"] {
-  height: 18.5625rem;
-  height: calc(11 * var(--spacing-base, 1.6875rem));
-}
-
-select[size="12"] {
-  height: 20.25rem;
-  height: calc(12 * var(--spacing-base, 1.6875rem));
 }
 
 .visualize-vertical-rhythm {
