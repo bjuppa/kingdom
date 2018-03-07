@@ -44,10 +44,6 @@ input, button, select {
 }
 
 select {
-  &:not([size]):not([multiple]) {
-    -webkit-appearance: menulist-button; //Force select out of Safari default styling
-  }
-
   &[multiple], &[size] {
     /* Wrap select in fixed-height element to control height */
     height: auto;

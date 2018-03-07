@@ -2774,10 +2774,6 @@ select {
   height: auto;
 }
 
-select:not([size]):not([multiple]) {
-  -webkit-appearance: menulist-button;
-}
-
 select[multiple],
 select[size] {
   /* Wrap select in fixed-height element to control height */
