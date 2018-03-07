@@ -44,19 +44,20 @@ input, button, select {
 }
 
 select {
+  * {
+    // Fix optgroup in Edge
+    line-height: normal;
+  }
+
   &[multiple], &[size] {
     @include set-length(min-height, 1);
     max-height: 100%;
     vertical-align: top;
 
     // https://css-tricks.com/snippets/css/media-queries-for-standard-devices/
-    @media screen and (min-device-width: 1200px) {
+    @media screen and (min-device-width: 1200px) { //TODO: ideally invert this defaulting height to auto and fixed multiple in media query - but that requires some workaround in set-length() that extends a placeholder that can't be done inside media-query
       // Enable vertical growth on multiple and sized selects, but not on mobile devices that should keep the button style
       height: auto;
-    }
-
-    * {
-      line-height: normal;
     }
   }
 
