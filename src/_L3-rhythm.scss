@@ -43,8 +43,8 @@ input, button, select {
   height: auto;
 }
 
+/* iOS Blocker hack to not apply on iOS, see https://browserstrangeness.bitbucket.io/css_hacks.html#webkit */
 _:-webkit-full-screen-ancestor, :root select[multiple], :root select[size] {
-  // iOS Blocker hack to not apply on iOS, see https://browserstrangeness.bitbucket.io/css_hacks.html#webkit
   // Give multiple and sized selects ability to grow, but not on iOS
   height: auto;
 }
