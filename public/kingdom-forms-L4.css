@@ -2837,6 +2837,7 @@ select:not([size]):not([multiple]) {
 
 select[multiple],
 select[size] {
+  /* Wrap select in fixed-height element to control height */
   height: auto;
   max-height: 100%;
   vertical-align: top;
@@ -3489,8 +3490,8 @@ label {
   display: inline;
 }
 
-[type="checkbox"][id] + label[for]:after,
-[type="radio"][id] + label[for]:after {
+[type="checkbox"][id] + label[for]:not(:last-child):after,
+[type="radio"][id] + label[for]:not(:last-child):after {
   content: "\A";
   white-space: pre;
 }

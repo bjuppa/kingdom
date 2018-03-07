@@ -2780,6 +2780,7 @@ select:not([size]):not([multiple]) {
 
 select[multiple],
 select[size] {
+  /* Wrap select in fixed-height element to control height */
   height: auto;
   max-height: 100%;
   vertical-align: top;

@@ -3048,8 +3048,8 @@ label {
   display: inline;
 }
 
-[type="checkbox"][id] + label[for]:after,
-[type="radio"][id] + label[for]:after {
+[type="checkbox"][id] + label[for]:not(:last-child):after,
+[type="radio"][id] + label[for]:not(:last-child):after {
   content: "\A";
   white-space: pre;
 }
