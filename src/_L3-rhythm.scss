@@ -45,10 +45,16 @@ input, button, select {
 
 select {
   &[multiple], &[size] {
-    /* Wrap select in fixed-height element to control height */
-    height: auto;
-    max-height: 100%;
-    vertical-align: top;
+    _:-webkit-full-screen-ancestor, :root & {
+      // iOS Blocker hack to not apply on iOS see https://browserstrangeness.bitbucket.io/css_hacks.html#webkit
+      height: auto;
+      @include set-length(min-height, 1);
+      max-height: 100%;
+      vertical-align: top;
+    }
+  }
+  &[multiple] {
+    @include set-length(max-height, 3);
   }
 }
 
