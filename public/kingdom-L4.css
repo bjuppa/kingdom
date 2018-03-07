@@ -2826,20 +2826,24 @@ select {
   height: auto;
 }
 
-/* iOS Blocker hack to not apply on iOS, see https://browserstrangeness.bitbucket.io/css_hacks.html#webkit */
-
-_:-webkit-full-screen-ancestor,
-:root select[multiple],
-:root select[size] {
-  height: auto;
-}
-
 select[multiple],
 select[size] {
   min-height: 1.6875rem;
   min-height: calc(1 * var(--spacing-base, 1.6875rem));
   max-height: 100%;
   vertical-align: top;
+}
+
+@media screen and (min-device-width: 1200px) {
+  select[multiple],
+  select[size] {
+    height: auto;
+  }
+}
+
+select[multiple] *,
+select[size] * {
+  line-height: normal;
 }
 
 select[multiple]:not([size]) {
