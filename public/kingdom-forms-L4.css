@@ -2831,18 +2831,21 @@ select {
   height: auto;
 }
 
-select[multiple] _:-webkit-full-screen-ancestor,
+_:-webkit-full-screen-ancestor,
 :root select[multiple],
-select[size] _:-webkit-full-screen-ancestor,
 :root select[size] {
   height: auto;
+}
+
+select[multiple],
+select[size] {
   min-height: 1.6875rem;
   min-height: calc(1 * var(--spacing-base, 1.6875rem));
   max-height: 100%;
   vertical-align: top;
 }
 
-select[multiple] {
+select[multiple]:not([size]) {
   max-height: 5.0625rem;
   max-height: calc(3 * var(--spacing-base, 1.6875rem));
 }
