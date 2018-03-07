@@ -49,6 +49,7 @@ select {
   }
 
   &[multiple], &[size] {
+    /* Wrap select in fixed-height element to control height */
     height: auto;
     max-height: 100%;
     vertical-align: top;
