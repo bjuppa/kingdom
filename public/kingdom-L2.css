@@ -2744,6 +2744,7 @@ h6,
 
 select * {
   line-height: normal;
+  font-size: medium;
 }
 
 textarea:not([cols]) {

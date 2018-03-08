@@ -2804,6 +2804,7 @@ h6 * {
 
 select * {
   line-height: normal;
+  font-size: medium;
 }
 
 textarea:not([cols]) {
@@ -2839,10 +2840,6 @@ select {
   height: auto;
 }
 
-select * {
-  line-height: 1.225;
-}
-
 select[multiple],
 select[size] {
   min-height: 1.6875rem;
@@ -2862,6 +2859,11 @@ select[size] {
     select[size] {
       /* Hack to not apply in IE, see http://browserhacks.com/#hack-8a0d11a6b2e3d172711eed35cb7237b9 */
       font-size: 1.03316327rem;
+    }
+
+    select[multiple] *,
+    select[size] * {
+      line-height: 1.225;
     }
 }
 }

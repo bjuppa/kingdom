@@ -45,10 +45,6 @@ input, button, select {
 
 select {
   $safari-select-line-height: 1.225; //This line height is calculated for Safari
-  * {
-    // Set a common line-height inside select for any browser that respects it
-    line-height: $safari-select-line-height;
-  }
 
   &[multiple], &[size] {
     // Multiple and sized selects may span several lines
@@ -63,6 +59,10 @@ select {
       @supports (-webkit-appearance:none) {
         /* Hack to not apply in IE, see http://browserhacks.com/#hack-8a0d11a6b2e3d172711eed35cb7237b9 */
         font-size: 3*$vertical-rhythm-base/4/$safari-select-line-height; //Fit four options into three lines of the vertical rhythm in Safari
+        * {
+          //If any browser can set line-height on options/optgroup it's here for consistency
+          line-height: $safari-select-line-height;
+        }
       }
     }
   }
