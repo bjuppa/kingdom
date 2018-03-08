@@ -44,9 +44,10 @@ input, button, select {
 }
 
 select {
-  optgroup {
-    // Fix optgroup in Edge
-    line-height: normal;
+  $line-height: 1.225; //This line height is calculated for Safari
+  * {
+    // Fix optgroup in Edge and set a common line-height inside select for any browser that respects it
+    line-height: $line-height;
   }
 
   &[multiple], &[size] {
@@ -59,6 +60,7 @@ select {
     @media screen and (min-device-width: 1200px) {
       // Enable vertical growth on multiple and sized selects, but not on mobile devices that should keep the button style
       height: auto;
+      font-size: 3*$vertical-rhythm-base/4/$line-height; //Fit four options into three lines of the vertical rhythm
     }
   }
 

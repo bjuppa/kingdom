@@ -2835,8 +2835,8 @@ select {
   height: auto;
 }
 
-select optgroup {
-  line-height: normal;
+select * {
+  line-height: 1.225;
 }
 
 select[multiple],
@@ -2851,6 +2851,7 @@ select[size] {
   select[multiple],
   select[size] {
     height: auto;
+    font-size: 1.03316327rem;
   }
 }
 
