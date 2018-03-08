@@ -2750,6 +2750,10 @@ h6,
   --spacing-base: 1.6875rem;
 }
 
+textarea:not([cols]) {
+  width: 100%;
+}
+
 /* Kingdom CSS Level 3 - Vertical Rhythm */
 
 hr {
@@ -2779,7 +2783,7 @@ select {
   height: auto;
 }
 
-select * {
+select optgroup {
   line-height: normal;
 }
 

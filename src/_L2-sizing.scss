@@ -95,3 +95,9 @@ h5 {
 h6 {
   @extend %text-x-small-block;
 }
+
+// Size form inputs
+
+textarea:not([cols]) {
+  width: 100%;
+}

@@ -2742,6 +2742,10 @@ h6,
   --spacing-base: 1.5rem;
 }
 
+textarea:not([cols]) {
+  width: 100%;
+}
+
 .mx-auto,
 .mx-auto-children > * {
   /* Horizontally center a block */
