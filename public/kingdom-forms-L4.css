@@ -2802,6 +2802,10 @@ h6 * {
   --spacing-base: 1.6875rem;
 }
 
+select * {
+  line-height: normal;
+}
+
 textarea:not([cols]) {
   width: 100%;
 }
@@ -2851,8 +2855,15 @@ select[size] {
   select[multiple],
   select[size] {
     height: auto;
-    font-size: 1.03316327rem;
   }
+
+@supports (-webkit-appearance: none) {
+    select[multiple],
+    select[size] {
+      /* Hack to not apply in IE, see http://browserhacks.com/#hack-8a0d11a6b2e3d172711eed35cb7237b9 */
+      font-size: 1.03316327rem;
+    }
+}
 }
 
 select[multiple]:not([size]) {

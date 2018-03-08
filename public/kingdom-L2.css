@@ -2742,6 +2742,10 @@ h6,
   --spacing-base: 1.5rem;
 }
 
+select * {
+  line-height: normal;
+}
+
 textarea:not([cols]) {
   width: 100%;
 }
