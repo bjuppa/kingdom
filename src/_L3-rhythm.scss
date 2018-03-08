@@ -61,6 +61,7 @@ select {
       // Enable vertical growth on multiple and sized selects, but not on mobile devices that should keep the button style
       height: auto;
       font-size: 3*$vertical-rhythm-base/4/$line-height; //Fit four options into three lines of the vertical rhythm
+      //TODO: multiselects doesn't quite fill up three lines in IE 11
     }
   }
 
@@ -83,6 +84,7 @@ textarea {
   padding-top: 0;
   padding-bottom: 0;
   @include set-length(min-height, 2);
+  //TODO: Textareas doesn't quite fill up two lines in IE 11
 }
 
 .visualize-vertical-rhythm {
