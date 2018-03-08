@@ -50,6 +50,7 @@ select {
   }
 
   &[multiple], &[size] {
+    // Multiple and sized selects may span several lines
     @include set-length(min-height, 1);
     max-height: 100%;
     vertical-align: top;
@@ -62,7 +63,13 @@ select {
   }
 
   &[multiple]:not([size]) {
+    // Unsized multiple selects have a max-height slightly shorter than how browsers render by default
     @include set-length(max-height, 3);
+  }
+
+  &:not([multiple]):not([size]) {
+    //Force dropdown selects out of Safari default styling, to fit on one line
+    -webkit-appearance: menulist-button;
   }
 }
 

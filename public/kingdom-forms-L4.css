@@ -2855,6 +2855,10 @@ select[multiple]:not([size]) {
   max-height: calc(3 * var(--spacing-base, 1.6875rem));
 }
 
+select:not([multiple]):not([size]) {
+  -webkit-appearance: menulist-button;
+}
+
 textarea {
   border-top-width: 1px;
   --border-top-width: 1px;
