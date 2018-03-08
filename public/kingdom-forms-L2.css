@@ -3128,8 +3128,8 @@ fieldset:disabled .button-destructive {
 /* Disabled elements */
 
 :disabled {
-  color: #1d1d1d;
-  background-color: gainsboro;
+  color: #303036;
+  background-color: #f2f2f3;
 }
 
 /* Form layout */
