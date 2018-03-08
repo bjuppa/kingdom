@@ -3,7 +3,7 @@ $primary-color: blue !default;
 $destructive-color: red !default;
 $disabled-color: change_color($primary-color, $saturation: 5%, $lightness: 95%) !default;
 
-$input-border-color: rgba(black, .25) !default;
+$input-border-color: change_color($primary-color, $saturation: 5%, $lightness: 75%) !default;
 $input-border-width: 1px !default;
 $input-border-radius: $spacing-base/8 !default;
 $input-border-style: solid !default;

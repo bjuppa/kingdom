@@ -2902,7 +2902,7 @@ textarea,
 select {
   background: white;
   background-clip: padding-box;
-  border-color: rgba(0, 0, 0, 0.25);
+  border-color: #bcbcc2;
   border-style: solid;
   border-radius: 0.1875rem;
 }
