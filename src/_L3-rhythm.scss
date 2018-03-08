@@ -44,7 +44,7 @@ input, button, select {
 }
 
 select {
-  * {
+  optgroup {
     // Fix optgroup in Edge
     line-height: normal;
   }
