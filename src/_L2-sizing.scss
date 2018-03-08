@@ -60,6 +60,11 @@ figure, picture, object, select, table, audio, video, map {
   @extend %text-inherit;
 }
 
+select * {
+  // Inherited line-height looks weird within select elements in browsers that allows modification
+  line-height: normal;
+}
+
 body {
   @extend %text-1;
 }
