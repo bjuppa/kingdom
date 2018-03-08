@@ -3121,6 +3121,13 @@ fieldset:disabled .button-destructive {
   color: white;
 }
 
+/* Disabled elements */
+
+:disabled {
+  color: #1d1d1d;
+  background-color: gainsboro;
+}
+
 /* Form layout */
 
 form > [type='submit']:last-child,
