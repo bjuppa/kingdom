@@ -80,9 +80,31 @@
 <form>
   <input disabled value="disabled">
   <input readonly value="readonly">
+
   <textarea disabled>disabled</textarea>
   <textarea readonly>readonly</textarea>
+
   <label><input type="checkbox" disabled>Disabled checkbox in label</label>
+
+  <select disabled>
+    <option>Option 1</option>
+    <option>Option 2</option>
+    <optgroup label="Optgroup A">
+      <option>Option A1</option>
+      <option>Option A2</option>
+    </optgroup>
+    <option>Option 3</option>
+  </select>
+
+  <select multiple disabled>
+    <option>Option 1</option>
+    <option>Option 2</option>
+    <optgroup label="Optgroup A">
+      <option>Option A1</option>
+      <option>Option A2</option>
+    </optgroup>
+    <option>Option 3</option>
+  </select>
 </form>
 
 </body>

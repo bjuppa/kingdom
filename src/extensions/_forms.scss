@@ -2,6 +2,7 @@
 $primary-color: blue !default;
 $destructive-color: red !default;
 $disabled-color: change_color($primary-color, $saturation: 5%, $lightness: 95%) !default;
+$disabled-text-color: if(lightness($disabled-color) > 50%, darken($disabled-color, 50%), lighten($disabled-color, 50%)) !default;
 
 $input-border-color: change_color($primary-color, $saturation: 5%, $lightness: 75%) !default;
 $input-border-width: 1px !default;
@@ -48,6 +49,10 @@ input, textarea, select {
   border-color: $input-border-color;
   border-style: $input-border-style;
   border-radius: $input-border-radius;
+
+  &:disabled {
+    background-color: $disabled-color;
+  }
 }
 
 input, textarea {
@@ -56,12 +61,17 @@ input, textarea {
     color: inherit;
     opacity: .5;
   }
+
+  &:read-only {
+    background-color: $disabled-color;
+  }
 }
 
-[type='checkbox'],
-[type='radio'] {
+[type='checkbox'], [type='radio'] {
   vertical-align: baseline;
   height: auto;
+
+  //TODO: style labels related to disabled checkboxes
 }
 
 /* Buttons */
@@ -102,8 +112,12 @@ input, textarea {
     cursor: pointer;
   }
 
-  &.disabled, fieldset:disabled & {
+  &:disabled, &.disabled, fieldset:disabled & {
     pointer-events: none;
+
+    color: $disabled-text-color;
+    background-color: $disabled-color;
+    border-color: $disabled-color;
   }
 }
 
@@ -147,6 +161,10 @@ button,
     box-shadow: none;
     text-decoration: none;
   }
+
+  &:disabled {
+    text-decoration: none;
+  }
 }
 
 /* Big button */
@@ -179,13 +197,6 @@ button,
       color: $button-destructive-text-color;
     }
   }
-}
-
-/* Disabled elements */
-
-:disabled {
-  color: darken($disabled-color, 75%);
-  background-color: $disabled-color;
 }
 
 /* Form layout */
