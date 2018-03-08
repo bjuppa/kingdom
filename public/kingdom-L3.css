@@ -2833,6 +2833,8 @@ textarea {
   margin-bottom: calc(0px - var(--border-top-width, 0px) - var(--border-bottom-width, 0px));
   padding-top: 0;
   padding-bottom: 0;
+  min-height: 3.375rem;
+  min-height: calc(2 * var(--spacing-base, 1.6875rem));
 }
 
 textarea.h-1,

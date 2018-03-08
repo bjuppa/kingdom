@@ -65,7 +65,6 @@ select {
   }
 
   &[multiple]:not([size]) {
-    // Unsized multiple selects have a max-height slightly shorter than how browsers render by default
     @include set-length(max-height, 3);
   }
 
@@ -83,6 +82,7 @@ textarea {
   @include set-border-for-auto-height($width: $input-border-width);
   padding-top: 0;
   padding-bottom: 0;
+  @include set-length(min-height, 2);
 }
 
 .visualize-vertical-rhythm {
