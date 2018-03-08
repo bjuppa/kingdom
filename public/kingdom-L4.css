@@ -2854,7 +2854,9 @@ select[multiple]:not([size]) {
   max-height: calc(3 * var(--spacing-base, 1.6875rem));
 }
 
-select:not([multiple]):not([size]) {
+select:not([multiple]):not([size]):not(*:root) {
+  /* Hack to not apply in Edge, see http://browserhacks.com/#hack-f4ade0540d8e891e8190065f75acb186 */
+  /* Force dropdown selects out of Safari default styling, to fit on one line */
   -webkit-appearance: menulist-button;
 }
 
