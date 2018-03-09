@@ -973,6 +973,7 @@ button:focus,
 .mt-0,
 .mt-0-children > *,
 .mt-0-within *,
+legend + label,
 label:not([for]) + label:not([for]) {
   /* Reset vertical spacing */
   margin-top: 0;

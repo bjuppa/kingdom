@@ -35,7 +35,8 @@ $spacing-base: font-size-rem(nth($line-heights, 1)) !default;
   @extend %mt-1;
 }
 
-dt, li, hgroup, h1, h2, h3, h4, h5, h6 {
+dt, li, hgroup,
+h1, h2, h3, h4, h5, h6 {
   // Reset vertical spacing on adjacent siblings on closely related elements
   + * {
     @extend %mt-0;
@@ -67,9 +68,11 @@ select * {
 }
 
 fieldset {
-  @extend %p-1\/2;
+  @extend %py-1\/2;
+  @extend %px-1\/4;
+
   > legend + * {
-    @extend %my-0;
+    @extend %mt-0;
   }
 }
 

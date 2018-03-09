@@ -807,7 +807,6 @@ button:focus,
 
 /* %my-0 */
 
-fieldset > legend + *,
 .my-0 {
   margin-top: 0;
   margin-bottom: 0;
@@ -1024,6 +1023,7 @@ table *,
 audio *,
 video *,
 map *,
+fieldset > legend + *,
 .mt-0,
 .mt-0-children > *,
 .mt-0-within * {
@@ -1422,11 +1422,6 @@ map *,
 
 /* %p-1\/2 */
 
-fieldset {
-  padding: 0.75rem;
-  padding: calc(0.5 * var(--spacing-base, 1.5rem));
-}
-
 /* %p-3\/2 */
 
 /* %p-1 */
@@ -1521,6 +1516,13 @@ fieldset {
 }
 
 /* %py-1\/2 */
+
+fieldset {
+  padding-top: 0.75rem;
+  padding-top: calc(0.5 * var(--spacing-base, 1.5rem));
+  padding-bottom: 0.75rem;
+  padding-bottom: calc(0.5 * var(--spacing-base, 1.5rem));
+}
 
 /* %py-3\/2 */
 
@@ -1637,6 +1639,7 @@ fieldset {
 
 /* %px-1\/4 */
 
+fieldset,
 .px-1\/4,
 .space-inside {
   padding-left: 0.375rem;
