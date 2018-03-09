@@ -68,6 +68,9 @@ select * {
 
 fieldset {
   @extend %p-1\/2;
+  > legend + * {
+    @extend %my-0;
+  }
 }
 
 body {
