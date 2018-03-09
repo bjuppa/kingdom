@@ -981,8 +981,6 @@ label:not([for]) + label:not([for]) {
 
 .h-px + *,
 .mt-1,
-form > [type='submit']:last-child,
-form > button:last-child,
 * + label,
 .form-inline * {
   /* Default vertical spacing */
@@ -2711,6 +2709,17 @@ form > button:last-child,
 
 /* Kingdom CSS Extension - Forms */
 
+/* %label-disabled */
+
+[type='checkbox'][id]:disabled + label[for],
+[type='radio'][id]:disabled + label[for],
+label.disabled,
+label[disabled],
+label:disabled,
+fieldset:disabled label:not([for]) {
+  color: #6d6d78;
+}
+
 /* Inputs */
 
 input,
@@ -3065,11 +3074,6 @@ fieldset:disabled .button-destructive {
 }
 
 /* Form layout */
-
-form > [type='submit']:last-child,
-form > button:last-child {
-  display: block;
-}
 
 label {
   display: block;

@@ -32,6 +32,11 @@ $button-destructive-color: $destructive-color !default;
 $button-destructive-text-color: if(lightness($button-destructive-color) > 50%, darken($button-destructive-color, 70%), lighten($button-destructive-color, 70%)) !default;
 $button-destructive-focus-box-shadow: set_nth($button-focus-box-shadow, -1, change_color($button-destructive-color, $lightness: 80%)) !default;
 
+/* %label-disabled */
+%label-disabled {
+  color: $disabled-text-color;
+}
+
 /* Inputs */
 
 input, select:not([size]):not([multiple]) {
@@ -71,7 +76,19 @@ input, textarea {
   vertical-align: baseline;
   height: auto;
 
-  //TODO: style labels related to disabled checkboxes
+  &[id]:disabled {
+    + label[for] {
+      @extend %label-disabled;
+    }
+  }
+}
+
+// Labels for disabled checkboxes
+label.disabled,
+label[disabled],
+label:disabled,
+fieldset:disabled label:not([for]) {
+  @extend %label-disabled;
 }
 
 /* Buttons */
