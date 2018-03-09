@@ -48,7 +48,7 @@ input, button, select {
 select {
   $safari-select-line-height: 1.225; //This line height is calculated for Safari
 
-  //TODO: dropdown selects are 1px to high IE 11
+  //TODO: dropdown selects are 1px to high in IE 11
 
   &[multiple], &[size] {
     // Multiple and sized selects may span several lines
