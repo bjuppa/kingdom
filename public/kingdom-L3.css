@@ -1530,7 +1530,6 @@ fieldset {
 
 /* %py-1 */
 
-fieldset,
 .py-1 {
   padding-top: 1.6875rem;
   padding-top: calc(1 * var(--spacing-base, 1.6875rem));

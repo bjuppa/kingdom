@@ -248,12 +248,12 @@ label {
 }
 
 * + label {
-  // Add spacing above all labels
+  // Add spacing before all labels
   @extend %mt-1;
 }
 
-legend + label {
-  // Remove spacing before first label in fieldset
+fieldset > label:first-of-type {
+  // Remove spacing before first label in a fieldset
   @extend %mt-0;
 }
 

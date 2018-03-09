@@ -1028,7 +1028,7 @@ fieldset > legend + *,
 .mt-0,
 .mt-0-children > *,
 .mt-0-within *,
-legend + label,
+fieldset > label:first-of-type,
 label:not([for]) + label:not([for]) {
   /* Reset vertical spacing */
   margin-top: 0;
@@ -1534,7 +1534,6 @@ fieldset {
 
 /* %py-1 */
 
-fieldset,
 .py-1 {
   padding-top: 1.6875rem;
   padding-top: calc(1 * var(--spacing-base, 1.6875rem));
