@@ -95,7 +95,6 @@ textarea {
 
 fieldset {
   @include set-border-for-auto-height($width: $fieldset-border-width);
-  @extend %py-1;
 }
 
 legend {
