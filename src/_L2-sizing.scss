@@ -61,9 +61,13 @@ figure, picture, object, select, table, audio, video, map {
 }
 
 select * {
-  // Inherited font properties looks weird within select elements in browsers that allow modification
+  // Inherited font properties look weird within select elements in browsers that allow modification
   line-height: normal;
   font-size: medium;
+}
+
+fieldset {
+  @extend %p-1\/2;
 }
 
 body {

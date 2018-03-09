@@ -2,6 +2,9 @@ $desired-body-font-size: 18px !default;
 $body-line-height-factor: 1.5 !default;
 $min-line-height-factor: 1.2 !default;
 
+$input-border-width: 1px !default;
+$fieldset-border-width: 1px !default;
+
 @import "modules/converters";
 
 $body-leading: round(font-size-px($desired-body-font-size)*$body-line-height-factor)/font-size-px(1)*1rem !default;
@@ -32,7 +35,6 @@ hr {
   background-color: $border-color;
 }
 
-$input-border-width: 1px !default;
 input, button, select {
   @include set-border-preserving-line-height($vertical-rhythm-base, $input-border-width);
   outline-offset: -2px; //Same focus ring size for same border in Safari
@@ -89,6 +91,16 @@ textarea {
   padding-bottom: 0;
   @include set-length(min-height, 2);
   //TODO: Textareas doesn't quite fill up two lines in IE 11
+}
+
+fieldset {
+  @include set-border-for-auto-height($width: $fieldset-border-width);
+  @extend %py-1;
+}
+
+legend {
+  // Keep legend centered on the line when the fieldset is moved up because of border
+  padding-top: $fieldset-border-width;
 }
 
 .visualize-vertical-rhythm {

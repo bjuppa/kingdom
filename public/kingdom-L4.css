@@ -155,7 +155,8 @@ button:-moz-focusring,
 }
 
 fieldset {
-  padding: 1em;
+  border-width: 1px;
+  padding: 0.35em 0.75em 0.625em;
 }
 
 legend {
@@ -1422,6 +1423,11 @@ hr + *,
 
 /* %p-1\/2 */
 
+fieldset {
+  padding: 0.84375rem;
+  padding: calc(0.5 * var(--spacing-base, 1.6875rem));
+}
+
 /* %p-3\/2 */
 
 /* %p-1 */
@@ -1521,6 +1527,7 @@ hr + *,
 
 /* %py-1 */
 
+fieldset,
 .py-1 {
   padding-top: 1.6875rem;
   padding-top: calc(1 * var(--spacing-base, 1.6875rem));
@@ -2953,6 +2960,87 @@ textarea.h-56,
 textarea.h-64 {
   position: initial;
   top: initial;
+}
+
+fieldset {
+  border-top-width: 1px;
+  --border-top-width: 1px;
+  border-top-width: var(--border-top-width);
+  vertical-align: top;
+  border-bottom-width: 1px;
+  --border-bottom-width: 1px;
+  border-bottom-width: var(--border-bottom-width);
+  vertical-align: top;
+  border-left-width: 1px;
+  --border-left-width: 1px;
+  border-left-width: var(--border-left-width);
+  vertical-align: top;
+  border-right-width: 1px;
+  --border-right-width: 1px;
+  border-right-width: var(--border-right-width);
+  vertical-align: top;
+  position: relative;
+  top: -1px;
+  top: calc(0px - var(--border-top-width));
+  margin-bottom: -2px;
+  margin-bottom: calc(0px - var(--border-top-width, 0px) - var(--border-bottom-width, 0px));
+}
+
+fieldset.h-1,
+fieldset.h-2,
+fieldset.h-3,
+fieldset.h-4,
+fieldset.h-5,
+fieldset.h-6,
+fieldset.h-7,
+fieldset.h-8,
+fieldset.h-9,
+fieldset.h-10,
+fieldset.h-12,
+fieldset.h-14,
+fieldset.h-16,
+fieldset.h-18,
+fieldset.h-20,
+fieldset.h-24,
+fieldset.h-28,
+fieldset.h-32,
+fieldset.h-36,
+fieldset.h-40,
+fieldset.h-48,
+fieldset.h-56,
+fieldset.h-64 {
+  margin-bottom: 0;
+}
+
+fieldset.h-1,
+fieldset.h-2,
+fieldset.h-3,
+fieldset.h-4,
+fieldset.h-5,
+fieldset.h-6,
+fieldset.h-7,
+fieldset.h-8,
+fieldset.h-9,
+fieldset.h-10,
+fieldset.h-12,
+fieldset.h-14,
+fieldset.h-16,
+fieldset.h-18,
+fieldset.h-20,
+fieldset.h-24,
+fieldset.h-28,
+fieldset.h-32,
+fieldset.h-36,
+fieldset.h-40,
+fieldset.h-48,
+fieldset.h-56,
+fieldset.h-64 {
+  position: initial;
+  top: initial;
+}
+
+legend {
+  padding-top: 1px;
 }
 
 .visualize-vertical-rhythm {

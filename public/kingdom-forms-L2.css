@@ -155,7 +155,8 @@ button:-moz-focusring,
 }
 
 fieldset {
-  padding: 1em;
+  border-width: 1px;
+  padding: 0.35em 0.75em 0.625em;
 }
 
 legend {
@@ -1422,6 +1423,11 @@ label:not([for]) + label:not([for]) {
 }
 
 /* %p-1\/2 */
+
+fieldset {
+  padding: 0.75rem;
+  padding: calc(0.5 * var(--spacing-base, 1.5rem));
+}
 
 /* %p-3\/2 */
 
