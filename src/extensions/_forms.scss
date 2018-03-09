@@ -201,16 +201,6 @@ button,
 
 /* Form layout */
 
-form > {
-  [type='submit'], button {
-    &:last-child {
-      // A submit that is the last element in a form has it's own line
-      display: block;
-      @extend %mt-1;
-    }
-  }
-}
-
 label {
   // Labels go on their own line
   display: block;
