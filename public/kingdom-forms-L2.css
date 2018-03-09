@@ -2818,6 +2818,18 @@ fieldset:disabled label:not([for]) {
   color: #6d6d78;
 }
 
+/* %label-invalid */
+
+[type='checkbox'][id]:invalid + label[for],
+[type='checkbox'][id][aria-invalid] + label[for],
+[type='radio'][id]:invalid + label[for],
+[type='radio'][id][aria-invalid] + label[for],
+label.invalid,
+label:invalid,
+label[aria-invalid] {
+  color: red;
+}
+
 /* Inputs */
 
 input,
@@ -2925,6 +2937,15 @@ input:disabled,
 textarea:disabled,
 select:disabled {
   background-color: #f2f2f3;
+}
+
+input:invalid,
+input[aria-invalid],
+textarea:invalid,
+textarea[aria-invalid],
+select:invalid,
+select[aria-invalid] {
+  border-color: red;
 }
 
 input,

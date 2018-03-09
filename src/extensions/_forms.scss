@@ -1,6 +1,6 @@
 /* Kingdom CSS Extension - Forms */
 $primary-color: blue !default;
-$destructive-color: red !default;
+$caution-color: red !default;
 $disabled-color: change_color($primary-color, $saturation: 5%, $lightness: 95%) !default;
 $disabled-text-color: if(lightness($disabled-color) > 50%, darken($disabled-color, 50%), lighten($disabled-color, 50%)) !default;
 
@@ -28,13 +28,18 @@ $button-transition: all .15s ease-in-out !default;
 $button-horizontal-padding: $spacing-base/4 !default;
 $button-text-decoration: none !default;
 
-$button-destructive-color: $destructive-color !default;
+$button-destructive-color: $caution-color !default;
 $button-destructive-text-color: if(lightness($button-destructive-color) > 50%, darken($button-destructive-color, 70%), lighten($button-destructive-color, 70%)) !default;
 $button-destructive-focus-box-shadow: set_nth($button-focus-box-shadow, -1, change_color($button-destructive-color, $lightness: 80%)) !default;
 
 /* %label-disabled */
 %label-disabled {
   color: $disabled-text-color;
+}
+
+/* %label-invalid */
+%label-invalid {
+  color: $caution-color;
 }
 
 /* Inputs */
@@ -58,6 +63,10 @@ input, textarea, select {
   &:disabled {
     background-color: $disabled-color;
   }
+
+  &:invalid, &[aria-invalid] {
+    border-color: $caution-color;
+  }
 }
 
 input, textarea {
@@ -76,9 +85,17 @@ input, textarea {
   vertical-align: baseline;
   height: auto;
 
-  &[id]:disabled {
-    + label[for] {
-      @extend %label-disabled;
+  &[id] {
+    &:disabled {
+      + label[for] {
+        @extend %label-disabled;
+      }
+    }
+
+    &:invalid, &[aria-invalid] {
+      + label[for] {
+        @extend %label-invalid;
+      }
     }
   }
 }
@@ -89,6 +106,13 @@ label[disabled],
 label:disabled,
 fieldset:disabled label:not([for]) {
   @extend %label-disabled;
+}
+
+// Labels for invalid checkboxes
+label.invalid,
+label:invalid,
+label[aria-invalid] {
+  @extend %label-invalid;
 }
 
 /* Buttons */
