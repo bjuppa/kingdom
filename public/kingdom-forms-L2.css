@@ -2933,12 +2933,6 @@ select {
   border-radius: 0.1875rem;
 }
 
-input:disabled,
-textarea:disabled,
-select:disabled {
-  background-color: #f2f2f3;
-}
-
 input:invalid,
 input[aria-invalid],
 textarea:invalid,
@@ -2946,6 +2940,12 @@ textarea[aria-invalid],
 select:invalid,
 select[aria-invalid] {
   border-color: red;
+}
+
+input:disabled,
+textarea:disabled,
+select:disabled {
+  background-color: #f2f2f3;
 }
 
 input,

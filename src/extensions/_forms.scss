@@ -60,12 +60,12 @@ input, textarea, select {
   border-style: $input-border-style;
   border-radius: $input-border-radius;
 
-  &:disabled {
-    background-color: $disabled-color;
-  }
-
   &:invalid, &[aria-invalid] {
     border-color: $caution-color;
+  }
+
+  &:disabled {
+    background-color: $disabled-color;
   }
 }
 
@@ -100,7 +100,7 @@ input, textarea {
   }
 }
 
-// Labels for disabled checkboxes
+// Labels for disabled form controls
 label.disabled,
 label[disabled],
 label:disabled,
@@ -108,7 +108,7 @@ fieldset:disabled label:not([for]) {
   @extend %label-disabled;
 }
 
-// Labels for invalid checkboxes
+// Labels for invalid form controls
 label.invalid,
 label:invalid,
 label[aria-invalid] {
