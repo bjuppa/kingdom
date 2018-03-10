@@ -206,8 +206,11 @@ button, [type='button'], [type='reset'], [type='submit'] {
   }
 }
 
+//TODO: reset dl (remove padding & make dt bold)
+
 @import "placeholders/sizing";
 @import "placeholders/spacing";
 @import "placeholders/text";
 @import "placeholders/fonts";
 @import "placeholders/borders";
+@import "placeholders/lists";
