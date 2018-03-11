@@ -3007,6 +3007,46 @@ legend {
   margin-right: auto;
 }
 
+.list-unstyled {
+  padding-left: 0;
+  list-style: none;
+}
+
+.list-inline {
+  padding-left: 0;
+  list-style: none;
+}
+
+.list-inline > * {
+  display: inline-block;
+}
+
+.list-inline > *:not(:last-child) {
+  margin-right: 0.421875rem;
+}
+
+.list-comma-separated {
+  display: inline;
+  padding-left: 0;
+  list-style: none;
+}
+
+.list-comma-separated > * {
+  display: inline;
+}
+
+.list-comma-separated > *:after {
+  content: ', ';
+}
+
+.list-comma-separated > *:nth-last-child(2):after {
+  content: ' & ';
+}
+
+.list-comma-separated > *:last-child:after {
+  content: '';
+}
+
 .block,
 .block-children > * {
   display: block;

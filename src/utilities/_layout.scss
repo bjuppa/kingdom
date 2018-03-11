@@ -1,5 +1,22 @@
 // Utilities for layout
 @import "../modules/layout";
+@import "../modules/lists";
+
+// Lists
+
+.list-unstyled {
+  @include list-unstyled();
+}
+
+.list-inline {
+  @include list-inline();
+}
+
+.list-comma-separated {
+  @include list-comma-separated();
+}
+
+// Display property
 
 .block,
 .block-children > * {
@@ -40,6 +57,8 @@
 .inline-flex {
   display: inline-flex;
 }
+
+// Space inside - great for bordered elements
 
 .space-inside-l {
   @include set-space-inside(left);

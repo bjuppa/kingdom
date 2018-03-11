@@ -1,0 +1,34 @@
+@mixin list-unstyled {
+  padding-left: 0;
+  list-style: none;
+}
+
+@mixin list-inline {
+  @include list-unstyled();
+
+  & > * {
+    display: inline-block;
+
+    &:not(:last-child) {
+      margin-right: $spacing-base/4;
+    }
+  }
+}
+
+@mixin list-comma-separated {
+  display: inline;
+  @include list-unstyled();
+
+  & > * {
+    display: inline;
+    &:after {
+      content: ', ';
+    }
+    &:nth-last-child(2):after {
+      content: ' & ';
+    }
+    &:last-child:after {
+      content: '';
+    }
+  }
+}
