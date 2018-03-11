@@ -3493,12 +3493,6 @@ label {
   display: inline;
 }
 
-[type="checkbox"][id] + label[for]:not(:last-child):after,
-[type="radio"][id] + label[for]:not(:last-child):after {
-  content: "\A";
-  white-space: pre;
-}
-
 /* .form-inline make a form's contents go inline */
 
 .form-inline * {
