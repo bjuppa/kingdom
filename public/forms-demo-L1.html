@@ -14,7 +14,8 @@
 <body class="space-inside visualize-vertical-rhythm">
 <form>
   <label for="input1">Label for input 1</label>
-  <input id="input1">
+  <input id="input1" aria-describedby="input1description">
+  <span id="input1description">Pretty long field description/instruction that cover multiple lines</span>
 
   <fieldset class="py-0">
     <legend>A fieldset with legend and no vertical padding</legend>
@@ -54,7 +55,8 @@
   </select>
 
   <label for="input2">Label for input 2</label>
-  <input id="input2" required placeholder="required input">
+  <input id="input2" required placeholder="required input" aria-describedby="input2description">
+  <span id="input2description">Field description/instructions</span>
 
   <button type="submit">Submit button</button>
 

@@ -3493,6 +3493,10 @@ label {
   display: inline;
 }
 
+[aria-describedby] + [id] {
+  display: inline-block;
+}
+
 /* .form-inline make a form's contents go inline */
 
 .form-inline * {

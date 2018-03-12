@@ -273,6 +273,11 @@ label:not([for]) {
   }
 }
 
+[aria-describedby] + [id] {
+  // Make blocks of descriptive elements that come after their input
+  display: inline-block;
+}
+
 /* .form-inline make a form's contents go inline */
 .form-inline {
   * {
