@@ -42,6 +42,6 @@
 }
 
 /* %body-color */
-%body-color {
+%color-body {
   @include set-background-color(body);
 }

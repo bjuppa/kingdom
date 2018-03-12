@@ -13,7 +13,7 @@ $body-padding: 0 !default;
 @import "modules/_borders.scss";
 
 body {
-  @extend %body-color !optional;
+  @extend %color-body !optional;
   padding: $body-padding;
 }
 
