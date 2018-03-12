@@ -1,10 +1,10 @@
 /* Kingdom CSS Extension - Forms */
-$primary-color: blue !default;
-$caution-color: red !default;
-$disabled-color: change_color($primary-color, $saturation: 5%, $lightness: 95%) !default;
-$disabled-text-color: if(lightness($disabled-color) > 50%, darken($disabled-color, 50%), lighten($disabled-color, 50%)) !default;
+$color-primary: blue !default;
+$color-caution: red !default;
+$color-disabled: change_color($color-primary, $saturation: 5%, $lightness: 95%) !default;
+$color-disabled-text: if(lightness($color-disabled) > 50%, darken($color-disabled, 50%), lighten($color-disabled, 50%)) !default;
 
-$input-border-color: change_color($primary-color, $saturation: 5%, $lightness: 75%) !default;
+$input-border-color: change_color($color-primary, $saturation: 5%, $lightness: 75%) !default;
 $input-border-width: 1px !default;
 $input-border-radius: $spacing-base/8 !default;
 $input-border-style: solid !default;
@@ -12,7 +12,7 @@ $input-background: white !default;
 $input-background-clip: padding-box !default;
 $input-box-shadow: inset 0 2px 4px 0 rgba(black, .08) !default;
 
-$button-color: $primary-color !default;
+$button-color: $color-primary !default;
 $button-text-color: if(lightness($button-color) > 50%, darken($button-color, 70%), lighten($button-color, 70%)) !default;
 $button-border-color: $button-color !default;
 $button-border-width: $input-border-width !default;
@@ -28,18 +28,18 @@ $button-transition: all .15s ease-in-out !default;
 $button-horizontal-padding: $spacing-base/4 !default;
 $button-text-decoration: none !default;
 
-$button-destructive-color: $caution-color !default;
+$button-destructive-color: $color-caution !default;
 $button-destructive-text-color: if(lightness($button-destructive-color) > 50%, darken($button-destructive-color, 70%), lighten($button-destructive-color, 70%)) !default;
 $button-destructive-focus-box-shadow: set_nth($button-focus-box-shadow, -1, change_color($button-destructive-color, $lightness: 80%)) !default;
 
 /* %label-disabled */
 %label-disabled {
-  color: $disabled-text-color;
+  color: $color-disabled-text;
 }
 
 /* %label-invalid */
 %label-invalid {
-  color: $caution-color;
+  color: $color-caution;
 }
 
 /* Inputs */
@@ -61,11 +61,11 @@ input, textarea, select {
   border-radius: $input-border-radius;
 
   &:invalid, &[aria-invalid] {
-    border-color: $caution-color;
+    border-color: $color-caution;
   }
 
   &:disabled {
-    background-color: $disabled-color;
+    background-color: $color-disabled;
   }
 }
 
@@ -77,7 +77,7 @@ input, textarea {
   }
 
   &:read-only {
-    background-color: $disabled-color;
+    background-color: $color-disabled;
   }
 }
 
@@ -156,9 +156,9 @@ label[aria-invalid] {
   &:disabled, &.disabled, fieldset:disabled & {
     pointer-events: none;
 
-    color: $disabled-text-color;
-    background-color: $disabled-color;
-    border-color: $disabled-color;
+    color: $color-disabled-text;
+    background-color: $color-disabled;
+    border-color: $color-disabled;
   }
 }
 
