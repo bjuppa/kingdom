@@ -9,6 +9,7 @@
 }
 
 @if not map-has-key($colors, caution) {
+  //TODO: attempt to extract a red color matching the primary color, but with distance if the primary color is in the red spectrum
   $colors: map-merge($colors, (caution: red));
 }
 
