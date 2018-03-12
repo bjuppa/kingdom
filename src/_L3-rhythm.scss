@@ -32,7 +32,7 @@ $line-heights: ();
 hr {
   @extend %h-px;
   border: 0;
-  background-color: $border-color;
+  @include set-color(border, background-color);
 }
 
 input, button, select {

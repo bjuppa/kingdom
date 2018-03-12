@@ -16,6 +16,10 @@
   $colors: map-merge($colors, (disabled: change_color(get-color(primary), $saturation: 5%, $lightness: 95%)));
 }
 
+@if not map-has-key($colors, border) {
+  $colors: map-merge($colors, (border: currentColor));
+}
+
 @if length(map-get($colors, body)) < 2 {
   $colors: map-merge($colors, (primary: background-text-color-pair(map-get($colors, body), 100%)));
 }
@@ -37,7 +41,9 @@
 :root {
   @each $name, $color-pair in $colors {
     --color-#{$name}: get-color($name);
-    --color-#{$name}-text: get-color($name, true);
+    @if(length($color-pair) > 1) {
+      --color-#{$name}-text: get-color($name, true);
+    }
   }
 }
 

@@ -12,6 +12,8 @@ $body-padding: 0 !default;
 @import "modules/element-types";
 @import "modules/_borders.scss";
 
+@import "placeholders/colors";
+
 body {
   @extend %color-body !optional;
   padding: $body-padding;
@@ -207,7 +209,6 @@ button, [type='button'], [type='reset'], [type='submit'] {
 
 //TODO: reset dl (remove padding & make dt bold)
 
-@import "placeholders/colors";
 @import "placeholders/sizing";
 @import "placeholders/spacing";
 @import "placeholders/text";

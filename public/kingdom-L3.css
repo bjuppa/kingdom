@@ -1,5 +1,28 @@
 /* Kingdom CSS Level 1 - Reset */
 
+/* Placeholders for colors */
+
+:root {
+  --color-body: white;
+  --color-body-text: black;
+  --color-primary: blue;
+  --color-primary-text: white;
+  --color-caution: red;
+  --color-caution-text: white;
+  --color-disabled: #f2f2f3;
+  --color-disabled-text: #6d6d78;
+  --color-border: currentColor;
+}
+
+/* %body-color */
+
+body {
+  background-color: white;
+  background-color: var(--color-body, white);
+  color: black;
+  color: var(--color-body-text, black);
+}
+
 body {
   padding: 0;
 }
@@ -56,12 +79,18 @@ section,
 ul,
 video {
   display: block;
-  border: 0 solid currentColor;
+  border-width: 0;
+  border-style: solid;
+  border-color: currentColor;
+  border-color: var(--color-border, currentColor);
 }
 
 *::before,
 *::after {
-  border: 0 solid currentColor;
+  border-width: 0;
+  border-style: solid;
+  border-color: currentColor;
+  border-color: var(--color-border, currentColor);
 }
 
 hr {
@@ -84,7 +113,10 @@ svg:not(:root) {
 img {
   max-width: 100%;
   height: auto;
-  border: 0 solid currentColor;
+  border-width: 0;
+  border-style: solid;
+  border-color: currentColor;
+  border-color: var(--color-border, currentColor);
 }
 
 small {
@@ -198,28 +230,6 @@ button:focus,
 [type='submit']:focus {
   outline: 1px dotted;
   outline: 5px auto -webkit-focus-ring-color;
-}
-
-/* Placeholders for colors */
-
-:root {
-  --color-body: white;
-  --color-body-text: black;
-  --color-primary: blue;
-  --color-primary-text: white;
-  --color-caution: red;
-  --color-caution-text: white;
-  --color-disabled: #f2f2f3;
-  --color-disabled-text: #6d6d78;
-}
-
-/* %body-color */
-
-body {
-  background-color: white;
-  background-color: var(--color-body, white);
-  color: black;
-  color: var(--color-body-text, black);
 }
 
 /* Placeholders for sizing */
@@ -2789,6 +2799,7 @@ textarea:not([cols]) {
 hr {
   border: 0;
   background-color: currentColor;
+  background-color: var(--color-border, currentColor);
 }
 
 input,

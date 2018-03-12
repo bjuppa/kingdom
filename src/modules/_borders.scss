@@ -1,10 +1,10 @@
 $border-width: 1px !default;
-$border-color: currentColor !default;
 $border-style: solid !default;
 $body-line-height-factor: 1.5 !default;
 
-@import '../modules/strip-unit';
-@import '../modules/element-types';
+@import "../modules/strip-unit";
+@import "../modules/element-types";
+@import "../modules/colors";
 
 @mixin set-border-width($sides: top bottom left right, $width: $border-width) {
   @each $side in $sides {
@@ -68,6 +68,8 @@ $body-line-height-factor: 1.5 !default;
 
 // Set a default border style to allow just setting border-width when needed
 // https://github.com/tailwindcss/tailwindcss/blob/master/css/preflight.css
-@mixin reset-border($color: $border-color, $style: $border-style) {
-  border: 0 $style $border-color;
+@mixin reset-border($style: $border-style) {
+  border-width: 0;
+  border-style: $style;
+  @include set-color(border, border-color);
 }
