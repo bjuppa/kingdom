@@ -1,8 +1,6 @@
 /* Kingdom CSS Level 1 - Reset */
 
 body {
-  color: black;
-  background-color: white;
   padding: 0;
 }
 
@@ -200,6 +198,28 @@ button:focus,
 [type='submit']:focus {
   outline: 1px dotted;
   outline: 5px auto -webkit-focus-ring-color;
+}
+
+/* Placeholders for colors */
+
+:root {
+  --color-body: white;
+  --color-body-text: black;
+  --color-primary: blue;
+  --color-primary-text: white;
+  --color-caution: red;
+  --color-caution-text: white;
+  --color-disabled: #f2f2f3;
+  --color-disabled-text: #6d6d78;
+}
+
+/* %body-color */
+
+body {
+  background-color: white;
+  background-color: var(--color-body, white);
+  color: black;
+  color: var(--color-body-text, black);
 }
 
 /* Placeholders for sizing */
@@ -2773,6 +2793,7 @@ label.invalid,
 label:invalid,
 label[aria-invalid] {
   color: red;
+  color: var(--color-caution, red);
 }
 
 /* Inputs */
@@ -3050,7 +3071,9 @@ fieldset:disabled .button-large,
 fieldset:disabled .button-destructive {
   pointer-events: none;
   background-color: #f2f2f3;
+  background-color: var(--color-disabled, #f2f2f3);
   color: #6d6d78;
+  color: var(--color-disabled-text, #6d6d78);
   border-color: #f2f2f3;
 }
 

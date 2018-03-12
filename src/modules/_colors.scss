@@ -12,37 +12,18 @@ $colors: () !default;
   @return $background-color text-color-for-background($background-color, $amount);
 }
 
-@mixin set-color($name: primary) {
-  color: get-color($name);
+@mixin set-color($name: primary, $property: color, $use-text-color: false) {
+  #{$property}: get-color($name, $use-text-color);
+  $var_name: --color-#{$name};
+  @if($use-text-color) {
+    $var_name: $var_name + '-text';
+  }
+  #{$property}: var(#{$var-name}, get-color($name, $use-text-color));
 }
 
 @mixin set-background-color($name, $set-text-color: true) {
-  background-color: get-color($name);
+  @include set-color($name, background-color);
   @if ($set-text-color) {
-    color: get-color($name, $get-text-color: true);
+    @include set-color($name, $use-text-color: true);
   }
-}
-
-@if not map-has-key($colors, primary) {
-  $colors: map-merge($colors, (primary: blue));
-}
-
-@if not map-has-key($colors, caution) {
-  $colors: map-merge($colors, (caution: red));
-}
-
-@if not map-has-key($colors, disabled) {
-  $colors: map-merge($colors, (disabled: change_color(get-color(primary), $saturation: 5%, $lightness: 95%)));
-}
-
-@if length(map-get($colors, primary)) < 2 {
-  $colors: map-merge($colors, (primary: background-text-color-pair(map-get($colors, primary))));
-}
-
-@if length(map-get($colors, caution)) < 2 {
-  $colors: map-merge($colors, (caution: background-text-color-pair(map-get($colors, caution))));
-}
-
-@if length(map-get($colors, disabled)) < 2 {
-  $colors: map-merge($colors, (disabled: background-text-color-pair(map-get($colors, disabled), 50%)));
 }

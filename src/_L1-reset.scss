@@ -1,5 +1,4 @@
-$text-color: black !default;
-$body-background-color: white !default;
+$colors: (body: white black) !default;
 $body-padding: 0 !default;
 
 /* Kingdom CSS Level 1 - Reset */
@@ -9,12 +8,12 @@ $body-padding: 0 !default;
 // https://github.com/tailwindcss/tailwindcss/blob/master/css/preflight.css
 // https://github.com/shankariyerr/tinyreset
 
+@import "modules/colors";
 @import "modules/element-types";
 @import "modules/_borders.scss";
 
 body {
-  color: $text-color;
-  background-color: $body-background-color;
+  @extend %body-color !optional;
   padding: $body-padding;
 }
 
@@ -208,6 +207,7 @@ button, [type='button'], [type='reset'], [type='submit'] {
 
 //TODO: reset dl (remove padding & make dt bold)
 
+@import "placeholders/colors";
 @import "placeholders/sizing";
 @import "placeholders/spacing";
 @import "placeholders/text";
