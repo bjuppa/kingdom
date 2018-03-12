@@ -974,7 +974,8 @@ button:focus,
 .mt-0-children > *,
 .mt-0-within *,
 fieldset > label:first-of-type,
-label:not([for]) + label:not([for]) {
+label:not([for]) + label:not([for]),
+[aria-describedby] + div[id] {
   /* Reset vertical spacing */
   margin-top: 0;
 }
@@ -3147,7 +3148,8 @@ label {
   display: inline;
 }
 
-[aria-describedby] + [id] {
+[aria-describedby] + span[id],
+[aria-describedby] + small[id] {
   display: inline-block;
 }
 

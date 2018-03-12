@@ -273,9 +273,20 @@ label:not([for]) {
   }
 }
 
-[aria-describedby] + [id] {
-  // Make blocks of descriptive elements that come after their input
-  display: inline-block;
+[aria-describedby] + {
+  span, small {
+    &[id] {
+      // Turn descriptive inline elements that come after their input into blocks
+      display: inline-block;
+    }
+  }
+
+  div {
+    &[id] {
+      // Remove space before descriptive block elements that come after their input
+      @extend %mt-0;
+    }
+  }
 }
 
 /* .form-inline make a form's contents go inline */
