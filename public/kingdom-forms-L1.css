@@ -3049,8 +3049,8 @@ fieldset:disabled .button-petty,
 fieldset:disabled .button-large,
 fieldset:disabled .button-destructive {
   pointer-events: none;
-  color: #6d6d78;
   background-color: #f2f2f3;
+  color: #6d6d78;
   border-color: #f2f2f3;
 }
 
