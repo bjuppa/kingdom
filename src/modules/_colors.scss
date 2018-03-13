@@ -1,7 +1,11 @@
 $colors: () !default;
 
 @function get-color($name, $get-text-color: false) {
-  @return nth(map-get($colors, $name), if($get-text-color, 2, 1));
+  $list: map-get($colors, $name);
+  @if $get-text-color and length($list) < 2 {
+    @error "No text color exists for '#{$name}' in the global $colors map";
+  }
+  @return nth($list, if($get-text-color, 2, 1));
 }
 
 @function text-color-for-background($background-color, $amount: 70%) {
