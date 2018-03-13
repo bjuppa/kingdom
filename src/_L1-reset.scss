@@ -15,14 +15,21 @@ $body-padding: 0 !default;
 @if not map-has-key($colors, primary) {
   $colors: map-merge($colors, (primary: hsl(random(360), 30+random(60), 20+random(60))));
 }
+
 @if length(map-get($colors, primary)) < 2 {
   $colors: map-merge($colors, (primary: background-text-color-pair(map-get($colors, primary))));
 }
 
 // Set body background and text color if not already defined in $colors map
 @if not map-has-key($colors, body) {
-  $colors: map-merge($colors, (body: change_color(get-color(primary), $lightness: 99%, $saturation: 1%) change_color(get-color(primary), $lightness: 2%, $saturation: 5%)));
+  @if lightness(get-color(primary)) < 50% {
+    $colors: map-merge($colors, (body: scale_color(get-color(primary), $lightness: 99%, $saturation: -50%) scale_color(get-color(primary), $lightness: -99%, $saturation: -50%)));
+  } @else {
+    //TODO: when primary color is light, find a contrasting background color
+    $colors: map-merge($colors, (body: black white));
+  }
 }
+
 @if length(map-get($colors, body)) < 2 {
   $colors: map-merge($colors, (body: background-text-color-pair(map-get($colors, body), 99%)));
 }
