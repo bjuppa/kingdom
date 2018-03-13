@@ -2864,8 +2864,8 @@ textarea:not([cols]) {
 }
 
 :root {
-  --color-primary: #deabba;
-  --color-primary-text: #1a0a0f;
+  --color-primary: #cbbc67;
+  --color-primary-text: black;
   --color-body: #fcfcfc;
   --color-body-text: #050505;
   --color-border: currentColor;

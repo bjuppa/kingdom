@@ -2757,8 +2757,8 @@ button:focus,
 }
 
 :root {
-  --color-primary: #9edcbf;
-  --color-primary-text: #050f0b;
+  --color-primary: #304f91;
+  --color-primary-text: white;
   --color-body: #fcfcfc;
   --color-body-text: #050505;
   --color-border: currentColor;

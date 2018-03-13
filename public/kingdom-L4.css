@@ -3328,8 +3328,8 @@ legend {
 }
 
 :root {
-  --color-primary: #cfca63;
-  --color-primary-text: black;
+  --color-primary: #792ca5;
+  --color-primary-text: white;
   --color-body: #fcfcfc;
   --color-body-text: #050505;
   --color-border: currentColor;

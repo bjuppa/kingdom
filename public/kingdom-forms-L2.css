@@ -2869,8 +2869,8 @@ textarea:not([cols]) {
 }
 
 :root {
-  --color-primary: #8ce393;
-  --color-primary-text: #020803;
+  --color-primary: #5bd76d;
+  --color-primary-text: black;
   --color-body: #fcfcfc;
   --color-body-text: #050505;
   --color-border: currentColor;
@@ -2886,7 +2886,7 @@ label.disabled,
 label[disabled],
 label:disabled,
 fieldset:disabled label:not([for]) {
-  color: #6d786e;
+  color: #6d786f;
 }
 
 /* %label-invalid */
@@ -3079,7 +3079,7 @@ button,
 .button-petty,
 .button-large,
 .button-destructive {
-  color: #8ce393;
+  color: #5bd76d;
   background: transparent;
   background-clip: padding-box;
   display: inline-block;
@@ -3093,7 +3093,7 @@ button,
   height: var(--line-height, 1.5rem);
   max-height: 1.5rem;
   max-height: var(--line-height, 1.5rem);
-  border-color: #8ce393;
+  border-color: #5bd76d;
   border-style: solid;
   border-radius: 0.1875rem;
   -webkit-box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.08);
@@ -3115,8 +3115,8 @@ button:focus,
 .button-large:focus,
 .button-destructive:focus {
   outline: none;
-  -webkit-box-shadow: 0 0 0 0.2rem #adebb2;
-          box-shadow: 0 0 0 0.2rem #adebb2;
+  -webkit-box-shadow: 0 0 0 0.2rem #adebb6;
+          box-shadow: 0 0 0 0.2rem #adebb6;
 }
 
 button:active,
@@ -3128,7 +3128,7 @@ button:active,
 .button-petty:active,
 .button-large:active,
 .button-destructive:active {
-  color: #8ce393;
+  color: #5bd76d;
   -webkit-box-shadow: inset 0 2px 4px 0 rgba(0, 0, 0, 0.08);
           box-shadow: inset 0 2px 4px 0 rgba(0, 0, 0, 0.08);
 }
@@ -3178,21 +3178,21 @@ fieldset:disabled .button-destructive {
   pointer-events: none;
   background-color: #f2f3f2;
   background-color: var(--color-disabled, #f2f3f2);
-  color: #6d786e;
-  color: var(--color-disabled-text, #6d786e);
+  color: #6d786f;
+  color: var(--color-disabled-text, #6d786f);
   border-color: #f2f3f2;
 }
 
 /* Prominent button */
 
 .button-prime {
-  background: #8ce393;
-  border-color: #8ce393;
-  color: #020803;
+  background: #5bd76d;
+  border-color: #5bd76d;
+  color: black;
 }
 
 .button-prime:active {
-  color: #020803;
+  color: black;
 }
 
 /* Standard button */
