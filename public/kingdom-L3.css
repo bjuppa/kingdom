@@ -3104,8 +3104,8 @@ legend {
 }
 
 :root {
-  --color-primary: #e1deed;
-  --color-primary-text: #2a2541;
+  --color-primary: #72abe9;
+  --color-primary-text: black;
   --color-body: #fcfcfc;
   --color-body-text: #050505;
   --color-border: currentColor;

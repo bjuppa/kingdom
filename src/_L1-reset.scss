@@ -13,7 +13,7 @@ $body-padding: 0 !default;
 
 // Generate a primary color and corresponding text color if not already defined in $colors map
 @if not map-has-key($colors, primary) {
-  $colors: map-merge($colors, (primary: hsl(random(360),20+random(50), 30+random(60))));
+  $colors: map-merge($colors, (primary: hsl(random(360),20+random(70), 30+random(60))));
 }
 @if length(map-get($colors, primary)) < 2 {
   $colors: map-merge($colors, (primary: background-text-color-pair(map-get($colors, primary))));

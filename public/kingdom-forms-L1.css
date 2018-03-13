@@ -2762,8 +2762,8 @@ label:not([for]) + label:not([for]),
 }
 
 :root {
-  --color-primary: #ae8f65;
-  --color-primary-text: black;
+  --color-primary: #b63f2f;
+  --color-primary-text: white;
   --color-body: #fcfcfc;
   --color-body-text: #050505;
   --color-border: currentColor;
@@ -2779,7 +2779,7 @@ label.disabled,
 label[disabled],
 label:disabled,
 fieldset:disabled label:not([for]) {
-  color: #78746d;
+  color: #786e6d;
 }
 
 /* %label-invalid */
@@ -2893,7 +2893,7 @@ textarea,
 select {
   background: white;
   background-clip: padding-box;
-  border-color: #c2c0bc;
+  border-color: #c2bdbc;
   border-style: solid;
   border-radius: 0.125rem;
 }
@@ -2972,7 +2972,7 @@ button,
 .button-petty,
 .button-large,
 .button-destructive {
-  color: #ae8f65;
+  color: #b63f2f;
   background: transparent;
   background-clip: padding-box;
   display: inline-block;
@@ -2986,7 +2986,7 @@ button,
   height: var(--line-height, 1rem);
   max-height: 1rem;
   max-height: var(--line-height, 1rem);
-  border-color: #ae8f65;
+  border-color: #b63f2f;
   border-style: solid;
   border-radius: 0.125rem;
   -webkit-box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.08);
@@ -3008,8 +3008,8 @@ button:focus,
 .button-large:focus,
 .button-destructive:focus {
   outline: none;
-  -webkit-box-shadow: 0 0 0 0.2rem #dccebc;
-          box-shadow: 0 0 0 0.2rem #dccebc;
+  -webkit-box-shadow: 0 0 0 0.2rem #eab5ae;
+          box-shadow: 0 0 0 0.2rem #eab5ae;
 }
 
 button:active,
@@ -3021,7 +3021,7 @@ button:active,
 .button-petty:active,
 .button-large:active,
 .button-destructive:active {
-  color: #ae8f65;
+  color: #b63f2f;
   -webkit-box-shadow: inset 0 2px 4px 0 rgba(0, 0, 0, 0.08);
           box-shadow: inset 0 2px 4px 0 rgba(0, 0, 0, 0.08);
 }
@@ -3071,21 +3071,21 @@ fieldset:disabled .button-destructive {
   pointer-events: none;
   background-color: #f3f2f2;
   background-color: var(--color-disabled, #f3f2f2);
-  color: #78746d;
-  color: var(--color-disabled-text, #78746d);
+  color: #786e6d;
+  color: var(--color-disabled-text, #786e6d);
   border-color: #f3f2f2;
 }
 
 /* Prominent button */
 
 .button-prime {
-  background: #ae8f65;
-  border-color: #ae8f65;
-  color: black;
+  background: #b63f2f;
+  border-color: #b63f2f;
+  color: white;
 }
 
 .button-prime:active {
-  color: black;
+  color: white;
 }
 
 /* Standard button */
