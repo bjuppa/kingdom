@@ -2,10 +2,10 @@
 
 body {
   padding: 0;
-  background-color: white;
-  background-color: var(--color-body, white);
-  color: black;
-  color: var(--color-body-text, black);
+  background-color: #fcfcfc;
+  background-color: var(--color-body, #fcfcfc);
+  color: #050505;
+  color: var(--color-body-text, #050505);
 }
 
 html,
@@ -3109,8 +3109,10 @@ legend {
 }
 
 :root {
-  --color-body: white;
-  --color-body-text: black;
+  --color-primary: #a08fe6;
+  --color-primary-text: #05030c;
+  --color-body: #fcfcfc;
+  --color-body-text: #050505;
   --color-border: currentColor;
 }
 
@@ -3124,7 +3126,7 @@ label.disabled,
 label[disabled],
 label:disabled,
 fieldset:disabled label:not([for]) {
-  color: #6d6d78;
+  color: #6f6d78;
 }
 
 /* %label-invalid */
@@ -3238,7 +3240,7 @@ textarea,
 select {
   background: white;
   background-clip: padding-box;
-  border-color: #bcbcc2;
+  border-color: #bdbcc2;
   border-style: solid;
   border-radius: 0.2109375rem;
 }
@@ -3317,7 +3319,7 @@ button,
 .button-petty,
 .button-large,
 .button-destructive {
-  color: blue;
+  color: #a08fe6;
   background: transparent;
   background-clip: padding-box;
   display: inline-block;
@@ -3331,7 +3333,7 @@ button,
   height: var(--line-height, 1.6875rem);
   max-height: 1.6875rem;
   max-height: var(--line-height, 1.6875rem);
-  border-color: blue;
+  border-color: #a08fe6;
   border-style: solid;
   border-radius: 0.2109375rem;
   -webkit-box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.08);
@@ -3353,8 +3355,8 @@ button:focus,
 .button-large:focus,
 .button-destructive:focus {
   outline: none;
-  -webkit-box-shadow: 0 0 0 0.2rem #9999ff;
-          box-shadow: 0 0 0 0.2rem #9999ff;
+  -webkit-box-shadow: 0 0 0 0.2rem #b9acec;
+          box-shadow: 0 0 0 0.2rem #b9acec;
 }
 
 button:active,
@@ -3366,7 +3368,7 @@ button:active,
 .button-petty:active,
 .button-large:active,
 .button-destructive:active {
-  color: blue;
+  color: #a08fe6;
   -webkit-box-shadow: inset 0 2px 4px 0 rgba(0, 0, 0, 0.08);
           box-shadow: inset 0 2px 4px 0 rgba(0, 0, 0, 0.08);
 }
@@ -3416,21 +3418,21 @@ fieldset:disabled .button-destructive {
   pointer-events: none;
   background-color: #f2f2f3;
   background-color: var(--color-disabled, #f2f2f3);
-  color: #6d6d78;
-  color: var(--color-disabled-text, #6d6d78);
+  color: #6f6d78;
+  color: var(--color-disabled-text, #6f6d78);
   border-color: #f2f2f3;
 }
 
 /* Prominent button */
 
 .button-prime {
-  background: blue;
-  border-color: blue;
-  color: white;
+  background: #a08fe6;
+  border-color: #a08fe6;
+  color: #05030c;
 }
 
 .button-prime:active {
-  color: white;
+  color: #05030c;
 }
 
 /* Standard button */

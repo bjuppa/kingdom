@@ -1,14 +1,6 @@
 /* Kingdom CSS Extension - Forms */
 @import "../modules/colors";
 
-// Set primary background and text color if not already defined in $colors map
-@if not map-has-key($colors, primary) {
-  $colors: map-merge($colors, (primary: blue));
-}
-@if length(map-get($colors, primary)) < 2 {
-  $colors: map-merge($colors, (primary: background-text-color-pair(map-get($colors, primary))));
-}
-
 // Set caution background and text color if not already defined in $colors map
 @if not map-has-key($colors, caution) {
   //TODO: attempt to extract a red color matching the primary color, but with distance if the primary color is in the red spectrum

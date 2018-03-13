@@ -11,12 +11,20 @@ $body-padding: 0 !default;
 @import "modules/element-types";
 @import "modules/borders.scss";
 
+// Generate a primary color and corresponding text color if not already defined in $colors map
+@if not map-has-key($colors, primary) {
+  $colors: map-merge($colors, (primary: hsl(random(360),20+random(50), 30+random(60))));
+}
+@if length(map-get($colors, primary)) < 2 {
+  $colors: map-merge($colors, (primary: background-text-color-pair(map-get($colors, primary))));
+}
+
 // Set body background and text color if not already defined in $colors map
 @if not map-has-key($colors, body) {
-  $colors: map-merge($colors, (body: white black));
+  $colors: map-merge($colors, (body: change_color(get-color(primary), $lightness: 99%, $saturation: 1%) change_color(get-color(primary), $lightness: 2%, $saturation: 5%)));
 }
 @if length(map-get($colors, body)) < 2 {
-  $colors: map-merge($colors, (primary: background-text-color-pair(map-get($colors, body), 100%)));
+  $colors: map-merge($colors, (body: background-text-color-pair(map-get($colors, body), 100%)));
 }
 
 // Set border color if not already defined in $colors map
