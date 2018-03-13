@@ -2869,8 +2869,8 @@ textarea:not([cols]) {
 }
 
 :root {
-  --color-primary: #5bd76d;
-  --color-primary-text: black;
+  --color-primary: #11e438;
+  --color-primary-text: white;
   --color-body: #fcfcfc;
   --color-body-text: #050505;
   --color-border: currentColor;
@@ -3079,7 +3079,7 @@ button,
 .button-petty,
 .button-large,
 .button-destructive {
-  color: #5bd76d;
+  color: #11e438;
   background: transparent;
   background-clip: padding-box;
   display: inline-block;
@@ -3093,7 +3093,7 @@ button,
   height: var(--line-height, 1.5rem);
   max-height: 1.5rem;
   max-height: var(--line-height, 1.5rem);
-  border-color: #5bd76d;
+  border-color: #11e438;
   border-style: solid;
   border-radius: 0.1875rem;
   -webkit-box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.08);
@@ -3115,8 +3115,8 @@ button:focus,
 .button-large:focus,
 .button-destructive:focus {
   outline: none;
-  -webkit-box-shadow: 0 0 0 0.2rem #adebb6;
-          box-shadow: 0 0 0 0.2rem #adebb6;
+  -webkit-box-shadow: 0 0 0 0.2rem #a0f8b0;
+          box-shadow: 0 0 0 0.2rem #a0f8b0;
 }
 
 button:active,
@@ -3128,7 +3128,7 @@ button:active,
 .button-petty:active,
 .button-large:active,
 .button-destructive:active {
-  color: #5bd76d;
+  color: #11e438;
   -webkit-box-shadow: inset 0 2px 4px 0 rgba(0, 0, 0, 0.08);
           box-shadow: inset 0 2px 4px 0 rgba(0, 0, 0, 0.08);
 }
@@ -3186,13 +3186,13 @@ fieldset:disabled .button-destructive {
 /* Prominent button */
 
 .button-prime {
-  background: #5bd76d;
-  border-color: #5bd76d;
-  color: black;
+  background: #11e438;
+  border-color: #11e438;
+  color: white;
 }
 
 .button-prime:active {
-  color: black;
+  color: white;
 }
 
 /* Standard button */
