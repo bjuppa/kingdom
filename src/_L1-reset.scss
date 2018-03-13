@@ -1,4 +1,3 @@
-$colors: (body: white black) !default;
 $body-padding: 0 !default;
 
 /* Kingdom CSS Level 1 - Reset */
@@ -10,13 +9,24 @@ $body-padding: 0 !default;
 
 @import "modules/colors";
 @import "modules/element-types";
-@import "modules/_borders.scss";
+@import "modules/borders.scss";
 
-@import "placeholders/colors";
+// Set body background and text color if not already defined in $colors map
+@if not map-has-key($colors, body) {
+  $colors: map-merge($colors, (body: white black));
+}
+@if length(map-get($colors, body)) < 2 {
+  $colors: map-merge($colors, (primary: background-text-color-pair(map-get($colors, body), 100%)));
+}
+
+// Set border color if not already defined in $colors map
+@if not map-has-key($colors, border) {
+  $colors: map-merge($colors, (border: currentColor));
+}
 
 body {
-  @extend %color-body !optional;
   padding: $body-padding;
+  @include set-background-color(body);
 }
 
 html, body {

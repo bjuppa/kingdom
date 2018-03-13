@@ -29,6 +29,10 @@ $line-heights: ();
 
 /* Kingdom CSS Level 3 - Vertical Rhythm */
 
+@if not map-has-key($colors, border) {
+  $colors: map-merge($colors, (border: currentColor));
+}
+
 hr {
   @extend %h-px;
   border: 0;

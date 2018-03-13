@@ -1,0 +1,10 @@
+// Utilities for colors
+
+:root {
+  @each $name, $color-pair in $colors {
+    --color-#{$name}: get-color($name);
+    @if(length($color-pair) > 1) {
+      --color-#{$name}-text: get-color($name, true);
+    }
+  }
+}
