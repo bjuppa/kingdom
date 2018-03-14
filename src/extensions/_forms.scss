@@ -3,6 +3,7 @@
 
 // Set caution background and text color if not already defined in $colors map
 @if not map-has-key($colors, caution) {
+  //TODO: try mixing the "primary" red with the inverse of the background color
   $colors: map-merge($colors, (caution: scale_color(change_color(get-color(primary), $hue: 0), $saturation: 50%)));
 }
 
@@ -301,8 +302,12 @@ label:not([for]) {
 
 /* .form-inline make a form's contents go inline */
 .form-inline {
-  * {
+  > * {
     display: inline-block;
     @extend %mt-1;
+
+    * {
+      display: inline;
+    }
   }
 }
