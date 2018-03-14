@@ -12,11 +12,7 @@
 
 // Set disabled background and text color if not already defined in $colors map
 @if not map-has-key($colors, disabled) {
-  $colors: map-merge($colors, (disabled: change_color(get-color(primary), $saturation: 5%, $lightness: 95%)));
-}
-
-@if length(map-get($colors, disabled)) < 2 {
-  $colors: map-merge($colors, (disabled: background-text-color-pair(map-get($colors, disabled))));
+  $colors: map-merge($colors, (disabled: change_color(get-color(body), $saturation: 1%, $lightness: 90%, $alpha: .75) change_color(get-color(body), $saturation: 1%, $lightness: 50%)));
 }
 
 $input-border-color: change_color(get-color(primary), $saturation: 5%, $lightness: 75%) !default;
