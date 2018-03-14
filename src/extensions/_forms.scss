@@ -3,8 +3,7 @@
 
 // Set caution background and text color if not already defined in $colors map
 @if not map-has-key($colors, caution) {
-  //TODO: try mixing the "primary" red with the inverse of the background color
-  $colors: map-merge($colors, (caution: scale_color(change_color(get-color(primary), $hue: 0), $saturation: 50%)));
+  $colors: map-merge($colors, (caution: mix(change_color(saturate(get-color(primary), 50%), $hue: 0), invert(get-color(body)), 85%)));
 }
 
 @if length(map-get($colors, caution)) < 2 {
