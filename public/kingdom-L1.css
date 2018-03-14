@@ -2,10 +2,10 @@
 
 body {
   padding: 0;
-  background-color: black;
-  background-color: var(--color-body, black);
-  color: white;
-  color: var(--color-body-text, white);
+  background-color: #fefdfc;
+  background-color: var(--color-body, #fefdfc);
+  color: #977e66;
+  color: var(--color-body-text, #977e66);
 }
 
 html,
@@ -2757,10 +2757,10 @@ button:focus,
 }
 
 :root {
-  --color-primary: #7744d5;
-  --color-primary-text: black;
-  --color-body: black;
-  --color-body-text: white;
+  --color-primary: #7b430f;
+  --color-primary-text: #fefdfc;
+  --color-body: #fefdfc;
+  --color-body-text: #977e66;
   --color-border: currentColor;
 }
 

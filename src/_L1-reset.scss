@@ -23,15 +23,15 @@ $body-padding: 0 !default;
 // Set body background and text color if not already defined in $colors map
 @if not map-has-key($colors, body) {
   @if lightness(get-color(primary)) < 50% {
-    $colors: map-merge($colors, (body: scale_color(get-color(primary), $lightness: 99%, $saturation: -50%) scale_color(get-color(primary), $lightness: -99%, $saturation: -50%)));
+    $colors: map-merge($colors, (body: scale_color(get-color(primary), $lightness: 99%, $saturation: -50%)));
   } @else {
     //TODO: when primary color is light, find a contrasting background color
-    $colors: map-merge($colors, (body: black white));
+    $colors: map-merge($colors, (body: scale_color(complement(get-color(primary)), $lightness: -75%, $saturation: -50%)));
   }
 }
 
 @if length(map-get($colors, body)) < 2 {
-  $colors: map-merge($colors, (body: background-text-color-pair(map-get($colors, body), 99%)));
+  $colors: map-merge($colors, (body: background-text-color-pair(map-get($colors, body))));
 }
 
 // Set border color if not already defined in $colors map

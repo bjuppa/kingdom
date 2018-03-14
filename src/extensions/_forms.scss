@@ -15,7 +15,7 @@
   $colors: map-merge($colors, (disabled: change_color(get-color(primary), $saturation: 5%, $lightness: 95%)));
 }
 @if length(map-get($colors, disabled)) < 2 {
-  $colors: map-merge($colors, (disabled: background-text-color-pair(map-get($colors, disabled), 50%)));
+  $colors: map-merge($colors, (disabled: background-text-color-pair(map-get($colors, disabled))));
 }
 
 $input-border-color: change_color(get-color(primary), $saturation: 5%, $lightness: 75%) !default;

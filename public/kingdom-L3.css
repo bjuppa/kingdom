@@ -2,10 +2,10 @@
 
 body {
   padding: 0;
-  background-color: black;
-  background-color: var(--color-body, black);
-  color: white;
-  color: var(--color-body-text, white);
+  background-color: #fefdfe;
+  background-color: var(--color-body, #fefdfe);
+  color: #9b6287;
+  color: var(--color-body-text, #9b6287);
 }
 
 html,
@@ -3104,10 +3104,10 @@ legend {
 }
 
 :root {
-  --color-primary: #48e9f4;
-  --color-primary-text: black;
-  --color-body: black;
-  --color-body-text: white;
+  --color-primary: #ae0975;
+  --color-primary-text: #fefdfe;
+  --color-body: #fefdfe;
+  --color-body-text: #9b6287;
   --color-border: currentColor;
 }
 

@@ -8,12 +8,16 @@ $colors: () !default;
   @return nth($list, if($get-text-color, 2, 1));
 }
 
-@function text-color-for-background($background-color, $amount: 70%) {
-  @return if(lightness($background-color) > 50%, darken($background-color, $amount), lighten($background-color, $amount));
+@function text-color-for-background($background-color) {
+  @if lightness($background-color) > 50% {
+    @return scale_color($background-color, $lightness: -50%, $saturation: -50%);
+  } @else {
+    @return scale_color($background-color, $lightness: 99%, $saturation: -50%);
+  }
 }
 
-@function background-text-color-pair($background-color, $amount: 70%) {
-  @return $background-color text-color-for-background($background-color, $amount);
+@function background-text-color-pair($background-color) {
+  @return $background-color text-color-for-background($background-color);
 }
 
 @mixin set-color($name: primary, $property: color, $use-text-color: false) {
