@@ -2,10 +2,10 @@
 
 body {
   padding: 0;
-  background-color: #211931;
-  background-color: var(--color-body, #211931);
-  color: #fdfcfd;
-  color: var(--color-body-text, #fdfcfd);
+  background-color: #132d20;
+  background-color: var(--color-body, #132d20);
+  color: #e4ede9;
+  color: var(--color-body-text, #e4ede9);
 }
 
 html,
@@ -2762,10 +2762,10 @@ label:not([for]) + label:not([for]),
 }
 
 :root {
-  --color-primary: #a8d750;
-  --color-primary-text: #516133;
-  --color-body: #211931;
-  --color-body-text: #fdfcfd;
+  --color-primary: #e61a7c;
+  --color-primary-text: #f7edf2;
+  --color-body: #132d20;
+  --color-body-text: #e4ede9;
   --color-border: currentColor;
 }
 
@@ -2779,7 +2779,7 @@ label.disabled,
 label[disabled],
 label:disabled,
 fieldset:disabled label:not([for]) {
-  color: #7a7c76;
+  color: #0c0c0c;
 }
 
 /* %label-invalid */
@@ -2893,7 +2893,7 @@ textarea,
 select {
   background: white;
   background-clip: padding-box;
-  border-color: #c0c2bc;
+  border-color: #c2bcbf;
   border-style: solid;
   border-radius: 0.125rem;
 }
@@ -2910,7 +2910,7 @@ select[aria-invalid] {
 input:disabled,
 textarea:disabled,
 select:disabled {
-  background-color: #f2f3f2;
+  background-color: #f3f2f2;
 }
 
 input,
@@ -2945,12 +2945,12 @@ textarea::placeholder {
 
 input:-moz-read-only,
 textarea:-moz-read-only {
-  background-color: #f2f3f2;
+  background-color: #f3f2f2;
 }
 
 input:read-only,
 textarea:read-only {
-  background-color: #f2f3f2;
+  background-color: #f3f2f2;
 }
 
 [type='checkbox'],
@@ -2972,7 +2972,7 @@ button,
 .button-petty,
 .button-large,
 .button-destructive {
-  color: #a8d750;
+  color: #e61a7c;
   background: transparent;
   background-clip: padding-box;
   display: inline-block;
@@ -2986,7 +2986,7 @@ button,
   height: var(--line-height, 1rem);
   max-height: 1rem;
   max-height: var(--line-height, 1rem);
-  border-color: #a8d750;
+  border-color: #e61a7c;
   border-style: solid;
   border-radius: 0.125rem;
   -webkit-box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.08);
@@ -3008,8 +3008,8 @@ button:focus,
 .button-large:focus,
 .button-destructive:focus {
   outline: none;
-  -webkit-box-shadow: 0 0 0 0.2rem #d6ecac;
-          box-shadow: 0 0 0 0.2rem #d6ecac;
+  -webkit-box-shadow: 0 0 0 0.2rem #f5a3cb;
+          box-shadow: 0 0 0 0.2rem #f5a3cb;
 }
 
 button:active,
@@ -3021,7 +3021,7 @@ button:active,
 .button-petty:active,
 .button-large:active,
 .button-destructive:active {
-  color: #a8d750;
+  color: #e61a7c;
   -webkit-box-shadow: inset 0 2px 4px 0 rgba(0, 0, 0, 0.08);
           box-shadow: inset 0 2px 4px 0 rgba(0, 0, 0, 0.08);
 }
@@ -3069,23 +3069,23 @@ fieldset:disabled .button-petty,
 fieldset:disabled .button-large,
 fieldset:disabled .button-destructive {
   pointer-events: none;
-  background-color: #f2f3f2;
-  background-color: var(--color-disabled, #f2f3f2);
-  color: #7a7c76;
-  color: var(--color-disabled-text, #7a7c76);
-  border-color: #f2f3f2;
+  background-color: #f3f2f2;
+  background-color: var(--color-disabled, #f3f2f2);
+  color: #0c0c0c;
+  color: var(--color-disabled-text, #0c0c0c);
+  border-color: #f3f2f2;
 }
 
 /* Prominent button */
 
 .button-prime {
-  background: #a8d750;
-  border-color: #a8d750;
-  color: #516133;
+  background: #e61a7c;
+  border-color: #e61a7c;
+  color: #f7edf2;
 }
 
 .button-prime:active {
-  color: #516133;
+  color: #f7edf2;
 }
 
 /* Standard button */
@@ -3152,11 +3152,11 @@ fieldset:disabled .button-destructive {
 .button-destructive.button-prime {
   background: red;
   border-color: red;
-  color: #fefdfd;
+  color: #f9ecec;
 }
 
 .button-destructive.button-prime:active {
-  color: #fefdfd;
+  color: #f9ecec;
 }
 
 /* Form layout */

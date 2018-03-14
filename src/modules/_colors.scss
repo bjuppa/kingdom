@@ -10,9 +10,9 @@ $colors: () !default;
 
 @function text-color-for-background($background-color) {
   @if lightness($background-color) > 50% {
-    @return scale_color($background-color, $lightness: -50%, $saturation: -50%);
+    @return scale_color($background-color, $lightness: -95%, $saturation: -50%);
   } @else {
-    @return scale_color($background-color, $lightness: 99%, $saturation: -50%);
+    @return scale_color($background-color, $lightness: 90%, $saturation: -50%);
   }
 }
 
