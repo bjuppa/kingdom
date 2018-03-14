@@ -3,9 +3,9 @@
 
 // Set caution background and text color if not already defined in $colors map
 @if not map-has-key($colors, caution) {
-  //TODO: attempt to extract a red color matching the primary color, but with distance if the primary color is in the red spectrum
-  $colors: map-merge($colors, (caution: red));
+  $colors: map-merge($colors, (caution: scale_color(change_color(get-color(primary), $hue: 0), $saturation: 50%)));
 }
+
 @if length(map-get($colors, caution)) < 2 {
   $colors: map-merge($colors, (caution: background-text-color-pair(map-get($colors, caution))));
 }
@@ -14,6 +14,7 @@
 @if not map-has-key($colors, disabled) {
   $colors: map-merge($colors, (disabled: change_color(get-color(primary), $saturation: 5%, $lightness: 95%)));
 }
+
 @if length(map-get($colors, disabled)) < 2 {
   $colors: map-merge($colors, (disabled: background-text-color-pair(map-get($colors, disabled))));
 }
