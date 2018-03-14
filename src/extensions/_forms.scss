@@ -305,9 +305,5 @@ label:not([for]) {
   > * {
     display: inline-block;
     @extend %mt-1;
-
-    * {
-      display: inline;
-    }
   }
 }
