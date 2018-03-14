@@ -2,10 +2,10 @@
 
 body {
   padding: 0;
-  background-color: #242c1b;
-  background-color: var(--color-body, #242c1b);
-  color: #e9ece6;
-  color: var(--color-body-text, #e9ece6);
+  background-color: #182e28;
+  background-color: var(--color-body, #182e28);
+  color: #e6eceb;
+  color: var(--color-body-text, #e6eceb);
 }
 
 html,
@@ -2757,10 +2757,10 @@ button:focus,
 }
 
 :root {
-  --color-primary: #8f5ac4;
-  --color-primary-text: #070509;
-  --color-body: #242c1b;
-  --color-body-text: #e9ece6;
+  --color-primary: #d24669;
+  --color-primary-text: #090506;
+  --color-body: #182e28;
+  --color-body-text: #e6eceb;
   --color-border: currentColor;
 }
 

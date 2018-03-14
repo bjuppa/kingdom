@@ -8,6 +8,25 @@ $colors: () !default;
   @return nth($list, if($get-text-color, 2, 1));
 }
 
+// Get a color in the hue spectrum of a complimentary color
+@function adjust-hue-to-complementary($color, $complimentary: blue) {
+  @return change_color($color, $hue: hue($complimentary) + hue($color) % 12);
+}
+
+// Get a color with sufficient contrast in the hue of a complimentary color
+@function complementary-contrasted-color($color, $complimentary: blue, $min-lightness: 40%, $max-lightness: 60%, $min-saturation: 60%) {
+  $generated: adjust-hue-to-complementary($color, $complimentary);
+  @if (lightness($generated) < $min-lightness) {
+    $generated: change_color($generated, $lightness: $min-lightness);
+  } @else if (lightness($generated) > $max-lightness) {
+    $generated: change_color($generated, $lightness: $max-lightness);
+  }
+  @if (saturation($generated) < $min-saturation) {
+    $generated: change_color($generated, $saturation: $min-saturation);
+  }
+  @return $generated;
+}
+
 @function text-color-for-background($background-color) {
   @if lightness($background-color) > 50% {
     @return scale_color($background-color, $lightness: -95%, $saturation: -50%);
@@ -23,7 +42,7 @@ $colors: () !default;
 @mixin set-color($name: primary, $property: color, $use-text-color: false) {
   #{$property}: get-color($name, $use-text-color);
   $var_name: --color-#{$name};
-  @if($use-text-color) {
+  @if ($use-text-color) {
     $var_name: $var_name + '-text';
   }
   #{$property}: var(#{$var-name}, get-color($name, $use-text-color));

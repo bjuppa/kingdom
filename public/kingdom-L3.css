@@ -2,10 +2,10 @@
 
 body {
   padding: 0;
-  background-color: #fdfdfe;
-  background-color: var(--color-body, #fdfdfe);
-  color: #0a0a0f;
-  color: var(--color-body-text, #0a0a0f);
+  background-color: #fdfefd;
+  background-color: var(--color-body, #fdfefd);
+  color: #0b0f0b;
+  color: var(--color-body-text, #0b0f0b);
 }
 
 html,
@@ -3104,10 +3104,10 @@ legend {
 }
 
 :root {
-  --color-primary: #0a129e;
-  --color-primary-text: #e6e7f5;
-  --color-body: #fdfdfe;
-  --color-body-text: #0a0a0f;
+  --color-primary: #328a1e;
+  --color-primary-text: #eaf3e8;
+  --color-body: #fdfefd;
+  --color-body-text: #0b0f0b;
   --color-border: currentColor;
 }
 
