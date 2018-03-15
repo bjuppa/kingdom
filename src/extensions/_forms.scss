@@ -3,7 +3,7 @@
 
 // Set caution background and text color if not already defined in $colors map
 @if not map-has-key($colors, caution) {
-  $colors: map-merge($colors, (caution: complementary-contrasted-color(get-color(primary), red)));
+  $colors: map-merge($colors, (caution: normalize-color(transform-hue-with-contrast(get-color(primary), red))));
 }
 
 @if length(map-get($colors, caution)) < 2 {

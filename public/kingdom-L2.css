@@ -2,10 +2,10 @@
 
 body {
   padding: 0;
-  background-color: #fcfefd;
-  background-color: var(--color-body, #fcfefd);
-  color: #0a0f0d;
-  color: var(--color-body-text, #0a0f0d);
+  background-color: #302018;
+  background-color: var(--color-body, #302018);
+  color: #ede8e5;
+  color: var(--color-body-text, #ede8e5);
 }
 
 html,
@@ -2864,10 +2864,10 @@ textarea:not([cols]) {
 }
 
 :root {
-  --color-primary: #0d8245;
-  --color-primary-text: #e5f4ec;
-  --color-body: #fcfefd;
-  --color-body-text: #0a0f0d;
+  --color-primary: #44a5da;
+  --color-primary-text: #05080a;
+  --color-body: #302018;
+  --color-body-text: #ede8e5;
   --color-border: currentColor;
 }
 

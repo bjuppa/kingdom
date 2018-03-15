@@ -1,5 +1,6 @@
 $colors: () !default;
 
+// Get a color from the global $colors map
 @function get-color($name, $get-text-color: false) {
   $list: map-get($colors, $name);
   @if $get-text-color and length($list) < 2 {
@@ -8,25 +9,40 @@ $colors: () !default;
   @return nth($list, if($get-text-color, 2, 1));
 }
 
-// Get a color in the hue spectrum of a complimentary color
-@function adjust-hue-to-complementary($color, $complimentary: blue) {
-  @return change_color($color, $hue: hue($complimentary) + hue($color) % 12);
+// Shift a color into the hue spectrum of another color
+@function transform-hue($color, $base: blue) {
+  @return change_color($color, $hue: hue($base) + (hue($color) + 15deg) % 30 - 15deg);
 }
 
-// Get a color with sufficient contrast in the hue of a complimentary color
-@function complementary-contrasted-color($color, $complimentary: blue, $min-lightness: 40%, $max-lightness: 60%, $min-saturation: 60%) {
-  $generated: adjust-hue-to-complementary($color, $complimentary);
-  @if (lightness($generated) < $min-lightness) {
-    $generated: change_color($generated, $lightness: $min-lightness);
-  } @else if (lightness($generated) > $max-lightness) {
-    $generated: change_color($generated, $lightness: $max-lightness);
+// Shift the hue of a color away from a reference color if they're close, while staying within the same base color
+@function ensure-hue-contrast($color, $reference) {
+  $unsigned-distance: 180deg - abs(abs(hue($reference) - hue($color)) - 180deg);
+  @if $unsigned-distance < 15deg {
+    $signed-distance-to-base: (hue($reference) - (round(hue($color) / 30) * 30) + 180deg) % 360 - 180deg;
+    $color: change_color($color, $hue: hue($reference) + if($signed-distance-to-base > 0, -15deg, 15deg));
   }
-  @if (saturation($generated) < $min-saturation) {
-    $generated: change_color($generated, $saturation: $min-saturation);
-  }
-  @return $generated;
+  @return $color;
 }
 
+// Shift a color into the hue spectrum of another color and make sure their hues are not to close
+@function transform-hue-with-contrast($color, $base: blue) {
+  @return ensure-hue-contrast(transform-hue($color, $base), $color);
+}
+
+// Fit a color within legible lightness and saturation spans for display
+@function normalize-color($color, $min-lightness: 40%, $max-lightness: 60%, $min-saturation: 60%) {
+  @if (lightness($color) < $min-lightness) {
+    $color: change_color($color, $lightness: $min-lightness);
+  } @else if (lightness($color) > $max-lightness) {
+    $color: change_color($color, $lightness: $max-lightness);
+  }
+  @if (saturation($color) < $min-saturation) {
+    $color: change_color($color, $saturation: $min-saturation);
+  }
+  @return $color;
+}
+
+// Generate a text color suitable for a background
 @function text-color-for-background($background-color) {
   @if lightness($background-color) > 50% {
     @return scale_color($background-color, $lightness: -95%, $saturation: -50%);
@@ -35,10 +51,12 @@ $colors: () !default;
   }
 }
 
+// Append a suitable text color to a background color
 @function background-text-color-pair($background-color) {
-  @return $background-color text-color-for-background($background-color);
+  @return $background-color text-color-for-background(nth($background-color, 1));
 }
 
+// Set a color property from the global map
 @mixin set-color($name: primary, $property: color, $use-text-color: false) {
   #{$property}: get-color($name, $use-text-color);
   $var_name: --color-#{$name};
@@ -48,6 +66,7 @@ $colors: () !default;
   #{$property}: var(#{$var-name}, get-color($name, $use-text-color));
 }
 
+// Set a background color (and text color) from the global map
 @mixin set-background-color($name, $set-text-color: true) {
   @include set-color($name, background-color);
   @if ($set-text-color) {
