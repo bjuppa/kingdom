@@ -2,10 +2,10 @@
 
 body {
   padding: 0;
-  background-color: #2d2d38;
-  background-color: var(--color-body, #2d2d38);
-  color: #e9e9ec;
-  color: var(--color-body-text, #e9e9ec);
+  background-color: #2d2a24;
+  background-color: var(--color-body, #2d2a24);
+  color: #ebeae8;
+  color: var(--color-body-text, #ebeae8);
 }
 
 html,
@@ -214,8 +214,8 @@ button:focus,
 }
 
 *:link {
-  color: #7775f5;
-  color: var(--color-link, #7775f5);
+  color: #8675f4;
+  color: var(--color-link, #8675f4);
 }
 
 /* Placeholders for sizing */
@@ -2436,6 +2436,8 @@ h6,
 
 /* %font-forms */
 
+/* Placeholders for borders */
+
 /* %border-l */
 
 .border-l {
@@ -2874,16 +2876,16 @@ textarea:not([cols]) {
 }
 
 :root {
-  --color-primary: #e86a68;
-  --color-primary-text: #0c0505;
-  --color-body: #2d2d38;
-  --color-body-text: #e9e9ec;
-  --color-link: #7775f5;
+  --color-primary: #2be3a0;
+  --color-primary-text: #040907;
+  --color-body: #2d2a24;
+  --color-body-text: #ebeae8;
+  --color-link: #8675f4;
   --color-border: currentColor;
 }
 
 .color-primary {
-  color: #e86a68;
-  color: var(--color-primary, #e86a68);
+  color: #2be3a0;
+  color: var(--color-primary, #2be3a0);
 }
 

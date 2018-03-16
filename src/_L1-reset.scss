@@ -8,8 +8,6 @@ $body-padding: 0 !default;
 // https://github.com/shankariyerr/tinyreset
 
 @import "modules/colors";
-@import "modules/element-types";
-@import "modules/borders.scss";
 
 // Generate a primary color and corresponding text color if not already defined in $colors map
 @if not map-has-key($colors, primary) {
@@ -38,10 +36,8 @@ $body-padding: 0 !default;
   $colors: map-merge($colors, (link: mix(change_color(transform-hue(get-color(primary), blue), $lightness: 50%, $saturation: 100%), desaturate(get-color(body, true), 100%), 50%)));
 }
 
-// Set border color if not already defined in $colors map
-@if not map-has-key($colors, border) {
-  $colors: map-merge($colors, (border: currentColor));
-}
+@import "modules/element-types";
+@import "modules/borders";
 
 body {
   padding: $body-padding;

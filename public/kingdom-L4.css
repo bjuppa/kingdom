@@ -2,10 +2,10 @@
 
 body {
   padding: 0;
-  background-color: #fdfdfe;
-  background-color: var(--color-body, #fdfdfe);
-  color: #0c0c0e;
-  color: var(--color-body-text, #0c0c0e);
+  background-color: #36343c;
+  background-color: var(--color-body, #36343c);
+  color: #ebeaec;
+  color: var(--color-body-text, #ebeaec);
 }
 
 html,
@@ -214,8 +214,8 @@ button:focus,
 }
 
 *:link {
-  color: #220686;
-  color: var(--color-link, #220686);
+  color: #768ff5;
+  color: var(--color-link, #768ff5);
 }
 
 /* Placeholders for sizing */
@@ -2491,6 +2491,8 @@ h6 * {
 
 /* %font-forms */
 
+/* Placeholders for borders */
+
 /* %border-l */
 
 .border-l {
@@ -3338,16 +3340,16 @@ legend {
 }
 
 :root {
-  --color-primary: #47ad1f;
-  --color-primary-text: #edf5ea;
-  --color-body: #fdfdfe;
-  --color-body-text: #0c0c0e;
-  --color-link: #220686;
+  --color-primary: #d8ae9c;
+  --color-primary-text: #0b0807;
+  --color-body: #36343c;
+  --color-body-text: #ebeaec;
+  --color-link: #768ff5;
   --color-border: currentColor;
 }
 
 .color-primary {
-  color: #47ad1f;
-  color: var(--color-primary, #47ad1f);
+  color: #d8ae9c;
+  color: var(--color-primary, #d8ae9c);
 }
 
