@@ -2,10 +2,10 @@
 
 body {
   padding: 0;
-  background-color: #fdfcfe;
-  background-color: var(--color-body, #fdfcfe);
-  color: #0c0a0f;
-  color: var(--color-body-text, #0c0a0f);
+  background-color: #fdfdfe;
+  background-color: var(--color-body, #fdfdfe);
+  color: #0b0b0e;
+  color: var(--color-body-text, #0b0b0e);
 }
 
 html,
@@ -214,8 +214,8 @@ button:focus,
 }
 
 a:link {
-  color: #030816;
-  color: var(--color-link, #030816);
+  color: #060813;
+  color: var(--color-link, #060813);
 }
 
 /* Placeholders for sizing */
@@ -2767,12 +2767,12 @@ label:not([for]) + label:not([for]),
 }
 
 :root {
-  --color-primary: #2d1178;
-  --color-primary-text: #e9e5f3;
-  --color-body: #fdfcfe;
-  --color-body-text: #0c0a0f;
+  --color-primary: #393196;
+  --color-primary-text: #ecebf3;
+  --color-body: #fdfdfe;
+  --color-body-text: #0b0b0e;
+  --color-link: #060813;
   --color-border: currentColor;
-  --color-link: #030816;
 }
 
 /* Kingdom CSS Extension - Forms */
@@ -2785,7 +2785,7 @@ label.disabled,
 label[disabled],
 label:disabled,
 fieldset:disabled label:not([for]) {
-  color: #7f7e81;
+  color: #7e7e81;
 }
 
 /* %label-invalid */
@@ -2797,8 +2797,8 @@ fieldset:disabled label:not([for]) {
 label.invalid,
 label:invalid,
 label[aria-invalid] {
-  color: #b31a3d;
-  color: var(--color-caution, #b31a3d);
+  color: #a33329;
+  color: var(--color-caution, #a33329);
 }
 
 /* Inputs */
@@ -2899,7 +2899,7 @@ textarea,
 select {
   background: white;
   background-clip: padding-box;
-  border-color: #bebcc2;
+  border-color: #bdbcc2;
   border-style: solid;
   border-radius: 0.125rem;
 }
@@ -2910,7 +2910,7 @@ textarea:invalid,
 textarea[aria-invalid],
 select:invalid,
 select[aria-invalid] {
-  border-color: #b31a3d;
+  border-color: #a33329;
 }
 
 input:disabled,
@@ -2978,7 +2978,7 @@ button,
 .button-petty,
 .button-large,
 .button-destructive {
-  color: #2d1178;
+  color: #393196;
   background: transparent;
   background-clip: padding-box;
   display: inline-block;
@@ -2992,7 +2992,7 @@ button,
   height: var(--line-height, 1rem);
   max-height: 1rem;
   max-height: var(--line-height, 1rem);
-  border-color: #2d1178;
+  border-color: #393196;
   border-style: solid;
   border-radius: 0.125rem;
   -webkit-box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.08);
@@ -3014,8 +3014,8 @@ button:focus,
 .button-large:focus,
 .button-destructive:focus {
   outline: none;
-  -webkit-box-shadow: 0 0 0 0.2rem #baa6f2;
-          box-shadow: 0 0 0 0.2rem #baa6f2;
+  -webkit-box-shadow: 0 0 0 0.2rem #b6b2e6;
+          box-shadow: 0 0 0 0.2rem #b6b2e6;
 }
 
 button:active,
@@ -3027,7 +3027,7 @@ button:active,
 .button-petty:active,
 .button-large:active,
 .button-destructive:active {
-  color: #2d1178;
+  color: #393196;
   -webkit-box-shadow: inset 0 2px 4px 0 rgba(0, 0, 0, 0.08);
           box-shadow: inset 0 2px 4px 0 rgba(0, 0, 0, 0.08);
 }
@@ -3077,21 +3077,21 @@ fieldset:disabled .button-destructive {
   pointer-events: none;
   background-color: rgba(229, 229, 230, 0.75);
   background-color: var(--color-disabled, rgba(229, 229, 230, 0.75));
-  color: #7f7e81;
-  color: var(--color-disabled-text, #7f7e81);
+  color: #7e7e81;
+  color: var(--color-disabled-text, #7e7e81);
   border-color: rgba(229, 229, 230, 0.75);
 }
 
 /* Prominent button */
 
 .button-prime {
-  background: #2d1178;
-  border-color: #2d1178;
-  color: #e9e5f3;
+  background: #393196;
+  border-color: #393196;
+  color: #ecebf3;
 }
 
 .button-prime:active {
-  color: #e9e5f3;
+  color: #ecebf3;
 }
 
 /* Standard button */
@@ -3142,27 +3142,27 @@ fieldset:disabled .button-destructive {
 /* Cautionary button */
 
 .button-destructive {
-  color: #b31a3d;
-  border-color: #b31a3d;
+  color: #a33329;
+  border-color: #a33329;
 }
 
 .button-destructive:active {
-  color: #b31a3d;
+  color: #a33329;
 }
 
 .button-destructive:focus {
-  -webkit-box-shadow: 0 0 0 0.2rem #f2a6b8;
-          box-shadow: 0 0 0 0.2rem #f2a6b8;
+  -webkit-box-shadow: 0 0 0 0.2rem #ebb3ad;
+          box-shadow: 0 0 0 0.2rem #ebb3ad;
 }
 
 .button-destructive.button-prime {
-  background: #b31a3d;
-  border-color: #b31a3d;
-  color: #f5eaed;
+  background: #a33329;
+  border-color: #a33329;
+  color: #f4eceb;
 }
 
 .button-destructive.button-prime:active {
-  color: #f5eaed;
+  color: #f4eceb;
 }
 
 /* Form layout */

@@ -34,14 +34,15 @@ $body-padding: 0 !default;
   $colors: map-merge($colors, (body: background-text-color-pair(map-get($colors, body))));
 }
 
-// Set border color if not already defined in $colors map
-@if not map-has-key($colors, border) {
-  $colors: map-merge($colors, (border: currentColor));
-}
-
 // Set link color if not already defined in $colors map
 @if not map-has-key($colors, link) {
   $colors: map-merge($colors, (link: change_color(transform-hue-with-contrast(get-color(primary), blue), $lightness: lightness(get-color(body, true)))));
+}
+
+
+// Set border color if not already defined in $colors map
+@if not map-has-key($colors, border) {
+  $colors: map-merge($colors, (border: currentColor));
 }
 
 body {
