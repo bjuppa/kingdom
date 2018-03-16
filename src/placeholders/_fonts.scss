@@ -1,5 +1,5 @@
 $body-font-stack: Times !default;
-$headings-font-stack: Times !default;
+$headings-font-stack: $body-font-stack !default;
 $forms-font-stack: Verdana !default;
 
 /* Placeholders for fonts */
