@@ -36,7 +36,7 @@ $body-padding: 0 !default;
 
 // Set link color if not already defined in $colors map
 @if not map-has-key($colors, link) {
-  $colors: map-merge($colors, (link: change_color(transform-hue-with-contrast(get-color(primary), blue), $lightness: lightness(get-color(body, true)))));
+  $colors: map-merge($colors, (link: mix(change_color(transform-hue(get-color(primary), blue), $lightness: 50%, $saturation: 100%), desaturate(get-color(body, true), 100%), 50%)));
 }
 
 

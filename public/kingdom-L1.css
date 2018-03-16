@@ -2,10 +2,10 @@
 
 body {
   padding: 0;
-  background-color: #341731;
-  background-color: var(--color-body, #341731);
-  color: #eee5ed;
-  color: var(--color-body-text, #eee5ed);
+  background-color: #fdfefe;
+  background-color: var(--color-body, #fdfefe);
+  color: #0c0e0e;
+  color: var(--color-body-text, #0c0e0e);
 }
 
 html,
@@ -214,8 +214,8 @@ button:focus,
 }
 
 a:link {
-  color: #dcd8fa;
-  color: var(--color-link, #dcd8fa);
+  color: #110686;
+  color: var(--color-link, #110686);
 }
 
 /* Placeholders for sizing */
@@ -2762,11 +2762,11 @@ a:link {
 }
 
 :root {
-  --color-primary: #44e954;
-  --color-primary-text: #050a05;
-  --color-body: #341731;
-  --color-body-text: #eee5ed;
-  --color-link: #dcd8fa;
+  --color-primary: #51989e;
+  --color-primary-text: #eff3f4;
+  --color-body: #fdfefe;
+  --color-body-text: #0c0e0e;
+  --color-link: #110686;
   --color-border: currentColor;
 }
 

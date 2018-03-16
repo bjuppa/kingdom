@@ -2,10 +2,10 @@
 
 body {
   padding: 0;
-  background-color: #2a2230;
-  background-color: var(--color-body, #2a2230);
-  color: #eae8eb;
-  color: var(--color-body-text, #eae8eb);
+  background-color: #fdfefd;
+  background-color: var(--color-body, #fdfefd);
+  color: #0a0f0b;
+  color: var(--color-body-text, #0a0f0b);
 }
 
 html,
@@ -214,8 +214,8 @@ button:focus,
 }
 
 a:link {
-  color: #e3e3f1;
-  color: var(--color-link, #e3e3f1);
+  color: #080686;
+  color: var(--color-link, #080686);
 }
 
 /* Placeholders for sizing */
@@ -2869,11 +2869,11 @@ textarea:not([cols]) {
 }
 
 :root {
-  --color-primary: #9fc185;
-  --color-primary-text: #080a07;
-  --color-body: #2a2230;
-  --color-body-text: #eae8eb;
-  --color-link: #e3e3f1;
+  --color-primary: #1c9b1f;
+  --color-primary-text: #e9f4e9;
+  --color-body: #fdfefd;
+  --color-body-text: #0a0f0b;
+  --color-link: #080686;
   --color-border: currentColor;
 }
 
