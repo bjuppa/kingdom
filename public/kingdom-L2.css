@@ -2,10 +2,10 @@
 
 body {
   padding: 0;
-  background-color: #2d3429;
-  background-color: var(--color-body, #2d3429);
-  color: #eaebe9;
-  color: var(--color-body-text, #eaebe9);
+  background-color: #fefdfe;
+  background-color: var(--color-body, #fefdfe);
+  color: #0d0c0d;
+  color: var(--color-body-text, #0d0c0d);
 }
 
 html,
@@ -214,8 +214,8 @@ button:focus,
 }
 
 *:link {
-  color: #8875f5;
-  color: var(--color-link, #8875f5);
+  color: #0d0686;
+  color: var(--color-link, #0d0686);
 }
 
 /* Placeholders for sizing */
@@ -2874,11 +2874,11 @@ textarea:not([cols]) {
 }
 
 :root {
-  --color-primary: #6d8eca;
-  --color-primary-text: #06070a;
-  --color-body: #2d3429;
-  --color-body-text: #eaebe9;
-  --color-link: #8875f5;
+  --color-primary: #3f989d;
+  --color-primary-text: #edf3f4;
+  --color-body: #fefdfe;
+  --color-body-text: #0d0c0d;
+  --color-link: #0d0686;
   --color-border: currentColor;
 }
 

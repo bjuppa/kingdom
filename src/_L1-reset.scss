@@ -25,8 +25,7 @@ $body-padding: 0 !default;
   @if lightness(get-color(primary)) < 50% {
     $colors: map-merge($colors, (body: scale_color(adjust_hue(get-color(primary), 120deg), $lightness: 99%, $saturation: -75%)));
   } @else {
-    //TODO: when primary color is light, find a contrasting background color
-    $colors: map-merge($colors, (body: scale_color(adjust_hue(get-color(primary), -120deg), $lightness: -70%, $saturation: -75%)));
+    $colors: map-merge($colors, (body: scale_color(adjust_hue(get-color(primary), -120deg), $lightness: -70%, $saturation: -85%)));
   }
 }
 
