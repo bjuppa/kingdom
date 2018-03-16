@@ -39,6 +39,11 @@ $body-padding: 0 !default;
   $colors: map-merge($colors, (border: currentColor));
 }
 
+// Set link color if not already defined in $colors map
+@if not map-has-key($colors, link) {
+  $colors: map-merge($colors, (link: change_color(transform-hue-with-contrast(get-color(primary), blue), lightness(get-color(body, true)))));
+}
+
 body {
   padding: $body-padding;
   @include set-background-color(body);
@@ -233,6 +238,10 @@ button, [type='button'], [type='reset'], [type='submit'] {
 }
 
 //TODO: reset dl (remove padding & make dt bold)
+
+a:link {
+  @include set-color(link);
+}
 
 @import "placeholders/sizing";
 @import "placeholders/spacing";

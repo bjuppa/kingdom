@@ -4,8 +4,8 @@ body {
   padding: 0;
   background-color: #fefdfe;
   background-color: var(--color-body, #fefdfe);
-  color: #0d0c0e;
-  color: var(--color-body-text, #0d0c0e);
+  color: #0e0b0e;
+  color: var(--color-body-text, #0e0b0e);
 }
 
 html,
@@ -211,6 +211,11 @@ button:focus,
 [type='submit']:focus {
   outline: 1px dotted;
   outline: 5px auto -webkit-focus-ring-color;
+}
+
+a:link {
+  color: #053986;
+  color: var(--color-link, #053986);
 }
 
 /* Placeholders for sizing */
@@ -2757,10 +2762,11 @@ button:focus,
 }
 
 :root {
-  --color-primary: #6c3f7d;
-  --color-primary-text: #f0ecf2;
+  --color-primary: #742886;
+  --color-primary-text: #f1eaf3;
   --color-body: #fefdfe;
-  --color-body-text: #0d0c0e;
+  --color-body-text: #0e0b0e;
   --color-border: currentColor;
+  --color-link: #053986;
 }
 

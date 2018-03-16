@@ -2,10 +2,10 @@
 
 body {
   padding: 0;
-  background-color: #fcfdfe;
-  background-color: var(--color-body, #fcfdfe);
-  color: #0a0d0f;
-  color: var(--color-body-text, #0a0d0f);
+  background-color: #fdfefd;
+  background-color: var(--color-body, #fdfefd);
+  color: #0a0f0b;
+  color: var(--color-body-text, #0a0f0b);
 }
 
 html,
@@ -211,6 +211,11 @@ button:focus,
 [type='submit']:focus {
   outline: 1px dotted;
   outline: 5px auto -webkit-focus-ring-color;
+}
+
+a:link {
+  color: #0517d9;
+  color: var(--color-link, #0517d9);
 }
 
 /* Placeholders for sizing */
@@ -3104,10 +3109,11 @@ legend {
 }
 
 :root {
-  --color-primary: #084372;
-  --color-primary-text: #e3ecf4;
-  --color-body: #fcfdfe;
-  --color-body-text: #0a0d0f;
+  --color-primary: #17d944;
+  --color-primary-text: #ecf7ef;
+  --color-body: #fdfefd;
+  --color-body-text: #0a0f0b;
   --color-border: currentColor;
+  --color-link: #0517d9;
 }
 
