@@ -1,5 +1,7 @@
 // Utilities for colors
 
+@import "../modules/colors";
+
 :root {
   @each $name, $color-pair in $colors {
     --color-#{$name}: get-color($name);
@@ -7,4 +9,8 @@
       --color-#{$name}-text: get-color($name, true);
     }
   }
+}
+
+.color-primary {
+  @include set-color(primary);
 }

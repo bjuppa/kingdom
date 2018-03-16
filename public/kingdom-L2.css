@@ -2,10 +2,10 @@
 
 body {
   padding: 0;
-  background-color: #32272b;
-  background-color: var(--color-body, #32272b);
-  color: #ebe9ea;
-  color: var(--color-body-text, #ebe9ea);
+  background-color: #2d2d38;
+  background-color: var(--color-body, #2d2d38);
+  color: #e9e9ec;
+  color: var(--color-body-text, #e9e9ec);
 }
 
 html,
@@ -214,8 +214,8 @@ button:focus,
 }
 
 *:link {
-  color: #8675f4;
-  color: var(--color-link, #8675f4);
+  color: #7775f5;
+  color: var(--color-link, #7775f5);
 }
 
 /* Placeholders for sizing */
@@ -2874,11 +2874,16 @@ textarea:not([cols]) {
 }
 
 :root {
-  --color-primary: #7bf236;
-  --color-primary-text: #070b04;
-  --color-body: #32272b;
-  --color-body-text: #ebe9ea;
-  --color-link: #8675f4;
+  --color-primary: #e86a68;
+  --color-primary-text: #0c0505;
+  --color-body: #2d2d38;
+  --color-body-text: #e9e9ec;
+  --color-link: #7775f5;
   --color-border: currentColor;
+}
+
+.color-primary {
+  color: #e86a68;
+  color: var(--color-primary, #e86a68);
 }
 

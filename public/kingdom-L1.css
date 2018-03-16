@@ -2,10 +2,10 @@
 
 body {
   padding: 0;
-  background-color: #fdfdfe;
-  background-color: var(--color-body, #fdfdfe);
-  color: #0d0b0e;
-  color: var(--color-body-text, #0d0b0e);
+  background-color: #32403c;
+  background-color: var(--color-body, #32403c);
+  color: #eaecec;
+  color: var(--color-body-text, #eaecec);
 }
 
 html,
@@ -214,8 +214,8 @@ button:focus,
 }
 
 *:link {
-  color: #150686;
-  color: var(--color-link, #150686);
+  color: #8d76f5;
+  color: var(--color-link, #8d76f5);
 }
 
 /* Placeholders for sizing */
@@ -2762,11 +2762,16 @@ button:focus,
 }
 
 :root {
-  --color-primary: #118d5d;
-  --color-primary-text: #e7f4ef;
-  --color-body: #fdfdfe;
-  --color-body-text: #0d0b0e;
-  --color-link: #150686;
+  --color-primary: #d28cf3;
+  --color-primary-text: #0b060d;
+  --color-body: #32403c;
+  --color-body-text: #eaecec;
+  --color-link: #8d76f5;
   --color-border: currentColor;
+}
+
+.color-primary {
+  color: #d28cf3;
+  color: var(--color-primary, #d28cf3);
 }
 
