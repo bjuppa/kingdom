@@ -2,10 +2,10 @@
 
 body {
   padding: 0;
-  background-color: #2d2a24;
-  background-color: var(--color-body, #2d2a24);
-  color: #ebeae8;
-  color: var(--color-body-text, #ebeae8);
+  background-color: #fdfdfd;
+  background-color: var(--color-body, #fdfdfd);
+  color: #0c0d0d;
+  color: var(--color-body-text, #0c0d0d);
 }
 
 html,
@@ -214,8 +214,121 @@ button:focus,
 }
 
 *:link {
-  color: #8675f4;
-  color: var(--color-link, #8675f4);
+  color: #060886;
+  color: var(--color-link, #060886);
+}
+
+/* Placeholders for fonts */
+
+/* %font-body */
+
+/* %font-headings */
+
+/* %font-forms */
+
+/* Placeholders for text */
+
+/* %text-1 */
+
+body,
+h4,
+.text-1,
+.text-body {
+  font-size: 1.125rem;
+  line-height: 1.5;
+  --line-height: 1.5;
+  line-height: var(--line-height);
+}
+
+/* %text-2 */
+
+h3,
+.text-2 {
+  font-size: 1.35rem;
+  line-height: 1.44;
+  --line-height: 1.44;
+  line-height: var(--line-height);
+}
+
+/* %text-3 */
+
+h2,
+.text-3 {
+  font-size: 1.62rem;
+  line-height: 1.38;
+  --line-height: 1.38;
+  line-height: var(--line-height);
+}
+
+/* %text-4 */
+
+h1,
+.text-4 {
+  font-size: 1.944rem;
+  line-height: 1.32;
+  --line-height: 1.32;
+  line-height: var(--line-height);
+}
+
+/* %text-5 */
+
+.text-5 {
+  font-size: 2.3328rem;
+  line-height: 1.26;
+  --line-height: 1.26;
+  line-height: var(--line-height);
+}
+
+/* %text-6 */
+
+.text-6 {
+  font-size: 2.79936rem;
+  line-height: 1.2;
+  --line-height: 1.2;
+  line-height: var(--line-height);
+}
+
+/* %text-small */
+
+small,
+.text-small {
+  font-size: 0.83333333em;
+  display: inline;
+  line-height: 0;
+}
+
+/* %text-small-block */
+
+h5,
+.text-small-block {
+  font-size: 0.83333333em;
+  display: block;
+}
+
+/* %text-x-small */
+
+sub,
+sup,
+.text-x-small {
+  font-size: 0.69444444em;
+  display: inline;
+  line-height: 0;
+}
+
+/* %text-x-small-block */
+
+h6,
+.text-x-small-block {
+  font-size: 0.69444444em;
+  display: block;
+}
+
+/* %text-inherit */
+
+*,
+.text-inherit {
+  font-size: inherit;
+  line-height: inherit;
 }
 
 /* Placeholders for sizing */
@@ -2323,119 +2436,6 @@ fieldset,
   margin-bottom: -1px;
 }
 
-/* Placeholders for text */
-
-/* %text-1 */
-
-body,
-h4,
-.text-1,
-.text-body {
-  font-size: 1.125rem;
-  line-height: 1.5;
-  --line-height: 1.5;
-  line-height: var(--line-height);
-}
-
-/* %text-2 */
-
-h3,
-.text-2 {
-  font-size: 1.35rem;
-  line-height: 1.44;
-  --line-height: 1.44;
-  line-height: var(--line-height);
-}
-
-/* %text-3 */
-
-h2,
-.text-3 {
-  font-size: 1.62rem;
-  line-height: 1.38;
-  --line-height: 1.38;
-  line-height: var(--line-height);
-}
-
-/* %text-4 */
-
-h1,
-.text-4 {
-  font-size: 1.944rem;
-  line-height: 1.32;
-  --line-height: 1.32;
-  line-height: var(--line-height);
-}
-
-/* %text-5 */
-
-.text-5 {
-  font-size: 2.3328rem;
-  line-height: 1.26;
-  --line-height: 1.26;
-  line-height: var(--line-height);
-}
-
-/* %text-6 */
-
-.text-6 {
-  font-size: 2.79936rem;
-  line-height: 1.2;
-  --line-height: 1.2;
-  line-height: var(--line-height);
-}
-
-/* %text-small */
-
-small,
-.text-small {
-  font-size: 0.83333333em;
-  display: inline;
-  line-height: 0;
-}
-
-/* %text-small-block */
-
-h5,
-.text-small-block {
-  font-size: 0.83333333em;
-  display: block;
-}
-
-/* %text-x-small */
-
-sub,
-sup,
-.text-x-small {
-  font-size: 0.69444444em;
-  display: inline;
-  line-height: 0;
-}
-
-/* %text-x-small-block */
-
-h6,
-.text-x-small-block {
-  font-size: 0.69444444em;
-  display: block;
-}
-
-/* %text-inherit */
-
-*,
-.text-inherit {
-  font-size: inherit;
-  line-height: inherit;
-}
-
-/* Placeholders for fonts */
-
-/* %font-body */
-
-/* %font-headings */
-
-/* %font-forms */
-
 /* Placeholders for borders */
 
 /* %border-l */
@@ -2876,16 +2876,16 @@ textarea:not([cols]) {
 }
 
 :root {
-  --color-primary: #2be3a0;
-  --color-primary-text: #040907;
-  --color-body: #2d2a24;
-  --color-body-text: #ebeae8;
-  --color-link: #8675f4;
+  --color-primary: #72723b;
+  --color-primary-text: #f1f1eb;
+  --color-body: #fdfdfd;
+  --color-body-text: #0c0d0d;
+  --color-link: #060886;
   --color-border: currentColor;
 }
 
 .color-primary {
-  color: #2be3a0;
-  color: var(--color-primary, #2be3a0);
+  color: #72723b;
+  color: var(--color-primary, #72723b);
 }
 

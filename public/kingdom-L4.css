@@ -2,10 +2,10 @@
 
 body {
   padding: 0;
-  background-color: #36343c;
-  background-color: var(--color-body, #36343c);
-  color: #ebeaec;
-  color: var(--color-body-text, #ebeaec);
+  background-color: #fdfefe;
+  background-color: var(--color-body, #fdfefe);
+  color: #0c0d0d;
+  color: var(--color-body-text, #0c0d0d);
 }
 
 html,
@@ -214,8 +214,149 @@ button:focus,
 }
 
 *:link {
-  color: #768ff5;
-  color: var(--color-link, #768ff5);
+  color: #1e0686;
+  color: var(--color-link, #1e0686);
+}
+
+/* Placeholders for fonts */
+
+/* %font-body */
+
+body {
+  font-family: "Times New Roman", Times, serif;
+  --baseline-shift-factor: 0.62;
+}
+
+body * {
+  font-family: inherit;
+}
+
+/* %font-headings */
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: Verdana, sans-serif;
+  --baseline-shift-factor: 0.75;
+}
+
+h1 *,
+h2 *,
+h3 *,
+h4 *,
+h5 *,
+h6 * {
+  font-family: inherit;
+}
+
+/* %font-forms */
+
+/* Placeholders for text */
+
+/* %text-1 */
+
+body,
+h4,
+.text-1,
+.text-body {
+  font-size: 1.125rem;
+  line-height: 1.6875rem;
+  --line-height: calc(1 * var(--spacing-base, 1.6875rem));
+  line-height: var(--line-height);
+}
+
+/* %text-2 */
+
+h3,
+.text-2 {
+  font-size: 1.25rem;
+  line-height: 1.6875rem;
+  --line-height: calc(1 * var(--spacing-base, 1.6875rem));
+  line-height: var(--line-height);
+}
+
+/* %text-3 */
+
+h2,
+.text-3 {
+  font-size: 1.40625rem;
+  line-height: 1.6875rem;
+  --line-height: calc(1 * var(--spacing-base, 1.6875rem));
+  line-height: var(--line-height);
+}
+
+/* %text-4 */
+
+h1,
+.text-4 {
+  font-size: 2.8125rem;
+  line-height: 3.375rem;
+  --line-height: calc(2 * var(--spacing-base, 1.6875rem));
+  line-height: var(--line-height);
+}
+
+/* %text-5 */
+
+.text-5 {
+  font-size: 4.21875rem;
+  line-height: 5.0625rem;
+  --line-height: calc(3 * var(--spacing-base, 1.6875rem));
+  line-height: var(--line-height);
+}
+
+/* %text-6 */
+
+.text-6 {
+  font-size: 5.625rem;
+  line-height: 6.75rem;
+  --line-height: calc(4 * var(--spacing-base, 1.6875rem));
+  line-height: var(--line-height);
+}
+
+/* %text-small */
+
+small,
+.text-small {
+  font-size: 0.83333333em;
+  display: inline;
+  line-height: 0;
+}
+
+/* %text-small-block */
+
+h5,
+.text-small-block {
+  font-size: 0.83333333em;
+  display: block;
+}
+
+/* %text-x-small */
+
+sub,
+sup,
+.text-x-small {
+  font-size: 0.69444444em;
+  display: inline;
+  line-height: 0;
+}
+
+/* %text-x-small-block */
+
+h6,
+.text-x-small-block {
+  font-size: 0.69444444em;
+  display: block;
+}
+
+/* %text-inherit */
+
+*,
+.text-inherit {
+  font-size: inherit;
+  line-height: inherit;
 }
 
 /* Placeholders for sizing */
@@ -2350,147 +2491,6 @@ hr,
   margin-bottom: -1px;
 }
 
-/* Placeholders for text */
-
-/* %text-1 */
-
-body,
-h4,
-.text-1,
-.text-body {
-  font-size: 1.125rem;
-  line-height: 1.6875rem;
-  --line-height: calc(1 * var(--spacing-base, 1.6875rem));
-  line-height: var(--line-height);
-}
-
-/* %text-2 */
-
-h3,
-.text-2 {
-  font-size: 1.25rem;
-  line-height: 1.6875rem;
-  --line-height: calc(1 * var(--spacing-base, 1.6875rem));
-  line-height: var(--line-height);
-}
-
-/* %text-3 */
-
-h2,
-.text-3 {
-  font-size: 1.40625rem;
-  line-height: 1.6875rem;
-  --line-height: calc(1 * var(--spacing-base, 1.6875rem));
-  line-height: var(--line-height);
-}
-
-/* %text-4 */
-
-h1,
-.text-4 {
-  font-size: 2.8125rem;
-  line-height: 3.375rem;
-  --line-height: calc(2 * var(--spacing-base, 1.6875rem));
-  line-height: var(--line-height);
-}
-
-/* %text-5 */
-
-.text-5 {
-  font-size: 4.21875rem;
-  line-height: 5.0625rem;
-  --line-height: calc(3 * var(--spacing-base, 1.6875rem));
-  line-height: var(--line-height);
-}
-
-/* %text-6 */
-
-.text-6 {
-  font-size: 5.625rem;
-  line-height: 6.75rem;
-  --line-height: calc(4 * var(--spacing-base, 1.6875rem));
-  line-height: var(--line-height);
-}
-
-/* %text-small */
-
-small,
-.text-small {
-  font-size: 0.83333333em;
-  display: inline;
-  line-height: 0;
-}
-
-/* %text-small-block */
-
-h5,
-.text-small-block {
-  font-size: 0.83333333em;
-  display: block;
-}
-
-/* %text-x-small */
-
-sub,
-sup,
-.text-x-small {
-  font-size: 0.69444444em;
-  display: inline;
-  line-height: 0;
-}
-
-/* %text-x-small-block */
-
-h6,
-.text-x-small-block {
-  font-size: 0.69444444em;
-  display: block;
-}
-
-/* %text-inherit */
-
-*,
-.text-inherit {
-  font-size: inherit;
-  line-height: inherit;
-}
-
-/* Placeholders for fonts */
-
-/* %font-body */
-
-body {
-  font-family: "Times New Roman", Times, serif;
-  --baseline-shift-factor: 0.62;
-}
-
-body * {
-  font-family: inherit;
-}
-
-/* %font-headings */
-
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-  font-family: Verdana, sans-serif;
-  --baseline-shift-factor: 0.75;
-}
-
-h1 *,
-h2 *,
-h3 *,
-h4 *,
-h5 *,
-h6 * {
-  font-family: inherit;
-}
-
-/* %font-forms */
-
 /* Placeholders for borders */
 
 /* %border-l */
@@ -3340,16 +3340,16 @@ legend {
 }
 
 :root {
-  --color-primary: #d8ae9c;
-  --color-primary-text: #0b0807;
-  --color-body: #36343c;
-  --color-body-text: #ebeaec;
-  --color-link: #768ff5;
+  --color-primary: #8ea03b;
+  --color-primary-text: #f3f4ed;
+  --color-body: #fdfefe;
+  --color-body-text: #0c0d0d;
+  --color-link: #1e0686;
   --color-border: currentColor;
 }
 
 .color-primary {
-  color: #d8ae9c;
-  color: var(--color-primary, #d8ae9c);
+  color: #8ea03b;
+  color: var(--color-primary, #8ea03b);
 }
 

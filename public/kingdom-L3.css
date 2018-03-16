@@ -4,8 +4,8 @@ body {
   padding: 0;
   background-color: #fdfdfd;
   background-color: var(--color-body, #fdfdfd);
-  color: #0e0b0d;
-  color: var(--color-body-text, #0e0b0d);
+  color: #0c0d0d;
+  color: var(--color-body-text, #0c0d0d);
 }
 
 html,
@@ -214,8 +214,121 @@ button:focus,
 }
 
 *:link {
-  color: #061c86;
-  color: var(--color-link, #061c86);
+  color: #0d0686;
+  color: var(--color-link, #0d0686);
+}
+
+/* Placeholders for fonts */
+
+/* %font-body */
+
+/* %font-headings */
+
+/* %font-forms */
+
+/* Placeholders for text */
+
+/* %text-1 */
+
+body,
+h4,
+.text-1,
+.text-body {
+  font-size: 1.125rem;
+  line-height: 1.6875rem;
+  --line-height: calc(1 * var(--spacing-base, 1.6875rem));
+  line-height: var(--line-height);
+}
+
+/* %text-2 */
+
+h3,
+.text-2 {
+  font-size: 1.25rem;
+  line-height: 1.6875rem;
+  --line-height: calc(1 * var(--spacing-base, 1.6875rem));
+  line-height: var(--line-height);
+}
+
+/* %text-3 */
+
+h2,
+.text-3 {
+  font-size: 1.40625rem;
+  line-height: 1.6875rem;
+  --line-height: calc(1 * var(--spacing-base, 1.6875rem));
+  line-height: var(--line-height);
+}
+
+/* %text-4 */
+
+h1,
+.text-4 {
+  font-size: 2.8125rem;
+  line-height: 3.375rem;
+  --line-height: calc(2 * var(--spacing-base, 1.6875rem));
+  line-height: var(--line-height);
+}
+
+/* %text-5 */
+
+.text-5 {
+  font-size: 4.21875rem;
+  line-height: 5.0625rem;
+  --line-height: calc(3 * var(--spacing-base, 1.6875rem));
+  line-height: var(--line-height);
+}
+
+/* %text-6 */
+
+.text-6 {
+  font-size: 5.625rem;
+  line-height: 6.75rem;
+  --line-height: calc(4 * var(--spacing-base, 1.6875rem));
+  line-height: var(--line-height);
+}
+
+/* %text-small */
+
+small,
+.text-small {
+  font-size: 0.83333333em;
+  display: inline;
+  line-height: 0;
+}
+
+/* %text-small-block */
+
+h5,
+.text-small-block {
+  font-size: 0.83333333em;
+  display: block;
+}
+
+/* %text-x-small */
+
+sub,
+sup,
+.text-x-small {
+  font-size: 0.69444444em;
+  display: inline;
+  line-height: 0;
+}
+
+/* %text-x-small-block */
+
+h6,
+.text-x-small-block {
+  font-size: 0.69444444em;
+  display: block;
+}
+
+/* %text-inherit */
+
+*,
+.text-inherit {
+  font-size: inherit;
+  line-height: inherit;
 }
 
 /* Placeholders for sizing */
@@ -2326,119 +2439,6 @@ hr,
   margin-bottom: -1px;
 }
 
-/* Placeholders for text */
-
-/* %text-1 */
-
-body,
-h4,
-.text-1,
-.text-body {
-  font-size: 1.125rem;
-  line-height: 1.6875rem;
-  --line-height: calc(1 * var(--spacing-base, 1.6875rem));
-  line-height: var(--line-height);
-}
-
-/* %text-2 */
-
-h3,
-.text-2 {
-  font-size: 1.25rem;
-  line-height: 1.6875rem;
-  --line-height: calc(1 * var(--spacing-base, 1.6875rem));
-  line-height: var(--line-height);
-}
-
-/* %text-3 */
-
-h2,
-.text-3 {
-  font-size: 1.40625rem;
-  line-height: 1.6875rem;
-  --line-height: calc(1 * var(--spacing-base, 1.6875rem));
-  line-height: var(--line-height);
-}
-
-/* %text-4 */
-
-h1,
-.text-4 {
-  font-size: 2.8125rem;
-  line-height: 3.375rem;
-  --line-height: calc(2 * var(--spacing-base, 1.6875rem));
-  line-height: var(--line-height);
-}
-
-/* %text-5 */
-
-.text-5 {
-  font-size: 4.21875rem;
-  line-height: 5.0625rem;
-  --line-height: calc(3 * var(--spacing-base, 1.6875rem));
-  line-height: var(--line-height);
-}
-
-/* %text-6 */
-
-.text-6 {
-  font-size: 5.625rem;
-  line-height: 6.75rem;
-  --line-height: calc(4 * var(--spacing-base, 1.6875rem));
-  line-height: var(--line-height);
-}
-
-/* %text-small */
-
-small,
-.text-small {
-  font-size: 0.83333333em;
-  display: inline;
-  line-height: 0;
-}
-
-/* %text-small-block */
-
-h5,
-.text-small-block {
-  font-size: 0.83333333em;
-  display: block;
-}
-
-/* %text-x-small */
-
-sub,
-sup,
-.text-x-small {
-  font-size: 0.69444444em;
-  display: inline;
-  line-height: 0;
-}
-
-/* %text-x-small-block */
-
-h6,
-.text-x-small-block {
-  font-size: 0.69444444em;
-  display: block;
-}
-
-/* %text-inherit */
-
-*,
-.text-inherit {
-  font-size: inherit;
-  line-height: inherit;
-}
-
-/* Placeholders for fonts */
-
-/* %font-body */
-
-/* %font-headings */
-
-/* %font-forms */
-
 /* Placeholders for borders */
 
 /* %border-l */
@@ -3116,16 +3116,16 @@ legend {
 }
 
 :root {
-  --color-primary: #114c6a;
-  --color-primary-text: #e5eef3;
+  --color-primary: #656837;
+  --color-primary-text: #f0f0eb;
   --color-body: #fdfdfd;
-  --color-body-text: #0e0b0d;
-  --color-link: #061c86;
+  --color-body-text: #0c0d0d;
+  --color-link: #0d0686;
   --color-border: currentColor;
 }
 
 .color-primary {
-  color: #114c6a;
-  color: var(--color-primary, #114c6a);
+  color: #656837;
+  color: var(--color-primary, #656837);
 }
 

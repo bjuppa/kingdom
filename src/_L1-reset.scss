@@ -236,8 +236,9 @@ button, [type='button'], [type='reset'], [type='submit'] {
   @include set-color(link);
 }
 
+@import "placeholders/fonts";
+@import "placeholders/text";
+
 @import "placeholders/sizing";
 @import "placeholders/spacing";
-@import "placeholders/text";
-@import "placeholders/fonts";
 @import "placeholders/borders";

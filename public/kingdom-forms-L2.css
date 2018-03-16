@@ -2,10 +2,10 @@
 
 body {
   padding: 0;
-  background-color: #28222c;
-  background-color: var(--color-body, #28222c);
-  color: #eae8eb;
-  color: var(--color-body-text, #eae8eb);
+  background-color: #302627;
+  background-color: var(--color-body, #302627);
+  color: #ebe9e9;
+  color: var(--color-body-text, #ebe9e9);
 }
 
 html,
@@ -214,8 +214,121 @@ button:focus,
 }
 
 *:link {
-  color: #8475f4;
-  color: var(--color-link, #8475f4);
+  color: #7588f4;
+  color: var(--color-link, #7588f4);
+}
+
+/* Placeholders for fonts */
+
+/* %font-body */
+
+/* %font-headings */
+
+/* %font-forms */
+
+/* Placeholders for text */
+
+/* %text-1 */
+
+body,
+h4,
+.text-1,
+.text-body {
+  font-size: 1.125rem;
+  line-height: 1.5;
+  --line-height: 1.5;
+  line-height: var(--line-height);
+}
+
+/* %text-2 */
+
+h3,
+.text-2 {
+  font-size: 1.35rem;
+  line-height: 1.44;
+  --line-height: 1.44;
+  line-height: var(--line-height);
+}
+
+/* %text-3 */
+
+h2,
+.text-3 {
+  font-size: 1.62rem;
+  line-height: 1.38;
+  --line-height: 1.38;
+  line-height: var(--line-height);
+}
+
+/* %text-4 */
+
+h1,
+.text-4 {
+  font-size: 1.944rem;
+  line-height: 1.32;
+  --line-height: 1.32;
+  line-height: var(--line-height);
+}
+
+/* %text-5 */
+
+.text-5 {
+  font-size: 2.3328rem;
+  line-height: 1.26;
+  --line-height: 1.26;
+  line-height: var(--line-height);
+}
+
+/* %text-6 */
+
+.text-6 {
+  font-size: 2.79936rem;
+  line-height: 1.2;
+  --line-height: 1.2;
+  line-height: var(--line-height);
+}
+
+/* %text-small */
+
+small,
+.text-small {
+  font-size: 0.83333333em;
+  display: inline;
+  line-height: 0;
+}
+
+/* %text-small-block */
+
+h5,
+.text-small-block {
+  font-size: 0.83333333em;
+  display: block;
+}
+
+/* %text-x-small */
+
+sub,
+sup,
+.text-x-small {
+  font-size: 0.69444444em;
+  display: inline;
+  line-height: 0;
+}
+
+/* %text-x-small-block */
+
+h6,
+.text-x-small-block {
+  font-size: 0.69444444em;
+  display: block;
+}
+
+/* %text-inherit */
+
+*,
+.text-inherit {
+  font-size: inherit;
+  line-height: inherit;
 }
 
 /* Placeholders for sizing */
@@ -2328,119 +2441,6 @@ fieldset,
   margin-bottom: -1px;
 }
 
-/* Placeholders for text */
-
-/* %text-1 */
-
-body,
-h4,
-.text-1,
-.text-body {
-  font-size: 1.125rem;
-  line-height: 1.5;
-  --line-height: 1.5;
-  line-height: var(--line-height);
-}
-
-/* %text-2 */
-
-h3,
-.text-2 {
-  font-size: 1.35rem;
-  line-height: 1.44;
-  --line-height: 1.44;
-  line-height: var(--line-height);
-}
-
-/* %text-3 */
-
-h2,
-.text-3 {
-  font-size: 1.62rem;
-  line-height: 1.38;
-  --line-height: 1.38;
-  line-height: var(--line-height);
-}
-
-/* %text-4 */
-
-h1,
-.text-4 {
-  font-size: 1.944rem;
-  line-height: 1.32;
-  --line-height: 1.32;
-  line-height: var(--line-height);
-}
-
-/* %text-5 */
-
-.text-5 {
-  font-size: 2.3328rem;
-  line-height: 1.26;
-  --line-height: 1.26;
-  line-height: var(--line-height);
-}
-
-/* %text-6 */
-
-.text-6 {
-  font-size: 2.79936rem;
-  line-height: 1.2;
-  --line-height: 1.2;
-  line-height: var(--line-height);
-}
-
-/* %text-small */
-
-small,
-.text-small {
-  font-size: 0.83333333em;
-  display: inline;
-  line-height: 0;
-}
-
-/* %text-small-block */
-
-h5,
-.text-small-block {
-  font-size: 0.83333333em;
-  display: block;
-}
-
-/* %text-x-small */
-
-sub,
-sup,
-.text-x-small {
-  font-size: 0.69444444em;
-  display: inline;
-  line-height: 0;
-}
-
-/* %text-x-small-block */
-
-h6,
-.text-x-small-block {
-  font-size: 0.69444444em;
-  display: block;
-}
-
-/* %text-inherit */
-
-*,
-.text-inherit {
-  font-size: inherit;
-  line-height: inherit;
-}
-
-/* Placeholders for fonts */
-
-/* %font-body */
-
-/* %font-headings */
-
-/* %font-forms */
-
 /* Placeholders for borders */
 
 /* %border-l */
@@ -2881,17 +2881,17 @@ textarea:not([cols]) {
 }
 
 :root {
-  --color-primary: #ef9b15;
-  --color-primary-text: #090704;
-  --color-body: #28222c;
-  --color-body-text: #eae8eb;
-  --color-link: #8475f4;
+  --color-primary: #50e935;
+  --color-primary-text: #050a04;
+  --color-body: #302627;
+  --color-body-text: #ebe9e9;
+  --color-link: #7588f4;
   --color-border: currentColor;
 }
 
 .color-primary {
-  color: #ef9b15;
-  color: var(--color-primary, #ef9b15);
+  color: #50e935;
+  color: var(--color-primary, #50e935);
 }
 
 /* Kingdom CSS Extension - Forms */
@@ -2904,7 +2904,7 @@ label.disabled,
 label[disabled],
 label:disabled,
 fieldset:disabled label:not([for]) {
-  color: #807e81;
+  color: #817e7f;
 }
 
 /* %label-invalid */
@@ -2916,8 +2916,8 @@ fieldset:disabled label:not([for]) {
 label.invalid,
 label:invalid,
 label[aria-invalid] {
-  color: #ef2f15;
-  color: var(--color-caution, #ef2f15);
+  color: #e93550;
+  color: var(--color-caution, #e93550);
 }
 
 /* Inputs */
@@ -3018,7 +3018,7 @@ textarea,
 select {
   background: white;
   background-clip: padding-box;
-  border-color: #c0bcc2;
+  border-color: #c2bcbd;
   border-style: solid;
   border-radius: 0.1875rem;
 }
@@ -3029,13 +3029,13 @@ textarea:invalid,
 textarea[aria-invalid],
 select:invalid,
 select[aria-invalid] {
-  border-color: #ef2f15;
+  border-color: #e93550;
 }
 
 input:disabled,
 textarea:disabled,
 select:disabled {
-  background-color: rgba(230, 229, 230, 0.75);
+  background-color: rgba(230, 229, 229, 0.75);
 }
 
 input,
@@ -3070,12 +3070,12 @@ textarea::placeholder {
 
 input:-moz-read-only,
 textarea:-moz-read-only {
-  background-color: rgba(230, 229, 230, 0.75);
+  background-color: rgba(230, 229, 229, 0.75);
 }
 
 input:read-only,
 textarea:read-only {
-  background-color: rgba(230, 229, 230, 0.75);
+  background-color: rgba(230, 229, 229, 0.75);
 }
 
 [type='checkbox'],
@@ -3097,7 +3097,7 @@ button,
 .button-petty,
 .button-large,
 .button-destructive {
-  color: #ef9b15;
+  color: #50e935;
   background: transparent;
   background-clip: padding-box;
   display: inline-block;
@@ -3111,7 +3111,7 @@ button,
   height: var(--line-height, 1.5rem);
   max-height: 1.5rem;
   max-height: var(--line-height, 1.5rem);
-  border-color: #ef9b15;
+  border-color: #50e935;
   border-style: solid;
   border-radius: 0.1875rem;
   -webkit-box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.08);
@@ -3133,8 +3133,8 @@ button:focus,
 .button-large:focus,
 .button-destructive:focus {
   outline: none;
-  -webkit-box-shadow: 0 0 0 0.2rem #f8d6a0;
-          box-shadow: 0 0 0 0.2rem #f8d6a0;
+  -webkit-box-shadow: 0 0 0 0.2rem #aff5a3;
+          box-shadow: 0 0 0 0.2rem #aff5a3;
 }
 
 button:active,
@@ -3146,7 +3146,7 @@ button:active,
 .button-petty:active,
 .button-large:active,
 .button-destructive:active {
-  color: #ef9b15;
+  color: #50e935;
   -webkit-box-shadow: inset 0 2px 4px 0 rgba(0, 0, 0, 0.08);
           box-shadow: inset 0 2px 4px 0 rgba(0, 0, 0, 0.08);
 }
@@ -3194,23 +3194,23 @@ fieldset:disabled .button-petty,
 fieldset:disabled .button-large,
 fieldset:disabled .button-destructive {
   pointer-events: none;
-  background-color: rgba(230, 229, 230, 0.75);
-  background-color: var(--color-disabled, rgba(230, 229, 230, 0.75));
-  color: #807e81;
-  color: var(--color-disabled-text, #807e81);
-  border-color: rgba(230, 229, 230, 0.75);
+  background-color: rgba(230, 229, 229, 0.75);
+  background-color: var(--color-disabled, rgba(230, 229, 229, 0.75));
+  color: #817e7f;
+  color: var(--color-disabled-text, #817e7f);
+  border-color: rgba(230, 229, 229, 0.75);
 }
 
 /* Prominent button */
 
 .button-prime {
-  background: #ef9b15;
-  border-color: #ef9b15;
-  color: #090704;
+  background: #50e935;
+  border-color: #50e935;
+  color: #050a04;
 }
 
 .button-prime:active {
-  color: #090704;
+  color: #050a04;
 }
 
 /* Standard button */
@@ -3261,27 +3261,27 @@ fieldset:disabled .button-destructive {
 /* Cautionary button */
 
 .button-destructive {
-  color: #ef2f15;
-  border-color: #ef2f15;
+  color: #e93550;
+  border-color: #e93550;
 }
 
 .button-destructive:active {
-  color: #ef2f15;
+  color: #e93550;
 }
 
 .button-destructive:focus {
-  -webkit-box-shadow: 0 0 0 0.2rem #f8aaa0;
-          box-shadow: 0 0 0 0.2rem #f8aaa0;
+  -webkit-box-shadow: 0 0 0 0.2rem #f5a3af;
+          box-shadow: 0 0 0 0.2rem #f5a3af;
 }
 
 .button-destructive.button-prime {
-  background: #ef2f15;
-  border-color: #ef2f15;
-  color: #090404;
+  background: #e93550;
+  border-color: #e93550;
+  color: #0a0405;
 }
 
 .button-destructive.button-prime:active {
-  color: #090404;
+  color: #0a0405;
 }
 
 /* Form layout */
