@@ -2,10 +2,10 @@
 
 body {
   padding: 0;
-  background-color: #3b1e44;
-  background-color: var(--color-body, #3b1e44);
-  color: #ece6ee;
-  color: var(--color-body-text, #ece6ee);
+  background-color: #fdfdfd;
+  background-color: var(--color-body, #fdfdfd);
+  color: #0b0e0d;
+  color: var(--color-body-text, #0b0e0d);
 }
 
 html,
@@ -214,8 +214,8 @@ button:focus,
 }
 
 *:link {
-  color: #7595f5;
-  color: var(--color-link, #7595f5);
+  color: #130686;
+  color: var(--color-link, #130686);
 }
 
 /* Placeholders for sizing */
@@ -1032,6 +1032,7 @@ textarea,
 time,
 tt,
 var,
+dl > *,
 figure *,
 picture *,
 object *,
@@ -2776,6 +2777,10 @@ select * {
   font-size: medium;
 }
 
+dt {
+  font-weight: bold;
+}
+
 textarea:not([cols]) {
   width: 100%;
 }
@@ -3109,11 +3114,11 @@ legend {
 }
 
 :root {
-  --color-primary: #adf396;
-  --color-primary-text: #080e06;
-  --color-body: #3b1e44;
-  --color-body-text: #ece6ee;
-  --color-link: #7595f5;
+  --color-primary: #235742;
+  --color-primary-text: #e8f0ec;
+  --color-body: #fdfdfd;
+  --color-body-text: #0b0e0d;
+  --color-link: #130686;
   --color-border: currentColor;
 }
 

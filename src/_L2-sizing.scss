@@ -48,6 +48,13 @@ h1, h2, h3, h4, h5, h6 {
   @extend %mt-0;
 }
 
+dl {
+  // Reset vertical spacing on children
+  > * {
+    @extend %mt-0;
+  }
+}
+
 figure, picture, object, select, table, audio, video, map {
   // Reset all vertical spacing deep inside
   * {
@@ -110,6 +117,10 @@ h5 {
 
 h6 {
   @extend %text-x-small-block;
+}
+
+dt {
+  font-weight: bold; // Make description lists stand out after margins have been removed on dd
 }
 
 // Size form inputs

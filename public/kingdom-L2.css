@@ -2,10 +2,10 @@
 
 body {
   padding: 0;
-  background-color: #fcfefd;
-  background-color: var(--color-body, #fcfefd);
-  color: #0a0f0d;
-  color: var(--color-body-text, #0a0f0d);
+  background-color: #292541;
+  background-color: var(--color-body, #292541);
+  color: #e9e8ed;
+  color: var(--color-body-text, #e9e8ed);
 }
 
 html,
@@ -214,8 +214,8 @@ button:focus,
 }
 
 *:link {
-  color: #080686;
-  color: var(--color-link, #080686);
+  color: #8475f5;
+  color: var(--color-link, #8475f5);
 }
 
 /* Placeholders for sizing */
@@ -1031,6 +1031,7 @@ textarea,
 time,
 tt,
 var,
+dl > *,
 figure *,
 picture *,
 object *,
@@ -2773,6 +2774,10 @@ select * {
   font-size: medium;
 }
 
+dt {
+  font-weight: bold;
+}
+
 textarea:not([cols]) {
   width: 100%;
 }
@@ -2869,11 +2874,11 @@ textarea:not([cols]) {
 }
 
 :root {
-  --color-primary: #157546;
-  --color-primary-text: #e6f3ed;
-  --color-body: #fcfefd;
-  --color-body-text: #0a0f0d;
-  --color-link: #080686;
+  --color-primary: #e1e7b1;
+  --color-primary-text: #0c0d07;
+  --color-body: #292541;
+  --color-body-text: #e9e8ed;
+  --color-link: #8475f5;
   --color-border: currentColor;
 }
 

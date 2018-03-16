@@ -2,10 +2,10 @@
 
 body {
   padding: 0;
-  background-color: #fdfefe;
-  background-color: var(--color-body, #fdfefe);
-  color: #0b0d0e;
-  color: var(--color-body-text, #0b0d0e);
+  background-color: #fdfdfe;
+  background-color: var(--color-body, #fdfdfe);
+  color: #0c0a0f;
+  color: var(--color-body-text, #0c0a0f);
 }
 
 html,
@@ -214,8 +214,8 @@ button:focus,
 }
 
 *:link {
-  color: #062286;
-  color: var(--color-link, #062286);
+  color: #061e86;
+  color: var(--color-link, #061e86);
 }
 
 /* Placeholders for sizing */
@@ -1032,6 +1032,7 @@ textarea,
 time,
 tt,
 var,
+dl > *,
 figure *,
 picture *,
 object *,
@@ -2828,6 +2829,10 @@ select * {
   font-size: medium;
 }
 
+dt {
+  font-weight: bold;
+}
+
 textarea:not([cols]) {
   width: 100%;
 }
@@ -3333,11 +3338,11 @@ legend {
 }
 
 :root {
-  --color-primary: #357088;
-  --color-primary-text: #ebf0f2;
-  --color-body: #fdfefe;
-  --color-body-text: #0b0d0e;
-  --color-link: #062286;
+  --color-primary: #3b1986;
+  --color-primary-text: #ebe7f3;
+  --color-body: #fdfdfe;
+  --color-body-text: #0c0a0f;
+  --color-link: #061e86;
   --color-border: currentColor;
 }
 
