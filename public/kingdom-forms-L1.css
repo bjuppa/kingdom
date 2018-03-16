@@ -2,10 +2,10 @@
 
 body {
   padding: 0;
-  background-color: #fdfefd;
-  background-color: var(--color-body, #fdfefd);
-  color: #0c0e0c;
-  color: var(--color-body-text, #0c0e0c);
+  background-color: #fefdfd;
+  background-color: var(--color-body, #fefdfd);
+  color: #0d0c0d;
+  color: var(--color-body-text, #0d0c0d);
 }
 
 html,
@@ -214,8 +214,8 @@ button:focus,
 }
 
 *:link {
-  color: #062686;
-  color: var(--color-link, #062686);
+  color: #060d86;
+  color: var(--color-link, #060d86);
 }
 
 /* Placeholders for fonts */
@@ -2769,17 +2769,17 @@ label:not([for]) + label:not([for]),
 }
 
 :root {
-  --color-primary: #a01c3d;
-  --color-primary-text: #f5e9ec;
-  --color-body: #fdfefd;
-  --color-body-text: #0c0e0c;
-  --color-link: #062686;
+  --color-primary: #3d6a8f;
+  --color-primary-text: #edf0f3;
+  --color-body: #fefdfd;
+  --color-body-text: #0d0c0d;
+  --color-link: #060d86;
   --color-border: currentColor;
 }
 
 .color-primary {
-  color: #a01c3d;
-  color: var(--color-primary, #a01c3d);
+  color: #3d6a8f;
+  color: var(--color-primary, #3d6a8f);
 }
 
 /* Kingdom CSS Extension - Forms */
@@ -2792,7 +2792,7 @@ label.disabled,
 label[disabled],
 label:disabled,
 fieldset:disabled label:not([for]) {
-  color: #7f817e;
+  color: #817e80;
 }
 
 /* %label-invalid */
@@ -2804,8 +2804,8 @@ fieldset:disabled label:not([for]) {
 label.invalid,
 label:invalid,
 label[aria-invalid] {
-  color: #ad1f1f;
-  color: var(--color-caution, #ad1f1f);
+  color: #a3292f;
+  color: var(--color-caution, #a3292f);
 }
 
 /* Inputs */
@@ -2906,7 +2906,7 @@ textarea,
 select {
   background: white;
   background-clip: padding-box;
-  border-color: #bec2bc;
+  border-color: #c2bcc0;
   border-style: solid;
   border-radius: 0.125rem;
 }
@@ -2917,13 +2917,13 @@ textarea:invalid,
 textarea[aria-invalid],
 select:invalid,
 select[aria-invalid] {
-  border-color: #ad1f1f;
+  border-color: #a3292f;
 }
 
 input:disabled,
 textarea:disabled,
 select:disabled {
-  background-color: rgba(229, 230, 229, 0.75);
+  background-color: rgba(230, 229, 230, 0.75);
 }
 
 input,
@@ -2958,12 +2958,12 @@ textarea::placeholder {
 
 input:-moz-read-only,
 textarea:-moz-read-only {
-  background-color: rgba(229, 230, 229, 0.75);
+  background-color: rgba(230, 229, 230, 0.75);
 }
 
 input:read-only,
 textarea:read-only {
-  background-color: rgba(229, 230, 229, 0.75);
+  background-color: rgba(230, 229, 230, 0.75);
 }
 
 [type='checkbox'],
@@ -2985,7 +2985,7 @@ button,
 .button-petty,
 .button-large,
 .button-destructive {
-  color: #a01c3d;
+  color: #3d6a8f;
   background: transparent;
   background-clip: padding-box;
   display: inline-block;
@@ -2999,7 +2999,7 @@ button,
   height: var(--line-height, 1rem);
   max-height: 1rem;
   max-height: var(--line-height, 1rem);
-  border-color: #a01c3d;
+  border-color: #3d6a8f;
   border-style: solid;
   border-radius: 0.125rem;
   -webkit-box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.08);
@@ -3021,8 +3021,8 @@ button:focus,
 .button-large:focus,
 .button-destructive:focus {
   outline: none;
-  -webkit-box-shadow: 0 0 0 0.2rem #f0a8ba;
-          box-shadow: 0 0 0 0.2rem #f0a8ba;
+  -webkit-box-shadow: 0 0 0 0.2rem #b8cee0;
+          box-shadow: 0 0 0 0.2rem #b8cee0;
 }
 
 button:active,
@@ -3034,7 +3034,7 @@ button:active,
 .button-petty:active,
 .button-large:active,
 .button-destructive:active {
-  color: #a01c3d;
+  color: #3d6a8f;
   -webkit-box-shadow: inset 0 2px 4px 0 rgba(0, 0, 0, 0.08);
           box-shadow: inset 0 2px 4px 0 rgba(0, 0, 0, 0.08);
 }
@@ -3082,23 +3082,23 @@ fieldset:disabled .button-petty,
 fieldset:disabled .button-large,
 fieldset:disabled .button-destructive {
   pointer-events: none;
-  background-color: rgba(229, 230, 229, 0.75);
-  background-color: var(--color-disabled, rgba(229, 230, 229, 0.75));
-  color: #7f817e;
-  color: var(--color-disabled-text, #7f817e);
-  border-color: rgba(229, 230, 229, 0.75);
+  background-color: rgba(230, 229, 230, 0.75);
+  background-color: var(--color-disabled, rgba(230, 229, 230, 0.75));
+  color: #817e80;
+  color: var(--color-disabled-text, #817e80);
+  border-color: rgba(230, 229, 230, 0.75);
 }
 
 /* Prominent button */
 
 .button-prime {
-  background: #a01c3d;
-  border-color: #a01c3d;
-  color: #f5e9ec;
+  background: #3d6a8f;
+  border-color: #3d6a8f;
+  color: #edf0f3;
 }
 
 .button-prime:active {
-  color: #f5e9ec;
+  color: #edf0f3;
 }
 
 /* Standard button */
@@ -3149,27 +3149,27 @@ fieldset:disabled .button-destructive {
 /* Cautionary button */
 
 .button-destructive {
-  color: #ad1f1f;
-  border-color: #ad1f1f;
+  color: #a3292f;
+  border-color: #a3292f;
 }
 
 .button-destructive:active {
-  color: #ad1f1f;
+  color: #a3292f;
 }
 
 .button-destructive:focus {
-  -webkit-box-shadow: 0 0 0 0.2rem #f0a8a8;
-          box-shadow: 0 0 0 0.2rem #f0a8a8;
+  -webkit-box-shadow: 0 0 0 0.2rem #ebadb0;
+          box-shadow: 0 0 0 0.2rem #ebadb0;
 }
 
 .button-destructive.button-prime {
-  background: #ad1f1f;
-  border-color: #ad1f1f;
-  color: #f5eaea;
+  background: #a3292f;
+  border-color: #a3292f;
+  color: #f4ebec;
 }
 
 .button-destructive.button-prime:active {
-  color: #f5eaea;
+  color: #f4ebec;
 }
 
 /* Form layout */

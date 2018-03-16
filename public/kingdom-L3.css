@@ -2,10 +2,10 @@
 
 body {
   padding: 0;
-  background-color: #fdfdfd;
-  background-color: var(--color-body, #fdfdfd);
-  color: #0c0d0d;
-  color: var(--color-body-text, #0c0d0d);
+  background-color: #2d3639;
+  background-color: var(--color-body, #2d3639);
+  color: #e9ebec;
+  color: var(--color-body-text, #e9ebec);
 }
 
 html,
@@ -214,13 +214,22 @@ button:focus,
 }
 
 *:link {
-  color: #0d0686;
-  color: var(--color-link, #0d0686);
+  color: #758ff5;
+  color: var(--color-link, #758ff5);
 }
 
 /* Placeholders for fonts */
 
 /* %font-body */
+
+body {
+  font-family: Verdana, sans-serif;
+  --baseline-shift-factor: 0.75;
+}
+
+body * {
+  font-family: inherit;
+}
 
 /* %font-headings */
 
@@ -3116,16 +3125,16 @@ legend {
 }
 
 :root {
-  --color-primary: #656837;
-  --color-primary-text: #f0f0eb;
-  --color-body: #fdfdfd;
-  --color-body-text: #0c0d0d;
-  --color-link: #0d0686;
+  --color-primary: #ec69c5;
+  --color-primary-text: #0c050a;
+  --color-body: #2d3639;
+  --color-body-text: #e9ebec;
+  --color-link: #758ff5;
   --color-border: currentColor;
 }
 
 .color-primary {
-  color: #656837;
-  color: var(--color-primary, #656837);
+  color: #ec69c5;
+  color: var(--color-primary, #ec69c5);
 }
 

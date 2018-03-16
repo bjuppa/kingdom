@@ -2,10 +2,10 @@
 
 body {
   padding: 0;
-  background-color: #fdfefe;
-  background-color: var(--color-body, #fdfefe);
-  color: #0c0d0d;
-  color: var(--color-body-text, #0c0d0d);
+  background-color: #fdfdfd;
+  background-color: var(--color-body, #fdfdfd);
+  color: #0d0d0c;
+  color: var(--color-body-text, #0d0d0c);
 }
 
 html,
@@ -214,8 +214,8 @@ button:focus,
 }
 
 *:link {
-  color: #1e0686;
-  color: var(--color-link, #1e0686);
+  color: #062686;
+  color: var(--color-link, #062686);
 }
 
 /* Placeholders for fonts */
@@ -3340,16 +3340,16 @@ legend {
 }
 
 :root {
-  --color-primary: #8ea03b;
-  --color-primary-text: #f3f4ed;
-  --color-body: #fdfefe;
-  --color-body-text: #0c0d0d;
-  --color-link: #1e0686;
+  --color-primary: #642654;
+  --color-primary-text: #f1e8ee;
+  --color-body: #fdfdfd;
+  --color-body-text: #0d0d0c;
+  --color-link: #062686;
   --color-border: currentColor;
 }
 
 .color-primary {
-  color: #8ea03b;
-  color: var(--color-primary, #8ea03b);
+  color: #642654;
+  color: var(--color-primary, #642654);
 }
 
