@@ -2,10 +2,10 @@
 
 body {
   padding: 0;
-  background-color: #fefcfc;
-  background-color: var(--color-body, #fefcfc);
-  color: #0f0a0a;
-  color: var(--color-body-text, #0f0a0a);
+  background-color: #392617;
+  background-color: var(--color-body, #392617);
+  color: #eee9e5;
+  color: var(--color-body-text, #eee9e5);
 }
 
 html,
@@ -213,9 +213,9 @@ button:focus,
   outline: 5px auto -webkit-focus-ring-color;
 }
 
-a:link {
-  color: #060d86;
-  color: var(--color-link, #060d86);
+*:link {
+  color: #757df4;
+  color: var(--color-link, #757df4);
 }
 
 /* Placeholders for sizing */
@@ -3338,11 +3338,11 @@ legend {
 }
 
 :root {
-  --color-primary: #5e0d11;
-  --color-primary-text: #f3e3e4;
-  --color-body: #fefcfc;
-  --color-body-text: #0f0a0a;
-  --color-link: #060d86;
+  --color-primary: #50abf1;
+  --color-primary-text: #05080b;
+  --color-body: #392617;
+  --color-body-text: #eee9e5;
+  --color-link: #757df4;
   --color-border: currentColor;
 }
 
@@ -3356,7 +3356,7 @@ label.disabled,
 label[disabled],
 label:disabled,
 fieldset:disabled label:not([for]) {
-  color: #817e7e;
+  color: #817f7e;
 }
 
 /* %label-invalid */
@@ -3368,8 +3368,8 @@ fieldset:disabled label:not([for]) {
 label.invalid,
 label:invalid,
 label[aria-invalid] {
-  color: #b43718;
-  color: var(--color-caution, #b43718);
+  color: #f0424e;
+  color: var(--color-caution, #f0424e);
 }
 
 /* Inputs */
@@ -3470,7 +3470,7 @@ textarea,
 select {
   background: white;
   background-clip: padding-box;
-  border-color: #c2bcbc;
+  border-color: #c2bfbc;
   border-style: solid;
   border-radius: 0.2109375rem;
 }
@@ -3481,7 +3481,7 @@ textarea:invalid,
 textarea[aria-invalid],
 select:invalid,
 select[aria-invalid] {
-  border-color: #b43718;
+  border-color: #f0424e;
 }
 
 input:disabled,
@@ -3549,7 +3549,7 @@ button,
 .button-petty,
 .button-large,
 .button-destructive {
-  color: #5e0d11;
+  color: #50abf1;
   background: transparent;
   background-clip: padding-box;
   display: inline-block;
@@ -3563,7 +3563,7 @@ button,
   height: var(--line-height, 1.6875rem);
   max-height: 1.6875rem;
   max-height: var(--line-height, 1.6875rem);
-  border-color: #5e0d11;
+  border-color: #50abf1;
   border-style: solid;
   border-radius: 0.2109375rem;
   -webkit-box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.08);
@@ -3585,8 +3585,8 @@ button:focus,
 .button-large:focus,
 .button-destructive:focus {
   outline: none;
-  -webkit-box-shadow: 0 0 0 0.2rem #f3a5a9;
-          box-shadow: 0 0 0 0.2rem #f3a5a9;
+  -webkit-box-shadow: 0 0 0 0.2rem #a1d2f7;
+          box-shadow: 0 0 0 0.2rem #a1d2f7;
 }
 
 button:active,
@@ -3598,7 +3598,7 @@ button:active,
 .button-petty:active,
 .button-large:active,
 .button-destructive:active {
-  color: #5e0d11;
+  color: #50abf1;
   -webkit-box-shadow: inset 0 2px 4px 0 rgba(0, 0, 0, 0.08);
           box-shadow: inset 0 2px 4px 0 rgba(0, 0, 0, 0.08);
 }
@@ -3648,21 +3648,21 @@ fieldset:disabled .button-destructive {
   pointer-events: none;
   background-color: rgba(230, 229, 229, 0.75);
   background-color: var(--color-disabled, rgba(230, 229, 229, 0.75));
-  color: #817e7e;
-  color: var(--color-disabled-text, #817e7e);
+  color: #817f7e;
+  color: var(--color-disabled-text, #817f7e);
   border-color: rgba(230, 229, 229, 0.75);
 }
 
 /* Prominent button */
 
 .button-prime {
-  background: #5e0d11;
-  border-color: #5e0d11;
-  color: #f3e3e4;
+  background: #50abf1;
+  border-color: #50abf1;
+  color: #05080b;
 }
 
 .button-prime:active {
-  color: #f3e3e4;
+  color: #05080b;
 }
 
 /* Standard button */
@@ -3713,27 +3713,27 @@ fieldset:disabled .button-destructive {
 /* Cautionary button */
 
 .button-destructive {
-  color: #b43718;
-  border-color: #b43718;
+  color: #f0424e;
+  border-color: #f0424e;
 }
 
 .button-destructive:active {
-  color: #b43718;
+  color: #f0424e;
 }
 
 .button-destructive:focus {
-  -webkit-box-shadow: 0 0 0 0.2rem #f3b5a5;
-          box-shadow: 0 0 0 0.2rem #f3b5a5;
+  -webkit-box-shadow: 0 0 0 0.2rem #f7a1a6;
+          box-shadow: 0 0 0 0.2rem #f7a1a6;
 }
 
 .button-destructive.button-prime {
-  background: #b43718;
-  border-color: #b43718;
-  color: #f6ecea;
+  background: #f0424e;
+  border-color: #f0424e;
+  color: #0b0405;
 }
 
 .button-destructive.button-prime:active {
-  color: #f6ecea;
+  color: #0b0405;
 }
 
 /* Form layout */

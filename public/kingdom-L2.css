@@ -2,10 +2,10 @@
 
 body {
   padding: 0;
-  background-color: #fdfefd;
-  background-color: var(--color-body, #fdfefd);
-  color: #0a0f0b;
-  color: var(--color-body-text, #0a0f0b);
+  background-color: #fcfefd;
+  background-color: var(--color-body, #fcfefd);
+  color: #0a0f0d;
+  color: var(--color-body-text, #0a0f0d);
 }
 
 html,
@@ -213,7 +213,7 @@ button:focus,
   outline: 5px auto -webkit-focus-ring-color;
 }
 
-a:link {
+*:link {
   color: #080686;
   color: var(--color-link, #080686);
 }
@@ -2869,10 +2869,10 @@ textarea:not([cols]) {
 }
 
 :root {
-  --color-primary: #1c9b1f;
-  --color-primary-text: #e9f4e9;
-  --color-body: #fdfefd;
-  --color-body-text: #0a0f0b;
+  --color-primary: #157546;
+  --color-primary-text: #e6f3ed;
+  --color-body: #fcfefd;
+  --color-body-text: #0a0f0d;
   --color-link: #080686;
   --color-border: currentColor;
 }

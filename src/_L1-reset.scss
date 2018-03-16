@@ -240,7 +240,7 @@ button, [type='button'], [type='reset'], [type='submit'] {
 
 //TODO: reset dl (remove padding & make dt bold)
 
-a:link {
+*:link {
   @include set-color(link);
 }
 
