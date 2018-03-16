@@ -2,10 +2,10 @@
 
 body {
   padding: 0;
-  background-color: #fefefd;
-  background-color: var(--color-body, #fefefd);
-  color: #0e0f0a;
-  color: var(--color-body-text, #0e0f0a);
+  background-color: #2c2d15;
+  background-color: var(--color-body, #2c2d15);
+  color: #ecede5;
+  color: var(--color-body-text, #ecede5);
 }
 
 html,
@@ -214,8 +214,8 @@ button:focus,
 }
 
 a:link {
-  color: #051a8e;
-  color: var(--color-link, #051a8e);
+  color: #d9e0f9;
+  color: var(--color-link, #d9e0f9);
 }
 
 /* Placeholders for sizing */
@@ -3333,11 +3333,11 @@ legend {
 }
 
 :root {
-  --color-primary: #7b8e1a;
-  --color-primary-text: #f2f4e8;
-  --color-body: #fefefd;
-  --color-body-text: #0e0f0a;
+  --color-primary: #332edc;
+  --color-primary-text: #040409;
+  --color-body: #2c2d15;
+  --color-body-text: #ecede5;
   --color-border: currentColor;
-  --color-link: #051a8e;
+  --color-link: #d9e0f9;
 }
 

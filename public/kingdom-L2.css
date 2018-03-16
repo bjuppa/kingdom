@@ -2,10 +2,10 @@
 
 body {
   padding: 0;
-  background-color: #3b1c28;
-  background-color: var(--color-body, #3b1c28);
-  color: #eee6e9;
-  color: var(--color-body-text, #eee6e9);
+  background-color: #fdfdfe;
+  background-color: var(--color-body, #fdfdfe);
+  color: #0a0b0f;
+  color: var(--color-body-text, #0a0b0f);
 }
 
 html,
@@ -214,8 +214,8 @@ button:focus,
 }
 
 a:link {
-  color: #5c73e7;
-  color: var(--color-link, #5c73e7);
+  color: #040317;
+  color: var(--color-link, #040317);
 }
 
 /* Placeholders for sizing */
@@ -2869,11 +2869,11 @@ textarea:not([cols]) {
 }
 
 :root {
-  --color-primary: #73e7b9;
-  --color-primary-text: #060c09;
-  --color-body: #3b1c28;
-  --color-body-text: #eee6e9;
+  --color-primary: #1534b2;
+  --color-primary-text: #e9ecf6;
+  --color-body: #fdfdfe;
+  --color-body-text: #0a0b0f;
   --color-border: currentColor;
-  --color-link: #5c73e7;
+  --color-link: #040317;
 }
 

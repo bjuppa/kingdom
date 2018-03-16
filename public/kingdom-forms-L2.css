@@ -2,10 +2,10 @@
 
 body {
   padding: 0;
-  background-color: #312522;
-  background-color: var(--color-body, #312522);
-  color: #ece9e8;
-  color: var(--color-body-text, #ece9e8);
+  background-color: #2a263f;
+  background-color: var(--color-body, #2a263f);
+  color: #e9e8ed;
+  color: var(--color-body-text, #e9e8ed);
 }
 
 html,
@@ -214,8 +214,8 @@ button:focus,
 }
 
 a:link {
-  color: #5c85c7;
-  color: var(--color-link, #5c85c7);
+  color: #e4e1f5;
+  color: var(--color-link, #e4e1f5);
 }
 
 /* Placeholders for sizing */
@@ -2874,12 +2874,12 @@ textarea:not([cols]) {
 }
 
 :root {
-  --color-primary: #85b8c7;
-  --color-primary-text: #07090a;
-  --color-body: #312522;
-  --color-body-text: #ece9e8;
+  --color-primary: #dbe4af;
+  --color-primary-text: #0c0d08;
+  --color-body: #2a263f;
+  --color-body-text: #e9e8ed;
   --color-border: currentColor;
-  --color-link: #5c85c7;
+  --color-link: #e4e1f5;
 }
 
 /* Kingdom CSS Extension - Forms */
@@ -2892,7 +2892,7 @@ label.disabled,
 label[disabled],
 label:disabled,
 fieldset:disabled label:not([for]) {
-  color: #817f7e;
+  color: #7f7e81;
 }
 
 /* %label-invalid */
@@ -2904,8 +2904,8 @@ fieldset:disabled label:not([for]) {
 label.invalid,
 label:invalid,
 label[aria-invalid] {
-  color: #d6765c;
-  color: var(--color-caution, #d6765c);
+  color: #d6705c;
+  color: var(--color-caution, #d6705c);
 }
 
 /* Inputs */
@@ -3006,7 +3006,7 @@ textarea,
 select {
   background: white;
   background-clip: padding-box;
-  border-color: #c2bdbc;
+  border-color: #bdbcc2;
   border-style: solid;
   border-radius: 0.1875rem;
 }
@@ -3017,13 +3017,13 @@ textarea:invalid,
 textarea[aria-invalid],
 select:invalid,
 select[aria-invalid] {
-  border-color: #d6765c;
+  border-color: #d6705c;
 }
 
 input:disabled,
 textarea:disabled,
 select:disabled {
-  background-color: rgba(230, 229, 229, 0.75);
+  background-color: rgba(229, 229, 230, 0.75);
 }
 
 input,
@@ -3058,12 +3058,12 @@ textarea::placeholder {
 
 input:-moz-read-only,
 textarea:-moz-read-only {
-  background-color: rgba(230, 229, 229, 0.75);
+  background-color: rgba(229, 229, 230, 0.75);
 }
 
 input:read-only,
 textarea:read-only {
-  background-color: rgba(230, 229, 229, 0.75);
+  background-color: rgba(229, 229, 230, 0.75);
 }
 
 [type='checkbox'],
@@ -3085,7 +3085,7 @@ button,
 .button-petty,
 .button-large,
 .button-destructive {
-  color: #85b8c7;
+  color: #dbe4af;
   background: transparent;
   background-clip: padding-box;
   display: inline-block;
@@ -3099,7 +3099,7 @@ button,
   height: var(--line-height, 1.5rem);
   max-height: 1.5rem;
   max-height: var(--line-height, 1.5rem);
-  border-color: #85b8c7;
+  border-color: #dbe4af;
   border-style: solid;
   border-radius: 0.1875rem;
   -webkit-box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.08);
@@ -3121,8 +3121,8 @@ button:focus,
 .button-large:focus,
 .button-destructive:focus {
   outline: none;
-  -webkit-box-shadow: 0 0 0 0.2rem #b9d7df;
-          box-shadow: 0 0 0 0.2rem #b9d7df;
+  -webkit-box-shadow: 0 0 0 0.2rem #dde5b3;
+          box-shadow: 0 0 0 0.2rem #dde5b3;
 }
 
 button:active,
@@ -3134,7 +3134,7 @@ button:active,
 .button-petty:active,
 .button-large:active,
 .button-destructive:active {
-  color: #85b8c7;
+  color: #dbe4af;
   -webkit-box-shadow: inset 0 2px 4px 0 rgba(0, 0, 0, 0.08);
           box-shadow: inset 0 2px 4px 0 rgba(0, 0, 0, 0.08);
 }
@@ -3182,23 +3182,23 @@ fieldset:disabled .button-petty,
 fieldset:disabled .button-large,
 fieldset:disabled .button-destructive {
   pointer-events: none;
-  background-color: rgba(230, 229, 229, 0.75);
-  background-color: var(--color-disabled, rgba(230, 229, 229, 0.75));
-  color: #817f7e;
-  color: var(--color-disabled-text, #817f7e);
-  border-color: rgba(230, 229, 229, 0.75);
+  background-color: rgba(229, 229, 230, 0.75);
+  background-color: var(--color-disabled, rgba(229, 229, 230, 0.75));
+  color: #7f7e81;
+  color: var(--color-disabled-text, #7f7e81);
+  border-color: rgba(229, 229, 230, 0.75);
 }
 
 /* Prominent button */
 
 .button-prime {
-  background: #85b8c7;
-  border-color: #85b8c7;
-  color: #07090a;
+  background: #dbe4af;
+  border-color: #dbe4af;
+  color: #0c0d08;
 }
 
 .button-prime:active {
-  color: #07090a;
+  color: #0c0d08;
 }
 
 /* Standard button */
@@ -3249,22 +3249,22 @@ fieldset:disabled .button-destructive {
 /* Cautionary button */
 
 .button-destructive {
-  color: #d6765c;
-  border-color: #d6765c;
+  color: #d6705c;
+  border-color: #d6705c;
 }
 
 .button-destructive:active {
-  color: #d6765c;
+  color: #d6705c;
 }
 
 .button-destructive:focus {
-  -webkit-box-shadow: 0 0 0 0.2rem #ebbbad;
-          box-shadow: 0 0 0 0.2rem #ebbbad;
+  -webkit-box-shadow: 0 0 0 0.2rem #ebb8ad;
+          box-shadow: 0 0 0 0.2rem #ebb8ad;
 }
 
 .button-destructive.button-prime {
-  background: #d6765c;
-  border-color: #d6765c;
+  background: #d6705c;
+  border-color: #d6705c;
   color: #0a0605;
 }
 
