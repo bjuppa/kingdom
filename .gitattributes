@@ -6,3 +6,6 @@
 .development.md export-ignore
 /webpack.mix.js export-ignore
 /resources export-ignore
+/docs export-ignore
+/nuxt export-ignore
+/nuxt.config.js export-ignore

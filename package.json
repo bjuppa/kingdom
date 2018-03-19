@@ -3,10 +3,9 @@
   "version": "0.1.0",
   "description": "A CSS framework for consistent sizing, spacing and typography.",
   "scripts": {
-    "dev": "NODE_ENV=development node_modules/webpack/bin/webpack.js --progress --hide-modules --config=node_modules/laravel-mix/setup/webpack.config.js",
-    "watch": "NODE_ENV=development node_modules/webpack/bin/webpack.js --watch --progress --hide-modules --config=node_modules/laravel-mix/setup/webpack.config.js",
-    "hot": "NODE_ENV=development webpack-dev-server --inline --hot --config=node_modules/laravel-mix/setup/webpack.config.js",
-    "production": "NODE_ENV=production node_modules/webpack/bin/webpack.js --progress --hide-modules --config=node_modules/laravel-mix/setup/webpack.config.js"
+    "dev": "nuxt dev",
+    "build:gh-pages": "DEPLOY_ENV=GH_PAGES nuxt build",
+    "generate:gh-pages": "DEPLOY_ENV=GH_PAGES nuxt generate"
   },
   "repository": {
     "type": "git",
@@ -30,6 +29,6 @@
   },
   "homepage": "https://github.com/bjuppa/kingdom#readme",
   "devDependencies": {
-    "laravel-mix": "^2.0.0"
+    "nuxt": "^1.4.0"
   }
 }
