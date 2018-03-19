@@ -1,5 +1,5 @@
 // only add `router.base = '/<repository-name>/'` if `DEPLOY_ENV` is `GH_PAGES`
-const routerBase = process.env.DEPLOY_ENV === 'GH_PAGES' ? {
+const routerConfig = process.env.DEPLOY_ENV === 'GH_PAGES' ? {
   router: {
     base: '/kingdom/'
   }
@@ -10,7 +10,7 @@ module.exports = {
   generate: {
     dir: 'docs',
   },
-  ...routerBase,
+  ...routerConfig,
   head: {
     meta: [
       { charset: 'utf-8' },
