@@ -4,8 +4,8 @@ body {
   padding: 0;
   background-color: #fdfdfd;
   background-color: var(--color-body, #fdfdfd);
-  color: #0d0d0c;
-  color: var(--color-body-text, #0d0d0c);
+  color: #0e0c0e;
+  color: var(--color-body-text, #0e0c0e);
 }
 
 html,
@@ -214,8 +214,8 @@ button:focus,
 }
 
 *:link {
-  color: #062686;
-  color: var(--color-link, #062686);
+  color: #0b0686;
+  color: var(--color-link, #0b0686);
 }
 
 /* Placeholders for fonts */
@@ -3071,7 +3071,7 @@ legend {
 }
 
 .visualize-vertical-rhythm {
-  background-image: linear-gradient(rgba(255, 0, 0, 0.15), rgba(255, 0, 0, 0.15) 1px, transparent 1px);
+  background-image: linear-gradient(rgba(102, 23, 20, 0.15), rgba(102, 23, 20, 0.15) 1px, transparent 1px);
   background-size: 1px 1.6875rem;
   background-size: 1px var(--spacing-base, 1.6875rem);
 }
@@ -3340,16 +3340,16 @@ legend {
 }
 
 :root {
-  --color-primary: #642654;
-  --color-primary-text: #f1e8ee;
+  --color-primary: #146366;
+  --color-primary-text: #e5f2f2;
   --color-body: #fdfdfd;
-  --color-body-text: #0d0d0c;
-  --color-link: #062686;
+  --color-body-text: #0e0c0e;
+  --color-link: #0b0686;
   --color-border: currentColor;
 }
 
 .color-primary {
-  color: #642654;
-  color: var(--color-primary, #642654);
+  color: #146366;
+  color: var(--color-primary, #146366);
 }
 
