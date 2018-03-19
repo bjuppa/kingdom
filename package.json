@@ -4,8 +4,7 @@
   "description": "A CSS framework for consistent sizing, spacing and typography.",
   "scripts": {
     "dev": "nuxt dev",
-    "generate": "DEPLOY_ENV=GH_PAGES nuxt generate",
-    "generate:local": "nuxt generate"
+    "generate": "DEPLOY_ENV=GH_PAGES nuxt generate"
   },
   "repository": {
     "type": "git",
