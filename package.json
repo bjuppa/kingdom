@@ -31,7 +31,6 @@
   },
   "homepage": "https://github.com/bjuppa/kingdom#readme",
   "devDependencies": {
-    "laravel-mix": "^2.1.9",
     "node-sass": "^4.7.2",
     "nuxt": "^1.4.0",
     "postcss-loader": "^2.1.1",
