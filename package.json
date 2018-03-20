@@ -30,6 +30,7 @@
   "devDependencies": {
     "node-sass": "^4.7.2",
     "nuxt": "^1.4.0",
+    "postcss-loader": "^2.1.1",
     "sass-loader": "^6.0.7"
   }
 }
