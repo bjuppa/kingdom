@@ -5,15 +5,6 @@
   </div>
 </template>
 
-<script>
-  export default {
-    head () {
-      return {
-        title: 'Test title',
-        link: [
-          { rel: 'stylesheet', href: 'test.css' }
-        ]
-      }
-    }
-  }
-</script>
+<style lang="scss">
+  @import "~assets/L3.scss";
+</style>
