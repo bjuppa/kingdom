@@ -9,6 +9,12 @@ module.exports = {
   srcDir: 'nuxt',
   generate: {
     dir: 'docs',
+    minify: {
+      minifyCSS: false,
+      minifyJS: false,
+      removeOptionalTags: false,
+      removeRedundantAttributes: false
+    }
   },
   ...routerConfig,
   head: {
