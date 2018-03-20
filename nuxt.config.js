@@ -18,5 +18,9 @@ module.exports = {
       { name: 'viewport', content: 'width=device-width, initial-scale=1' }
     ],
     title: 'Kingdom CSS'
+  },
+  build: {
+    cssSourceMap: true,
+    extractCSS: true
   }
 };
