@@ -3,11 +3,8 @@
   "version": "0.1.0",
   "description": "A CSS framework for consistent sizing, spacing and typography.",
   "scripts": {
-    "dev": "npm run dev:docs & npm run watch:mix",
-    "dev:docs": "nuxt dev",
-    "generate:docs": "DEPLOY_ENV=GH_PAGES nuxt generate",
-    "dev:mix": "NODE_ENV=development node_modules/webpack/bin/webpack.js --progress --hide-modules --config=node_modules/laravel-mix/setup/webpack.config.js",
-    "watch:mix": "NODE_ENV=development node_modules/webpack/bin/webpack.js --watch --progress --hide-modules --config=node_modules/laravel-mix/setup/webpack.config.js"
+    "dev": "nuxt dev",
+    "generate": "DEPLOY_ENV=GH_PAGES nuxt generate"
   },
   "repository": {
     "type": "git",
