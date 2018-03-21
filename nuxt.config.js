@@ -10,6 +10,7 @@ module.exports = {
   generate: {
     dir: 'docs',
     minify: false,
+    dev: true,
   },
   ...routerConfig,
   head: {
