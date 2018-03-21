@@ -24,11 +24,15 @@ module.exports = {
   build: {
     cssSourceMap: true,
     extractCSS: true,
-    /*
-    extend (config, { isDev, isClient, isServer }) {
-      //const util = require('util');
-      //console.log(util.inspect(config, {showHidden: false, depth: 2}))
+    postcss: {
+      plugins: {
+        // Customize `postcss-cssnext` default options
+        'postcss-cssnext': {
+          features: {
+            customProperties: { preserve: true }
+          }
+        }
+      }
     }
-    */
   }
 };
