@@ -9,15 +9,7 @@ module.exports = {
   srcDir: 'nuxt',
   generate: {
     dir: 'docs',
-    minify: {
-      minifyCSS: false,
-      minifyJS: false,
-      removeOptionalTags: false,
-      removeRedundantAttributes: false,
-      removeComments: false,
-      collapseWhitespace: false,
-      preserveLineBreaks: true,
-    }
+    minify: false,
   },
   ...routerConfig,
   head: {
