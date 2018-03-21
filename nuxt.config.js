@@ -24,15 +24,5 @@ module.exports = {
   build: {
     cssSourceMap: true,
     extractCSS: true,
-    postcss: {
-      plugins: {
-        // Customize `postcss-cssnext` default options
-        'postcss-cssnext': {
-          features: {
-            customProperties: { preserve: true }
-          }
-        }
-      }
-    }
   }
 };
