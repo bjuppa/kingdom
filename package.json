@@ -6,12 +6,6 @@
     "dev": "nuxt dev",
     "generate": "DEPLOY_ENV=GH_PAGES nuxt generate"
   },
-  "browserslist": [
-    "> 1%",
-    "not IE 11",
-    "not OperaMini all",
-    "not Samsung 4"
-  ],
   "repository": {
     "type": "git",
     "url": "git+https://github.com/bjuppa/kingdom.git"
