@@ -13,7 +13,10 @@ module.exports = {
       minifyCSS: false,
       minifyJS: false,
       removeOptionalTags: false,
-      removeRedundantAttributes: false
+      removeRedundantAttributes: false,
+      removeComments: false,
+      collapseWhitespace: false,
+      preserveLineBreaks: true,
     }
   },
   ...routerConfig,
@@ -27,6 +30,12 @@ module.exports = {
   },
   build: {
     cssSourceMap: true,
-    extractCSS: true
+    extractCSS: true,
+    /*
+    extend (config, { isDev, isClient, isServer }) {
+      //const util = require('util');
+      //console.log(util.inspect(config, {showHidden: false, depth: 2}))
+    }
+    */
   }
 };
