@@ -1,9 +1,9 @@
 // Utilities for colors
-
 @import "../modules/colors";
 
 :root {
   @each $name, $color-pair in $colors {
+    //TODO: some sass compilers seems to fail executing the function when setting a css custom property (works in Laravel Mix)
     --color-#{$name}: get-color($name);
     @if(length($color-pair) > 1) {
       --color-#{$name}-text: get-color($name, true);
