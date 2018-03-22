@@ -18,5 +18,20 @@ module.exports = {
       { name: 'viewport', content: 'width=device-width, initial-scale=1' }
     ],
     title: 'Kingdom CSS'
+  },
+  build: {
+    postcss: {
+      plugins: {
+        // Customize `postcss-cssnext` default options
+        'postcss-cssnext': {
+          features: {
+            // The custom properties plugin won't have preserve set to default until 7.0.0
+            // https://github.com/postcss/postcss-custom-properties
+            // TODO: remove this override when postcss-custom-properties 7.0.0 is included
+            customProperties: { preserve: true },
+          }
+        }
+      }
+    }
   }
 };
