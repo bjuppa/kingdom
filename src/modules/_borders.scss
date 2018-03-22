@@ -74,7 +74,6 @@ $body-line-height-factor: 1.5 !default;
 // Set a default border style to allow just setting border-width when needed
 // https://github.com/tailwindcss/tailwindcss/blob/master/css/preflight.css
 @mixin reset-border($style: $border-style) {
-  border-width: 0;
-  border-style: $style;
+  border: 0 $style;
   @include set-color(border, border-color);
 }
