@@ -27,10 +27,8 @@ module.exports = {
         // Customize `postcss-cssnext` default options
         'postcss-cssnext': {
           features: {
-            // The custom properties plugin won't have preserve set to default until 7.0.0
-            // https://github.com/postcss/postcss-custom-properties
-            // Even with preserve set to true, custom properties plugin adds a lot of duplication
-            // That noise that is removed by minification, but as we have minification turned off on this site we'll also keep custom properties postcss off
+            // Even with preserve set to true, the custom properties plugin adds a lot of duplication (that is removed by minification)
+            // As we have minification turned off, we'll also keep custom properties off
             customProperties: false,
           }
         }
