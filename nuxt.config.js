@@ -36,12 +36,15 @@ module.exports = {
     },
     extend (config) {
       const vueLoader = config.module.rules.find((rule) => rule.loader === 'vue-loader');
-      //console.log(vueLoader.options.loaders);
-      const cssLoader = vueLoader.options.loaders.scss.find((loader) => loader.loader === 'css-loader');
-      //console.log(cssLoader);
-
-      //TODO: replace with a general search for minimize in all options
-      cssLoader.options.minimize = false;
+      Object.values(vueLoader.options.loaders).map((loader) => {
+        if (loader instanceof Array) {
+          loader.map((loader) => {
+            if (loader.options.minimize === true) {
+              loader.options.minimize = false;
+            }
+          });
+        }
+      });
     }
   }
 };
