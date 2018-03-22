@@ -39,6 +39,8 @@ module.exports = {
       //console.log(vueLoader.options.loaders);
       const cssLoader = vueLoader.options.loaders.scss.find((loader) => loader.loader === 'css-loader');
       //console.log(cssLoader);
+
+      //TODO: replace with a general search for minimize in all options
       cssLoader.options.minimize = false;
     }
   }
