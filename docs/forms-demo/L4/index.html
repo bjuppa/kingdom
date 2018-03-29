@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html data-n-head-ssr data-n-head="">
   <head>
-    <meta data-n-head="true" charset="utf-8"/><meta data-n-head="true" http-equiv="X-UA-Compatible" content="IE=edge"/><meta data-n-head="true" name="viewport" content="width=device-width, initial-scale=1"/><title data-n-head="true">Kingdom CSS</title><base href="/kingdom/"><link rel="preload" href="/kingdom/_nuxt/manifest.b8dbf70f1e8388c7f3f5.js" as="script"><link rel="preload" href="/kingdom/_nuxt/vendor.a6f778eddd0cdf7b1049.js" as="script"><link rel="preload" href="/kingdom/_nuxt/app.98897651354a28845858.js" as="script"><link rel="preload" href="/kingdom/_nuxt/layouts/default.af3be95d07133ea92689.js" as="script"><link rel="preload" href="/kingdom/_nuxt/pages/index.bcef1c912f0a2bc397af.js" as="script"><link rel="prefetch" href="/kingdom/_nuxt/pages/forms-demo/index.04282b01d68a1b135d5a.js"><link rel="prefetch" href="/kingdom/_nuxt/pages/forms-demo/L4.7b805098dd167a37fd24.js"><link rel="prefetch" href="/kingdom/_nuxt/pages/forms-demo/L2.b46ccb86426d8595462b.js"><link rel="prefetch" href="/kingdom/_nuxt/pages/forms-demo/L1.215833d4d669e510bb37.js"><link rel="prefetch" href="/kingdom/_nuxt/pages/demo/L4.b11a283064e256b743d3.js"><link rel="prefetch" href="/kingdom/_nuxt/pages/demo/L3.6e73bbdba78044cba646.js"><link rel="prefetch" href="/kingdom/_nuxt/pages/demo/L2.248cc0db1e838ae87f88.js"><link rel="prefetch" href="/kingdom/_nuxt/pages/demo/L1.bed46a7aca0e39c864dd.js"><link rel="prefetch" href="/kingdom/_nuxt/pages/forms-demo/L3.476a1aefea89d27c3fa1.js"><link rel="prefetch" href="/kingdom/_nuxt/pages/demo/index.e34d09db27e0331bc6c2.js"><style data-vue-ssr-id="5bab7354:0">
+    <meta data-n-head="true" charset="utf-8"/><meta data-n-head="true" http-equiv="X-UA-Compatible" content="IE=edge"/><meta data-n-head="true" name="viewport" content="width=device-width, initial-scale=1"/><title data-n-head="true">Kingdom CSS</title><base href="/kingdom/"><link rel="preload" href="/kingdom/_nuxt/manifest.b8dbf70f1e8388c7f3f5.js" as="script"><link rel="preload" href="/kingdom/_nuxt/vendor.a6f778eddd0cdf7b1049.js" as="script"><link rel="preload" href="/kingdom/_nuxt/app.98897651354a28845858.js" as="script"><link rel="preload" href="/kingdom/_nuxt/layouts/default.af3be95d07133ea92689.js" as="script"><link rel="preload" href="/kingdom/_nuxt/pages/forms-demo/L4.7b805098dd167a37fd24.js" as="script"><link rel="prefetch" href="/kingdom/_nuxt/pages/forms-demo/index.04282b01d68a1b135d5a.js"><link rel="prefetch" href="/kingdom/_nuxt/pages/forms-demo/L2.b46ccb86426d8595462b.js"><link rel="prefetch" href="/kingdom/_nuxt/pages/forms-demo/L1.215833d4d669e510bb37.js"><link rel="prefetch" href="/kingdom/_nuxt/pages/demo/L4.b11a283064e256b743d3.js"><link rel="prefetch" href="/kingdom/_nuxt/pages/demo/L3.6e73bbdba78044cba646.js"><link rel="prefetch" href="/kingdom/_nuxt/pages/demo/L2.248cc0db1e838ae87f88.js"><link rel="prefetch" href="/kingdom/_nuxt/pages/demo/L1.bed46a7aca0e39c864dd.js"><link rel="prefetch" href="/kingdom/_nuxt/pages/index.bcef1c912f0a2bc397af.js"><link rel="prefetch" href="/kingdom/_nuxt/pages/forms-demo/L3.476a1aefea89d27c3fa1.js"><link rel="prefetch" href="/kingdom/_nuxt/pages/demo/index.e34d09db27e0331bc6c2.js"><style data-vue-ssr-id="5bab7354:0">
 .nuxt-progress {
   position: fixed;
   top: 0px;
@@ -15,13 +15,13 @@
   background-color: #efc14e;
   z-index: 999999;
 }
-</style><style data-vue-ssr-id="56a96b4a:0">/* Kingdom CSS Level 1 - Reset */
+</style><style data-vue-ssr-id="3cd8df00:0">/* Kingdom CSS Level 1 - Reset */
 body {
   padding: 0;
-  background-color: #fdfdfd;
-  background-color: var(--color-body, #fdfdfd);
-  color: #0c0d0d;
-  color: var(--color-body-text, #0c0d0d);
+  background-color: #fefdfd;
+  background-color: var(--color-body, #fefdfd);
+  color: #0e0c0c;
+  color: var(--color-body-text, #0e0c0c);
 }
 html, body {
   margin: 0;
@@ -155,13 +155,29 @@ button:focus, [type='button']:focus, [type='reset']:focus, [type='submit']:focus
   outline: 5px auto -webkit-focus-ring-color;
 }
 *:link {
-  color: #0f0686;
-  color: var(--color-link, #0f0686);
+  color: #110686;
+  color: var(--color-link, #110686);
 }
 
 /* Placeholders for fonts */
 /* %font-body */
+body {
+  font-family: "Times New Roman", Times, serif;
+  --baseline-shift-factor: 0.62;
+}
+body * {
+    font-family: inherit;
+}
+
 /* %font-headings */
+h1, h2, h3, h4, h5, h6 {
+  font-family: Verdana, sans-serif;
+  --baseline-shift-factor: 0.75;
+}
+h1 *, h2 *, h3 *, h4 *, h5 *, h6 * {
+    font-family: inherit;
+}
+
 /* %font-forms */
 /* Placeholders for text */
 /* %text-1 */
@@ -918,13 +934,13 @@ hr, .h-px {
 /* %mx-32 */
 /* %mt-0 */
 dt + *, li + *, hgroup + *,
-h1 + *, h2 + *, h3 + *, h4 + *, h5 + *, h6 + *, a, abbr, acronym, b, bdo, big, br, button, cite, code, dfn, em, i, img, input, kbd, label, map, object, q, samp, script, select, small, span, strong, sub, sup, textarea, time, tt, var, dl > *, figure *, picture *, object *, select *, table *, audio *, video *, map *, fieldset > legend + *, .mt-0, .mt-0-children > *, .mt-0-within * {
+h1 + *, h2 + *, h3 + *, h4 + *, h5 + *, h6 + *, a, abbr, acronym, b, bdo, big, br, button, cite, code, dfn, em, i, img, input, kbd, label, map, object, q, samp, script, select, small, span, strong, sub, sup, textarea, time, tt, var, dl > *, figure *, picture *, object *, select *, table *, audio *, video *, map *, fieldset > legend + *, .mt-0, .mt-0-children > *, .mt-0-within *, fieldset > label:first-of-type, label:not([for]) + label:not([for]), [aria-describedby] + div[id] {
   /* Reset vertical spacing */
   margin-top: 0;
 }
 
 /* %mt-1 */
-hr + *, .h-px + *, * + *, .mt-1 {
+hr + *, .h-px + *, * + *, .mt-1, * + label, .form-inline > * {
   /* Default vertical spacing */
   margin-top: 27px;
   margin-top: 1.6875rem;
@@ -1604,7 +1620,7 @@ fieldset, .px-1\/4, .space-inside {
 }
 
 /* %pb-1 */
-.pb-1 {
+.pb-1, .space-inside-b > p:last-child, .space-inside-b > blockquote:last-child, .space-inside-b > address:last-child, .space-inside-b > li:last-child, .space-inside-b > dt:last-child, .space-inside-b > dd:last-child, .space-inside-b > h1:last-child, .space-inside-b > h2:last-child, .space-inside-b > h3:last-child, .space-inside-b > h4:last-child, .space-inside-b > h5:last-child, .space-inside-b > h6:last-child, .space-inside > p:last-child, .space-inside > blockquote:last-child, .space-inside > address:last-child, .space-inside > li:last-child, .space-inside > dt:last-child, .space-inside > dd:last-child, .space-inside > h1:last-child, .space-inside > h2:last-child, .space-inside > h3:last-child, .space-inside > h4:last-child, .space-inside > h5:last-child, .space-inside > h6:last-child {
   padding-bottom: 27px;
   padding-bottom: 1.6875rem;
   padding-bottom: calc(1 * var(--spacing-base, 1.6875rem));
@@ -2151,9 +2167,25 @@ legend {
   padding-top: 1px;
 }
 .visualize-vertical-rhythm {
-  background-image: linear-gradient(rgba(107, 50, 46, .15), rgba(107, 50, 46, .15) 1px, transparent 1px);
+  background-image: linear-gradient(rgba(133, 39, 30, .15), rgba(133, 39, 30, .15) 1px, transparent 1px);
   background-size: 1px 1.6875rem;
   background-size: 1px var(--spacing-base, 1.6875rem);
+}
+
+/* Kingdom CSS Level 4 - Baseline Rhythm */
+@supports (top: calc((var(--line-height) - 1em * var(--baseline-shift-factor)) / 2)) {
+  /* %baseline-shift */
+p, blockquote, address, li, dt, dd, h1, h2, h3, h4, h5, h6 {
+    position: relative;
+    top: calc((var(--line-height) - 1em * var(--baseline-shift-factor)) / 2);
+}
+  /* %baseline-shift-off */
+p p, blockquote p, address p, li p, dt p, dd p, h1 p, h2 p, h3 p, h4 p, h5 p, h6 p, p blockquote, blockquote blockquote, address blockquote, li blockquote, dt blockquote, dd blockquote, h1 blockquote, h2 blockquote, h3 blockquote, h4 blockquote, h5 blockquote, h6 blockquote, p address, blockquote address, address address, li address, dt address, dd address, h1 address, h2 address, h3 address, h4 address, h5 address, h6 address, p li, blockquote li, address li, li li, dt li, dd li, h1 li, h2 li, h3 li, h4 li, h5 li, h6 li, p dt, blockquote dt, address dt, li dt, dt dt, dd dt, h1 dt, h2 dt, h3 dt, h4 dt, h5 dt, h6 dt, p dd, blockquote dd, address dd, li dd, dt dd, dd dd, h1 dd, h2 dd, h3 dd, h4 dd, h5 dd, h6 dd, p h1, blockquote h1, address h1, li h1, dt h1, dd h1, h1 h1, h2 h1, h3 h1, h4 h1, h5 h1, h6 h1, p h2, blockquote h2, address h2, li h2, dt h2, dd h2, h1 h2, h2 h2, h3 h2, h4 h2, h5 h2, h6 h2, p h3, blockquote h3, address h3, li h3, dt h3, dd h3, h1 h3, h2 h3, h3 h3, h4 h3, h5 h3, h6 h3, p h4, blockquote h4, address h4, li h4, dt h4, dd h4, h1 h4, h2 h4, h3 h4, h4 h4, h5 h4, h6 h4, p h5, blockquote h5, address h5, li h5, dt h5, dd h5, h1 h5, h2 h5, h3 h5, h4 h5, h5 h5, h6 h5, p h6, blockquote h6, address h6, li h6, dt h6, dd h6, h1 h6, h2 h6, h3 h6, h4 h6, h5 h6, h6 h6 {
+    position: static;
+    position: initial;
+    top: auto;
+    top: initial;
+}
 }
 .mx-auto,
 .mx-auto-children > * {
@@ -2229,20 +2261,302 @@ legend {
   display: inline-flex;
 }
 :root {
-  --color-primary: #676b2e;
-  --color-primary-text: #f0f1ea;
-  --color-body: #fdfdfd;
-  --color-body-text: #0c0d0d;
-  --color-link: #0f0686;
+  --color-primary: #271e85;
+  --color-primary-text: #e9e8f3;
+  --color-body: #fefdfd;
+  --color-body-text: #0e0c0c;
+  --color-link: #110686;
   --color-border: currentColor;
 }
 .color-primary {
-  color: #676b2e;
-  color: var(--color-primary, #676b2e);
+  color: #271e85;
+  color: var(--color-primary, #271e85);
+}
+
+/* Kingdom CSS Extension - Forms */
+/* %label-disabled */
+[type='checkbox'][id]:disabled + label[for], [type='radio'][id]:disabled + label[for], label.disabled,
+label[disabled],
+label:disabled,
+fieldset:disabled label:not([for]) {
+  color: #817e7e;
+}
+
+/* %label-invalid */
+[type='checkbox'][id]:invalid + label[for], [type='checkbox'][id][aria-invalid] + label[for], [type='radio'][id]:invalid + label[for], [type='radio'][id][aria-invalid] + label[for], label.invalid,
+label:invalid,
+label[aria-invalid] {
+  color: #a63026;
+  color: var(--color-caution, #a63026);
+}
+
+/* Inputs */
+input, select:not([size]):not([multiple]) {
+  vertical-align: bottom;
+  line-height: 25px;
+  line-height: 1.5625rem;
+  line-height: calc(var(--line-height, 1.6875rem) - 2px);
+  border-width: 1px;
+  padding-top: 0;
+  padding-bottom: 0;
+  height: 27px;
+  height: 1.6875rem;
+  height: var(--line-height, 27px);
+  height: var(--line-height, 1.6875rem);
+  max-height: 27px;
+  max-height: 1.6875rem;
+  max-height: var(--line-height, 27px);
+  max-height: var(--line-height, 1.6875rem);
+}
+textarea {
+  border-top-width: 1px;
+  --border-top-width: 1px;
+  border-top-width: var(--border-top-width);
+  vertical-align: top;
+  border-bottom-width: 1px;
+  --border-bottom-width: 1px;
+  border-bottom-width: var(--border-bottom-width);
+  vertical-align: top;
+  border-left-width: 1px;
+  --border-left-width: 1px;
+  border-left-width: var(--border-left-width);
+  vertical-align: top;
+  border-right-width: 1px;
+  --border-right-width: 1px;
+  border-right-width: var(--border-right-width);
+  vertical-align: top;
+  position: relative;
+  top: -1px;
+  top: calc(0px - var(--border-top-width));
+  margin-bottom: -2px;
+  margin-bottom: calc(0px - var(--border-top-width, 0px) - var(--border-bottom-width, 0px));
+}
+textarea.h-1, textarea.h-2, textarea.h-3, textarea.h-4, textarea.h-5, textarea.h-6, textarea.h-7, textarea.h-8, textarea.h-9, textarea.h-10, textarea.h-12, textarea.h-14, textarea.h-16, textarea.h-18, textarea.h-20, textarea.h-24, textarea.h-28, textarea.h-32, textarea.h-36, textarea.h-40, textarea.h-48, textarea.h-56, textarea.h-64 {
+    margin-bottom: 0;
+}
+textarea.h-1, textarea.h-2, textarea.h-3, textarea.h-4, textarea.h-5, textarea.h-6, textarea.h-7, textarea.h-8, textarea.h-9, textarea.h-10, textarea.h-12, textarea.h-14, textarea.h-16, textarea.h-18, textarea.h-20, textarea.h-24, textarea.h-28, textarea.h-32, textarea.h-36, textarea.h-40, textarea.h-48, textarea.h-56, textarea.h-64 {
+    position: static;
+    position: initial;
+    top: auto;
+    top: initial;
+}
+input, textarea, select {
+  background: white;
+  background-clip: padding-box;
+  border-color: #c2bdbc;
+  border-style: solid;
+  border-radius: 0.21094rem;
+}
+input:invalid, input[aria-invalid], textarea:invalid, textarea[aria-invalid], select:invalid, select[aria-invalid] {
+    border-color: #a63026;
+}
+input:disabled, textarea:disabled, select:disabled {
+    background-color: rgba(230, 229, 229, .75);
+}
+input, textarea {
+  -webkit-box-shadow: inset 0 2px 4px 0 rgba(0, 0, 0, .08);
+          box-shadow: inset 0 2px 4px 0 rgba(0, 0, 0, .08);
+}
+input::-webkit-input-placeholder, textarea::-webkit-input-placeholder {
+    color: inherit;
+    opacity: .5;
+}
+input:-ms-input-placeholder, textarea:-ms-input-placeholder {
+    color: inherit;
+    opacity: .5;
+}
+input::-ms-input-placeholder, textarea::-ms-input-placeholder {
+    color: inherit;
+    opacity: .5;
+}
+input::placeholder, textarea::placeholder {
+    color: inherit;
+    opacity: .5;
+}
+input:-moz-read-only, textarea:-moz-read-only {
+    background-color: rgba(230, 229, 229, .75);
+}
+input:read-only, textarea:read-only {
+    background-color: rgba(230, 229, 229, .75);
+}
+[type='checkbox'], [type='radio'] {
+  vertical-align: baseline;
+  height: auto;
+}
+
+/* Buttons */
+/* %button base for all buttons  */
+button,
+[type='button'],
+[type='reset'],
+[type='submit'], .button-prime, .button-plain, .button-petty, .button-large, .button-destructive {
+  color: #271e85;
+  background: transparent;
+  background-clip: padding-box;
+  display: inline-block;
+  vertical-align: bottom;
+  line-height: 25px;
+  line-height: 1.5625rem;
+  line-height: calc(var(--line-height, 1.6875rem) - 2px);
+  border-width: 1px;
+  padding-top: 0;
+  padding-bottom: 0;
+  height: 27px;
+  height: 1.6875rem;
+  height: var(--line-height, 27px);
+  height: var(--line-height, 1.6875rem);
+  max-height: 27px;
+  max-height: 1.6875rem;
+  max-height: var(--line-height, 27px);
+  max-height: var(--line-height, 1.6875rem);
+  border-color: #271e85;
+  border-style: solid;
+  border-radius: 0.21094rem;
+  -webkit-box-shadow: 0 2px 4px 0 rgba(0, 0, 0, .08);
+          box-shadow: 0 2px 4px 0 rgba(0, 0, 0, .08);
+  padding-left: 6.75px;
+  padding-left: 0.42188rem;
+  padding-right: 6.75px;
+  padding-right: 0.42188rem;
+  text-decoration: none;
+  -webkit-transition: all 0.15s ease-in-out;
+  transition: all 0.15s ease-in-out;
+}
+button:focus,
+  [type='button']:focus,
+  [type='reset']:focus,
+  [type='submit']:focus, .button-prime:focus, .button-plain:focus, .button-petty:focus, .button-large:focus, .button-destructive:focus {
+    outline: none;
+    -webkit-box-shadow: 0 0 0 0.2rem #b1acec;
+            box-shadow: 0 0 0 0.2rem #b1acec;
+}
+button:active,
+  [type='button']:active,
+  [type='reset']:active,
+  [type='submit']:active, .button-prime:active, .button-plain:active, .button-petty:active, .button-large:active, .button-destructive:active {
+    color: #271e85;
+    -webkit-box-shadow: inset 0 2px 4px 0 rgba(0, 0, 0, .08);
+            box-shadow: inset 0 2px 4px 0 rgba(0, 0, 0, .08);
+}
+button:not(:disabled):not(.disabled),
+  [type='button']:not(:disabled):not(.disabled),
+  [type='reset']:not(:disabled):not(.disabled),
+  [type='submit']:not(:disabled):not(.disabled), .button-prime:not(:disabled):not(.disabled), .button-plain:not(:disabled):not(.disabled), .button-petty:not(:disabled):not(.disabled), .button-large:not(:disabled):not(.disabled), .button-destructive:not(:disabled):not(.disabled) {
+    cursor: pointer;
+}
+button:disabled,
+  [type='button']:disabled,
+  [type='reset']:disabled,
+  [type='submit']:disabled, .button-prime:disabled, .button-plain:disabled, .button-petty:disabled, .button-large:disabled, .button-destructive:disabled, button.disabled,
+  .disabled[type='button'],
+  .disabled[type='reset'],
+  .disabled[type='submit'], .disabled.button-prime, .disabled.button-plain, .disabled.button-petty, .disabled.button-large, .disabled.button-destructive, fieldset:disabled button, fieldset:disabled
+  [type='button'], fieldset:disabled
+  [type='reset'], fieldset:disabled
+  [type='submit'], fieldset:disabled .button-prime, fieldset:disabled .button-plain, fieldset:disabled .button-petty, fieldset:disabled .button-large, fieldset:disabled .button-destructive {
+    pointer-events: none;
+    background-color: rgba(230, 229, 229, .75);
+    background-color: var(--color-disabled, rgba(230, 229, 229, .75));
+    color: #817e7e;
+    color: var(--color-disabled-text, #817e7e);
+    border-color: rgba(230, 229, 229, .75);
+}
+
+/* Prominent button */
+.button-prime {
+  background: #271e85;
+  border-color: #271e85;
+  color: #e9e8f3;
+}
+.button-prime:active {
+    color: #e9e8f3;
+}
+
+/* Standard button */
+/* Discreet, link like button */
+.button-petty {
+  border: transparent;
+  background: transparent;
+  text-decoration: underline;
+  -webkit-box-shadow: none;
+          box-shadow: none;
+}
+.button-petty:focus {
+    text-decoration: none;
+}
+.button-petty:active {
+    -webkit-box-shadow: none;
+            box-shadow: none;
+    text-decoration: none;
+}
+.button-petty:disabled {
+    text-decoration: none;
+}
+
+/* Big button */
+.button-large {
+  font-size: 1em;
+  line-height: 54px;
+  line-height: 3.375rem;
+  --line-height: calc(2 * var(--spacing-base, 1.6875rem));
+  line-height: var(--line-height);
+  vertical-align: bottom;
+  line-height: 52px;
+  line-height: 3.25rem;
+  line-height: calc(var(--line-height, 3.375rem) - 2px);
+  border-width: 1px;
+  padding-top: 0;
+  padding-bottom: 0;
+  height: 54px;
+  height: 3.375rem;
+  height: var(--line-height, 54px);
+  height: var(--line-height, 3.375rem);
+  max-height: 54px;
+  max-height: 3.375rem;
+  max-height: var(--line-height, 54px);
+  max-height: var(--line-height, 3.375rem);
+}
+
+/* Cautionary button */
+.button-destructive {
+  color: #a63026;
+  border-color: #a63026;
+}
+.button-destructive:active {
+    color: #a63026;
+}
+.button-destructive:focus {
+    -webkit-box-shadow: 0 0 0 0.2rem #ecb1ac;
+            box-shadow: 0 0 0 0.2rem #ecb1ac;
+}
+.button-destructive.button-prime {
+    background: #a63026;
+    border-color: #a63026;
+    color: #f5eceb;
+}
+.button-destructive.button-prime:active {
+      color: #f5eceb;
+}
+
+/* Form layout */
+label {
+  display: block;
+}
+[type="checkbox"][id] + label[for], [type="radio"][id] + label[for] {
+  display: inline;
+}
+[aria-describedby] + span[id], [aria-describedby] + small[id] {
+  display: inline-block;
+}
+
+/* .form-inline make a form's contents go inline */
+.form-inline > * {
+  display: inline-block;
 }
 </style>
   </head>
   <body data-n-head="">
-    <div data-server-rendered="true" id="__nuxt"><div class="nuxt-progress" style="width:0%;height:2px;background-color:black;opacity:0;"></div><div id="__layout"><div><h1>Hello world!</h1><p>Intro...</p></div></div></div><script type="text/javascript">window.__NUXT__={"layout":"default","data":[{}],"error":null,"serverRendered":true};</script><script src="/kingdom/_nuxt/manifest.b8dbf70f1e8388c7f3f5.js" defer></script><script src="/kingdom/_nuxt/layouts/default.af3be95d07133ea92689.js" defer></script><script src="/kingdom/_nuxt/pages/index.bcef1c912f0a2bc397af.js" defer></script><script src="/kingdom/_nuxt/vendor.a6f778eddd0cdf7b1049.js" defer></script><script src="/kingdom/_nuxt/app.98897651354a28845858.js" defer></script>
+    <div data-server-rendered="true" id="__nuxt"><div class="nuxt-progress" style="width:0%;height:2px;background-color:black;opacity:0;"></div><div id="__layout"><div><form><label for="input1">Label for input 1</label><input id="input1" aria-describedby="input1description"><span id="input1description">Pretty long field description/instruction that cover multiple lines</span><fieldset class="py-0"><legend>A fieldset with legend and no vertical padding</legend><label><input type="checkbox">Checkbox in label</label><label><input type="checkbox" required="required">Required checkbox in label</label><label><input type="radio" name="radio">Radio A</label><label><input type="radio" name="radio">Radio B</label><input type="checkbox" id="checkboxA"><label for="checkboxA">Checkbox with adjacent label</label><input type="checkbox" id="checkboxB" required="required"><label for="checkboxB">Required checkbox with adjacent
+      label</label></fieldset><label for="textarea1">Label for textarea 1</label><textarea id="textarea1"></textarea><label for="select1">Label for select 1</label><select id="select1"><option>Option 1</option><option>Option 2</option><optgroup label="Optgroup A"><option>Option A1</option><option>Option A2</option></optgroup><option>Option 3</option></select><label for="select2">Label for multiple select</label><select id="select2" multiple="multiple"><option>Option 1</option><option>Option 2</option><optgroup label="Optgroup A"><option>Option A1</option><option>Option A2</option></optgroup><option>Option 3</option></select><label for="input2">Label for input 2</label><input id="input2" required="required" placeholder="required input" aria-describedby="input2description"><small id="input2description">Field description/instructions</small><button type="submit">Submit button</button></form><form class="form-inline"><button class="button-prime">Prime button</button><button class="button-plain">Plain button</button><button class="button-petty">Petty button</button><button class="button-large">Large button</button><button class="button-prime button-destructive">Prime destructive button</button><button class="button-plain button-destructive">Plain destructive button</button><button class="button-petty button-destructive">Petty destructive button</button><a href="#" class="button-prime">Prime button link</a><a href="#" class="button-plain">Plain button link</a><a href="#" class="button-petty">Petty button link</a><a href="#">Unstyled link</a><button disabled="disabled" class="button-prime">Prime disabled button</button><button disabled="disabled" class="button-plain">Plain disabled button</button><button disabled="disabled" class="button-petty">Petty disabled button</button></form><hr><form class="form-inline"><input disabled="disabled" value="disabled"><input readonly="readonly" value="readonly"><textarea disabled="disabled">disabled</textarea><textarea readonly="readonly">readonly</textarea><label class="disabled"><input type="checkbox" disabled="disabled">Disabled checkbox in label</label><input type="checkbox" disabled="disabled" id="checkboxC"><label for="checkboxC">Checkbox with adjacent label C</label><select disabled="disabled"><option>Option 1</option><option>Option 2</option><optgroup label="Optgroup A"><option>Option A1</option><option>Option A2</option></optgroup><option>Option 3</option></select><select multiple="multiple" disabled="disabled"><option>Option 1</option><option>Option 2</option><optgroup label="Optgroup A"><option>Option A1</option><option>Option A2</option></optgroup><option>Option 3</option></select></form></div></div></div><script type="text/javascript">window.__NUXT__={"layout":"default","data":[{}],"error":null,"serverRendered":true};</script><script src="/kingdom/_nuxt/manifest.b8dbf70f1e8388c7f3f5.js" defer></script><script src="/kingdom/_nuxt/layouts/default.af3be95d07133ea92689.js" defer></script><script src="/kingdom/_nuxt/pages/forms-demo/L4.7b805098dd167a37fd24.js" defer></script><script src="/kingdom/_nuxt/vendor.a6f778eddd0cdf7b1049.js" defer></script><script src="/kingdom/_nuxt/app.98897651354a28845858.js" defer></script>
   </body>
 </html>

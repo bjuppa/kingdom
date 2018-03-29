@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html data-n-head-ssr data-n-head="">
   <head>
-    <meta data-n-head="true" charset="utf-8"/><meta data-n-head="true" http-equiv="X-UA-Compatible" content="IE=edge"/><meta data-n-head="true" name="viewport" content="width=device-width, initial-scale=1"/><title data-n-head="true">Kingdom CSS</title><base href="/kingdom/"><link rel="preload" href="/kingdom/_nuxt/manifest.b8dbf70f1e8388c7f3f5.js" as="script"><link rel="preload" href="/kingdom/_nuxt/vendor.a6f778eddd0cdf7b1049.js" as="script"><link rel="preload" href="/kingdom/_nuxt/app.98897651354a28845858.js" as="script"><link rel="preload" href="/kingdom/_nuxt/layouts/default.af3be95d07133ea92689.js" as="script"><link rel="preload" href="/kingdom/_nuxt/pages/demo/index.e34d09db27e0331bc6c2.js" as="script"><link rel="prefetch" href="/kingdom/_nuxt/pages/forms-demo/index.04282b01d68a1b135d5a.js"><link rel="prefetch" href="/kingdom/_nuxt/pages/forms-demo/L4.7b805098dd167a37fd24.js"><link rel="prefetch" href="/kingdom/_nuxt/pages/forms-demo/L2.b46ccb86426d8595462b.js"><link rel="prefetch" href="/kingdom/_nuxt/pages/forms-demo/L1.215833d4d669e510bb37.js"><link rel="prefetch" href="/kingdom/_nuxt/pages/demo/L4.b11a283064e256b743d3.js"><link rel="prefetch" href="/kingdom/_nuxt/pages/demo/L3.6e73bbdba78044cba646.js"><link rel="prefetch" href="/kingdom/_nuxt/pages/demo/L2.248cc0db1e838ae87f88.js"><link rel="prefetch" href="/kingdom/_nuxt/pages/demo/L1.bed46a7aca0e39c864dd.js"><link rel="prefetch" href="/kingdom/_nuxt/pages/index.bcef1c912f0a2bc397af.js"><link rel="prefetch" href="/kingdom/_nuxt/pages/forms-demo/L3.476a1aefea89d27c3fa1.js"><style data-vue-ssr-id="5bab7354:0">
+    <meta data-n-head="true" charset="utf-8"/><meta data-n-head="true" http-equiv="X-UA-Compatible" content="IE=edge"/><meta data-n-head="true" name="viewport" content="width=device-width, initial-scale=1"/><title data-n-head="true">Kingdom CSS</title><base href="/kingdom/"><link rel="preload" href="/kingdom/_nuxt/manifest.b8dbf70f1e8388c7f3f5.js" as="script"><link rel="preload" href="/kingdom/_nuxt/vendor.a6f778eddd0cdf7b1049.js" as="script"><link rel="preload" href="/kingdom/_nuxt/app.98897651354a28845858.js" as="script"><link rel="preload" href="/kingdom/_nuxt/layouts/default.af3be95d07133ea92689.js" as="script"><link rel="preload" href="/kingdom/_nuxt/pages/forms-demo/L1.215833d4d669e510bb37.js" as="script"><link rel="prefetch" href="/kingdom/_nuxt/pages/forms-demo/index.04282b01d68a1b135d5a.js"><link rel="prefetch" href="/kingdom/_nuxt/pages/forms-demo/L4.7b805098dd167a37fd24.js"><link rel="prefetch" href="/kingdom/_nuxt/pages/forms-demo/L2.b46ccb86426d8595462b.js"><link rel="prefetch" href="/kingdom/_nuxt/pages/demo/L4.b11a283064e256b743d3.js"><link rel="prefetch" href="/kingdom/_nuxt/pages/demo/L3.6e73bbdba78044cba646.js"><link rel="prefetch" href="/kingdom/_nuxt/pages/demo/L2.248cc0db1e838ae87f88.js"><link rel="prefetch" href="/kingdom/_nuxt/pages/demo/L1.bed46a7aca0e39c864dd.js"><link rel="prefetch" href="/kingdom/_nuxt/pages/index.bcef1c912f0a2bc397af.js"><link rel="prefetch" href="/kingdom/_nuxt/pages/forms-demo/L3.476a1aefea89d27c3fa1.js"><link rel="prefetch" href="/kingdom/_nuxt/pages/demo/index.e34d09db27e0331bc6c2.js"><style data-vue-ssr-id="5bab7354:0">
 .nuxt-progress {
   position: fixed;
   top: 0px;
@@ -15,13 +15,13 @@
   background-color: #efc14e;
   z-index: 999999;
 }
-</style><style data-vue-ssr-id="03c4ee9c:0">/* Kingdom CSS Level 1 - Reset */
+</style><style data-vue-ssr-id="9e46cc84:0">/* Kingdom CSS Level 1 - Reset */
 body {
   padding: 0;
-  background-color: #fdfefe;
-  background-color: var(--color-body, #fdfefe);
-  color: #0c0d0d;
-  color: var(--color-body-text, #0c0d0d);
+  background-color: #2c322d;
+  background-color: var(--color-body, #2c322d);
+  color: #eaebea;
+  color: var(--color-body-text, #eaebea);
 }
 html, body {
   margin: 0;
@@ -155,12 +155,20 @@ button:focus, [type='button']:focus, [type='reset']:focus, [type='submit']:focus
   outline: 5px auto -webkit-focus-ring-color;
 }
 *:link {
-  color: #060b86;
-  color: var(--color-link, #060b86);
+  color: #8675f5;
+  color: var(--color-link, #8675f5);
 }
 
 /* Placeholders for fonts */
 /* %font-body */
+body {
+  font-family: Verdana, sans-serif;
+  --baseline-shift-factor: 0.75;
+}
+body * {
+    font-family: inherit;
+}
+
 /* %font-headings */
 /* %font-forms */
 /* Placeholders for text */
@@ -885,13 +893,13 @@ button:focus, [type='button']:focus, [type='reset']:focus, [type='submit']:focus
 /* %mx-31 */
 /* %mx-32 */
 /* %mt-0 */
-.mt-0, .mt-0-children > *, .mt-0-within * {
+.mt-0, .mt-0-children > *, .mt-0-within *, fieldset > label:first-of-type, label:not([for]) + label:not([for]), [aria-describedby] + div[id] {
   /* Reset vertical spacing */
   margin-top: 0;
 }
 
 /* %mt-1 */
-.h-px + *, .mt-1 {
+.h-px + *, .mt-1, * + label, .form-inline > * {
   /* Default vertical spacing */
   margin-top: 16px;
   margin-top: 1rem;
@@ -2034,38 +2042,302 @@ button:focus, [type='button']:focus, [type='reset']:focus, [type='submit']:focus
   display: inline-flex;
 }
 :root {
-  --color-primary: #a29f39;
-  --color-primary-text: #f4f4ed;
-  --color-body: #fdfefe;
-  --color-body-text: #0c0d0d;
-  --color-link: #060b86;
+  --color-primary: #7e73c4;
+  --color-primary-text: #070609;
+  --color-body: #2c322d;
+  --color-body-text: #eaebea;
+  --color-link: #8675f5;
   --color-border: currentColor;
 }
 .color-primary {
-  color: #a29f39;
-  color: var(--color-primary, #a29f39);
+  color: #7e73c4;
+  color: var(--color-primary, #7e73c4);
 }
 
-/* Position the demo iframes */
-.demo {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  height: 100%;
-  height: 100vh;
+/* Kingdom CSS Extension - Forms */
+/* %label-disabled */
+[type='checkbox'][id]:disabled + label[for], [type='radio'][id]:disabled + label[for], label.disabled,
+label[disabled],
+label:disabled,
+fieldset:disabled label:not([for]) {
+  color: #7e817f;
 }
-.demo > * {
-    height: 100%;
-    min-width: 320px;
-    min-width: 20rem;
-    max-width: 90vw;
-    -webkit-box-flex: 1;
-        -ms-flex: 1 1 auto;
-            flex: 1 1 auto;
+
+/* %label-invalid */
+[type='checkbox'][id]:invalid + label[for], [type='checkbox'][id][aria-invalid] + label[for], [type='radio'][id]:invalid + label[for], [type='radio'][id][aria-invalid] + label[for], label.invalid,
+label:invalid,
+label[aria-invalid] {
+  color: #d66c5c;
+  color: var(--color-caution, #d66c5c);
+}
+
+/* Inputs */
+input, select:not([size]):not([multiple]) {
+  vertical-align: bottom;
+  line-height: 14px;
+  line-height: 0.875rem;
+  line-height: calc(var(--line-height, 1rem) - 2px);
+  border-width: 1px;
+  padding-top: 0;
+  padding-bottom: 0;
+  height: 16px;
+  height: 1rem;
+  height: var(--line-height, 16px);
+  height: var(--line-height, 1rem);
+  max-height: 16px;
+  max-height: 1rem;
+  max-height: var(--line-height, 16px);
+  max-height: var(--line-height, 1rem);
+}
+textarea {
+  border-top-width: 1px;
+  --border-top-width: 1px;
+  border-top-width: var(--border-top-width);
+  vertical-align: top;
+  border-bottom-width: 1px;
+  --border-bottom-width: 1px;
+  border-bottom-width: var(--border-bottom-width);
+  vertical-align: top;
+  border-left-width: 1px;
+  --border-left-width: 1px;
+  border-left-width: var(--border-left-width);
+  vertical-align: top;
+  border-right-width: 1px;
+  --border-right-width: 1px;
+  border-right-width: var(--border-right-width);
+  vertical-align: top;
+  position: relative;
+  top: -1px;
+  top: calc(0px - var(--border-top-width));
+  margin-bottom: -2px;
+  margin-bottom: calc(0px - var(--border-top-width, 0px) - var(--border-bottom-width, 0px));
+}
+textarea.h-1, textarea.h-2, textarea.h-3, textarea.h-4, textarea.h-5, textarea.h-6, textarea.h-7, textarea.h-8, textarea.h-9, textarea.h-10, textarea.h-12, textarea.h-14, textarea.h-16, textarea.h-18, textarea.h-20, textarea.h-24, textarea.h-28, textarea.h-32, textarea.h-36, textarea.h-40, textarea.h-48, textarea.h-56, textarea.h-64 {
+    margin-bottom: 0;
+}
+textarea.h-1, textarea.h-2, textarea.h-3, textarea.h-4, textarea.h-5, textarea.h-6, textarea.h-7, textarea.h-8, textarea.h-9, textarea.h-10, textarea.h-12, textarea.h-14, textarea.h-16, textarea.h-18, textarea.h-20, textarea.h-24, textarea.h-28, textarea.h-32, textarea.h-36, textarea.h-40, textarea.h-48, textarea.h-56, textarea.h-64 {
+    position: static;
+    position: initial;
+    top: auto;
+    top: initial;
+}
+input, textarea, select {
+  background: white;
+  background-clip: padding-box;
+  border-color: #bcc2bd;
+  border-style: solid;
+  border-radius: 0.125rem;
+}
+input:invalid, input[aria-invalid], textarea:invalid, textarea[aria-invalid], select:invalid, select[aria-invalid] {
+    border-color: #d66c5c;
+}
+input:disabled, textarea:disabled, select:disabled {
+    background-color: rgba(229, 230, 229, .75);
+}
+input, textarea {
+  -webkit-box-shadow: inset 0 2px 4px 0 rgba(0, 0, 0, .08);
+          box-shadow: inset 0 2px 4px 0 rgba(0, 0, 0, .08);
+}
+input::-webkit-input-placeholder, textarea::-webkit-input-placeholder {
+    color: inherit;
+    opacity: .5;
+}
+input:-ms-input-placeholder, textarea:-ms-input-placeholder {
+    color: inherit;
+    opacity: .5;
+}
+input::-ms-input-placeholder, textarea::-ms-input-placeholder {
+    color: inherit;
+    opacity: .5;
+}
+input::placeholder, textarea::placeholder {
+    color: inherit;
+    opacity: .5;
+}
+input:-moz-read-only, textarea:-moz-read-only {
+    background-color: rgba(229, 230, 229, .75);
+}
+input:read-only, textarea:read-only {
+    background-color: rgba(229, 230, 229, .75);
+}
+[type='checkbox'], [type='radio'] {
+  vertical-align: baseline;
+  height: auto;
+}
+
+/* Buttons */
+/* %button base for all buttons  */
+button,
+[type='button'],
+[type='reset'],
+[type='submit'], .button-prime, .button-plain, .button-petty, .button-large, .button-destructive {
+  color: #7e73c4;
+  background: transparent;
+  background-clip: padding-box;
+  display: inline-block;
+  vertical-align: bottom;
+  line-height: 14px;
+  line-height: 0.875rem;
+  line-height: calc(var(--line-height, 1rem) - 2px);
+  border-width: 1px;
+  padding-top: 0;
+  padding-bottom: 0;
+  height: 16px;
+  height: 1rem;
+  height: var(--line-height, 16px);
+  height: var(--line-height, 1rem);
+  max-height: 16px;
+  max-height: 1rem;
+  max-height: var(--line-height, 16px);
+  max-height: var(--line-height, 1rem);
+  border-color: #7e73c4;
+  border-style: solid;
+  border-radius: 0.125rem;
+  -webkit-box-shadow: 0 2px 4px 0 rgba(0, 0, 0, .08);
+          box-shadow: 0 2px 4px 0 rgba(0, 0, 0, .08);
+  padding-left: 4px;
+  padding-left: 0.25rem;
+  padding-right: 4px;
+  padding-right: 0.25rem;
+  text-decoration: none;
+  -webkit-transition: all 0.15s ease-in-out;
+  transition: all 0.15s ease-in-out;
+}
+button:focus,
+  [type='button']:focus,
+  [type='reset']:focus,
+  [type='submit']:focus, .button-prime:focus, .button-plain:focus, .button-petty:focus, .button-large:focus, .button-destructive:focus {
+    outline: none;
+    -webkit-box-shadow: 0 0 0 0.2rem #bdb7e1;
+            box-shadow: 0 0 0 0.2rem #bdb7e1;
+}
+button:active,
+  [type='button']:active,
+  [type='reset']:active,
+  [type='submit']:active, .button-prime:active, .button-plain:active, .button-petty:active, .button-large:active, .button-destructive:active {
+    color: #7e73c4;
+    -webkit-box-shadow: inset 0 2px 4px 0 rgba(0, 0, 0, .08);
+            box-shadow: inset 0 2px 4px 0 rgba(0, 0, 0, .08);
+}
+button:not(:disabled):not(.disabled),
+  [type='button']:not(:disabled):not(.disabled),
+  [type='reset']:not(:disabled):not(.disabled),
+  [type='submit']:not(:disabled):not(.disabled), .button-prime:not(:disabled):not(.disabled), .button-plain:not(:disabled):not(.disabled), .button-petty:not(:disabled):not(.disabled), .button-large:not(:disabled):not(.disabled), .button-destructive:not(:disabled):not(.disabled) {
+    cursor: pointer;
+}
+button:disabled,
+  [type='button']:disabled,
+  [type='reset']:disabled,
+  [type='submit']:disabled, .button-prime:disabled, .button-plain:disabled, .button-petty:disabled, .button-large:disabled, .button-destructive:disabled, button.disabled,
+  .disabled[type='button'],
+  .disabled[type='reset'],
+  .disabled[type='submit'], .disabled.button-prime, .disabled.button-plain, .disabled.button-petty, .disabled.button-large, .disabled.button-destructive, fieldset:disabled button, fieldset:disabled
+  [type='button'], fieldset:disabled
+  [type='reset'], fieldset:disabled
+  [type='submit'], fieldset:disabled .button-prime, fieldset:disabled .button-plain, fieldset:disabled .button-petty, fieldset:disabled .button-large, fieldset:disabled .button-destructive {
+    pointer-events: none;
+    background-color: rgba(229, 230, 229, .75);
+    background-color: var(--color-disabled, rgba(229, 230, 229, .75));
+    color: #7e817f;
+    color: var(--color-disabled-text, #7e817f);
+    border-color: rgba(229, 230, 229, .75);
+}
+
+/* Prominent button */
+.button-prime {
+  background: #7e73c4;
+  border-color: #7e73c4;
+  color: #070609;
+}
+.button-prime:active {
+    color: #070609;
+}
+
+/* Standard button */
+/* Discreet, link like button */
+.button-petty {
+  border: transparent;
+  background: transparent;
+  text-decoration: underline;
+  -webkit-box-shadow: none;
+          box-shadow: none;
+}
+.button-petty:focus {
+    text-decoration: none;
+}
+.button-petty:active {
+    -webkit-box-shadow: none;
+            box-shadow: none;
+    text-decoration: none;
+}
+.button-petty:disabled {
+    text-decoration: none;
+}
+
+/* Big button */
+.button-large {
+  font-size: 1em;
+  line-height: 32px;
+  line-height: 2rem;
+  --line-height: calc(2 * var(--spacing-base, 1rem));
+  line-height: var(--line-height);
+  vertical-align: bottom;
+  line-height: 30px;
+  line-height: 1.875rem;
+  line-height: calc(var(--line-height, 2rem) - 2px);
+  border-width: 1px;
+  padding-top: 0;
+  padding-bottom: 0;
+  height: 32px;
+  height: 2rem;
+  height: var(--line-height, 32px);
+  height: var(--line-height, 2rem);
+  max-height: 32px;
+  max-height: 2rem;
+  max-height: var(--line-height, 32px);
+  max-height: var(--line-height, 2rem);
+}
+
+/* Cautionary button */
+.button-destructive {
+  color: #d66c5c;
+  border-color: #d66c5c;
+}
+.button-destructive:active {
+    color: #d66c5c;
+}
+.button-destructive:focus {
+    -webkit-box-shadow: 0 0 0 0.2rem #ebb6ad;
+            box-shadow: 0 0 0 0.2rem #ebb6ad;
+}
+.button-destructive.button-prime {
+    background: #d66c5c;
+    border-color: #d66c5c;
+    color: #0a0605;
+}
+.button-destructive.button-prime:active {
+      color: #0a0605;
+}
+
+/* Form layout */
+label {
+  display: block;
+}
+[type="checkbox"][id] + label[for], [type="radio"][id] + label[for] {
+  display: inline;
+}
+[aria-describedby] + span[id], [aria-describedby] + small[id] {
+  display: inline-block;
+}
+
+/* .form-inline make a form's contents go inline */
+.form-inline > * {
+  display: inline-block;
 }
 </style>
   </head>
   <body data-n-head="">
-    <div data-server-rendered="true" id="__nuxt"><div class="nuxt-progress" style="width:0%;height:2px;background-color:black;opacity:0;"></div><div id="__layout"><div class="demo"><iframe src="demo/L1"></iframe><iframe src="demo/L2"></iframe><iframe src="demo/L3"></iframe><iframe src="demo/L4"></iframe></div></div></div><script type="text/javascript">window.__NUXT__={"layout":"default","data":[{}],"error":null,"serverRendered":true};</script><script src="/kingdom/_nuxt/manifest.b8dbf70f1e8388c7f3f5.js" defer></script><script src="/kingdom/_nuxt/layouts/default.af3be95d07133ea92689.js" defer></script><script src="/kingdom/_nuxt/pages/demo/index.e34d09db27e0331bc6c2.js" defer></script><script src="/kingdom/_nuxt/vendor.a6f778eddd0cdf7b1049.js" defer></script><script src="/kingdom/_nuxt/app.98897651354a28845858.js" defer></script>
+    <div data-server-rendered="true" id="__nuxt"><div class="nuxt-progress" style="width:0%;height:2px;background-color:black;opacity:0;"></div><div id="__layout"><div><form><label for="input1">Label for input 1</label><input id="input1" aria-describedby="input1description"><span id="input1description">Pretty long field description/instruction that cover multiple lines</span><fieldset class="py-0"><legend>A fieldset with legend and no vertical padding</legend><label><input type="checkbox">Checkbox in label</label><label><input type="checkbox" required="required">Required checkbox in label</label><label><input type="radio" name="radio">Radio A</label><label><input type="radio" name="radio">Radio B</label><input type="checkbox" id="checkboxA"><label for="checkboxA">Checkbox with adjacent label</label><input type="checkbox" id="checkboxB" required="required"><label for="checkboxB">Required checkbox with adjacent
+      label</label></fieldset><label for="textarea1">Label for textarea 1</label><textarea id="textarea1"></textarea><label for="select1">Label for select 1</label><select id="select1"><option>Option 1</option><option>Option 2</option><optgroup label="Optgroup A"><option>Option A1</option><option>Option A2</option></optgroup><option>Option 3</option></select><label for="select2">Label for multiple select</label><select id="select2" multiple="multiple"><option>Option 1</option><option>Option 2</option><optgroup label="Optgroup A"><option>Option A1</option><option>Option A2</option></optgroup><option>Option 3</option></select><label for="input2">Label for input 2</label><input id="input2" required="required" placeholder="required input" aria-describedby="input2description"><small id="input2description">Field description/instructions</small><button type="submit">Submit button</button></form><form class="form-inline"><button class="button-prime">Prime button</button><button class="button-plain">Plain button</button><button class="button-petty">Petty button</button><button class="button-large">Large button</button><button class="button-prime button-destructive">Prime destructive button</button><button class="button-plain button-destructive">Plain destructive button</button><button class="button-petty button-destructive">Petty destructive button</button><a href="#" class="button-prime">Prime button link</a><a href="#" class="button-plain">Plain button link</a><a href="#" class="button-petty">Petty button link</a><a href="#">Unstyled link</a><button disabled="disabled" class="button-prime">Prime disabled button</button><button disabled="disabled" class="button-plain">Plain disabled button</button><button disabled="disabled" class="button-petty">Petty disabled button</button></form><hr><form class="form-inline"><input disabled="disabled" value="disabled"><input readonly="readonly" value="readonly"><textarea disabled="disabled">disabled</textarea><textarea readonly="readonly">readonly</textarea><label class="disabled"><input type="checkbox" disabled="disabled">Disabled checkbox in label</label><input type="checkbox" disabled="disabled" id="checkboxC"><label for="checkboxC">Checkbox with adjacent label C</label><select disabled="disabled"><option>Option 1</option><option>Option 2</option><optgroup label="Optgroup A"><option>Option A1</option><option>Option A2</option></optgroup><option>Option 3</option></select><select multiple="multiple" disabled="disabled"><option>Option 1</option><option>Option 2</option><optgroup label="Optgroup A"><option>Option A1</option><option>Option A2</option></optgroup><option>Option 3</option></select></form></div></div></div><script type="text/javascript">window.__NUXT__={"layout":"default","data":[{}],"error":null,"serverRendered":true};</script><script src="/kingdom/_nuxt/manifest.b8dbf70f1e8388c7f3f5.js" defer></script><script src="/kingdom/_nuxt/layouts/default.af3be95d07133ea92689.js" defer></script><script src="/kingdom/_nuxt/pages/forms-demo/L1.215833d4d669e510bb37.js" defer></script><script src="/kingdom/_nuxt/vendor.a6f778eddd0cdf7b1049.js" defer></script><script src="/kingdom/_nuxt/app.98897651354a28845858.js" defer></script>
   </body>
 </html>

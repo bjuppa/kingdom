@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html data-n-head-ssr data-n-head="">
   <head>
-    <meta data-n-head="true" charset="utf-8"/><meta data-n-head="true" http-equiv="X-UA-Compatible" content="IE=edge"/><meta data-n-head="true" name="viewport" content="width=device-width, initial-scale=1"/><title data-n-head="true">Kingdom CSS</title><base href="/kingdom/"><link rel="preload" href="/kingdom/_nuxt/manifest.b8dbf70f1e8388c7f3f5.js" as="script"><link rel="preload" href="/kingdom/_nuxt/vendor.a6f778eddd0cdf7b1049.js" as="script"><link rel="preload" href="/kingdom/_nuxt/app.98897651354a28845858.js" as="script"><link rel="preload" href="/kingdom/_nuxt/layouts/default.af3be95d07133ea92689.js" as="script"><link rel="preload" href="/kingdom/_nuxt/pages/index.bcef1c912f0a2bc397af.js" as="script"><link rel="prefetch" href="/kingdom/_nuxt/pages/forms-demo/index.04282b01d68a1b135d5a.js"><link rel="prefetch" href="/kingdom/_nuxt/pages/forms-demo/L4.7b805098dd167a37fd24.js"><link rel="prefetch" href="/kingdom/_nuxt/pages/forms-demo/L2.b46ccb86426d8595462b.js"><link rel="prefetch" href="/kingdom/_nuxt/pages/forms-demo/L1.215833d4d669e510bb37.js"><link rel="prefetch" href="/kingdom/_nuxt/pages/demo/L4.b11a283064e256b743d3.js"><link rel="prefetch" href="/kingdom/_nuxt/pages/demo/L3.6e73bbdba78044cba646.js"><link rel="prefetch" href="/kingdom/_nuxt/pages/demo/L2.248cc0db1e838ae87f88.js"><link rel="prefetch" href="/kingdom/_nuxt/pages/demo/L1.bed46a7aca0e39c864dd.js"><link rel="prefetch" href="/kingdom/_nuxt/pages/forms-demo/L3.476a1aefea89d27c3fa1.js"><link rel="prefetch" href="/kingdom/_nuxt/pages/demo/index.e34d09db27e0331bc6c2.js"><style data-vue-ssr-id="5bab7354:0">
+    <meta data-n-head="true" charset="utf-8"/><meta data-n-head="true" http-equiv="X-UA-Compatible" content="IE=edge"/><meta data-n-head="true" name="viewport" content="width=device-width, initial-scale=1"/><title data-n-head="true">Kingdom CSS</title><base href="/kingdom/"><link rel="preload" href="/kingdom/_nuxt/manifest.b8dbf70f1e8388c7f3f5.js" as="script"><link rel="preload" href="/kingdom/_nuxt/vendor.a6f778eddd0cdf7b1049.js" as="script"><link rel="preload" href="/kingdom/_nuxt/app.98897651354a28845858.js" as="script"><link rel="preload" href="/kingdom/_nuxt/layouts/default.af3be95d07133ea92689.js" as="script"><link rel="preload" href="/kingdom/_nuxt/pages/demo/L4.b11a283064e256b743d3.js" as="script"><link rel="prefetch" href="/kingdom/_nuxt/pages/forms-demo/index.04282b01d68a1b135d5a.js"><link rel="prefetch" href="/kingdom/_nuxt/pages/forms-demo/L4.7b805098dd167a37fd24.js"><link rel="prefetch" href="/kingdom/_nuxt/pages/forms-demo/L2.b46ccb86426d8595462b.js"><link rel="prefetch" href="/kingdom/_nuxt/pages/forms-demo/L1.215833d4d669e510bb37.js"><link rel="prefetch" href="/kingdom/_nuxt/pages/demo/L3.6e73bbdba78044cba646.js"><link rel="prefetch" href="/kingdom/_nuxt/pages/demo/L2.248cc0db1e838ae87f88.js"><link rel="prefetch" href="/kingdom/_nuxt/pages/demo/L1.bed46a7aca0e39c864dd.js"><link rel="prefetch" href="/kingdom/_nuxt/pages/index.bcef1c912f0a2bc397af.js"><link rel="prefetch" href="/kingdom/_nuxt/pages/forms-demo/L3.476a1aefea89d27c3fa1.js"><link rel="prefetch" href="/kingdom/_nuxt/pages/demo/index.e34d09db27e0331bc6c2.js"><style data-vue-ssr-id="5bab7354:0">
 .nuxt-progress {
   position: fixed;
   top: 0px;
@@ -15,13 +15,13 @@
   background-color: #efc14e;
   z-index: 999999;
 }
-</style><style data-vue-ssr-id="56a96b4a:0">/* Kingdom CSS Level 1 - Reset */
+</style><style data-vue-ssr-id="51b325e0:0">/* Kingdom CSS Level 1 - Reset */
 body {
   padding: 0;
-  background-color: #fdfdfd;
-  background-color: var(--color-body, #fdfdfd);
-  color: #0c0d0d;
-  color: var(--color-body-text, #0c0d0d);
+  background-color: #34342b;
+  background-color: var(--color-body, #34342b);
+  color: #ebebe9;
+  color: var(--color-body-text, #ebebe9);
 }
 html, body {
   margin: 0;
@@ -155,13 +155,29 @@ button:focus, [type='button']:focus, [type='reset']:focus, [type='submit']:focus
   outline: 5px auto -webkit-focus-ring-color;
 }
 *:link {
-  color: #0f0686;
-  color: var(--color-link, #0f0686);
+  color: #7575f5;
+  color: var(--color-link, #7575f5);
 }
 
 /* Placeholders for fonts */
 /* %font-body */
+body {
+  font-family: "Times New Roman", Times, serif;
+  --baseline-shift-factor: 0.62;
+}
+body * {
+    font-family: inherit;
+}
+
 /* %font-headings */
+h1, h2, h3, h4, h5, h6 {
+  font-family: Verdana, sans-serif;
+  --baseline-shift-factor: 0.75;
+}
+h1 *, h2 *, h3 *, h4 *, h5 *, h6 * {
+    font-family: inherit;
+}
+
 /* %font-forms */
 /* Placeholders for text */
 /* %text-1 */
@@ -1604,7 +1620,7 @@ fieldset, .px-1\/4, .space-inside {
 }
 
 /* %pb-1 */
-.pb-1 {
+.pb-1, .space-inside-b > p:last-child, .space-inside-b > blockquote:last-child, .space-inside-b > address:last-child, .space-inside-b > li:last-child, .space-inside-b > dt:last-child, .space-inside-b > dd:last-child, .space-inside-b > h1:last-child, .space-inside-b > h2:last-child, .space-inside-b > h3:last-child, .space-inside-b > h4:last-child, .space-inside-b > h5:last-child, .space-inside-b > h6:last-child, .space-inside > p:last-child, .space-inside > blockquote:last-child, .space-inside > address:last-child, .space-inside > li:last-child, .space-inside > dt:last-child, .space-inside > dd:last-child, .space-inside > h1:last-child, .space-inside > h2:last-child, .space-inside > h3:last-child, .space-inside > h4:last-child, .space-inside > h5:last-child, .space-inside > h6:last-child {
   padding-bottom: 27px;
   padding-bottom: 1.6875rem;
   padding-bottom: calc(1 * var(--spacing-base, 1.6875rem));
@@ -2151,9 +2167,25 @@ legend {
   padding-top: 1px;
 }
 .visualize-vertical-rhythm {
-  background-image: linear-gradient(rgba(107, 50, 46, .15), rgba(107, 50, 46, .15) 1px, transparent 1px);
+  background-image: linear-gradient(rgba(223, 93, 93, .15), rgba(223, 93, 93, .15) 1px, transparent 1px);
   background-size: 1px 1.6875rem;
   background-size: 1px var(--spacing-base, 1.6875rem);
+}
+
+/* Kingdom CSS Level 4 - Baseline Rhythm */
+@supports (top: calc((var(--line-height) - 1em * var(--baseline-shift-factor)) / 2)) {
+  /* %baseline-shift */
+p, blockquote, address, li, dt, dd, h1, h2, h3, h4, h5, h6 {
+    position: relative;
+    top: calc((var(--line-height) - 1em * var(--baseline-shift-factor)) / 2);
+}
+  /* %baseline-shift-off */
+p p, blockquote p, address p, li p, dt p, dd p, h1 p, h2 p, h3 p, h4 p, h5 p, h6 p, p blockquote, blockquote blockquote, address blockquote, li blockquote, dt blockquote, dd blockquote, h1 blockquote, h2 blockquote, h3 blockquote, h4 blockquote, h5 blockquote, h6 blockquote, p address, blockquote address, address address, li address, dt address, dd address, h1 address, h2 address, h3 address, h4 address, h5 address, h6 address, p li, blockquote li, address li, li li, dt li, dd li, h1 li, h2 li, h3 li, h4 li, h5 li, h6 li, p dt, blockquote dt, address dt, li dt, dt dt, dd dt, h1 dt, h2 dt, h3 dt, h4 dt, h5 dt, h6 dt, p dd, blockquote dd, address dd, li dd, dt dd, dd dd, h1 dd, h2 dd, h3 dd, h4 dd, h5 dd, h6 dd, p h1, blockquote h1, address h1, li h1, dt h1, dd h1, h1 h1, h2 h1, h3 h1, h4 h1, h5 h1, h6 h1, p h2, blockquote h2, address h2, li h2, dt h2, dd h2, h1 h2, h2 h2, h3 h2, h4 h2, h5 h2, h6 h2, p h3, blockquote h3, address h3, li h3, dt h3, dd h3, h1 h3, h2 h3, h3 h3, h4 h3, h5 h3, h6 h3, p h4, blockquote h4, address h4, li h4, dt h4, dd h4, h1 h4, h2 h4, h3 h4, h4 h4, h5 h4, h6 h4, p h5, blockquote h5, address h5, li h5, dt h5, dd h5, h1 h5, h2 h5, h3 h5, h4 h5, h5 h5, h6 h5, p h6, blockquote h6, address h6, li h6, dt h6, dd h6, h1 h6, h2 h6, h3 h6, h4 h6, h5 h6, h6 h6 {
+    position: static;
+    position: initial;
+    top: auto;
+    top: initial;
+}
 }
 .mx-auto,
 .mx-auto-children > * {
@@ -2229,20 +2261,50 @@ legend {
   display: inline-flex;
 }
 :root {
-  --color-primary: #676b2e;
-  --color-primary-text: #f0f1ea;
-  --color-body: #fdfdfd;
-  --color-body-text: #0c0d0d;
-  --color-link: #0f0686;
+  --color-primary: #5ddfdf;
+  --color-primary-text: #050b0b;
+  --color-body: #34342b;
+  --color-body-text: #ebebe9;
+  --color-link: #7575f5;
   --color-border: currentColor;
 }
 .color-primary {
-  color: #676b2e;
-  color: var(--color-primary, #676b2e);
+  color: #5ddfdf;
+  color: var(--color-primary, #5ddfdf);
 }
 </style>
   </head>
   <body data-n-head="">
-    <div data-server-rendered="true" id="__nuxt"><div class="nuxt-progress" style="width:0%;height:2px;background-color:black;opacity:0;"></div><div id="__layout"><div><h1>Hello world!</h1><p>Intro...</p></div></div></div><script type="text/javascript">window.__NUXT__={"layout":"default","data":[{}],"error":null,"serverRendered":true};</script><script src="/kingdom/_nuxt/manifest.b8dbf70f1e8388c7f3f5.js" defer></script><script src="/kingdom/_nuxt/layouts/default.af3be95d07133ea92689.js" defer></script><script src="/kingdom/_nuxt/pages/index.bcef1c912f0a2bc397af.js" defer></script><script src="/kingdom/_nuxt/vendor.a6f778eddd0cdf7b1049.js" defer></script><script src="/kingdom/_nuxt/app.98897651354a28845858.js" defer></script>
+    <div data-server-rendered="true" id="__nuxt"><div class="nuxt-progress" style="width:0%;height:2px;background-color:black;opacity:0;"></div><div id="__layout"><div class="space-inside visualize-vertical-rhythm"><h1 class="color-primary">Heading 1</h1><p>
+    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore
+    magna aliqua.
+  </p><h2>Heading 2</h2><p>
+    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore
+    magna aliqua.
+  </p><h3>Heading 3</h3><p>
+    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore
+    magna aliqua.
+  </p><h4>Heading 4</h4><p>
+    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore
+    magna aliqua.
+  </p><h5>Heading 5</h5><p>
+    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore
+    magna aliqua.
+  </p><h6>Heading 6</h6><p>
+    Here's <a href="#href">some
+    <small>small text</small>
+    and <sub>sub text</sub>
+    and <sup>sup text</sup>
+    in a link.</a>
+    Here's <span class="text-small">a span with smaller text-size</span> inside.
+  </p><hr><ul><li>Normal list</li><li>Item 2</li><li>
+      Sub-list
+      <ul><li>Item A</li><li>Item B</li></ul></li><li>Last item</li></ul><ul class="list-unstyled"><li>Unstyled…</li><li>…list</li><li>
+      Sub-list
+      <ul><li>Item A</li><li>Item B</li></ul></li></ul><ul class="list-inline"><li>Inline…</li><li>…list</li></ul><ul class="list-comma-separated"><li>Comma</li><li>separated</li><li>list</li></ul><dl><dt>Description lists</dt><dd>A description list is perfect for defining terms.</dd><dt>Euismod</dt><dd>Vestibulum id ligula porta felis euismod semper eget lacinia odio sem.</dd><dd>This is a second definition description for the same term.</dd><dt>Malesuada porta</dt><dt>A second term</dt><dd>Etiam porta sem malesuada magna mollis euismod.</dd></dl><h2>This is a heading 2 that should be long enough to line break</h2><hr><h3>This is a heading 3 that should be long enough to line break</h3><hr><h4>This is a heading 4 that should be long enough to line break because it has more words</h4><hr><h5>This is a heading 5 that should be long enough to line break because it has more words</h5><hr><div class="h-1">Fixed height div</div><hr><p class="h-1">Fixed height paragraph</p><hr><div class="h-2 border space-inside">Fixed height bordered div</div><hr><p class="h-2 border space-inside">Fixed height bordered paragraph</p><hr><div class="border space-inside">Bordered div</div><hr><p class="border space-inside">Bordered paragraph</p><hr><div class="border space-inside" style="width: 50%; float: left;"><p>Paragraph within a bordered floated div</p></div><p class="space-inside" style="width: 50%; float: left;">Floated paragraph</p><hr style="clear: both"><form><label for="input1">A label</label><input id="input1" placeholder="input" size="4"><hr><label><input type="checkbox">Checkbox A</label><label><input type="checkbox">Checkbox B</label><hr><label><input type="radio" name="radio">Radio A</label><label><input type="radio" name="radio">Radio B</label><hr><button>Button</button><hr><fieldset><label for="fieldsetInput1">Label in fieldset</label><input id="fieldsetInput1"></fieldset><hr><fieldset><legend>Fieldset with a legend</legend><label for="fieldsetInput2">Label in fieldset</label><input id="fieldsetInput2"></fieldset><hr><select id="select1"><option>Select</option></select><hr><select id="selectMultiple" multiple="multiple"><option>Option 1</option><option>Option 2</option><optgroup label="Optgroup A"><option>Option A1</option><option>Option A2</option></optgroup><option>Option 3</option></select><hr><label for="textarea1">A label</label><textarea id="textarea1" placeholder="Textarea"></textarea><hr><input type="button" value="Button input"></form><hr><form>
+    Inputs on a line
+    <label for="input2">Label</label><input id="input2" value="disabled" disabled="disabled"><input id="input3" value="readonly" readonly="readonly"><label for="select2">Label</label><select id="select2" disabled="disabled"><option>Disabled</option></select><label><input type="checkbox" disabled="disabled">Disabled checkbox</label><input type="button" value="Disabled button input" disabled="disabled">
+    ...and some text after.
+  </form><hr></div></div></div><script type="text/javascript">window.__NUXT__={"layout":"default","data":[{}],"error":null,"serverRendered":true};</script><script src="/kingdom/_nuxt/manifest.b8dbf70f1e8388c7f3f5.js" defer></script><script src="/kingdom/_nuxt/layouts/default.af3be95d07133ea92689.js" defer></script><script src="/kingdom/_nuxt/pages/demo/L4.b11a283064e256b743d3.js" defer></script><script src="/kingdom/_nuxt/vendor.a6f778eddd0cdf7b1049.js" defer></script><script src="/kingdom/_nuxt/app.98897651354a28845858.js" defer></script>
   </body>
 </html>
