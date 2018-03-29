@@ -4,7 +4,6 @@
 .gitignore export-ignore
 .editorconfig export-ignore
 .development.md export-ignore
-/resources export-ignore
 /docs export-ignore
 /nuxt export-ignore
 /nuxt.config.js export-ignore
