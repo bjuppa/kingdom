@@ -53,13 +53,19 @@
 
     <h2>Testing</h2>
     <figure>
-      <img src="~/assets/browserstack-logo-600x315.png" class="h-5">
+      <img src="~/assets/browserstack-logo-600x315.png" class="h-5" alt="Browserstack logo">
       <figcaption>
         We're using <a href="http://browserstack.com/">Browserstack</a> for testing across web browsers,
         please check out their amazing services!
       </figcaption>
     </figure>
 
+    <h2>Demos</h2>
+    <p>
+      The demo pages are set up with no options at all, meaning they even generate a random primary color.
+      To see an example of all four levels of Kingdom side by side, you can visit <nuxt-link to="/demo">the demo page</nuxt-link>.
+      The form extension can be seen in action on <nuxt-link to="/forms-demo">the forms demo page</nuxt-link>.
+    </p>
 
   </div>
 </template>
