@@ -6,5 +6,6 @@
 </template>
 
 <style lang="scss">
+  @import "~assets/_variables.scss";
   @import "~assets/L3.scss";
 </style>
