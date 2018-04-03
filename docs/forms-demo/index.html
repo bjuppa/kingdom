@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html data-n-head-ssr data-n-head="">
   <head>
-    <meta data-n-head="true" charset="utf-8"/><meta data-n-head="true" http-equiv="X-UA-Compatible" content="IE=edge"/><meta data-n-head="true" name="viewport" content="width=device-width, initial-scale=1"/><title data-n-head="true">Kingdom CSS</title><base href="/kingdom/"><link rel="preload" href="/kingdom/_nuxt/manifest.13df294f3468138c94cb.js" as="script"><link rel="preload" href="/kingdom/_nuxt/vendor.a6f778eddd0cdf7b1049.js" as="script"><link rel="preload" href="/kingdom/_nuxt/app.3db97434e06d5fcc3f93.js" as="script"><link rel="preload" href="/kingdom/_nuxt/layouts/default.af3be95d07133ea92689.js" as="script"><link rel="preload" href="/kingdom/_nuxt/pages/forms-demo/index.ee8fd8db6cb04d91f4cb.js" as="script"><link rel="prefetch" href="/kingdom/_nuxt/pages/demo/L1.a9b159a127bbf59aacdd.js"><link rel="prefetch" href="/kingdom/_nuxt/pages/forms-demo/L4.1fc7f839766875db37e7.js"><link rel="prefetch" href="/kingdom/_nuxt/pages/forms-demo/L3.02b175f95ca60234ebc7.js"><link rel="prefetch" href="/kingdom/_nuxt/pages/forms-demo/L2.8764327364cb8d1aa576.js"><link rel="prefetch" href="/kingdom/_nuxt/pages/forms-demo/L1.2c59320ec97dc98fd93c.js"><link rel="prefetch" href="/kingdom/_nuxt/pages/demo/L4.fcfc12762248813af59d.js"><link rel="prefetch" href="/kingdom/_nuxt/pages/demo/L3.82bb2a10f9e30c9f22aa.js"><link rel="prefetch" href="/kingdom/_nuxt/pages/demo/L2.707d702973d1d6f5c4cd.js"><link rel="prefetch" href="/kingdom/_nuxt/pages/demo/index.27aa1ff9863e1cfd0763.js"><link rel="prefetch" href="/kingdom/_nuxt/pages/index.9b67c5e88995549c5347.js"><style data-vue-ssr-id="5bab7354:0">
+    <meta data-n-head="true" charset="utf-8"/><meta data-n-head="true" http-equiv="X-UA-Compatible" content="IE=edge"/><meta data-n-head="true" name="viewport" content="width=device-width, initial-scale=1"/><title data-n-head="true">Kingdom CSS</title><base href="/kingdom/"><link rel="preload" href="/kingdom/_nuxt/manifest.1fa2eeb6b1cdfe71695f.js" as="script"><link rel="preload" href="/kingdom/_nuxt/vendor.a6f778eddd0cdf7b1049.js" as="script"><link rel="preload" href="/kingdom/_nuxt/app.a8771ec799aeef82375a.js" as="script"><link rel="preload" href="/kingdom/_nuxt/layouts/default.af3be95d07133ea92689.js" as="script"><link rel="preload" href="/kingdom/_nuxt/pages/forms-demo/index.851b0a9aa5f2e6393d2d.js" as="script"><link rel="prefetch" href="/kingdom/_nuxt/pages/demo/L2.4c6b15155f51c4cab534.js"><link rel="prefetch" href="/kingdom/_nuxt/pages/demo/index.2d200f56142e9a5e9db0.js"><link rel="prefetch" href="/kingdom/_nuxt/pages/forms-demo/L4.206fc0308f7649644a00.js"><link rel="prefetch" href="/kingdom/_nuxt/pages/forms-demo/L3.7a2e187567a352081860.js"><link rel="prefetch" href="/kingdom/_nuxt/pages/forms-demo/L2.1e9302de6b71c939392d.js"><link rel="prefetch" href="/kingdom/_nuxt/pages/forms-demo/L1.f8ef1865ba84b427fc8b.js"><link rel="prefetch" href="/kingdom/_nuxt/pages/demo/L4.6cb5b4592e6e33989600.js"><link rel="prefetch" href="/kingdom/_nuxt/pages/demo/L3.9b48a0184233e81488c4.js"><link rel="prefetch" href="/kingdom/_nuxt/pages/demo/L1.e327e9aa0b472d6680fe.js"><link rel="prefetch" href="/kingdom/_nuxt/pages/index.519837d0c242c0ae5b9f.js"><style data-vue-ssr-id="5bab7354:0">
 .nuxt-progress {
   position: fixed;
   top: 0px;
@@ -15,13 +15,13 @@
   background-color: #efc14e;
   z-index: 999999;
 }
-</style><style data-vue-ssr-id="bc8fef56:0">/* Kingdom CSS Level 1 - Reset */
+</style><style data-vue-ssr-id="1316509f:0">/* Kingdom CSS Level 1 - Reset */
 body {
   padding: 0;
-  background-color: #fdfdfe;
-  background-color: var(--color-body, #fdfdfe);
-  color: #0c0c0e;
-  color: var(--color-body-text, #0c0c0e);
+  background-color: #344234;
+  background-color: var(--color-body, #344234);
+  color: #eaedea;
+  color: var(--color-body-text, #eaedea);
 }
 html, body {
   margin: 0;
@@ -155,12 +155,20 @@ button:focus, [type='button']:focus, [type='reset']:focus, [type='submit']:focus
   outline: 5px auto -webkit-focus-ring-color;
 }
 *:link {
-  color: #061c86;
-  color: var(--color-link, #061c86);
+  color: #7678f5;
+  color: var(--color-link, #7678f5);
 }
 
 /* Placeholders for fonts */
 /* %font-body */
+body {
+  font-family: Verdana, sans-serif;
+  --baseline-shift-factor: 0.75;
+}
+body * {
+    font-family: inherit;
+}
+
 /* %font-headings */
 /* %font-forms */
 /* Placeholders for text */
@@ -2034,16 +2042,16 @@ button:focus, [type='button']:focus, [type='reset']:focus, [type='submit']:focus
   display: inline-flex;
 }
 :root {
-  --color-primary: #31901d;
-  --color-primary-text: #eaf4e9;
-  --color-body: #fdfdfe;
-  --color-body-text: #0c0c0e;
-  --color-link: #061c86;
+  --color-primary: #9698f3;
+  --color-primary-text: #06060e;
+  --color-body: #344234;
+  --color-body-text: #eaedea;
+  --color-link: #7678f5;
   --color-border: currentColor;
 }
 .color-primary {
-  color: #31901d;
-  color: var(--color-primary, #31901d);
+  color: #9698f3;
+  color: var(--color-primary, #9698f3);
 }
 
 /* Position the demo iframes */
@@ -2066,6 +2074,6 @@ button:focus, [type='button']:focus, [type='reset']:focus, [type='submit']:focus
 </style>
   </head>
   <body data-n-head="">
-    <div data-server-rendered="true" id="__nuxt"><div class="nuxt-progress" style="width:0%;height:2px;background-color:black;opacity:0;"></div><div id="__layout"><div class="demo"><iframe src="/forms-demo/L1"></iframe><iframe src="/forms-demo/L2"></iframe><iframe src="/forms-demo/L3"></iframe><iframe src="/forms-demo/L4"></iframe></div></div></div><script type="text/javascript">window.__NUXT__={"layout":"default","data":[{}],"error":null,"serverRendered":true};</script><script src="/kingdom/_nuxt/manifest.13df294f3468138c94cb.js" defer></script><script src="/kingdom/_nuxt/layouts/default.af3be95d07133ea92689.js" defer></script><script src="/kingdom/_nuxt/pages/forms-demo/index.ee8fd8db6cb04d91f4cb.js" defer></script><script src="/kingdom/_nuxt/vendor.a6f778eddd0cdf7b1049.js" defer></script><script src="/kingdom/_nuxt/app.3db97434e06d5fcc3f93.js" defer></script>
+    <div data-server-rendered="true" id="__nuxt"><div class="nuxt-progress" style="width:0%;height:2px;background-color:black;opacity:0;"></div><div id="__layout"><div class="demo"><iframe src="/kingdom/forms-demo/L1"></iframe><iframe src="/kingdom/forms-demo/L2"></iframe><iframe src="/kingdom/forms-demo/L3"></iframe><iframe src="/kingdom/forms-demo/L4"></iframe></div></div></div><script type="text/javascript">window.__NUXT__={"layout":"default","data":[{}],"error":null,"serverRendered":true};</script><script src="/kingdom/_nuxt/manifest.1fa2eeb6b1cdfe71695f.js" defer></script><script src="/kingdom/_nuxt/layouts/default.af3be95d07133ea92689.js" defer></script><script src="/kingdom/_nuxt/pages/forms-demo/index.851b0a9aa5f2e6393d2d.js" defer></script><script src="/kingdom/_nuxt/vendor.a6f778eddd0cdf7b1049.js" defer></script><script src="/kingdom/_nuxt/app.a8771ec799aeef82375a.js" defer></script>
   </body>
 </html>

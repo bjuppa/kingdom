@@ -1,12 +1,13 @@
 <template>
-  <div class="demo">
-    <iframe src="/forms-demo/L1"></iframe>
-    <iframe src="/forms-demo/L2"></iframe>
-    <iframe src="/forms-demo/L3"></iframe>
-    <iframe src="/forms-demo/L4"></iframe>
-  </div>
+  <demo-iframes></demo-iframes>
 </template>
 
-<style lang="scss">
-  @import "~assets/demo-wrapper";
-</style>
+<script>
+  import Iframes from '~/components/demo-iframes.vue';
+
+  export default {
+    components: {
+      'demo-iframes': Iframes
+    }
+  };
+</script>
