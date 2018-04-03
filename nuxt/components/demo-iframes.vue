@@ -1,6 +1,6 @@
 <template>
     <div class="demo">
-        <iframe v-for="href in iframes" v-bind:src="href"></iframe>
+        <iframe v-for="url in iframes" v-bind:src="url"></iframe>
     </div>
 </template>
 
