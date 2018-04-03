@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html data-n-head-ssr data-n-head="">
   <head>
-    <meta data-n-head="true" charset="utf-8"/><meta data-n-head="true" http-equiv="X-UA-Compatible" content="IE=edge"/><meta data-n-head="true" name="viewport" content="width=device-width, initial-scale=1"/><title data-n-head="true">Kingdom CSS</title><base href="/kingdom/"><link rel="preload" href="/kingdom/_nuxt/manifest.6e34d10b8fc67ea685ca.js" as="script"><link rel="preload" href="/kingdom/_nuxt/vendor.a6f778eddd0cdf7b1049.js" as="script"><link rel="preload" href="/kingdom/_nuxt/app.98897651354a28845858.js" as="script"><link rel="preload" href="/kingdom/_nuxt/layouts/default.af3be95d07133ea92689.js" as="script"><link rel="preload" href="/kingdom/_nuxt/pages/demo/L3.2ae2d2a6003350385e1a.js" as="script"><link rel="prefetch" href="/kingdom/_nuxt/pages/index.91ff2531458f1c3a608b.js"><link rel="prefetch" href="/kingdom/_nuxt/pages/forms-demo/L3.406bd4ce6cf1cef5b3af.js"><link rel="prefetch" href="/kingdom/_nuxt/pages/forms-demo/L2.7ec5ad85219cd556b545.js"><link rel="prefetch" href="/kingdom/_nuxt/pages/forms-demo/L1.0ef4372055d9e70b700e.js"><link rel="prefetch" href="/kingdom/_nuxt/pages/demo/L4.d10a4093cc0d3562e8e1.js"><link rel="prefetch" href="/kingdom/_nuxt/pages/demo/L2.82aacbba7d116a75b614.js"><link rel="prefetch" href="/kingdom/_nuxt/pages/demo/L1.4681dcbb7e2d63f4c782.js"><link rel="prefetch" href="/kingdom/_nuxt/pages/forms-demo/L4.6dcffdb12a1854883703.js"><link rel="prefetch" href="/kingdom/_nuxt/pages/forms-demo/index.be4b26b84bf9a44f9718.js"><link rel="prefetch" href="/kingdom/_nuxt/pages/demo/index.19914922bc934977dccd.js"><style data-vue-ssr-id="5bab7354:0">
+    <meta data-n-head="true" charset="utf-8"/><meta data-n-head="true" http-equiv="X-UA-Compatible" content="IE=edge"/><meta data-n-head="true" name="viewport" content="width=device-width, initial-scale=1"/><title data-n-head="true">Kingdom CSS</title><base href="/kingdom/"><link rel="preload" href="/kingdom/_nuxt/manifest.f9e5f9fbee08ed04a641.js" as="script"><link rel="preload" href="/kingdom/_nuxt/vendor.a6f778eddd0cdf7b1049.js" as="script"><link rel="preload" href="/kingdom/_nuxt/app.98897651354a28845858.js" as="script"><link rel="preload" href="/kingdom/_nuxt/layouts/default.af3be95d07133ea92689.js" as="script"><link rel="preload" href="/kingdom/_nuxt/pages/demo/L3.6175c34a536597db18e8.js" as="script"><link rel="prefetch" href="/kingdom/_nuxt/pages/index.91ff2531458f1c3a608b.js"><link rel="prefetch" href="/kingdom/_nuxt/pages/forms-demo/L3.f2382fa84e0c33a946cc.js"><link rel="prefetch" href="/kingdom/_nuxt/pages/forms-demo/L2.421c1c98a7c9f8eb09fe.js"><link rel="prefetch" href="/kingdom/_nuxt/pages/forms-demo/L1.0003572432c6a7aab245.js"><link rel="prefetch" href="/kingdom/_nuxt/pages/demo/L4.094ce99041107c9b5d6e.js"><link rel="prefetch" href="/kingdom/_nuxt/pages/demo/L2.43553f2b06562a3d1dd4.js"><link rel="prefetch" href="/kingdom/_nuxt/pages/demo/L1.c4e848d066a0901e8870.js"><link rel="prefetch" href="/kingdom/_nuxt/pages/forms-demo/L4.e759d62e67809dc217de.js"><link rel="prefetch" href="/kingdom/_nuxt/pages/forms-demo/index.510df86c1b174e7743dd.js"><link rel="prefetch" href="/kingdom/_nuxt/pages/demo/index.6dae80607a40fb4a4f5e.js"><style data-vue-ssr-id="5bab7354:0">
 .nuxt-progress {
   position: fixed;
   top: 0px;
@@ -18,10 +18,10 @@
 </style><style data-vue-ssr-id="ef22176a:0">/* Kingdom CSS Level 1 - Reset */
 body {
   padding: 0;
-  background-color: #fdfdfd;
-  background-color: var(--color-body, #fdfdfd);
-  color: #0d0d0c;
-  color: var(--color-body-text, #0d0d0c);
+  background-color: #3e303a;
+  background-color: var(--color-body, #3e303a);
+  color: #eceaec;
+  color: var(--color-body-text, #eceaec);
 }
 html, body {
   margin: 0;
@@ -155,12 +155,20 @@ button:focus, [type='button']:focus, [type='reset']:focus, [type='submit']:focus
   outline: 5px auto -webkit-focus-ring-color;
 }
 *:link {
-  color: #130686;
-  color: var(--color-link, #130686);
+  color: #768ff5;
+  color: var(--color-link, #768ff5);
 }
 
 /* Placeholders for fonts */
 /* %font-body */
+body {
+  font-family: Verdana, sans-serif;
+  --baseline-shift-factor: 0.75;
+}
+body * {
+    font-family: inherit;
+}
+
 /* %font-headings */
 /* %font-forms */
 /* Placeholders for text */
@@ -2151,7 +2159,7 @@ legend {
   padding-top: 1px;
 }
 .visualize-vertical-rhythm {
-  background-image: linear-gradient(rgba(120, 64, 58, .15), rgba(120, 64, 58, .15) 1px, transparent 1px);
+  background-image: linear-gradient(rgba(247, 120, 145, .15), rgba(247, 120, 145, .15) 1px, transparent 1px);
   background-size: 1px 1.6875rem;
   background-size: 1px var(--spacing-base, 1.6875rem);
 }
@@ -2229,16 +2237,16 @@ legend {
   display: inline-flex;
 }
 :root {
-  --color-primary: #5f3a78;
-  --color-primary-text: #efecf1;
-  --color-body: #fdfdfd;
-  --color-body-text: #0d0d0c;
-  --color-link: #130686;
+  --color-primary: #d1f778;
+  --color-primary-text: #0b0d05;
+  --color-body: #3e303a;
+  --color-body-text: #eceaec;
+  --color-link: #768ff5;
   --color-border: currentColor;
 }
 .color-primary {
-  color: #5f3a78;
-  color: var(--color-primary, #5f3a78);
+  color: #d1f778;
+  color: var(--color-primary, #d1f778);
 }
 </style>
   </head>
@@ -2273,6 +2281,6 @@ legend {
     Inputs on a line
     <label for="input2">Label</label><input id="input2" value="disabled" disabled="disabled"><input id="input3" value="readonly" readonly="readonly"><label for="select2">Label</label><select id="select2" disabled="disabled"><option>Disabled</option></select><label><input type="checkbox" disabled="disabled">Disabled checkbox</label><input type="button" value="Disabled button input" disabled="disabled">
     ...and some text after.
-  </form><hr></div></div></div><script type="text/javascript">window.__NUXT__={"layout":"default","data":[{}],"error":null,"serverRendered":true};</script><script src="/kingdom/_nuxt/manifest.6e34d10b8fc67ea685ca.js" defer></script><script src="/kingdom/_nuxt/layouts/default.af3be95d07133ea92689.js" defer></script><script src="/kingdom/_nuxt/pages/demo/L3.2ae2d2a6003350385e1a.js" defer></script><script src="/kingdom/_nuxt/vendor.a6f778eddd0cdf7b1049.js" defer></script><script src="/kingdom/_nuxt/app.98897651354a28845858.js" defer></script>
+  </form><hr></div></div></div><script type="text/javascript">window.__NUXT__={"layout":"default","data":[{}],"error":null,"serverRendered":true};</script><script src="/kingdom/_nuxt/manifest.f9e5f9fbee08ed04a641.js" defer></script><script src="/kingdom/_nuxt/layouts/default.af3be95d07133ea92689.js" defer></script><script src="/kingdom/_nuxt/pages/demo/L3.6175c34a536597db18e8.js" defer></script><script src="/kingdom/_nuxt/vendor.a6f778eddd0cdf7b1049.js" defer></script><script src="/kingdom/_nuxt/app.98897651354a28845858.js" defer></script>
   </body>
 </html>
