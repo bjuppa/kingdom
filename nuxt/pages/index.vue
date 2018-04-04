@@ -63,12 +63,22 @@
     <h2>Demos</h2>
     <p>
       The demo pages are set up with no options at all, meaning they even generate a random primary color.
-      To see an example of all four levels of Kingdom side by side, you can visit <a href="/demo">the demo page</a>.
-      The form extension can be seen in action on <a href="/forms-demo">the forms demo page</a>.
+      To see an example of all four levels of Kingdom side by side, you can visit <reload-link to="/demo">the demo page</reload-link>.
+      The form extension can be seen in action on <reload-link to="/forms-demo">the forms demo page</reload-link>.
     </p>
 
   </div>
 </template>
+
+<script>
+  import ReloadLink from '~/components/reload-link.vue';
+
+  export default {
+    components: {
+      'reload-link': ReloadLink
+    }
+  };
+</script>
 
 <style lang="scss">
   @import "~assets/_variables.scss";
