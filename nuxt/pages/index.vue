@@ -63,8 +63,8 @@
     <h2>Demos</h2>
     <p>
       The demo pages are set up with no options at all, meaning they even generate a random primary color.
-      To see an example of all four levels of Kingdom side by side, you can visit <nuxt-link to="/demo">the demo page</nuxt-link>.
-      The form extension can be seen in action on <nuxt-link to="/forms-demo">the forms demo page</nuxt-link>.
+      To see an example of all four levels of Kingdom side by side, you can visit <a href="/demo">the demo page</a>.
+      The form extension can be seen in action on <a href="/forms-demo">the forms demo page</a>.
     </p>
 
   </div>
