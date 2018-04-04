@@ -10,7 +10,7 @@
       iframes() {
         let hrefs = [];
         for (let i = 1; i < 5; i++) {
-          hrefs.push(this.$router.resolve(`L${i}`, null, true).href);
+          hrefs.push(this.$router.resolve(`L${i}/`, null, true).href);
         }
         return hrefs;
       }
