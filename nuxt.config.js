@@ -1,17 +1,12 @@
-// only add `router.base = '/<repository-name>/'` if `DEPLOY_ENV` is `GH_PAGES`
-const routerConfig = process.env.DEPLOY_ENV === 'GH_PAGES' ? {
-  router: {
-    base: '/kingdom/'
-  }
-} : {};
-
 module.exports = {
   srcDir: 'nuxt',
   generate: {
     dir: 'docs',
     minify: false,
   },
-  ...routerConfig,
+  router: {
+    base: process.env.DEPLOY_ENV === 'GH_PAGES' ? '/kingdom/' : '/'
+  },
   head: {
     meta: [
       { charset: 'utf-8' },
