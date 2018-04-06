@@ -39,8 +39,9 @@
         </ol>
 
         <p>
-            This webpage uses Level 3, with all utilities included.
-            Only one configuration variable, the primary color, is set before the Kingdom level is included.
+            This webpage is displayed using Level 3, with all utilities of Kingdom included.
+            Only one configuration variable, the <span class="color-primary"><code>primary</code> color</span>,
+            is set before the Kingdom level is included.
             Everything else is default, and additional colors are derived from the primary color.
         </p>
 
