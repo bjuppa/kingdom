@@ -38,7 +38,7 @@
             </li>
             <li>The <a href="#"><code>link</code> color</a> on the body background</li>
             <li>
-                <div class="border inline-block">The <code>border</code> color defaults to <code>currentColor</code>
+                <div class="border inline-block space-inside">The <code>border</code> color defaults to <code>currentColor</code>
                 </div>
             </li>
         </ul>
