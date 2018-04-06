@@ -1,5 +1,5 @@
 <template>
-    <div class="space-inside">
+    <main class="space-inside">
         <h1>Kingdom CSS</h1>
         <p>
             A CSS framework, written in <a href="http://sass-lang.com">Sass</a>,
@@ -73,7 +73,7 @@
             <reload-link to="/forms-demo">the forms demo page</reload-link>.
         </p>
 
-    </div>
+    </main>
 </template>
 
 <script>

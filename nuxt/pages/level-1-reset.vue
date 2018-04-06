@@ -1,7 +1,7 @@
 <template>
-    <div class="space-inside">
+    <main class="space-inside">
         <h1>Level 1: CSS Reset</h1>
-    </div>
+    </main>
 </template>
 
 <style lang="scss">
