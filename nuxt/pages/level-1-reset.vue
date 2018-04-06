@@ -59,7 +59,15 @@
             needed.
         </p>
 
-        <h2></h2>
+        <h2>Sass placeholders</h2>
+        <p>
+            The reset is also responsible for including all the Sass placeholders needed by Kingdom.
+            Feel free to extend these placeholders whenever convenient in your own Sass.
+            We use Sass placeholders to generate all kinds of extendable behaviour, but if they're not extended in any
+            selector, they're also not present in the generated CSS.
+            The placeholders generally have a CSS comment printed along with them, so you can find them all in your
+            non-minified CSS.
+        </p>
     </main>
 </template>
 
