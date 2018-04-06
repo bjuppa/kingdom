@@ -51,12 +51,14 @@
         </p>
 
         <h2>Add borders by setting a single property</h2>
-        <p>
+        <p class="border space-inside">
             From <a href="https://tailwindcss.com/docs/border-width/">Tailwind</a> comes the nifty trick of setting
             explicit <code>border-style</code> and <code>border-color</code> on all block elements (plus images), while
             also defaulting the <code>border-width</code>&nbsp;to&nbsp;<code>0</code>.
             This makes it super convenient to just set the border width on any side of an element wherever a border is
             needed.
+            On this bordered paragraph you can also see the utility class <code>space-inside</code> applied, that adds
+            some padding so that text doesn't go right on the border.
         </p>
 
         <h2>Sass placeholders</h2>
