@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html data-n-head-ssr data-n-head="">
   <head>
-    <meta data-n-head="true" charset="utf-8"/><meta data-n-head="true" http-equiv="X-UA-Compatible" content="IE=edge"/><meta data-n-head="true" name="viewport" content="width=device-width, initial-scale=1"/><title data-n-head="true">Kingdom CSS</title><base href="/kingdom/"><link rel="preload" href="/kingdom/_nuxt/manifest.ecf9bf82c92707a8d176.js" as="script"><link rel="preload" href="/kingdom/_nuxt/vendor.a6f778eddd0cdf7b1049.js" as="script"><link rel="preload" href="/kingdom/_nuxt/app.f10ee405ed6e95f834e9.js" as="script"><link rel="preload" href="/kingdom/_nuxt/layouts/default.af3be95d07133ea92689.js" as="script"><link rel="preload" href="/kingdom/_nuxt/pages/index.ed5a2fb2e1c76f589ac5.js" as="script"><link rel="prefetch" href="/kingdom/_nuxt/pages/demo/L3.21f8eeaf53456c2b506b.js"><link rel="prefetch" href="/kingdom/_nuxt/pages/demo/index.f92db584e7c2fb66a729.js"><link rel="prefetch" href="/kingdom/_nuxt/pages/forms-demo/L4.6e44aafaaf84a1a03ee1.js"><link rel="prefetch" href="/kingdom/_nuxt/pages/forms-demo/L3.9ed8c027bdbdbc0e267f.js"><link rel="prefetch" href="/kingdom/_nuxt/pages/forms-demo/L2.c77f3013d09480a5fe0a.js"><link rel="prefetch" href="/kingdom/_nuxt/pages/forms-demo/L1.863c0efa3f7d14d94ed8.js"><link rel="prefetch" href="/kingdom/_nuxt/pages/demo/L4.a92b999fc6d836b20daa.js"><link rel="prefetch" href="/kingdom/_nuxt/pages/forms-demo/index.cc800a1b63c2bd807841.js"><link rel="prefetch" href="/kingdom/_nuxt/pages/demo/L2.3e48a28f7cf1d1e66c40.js"><link rel="prefetch" href="/kingdom/_nuxt/pages/demo/L1.30ab445547ad0a4b0d28.js"><style data-vue-ssr-id="5bab7354:0">
+    <meta data-n-head="true" charset="utf-8"/><meta data-n-head="true" http-equiv="X-UA-Compatible" content="IE=edge"/><meta data-n-head="true" name="viewport" content="width=device-width, initial-scale=1"/><title data-n-head="true">Kingdom CSS</title><base href="/kingdom/"><link rel="preload" href="/kingdom/_nuxt/manifest.9a87f4bcdb33efb11715.js" as="script"><link rel="preload" href="/kingdom/_nuxt/vendor.4a0177688b636b2c5ab2.js" as="script"><link rel="preload" href="/kingdom/_nuxt/app.e94792f7277b1ea72f47.js" as="script"><link rel="preload" href="/kingdom/_nuxt/layouts/default.6a00aa79876d1f088f32.js" as="script"><link rel="preload" href="/kingdom/_nuxt/pages/index.7504125e1cd030e4c809.js" as="script"><link rel="prefetch" href="/kingdom/_nuxt/pages/demo/L2.e59d54b79d9c51bbabac.js"><link rel="prefetch" href="/kingdom/_nuxt/pages/demo/index.a45e32d910c1c9050945.js"><link rel="prefetch" href="/kingdom/_nuxt/pages/forms-demo/L4.fbbdce0d2de5912432ab.js"><link rel="prefetch" href="/kingdom/_nuxt/pages/forms-demo/L3.49fc63d45fbdd0cf3e34.js"><link rel="prefetch" href="/kingdom/_nuxt/pages/forms-demo/L2.1b818497bc2fdba40511.js"><link rel="prefetch" href="/kingdom/_nuxt/pages/forms-demo/L1.9998b2fae242dae8baa0.js"><link rel="prefetch" href="/kingdom/_nuxt/pages/demo/L4.1a77c57e2a9ccf446852.js"><link rel="prefetch" href="/kingdom/_nuxt/pages/demo/L3.56b6f51fc3c735ff3624.js"><link rel="prefetch" href="/kingdom/_nuxt/pages/forms-demo/index.86e3e74ca41e64cda1d3.js"><link rel="prefetch" href="/kingdom/_nuxt/pages/demo/L1.646c300ee69c95ef2a3c.js"><link rel="prefetch" href="/kingdom/_nuxt/pages/level-1-reset.68ddbedcf89878755807.js"><style data-vue-ssr-id="5bab7354:0">
 .nuxt-progress {
   position: fixed;
   top: 0px;
@@ -2240,47 +2240,59 @@ legend {
   color: #47282b;
   color: var(--color-primary, #47282b);
 }
+.background-color-primary {
+  background-color: #47282b;
+  background-color: var(--color-primary, #47282b);
+  color: #eee8e9;
+  color: var(--color-primary-text, #eee8e9);
+}
 </style>
   </head>
   <body data-n-head="">
-    <div data-server-rendered="true" id="__nuxt"><div class="nuxt-progress" style="width:0%;height:2px;background-color:black;opacity:0;"></div><div id="__layout"><div class="space-inside"><h1>Kingdom CSS</h1><p>
-    A CSS framework, written in <a href="http://sass-lang.com">Sass</a>,
-    for consistent spacing, sizing and typography.
-  </p><p></p><blockquote>
-    &quot;If content is king, context is the kingdom&quot;
-  </blockquote><p>
-    Kingdom CSS consists of four &quot;levels&quot; to choose from,
-    where each level adds some functionality on top of the previous.
-    After selecting a level, there are some optional utilities and extensions available to include.
-    Every import has default options, configurable with Sass variables.
-  </p><ol><li>
-      The 1st level is an opinionated <strong>CSS reset</strong>, laying a foundation for the other levels.
-    </li><li>
-      The 2nd level applies consistent <strong>spacing</strong> between blocks
-      and a scale for <strong>sizing</strong> text elements.
-    </li><li>
-      The 3rd level adds a <strong>vertical rhythm</strong>, helping blocks to line up across columns
-      by keeping line heights consistent.
-    </li><li>
-      The 4th level makes every line of text go on a common <strong>baseline</strong>,
-      making individual lines of text line up across columns, even if they're in different font sizes.
-    </li></ol><p>
-    This webpage uses Level 3 with all utilities included.
-    Here only one configuration variable is set before the Kingdom level is included, choosing a primary color.
-    Everything else is default, and additional colors are derived from the primary color.
-  </p><h2>Not for the faint of heart</h2><p>
-    Kingdom CSS embraces the cascade, is utility-first, has no namespacing,
-    and does all kinds of other things that might seem scary and are sometimes even frowned upon.
-    Not everyone will like it, and there are certainly situations where its not the best fit.
-    But there is a thought behind it all, and I hope this documentation will eventually convey both the why and how of
-    each realm within the Kingdom.
-  </p><h2>Testing</h2><figure><img src="/kingdom/_nuxt/img/browserstack-logo-600x315.2687ae2.png" alt="Browserstack logo" class="h-5"><figcaption>
-      We're using <a href="http://browserstack.com/">Browserstack</a> for testing across web browsers,
-      please check out their amazing services!
-    </figcaption></figure><h2>Demos</h2><p>
-    The demo pages are set up with no options at all, meaning they even generate a random primary color.
-    To see an example of all four levels of Kingdom side by side, you can visit <a href="/kingdom/demo">the demo page</a>.
-    The form extension can be seen in action on <a href="/kingdom/forms-demo">the forms demo page</a>.
-  </p></div></div></div><script type="text/javascript">window.__NUXT__={"layout":"default","data":[{}],"error":null,"serverRendered":true};</script><script src="/kingdom/_nuxt/manifest.ecf9bf82c92707a8d176.js" defer></script><script src="/kingdom/_nuxt/layouts/default.af3be95d07133ea92689.js" defer></script><script src="/kingdom/_nuxt/pages/index.ed5a2fb2e1c76f589ac5.js" defer></script><script src="/kingdom/_nuxt/vendor.a6f778eddd0cdf7b1049.js" defer></script><script src="/kingdom/_nuxt/app.f10ee405ed6e95f834e9.js" defer></script>
+    <div data-server-rendered="true" id="__nuxt"><div class="nuxt-progress" style="width:0%;height:2px;background-color:black;opacity:0;"></div><div id="__layout"><main class="space-inside"><h1>Kingdom CSS</h1><p>
+        A CSS framework, written in <a href="http://sass-lang.com">Sass</a>,
+        for consistent spacing, sizing and typography.
+    </p><p></p><blockquote>
+        &quot;If content is king, context is the kingdom&quot;
+    </blockquote><p>
+        Kingdom CSS consists of four &quot;levels&quot; to choose from,
+        where each level adds some functionality on top of the previous.
+        After selecting a level, there are some optional utilities and extensions available to include.
+        Every import has default options, configurable with Sass variables.
+    </p><ol><li>
+            The <a href="/kingdom/level-1-reset">
+            1st level is an opinionated <strong>CSS reset</strong></a>, laying a foundation for the other levels.
+        </li><li>
+            The 2nd level applies consistent <strong>spacing</strong> between blocks
+            and a scale for <strong>sizing</strong> text elements.
+        </li><li>
+            The 3rd level adds a <strong>vertical rhythm</strong>, helping blocks to line up across columns
+            by keeping line heights consistent.
+        </li><li>
+            The 4th level makes every line of text go on a common <strong>baseline</strong>,
+            making individual lines of text line up across columns, even if they're in different font sizes.
+        </li></ol><p>
+        This webpage is displayed using Level 3, with all utilities of Kingdom included.
+        Only one configuration variable, the <span class="color-primary"><code>primary</code> color</span>,
+        is set before the Kingdom level is included.
+        Everything else is default, and additional colors are derived from the primary color.
+    </p><h2>Not for the faint of heart</h2><p>
+        Kingdom CSS embraces the cascade, is utility-first, has no namespacing,
+        and does all kinds of other things that might seem scary and are sometimes even frowned upon.
+        Not everyone will like it, and there are certainly situations where its not the best fit.
+        But there is a thought behind it all, and I hope this documentation will eventually convey both the why and
+        how of each realm within the Kingdom.
+    </p><h2>Testing</h2><figure><img src="/kingdom/_nuxt/img/browserstack-logo-600x315.2687ae2.png" alt="Browserstack logo" class="h-5"><figcaption>
+            We're using <a href="http://browserstack.com/">Browserstack</a> for testing across web browsers,
+            please check out their amazing services!
+        </figcaption></figure><h2>Demos</h2><p>
+        The demo pages are set up with no options at all, meaning they even generate a random primary color.
+
+        To see an example of all four levels of Kingdom side by side, you can visit
+        <a href="/kingdom/demo">the demo page</a>.
+
+        The form extension can be seen in action on
+        <a href="/kingdom/forms-demo">the forms demo page</a>.
+    </p></main></div></div><script type="text/javascript">window.__NUXT__={"layout":"default","data":[{}],"error":null,"serverRendered":true};</script><script src="/kingdom/_nuxt/manifest.9a87f4bcdb33efb11715.js" defer></script><script src="/kingdom/_nuxt/layouts/default.6a00aa79876d1f088f32.js" defer></script><script src="/kingdom/_nuxt/pages/index.7504125e1cd030e4c809.js" defer></script><script src="/kingdom/_nuxt/vendor.4a0177688b636b2c5ab2.js" defer></script><script src="/kingdom/_nuxt/app.e94792f7277b1ea72f47.js" defer></script>
   </body>
 </html>
