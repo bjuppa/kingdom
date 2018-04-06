@@ -49,16 +49,18 @@
             the <code>box-sizing</code> property of all elements is set to <code>border-box</code>.
             Read more about it in <a href="https://css-tricks.com/box-sizing/">this article on CSS-Tricks</a>.
         </p>
+        <p style="max-width: 20em; border-right-width: 1em;">
+            This paragraph is set to a maximum width and that width should include the border set on its side.
+        </p>
 
         <h2>Add borders by setting a single property</h2>
-        <p class="border space-inside">
+        <p style="border-bottom-width: 1em">
             From <a href="https://tailwindcss.com/docs/border-width/">Tailwind</a> comes the nifty trick of setting
             explicit <code>border-style</code> and <code>border-color</code> on all block elements (plus images), while
             also defaulting the <code>border-width</code>&nbsp;to&nbsp;<code>0</code>.
             This makes it super convenient to just set the border width on any side of an element wherever a border is
             needed.
-            On this bordered paragraph you can also see the utility class <code>space-inside</code> applied, that adds
-            some padding so that text doesn't go right on the border.
+            This paragraph just has its <code>border-bottom-width</code> set... and voila!
         </p>
 
         <h2>Sass placeholders</h2>
