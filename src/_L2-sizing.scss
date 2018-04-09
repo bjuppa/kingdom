@@ -62,6 +62,15 @@ figure, picture, object, select, table, audio, video, map {
   }
 }
 
+fieldset {
+  @extend %py-1\/2;
+  @extend %px-1\/4;
+
+  > legend + * {
+    @extend %mt-0;
+  }
+}
+
 // Apply text properties to elements...
 
 * {
@@ -72,15 +81,6 @@ select * {
   // Inherited font properties look weird within select elements in browsers that allow modification
   line-height: normal;
   font-size: medium;
-}
-
-fieldset {
-  @extend %py-1\/2;
-  @extend %px-1\/4;
-
-  > legend + * {
-    @extend %mt-0;
-  }
 }
 
 body {
