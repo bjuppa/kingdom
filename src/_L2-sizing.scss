@@ -62,6 +62,8 @@ figure, picture, object, select, table, audio, video, map {
   }
 }
 
+// Size form elements
+
 fieldset {
   @extend %py-1\/2;
   @extend %px-1\/4;
@@ -69,6 +71,10 @@ fieldset {
   > legend + * {
     @extend %mt-0;
   }
+}
+
+textarea:not([cols]) {
+  width: 100%;
 }
 
 // Apply text properties to elements...
@@ -121,10 +127,4 @@ h6 {
 
 dt {
   font-weight: bold; // Make description lists stand out after margins have been removed on dd
-}
-
-// Size form inputs
-
-textarea:not([cols]) {
-  width: 100%;
 }
