@@ -29,16 +29,17 @@
         <ul>
             <li>
                 <span class="background-color-primary">
-                    The <code>primary</code> color is used as background together with its corresponding text color.
+                    The <code>primary</code> color used as background, together with its corresponding text color.
                 </span>
             </li>
             <li>
-                The <code>body</code> color along with its text color can be seen everywhere on this page,
+                The <code>body</code> background color along with its text color can be seen everywhere on this page,
                 but of course also here on this unstyled element.
             </li>
-            <li>The <a href="#"><code>link</code> color</a> on the body background</li>
+            <li>The <a href="#"><code>link</code> color</a> on the body background.</li>
             <li>
-                <div class="border inline-block space-inside">The <code>border</code> color defaults to <code>currentColor</code>
+                <div class="border inline-block space-inside">
+                    The <code>border</code> color defaults to <code>currentColor</code>.
                 </div>
             </li>
         </ul>
