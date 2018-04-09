@@ -34,8 +34,10 @@
             </li>
 
             <li>
-                The 4th level makes every line of text go on a common <strong>baseline</strong>,
-                making individual lines of text line up across columns, even if they're in different font sizes.
+                The <reload-link to="/level-4-baseline">4th level</reload-link> makes every line of text go on a common
+                <strong>baseline</strong>,
+                making individual lines of text line up across columns,
+                even if they're in different font sizes.
             </li>
         </ol>
 
