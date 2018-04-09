@@ -23,7 +23,8 @@
             </li>
 
             <li>
-                The 2nd level applies consistent <strong>spacing</strong> between blocks
+                The <reload-link to="/level-2-sizing">2nd level</reload-link>
+                applies consistent <strong>spacing</strong> between blocks
                 and a scale for <strong>sizing</strong> text elements.
             </li>
 
