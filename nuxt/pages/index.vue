@@ -29,8 +29,8 @@
             </li>
 
             <li>
-                The 3rd level adds a <strong>vertical rhythm</strong>, helping blocks to line up across columns
-                by keeping line heights consistent.
+                The <reload-link to="/level-3-rhythm">3rd level</reload-link> adds a <strong>vertical rhythm</strong>,
+                helping blocks to line up across columns by keeping line heights consistent.
             </li>
 
             <li>
