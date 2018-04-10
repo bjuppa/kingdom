@@ -6,6 +6,7 @@
   import Demo from '~/components/demo.vue';
 
   export default {
+    layout: 'demo',
     components: {
       Demo
     }
