@@ -2,7 +2,7 @@
     <main class="space-inside">
         <h1>Kingdom CSS</h1>
         <p>
-            A CSS framework, written in <a href="http://sass-lang.com">Sass</a>,
+            A CSS framework, written in <a href="http://sass-lang.com" target="_blank">Sass</a>,
             for consistent spacing, sizing and typography.
         <p>
         <blockquote>
