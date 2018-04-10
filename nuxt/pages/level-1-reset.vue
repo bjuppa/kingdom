@@ -6,9 +6,10 @@
         </h1>
         <p>
             The CSS reset in Kingdom is heavily inspired by other great projects like
-            <a href="http://necolas.github.io/normalize.css/">Normalize</a>,
-            <a href="http://tinyreset.surge.sh">Tinyreset</a>, and some parts from
-            <a href="https://github.com/tailwindcss/tailwindcss/blob/master/css/preflight.css">Tailwind</a>.
+            <a href="http://necolas.github.io/normalize.css/" target="_blank">Normalize</a>,
+            <a href="http://tinyreset.surge.sh" target="_blank">Tinyreset</a>, and some parts from
+            <a href="https://github.com/tailwindcss/tailwindcss/blob/master/css/preflight.css"
+               target="_blank">Tailwind</a>.
             This documentation aims to cover the resets used in Kingdom that are somewhat unique or opinionated.
             If you seek to understand all the resets included, please look through the source of
             <code>src/_L1-reset.scss</code>, where comments and links explain most of the individual parts.
@@ -36,7 +37,10 @@
                 The <code>body</code> background color along with its text color can be seen everywhere on this page,
                 but of course also here on this unstyled element.
             </li>
-            <li>The <a href="#"><code>link</code> color</a> on the body background.</li>
+            <li>The
+                <reload-link to="" append="true"><code>link</code> color</reload-link>
+                on the body background.
+            </li>
             <li>
                 <div class="border inline-block space-inside">
                     The <code>border</code> color defaults to <code>currentColor</code>.
@@ -48,7 +52,8 @@
         <p>
             To make any explicitly sized elements take up the specified space regardless of padding or borders,
             the <code>box-sizing</code> property of all elements is set to <code>border-box</code>.
-            Read more about it in <a href="https://css-tricks.com/box-sizing/">this article on CSS-Tricks</a>.
+            Read more about it in
+            <a href="https://css-tricks.com/box-sizing/" target="_blank">this article on CSS-Tricks</a>.
         </p>
         <p style="max-width: 20em; border-right-width: 1em;">
             This paragraph is set to a maximum width and that width should include the border set on its side.
@@ -56,9 +61,9 @@
 
         <h2>Add borders by setting a single property</h2>
         <p style="border-bottom-width: 1em">
-            From <a href="https://tailwindcss.com/docs/border-width/">Tailwind</a> comes the nifty trick of setting
-            explicit <code>border-style</code> and <code>border-color</code> on all block elements (plus images), while
-            also defaulting the <code>border-width</code>&nbsp;to&nbsp;<code>0</code>.
+            From <a href="https://tailwindcss.com/docs/border-width/" target="_blank">Tailwind</a> comes the nifty trick
+            of setting explicit <code>border-style</code> and <code>border-color</code> on all block elements (plus
+            images), while also defaulting the <code>border-width</code>&nbsp;to&nbsp;<code>0</code>.
             This makes it super convenient to just set the border width on any side of an element wherever a border is
             needed.
             This paragraph just has its <code>border-bottom-width</code> set... and voila!
@@ -80,3 +85,10 @@
     @import "~assets/_variables.scss";
     @import "~assets/L1.scss";
 </style>
+<script>
+  import ReloadLink from '../components/reload-link';
+
+  export default {
+    components: { ReloadLink }
+  };
+</script>

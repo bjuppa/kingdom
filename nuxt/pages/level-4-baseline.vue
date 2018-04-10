@@ -20,7 +20,7 @@
             <p>
                 This section has the "lines" of the vertical rhythm visualized in the background so you can see how it
                 affects the paragraphs and the headings.
-                You can also <reload-link to="/demo">compare levels 3 and 4 on the demo page</reload-link> where the lines are displayed for both levels.
+                You can also <reload-link to="/demo" target="basic-demo">compare levels 3 and 4 on the demo page</reload-link> where the lines are displayed for both levels.
             </p>
             <p>
                 Level 4 will apply baseline shift to the most common block elements that are usually not used

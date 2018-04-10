@@ -36,8 +36,8 @@
         <h3>Space elements from the <em>outside</em></h3>
         <p>
             Try to control margin on elements <em>from the outside</em>
-            (using <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Selectors#Combinators">CSS
-            combinators</a>)
+            (using <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Selectors#Combinators" target="_blank">
+            CSS combinators</a>)
             whenever possible, and avoid having components set their own margins "on themselves".
             Spacing between elements should be seen as a <em>layout</em> concern, so its usually good to apply it in
             relation to children, descendants, and sibling elements.
@@ -52,8 +52,9 @@
             After Kingdom has reset all margins to <code>0</code>, a default vertical spacing between any adjacent
             elements is added using the "lobotomized owl selector" <code>* + *</code>.
             This is of course inspired by
-            <a href="https://www.smashingmagazine.com/2016/11/css-inheritance-cascade-global-scope-new-old-worst-best-friends/#layout">
-                the technique from Heydon Pickering
+            <a href="https://www.smashingmagazine.com/2016/11/css-inheritance-cascade-global-scope-new-old-worst-best-friends/#layout"
+               target="_blank">
+                Heydon Pickering's technique
             </a>.
             So, any element that comes after another element will have the default spacing applied before it.
             That selector has very low specificity so can easily be overridden when needed, and that is just what
@@ -73,7 +74,8 @@
         </p>
         <p>
             Spacing above
-            <a href="https://developer.mozilla.org/en-US/docs/Web/Guide/HTML/Content_categories#Phrasing_content">
+            <a href="https://developer.mozilla.org/en-US/docs/Web/Guide/HTML/Content_categories#Phrasing_content"
+               target="_blank">
                 inline elements
             </a>
             would also mess up most designs, so their <code>margin-top</code> is also set to <code>0</code>.

@@ -61,7 +61,7 @@
         <figure>
             <img src="~/assets/browserstack-logo-600x315.png" class="h-5" alt="Browserstack logo">
             <figcaption>
-                We're using <a href="http://browserstack.com/">Browserstack</a> for testing across web browsers,
+                We're using <a href="http://browserstack.com/" target="browserstack">Browserstack</a> for testing across web browsers,
                 please check out their amazing services!
             </figcaption>
         </figure>
@@ -71,10 +71,10 @@
             The demo pages are set up with no options at all, meaning they even generate a random primary color.
 
             To see an example of all four levels of Kingdom side by side, you can visit
-            <reload-link to="/demo">the demo page</reload-link>.
+            <reload-link to="/demo" target="basic-demo">the demo page</reload-link>.
 
             The form extension can be seen in action on
-            <reload-link to="/forms-demo">the forms demo page</reload-link>.
+            <reload-link to="/forms-demo" target="forms-demo">the forms demo page</reload-link>.
         </p>
 
     </main>
