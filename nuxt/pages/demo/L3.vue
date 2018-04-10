@@ -3,7 +3,7 @@
 </template>
 
 <script>
-  import Demo from '~/components/demo.vue';
+  import Demo from '~/components/basic-demo.vue';
 
   export default {
     layout: 'demo',
