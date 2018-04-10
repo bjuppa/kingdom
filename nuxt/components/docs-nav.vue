@@ -1,6 +1,10 @@
 <template>
-    <nav>
-        <reload-link to="/">Main</reload-link>
+    <nav class="space-inside">
+        <ul class="list-inline">
+            <li>
+                <reload-link to="/">Main</reload-link>
+            </li>
+        </ul>
     </nav>
 </template>
 
