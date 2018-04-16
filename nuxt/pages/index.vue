@@ -21,12 +21,12 @@ $colors: (primary: rgb(71, 40, 43));
 // 2: Import the level of Kingdom you want:
 @import "../node_modules/kingdom-css/src/L3-rhythm";
 
-// 3: Optionally import the utility classes you want:
+// 3: Optionally import the Kingdom utility classes you want:
 @import "../node_modules/kingdom-css/src/utilities/spacing";
 @import "../node_modules/kingdom-css/src/utilities/sizing";
 // ...
 
-// 4: Optionally import any extensions you want:
+// 4: Optionally import any Kingdom extensions you want:
 @import "../node_modules/kingdom-css/src/extensions/forms";
 // ...
 
