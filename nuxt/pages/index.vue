@@ -5,13 +5,55 @@
       A CSS framework, written in <a href="http://sass-lang.com" target="_blank">Sass</a>,
       for consistent spacing, sizing and typography.
     <p>
+    <p>
+      <kbd>npm install kingdom-css</kbd>
+    </p>
+    <p>
+      Import the stuff you want into your main Sass file&mdash;just make sure the paths are right for your own file
+      structure:
+    </p>
+    <div class="border-l space-inside">
+      <pre><code class="language-scss">/* Example of Kingdom CSS usage */
+
+// 1: Set your variables first, for example we have picked a primary color:
+$colors: (primary: rgb(71, 40, 43));
+
+// 2: Import the level of Kingdom you want:
+@import "../node_modules/kingdom-css/src/L3-rhythm";
+
+// 3: Optionally import the utility classes you want:
+@import "../node_modules/kingdom-css/src/utilities/spacing";
+@import "../node_modules/kingdom-css/src/utilities/sizing";
+// ...
+
+// 4: Optionally import any extensions you want:
+@import "../node_modules/kingdom-css/src/extensions/forms";
+// ...
+
+
+/* Then complete the masterpiece with your own Sass! */
+// You may extend the placeholders Kingdom provides,
+// and use any mixins or functions from Kingdom's modules.
+
+// Here's a quick example of a card component you could write:
+.my-card {
+  @extend %border;
+  @include set-space-inside();
+}
+
+// ...
+</code></pre>
+    </div>
+
     <blockquote class="text-4 border-l space-inside color-primary">
       <i>If content is king, context is the kingdom</i>
     </blockquote>
+
     <p>
       Kingdom CSS consists of four "levels" to choose from,
       where each level adds some functionality on top of the previous.
-      After selecting a level, there are some optional utilities and extensions available to include.
+      After selecting a level by importing its file into your sass, there are some optional utilities and extensions
+      available to include.
       Every import has default options, configurable with Sass variables.
     </p>
 
