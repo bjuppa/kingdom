@@ -5,8 +5,8 @@
             A CSS framework, written in <a href="http://sass-lang.com" target="_blank">Sass</a>,
             for consistent spacing, sizing and typography.
         <p>
-        <blockquote>
-            "If content is king, context is the kingdom"
+        <blockquote class="text-4 border-l space-inside">
+            If content is king, context is the kingdom
         </blockquote>
         <p>
             Kingdom CSS consists of four "levels" to choose from,
