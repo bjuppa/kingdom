@@ -17,41 +17,31 @@
 
     <ol>
       <li>
-        The
-        <reload-link to="/level-1-reset">
-          1st level is an opinionated <strong>CSS reset</strong>
-        </reload-link>
-        , laying a foundation for the other levels.
+        The <reload-link to="/level-1-reset"> 1st level is an opinionated <strong>CSS reset</strong> </reload-link>,
+        laying a foundation for the other levels.
       </li>
 
       <li>
-        The
-        <reload-link to="/level-2-sizing">2nd level</reload-link>
-        applies consistent <strong>spacing</strong> between blocks
-        and a scale for <strong>sizing</strong> text elements.
+        The <reload-link to="/level-2-sizing">2nd level</reload-link> applies consistent <strong>spacing</strong>
+        between blocks and a scale for <strong>sizing</strong> text elements.
       </li>
 
       <li>
-        The
-        <reload-link to="/level-3-rhythm">3rd level</reload-link>
-        adds a <strong>vertical rhythm</strong>,
-        helping blocks to line up across columns by keeping line heights consistent.
+        The <reload-link to="/level-3-rhythm">3rd level</reload-link> adds a <strong>vertical rhythm</strong>, helping
+        blocks to line up across columns by keeping line heights consistent.
       </li>
 
       <li>
-        The
-        <reload-link to="/level-4-baseline">4th level</reload-link>
-        makes every line of text go on a common
-        <strong>baseline</strong>,
-        making individual lines of text line up across columns,
-        even if they're in different font sizes.
+        The <reload-link to="/level-4-baseline">4th level</reload-link> makes every line of text go on a common
+        <strong>baseline</strong>, making individual lines of text line up across columns, even if they're in different
+        font sizes.
       </li>
     </ol>
 
     <p>
       This webpage is displayed using Level 3, with all utilities of Kingdom included.
-      Only one configuration variable, the <span class="color-primary"><code>primary</code> color</span>,
-      is set before the Kingdom level is included.
+      Only one configuration variable, the <span class="color-primary"><code>primary</code> color</span>, is set before
+      the Kingdom level is included.
       Everything else is default, and additional colors are derived from the primary color.
     </p>
 
@@ -69,8 +59,7 @@
       <img src="~/assets/browserstack-logo-600x315.png" class="h-5" alt="Browserstack logo">
       <figcaption>
         We're using <a href="http://browserstack.com/" target="browserstack">Browserstack</a> for testing across web
-        browsers,
-        please check out their amazing services!
+        browsers, please check out their amazing services!
       </figcaption>
     </figure>
 
@@ -79,12 +68,10 @@
       The demo pages are set up with no options at all, meaning they even generate a random primary color.
 
       To see an example of all four levels of Kingdom side by side, you can visit
-      <reload-link to="/demo" target="basic-demo">the demo page</reload-link>
-      .
+      <reload-link to="/demo" target="basic-demo">the demo page</reload-link>.
 
       The form extension can be seen in action on
-      <reload-link to="/forms-demo" target="forms-demo">the forms demo page</reload-link>
-      .
+      <reload-link to="/forms-demo" target="forms-demo">the forms demo page</reload-link>.
     </p>
 
   </main>
