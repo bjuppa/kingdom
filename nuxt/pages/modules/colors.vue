@@ -5,10 +5,10 @@
       Colors
     </h1>
     <p>
-      The purpose of this module is to keep track of combinations of appropriate background and text colors.
+      The purpose of the colors module is to keep track of combinations of appropriate background and text colors.
     </p>
     <p>
-      All colors should be registered in a global Sass-map named <var>$colors</var>.
+      All colors should be registered in the global Sass-map named <var>$colors</var>.
       For every key in the <var>$colors</var> map, there is a Sass-list containing one or more color values.
       The first color value of such a list is the color named by the key.
       There may be a second color in the list, if so it's a text color to be used on top of a background in the named
