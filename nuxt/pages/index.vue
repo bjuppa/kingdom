@@ -5,17 +5,26 @@
       A CSS framework, written in <a href="http://sass-lang.com" target="_blank">Sass</a>,
       for consistent spacing, sizing and typography.
     <p>
+
+    <blockquote class="text-4 border-l space-inside color-primary">
+      <i>If content is king, context is the kingdom</i>
+    </blockquote>
+
+    <h2>Installation via npm</h2>
     <p>
       <kbd>npm install kingdom-css</kbd>
     </p>
+
+    <h2>Usage in Sass</h2>
     <p>
-      Import the stuff you want into your main Sass file&mdash;just make sure the paths are right for your own file
+      Import the stuff you want &mdash;just make sure the paths are right for your own file
       structure:
     </p>
     <div class="border-l space-inside">
       <pre><code class="language-scss">/* Example of Kingdom CSS usage */
 
-// 1: Set your variables first, for example we have picked a primary color:
+// 1: Set your variables first
+// For example we have picked a primary color:
 $colors: (primary: rgb(71, 40, 43));
 
 // 2: Import the level of Kingdom you want:
@@ -30,33 +39,45 @@ $colors: (primary: rgb(71, 40, 43));
 @import "../node_modules/kingdom-css/src/extensions/forms";
 // ...
 
+/* Done! Now complete the masterpiece with your own Sass! */
 
-/* Then complete the masterpiece with your own Sass! */
 // You may extend the placeholders Kingdom provides,
-// and use any mixins or functions from Kingdom's modules.
+// as well ass any mixins or functions from Kingdom's modules.
 
 // Here's a quick example of a card component you could write:
 .my-card {
   @extend %border;
   @include set-space-inside();
 }
-
 // ...
 </code></pre>
     </div>
 
-    <blockquote class="text-4 border-l space-inside color-primary">
-      <i>If content is king, context is the kingdom</i>
-    </blockquote>
-
+    <h2>Constitution</h2>
     <p>
-      Kingdom CSS consists of four "levels" to choose from,
+      Kingdom CSS consists of <strong>four <em>levels</em></strong> to choose from,
       where each level adds some functionality on top of the previous.
-      After selecting a level by importing its file into your sass, there are some optional utilities and extensions
-      available to include.
+      After selecting a level by importing its file, there are some optional <em>utilities</em> that provide classes for
+      styling and <em>extensions</em> that directly affects styling available to include.
       Every import has default options, configurable with Sass variables.
     </p>
 
+    <p>
+      This webpage is displayed using Level 3, with all utilities of Kingdom included.
+      Only one configuration variable, the <span class="color-primary"><code>primary</code> color</span>, is set before
+      the Kingdom level is included.
+      Everything else is default, and additional colors are derived from the primary color.
+    </p>
+
+    <p>
+      Most everything in Kingdom relies on Sass mixins and functions from the <em>modules</em>.
+      You can also benefit from using them
+    </p>
+
+    <h3>The four levels</h3>
+    <p>
+      You'll find each level's Sass file in <code>node_modules/kingdom-css/src/</code> and you should only pick one.
+    </p>
     <ol>
       <li>
         The <reload-link to="/level-1-reset"> 1st level is an opinionated <strong>CSS reset</strong> </reload-link>,
@@ -80,12 +101,66 @@ $colors: (primary: rgb(71, 40, 43));
       </li>
     </ol>
 
+    <h3>Utilities</h3>
     <p>
-      This webpage is displayed using Level 3, with all utilities of Kingdom included.
-      Only one configuration variable, the <span class="color-primary"><code>primary</code> color</span>, is set before
-      the Kingdom level is included.
-      Everything else is default, and additional colors are derived from the primary color.
+      These files provides utility classes that you can put directly on your HTML elements.
+      You'll find them in <code>node_modules/kingdom-css/src/utilities/</code> and you may import only the ones you
+      need, in any order.
     </p>
+
+    <ul>
+      <li>
+        <reload-link to="/utilities/borders">Borders</reload-link>
+      </li>
+      <li>
+        <reload-link to="/utilities/colors">Colors</reload-link>
+      </li>
+      <li>
+        <reload-link to="/utilities/layout">Layout</reload-link>
+      </li>
+      <li>
+        <reload-link to="/utilities/sizing">Sizing</reload-link>
+      </li>
+      <li>
+        <reload-link to="/utilities/spacing">Spacing</reload-link>
+      </li>
+      <li>
+        <reload-link to="/utilities/text">Text</reload-link>
+      </li>
+    </ul>
+
+    <h3>Extensions</h3>
+    <p>
+      Some things affect the default styling of standard HTML elements in such an opinionated way that they're best kept
+      in their own "package" for optional inclusion.
+      The extensions are located in <code>node_modules/kingdom-css/src/extensions/</code> and you may "scope" an
+      extension by importing it within a selector.
+    </p>
+
+    <ul>
+      <li>
+        <reload-link to="/extensions/forms">Forms</reload-link>
+      </li>
+      <li>
+        <reload-link to="/extensions/tables">Tables</reload-link>
+      </li>
+    </ul>
+
+    <h3>Modules</h3>
+    <p>
+      Most everything in Kingdom in relies on Sass mixins and functions provided by its modules,
+      But you should also take advantage of them in your own Sass!
+      You'll find them in <code>node_modules/kingdom-css/src/modules/</code> and they can be included wherever you need
+      some functionality within.
+      Most of them are already imported and can be implicitly used, but it doesn't hurt doing an explicit import in the
+      Sass file where you're using them.
+    </p>
+
+    <ul>
+      <li>
+        <reload-link to="/modules/colors">Colors</reload-link>
+      </li>
+    </ul>
 
     <h2>Not for the faint of heart</h2>
     <p>
