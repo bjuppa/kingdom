@@ -71,7 +71,7 @@ $colors: (primary: rgb(71, 40, 43));
 
     <p>
       Most everything in Kingdom relies on Sass mixins and functions from the <em>modules</em>.
-      You can also benefit from using them
+      You can also benefit from using them in your own Sass.
     </p>
 
     <h3>The four levels</h3>
