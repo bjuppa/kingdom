@@ -80,7 +80,7 @@ $colors: (primary: rgb(71, 40, 43));
 
     <p>
       Most everything in Kingdom relies on Sass mixins and functions from the <em>modules</em>.
-      You can also benefit from using them in your own Sass.
+      But they're not only for internal use&mdash;you can benefit from using them in your own Sass.
     </p>
 
     <h3>The four levels</h3>
@@ -157,10 +157,13 @@ $colors: (primary: rgb(71, 40, 43));
 
     <h3>Modules</h3>
     <p>
-      Most everything in Kingdom in relies on Sass mixins and functions provided by its modules,
-      But you should also take advantage of them in your own Sass!
-      You'll find them in <code>node_modules/kingdom-css/src/modules/</code> and they can be included wherever you need
-      some functionality within.
+      Most everything in Kingdom relies on Sass mixins and functions provided by its modules,
+      Some of the modules are just a single function or mixin for a specific task, but most consists of many mixins and
+      functions providing related functionality.
+    </p>
+    <p>
+      You'll find the modules in <code>node_modules/kingdom-css/src/modules/</code> and they can be included wherever
+      you need some functionality within.
       Most of them are already imported and can be implicitly used, but it doesn't hurt doing an explicit import in the
       Sass file where you're using them.
     </p>
