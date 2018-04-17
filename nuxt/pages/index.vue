@@ -53,6 +53,15 @@ $colors: (primary: rgb(71, 40, 43));
 </code></pre>
     </div>
 
+    <h2>Not for the faint of heart</h2>
+    <p>
+      Kingdom CSS embraces the cascade, is utility-first, has no namespacing,
+      and does all kinds of other things that might seem scary and are sometimes even frowned upon.
+      Not everyone will like it, and there are certainly situations where its not the best fit.
+      But there is a thought behind it all, and I hope this documentation will eventually convey both the why and
+      how of each realm within the Kingdom.
+    </p>
+
     <h2>Constitution</h2>
     <p>
       Kingdom CSS consists of <strong>four <em>levels</em></strong> to choose from,
@@ -161,15 +170,6 @@ $colors: (primary: rgb(71, 40, 43));
         <reload-link to="/modules/colors">Colors</reload-link>
       </li>
     </ul>
-
-    <h2>Not for the faint of heart</h2>
-    <p>
-      Kingdom CSS embraces the cascade, is utility-first, has no namespacing,
-      and does all kinds of other things that might seem scary and are sometimes even frowned upon.
-      Not everyone will like it, and there are certainly situations where its not the best fit.
-      But there is a thought behind it all, and I hope this documentation will eventually convey both the why and
-      how of each realm within the Kingdom.
-    </p>
 
     <h2>Testing</h2>
     <figure>
