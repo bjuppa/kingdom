@@ -89,7 +89,7 @@ $colors: (primary: rgb(71, 40, 43));
     </p>
     <ol>
       <li>
-        The <reload-link to="/level-1-reset"> 1st level is an opinionated <strong>CSS reset</strong> </reload-link>,
+        The <reload-link to="/level-1-reset"> 1st level</reload-link> is an opinionated <strong>CSS reset</strong>,
         laying a foundation for the other levels.
       </li>
 
