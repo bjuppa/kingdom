@@ -17,7 +17,7 @@
 
     <h2>Usage in Sass</h2>
     <p>
-      Import the stuff you want &mdash;just make sure the paths are right for your own file
+      Import the stuff you want&mdash;just make sure the paths are right for your own file
       structure:
     </p>
     <div class="border-l space-inside">
@@ -66,8 +66,8 @@ $colors: (primary: rgb(71, 40, 43));
     <p>
       Kingdom CSS consists of <strong>four <em>levels</em></strong> to choose from,
       where each level adds some functionality on top of the previous.
-      After selecting a level by importing its file, there are some optional <em>utilities</em> that provide classes for
-      styling and <em>extensions</em> that directly affects styling available to include.
+      After selecting a level by importing its file, there are some optional <em>utilities</em> (providing classes for
+      styling elements) and <em>extensions</em> (that directly affect element styles) available to include.
       Every import has default options, configurable with Sass variables.
     </p>
 
@@ -157,15 +157,14 @@ $colors: (primary: rgb(71, 40, 43));
 
     <h3>Modules</h3>
     <p>
-      Most everything in Kingdom relies on Sass mixins and functions provided by its modules,
       Some of the modules are just a single function or mixin for a specific task, but most consists of many mixins and
       functions providing related functionality.
-    </p>
-    <p>
       You'll find the modules in <code>node_modules/kingdom-css/src/modules/</code> and they can be included wherever
       you need some functionality within.
-      Most of them are already imported and can be implicitly used, but it doesn't hurt doing an explicit import in the
-      Sass file where you're using them.
+    </p>
+    <p>
+      Most of the modules are already imported and can be implicitly used, but it doesn't hurt doing an explicit import
+      in the Sass file where you're using them.
     </p>
 
     <ul>
