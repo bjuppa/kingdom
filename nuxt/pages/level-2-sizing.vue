@@ -126,8 +126,8 @@
     <p>
       Each of the font sizes have a corresponding line-height kept in <code>$line-heights</code>, another Sass-list.
       If not set before, these line heights are generated along a linear slope from <var>$body-line-height-factor</var>
-      (default <var>1.5</var>) for the first font-size, all the way down to <var>$min-line-height-factor</var> (default
-      <var>1.2</var>) for the 6th font-size.
+      (default <code>1.5</code>) for the first font-size, all the way down to <var>$min-line-height-factor</var> (default
+      <code>1.2</code>) for the 6th font-size.
     </p>
 
     <h3>Examples</h3>

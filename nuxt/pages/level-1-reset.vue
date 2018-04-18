@@ -62,7 +62,7 @@
 
     <h2>Body padding</h2>
     <p>
-      The Sass variable <var>$body-padding</var> defaults to <var>0</var> but you can set it to another padding
+      The Sass variable <var>$body-padding</var> defaults to <code>0</code> but you can set it to another padding
       declaration should you need it.
     </p>
 
