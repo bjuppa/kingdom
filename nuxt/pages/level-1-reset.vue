@@ -48,6 +48,24 @@
       </li>
     </ul>
 
+    <h3>Sans-serif font for bright text</h3>
+    <p>
+      If no <var>$body-font-stack</var> has been selected and the body text color is bright on a dark background,
+      Kingdom will explicitly set the body text to a sans-serif font.
+      This is to avoid browsers' default serif font that can be hard to read when the background is darker than the
+      text.
+    </p>
+    <p>
+      In most cases you will have set both colors and fonts according to your specific design, so this effect will
+      usually just be seen early in your projects before such decisions have been made.
+    </p>
+
+    <h2>Body padding</h2>
+    <p>
+      The Sass variable <var>$body-padding</var> defaults to <var>0</var> but you can set it to another padding
+      declaration should you need it.
+    </p>
+
     <h2>Boxes become their set size</h2>
     <p>
       To make any explicitly sized elements take up the specified space regardless of padding or borders,
