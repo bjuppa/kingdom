@@ -2,19 +2,6 @@
 
 A CSS framework for consistent sizing, spacing and typography.
 
-"If content is king, context is the kingdom"
-
-## Browserstack
-We're using [Browserstack](http://browserstack.com/) for testing across web browsers,
-please check out their amazing services!
-
-## Level 1—CSS Reset
-Defaults:
-* `$text-color: black`
-* `$body-background-color: white`
-* `$body-padding: 0 .5rem`
-
-
 ## Level 2—Sizing and Spacing
 - Horizontal spacing is controlled with `margin-top`.
 - Keep `margin-bottom` at `0`.
