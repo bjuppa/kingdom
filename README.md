@@ -2,41 +2,6 @@
 
 A CSS framework for consistent sizing, spacing and typography.
 
-## Level 2—Sizing and Spacing
-- Horizontal spacing is controlled with `margin-top`.
-- Keep `margin-bottom` at `0`.
-- Control margin on elements *from the outside* (using CSS combinators) so that elements don’t set their own spacing.
-
-Defaults:
-* `$spacing-base: 1em`
-
-Reset `margin` on all elements to `0` using universal selector (`*`).
-
-Set `margin-top` to `$spacing-base` using adjacent sibling combinator (`* + *`) for default horizontal spacing.
-
-Remove vertical spacing from:
-* all elements after `h1`-`h6`/`dt`/`li`/`hgroup`/`script`/`template`/`map`/`input[type=hidden]`
-* last-child `script`/`template`/`map`/`input[type=hidden]`
-* `textarea`/`select` after `label`
-* `input` after `label` where input's `type` is not `button`|`reset`|`submit`
-
-Remove all vertical spacing inside:
-* `figure`
-* `picture`
-* `object`
-* `select`
-* `table`
-* `audio`
-* `video`
-* `map`
-
-Utility classes and mixins for cancelling out default vertical spacing (`margin-top: 0`):
-* `.no-vertical-spacing`
-* `.no-vertical-spacing-on-children` using child combinator (`> *`)
-* `.no-vertical-spacing-within` using descendant combinator (` *`)
-* `.no-vertical-spacing-after` using adjacent sibling combinator (`+ *`)
-
-
 ## Level 3—Vertical Rhythm
 - Avoid setting font-size on `:root` (assume `16px`).
 - Set `font-size` and `line-height` on `body` — this line-height becomes the *vertical rhythm base*.

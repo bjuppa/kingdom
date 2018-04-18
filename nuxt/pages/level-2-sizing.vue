@@ -107,9 +107,45 @@
       Then, those properties are specifically set on the <code>body</code>, the heading elements 1 to 6,
       as well as the inline elements <code>small</code>, <code>sub</code>, and <code>sup</code>.
     </p>
-    <p>
 
+    <h3>The list of font-sizes</h3>
+    <p>
+      The font sizes are kept in a Sass-list named <code>$font-sizes</code> that will have at least 6 sizes in it.
+      If the list is empty, the first font size defaults to a <code>rem</code> value converted from
+      <var>$desired-body-font-size</var>&mdash;which in turn defaults to <code>18px</code>.
+      The <code>$font-sizes</code> list is filled up to length 6 with gradually increasing values by multiplying the
+      previous size with <var>$modular-scale</var> (default <code>1.2</code>).
     </p>
+    <p>
+      The first size in the list is applied to body text and <code>h4</code> elements.
+      Headings above level 4 will get gradualy larger sizes from the list and heading levels 5 and 6 will use relative
+      sizes derived from <var>$font-size-smaller</var> (which is calculated from <var>$modular-scale</var> by default).
+    </p>
+
+    <h3>The list of line heights</h3>
+    <p>
+      Each of the font sizes have a corresponding line-height kept in <code>$line-heights</code>, another Sass-list.
+      If not set before, these line heights are generated along a linear slope from <var>$body-line-height-factor</var>
+      (default <var>1.5</var>) for the first font-size, all the way down to <var>$min-line-height-factor</var> (default
+      <var>1.2</var>) for the 6th font-size.
+    </p>
+
+    <h3>Examples</h3>
+    <ul>
+      <li><strong class="text-x-small">Heading 6</strong> gets a really small size&mdash;it's rarely used anyway...</li>
+      <li><strong class="text-small">Heading 5</strong> along with <sub>subscript</sub>, <sup>superscript</sup>, and
+        <small>small text</small>
+        get their size from <var>$font-size-smaller</var></li>
+    </ul>
+    <ol class="mt-0">
+      <li><strong class="text-1">Heading 4</strong> and body text is sized from the first value of
+        <code>$font-sizes</code></li>
+      <li><strong class="text-2">Heading 3</strong> is sized from the second value of <code>$font-sizes</code></li>
+      <li><strong class="text-3">Heading 2</strong></li>
+      <li><strong class="text-4">Heading 1</strong></li>
+      <li><span class="text-5">Text size 5</span> is in <code>$font-sizes</code>, but not applied to any elements</li>
+      <li><span class="text-6">Text size 6</span> is also unused by Kingdom</li>
+    </ol>
 
   </main>
 </template>
