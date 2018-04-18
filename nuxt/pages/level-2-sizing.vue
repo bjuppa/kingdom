@@ -138,22 +138,24 @@
       (default <code>1.2</code>) for the 6th font-size.
     </p>
 
-    <h3>Examples</h3>
-    <ul>
-      <li><strong class="text-x-small">Heading 6</strong> gets a really small size&mdash;it's rarely used anyway...</li>
-      <li><strong class="text-small">Heading 5</strong> along with <sub>subscript</sub>, <sup>superscript</sup>, and
-        <small>small text</small>
-        get their size from <var>$font-size-smaller</var></li>
-    </ul>
-    <ol class="mt-0">
-      <li><strong class="text-1">Heading 4</strong> and body text is sized from the first value of
-        <code>$font-sizes</code></li>
-      <li><strong class="text-2">Heading 3</strong> is sized from the second value of <code>$font-sizes</code></li>
-      <li><strong class="text-3">Heading 2</strong></li>
-      <li><strong class="text-4">Heading 1</strong></li>
-      <li><span class="text-5">Text size 5</span> is in <code>$font-sizes</code>, but not applied to any elements</li>
-      <li><span class="text-6">Text size 6</span> is also unused by Kingdom</li>
-    </ol>
+    <aside>
+      <ul>
+        <li><strong class="text-x-small">Heading 6</strong> gets a really small size&mdash;it's rarely used anyway...
+        </li>
+        <li><strong class="text-small">Heading 5</strong> along with <sub>subscript</sub>, <sup>superscript</sup>, and
+          <small>small text</small>
+          get their size from <var>$font-size-smaller</var></li>
+      </ul>
+      <ol class="mt-0">
+        <li><strong class="text-1">Heading 4</strong> and body text is sized from the first value of
+          <code>$font-sizes</code></li>
+        <li><strong class="text-2">Heading 3</strong> is sized from the second value of <code>$font-sizes</code></li>
+        <li><strong class="text-3">Heading 2</strong></li>
+        <li><strong class="text-4">Heading 1</strong></li>
+        <li><span class="text-5">Text size 5</span> is in <code>$font-sizes</code>, but not applied to any elements</li>
+        <li><span class="text-6">Text size 6</span> is also unused by Kingdom</li>
+      </ol>
+    </aside>
 
   </main>
 </template>

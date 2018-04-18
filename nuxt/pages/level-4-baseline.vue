@@ -43,6 +43,27 @@
       </p>
     </div>
 
+    <aside>
+      <div class="visualize-vertical-rhythm" style="columns: 2;">
+        <p class="text-x-small-block">Text x-small</p>
+        <p class="text-small-block">Text small</p>
+        <p class="text-1">Text 1</p>
+        <p class="text-2">Text 2</p>
+        <p class="text-3">Text 3</p>
+        <p class="text-4">Text 4</p>
+        <p class="text-5">Text 5</p>
+        <p class="text-6">Text 6</p>
+        <p class="text-6">Text 6</p>
+        <p class="text-5">Text 5</p>
+        <p class="text-4">Text 4</p>
+        <p class="text-3">Text 3</p>
+        <p class="text-2">Text 2</p>
+        <p class="text-1">Text 1</p>
+        <p class="text-small-block">Text small</p>
+        <p class="text-x-small-block">Text x-small</p>
+      </div>
+    </aside>
+
     <h2>Limitations</h2>
     <p>
       The amount of shift applied is calculated using CSS calc from CSS custom properties.

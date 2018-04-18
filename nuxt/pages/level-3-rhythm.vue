@@ -48,6 +48,8 @@
       Using that body leading, Kingdom level 3 will then fill the <var>$font-sizes</var> and <var>$line-heights</var>,
       unless already set.
     </p>
+
+    <aside>
     <ol class="visualize-vertical-rhythm">
       <li>
         <span class="text-1">Text 1</span> takes <strong>one line</strong> with a font-size appropriate for the
@@ -74,6 +76,7 @@
         <var>$min-line-height-factor</var>
       </li>
     </ol>
+    </aside>
 
     <h2>Elements that need special care to fit</h2>
     <p>
