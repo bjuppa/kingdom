@@ -52,8 +52,8 @@
     <p>
       If no <var>$body-font-stack</var> has been selected and the body text color is bright on a dark background,
       Kingdom will explicitly set the body text to a sans-serif font.
-      This is to avoid browsers' default serif font that can be hard to read when the background is darker than the
-      text.
+      This is to avoid user-agents' default serif font that can be hard to read whenever the background is darker than
+      the text on top of it.
     </p>
     <p>
       In most cases you will have set both colors and fonts according to your specific design, so this effect will

@@ -6,8 +6,8 @@
     </h1>
     <p>
       The 2nd level of Kingdom applies consistent text sizes, line heights, and spacing between blocks.
-      The defaults include slightly larger text than browsers usually apply with a hefty line height for improved
-      readability.
+      The defaults include slightly larger text than user-agent stylesheets usually apply with a hefty line height for
+      improved readability.
       The larger font sizes follow a modular scale with gradually smaller line heights as text get larger.
       Finally, the base spacing used throughout the rest of the CSS defaults to correspond to the line height of
       the body text, making paragraphs easy to distinguish from each other.
@@ -102,7 +102,7 @@
 
     <h2>Consistent text</h2>
     <p>
-      To get rid of any browser quirks related to text sizes, Kingdom's 2nd level will make sure all elements
+      To get rid of any user-agent quirks related to text sizes, Kingdom's 2nd level will make sure all elements
       inherit <code>font-size</code> and <code>line-height</code> from their parent by default.
       Then, those properties are specifically set on the <code>body</code>, the heading elements 1 to 6,
       as well as the inline elements <code>small</code>, <code>sub</code>, and <code>sup</code>.
@@ -122,12 +122,20 @@
       sizes derived from <var>$font-size-smaller</var> (which is calculated from <var>$modular-scale</var> by default).
     </p>
 
+    <aside>
+      <p>
+        Kingdom avoids setting <code>font-size</code> on <code>:root</code>, instead assuming this is <code>16px</code>
+        by default in user-agent stylesheets.
+        Then all length values specified in <code>rem</code> are also relative to the user-agent's default font setting.
+      </p>
+    </aside>
+
     <h3>The list of line heights</h3>
     <p>
       Each of the font sizes have a corresponding line-height kept in <code>$line-heights</code>, another Sass-list.
       If not set before, these line heights are generated along a linear slope from <var>$body-line-height-factor</var>
-      (default <code>1.5</code>) for the first font-size, all the way down to <var>$min-line-height-factor</var> (default
-      <code>1.2</code>) for the 6th font-size.
+      (default <code>1.5</code>) for the first font-size, all the way down to <var>$min-line-height-factor</var>
+      (default <code>1.2</code>) for the 6th font-size.
     </p>
 
     <h3>Examples</h3>
