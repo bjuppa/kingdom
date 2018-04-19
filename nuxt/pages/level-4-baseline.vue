@@ -65,7 +65,7 @@
     <p>
       The amount of shift applied is calculated using CSS calc from CSS custom properties.
       In browsers not supporting both (notably IE and Opera Mini) the 4th level of Kingdom has no effect,
-      basically rendering a page like only level 3 was applied.
+      basically rendering a page like only Level 3 was applied.
     </p>
 
   </main>

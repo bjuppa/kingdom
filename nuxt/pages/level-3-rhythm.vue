@@ -27,13 +27,13 @@
       modular scale and relative line heights using a linear slope, the 3rd level will fill the <var>$font-sizes</var>
       and <var>$line-heights</var> Sass-lists with absolute line heights that are perfect multiples of a
       <var>$vertical-rhythm-base</var> and finding font-sizes that fit within the specified number of "lines".
-      So no more modular scale in level 3!
+      So no more modular scale in Level 3!
     </p>
     <p>
-      Just as in level 2, the defaults are derived from <var>$desired-body-font-size</var> (default <code>18px</code>),
+      Just as in Level 2, the defaults are derived from <var>$desired-body-font-size</var> (default <code>18px</code>),
       <var>$body-line-height-factor</var> (default <code>1.5</code>), and <var>$min-line-height-factor</var> (default
       <code>1.2</code>), but the calculations are quite different.
-      In level 3 the <var>$spacing-base</var> is equal to the <var>$vertical-rhythm-base</var> which in turn is equal to
+      In Level 3 the <var>$spacing-base</var> is equal to the <var>$vertical-rhythm-base</var> which in turn is equal to
       the <var>$body-leading</var>.
     </p>
     <p>
@@ -45,8 +45,8 @@
       Either by setting <var>$body-leading</var> directly, or any of the other variables that affect the calculation.
     </p>
     <p>
-      Using that body leading, Kingdom level 3 will then fill the <var>$font-sizes</var> and <var>$line-heights</var>,
-      unless already set.
+      Using that body leading, Kingdom's 3rd level will then fill the <var>$font-sizes</var> and
+      <var>$line-heights</var>, unless already set.
     </p>
 
     <aside>
