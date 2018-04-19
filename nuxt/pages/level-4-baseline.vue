@@ -14,7 +14,7 @@
       There's actually a W3C Working Draft
       (<a href="https://www.w3.org/TR/css-line-grid-1/" target="_blank">CSS Line Grid Module Level 1</a>)
       that attempts to solve similar problems.
-      I hope one day Level IV of the Kingdom will abdicate in favor of a new ruler, perhaps with popular support&hellip;
+      I hope one day Level IV of the Kingdom will abdicate in favor of a new ruler enjoying popular support&hellip;
     </p>
     <p>
       This webpage is displayed with Level 4 and all utilities of Kingdom applied so you can quickly see its effects in
