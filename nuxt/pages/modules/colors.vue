@@ -33,8 +33,8 @@ $colors: (
     <p>
       Every part of Kingdom that needs some color will generate and register that color unless it's already set in the
       <var>$colors</var> Sass-map.
-      A good example is the <reload-link to="/level-1-reset">CSS reset</reload-link>, that will register primary, body
-      and link colors unless already defined.
+      A good example is the <reload-link to="/level-1-reset">CSS reset</reload-link>, that will register
+      <code>primary</code>, <code>body</code>, and <code>link</code> colors unless already defined.
     </p>
     <p>
       Above your import of the Kingdom level, make sure to set the <var>$colors</var> Sass-map with any colors that
