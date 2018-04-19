@@ -1,11 +1,14 @@
 <template>
-    <nav class="space-inside">
-        <ul class="list-inline">
-            <li>
-                <reload-link to="/">Main</reload-link>
-            </li>
-        </ul>
-    </nav>
+  <nav class="space-inside">
+    <ul class="list-inline">
+      <li>
+        <reload-link to="/">Main</reload-link>
+      </li>
+      <li>
+        <a href="https://github.com/bjuppa/kingdom/" target="_blank">GitHub</a>
+      </li>
+    </ul>
+  </nav>
 </template>
 
 <script>
