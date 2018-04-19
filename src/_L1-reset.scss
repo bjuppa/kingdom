@@ -36,6 +36,11 @@ $body-padding: 0 !default;
   $colors: map-merge($colors, (link: mix(change_color(transform-hue(get-color(primary), blue), $lightness: 50%, $saturation: 100%), desaturate(get-color(body, true), 100%), 50%)));
 }
 
+// Set visited link color if not already defined in $colors map
+@if not map-has-key($colors, visited) {
+  $colors: map-merge($colors, (visited: get-color(link)));
+}
+
 @import "modules/element-types";
 @import "modules/borders";
 
@@ -238,6 +243,10 @@ button, [type='button'], [type='reset'], [type='submit'] {
 
 *:link {
   @include set-color(link);
+}
+
+*:visited {
+  @include set-color(visited);
 }
 
 @import "placeholders/fonts";

@@ -32,11 +32,11 @@
 
     <h6>Heading 6</h6>
     <p>
-      Here's <a href="#href">some
+      Here's <reload-link to="" append="true">some
       <small>small text</small>
       and <sub>sub text</sub>
       and <sup>sup text</sup>
-      in a link.</a>
+      in a link.</reload-link>
       Here's <span class="text-small">a span with smaller text-size</span> inside.
     </p>
 
@@ -192,3 +192,13 @@
   </div>
 
 </template>
+
+<script>
+  import ReloadLink from '~/components/reload-link.vue';
+
+  export default {
+    components: {
+      'reload-link': ReloadLink
+    }
+  };
+</script>

@@ -17,15 +17,16 @@
 
     <p>
       In the following example there is a <code>primary</code> color along with a corresponding text color,
-      the <code>body</code> background color together with the body text color,
-      and finally a link color, which is a text color by itself so it doesn't have a corresponding text color.
+      a <code>body</code> background color together with a color for body text,
+      and finally <code>link</code> and <code>visited</code> link colors&mdash;which are both text colors by themselves so
+      they don't have any counterparts.
     </p>
-    <div class="language-sass">
-      <pre><code class="language-scss">
-$colors: (
+    <div>
+      <pre><code class="language-scss">$colors: (
   primary: #47282b #eee8e9,
   body: #fdfdfd #0c0d0c,
-  link: #061386
+  link: #061386,
+  visited: #061386
 )
 </code></pre>
     </div>
@@ -34,11 +35,11 @@ $colors: (
       Every part of Kingdom that needs some color will generate and register that color unless it's already set in the
       <var>$colors</var> Sass-map.
       A good example is the <reload-link to="/level-1-reset">CSS reset</reload-link>, that will register
-      <code>primary</code>, <code>body</code>, and <code>link</code> colors unless already defined.
+      <code>primary</code>, <code>body</code>, <code>link</code> and <code>visited</code> colors unless already defined.
     </p>
     <p>
-      Above your import of the Kingdom level, make sure to set the <var>$colors</var> Sass-map with any colors that
-      you care about.
+      Above your import of your selected Kingdom level, make sure to set the <var>$colors</var> Sass-map with any colors
+      that you care about.
     </p>
     <p>
       You can check what colors are registered with

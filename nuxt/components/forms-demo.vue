@@ -61,10 +61,10 @@
       <button class="button-plain button-destructive">Plain destructive button</button>
       <button class="button-petty button-destructive">Petty destructive button</button>
 
-      <a href="#" class="button-prime">Prime button link</a>
-      <a href="#" class="button-plain">Plain button link</a>
-      <a href="#" class="button-petty">Petty button link</a>
-      <a href="#">Unstyled link</a>
+      <reload-link to="" append="true" class="button-prime">Prime button link</reload-link>
+      <reload-link to="" append="true" class="button-plain">Plain button link</reload-link>
+      <reload-link to="" append="true" class="button-petty">Petty button link</reload-link>
+      <reload-link to="" append="true">Unstyled link</reload-link>
 
       <button class="button-prime" disabled>Prime disabled button</button>
       <button class="button-plain" disabled>Plain disabled button</button>
@@ -105,3 +105,13 @@
     </form>
   </div>
 </template>
+
+<script>
+  import ReloadLink from '~/components/reload-link.vue';
+
+  export default {
+    components: {
+      'reload-link': ReloadLink
+    }
+  };
+</script>
