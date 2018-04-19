@@ -6,6 +6,14 @@
       for consistent spacing, sizing and typography.
     <p>
     <p>
+      <strong>Kingdom is still under development</strong>,
+      we're not at version <code>1.0</code> yet,
+      so expect <em>everything</em> to be in a state of flux!
+      You can check the <a href="https://github.com/bjuppa/kingdom/releases" target="_blank">release history</a>
+      and any <a href="https://github.com/bjuppa/kingdom/issues" target="_blank">comments or suggestions</a> are most
+      welcome!
+    </p>
+    <p>
       The main task of Kingdom is to put a solid base styling on your common semantic HTML&mdash;that doesn't
       necessarily have any classes&mdash;like you would expect to be input by a somewhat tech-savvy content editor, or
       perhaps generated from <a href="https://en.wikipedia.org/wiki/Markdown" target="_blank">Markdown</a>.
