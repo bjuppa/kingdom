@@ -160,10 +160,6 @@ label[aria-invalid] {
     box-shadow: $input-box-shadow;
   }
 
-  &:not(:disabled):not(.disabled) {
-    cursor: pointer;
-  }
-
   &:disabled, &.disabled, fieldset:disabled & {
     pointer-events: none;
 
