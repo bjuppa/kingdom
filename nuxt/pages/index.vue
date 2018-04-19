@@ -5,53 +5,67 @@
       A CSS framework, written in <a href="http://sass-lang.com" target="_blank">Sass</a>,
       for consistent spacing, sizing and typography.
     <p>
+    <p>
+      The main task of Kingdom is to put a solid base styling on your common semantic HTML&mdash;that doesn't
+      necessarily have any classes&mdash;like you would expect to be input by a somewhat tech-savvy content editor, or
+      perhaps generated from <a href="https://en.wikipedia.org/wiki/Markdown" target="_blank">Markdown</a>.
+      The pages of this documentation is a living example&mdash;go on, inspect its elements in your browser's dev-tools!
+    </p>
+    <p>
+      Kingdom doesn't provide ready-made components or widgets like cards or navbars.
+      It's not for bootstrapping your site with someone else's design.
+      Instead, Kingdom is a foundation with sensible defaults for building your own custom design (system).
+    </p>
+    <p>
+      Much like <a href="https://tailwindcss.com/docs/what-is-tailwind/" target="_blank">Tailwind</a>, Kingdom is
+      utility-first&mdash;meaning it has CSS classes that can be combined on your HTML elements to quickly create more
+      complex looks.
+      Like the following <code>&lt;blockquote&gt;</code>, that just has a bunch of utility-classes
+      (<code>text-4 border-l space-inside color-primary</code>)
+      applied to style it:
+    </p>
 
     <blockquote class="text-4 border-l space-inside color-primary">
       <i>If content is king, context is the kingdom</i>
     </blockquote>
+
+    <p>
+      Then, when the need arises, you can create your own CSS components&mdash;with your own structure and naming
+      system&mdash;that encapsulate those behaviours for reuse.
+      For example, you might combine the above into your own
+      <a href="http://getbem.com/introduction/" target="_blank">BEM-style component</a> that you apply to elements
+      wherever this particular pattern is needed.
+      Or perhaps you want this opinionated style on every <code>&lt;blockquote&gt;</code> element?
+      You're free to do that too!
+    </p>
+    <p>
+      At this stage Kingdom has plenty of Sass mixins, functions, and placeholders to support you in keeping everything
+      consistent throughout <em>your</em> design system.
+    </p>
+    <p>
+      There's also a point in having a limited, but carefully selected, set of building blocks.
+      It helps you make decisions faster.
+      Do you need some padding inside a bordered element so that its text content doesn't lay tight on the border?
+      Just extend <code>.space-inside</code> or include <code>set-space-inside()</code> and you're set.
+      There's no need to think about how many pixels or other length units you need for every specific
+      case&mdash;you've already made that decision in one central place!
+    </p>
 
     <h2>Installation via npm</h2>
     <p>
       <kbd>npm install kingdom-css</kbd>
     </p>
 
-    <h2>Usage in Sass</h2>
+    <h2>Demos</h2>
     <p>
-      Import the stuff you want&mdash;just make sure the paths are right for your own file
-      structure:
+      The demo pages are set up with no options at all, meaning they even generate a random primary color.
+
+      To see an example of all four levels of Kingdom side by side, you can visit
+      <reload-link to="/demo" target="basic-demo">the demo page</reload-link>.
+
+      The form extension can be seen in action on
+      <reload-link to="/forms-demo" target="forms-demo">the forms demo page</reload-link>.
     </p>
-    <div class="border-l space-inside">
-      <pre><code class="language-scss">/* Example of Kingdom CSS usage */
-
-// 1: Set your variables first
-// For example we have picked a primary color:
-$colors: (primary: rgb(71, 40, 43));
-
-// 2: Import the level of Kingdom you want:
-@import "../node_modules/kingdom-css/src/L3-rhythm";
-
-// 3: Optionally import the Kingdom utility classes you want:
-@import "../node_modules/kingdom-css/src/utilities/spacing";
-@import "../node_modules/kingdom-css/src/utilities/sizing";
-// ...
-
-// 4: Optionally import any Kingdom extensions you want:
-@import "../node_modules/kingdom-css/src/extensions/forms";
-// ...
-
-/* Done! Now complete the masterpiece with your own Sass! */
-
-// You may extend the placeholders Kingdom provides,
-// as well ass any mixins or functions from Kingdom's modules.
-
-// Here's a quick example of a card component you could write:
-.my-card {
-  @extend %border;
-  @include set-space-inside();
-}
-// ...
-</code></pre>
-    </div>
 
     <h2>Not for the faint of heart</h2>
     <p>
@@ -88,7 +102,7 @@ $colors: (primary: rgb(71, 40, 43));
       You'll find each level's Sass file in
       <a href="https://github.com/bjuppa/kingdom/tree/master/src"
          target="_blank"><code>node_modules/kingdom-css/src/</code></a>
-      and you should only pick one.
+      and you should only pick and import one.
     </p>
     <ol>
       <li>
@@ -190,17 +204,6 @@ $colors: (primary: rgb(71, 40, 43));
         browsers, please check out their amazing services!
       </figcaption>
     </figure>
-
-    <h2>Demos</h2>
-    <p>
-      The demo pages are set up with no options at all, meaning they even generate a random primary color.
-
-      To see an example of all four levels of Kingdom side by side, you can visit
-      <reload-link to="/demo" target="basic-demo">the demo page</reload-link>.
-
-      The form extension can be seen in action on
-      <reload-link to="/forms-demo" target="forms-demo">the forms demo page</reload-link>.
-    </p>
 
   </main>
 </template>
