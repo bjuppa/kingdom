@@ -31,7 +31,7 @@
       All spacing values in Kingdom are derived from the <var>$spacing-base</var> Sass-variable.
       If you want to be specific you may set it explicitly, but the default is rather nifty as it's
       calculated to be the same as the body text line-height, making all spacing related to the rhythm of the text.
-      The spacing base can be set in any valid CSS length unit, but <code>rem</code> is recommended.
+      The spacing base can be set in any CSS length unit, but <code>rem</code> is recommended.
     </p>
     <p>
       By limiting all spacing in the design to <em>multiples</em> and <em>specific fractions</em> of the spacing base,
@@ -88,15 +88,13 @@
     </p>
     <p>
       Some elements are meant to group other elements that are all closely related, so Kingdom will also make sure
-      there's no vertical spacing between elements inside <code>table</code>, <code>figure</code>,
-      <code>picture</code> and some other grouping elements.
+      there's no vertical spacing between elements inside <code>&lt;table&gt;</code>, <code>&lt;figure&gt;</code>,
+      <code>&lt;picture&gt;</code> and some other grouping elements.
     </p>
     <p>
       Spacing above
       <a href="https://developer.mozilla.org/en-US/docs/Web/Guide/HTML/Content_categories#Phrasing_content"
-         target="_blank">
-        inline elements
-      </a>
+         target="_blank">inline elements</a>
       would also mess up most designs, so their <code>margin-top</code> is also set to <code>0</code>.
     </p>
 
@@ -104,20 +102,21 @@
     <p>
       To get rid of any user-agent quirks related to text sizes, Kingdom's 2nd level will make sure all elements
       inherit <code>font-size</code> and <code>line-height</code> from their parent by default.
-      Then, those properties are specifically set on the <code>body</code>, the heading elements 1 to 6,
-      as well as the inline elements <code>small</code>, <code>sub</code>, and <code>sup</code>.
+      Then, those properties are specifically set on the <code>&lt;body&gt;</code>, the heading elements
+      <code>1</code>&ndash;<code>6</code>,
+      as well as the inline elements <code>&lt;small&gt;</code>, <code>&lt;sub&gt;</code>, and <code>&lt;sup&gt;</code>.
     </p>
 
     <h3>The list of font-sizes</h3>
     <p>
-      The font sizes are kept in a Sass-list named <code>$font-sizes</code> that will have at least 6 sizes in it.
+      The font sizes are kept in a Sass-list named <var>$font-sizes</var> that will have at least 6 sizes in it.
       If the list is empty, the first font size defaults to a <code>rem</code> value converted from
       <var>$desired-body-font-size</var>&mdash;which in turn defaults to <code>18px</code>.
-      The <code>$font-sizes</code> list is filled up to length 6 with gradually increasing values by multiplying the
+      The <var>$font-sizes</var> list is filled up to length 6 with gradually increasing values by multiplying the
       previous size with <var>$modular-scale</var> (default <code>1.2</code>).
     </p>
     <p>
-      The first size in the list is applied to body text and <code>h4</code> elements.
+      The first size in the list is applied to body text and <code>&lt;h4&gt;</code> elements.
       Headings above level 4 will get gradualy larger sizes from the list and heading levels 5 and 6 will use relative
       sizes derived from <var>$font-size-smaller</var> (which is calculated from <var>$modular-scale</var> by default).
     </p>
@@ -132,7 +131,7 @@
 
     <h3>The list of line heights</h3>
     <p>
-      Each of the font sizes have a corresponding line-height kept in <code>$line-heights</code>, another Sass-list.
+      Each of the font sizes have a corresponding line-height kept in <var>$line-heights</var>, another Sass-list.
       If not set before, these line heights are generated along a linear slope from <var>$body-line-height-factor</var>
       (default <code>1.5</code>) for the first font-size, all the way down to <var>$min-line-height-factor</var>
       (default <code>1.2</code>) for the 6th font-size.
@@ -148,11 +147,11 @@
       </ul>
       <ol class="mt-0">
         <li><strong class="text-1">Heading 4</strong> and body text is sized from the first value of
-          <code>$font-sizes</code></li>
-        <li><strong class="text-2">Heading 3</strong> is sized from the second value of <code>$font-sizes</code></li>
+          <var>$font-sizes</var></li>
+        <li><strong class="text-2">Heading 3</strong> is sized from the second value of <var>$font-sizes</var></li>
         <li><strong class="text-3">Heading 2</strong></li>
         <li><strong class="text-4">Heading 1</strong></li>
-        <li><span class="text-5">Text size 5</span> is in <code>$font-sizes</code>, but not applied to any elements</li>
+        <li><span class="text-5">Text size 5</span> is in <var>$font-sizes</var>, but not applied to any elements</li>
         <li><span class="text-6">Text size 6</span> is also unused by Kingdom</li>
       </ol>
     </aside>

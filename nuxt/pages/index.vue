@@ -85,7 +85,10 @@ $colors: (primary: rgb(71, 40, 43));
 
     <h3>The four levels</h3>
     <p>
-      You'll find each level's Sass file in <code>node_modules/kingdom-css/src/</code> and you should only pick one.
+      You'll find each level's Sass file in
+      <a href="https://github.com/bjuppa/kingdom/tree/master/src"
+         target="_blank"><code>node_modules/kingdom-css/src/</code></a>
+      and you should only pick one.
     </p>
     <ol>
       <li>
@@ -113,8 +116,10 @@ $colors: (primary: rgb(71, 40, 43));
     <h3>Utilities</h3>
     <p>
       These files provides utility classes that you can put directly on your HTML elements.
-      You'll find them in <code>node_modules/kingdom-css/src/utilities/</code> and you may import only the ones you
-      need, in any order.
+      You'll find them in
+      <a href="https://github.com/bjuppa/kingdom/tree/master/src/utilities"
+         target="_blank"><code>node_modules/kingdom-css/src/utilities/</code></a>
+      and you may import any one you'd need, in any order.
     </p>
 
     <ul>
@@ -142,8 +147,10 @@ $colors: (primary: rgb(71, 40, 43));
     <p>
       Some things affect the default styling of standard HTML elements in such an opinionated way that they're best kept
       in their own "package" for optional inclusion.
-      The extensions are located in <code>node_modules/kingdom-css/src/extensions/</code> and you may "scope" an
-      extension by importing it within a selector.
+      The extensions are located in
+      <a href="https://github.com/bjuppa/kingdom/tree/master/src/extensions"
+         target="_blank"><code>node_modules/kingdom-css/src/extensions/</code></a>
+      and you may "scope" an extension by importing it within a selector.
     </p>
 
     <ul>
@@ -159,8 +166,10 @@ $colors: (primary: rgb(71, 40, 43));
     <p>
       Some of the modules are just a single function or mixin for a specific task, but most consists of many mixins and
       functions providing related functionality.
-      You'll find the modules in <code>node_modules/kingdom-css/src/modules/</code> and they can be included wherever
-      you need some functionality within.
+      You'll find the modules in
+      <a href="https://github.com/bjuppa/kingdom/tree/master/src/modules"
+         target="_blank"><code>node_modules/kingdom-css/src/modules/</code></a>
+      and they can be included wherever you need some functionality within.
     </p>
     <p>
       Most of the modules are already imported and can be implicitly used, but it doesn't hurt doing an explicit import

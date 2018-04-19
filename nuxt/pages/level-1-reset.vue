@@ -12,7 +12,9 @@
          target="_blank">Tailwind</a>.
       This documentation aims to cover the resets used in Kingdom that are somewhat unique or opinionated.
       If you seek to understand all the resets included, please look through the source of
-      <code>src/_L1-reset.scss</code>, where comments and links explain most of the individual parts.
+      <a href="https://github.com/bjuppa/kingdom/blob/master/src/_L1-reset.scss"
+         target="_blank"><code>src/_L1-reset.scss</code></a>,
+      where comments and links explain most of the individual parts.
     </p>
     <p>
       This webpage is displayed with just Level 1 and all utilities of Kingdom applied so you can quickly see its
@@ -82,8 +84,7 @@
       From <a href="https://tailwindcss.com/docs/border-width/" target="_blank">Tailwind</a> comes the nifty trick
       of setting explicit <code>border-style</code> and <code>border-color</code> on all block elements (plus
       images), while also defaulting the <code>border-width</code>&nbsp;to&nbsp;<code>0</code>.
-      This makes it super convenient to just set the border width on any side of an element wherever a border is
-      needed.
+      This makes it super convenient to just set the border width on any side of an element wherever a border is needed.
       This paragraph just has its <code>border-bottom-width</code> set... and voila!
     </p>
 
