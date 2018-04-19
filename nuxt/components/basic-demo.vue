@@ -89,6 +89,13 @@
       <dd>Etiam porta sem malesuada magna mollis euismod.</dd>
     </dl>
 
+    <p class="text-6">
+      Text size 6
+    </p>
+    <p class="text-5">
+      Text size 5
+    </p>
+
     <h2>This is a heading 2 that should be long enough to line break</h2>
     <hr>
     <h3>This is a heading 3 that should be long enough to line break</h3>
