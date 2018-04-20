@@ -1,7 +1,7 @@
 <template>
   <main class="space-inside w-readable-paragraphs">
     <h1>
-      <small>Level 2:</small>
+      <small>Level&nbsp;2:</small>
       Spacing & Sizing
     </h1>
     <p>
@@ -15,7 +15,7 @@
       level.
     </p>
     <p>
-      This webpage is displayed with Level 2 and all utilities of Kingdom applied so you can quickly see its
+      This webpage is displayed with Level&nbsp;2 and all utilities of Kingdom applied so you can quickly see its
       effects in your particular browser.
     </p>
 
@@ -113,7 +113,7 @@
       If the list is empty, the first font size defaults to a <code>rem</code> value converted from
       <var>$desired-body-font-size</var>&mdash;which in turn defaults to <code>18px</code>.
       The <var>$font-sizes</var> list is filled up to length 6 with gradually increasing values by multiplying the
-      previous size with <var>$modular-scale</var> (default <code>1.2</code>).
+      previous size with <var>$modular-scale</var> (default&nbsp;<code>1.2</code>).
     </p>
     <p>
       The first size in the list is applied to body text and <code>&lt;h4&gt;</code> elements.
@@ -133,8 +133,8 @@
     <p>
       Each of the font sizes have a corresponding line-height kept in <var>$line-heights</var>, another Sass-list.
       If not set before, these line heights are generated along a linear slope from <var>$body-line-height-factor</var>
-      (default <code>1.5</code>) for the first font-size, all the way down to <var>$min-line-height-factor</var>
-      (default <code>1.2</code>) for the 6th font-size.
+      (default&nbsp;<code>1.5</code>) for the first font-size, all the way down to <var>$min-line-height-factor</var>
+      (default&nbsp;<code>1.2</code>) for the 6th font-size.
     </p>
 
     <aside>

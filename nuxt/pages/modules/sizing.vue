@@ -22,7 +22,7 @@
       The <code>set-text</code> mixin applies <code>font-size</code> and <code>line-height</code>.
       If the desired line-height can be related to the <var>$spacing-base</var> it will also be applied with CSS calc,
       as well as the <var>--line-height</var> custom property that can be used for other nifty calculations
-      (e.g.&nbsp;baseline shift in <reload-link to="/level-4-baseline">Level 4</reload-link>).
+      (e.g.&nbsp;baseline shift in <reload-link to="/level-4-baseline">Level&nbsp;4</reload-link>).
     </p>
 
     <h2>Measure (line lengths)</h2>

@@ -1,7 +1,7 @@
 <template>
   <main class="space-inside w-readable-paragraphs">
     <h1>
-      <small>Level 4:</small>
+      <small>Level&nbsp;4:</small>
       Baseline Rhythm
     </h1>
     <p>
@@ -12,13 +12,13 @@
     </p>
     <p>
       There's actually a W3C Working Draft
-      (<a href="https://www.w3.org/TR/css-line-grid-1/" target="_blank">CSS Line Grid Module Level 1</a>)
+      (<a href="https://www.w3.org/TR/css-line-grid-1/" target="_blank">CSS Line Grid Module Level&nbsp;1</a>)
       that attempts to solve similar problems.
-      I hope one day Level IV of the Kingdom will abdicate in favor of a new ruler enjoying popular support&hellip;
+      I hope one day Level&nbsp;IV of the Kingdom will abdicate in favor of a new ruler enjoying popular support&hellip;
     </p>
     <p>
-      This webpage is displayed with Level 4 and all utilities of Kingdom applied so you can quickly see its effects in
-      your particular browser.
+      This webpage is displayed with Level&nbsp;4 and all utilities of Kingdom applied so you can quickly see its
+      effects in your particular browser.
     </p>
 
     <div class="visualize-vertical-rhythm">
@@ -30,9 +30,9 @@
         where the lines are displayed for both levels.
       </p>
       <p>
-        Level 4 will apply baseline shift to the most common block elements that are usually not used for other things
-        than typography. This is of course the <code>&lt;p&gt;</code> element, as well as the headings, but list items,
-        <code>&lt;blockquote&gt;</code>, and <code>&lt;address&gt;</code> is also shifted.
+        Level&nbsp;4 will apply baseline shift to the most common block elements that are usually not used for other
+        things than typography. This is of course the <code>&lt;p&gt;</code> element, as well as the headings, but list
+        items, <code>&lt;blockquote&gt;</code>, and <code>&lt;address&gt;</code> is also shifted.
       </p>
       <p>
         The shift is created using relative positioning and the amount of shift is specific to each font.
@@ -71,7 +71,7 @@
     <p>
       The amount of shift applied is calculated using CSS calc from CSS custom properties.
       In browsers not supporting both (notably IE and Opera Mini) the 4th level of Kingdom has no effect,
-      basically rendering like only Level 3 was applied.
+      basically rendering like only Level&nbsp;3 was applied.
     </p>
 
   </main>

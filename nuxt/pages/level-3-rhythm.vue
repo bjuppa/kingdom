@@ -1,7 +1,7 @@
 <template>
   <main class="space-inside w-readable-paragraphs">
     <h1>
-      <small>Level 3:</small>
+      <small>Level&nbsp;3:</small>
       Vertical Rhythm
     </h1>
     <p>
@@ -17,7 +17,7 @@
       multiple of the vertical rhythm base.
     </p>
     <p>
-      This webpage is displayed with Level 3 and all utilities of Kingdom applied so you can quickly see its
+      This webpage is displayed with Level&nbsp;3 and all utilities of Kingdom applied so you can quickly see its
       effects in your particular browser.
     </p>
 
@@ -27,13 +27,13 @@
       modular scale and relative line heights using a linear slope, the 3rd level will fill the <var>$font-sizes</var>
       and <var>$line-heights</var> Sass-lists with absolute line heights that are perfect multiples of a
       <var>$vertical-rhythm-base</var> and finding font-sizes that fit within the specified number of "lines".
-      So no more modular scale in Level 3!
+      So no more modular scale in Level&nbsp;3!
     </p>
     <p>
-      Just as in Level 2, the defaults are derived from <var>$desired-body-font-size</var> (default <code>18px</code>),
-      <var>$body-line-height-factor</var> (default <code>1.5</code>), and <var>$min-line-height-factor</var> (default
-      <code>1.2</code>), but the calculations are quite different.
-      In Level 3 the <var>$spacing-base</var> (that is passed to Level 2) is equal to the
+      Just as in Level&nbsp;2, the defaults are derived from <var>$desired-body-font-size</var>
+      (default&nbsp;<code>18px</code>), <var>$body-line-height-factor</var> (default&nbsp;<code>1.5</code>), and
+      <var>$min-line-height-factor</var> (default&nbsp;<code>1.2</code>), but the calculations are quite different.
+      In Level&nbsp;3 the <var>$spacing-base</var> (that is passed to Level&nbsp;2) is equal to the
       <var>$vertical-rhythm-base</var> which in turn is equal to the <var>$body-leading</var>.
     </p>
     <p>

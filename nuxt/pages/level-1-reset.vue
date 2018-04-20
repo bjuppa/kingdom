@@ -1,7 +1,7 @@
 <template>
   <main class="space-inside w-readable-paragraphs">
     <h1>
-      <small>Level 1:</small>
+      <small>Level&nbsp;1:</small>
       CSS Reset
     </h1>
     <p>
@@ -17,7 +17,7 @@
       where comments and links explain most of the individual parts.
     </p>
     <p>
-      This webpage is displayed with just Level 1 and all utilities of Kingdom applied so you can quickly see its
+      This webpage is displayed with just Level&nbsp;1 and all utilities of Kingdom applied so you can quickly see its
       effects in your particular browser.
     </p>
 
