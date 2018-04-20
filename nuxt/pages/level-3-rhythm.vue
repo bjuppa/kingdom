@@ -1,5 +1,5 @@
 <template>
-  <main class="space-inside">
+  <main class="space-inside w-readable-paragraphs">
     <h1>
       <small>Level 3:</small>
       Vertical Rhythm
@@ -33,8 +33,8 @@
       Just as in Level 2, the defaults are derived from <var>$desired-body-font-size</var> (default <code>18px</code>),
       <var>$body-line-height-factor</var> (default <code>1.5</code>), and <var>$min-line-height-factor</var> (default
       <code>1.2</code>), but the calculations are quite different.
-      In Level 3 the <var>$spacing-base</var> is equal to the <var>$vertical-rhythm-base</var> which in turn is equal to
-      the <var>$body-leading</var>.
+      In Level 3 the <var>$spacing-base</var> (that is passed to Level 2) is equal to the
+      <var>$vertical-rhythm-base</var> which in turn is equal to the <var>$body-leading</var>.
     </p>
     <p>
       The body <em>leading</em>&mdash;line height&mdash;is the absolute length calculated from
@@ -99,9 +99,10 @@
 
     <h3>Thematic breaks</h3>
     <p>
-      To make <code>&lt;hr&gt;</code> elements take up one "line" in the vertical flow, Kingdom gives them a fixed
+      To make <code>&lt;hr&gt;</code> elements take up one full "line" in the vertical flow, Kingdom gives them a fixed
       height along with a negative <code>margin-bottom</code> of the same amount to move the adjacent sibling closer.
     </p>
+    <hr>
 
     <h3>Form elements</h3>
     <p>

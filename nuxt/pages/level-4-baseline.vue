@@ -1,5 +1,5 @@
 <template>
-  <main class="space-inside">
+  <main class="space-inside w-readable-paragraphs">
     <h1>
       <small>Level 4:</small>
       Baseline Rhythm
@@ -71,7 +71,7 @@
     <p>
       The amount of shift applied is calculated using CSS calc from CSS custom properties.
       In browsers not supporting both (notably IE and Opera Mini) the 4th level of Kingdom has no effect,
-      basically rendering a page like only Level 3 was applied.
+      basically rendering like only Level 3 was applied.
     </p>
 
   </main>

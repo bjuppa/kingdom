@@ -1,5 +1,8 @@
 $spacing-base: 1rem !default;
+$readable-line-length: 75ch !default; //https://www.smashingmagazine.com/2014/09/balancing-line-length-font-size-responsive-web-design/#line-length-measure-and-reading
 
+// Apply one or more length-properties relative to the spacing base
+// TODO: remove $length-base as parameter and just use global $spacing-base
 @mixin set-length($properties, $factor: 1, $length-base: $spacing-base, $extend-height-multiple: false) {
   @each $property in $properties {
     #{$property}: $factor * $length-base;
@@ -10,6 +13,7 @@ $spacing-base: 1rem !default;
   }
 }
 
+// Apply font size and line height, and put the line-height in a CSS custom property for use in other calculations
 @mixin set-text($font-size, $line-height) {
   font-size: $font-size;
   line-height: $line-height;
@@ -22,4 +26,8 @@ $spacing-base: 1rem !default;
     }
     line-height: var(--line-height);
   }
+}
+
+@mixin set-readable-max-width($readable-line-length: $readable-line-length) {
+  max-width: $readable-line-length;
 }

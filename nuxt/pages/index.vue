@@ -1,5 +1,5 @@
 <template>
-  <main class="space-inside">
+  <main class="space-inside w-readable-paragraphs">
     <h1>Kingdom CSS</h1>
     <p>
       A CSS framework, written in <a href="http://sass-lang.com" target="_blank">Sass</a>,
@@ -112,7 +112,7 @@
          target="_blank"><code>node_modules/kingdom-css/src/</code></a>
       and you should only pick and import one.
     </p>
-    <ol>
+    <ol class="w-readable-children">
       <li>
         The <reload-link to="/level-1-reset"> 1st level</reload-link> is an opinionated <strong>CSS reset</strong>,
         laying a foundation for the other levels.
@@ -201,6 +201,9 @@
     <ul>
       <li>
         <reload-link to="/modules/colors">Colors</reload-link>
+      </li>
+      <li>
+        <reload-link to="/modules/sizing">Sizing</reload-link>
       </li>
     </ul>
 

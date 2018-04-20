@@ -1,5 +1,5 @@
 <template>
-  <main class="space-inside">
+  <main class="space-inside w-readable-paragraphs">
     <h1>
       <small>Module:</small>
       Colors

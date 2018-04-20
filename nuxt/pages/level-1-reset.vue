@@ -1,5 +1,5 @@
 <template>
-  <main class="space-inside">
+  <main class="space-inside w-readable-paragraphs">
     <h1>
       <small>Level 1:</small>
       CSS Reset
@@ -29,7 +29,7 @@
       Most of the colors have a matching text color to use on a colored background.
     </p>
 
-    <ul>
+    <ul class="w-readable-children">
       <li>
         <span class="background-color-primary">
         The <code>primary</code> color used as background, together with its corresponding text color.
