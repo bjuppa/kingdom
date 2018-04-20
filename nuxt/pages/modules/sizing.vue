@@ -7,7 +7,7 @@
     <p>
       The sizing module contains mixins for working with length related CSS properties.
       You'll find it in <a href="https://github.com/bjuppa/kingdom/blob/master/src/modules/_sizing.scss"
-                           target="_blank"><code>src/modules/sizing.scss</code></a>.
+                           target="_blank"><code>src/modules/_sizing.scss</code></a>.
     </p>
 
     <h2>Setting general sizes</h2>
