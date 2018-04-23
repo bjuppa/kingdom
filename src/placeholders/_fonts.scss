@@ -7,15 +7,15 @@ $forms-font-stack: Verdana !default;
 
 /* %font-body */
 %font-body {
-  @include set-font($body-font-stack);
+  @include font-stack($body-font-stack);
 }
 
 /* %font-headings */
 %font-headings {
-  @include set-font($headings-font-stack);
+  @include font-stack($headings-font-stack);
 }
 
 /* %font-forms */
 %font-forms {
-  @include set-font($forms-font-stack)
+  @include font-stack($forms-font-stack)
 }

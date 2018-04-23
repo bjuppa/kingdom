@@ -18,7 +18,7 @@ $font-stacks: (
 }
 
 // Apply one of the defined font stacks
-@mixin set-font($stack-name) {
+@mixin font-stack($stack-name) {
   $stack: map-get($font-stacks, $stack-name);
   @if($stack == null) {
     @error "Missing font stack: " + $stack-name + " - add it using mixin register-font-stack()";
