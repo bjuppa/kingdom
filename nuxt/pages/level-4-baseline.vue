@@ -32,7 +32,7 @@
       <p>
         Level&nbsp;4 will apply baseline shift to the most common block elements that are usually not used for other
         things than typography. This is of course the <code>&lt;p&gt;</code> element, as well as the headings, but list
-        items, <code>&lt;blockquote&gt;</code>, and <code>&lt;address&gt;</code> is also shifted.
+        items, <code>&lt;blockquote&gt;</code>, and <code>&lt;address&gt;</code> are also shifted.
       </p>
       <p>
         The shift is created using relative positioning and the amount of shift is specific to each font.
