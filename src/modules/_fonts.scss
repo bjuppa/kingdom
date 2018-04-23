@@ -12,7 +12,7 @@ $font-stacks: (
 // Use between including this module and usage of set-font()
 // Example usage:
 // @include register-font-stack('Georgia', (Georgia, serif), 0.62);
-@function register-font-stack($stack-name, $font-family, $baseline-shift-factor) {
+@mixin register-font-stack($stack-name, $font-family, $baseline-shift-factor) {
   $stack: (font-family: $font-family, baseline-shift-factor: $baseline-shift-factor);
   $font-stacks: map-merge($font-stacks, ($stack-name: $stack)) !global;
 }
@@ -21,7 +21,7 @@ $font-stacks: (
 @mixin font-stack($stack-name) {
   $stack: map-get($font-stacks, $stack-name);
   @if($stack == null) {
-    @error "Missing font stack: " + $stack-name + " - add it using function register-font-stack()";
+    @error "Missing font stack: " + $stack-name + " - add it using mixin register-font-stack()";
   }
 
   font-family: map-get($stack, font-family);
