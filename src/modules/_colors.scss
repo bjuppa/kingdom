@@ -57,7 +57,7 @@ $colors: () !default;
 }
 
 // Set a color property from the global map
-@mixin set-color($name: primary, $property: color, $use-text-color: false) {
+@mixin apply-color($name: primary, $property: color, $use-text-color: false) {
   #{$property}: get-color($name, $use-text-color);
   $var_name: --color-#{$name};
   @if ($use-text-color) {
@@ -67,9 +67,9 @@ $colors: () !default;
 }
 
 // Set a background color (and text color) from the global map
-@mixin set-background-color($name, $set-text-color: true) {
-  @include set-color($name, background-color);
+@mixin apply-background-color($name, $set-text-color: true) {
+  @include apply-color($name, background-color);
   @if ($set-text-color) {
-    @include set-color($name, $use-text-color: true);
+    @include apply-color($name, $use-text-color: true);
   }
 }

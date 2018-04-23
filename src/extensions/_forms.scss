@@ -50,7 +50,7 @@ $button-destructive-focus-box-shadow: set_nth($button-focus-box-shadow, -1, chan
 
 /* %label-invalid */
 %label-invalid {
-  @include set-color(caution);
+  @include apply-color(caution);
 }
 
 /* Inputs */
@@ -163,7 +163,7 @@ label[aria-invalid] {
   &:disabled, &.disabled, fieldset:disabled & {
     pointer-events: none;
 
-    @include set-background-color(disabled);
+    @include apply-background-color(disabled);
     border-color: get-color(disabled);
   }
 }

@@ -75,5 +75,5 @@ $body-line-height-factor: 1.5 !default;
 // https://github.com/tailwindcss/tailwindcss/blob/master/css/preflight.css
 @mixin border-reset($style: $border-style) {
   border: 0 $style;
-  @include set-color(border, border-color);
+  @include apply-color(border, border-color);
 }

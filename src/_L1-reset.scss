@@ -46,7 +46,7 @@ $body-padding: 0 !default;
 
 body {
   padding: $body-padding;
-  @include set-background-color(body);
+  @include apply-background-color(body);
   @if(lightness(get-color(body, true)) > 50%) {
     $body-font-stack: Verdana !default !global;
     @extend %font-body;
@@ -242,11 +242,11 @@ button, [type='button'], [type='reset'], [type='submit'] {
 }
 
 *:link {
-  @include set-color(link);
+  @include apply-color(link);
 }
 
 *:visited {
-  @include set-color(visited);
+  @include apply-color(visited);
 }
 
 @import "placeholders/fonts";

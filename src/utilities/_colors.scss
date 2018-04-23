@@ -11,9 +11,9 @@
 }
 
 .color-primary {
-  @include set-color(primary);
+  @include apply-color(primary);
 }
 
 .background-color-primary {
-  @include set-background-color(primary);
+  @include apply-background-color(primary);
 }
