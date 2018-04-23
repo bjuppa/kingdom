@@ -146,13 +146,13 @@
           get their size from <var>$font-size-smaller</var></li>
       </ul>
       <ol class="mt-0">
-        <li><strong class="text-1">Heading 4</strong> and body text is sized from the first value of
+        <li><strong class="text-1">Heading 4</strong> and body text is sized from the 1st value of
           <var>$font-sizes</var></li>
-        <li><strong class="text-2">Heading 3</strong> is sized from the second value of <var>$font-sizes</var></li>
-        <li><strong class="text-3">Heading 2</strong></li>
-        <li><strong class="text-4">Heading 1</strong></li>
+        <li><strong class="text-2">Heading 3</strong> is sized from the 2nd value of <var>$font-sizes</var></li>
+        <li><strong class="text-3">Heading 2</strong> is size 3</li>
+        <li><strong class="text-4">Heading 1</strong> is size 4</li>
         <li><span class="text-5">Text size 5</span> is in <var>$font-sizes</var>, but not applied to any elements</li>
-        <li><span class="text-6">Text size 6</span> is also unused by Kingdom</li>
+        <li><span class="text-6">Text size 6</span> is also not used directly by Kingdom</li>
       </ol>
     </aside>
 

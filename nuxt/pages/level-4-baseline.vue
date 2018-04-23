@@ -41,7 +41,7 @@
       </p>
       <h3>Default fonts</h3>
       <p>
-        The 4th level is the only one in Kingdom that applies fonts by default, for headlines a sans-serif font and for
+        The 4th level is the only one in Kingdom that applies fonts by default: for headlines a sans-serif font and for
         body text a font with serifs.
         It's just for the purpose of demonstration, whenever you're in a situation where you reach for baseline shift
         you will likely have very specific fonts you want to use, and calculate the <code>baseline-shift-factor</code>
