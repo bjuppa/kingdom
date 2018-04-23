@@ -45,7 +45,7 @@ $spacing-fractions: (
 @each $suffix, $factor in map-merge-natural-numbers($spacing-fractions, $max-spacing-multiple) {
   /* %mx-#{$suffix} */
   %mx-#{$suffix} {
-    @include set-length(margin-left margin-right, $factor);
+    @include length-relative(margin-left margin-right, $factor);
   }
 }
 
@@ -61,7 +61,7 @@ $spacing-fractions: (
     @if $factor == 1 {
       /* Default vertical spacing */
     }
-    @include set-length(margin-top, $factor);
+    @include length-relative(margin-top, $factor);
   }
 }
 
@@ -83,12 +83,12 @@ $spacing-fractions: (
 @each $suffix, $factor in map-merge-natural-numbers($spacing-fractions, $max-spacing-multiple) {
   /* %ml-#{$suffix} */
   %ml-#{$suffix} {
-    @include set-length(margin-left, $factor);
+    @include length-relative(margin-left, $factor);
   }
 
   /* %mr-#{$suffix} */
   %mr-#{$suffix} {
-    @include set-length(margin-right, $factor);
+    @include length-relative(margin-right, $factor);
   }
 }
 
@@ -107,7 +107,7 @@ $spacing-fractions: (
   @if (round($factor*2) == $factor*2) {
     /* %p-#{$suffix} */
     %p-#{$suffix} {
-      @include set-length(padding, $factor);
+      @include length-relative(padding, $factor);
     }
   }
 }
@@ -122,7 +122,7 @@ $spacing-fractions: (
   @if (round($factor*2) == $factor*2) {
     /* %py-#{$suffix} */
     %py-#{$suffix} {
-      @include set-length(padding-top padding-bottom, $factor);
+      @include length-relative(padding-top padding-bottom, $factor);
     }
   }
 }
@@ -136,17 +136,17 @@ $spacing-fractions: (
 @each $suffix, $factor in map-merge-natural-numbers($spacing-fractions, $max-spacing-multiple) {
   /* %px-#{$suffix} */
   %px-#{$suffix} {
-    @include set-length(padding-left padding-right, $factor);
+    @include length-relative(padding-left padding-right, $factor);
   }
 
   /* %pl-#{$suffix} */
   %pl-#{$suffix} {
-    @include set-length(padding-left, $factor);
+    @include length-relative(padding-left, $factor);
   }
 
   /* %pr-#{$suffix} */
   %pr-#{$suffix} {
-    @include set-length(padding-right, $factor);
+    @include length-relative(padding-right, $factor);
   }
 }
 
@@ -163,12 +163,12 @@ $spacing-fractions: (
 @each $suffix, $factor in map-merge-natural-numbers((), $max-spacing-multiple) {
   /* %pt-#{$suffix} */
   %pt-#{$suffix} {
-    @include set-length(padding-top, $factor);
+    @include length-relative(padding-top, $factor);
   }
 
   /* %pb-#{$suffix} */
   %pb-#{$suffix} {
-    @include set-length(padding-bottom, $factor);
+    @include length-relative(padding-bottom, $factor);
   }
 }
 
@@ -176,13 +176,13 @@ $spacing-fractions: (
   $counter-fraction: ceil($fraction) - $fraction + floor($fraction);
   /* %pt-#{$suffix} Compensates with padding-bottom */
   %pt-#{$suffix} {
-    @include set-length(padding-top, $fraction);
-    @include set-length(padding-bottom, $counter-fraction);
+    @include length-relative(padding-top, $fraction);
+    @include length-relative(padding-bottom, $counter-fraction);
   }
   /* %pb-#{$suffix} Compensates with padding-top */
   %pb-#{$suffix} {
-    @include set-length(padding-bottom, $fraction);
-    @include set-length(padding-top, $counter-fraction);
+    @include length-relative(padding-bottom, $fraction);
+    @include length-relative(padding-top, $counter-fraction);
   }
 }
 
@@ -192,9 +192,9 @@ $spacing-fractions: (
   $counter-fraction: ceil($fraction) - $fraction;
   /* %mt-#{$suffix} Compensates with vertical padding */
   %mt-#{$suffix} {
-    @include set-length(margin-top, $fraction);
-    @include set-length(padding-top, $counter-fraction);
-    @include set-length(padding-bottom, ceil($counter-fraction));
+    @include length-relative(margin-top, $fraction);
+    @include length-relative(padding-top, $counter-fraction);
+    @include length-relative(padding-bottom, ceil($counter-fraction));
     height: auto;
   }
 }

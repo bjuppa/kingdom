@@ -22,7 +22,7 @@ $sizing-fractions: (
 @each $suffix, $factor in map-merge-natural-numbers((), $max-sizing-multiple) {
   /* %h-#{$suffix} */
   %h-#{$suffix} {
-    @include set-length(height, $factor, $extend-height-multiple: true);
+    @include length-relative(height, $factor, $extend-height-multiple: true);
   }
 }
 
@@ -34,6 +34,6 @@ $sizing-fractions: (
 @each $suffix, $factor in map-merge-natural-numbers($sizing-fractions, $max-sizing-multiple) {
   /* %w-#{$suffix} */
   %w-#{$suffix} {
-    @include set-length(width, $factor);
+    @include length-relative(width, $factor);
   }
 }

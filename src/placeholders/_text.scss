@@ -9,7 +9,7 @@ $font-size-smaller: smaller !default;
 @for $i from 1 through length($font-sizes) {
   /* %text-#{$i} */
   %text-#{$i} {
-    @include set-text(nth($font-sizes, $i), nth($line-heights, $i));
+    @include size-text(nth($font-sizes, $i), nth($line-heights, $i));
   }
 }
 
@@ -43,5 +43,5 @@ $font-size-smaller: smaller !default;
 
 /* %text-inherit */
 %text-inherit {
-  @include set-text(inherit, inherit);
+  @include size-text(inherit, inherit);
 }

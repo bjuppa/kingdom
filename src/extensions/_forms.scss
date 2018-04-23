@@ -217,7 +217,7 @@ button,
 /* Big button */
 .button-large {
   @extend %button;
-  @include set-text(1em, 2*$spacing-base);
+  @include size-text(1em, 2*$spacing-base);
   @include border-preserving-line-height($spacing-base * 2, $button-border-width);
 }
 
