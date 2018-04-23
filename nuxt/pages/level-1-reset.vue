@@ -40,11 +40,11 @@
         but of course also here on this unstyled element.
       </li>
       <li>The
-        <reload-link to="" append="true" style="color: var(--color-link)"><code>link</code> color</reload-link>
+        <reload-link to="" :append="true" style="color: var(--color-link)"><code>link</code> color</reload-link>
         on the body background.
       </li>
       <li>The
-        <reload-link to="" append="true" style="color: var(--color-visited)"><code>visited</code> link
+        <reload-link to="" :append="true" style="color: var(--color-visited)"><code>visited</code> link
           color</reload-link> on the body background.
       </li>
       <li>

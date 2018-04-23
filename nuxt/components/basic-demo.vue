@@ -32,7 +32,7 @@
 
     <h6>Heading 6</h6>
     <p>
-      Here's <reload-link to="" append="true">some
+      Here's <reload-link to="" :append="true">some
       <small>small text</small>
       and <sub>sub text</sub>
       and <sup>sup text</sup>

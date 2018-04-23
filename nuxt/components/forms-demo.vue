@@ -61,10 +61,10 @@
       <button class="button-plain button-destructive">Plain destructive button</button>
       <button class="button-petty button-destructive">Petty destructive button</button>
 
-      <reload-link to="" append="true" class="button-prime">Prime button link</reload-link>
-      <reload-link to="" append="true" class="button-plain">Plain button link</reload-link>
-      <reload-link to="" append="true" class="button-petty">Petty button link</reload-link>
-      <reload-link to="" append="true">Unstyled link</reload-link>
+      <reload-link to="" :append="true" class="button-prime">Prime button link</reload-link>
+      <reload-link to="" :append="true" class="button-plain">Plain button link</reload-link>
+      <reload-link to="" :append="true" class="button-petty">Petty button link</reload-link>
+      <reload-link to="" :append="true">Unstyled link</reload-link>
 
       <button class="button-prime" disabled>Prime disabled button</button>
       <button class="button-plain" disabled>Plain disabled button</button>
