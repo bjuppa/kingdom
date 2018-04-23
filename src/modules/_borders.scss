@@ -11,7 +11,7 @@ $body-line-height-factor: 1.5 !default;
   $colors: map-merge($colors, (border: currentColor));
 }
 
-@mixin set-border-width($sides: top bottom left right, $width: $border-width) {
+@mixin border-for-fixed-height($sides: top bottom left right, $width: $border-width) {
   @each $side in $sides {
     border-#{$side}-width: $width;
     --border-#{$side}-width: $width;
@@ -25,8 +25,8 @@ $body-line-height-factor: 1.5 !default;
   }
 }
 
-@mixin set-border-for-auto-height($sides: top bottom left right, $width: $border-width) {
-  @include set-border-width($sides, $width);
+@mixin border-for-auto-height($sides: top bottom left right, $width: $border-width) {
+  @include border-for-fixed-height($sides, $width);
 
   @if index($sides, top) {
     @if strip-unit($width) > 0 {
@@ -58,7 +58,7 @@ $body-line-height-factor: 1.5 !default;
 }
 
 // Use this with one-line inline elements (e.g. form inputs) to match their height to surrounding text
-@mixin set-border-preserving-line-height($line-height: $body-line-height-factor, $width: $border-width) {
+@mixin border-preserving-line-height($line-height: $body-line-height-factor, $width: $border-width) {
   vertical-align: bottom;
   line-height: font-size-rem($line-height) - length-rem(2 * $width);
   line-height: calc(var(--line-height, #{$line-height}) - #{2 * $width});
@@ -73,7 +73,7 @@ $body-line-height-factor: 1.5 !default;
 
 // Set a default border style to allow just setting border-width when needed
 // https://github.com/tailwindcss/tailwindcss/blob/master/css/preflight.css
-@mixin reset-border($style: $border-style) {
+@mixin border-reset($style: $border-style) {
   border: 0 $style;
   @include set-color(border, border-color);
 }

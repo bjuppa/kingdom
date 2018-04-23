@@ -40,7 +40,7 @@ hr {
 }
 
 input, button, select {
-  @include set-border-preserving-line-height($vertical-rhythm-base, $input-border-width);
+  @include border-preserving-line-height($vertical-rhythm-base, $input-border-width);
   outline-offset: -2px; //Same focus ring size for same border in Safari
 }
 
@@ -90,7 +90,7 @@ select {
 }
 
 textarea {
-  @include set-border-for-auto-height($width: $input-border-width);
+  @include border-for-auto-height($width: $input-border-width);
   padding-top: 0;
   padding-bottom: 0;
   @include set-length(min-height, 2);
@@ -98,7 +98,7 @@ textarea {
 }
 
 fieldset {
-  @include set-border-for-auto-height($width: $fieldset-border-width);
+  @include border-for-auto-height($width: $fieldset-border-width);
 }
 
 legend {

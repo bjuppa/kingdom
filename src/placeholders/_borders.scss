@@ -4,45 +4,45 @@
 /* %border-l */
 %border-l {
   $sides: left;
-  @include set-border-for-auto-height($sides);
+  @include border-for-auto-height($sides);
 }
 
 /* %border-r */
 %border-r {
   $sides: right;
-  @include set-border-for-auto-height($sides);
+  @include border-for-auto-height($sides);
 }
 
 /* %border-lr */
 %border-lr {
   $sides: left right;
-  @include set-border-for-auto-height($sides);
+  @include border-for-auto-height($sides);
 }
 
 /* %border-t */
 %border-t {
   $sides: top;
-  @include set-border-for-auto-height($sides);
+  @include border-for-auto-height($sides);
 }
 
 /* %border-b */
 %border-b {
   $sides: bottom;
-  @include set-border-for-auto-height($sides);
+  @include border-for-auto-height($sides);
 }
 
 /* %border-tb */
 %border-tb {
   $sides: top bottom;
-  @include set-border-for-auto-height($sides);
+  @include border-for-auto-height($sides);
 }
 
 /* %border */
 %border {
-  @include set-border-for-auto-height();
+  @include border-for-auto-height();
 }
 
 /* %border-0 */
 %border-0 {
-  @include set-border-for-auto-height($width: 0px);
+  @include border-for-auto-height($width: 0px);
 }

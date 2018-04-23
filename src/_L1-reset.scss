@@ -73,12 +73,12 @@ html {
   // Correct display type
   display: block;
 
-  @include reset-border();
+  @include border-reset();
 }
 
 *::before,
 *::after {
-  @include reset-border();
+  @include border-reset();
 }
 
 hr {
@@ -105,7 +105,7 @@ svg:not(:root) {
 img {
   max-width: 100%;
   height: auto;
-  @include reset-border();
+  @include border-reset();
 }
 
 // Prevent small from affecting the line height of their parents
