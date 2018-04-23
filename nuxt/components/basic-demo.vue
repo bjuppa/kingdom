@@ -40,6 +40,8 @@
       Here's <span class="text-small">a span with smaller text-size</span> inside.
     </p>
 
+    <div><code>This is a block element with just code inside.</code></div>
+
     <hr>
 
     <ul>

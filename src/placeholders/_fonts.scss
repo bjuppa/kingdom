@@ -1,6 +1,7 @@
 $body-font-stack: Times !default;
 $headings-font-stack: $body-font-stack !default;
 $forms-font-stack: Verdana !default;
+$monospace-font-stack: Courier !default;
 
 /* Placeholders for fonts */
 @import "../modules/fonts";
@@ -18,4 +19,9 @@ $forms-font-stack: Verdana !default;
 /* %font-forms */
 %font-forms {
   @include font-stack($forms-font-stack)
+}
+
+/* %font-monospace */
+%font-monospace {
+  @include font-stack($monospace-font-stack)
 }
