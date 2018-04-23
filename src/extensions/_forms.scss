@@ -64,6 +64,8 @@ textarea {
 }
 
 input, textarea, select {
+  @extend %font-forms;
+
   background: $input-background;
   background-clip: $input-background-clip;
 
@@ -111,6 +113,11 @@ input, textarea {
   }
 }
 
+/* Labels */
+label {
+  @extend %font-forms;
+}
+
 // Labels for disabled form controls
 label.disabled,
 label[disabled],
@@ -130,6 +137,8 @@ label[aria-invalid] {
 
 /* %button base for all buttons  */
 %button {
+  @extend %font-forms;
+
   color: $button-color;
   background: $button-background;
   background-clip: $button-background-clip;
