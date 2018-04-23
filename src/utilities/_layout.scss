@@ -61,17 +61,17 @@
 // Space inside - great for bordered elements
 
 .space-inside-l {
-  @include set-space-inside(left);
+  @include space-inside(left);
 }
 
 .space-inside-r {
-  @include set-space-inside(right);
+  @include space-inside(right);
 }
 
 .space-inside-b {
-  @include set-space-inside(bottom);
+  @include space-inside(bottom);
 }
 
 .space-inside {
-  @include set-space-inside();
+  @include space-inside();
 }

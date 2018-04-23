@@ -54,7 +54,7 @@
       There's also a point in having a limited, but carefully selected, set of building blocks.
       It helps you make decisions faster.
       Do you need some padding inside a bordered element so that its text content doesn't lay tight on the border?
-      Just extend <code>.space-inside</code> or include <code>set-space-inside()</code> and you're set.
+      Just extend <code>.space-inside</code> or include <code>space-inside()</code> and you're set.
       There's no need to think about how many pixels or other length units you need for every specific
       case&mdash;you've already made that decision in one central place!
     </p>
