@@ -17,7 +17,7 @@ $readable-line-length: 75ch !default; //https://www.smashingmagazine.com/2014/09
 @mixin size-text($font-size, $line-height) {
   font-size: $font-size;
   line-height: $line-height;
-  @if type-of($line-height) == 'number' {
+  @if (type-of($line-height) == 'number' and $line-height != 0) {
     @if (unit($line-height) == unit($spacing-base)) {
       $factor: round($line-height/$spacing-base);
       --line-height: calc(#{$factor} * var(--spacing-base, #{$spacing-base}));
