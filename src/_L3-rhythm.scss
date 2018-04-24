@@ -14,7 +14,7 @@ $spacing-base: $vertical-rhythm-base;
 @import "modules/flow-rhythm";
 
 $font-sizes: flow-font-size(1, $body-line-height-factor),
-flow-font-size(1, ($min-line-height-factor + $body-line-height-factor)/2), //TODO: perhaps font size 2 should not be exactly between 1 and 3, what about some golden ratio?
+flow-font-size(1, ($min-line-height-factor + $body-line-height-factor)/2),
 flow-font-size(1, $min-line-height-factor),
 flow-font-size(2, $min-line-height-factor),
 flow-font-size(3, $min-line-height-factor),
