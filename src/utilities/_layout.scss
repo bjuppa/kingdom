@@ -21,17 +21,20 @@
 .block,
 .block-children > * {
   display: block;
+  line-height: inherit;
 }
 
 .inline-block,
 .inline-block-children > *,
 .inline-block-within * {
   display: inline-block;
+  line-height: inherit;
 }
 
 .inline,
 .inline-within * {
   display: inline;
+  line-height: 0;
 }
 
 .table {

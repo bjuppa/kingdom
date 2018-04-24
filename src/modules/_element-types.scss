@@ -21,11 +21,11 @@ h1, h2, h3, h4, h5, h6,
 header,
 hgroup,
 hr,
-//li,
+  //li,
 main,
 menu, // Not in https://developer.mozilla.org/en-US/docs/Web/HTML/Block-level_elements
 nav,
-//noscript,
+  //noscript,
 ol,
 output,
 p,
@@ -46,6 +46,8 @@ pre,
 ul !default;
 
 // https://developer.mozilla.org/en-US/docs/Web/Guide/HTML/Content_categories#Phrasing_content
+$html-inline-block-elements: button, img, input, object, select, textarea !default;
+
 $html-inline-elements: a,
 abbr,
 acronym,
@@ -53,34 +55,47 @@ b,
 bdo,
 big,
 br,
-button,
 cite,
 code,
 dfn,
 em,
 i,
-img,
-input,
 kbd,
 label,
 map,
-object,
 q,
 samp,
 script,
-select,
 small,
 span,
 strong,
 sub,
 sup,
-textarea,
 time,
 tt,
 var !default;
 
+@function amend-element-list($list, $remove: ()) {
+  $result: ();
+
+  @for $i from 1 through length($list) {
+    @if not index($remove, nth($list, $i)) {
+      $result: append($result, nth($list, $i), comma);
+    }
+  }
+
+  @return $result;
+}
+
 @mixin block-level-elements() {
   $elements: $html-block-elements;
+  #{$elements} {
+    @content;
+  }
+}
+
+@mixin inline-block-elements($except: ()) {
+  $elements: amend-element-list($html-inline-block-elements, $remove: $except);
   #{$elements} {
     @content;
   }

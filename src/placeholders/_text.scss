@@ -15,29 +15,27 @@ $font-size-smaller: smaller !default;
 
 /* %text-small */
 %text-small {
-  font-size: font-size-em($font-size-smaller);
+  @include size-text(font-size-em($font-size-smaller), 0);
   display: inline;
-  line-height: 0;
 }
 
 /* %text-small-block */
 %text-small-block {
-  font-size: font-size-em($font-size-smaller);
+  @include size-text(font-size-em($font-size-smaller), inherit);
   display: block;
 }
 
 /* %text-x-small */
 %text-x-small {
   $font-size-smaller: font-size-em($font-size-smaller);
-  font-size: $font-size-smaller*strip-unit($font-size-smaller);
+  @include size-text($font-size-smaller*strip-unit($font-size-smaller), 0);
   display: inline;
-  line-height: 0;
 }
 
 /* %text-x-small-block */
 %text-x-small-block {
   $font-size-smaller: font-size-em($font-size-smaller);
-  font-size: $font-size-smaller*strip-unit($font-size-smaller);
+  @include size-text($font-size-smaller*strip-unit($font-size-smaller), inherit);
   display: block;
 }
 

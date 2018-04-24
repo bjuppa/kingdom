@@ -260,6 +260,7 @@ button,
 label {
   // Labels go on their own line
   display: block;
+  line-height: inherit;
 }
 
 * + label {
@@ -293,6 +294,7 @@ label:not([for]) {
     &[id] {
       // Turn descriptive inline elements that come after their input into blocks
       display: inline-block;
+      line-height: inherit;
     }
   }
 

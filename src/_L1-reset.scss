@@ -47,7 +47,7 @@ $body-padding: 0 !default;
 body {
   padding: $body-padding;
   @include apply-background-color(body);
-  @if(lightness(get-color(body, true)) > 50%) {
+  @if (lightness(get-color(body, true)) > 50%) {
     $body-font-stack: Verdana !default !global;
     @extend %font-body;
   }
@@ -73,6 +73,10 @@ html {
   // Correct display type
   display: block;
 
+  @include border-reset();
+}
+
+@include inline-block-elements($except: (button, input, select, textarea)) {
   @include border-reset();
 }
 
@@ -105,17 +109,15 @@ svg:not(:root) {
 img {
   max-width: 100%;
   height: auto;
-  @include border-reset();
 }
 
-// Prevent small from affecting the line height of their parents
-small {
+// Prevent inline elements from affecting the line height of their parents should they have their size changed
+@include inline-elements() {
   line-height: 0;
 }
 
 // Prevent sub- and superscript from affecting the line height of their parents
 sub, sup {
-  line-height: 0;
   position: relative;
   vertical-align: baseline;
 

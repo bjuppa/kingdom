@@ -48,6 +48,11 @@ h1, h2, h3, h4, h5, h6 {
   @extend %mt-0;
 }
 
+@include inline-block-elements {
+  // Reset vertical spacing on inline-block elements
+  @extend %mt-0;
+}
+
 dl {
   // Reset vertical spacing on children
   > * {
