@@ -1,8 +1,7 @@
 $font-stacks: (
   Times: (font-family: ('Times New Roman', Times, serif), baseline-shift-factor: 0.66),
   Verdana: (font-family: (Verdana, sans-serif), baseline-shift-factor: 0.75),
-  //TODO: adjust baseline shift for Helvetica
-  Helvetica: (font-family: (Helvetica, Arial, sans-serif), baseline-shift-factor: 0.75),
+  Helvetica: (font-family: (Helvetica, Arial, sans-serif), baseline-shift-factor: 0.68),
   //TODO: adjust baseline shift for Courier
   //TODO: check if Courier New has the same baseline shift as Courier - if not remove it!
   Courier: (font-family: ('Courier New', Courier, sans-serif), baseline-shift-factor: 0.75),
