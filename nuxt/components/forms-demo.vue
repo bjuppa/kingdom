@@ -51,7 +51,7 @@
 
     </form>
 
-    <form class="form-inline">
+    <form class="form-inline" onsubmit="return false;">
       <button class="button-prime">Prime button</button>
       <button class="button-plain">Plain button</button>
       <button class="button-petty">Petty button</button>
@@ -73,7 +73,7 @@
 
     <hr>
 
-    <form class="form-inline">
+    <form class="form-inline" onsubmit="return false;">
       <input disabled value="disabled">
       <input readonly value="readonly">
 

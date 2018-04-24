@@ -124,7 +124,7 @@
     <p class="space-inside" style="width: 50%; float: left;">Floated paragraph</p>
     <hr style="clear: both">
 
-    <form>
+    <form onsubmit="return false;">
       <label for="input1">A label</label>
       <input id="input1" placeholder="input" size="4">
       <hr>
@@ -175,7 +175,7 @@
 
     <hr>
 
-    <form>
+    <form onsubmit="return false;">
       Inputs on a line
       <label for="input2">Label</label>
       <input id="input2" value="disabled" disabled>
