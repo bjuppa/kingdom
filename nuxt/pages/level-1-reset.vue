@@ -86,10 +86,18 @@
     <h2>Add borders by setting a single property</h2>
     <p style="border-bottom-width: 1em">
       From <a href="https://tailwindcss.com/docs/border-width/" target="_blank">Tailwind</a> comes the nifty trick
-      of setting explicit <code>border-style</code> and <code>border-color</code> on all block elements (plus
-      images), while also defaulting the <code>border-width</code>&nbsp;to&nbsp;<code>0</code>.
+      of setting explicit <code>border-style</code> and <code>border-color</code> on all block, inline-block, and table
+      elements, while also defaulting the <code>border-width</code>&nbsp;to&nbsp;<code>0</code>.
       This makes it super convenient to just set the border width on any side of an element wherever a border is needed.
-      This paragraph just has its <code>border-bottom-width</code> set... and voila!
+      This paragraph just has its <code>border-bottom-width</code> set&hellip; and voila!
+    </p>
+
+    <h2>Inline elements</h2>
+    <p>
+      All inline elements have their <code>line-height</code> reset to <code>0</code> to stop them affecting the block
+      of text around them should they have a different size or font.
+      If you ever find text that doesn't line-break properly after you converted it to a block level element,
+      all you need to fix it is to explicitly set <code>line-height</code> to <code>inherit</code>.
     </p>
 
     <h2>Sass placeholders</h2>
