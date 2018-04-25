@@ -46,7 +46,12 @@ pre,
 ul !default;
 
 // https://developer.mozilla.org/en-US/docs/Web/Guide/HTML/Content_categories#Phrasing_content
-$html-inline-block-elements: button, img, input, object, select, textarea !default;
+$html-inline-block-elements: button,
+img,
+input,
+object,
+select,
+textarea !default;
 
 $html-inline-elements: a,
 abbr,
@@ -75,7 +80,7 @@ time,
 tt,
 var !default;
 
-@function amend-element-list($list, $remove: ()) {
+@function amend-element-list($list, $remove: (), $insert: ()) {
   $result: ();
 
   @for $i from 1 through length($list) {
@@ -84,25 +89,27 @@ var !default;
     }
   }
 
+  $result: append($result, $insert);
+
   @return $result;
 }
 
-@mixin block-level-elements() {
-  $elements: $html-block-elements;
+@mixin block-level-elements($except: (), $including: ()) {
+  $elements: amend-element-list($html-block-elements, $remove: $except, $insert: $including);
   #{$elements} {
     @content;
   }
 }
 
-@mixin inline-block-elements($except: ()) {
-  $elements: amend-element-list($html-inline-block-elements, $remove: $except);
+@mixin inline-block-elements($except: (), $including: ()) {
+  $elements: amend-element-list($html-inline-block-elements, $remove: $except, $insert: $including);
   #{$elements} {
     @content;
   }
 }
 
-@mixin inline-elements() {
-  $elements: $html-inline-elements;
+@mixin inline-elements($except: (), $including: ()) {
+  $elements: amend-element-list($html-inline-elements, $remove: $except, $insert: $including);
   #{$elements} {
     @content;
   }
