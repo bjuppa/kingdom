@@ -18,6 +18,12 @@
       This webpage is displayed with Level&nbsp;2 and all utilities of Kingdom applied so you can quickly see its
       effects in your particular browser.
     </p>
+    <p>
+      You can check out the source code at <a href="https://github.com/bjuppa/kingdom/blob/master/src/_L2-sizing.scss"
+                                              target="_blank"><code>src/_L2-sizing.scss</code></a>
+      and of course, <reload-link to="level-1-reset">Level 1</reload-link> is included, so everything from there applies
+      in Level 2 too.
+    </p>
 
     <h2>Spacing by <code>margin-top</code></h2>
     <p>
@@ -29,8 +35,8 @@
     <h3>A base for space</h3>
     <p>
       All spacing values in Kingdom are derived from the <var>$spacing-base</var> Sass-variable.
-      If you want to be specific you may set it explicitly, but the default is rather nifty as it's
-      calculated to be the same as the body text line-height, making all spacing related to the rhythm of the text.
+      If you want to be specific you may set it explicitly, but the default is rather nifty as it's equal to the
+      line-height of the body text, making all spacing related to the rhythm of the text.
       The spacing base can be set in any CSS length unit, but <code>rem</code> is recommended.
     </p>
     <p>
@@ -41,15 +47,16 @@
       spacing directly in your HTML super quick.
     </p>
 
-    <h3>Use placeholders for spacing</h3>
+    <h3>Use placeholders</h3>
     <p>
-      There are plenty of Sass placeholders for you to extend that helps keeping the spacing consistent.
-      If you're ever about to set <code>margin</code> or <code>padding</code> in your CSS, try to find a suitable
-      placeholder first!
+      There are plenty of Sass placeholders for you to extend that helps keeping sizing consistent.
+      If you're ever about to set <code>margin</code> or <code>padding</code>, <code>height</code> or
+      <code>width</code>, or any other length property in your CSS, try to find a suitable placeholder first!
     </p>
     <p>
-      Whenever you find that none of the placeholders fit the job, you can use the <var>$spacing-base</var> Sass
-      variable or the <var>--spacing-base</var> CSS custom property.
+      Whenever you find that none of the placeholders fit the job, you can use <reload-link to="modules/sizing">mixins
+      from the sizing module</reload-link> or even the <var>$spacing-base</var> Sass variable or the
+      <var>--spacing-base</var> CSS custom property.
     </p>
     <h3>Space elements from the <em>outside</em></h3>
     <p>
@@ -76,7 +83,7 @@
         target="_blank"> Heydon Pickering's technique</a>.
       So, any element that comes after another element will have the default spacing applied before it.
       That selector has very low specificity so can easily be overridden when needed, and that is just what
-      Kingdom does next.
+      Kingdom does next&hellip;
     </p>
 
     <h3>Keeping related elements close</h3>
@@ -156,6 +163,18 @@
       </ol>
     </aside>
 
+    <div class="w-readable" style="columns: 2;">
+      <h2>Lines not lining up</h2>
+      <p>
+        As you may see in this section, when texts of different font sizes are in adjacent columns, the lines of text
+        become misaligned.
+        The height taken up by the larger heading is not a multiple of the body text's line-height, and this causes
+        trouble in multi-column layouts.
+        This is where <reload-link to="level-3-rhythm">Level 3 can help apply a consistent <em>vertical
+        rhythm</em></reload-link> to your typography!
+      </p>
+    </div>
+
   </main>
 </template>
 
@@ -163,3 +182,10 @@
   @import "~assets/_variables.scss";
   @import "~assets/L2.scss";
 </style>
+<script>
+  import ReloadLink from '../components/reload-link';
+
+  export default {
+    components: { ReloadLink }
+  };
+</script>
