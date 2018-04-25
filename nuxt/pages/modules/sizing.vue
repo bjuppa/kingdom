@@ -14,7 +14,7 @@
     <p>
       The <code>set-length</code> mixin is for setting length properties in relation to <var>$spacing-base</var>.
       When used it will declare the CSS properties but also use CSS calc and the <var>--spacing-base</var> custom
-      property whenever available to make spacing base changeable by scripts.
+      property whenever available to make the spacing base changeable client-side.
     </p>
 
     <h2>Text sizing</h2>
