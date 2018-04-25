@@ -80,10 +80,6 @@ html {
   @include border-reset();
 }
 
-table {
-  @include border-reset();
-}
-
 *::before,
 *::after {
   @include border-reset();
@@ -253,6 +249,17 @@ button, [type='button'], [type='reset'], [type='submit'] {
 
 *:visited {
   @include apply-color(visited);
+}
+
+table, caption, colgroup, col, thead, tbody, tfoot, tr, th, td {
+  @include border-reset();
+  border-collapse: collapse;
+  padding: 0;
+}
+
+td, th {
+  padding-left: 0.25rem;
+  padding-right: 0.25rem;
 }
 
 @import "placeholders/fonts";
