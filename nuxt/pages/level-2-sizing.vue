@@ -6,9 +6,9 @@
     </h1>
     <p>
       The 2nd level of Kingdom applies consistent text sizes, line heights, and spacing between blocks.
-      The defaults include slightly larger text than user-agent stylesheets usually apply with a hefty line height for
+      The defaults include slightly larger text than user-agent stylesheets usually apply, with a hefty line height for
       improved readability.
-      The larger font sizes follow a modular scale with gradually smaller line heights as text get larger.
+      The font sizes follow a modular scale with gradually smaller line heights as text get larger.
       Finally, the base spacing used throughout the rest of the CSS defaults to correspond to the line height of
       the body text, making paragraphs easy to distinguish from each other.
       All of these defaults can be changed to your own liking by setting Sass-variables before importing the Kingdom

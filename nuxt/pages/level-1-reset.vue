@@ -96,6 +96,8 @@
     <p>
       All inline elements have their <code>line-height</code> reset to <code>0</code> to stop them affecting the block
       of text around them should they have a different size or font.
+      For example, a <sub>subscript element</sub> or <code>&lt;code&gt;</code> usually mess up the line-height&mdash;and
+      here they don't!
       If you ever find text that doesn't line-break properly after you converted it to a block level element,
       all you need to fix it is to explicitly set <code>line-height</code> to <code>inherit</code>.
     </p>
@@ -109,6 +111,16 @@
       The placeholders generally have a CSS comment printed along with them, so you can find them all in your
       non-minified CSS.
     </p>
+
+    <h2>Not enough?</h2>
+    <p>
+      As you can see on this page, the text is quite hard to follow when just the resets of Level 1 are applied.
+      This is mainly because the font-sizes and spacing between blocks like headlines and paragraphs has not been set,
+      they're at your browser's defaults.
+      This is where <reload-link to="level-2-sizing">Level 2 can help apply some <em>spacing</em> and
+      <em>sizing</em></reload-link>!
+    </p>
+
   </main>
 </template>
 
