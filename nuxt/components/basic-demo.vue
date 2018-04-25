@@ -95,6 +95,7 @@
 
     <table>
       <caption>Simple table</caption>
+      <tbody>
       <tr>
         <th>Col 1</th>
         <th>Col 2</th>
@@ -110,12 +111,17 @@
         <td>Data A</td>
         <td>Data B</td>
       </tr>
+      </tbody>
     </table>
 
     <hr>
 
     <table class="border">
       <caption>Advanced table</caption>
+      <colgroup>
+        <col>
+        <col>
+      </colgroup>
       <thead>
       <tr>
         <th>Col 1</th>
@@ -124,8 +130,8 @@
       </thead>
       <tbody>
       <tr>
-        <td>Data 1</td>
-        <td>Data 2</td>
+        <th>Row 1</th>
+        <td>Data</td>
       </tr>
       </tbody>
       <tbody>
