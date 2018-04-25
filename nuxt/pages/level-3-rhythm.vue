@@ -20,6 +20,12 @@
       This webpage is displayed with Level&nbsp;3 and all utilities of Kingdom applied so you can quickly see its
       effects in your particular browser.
     </p>
+    <p>
+      You can check out the source code at <a href="https://github.com/bjuppa/kingdom/blob/master/src/_L3-rhythm.scss"
+                                              target="_blank"><code>src/_L3-rhythm.scss</code></a>
+      and of course, <reload-link to="level-2-sizing">Level&nbsp;2</reload-link> is included, so everything from there
+      applies in Level&nbsp;3 too.
+    </p>
 
     <h2>Consistent text</h2>
     <p>
@@ -30,11 +36,12 @@
       So no more modular scale in Level&nbsp;3!
     </p>
     <p>
-      Just as in Level&nbsp;2, the defaults are derived from <var>$desired-body-font-size</var>
+      Just as in <reload-link to="level-2-sizing">Level&nbsp;2</reload-link>, the defaults are derived from <var>$desired-body-font-size</var>
       (default&nbsp;<code>18px</code>), <var>$body-line-height-factor</var> (default&nbsp;<code>1.5</code>), and
       <var>$min-line-height-factor</var> (default&nbsp;<code>1.2</code>), but the calculations are quite different.
-      In Level&nbsp;3 the <var>$spacing-base</var> (that is passed to Level&nbsp;2) is equal to the
-      <var>$vertical-rhythm-base</var> which in turn is equal to the <var>$body-leading</var>.
+      In Level&nbsp;3 the <var>$spacing-base</var> (that is passed to <reload-link
+      to="level-2-sizing">Level&nbsp;2</reload-link>) is equal to the <var>$vertical-rhythm-base</var> which in turn is
+      equal to the <var>$body-leading</var>.
     </p>
     <p>
       The body <em>leading</em>&mdash;line height&mdash;is the absolute length calculated from
@@ -46,33 +53,34 @@
     </p>
     <p>
       Using that body leading, Kingdom's 3rd level will then fill the <var>$font-sizes</var> and
-      <var>$line-heights</var>, unless already set.
+      <var>$line-heights</var>, unless already set, and pass them on when importing
+      <reload-link to="level-2-sizing">Level&nbsp;2</reload-link>.
     </p>
 
     <aside>
       <ol class="visualize-vertical-rhythm">
-        <li>
+        <li class="border-b">
           <span class="text-1">Text 1</span> takes <strong>one line</strong> with a font-size appropriate for the
           <var>$body-line-height-factor</var>
         </li>
-        <li>
+        <li class="border-b">
           <span class="text-2">Text 2</span> takes <strong>one line</strong> with a font-size in the middle of text 1
           and
           text 3
         </li>
-        <li>
+        <li class="border-b">
           <span class="text-3">Text 3</span> takes <strong>one line</strong> with a font-size appropriate for the
           <var>$min-line-height-factor</var>
         </li>
-        <li>
+        <li class="border-b">
           <span class="text-4">Text 4</span> takes <strong>two lines</strong> with a font-size appropriate for the
           <var>$min-line-height-factor</var>
         </li>
-        <li>
+        <li class="border-b">
           <span class="text-5">Text 5</span> takes <strong>three lines</strong> with a font-size appropriate for the
           <var>$min-line-height-factor</var>
         </li>
-        <li>
+        <li class="border-b">
           <span class="text-6">Text 6</span> takes <strong>four lines</strong> with a font-size appropriate for the
           <var>$min-line-height-factor</var>
         </li>
@@ -87,10 +95,10 @@
 
     <h3>Borders</h3>
     <p>
-      Whenever you add a top or bottom border to a block of text,
-      its height will no longer be a multiple of the line-height.
-      Kingdom's borders module provide mixins that help shifting the element slightly up using relative
-      positioning, and applying appropriate negative margin in combination with the border.
+      Whenever you add a top or bottom border to a block of text, its height will no longer be a multiple of the
+      line-height.
+      Kingdom's borders module provide mixins that help shifting the element slightly up using relative positioning, and
+      applying appropriate negative margin in combination with the border.
     </p>
     <p>
       For most cases it's easiest to just extend your class with the border placeholders
@@ -113,6 +121,28 @@
       <code>&lt;fieldset&gt;</code>, and multi-selects are shifted slightly upwards, using the border module.
     </p>
 
+    <h3>Tables</h3>
+    <p>
+      Tables themselves can have borders applied as any other block level element without affecting the rhythm, but the
+      <em>table cells</em> are a little problematic.
+      Kingdom currently can't compensate for the shift caused by borders on a table cell, so when doing so you'll
+      unfortunately loose the vertical rhythm by a couple of pixels for each row.
+      If you know of any technique that might help, please <a href="https://github.com/bjuppa/kingdom/issues"
+                                                              target="_blank">get in touch</a>!
+    </p>
+
+
+    <div class="w-readable visualize-vertical-rhythm" style="columns: 2;">
+      <h2>What about that baseline?</h2>
+      <p>
+        As you can see, every line of text, regardless of font-size, is positioned in the <em>middle</em> of its line's
+        height with Level&nbsp;3 applied.
+        The center of texts align across columns, but especially when there's larger text in one of the columns, like a
+        heading, it can look a bit weird.
+        This is where <reload-link to="level-4-baseline">Level&nbsp;4 can help shift lines of text down to the
+        <em>baseline</em></reload-link> regardless of font-size!
+      </p>
+    </div>
   </main>
 </template>
 

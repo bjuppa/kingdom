@@ -168,7 +168,7 @@
       <p>
         As you may see in this section, when texts of different font sizes are in adjacent columns, the lines of text
         become misaligned.
-        The height taken up by the larger heading is not a multiple of the body text's line-height, and this causes
+        The height taken up by the larger heading is not a multiple of the body text's line-height, and this can cause
         trouble in multi-column layouts.
         This is where <reload-link to="level-3-rhythm">Level&nbsp;3 can help apply a consistent <em>vertical
         rhythm</em></reload-link> to your typography!
