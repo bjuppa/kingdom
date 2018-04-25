@@ -91,6 +91,22 @@
       <dd>Etiam porta sem malesuada magna mollis euismod.</dd>
     </dl>
 
+    <hr>
+
+    <table>
+      <caption>Table caption</caption>
+      <tr>
+        <th>Row 1</th>
+        <td>Data 1</td>
+      </tr>
+      <tr>
+        <th>Row 2</th>
+        <td>Data 2</td>
+      </tr>
+    </table>
+
+    <hr>
+
     <p class="text-6">
       Text size 6
     </p>
