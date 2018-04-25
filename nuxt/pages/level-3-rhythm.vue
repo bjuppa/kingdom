@@ -6,7 +6,7 @@
     </h1>
     <p>
       To achieve a consistent vertical rhythm, where every line of text and every block line up nicely across columns,
-      the height of every element should be a multiple of the same base.
+      the height of every element should be a <em>multiple of the same base</em>.
       Kingdom's 3rd level helps you achieve this by carefully fitting font-sizes with line-heights that are such
       multiples.
     </p>
@@ -59,7 +59,7 @@
 
     <aside>
       <ol class="visualize-vertical-rhythm">
-        <li class="border-b">
+        <li class="border-tb">
           <span class="text-1">Text 1</span> takes <strong>one line</strong> with a font-size appropriate for the
           <var>$body-line-height-factor</var>
         </li>
