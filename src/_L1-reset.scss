@@ -80,6 +80,10 @@ html {
   @include border-reset();
 }
 
+table {
+  @include border-reset();
+}
+
 *::before,
 *::after {
   @include border-reset();
