@@ -76,7 +76,7 @@ html {
   @include border-reset();
 }
 
-@include inline-block-elements($except: (button, input, select, textarea)) {
+@include inline-block-elements($except: (button, input, select, textarea), $including: (li)) {
   @include border-reset();
 }
 
@@ -264,6 +264,8 @@ td, th {
   padding-left: 0.25rem;
   padding-right: 0.25rem;
 }
+
+//TODO: add reset for indent of ul and ol
 
 @import "placeholders/fonts";
 @import "placeholders/text";
