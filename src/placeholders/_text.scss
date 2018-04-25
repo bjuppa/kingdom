@@ -10,6 +10,9 @@ $font-size-smaller: smaller !default;
   /* %text-#{$i} */
   %text-#{$i} {
     @include size-text(nth($font-sizes, $i), nth($line-heights, $i));
+    @if($i > 1 and nth($line-heights, $i) == nth($line-heights, $i - 1)) {
+      vertical-align: bottom;
+    }
   }
 }
 
