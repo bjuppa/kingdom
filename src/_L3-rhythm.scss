@@ -39,13 +39,6 @@ hr {
   @include apply-color(border, background-color);
 }
 
-table {
-  border-spacing: 0;
-  * {
-    @extend %py-0;
-  }
-}
-
 input, button, select {
   @include border-preserving-line-height($vertical-rhythm-base, $input-border-width);
   outline-offset: -2px; //Same focus ring size for same border in Safari
