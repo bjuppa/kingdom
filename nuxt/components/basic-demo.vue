@@ -94,15 +94,55 @@
     <hr>
 
     <table>
-      <caption>Table caption</caption>
+      <caption>Simple table</caption>
+      <tr>
+        <th>Col 1</th>
+        <th>Col 2</th>
+        <th>Col 3</th>
+      </tr>
       <tr>
         <th>Row 1</th>
         <td>Data 1</td>
+        <td>Data 2</td>
       </tr>
       <tr>
         <th>Row 2</th>
+        <td>Data A</td>
+        <td>Data B</td>
+      </tr>
+    </table>
+
+    <hr>
+
+    <table class="border">
+      <caption>Advanced table</caption>
+      <thead>
+      <tr>
+        <th>Col 1</th>
+        <th>Col 2</th>
+      </tr>
+      </thead>
+      <tbody>
+      <tr>
+        <td>Data 1</td>
         <td>Data 2</td>
       </tr>
+      </tbody>
+      <tbody>
+      <tr>
+        <th colspan="2">2nd table body</th>
+      </tr>
+      <tr>
+        <td>Data A</td>
+        <td>Data B</td>
+      </tr>
+      </tbody>
+      <tfoot>
+      <tr>
+        <td>Foot 1</td>
+        <td>Foot 2</td>
+      </tr>
+      </tfoot>
     </table>
 
     <hr>
