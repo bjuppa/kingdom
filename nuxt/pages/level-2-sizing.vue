@@ -21,8 +21,8 @@
     <p>
       You can check out the source code at <a href="https://github.com/bjuppa/kingdom/blob/master/src/_L2-sizing.scss"
                                               target="_blank"><code>src/_L2-sizing.scss</code></a>
-      and of course, <reload-link to="level-1-reset">Level 1</reload-link> is included, so everything from there applies
-      in Level 2 too.
+      and of course, <reload-link to="level-1-reset">Level&nbsp;1</reload-link> is included, so everything from there
+      applies in Level&nbsp;2 too.
     </p>
 
     <h2>Spacing by <code>margin-top</code></h2>
@@ -170,7 +170,7 @@
         become misaligned.
         The height taken up by the larger heading is not a multiple of the body text's line-height, and this causes
         trouble in multi-column layouts.
-        This is where <reload-link to="level-3-rhythm">Level 3 can help apply a consistent <em>vertical
+        This is where <reload-link to="level-3-rhythm">Level&nbsp;3 can help apply a consistent <em>vertical
         rhythm</em></reload-link> to your typography!
       </p>
     </div>

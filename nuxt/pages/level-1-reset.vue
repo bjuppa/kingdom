@@ -114,10 +114,10 @@
 
     <h2>Not enough?</h2>
     <p>
-      As you can see on this page, the text is quite hard to follow when just the resets of Level 1 are applied.
+      As you can see on this page, the text is quite hard to follow when just the resets of Level&nbsp;1 are applied.
       This is mainly because the font-sizes and spacing between blocks like headlines and paragraphs has not been set,
       they're at your browser's defaults.
-      This is where <reload-link to="level-2-sizing">Level 2 can help apply some <em>spacing</em> and
+      This is where <reload-link to="level-2-sizing">Level&nbsp;2 can help apply some <em>spacing</em> and
       <em>sizing</em></reload-link>!
     </p>
 
