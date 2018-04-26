@@ -4,7 +4,7 @@
     <p>
       A CSS framework, written in <a href="http://sass-lang.com" target="_blank">Sass</a>,
       for consistent spacing, sizing and typography.
-    <p>
+    </p>
     <p>
       <strong>Kingdom is still under development</strong>,
       we're not at version <code>1.0</code> yet,
