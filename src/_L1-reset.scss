@@ -113,7 +113,7 @@ img {
 
 // Prevent inline elements from affecting the line height of their parents should they have their size changed
 @include inline-elements() {
-  line-height: 0;
+  @extend %text-inline;
 }
 
 // Prevent sub- and superscript from affecting the line height of their parents

@@ -6,21 +6,11 @@ $font-size-smaller: smaller !default;
 @import "../modules/sizing";
 @import "../modules/converters";
 
-%text-smaller-inline {
-  vertical-align: baseline;
-  line-height: 0;
-}
-
-%text-larger-inline {
-  vertical-align: bottom;
-  line-height: var(--line-height);
-}
-
 @for $i from 1 through length($font-sizes) {
   /* %text-#{$i} */
   %text-#{$i} {
     @include size-text(nth($font-sizes, $i), nth($line-heights, $i));
-    display: inline;
+    @extend %text-inline;
   }
 
   /* %text-#{$i}-block */
@@ -28,13 +18,12 @@ $font-size-smaller: smaller !default;
     @include size-text(nth($font-sizes, $i), nth($line-heights, $i));
     display: block;
 
-    @for $j from 1 through length($font-sizes) {
-      %text-#{$j} {
-        @if $j < $i {
-          @extend %text-smaller-inline;
-        }
-        @if $j > $i {
-          @extend %text-larger-inline;
+    $line-height-i: font-size-rem(if(unitless(nth($line-heights, $i)), nth($line-heights, $i) * if(type-of(nth($font-sizes, $i)) == string, font-size-rem(nth($font-sizes, $i)), nth($font-sizes, $i)), nth($line-heights, $i)));
+    @for $j from $i through length($font-sizes) {
+      $line-height-j: font-size-rem(if(unitless(nth($line-heights, $j)), nth($line-heights, $j) * if(type-of(nth($font-sizes, $j)) == string, font-size-rem(nth($font-sizes, $j)), nth($font-sizes, $j)), nth($line-heights, $j)));
+      @if $line-height-j > $line-height-i {
+        %text-#{$j} {
+          @include size-text(nth($font-sizes, $j), nth($line-heights, $j));
         }
       }
     }
@@ -44,7 +33,7 @@ $font-size-smaller: smaller !default;
 /* %text-small */
 %text-small {
   @include size-text(font-size-em($font-size-smaller), 0);
-  display: inline;
+  @extend %text-inline;
 }
 
 /* %text-small-block */
@@ -57,7 +46,7 @@ $font-size-smaller: smaller !default;
 %text-x-small {
   $font-size-smaller: font-size-em($font-size-smaller);
   @include size-text($font-size-smaller*strip-unit($font-size-smaller), 0);
-  display: inline;
+  @extend %text-inline;
 }
 
 /* %text-x-small-block */
@@ -70,4 +59,12 @@ $font-size-smaller: smaller !default;
 /* %text-inherit */
 %text-inherit {
   @include size-text(inherit, inherit);
+}
+
+/* %text-inline */
+%text-inline {
+  // Prevent inline elements from affecting the line height of their parents should they have their size changed
+  display: inline;
+  vertical-align: baseline;
+  line-height: 0;
 }
