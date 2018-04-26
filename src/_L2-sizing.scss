@@ -99,7 +99,7 @@ select * {
 }
 
 body {
-  @extend %text-1;
+  @extend %text-1-block;
 }
 
 small {
@@ -111,19 +111,19 @@ sub, sup {
 }
 
 h1 {
-  @extend %text-4;
+  @extend %text-4-block;
 }
 
 h2 {
-  @extend %text-3;
+  @extend %text-3-block;
 }
 
 h3 {
-  @extend %text-2;
+  @extend %text-2-block;
 }
 
 h4 {
-  @extend %text-1;
+  @extend %text-1-block;
 }
 
 h5 {

@@ -42,6 +42,13 @@
 
     <div><code>This is a block element with just code inside.</code></div>
 
+    <p class="text-4-block">
+      text-4-block with <span class="text-2">text-2</span> inside
+    </p>
+    <hr>
+    <p class="text-1-block">
+      text-1-block with <span class="text-2">text-2</span> and <span class="text-4">text-4</span> inside
+    </p>
     <hr>
 
     <ul>
@@ -153,10 +160,10 @@
 
     <hr>
 
-    <p class="text-6">
+    <p class="text-6-block">
       Text size 6
     </p>
-    <p class="text-5">
+    <p class="text-5-block">
       Text size 5
     </p>
 

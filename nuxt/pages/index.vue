@@ -29,11 +29,11 @@
       utility-first&mdash;meaning it has CSS classes that can be combined on your HTML elements to quickly create more
       complex looks.
       Like the following <code>&lt;blockquote&gt;</code>, that just has a bunch of utility-classes
-      (<code>text-4 border-l space-inside color-primary</code>)
+      (<code>text-4-block border-l space-inside color-primary</code>)
       applied to style it:
     </p>
 
-    <blockquote class="text-4 border-l space-inside color-primary">
+    <blockquote class="text-4-block border-l space-inside color-primary">
       <i>If content is king, context is the kingdom</i>
     </blockquote>
 

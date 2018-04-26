@@ -2,7 +2,11 @@
 
 @for $i from 1 through length($font-sizes) {
   .text-#{$i} {
-    @extend %text-#{$i}
+    @extend %text-#{$i};
+  }
+
+  .text-#{$i}-block {
+    @extend %text-#{$i}-block;
   }
 }
 
