@@ -59,7 +59,7 @@
 
     <aside>
       <ol class="visualize-vertical-rhythm">
-        <li class="border-tb">
+        <li class="border-b">
           <span class="text-1">Text 1</span> takes <strong>one line</strong> with a font-size appropriate for the
           <var>$body-line-height-factor</var>
         </li>

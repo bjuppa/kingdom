@@ -59,7 +59,7 @@
     </p>
 
     <aside>
-      <div style="columns: 2;">
+      <div class="w-readable" style="columns: 2;">
         <p class="text-1-block">Text 1</p>
         <p class="text-2-block">Text 2</p>
         <p class="text-3-block">Text 3</p>
