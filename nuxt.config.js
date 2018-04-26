@@ -13,7 +13,10 @@ module.exports = {
       { 'http-equiv': 'X-UA-Compatible', content: 'IE=edge' },
       { name: 'viewport', content: 'width=device-width, initial-scale=1' }
     ],
-    title: 'Kingdom CSS'
+    title: 'Kingdom CSS',
+    htmlAttrs: {
+      lang: 'en',
+    }
   },
   build: {
     cssSourceMap: true,
