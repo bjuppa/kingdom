@@ -42,12 +42,22 @@
 
     <div><code>This is a block element with just code inside.</code></div>
 
-    <p class="text-4-block">
-      text-4-block with <span class="text-2">text-2</span> inside
+    <p class="text-2-block">
+      This is a&hellip;<br>
+      text-2-block with <span class="text-1">text-1</span> inside
+      and some more text to break lines
+    </p>
+    <hr>
+    <p>
+      This is a&hellip;<br>
+      text-1-block with <span class="text-2">text-2</span> inside
+      and some more text to break lines
     </p>
     <hr>
     <p class="text-1-block">
-      text-1-block with <span class="text-2">text-2</span> and <span class="text-4">text-4</span> inside
+      This is a&hellip;<br>
+      text-1-block with <span class="text-4">text-4</span> inside
+      and some more text to break lines
     </p>
     <hr>
 
