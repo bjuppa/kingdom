@@ -25,17 +25,19 @@ $line-heights: ();
   $line-heights: append($line-heights, flow-line-height($font-size));
 }
 
-$line-heights-tight: ();
-@each $font-size in $font-sizes {
-  $line-heights-tight: append($line-heights-tight, flow-lines($font-size)*$vertical-rhythm-base);
-}
-
 @import "L2-sizing";
 
 /* Kingdom CSS Level 3 - Vertical Rhythm */
 
 @if not map-has-key($colors, border) {
   $colors: map-merge($colors, (border: currentColor));
+}
+
+@for $i from 1 through length($font-sizes) {
+  /* %text-#{$i}-tight for vertical rhythm */
+  %text-#{$i}-tight {
+    @include length-relative(line-height, flow-lines(nth($font-sizes, $i)));
+  }
 }
 
 hr {
