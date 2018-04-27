@@ -25,6 +25,11 @@ $line-heights: ();
   $line-heights: append($line-heights, flow-line-height($font-size));
 }
 
+$line-heights-tight: ();
+@each $font-size in $font-sizes {
+  $line-heights-tight: append($line-heights-tight, flow-lines($font-size)*$vertical-rhythm-base);
+}
+
 @import "L2-sizing";
 
 /* Kingdom CSS Level 3 - Vertical Rhythm */

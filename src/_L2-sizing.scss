@@ -18,6 +18,12 @@ $line-heights: $body-line-height-factor !default;
   $line-heights: append($line-heights, (length($line-heights) + 1) * ($min-line-height-factor - $body-line-height-factor) / 5 + (6 * $body-line-height-factor - $min-line-height-factor) / 5);
 }
 
+// If not already set, fill $line-heights-tight with 6 relative factors each being 1
+$line-heights-tight: 1 !default;
+@while (length($line-heights-tight) < 6) {
+  $line-heights-tight: append($line-heights-tight, 1);
+}
+
 // If not already set, make the spacing base a length value equivalent of the first line-height
 $spacing-base: if(unitless(nth($line-heights, 1)), nth($line-heights, 1) * if(type-of(nth($font-sizes, 1)) == string, font-size-rem(nth($font-sizes, 1)), nth($font-sizes, 1)), nth($line-heights, 1)) !default;
 

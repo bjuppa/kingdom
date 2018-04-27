@@ -1,5 +1,6 @@
 $font-sizes: medium large x-large xx-large !default;
 $line-heights: 1.5 1.4 1.3 1.2 !default;
+$line-heights-tight: 1 1 1 1 !default;
 $font-size-smaller: smaller !default;
 
 /* Placeholders for text */
@@ -18,12 +19,13 @@ $font-size-smaller: smaller !default;
     @include size-text(nth($font-sizes, $i), nth($line-heights, $i));
     display: block;
 
-    $line-height-i: font-size-rem(if(unitless(nth($line-heights, $i)), nth($line-heights, $i) * if(type-of(nth($font-sizes, $i)) == string, font-size-rem(nth($font-sizes, $i)), nth($font-sizes, $i)), nth($line-heights, $i)));
+    $line-height-block: font-size-rem(if(unitless(nth($line-heights, $i)), nth($line-heights, $i) * if(type-of(nth($font-sizes, $i)) == string, font-size-rem(nth($font-sizes, $i)), nth($font-sizes, $i)), nth($line-heights, $i)));
     @for $j from $i through length($font-sizes) {
-      $line-height-j: font-size-rem(if(unitless(nth($line-heights, $j)), nth($line-heights, $j) * if(type-of(nth($font-sizes, $j)) == string, font-size-rem(nth($font-sizes, $j)), nth($font-sizes, $j)), nth($line-heights, $j)));
-      @if $line-height-j > $line-height-i {
+      $font-size-inline: font-size-rem(nth($font-sizes, $j));
+      @if $font-size-inline > $line-height-block {
         %text-#{$j} {
-          @include size-text(nth($font-sizes, $j), nth($line-heights, $j));
+          /* Fit line-height of %text-#{$j} inside %text-#{$i}-block */
+          @include size-text(nth($font-sizes, $j), nth($line-heights-tight, $j));
         }
       }
     }
