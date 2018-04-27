@@ -124,8 +124,9 @@
     </p>
     <p>
       The first size in the list is applied to body text and <code>&lt;h4&gt;</code> elements.
-      Headings above level 4 will get gradualy larger sizes from the list and heading levels 5 and 6 will use relative
-      sizes derived from <var>$font-size-smaller</var> (which is calculated from <var>$modular-scale</var> by default).
+      Headings above level&nbsp;4 will get gradually larger sizes from the list and heading levels 5 and 6 will use
+      relative sizes derived from <var>$font-size-smaller</var> (which is calculated from <var>$modular-scale</var> by
+      default).
     </p>
 
     <aside>
@@ -143,18 +144,26 @@
       (default&nbsp;<code>1.5</code>) for the first font-size, all the way down to <var>$min-line-height-factor</var>
       (default&nbsp;<code>1.2</code>) for the 6th font-size.
     </p>
+    <p>
+      Whenever an inline element having a different text size than the block level element containing it, the
+      <code>line-height</code> of that inline element is adjusted to <code>0</code> if the text fits within the block's
+      <code>line-height</code>, or <code>1</code> if it needs more space on the line.
+      The effect can be seen on size&nbsp;4, which is the first text size to exceed the line-height of the body text.
+    </p>
 
     <aside>
       <ul>
         <li><strong class="text-x-small">Heading 6</strong> gets a really small size&mdash;it's rarely used anyway...
         </li>
-        <li><strong class="text-small">Heading 5</strong> along with <sub>subscript</sub>, <sup>superscript</sup>, and
-          <small>small text</small>
-          get their size from <var>$font-size-smaller</var></li>
+        <li>
+          <strong class="text-small">Heading 5</strong> along with <sub>subscript</sub>, <sup>superscript</sup>, and
+          <small>small</small> texts get their size from <var>$font-size-smaller</var>
+        </li>
       </ul>
       <ol class="mt-0">
-        <li><strong class="text-1">Heading 4</strong> and body text is sized from the 1st value of
-          <var>$font-sizes</var></li>
+        <li>
+          <strong class="text-1">Heading 4</strong> and body text is sized from the 1st value of <var>$font-sizes</var>
+        </li>
         <li><strong class="text-2">Heading 3</strong> is sized from the 2nd value of <var>$font-sizes</var></li>
         <li><strong class="text-3">Heading 2</strong> is size 3</li>
         <li><strong class="text-4">Heading 1</strong> is size 4</li>

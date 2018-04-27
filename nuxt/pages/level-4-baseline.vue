@@ -40,9 +40,9 @@
       where the lines are displayed for both levels.
     </p>
     <p>
-      Level&nbsp;4 will apply baseline shift to the most common block elements that are usually not used for other
-      things than typography. This of course includes the <code>&lt;p&gt;</code> element, as well as the headings, but
-      list items, <code>&lt;blockquote&gt;</code>, and <code>&lt;address&gt;</code> are also shifted.
+      Level&nbsp;4 will apply baseline shift to the most common block elements that are usually used for typography.
+      This of course includes the <code>&lt;p&gt;</code> element, as well as the headings, but list items,
+      <code>&lt;blockquote&gt;</code>, and <code>&lt;address&gt;</code> are also shifted.
     </p>
     <p>
       The shift is created using relative positioning and the amount of shift is specific to each font.
@@ -51,7 +51,7 @@
     </p>
     <h3>Default fonts</h3>
     <p>
-      The 4th level is the only one in Kingdom that applies fonts by default: for headlines a sans-serif font and for
+      The 4th level is the only one in Kingdom that applies fonts by default; for headlines a sans-serif font and for
       body text a font with serifs.
       It's just for the purpose of demonstration, whenever you're in a situation where you reach for baseline shift
       you will likely have very specific fonts you want to use, and calculate the <code>baseline-shift-factor</code>

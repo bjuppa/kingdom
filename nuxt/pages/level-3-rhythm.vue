@@ -135,10 +135,9 @@
     <div class="w-readable visualize-vertical-rhythm" style="columns: 2;">
       <h2>What about that baseline?</h2>
       <p>
-        As you can see, every line of text, regardless of font-size, is positioned in the <em>middle</em> of its line's
-        height with Level&nbsp;3 applied.
+        As you can see, every line of text, regardless of font-size, is positioned in the <em>middle</em> of its line.
         The center of texts align across columns, but especially when there's larger text in one of the columns, like a
-        heading, it can look a bit weird.
+        heading, this can look a bit weird.
         This is where <reload-link to="level-4-baseline">Level&nbsp;4 can help shift lines of text down to the
         <em>baseline</em></reload-link> regardless of font-size!
       </p>

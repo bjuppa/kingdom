@@ -31,7 +31,7 @@
 
     <ul class="w-readable-children">
       <li>
-        <span class="background-color-primary">
+        <span class="background-color-primary space-inside">
         The <code>primary</code> color used as background, together with its corresponding text color.
         </span>
       </li>
