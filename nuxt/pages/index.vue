@@ -97,7 +97,7 @@
       This webpage is displayed using Level&nbsp;3, with all utilities of Kingdom included.
       Only one configuration variable, the <span class="color-primary"><code>primary</code> color</span>, is set before
       the Kingdom level is included.
-      Everything else is default, and additional colors are derived from the primary color.
+      Everything else is default, and additional colors are automatically derived from the primary color.
     </p>
 
     <p>
