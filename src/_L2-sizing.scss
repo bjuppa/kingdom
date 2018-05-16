@@ -75,7 +75,6 @@ figure, picture, object, select, table, audio, video, map {
 
 fieldset {
   @extend %py-1\/2;
-  @extend %px-1\/4;
 
   > legend + * {
     @extend %mt-0;
