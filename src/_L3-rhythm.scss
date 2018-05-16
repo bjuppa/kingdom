@@ -68,7 +68,7 @@ select {
     vertical-align: top;
 
     // https://css-tricks.com/snippets/css/media-queries-for-standard-devices/
-    @media screen and (min-device-width: 1200px) {
+    @media screen and (min-device-width: 1200px) { //TODO: Find a better way to target mobile devices for multi-selects than device width
       // Enable vertical growth on multiple and sized selects, but not on mobile devices that should keep the button style
       height: auto;
       @supports (-webkit-appearance:none) {
