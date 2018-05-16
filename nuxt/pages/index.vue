@@ -110,7 +110,7 @@
       You'll find each level's Sass file in
       <a href="https://github.com/bjuppa/kingdom/tree/master/src"
          target="_blank"><code>node_modules/kingdom-css/src/</code></a>
-      and you should only pick and import one.
+      and you should pick and import only one.
     </p>
     <ol class="w-readable-children">
       <li>
