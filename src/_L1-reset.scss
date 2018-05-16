@@ -269,6 +269,14 @@ ol, ul {
   @include length-relative(padding-left, 1);
 }
 
+dt {
+  font-weight: bold;
+}
+
+dd {
+  @include length-relative(margin-left, 1);
+}
+
 @import "placeholders/fonts";
 @import "placeholders/text";
 
