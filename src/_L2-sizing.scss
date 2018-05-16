@@ -134,10 +134,6 @@ h6 {
   @extend %text-x-small-block;
 }
 
-ol, ul {
-  @extend %pl-1;
-}
-
 dt {
   font-weight: bold; // Make description lists stand out after margins have been removed on dd
 }

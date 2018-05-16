@@ -265,6 +265,10 @@ td, th {
   @include length-relative(padding-left padding-right, 1/4);
 }
 
+ol, ul {
+  @include length-relative(padding-left, 1);
+}
+
 @import "placeholders/fonts";
 @import "placeholders/text";
 
