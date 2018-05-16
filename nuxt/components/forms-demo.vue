@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div class="space-inside visualize-vertical-rhythm">
     <form>
       <label for="input1">Label for input 1</label>
       <input id="input1" aria-describedby="input1description">
