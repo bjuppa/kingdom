@@ -111,6 +111,7 @@ fieldset {
 legend {
   // Keep legend centered on the line when the fieldset is moved up because of border
   padding-top: $fieldset-border-width;
+  padding-top: calc(var(--border-top-width, #{$fieldset-border-width}));
 }
 
 .visualize-vertical-rhythm {
