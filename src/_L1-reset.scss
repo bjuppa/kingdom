@@ -8,6 +8,7 @@ $body-padding: 0 !default;
 // https://github.com/shankariyerr/tinyreset
 
 @import "modules/colors";
+@import "modules/sizing";
 
 // Generate a primary color and corresponding text color if not already defined in $colors map
 @if not map-has-key($colors, primary) {
@@ -187,7 +188,7 @@ button:-moz-focusring,
 
 fieldset {
   border-width: 1px; // Restore border removed by the border reset
-  padding: 0.25rem;
+  @include length-relative(padding, 1/4);
 }
 
 // https://github.com/necolas/normalize.css
@@ -261,8 +262,7 @@ table, caption, colgroup, col, thead, tbody, tfoot, tr, th, td {
 }
 
 td, th {
-  padding-left: 0.25rem;
-  padding-right: 0.25rem;
+  @include length-relative(padding-left padding-right, 1/4);
 }
 
 @import "placeholders/fonts";
