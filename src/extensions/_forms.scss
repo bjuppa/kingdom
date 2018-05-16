@@ -284,7 +284,7 @@ label:not([for]) {
   &[id] {
     + label[for] {
       // Inline labels that come after their checkbox/radiobutton
-      display: inline;
+      @extend %text-inline;
     }
   }
 }
