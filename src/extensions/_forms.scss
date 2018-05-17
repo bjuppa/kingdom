@@ -307,8 +307,18 @@ label:not([for]) {
 
 /* .form-inline make a form's contents go inline */
 .form-inline {
-  > * {
-    @include display-inline-block($vertical-align: false, $line-height: false);
-    @extend %mt-1;
+  > label {
+    @include display-inline();
+  }
+
+  > textarea {
+    width: auto;
+    vertical-align: middle;
+  }
+
+  > select {
+    &:not([size]):not([multiple]), &[size], &[multiple] {
+      vertical-align: middle;
+    }
   }
 }
