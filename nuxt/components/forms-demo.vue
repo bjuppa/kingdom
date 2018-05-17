@@ -51,6 +51,8 @@
 
     </form>
 
+    <hr>
+
     <form class="form-inline" onsubmit="return false;">
       <button class="button-prime">Prime button</button>
       <button class="button-plain">Plain button</button>
@@ -103,6 +105,9 @@
         <option>Option 3</option>
       </select>
     </form>
+
+    <hr>
+
   </div>
 </template>
 
