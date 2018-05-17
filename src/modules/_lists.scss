@@ -1,3 +1,5 @@
+@import "layout";
+
 @mixin list-unstyled {
   padding-left: 0;
   list-style: none;
@@ -7,7 +9,7 @@
   @include list-unstyled();
 
   & > * {
-    display: inline-block;
+    @include display-inline-block();
 
     &:not(:last-child) {
       margin-right: $spacing-base/4;
@@ -16,11 +18,12 @@
 }
 
 @mixin list-comma-separated {
-  display: inline;
   @include list-unstyled();
+  @include display-inline();
 
   & > * {
-    display: inline;
+    @include display-inline();
+
     &:after {
       content: ', ';
     }

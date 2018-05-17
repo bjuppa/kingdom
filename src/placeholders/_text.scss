@@ -6,6 +6,7 @@ $font-size-smaller: smaller !default;
 /* Placeholders for text */
 @import "../modules/sizing";
 @import "../modules/converters";
+@import "../modules/layout";
 
 @for $i from 1 through length($font-sizes) {
   /* %text-#{$i} */
@@ -65,10 +66,7 @@ $font-size-smaller: smaller !default;
 
 /* %text-inline */
 %text-inline {
-  // Prevent inline elements from affecting the line height of their parents should they have their size changed
-  display: inline;
-  vertical-align: baseline;
-  line-height: 0;
+  @include display-inline();
 }
 
 /* %text-tight */

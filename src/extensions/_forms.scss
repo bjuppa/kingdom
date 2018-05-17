@@ -1,5 +1,6 @@
 /* Kingdom CSS Extension - Forms */
 @import "../modules/colors";
+@import "../modules/layout";
 
 // Set caution background and text color if not already defined in $colors map
 @if not map-has-key($colors, caution) {
@@ -259,8 +260,7 @@ button,
 
 label {
   // Labels go on their own line
-  display: block;
-  line-height: inherit;
+  @include display-block();
 }
 
 * + label {
@@ -284,7 +284,7 @@ label:not([for]) {
   &[id] {
     + label[for] {
       // Inline labels that come after their checkbox/radiobutton
-      @extend %text-inline;
+      @include display-inline();
     }
   }
 }
@@ -293,8 +293,7 @@ label:not([for]) {
   span, small {
     &[id] {
       // Turn descriptive inline elements that come after their input into blocks
-      display: inline-block;
-      line-height: inherit;
+      @include display-inline-block();
     }
   }
 
@@ -309,7 +308,7 @@ label:not([for]) {
 /* .form-inline make a form's contents go inline */
 .form-inline {
   > * {
-    display: inline-block;
+    @include display-inline-block($vertical-align: false, $line-height: false);
     @extend %mt-1;
   }
 }
