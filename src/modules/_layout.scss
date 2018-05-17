@@ -1,3 +1,31 @@
+@mixin display-block($line-height: inherit) {
+  display: block;
+  @if($line-height) {
+    line-height: $line-height;
+  }
+}
+
+@mixin display-inline-block($vertical-align: bottom, $line-height: inherit) {
+  display: inline-block;
+  @if($line-height) {
+    line-height: $line-height;
+  }
+  @if($vertical-align) {
+    vertical-align: $vertical-align;
+  }
+}
+
+@mixin display-inline($vertical-align: baseline, $line-height: 0) {
+  display: inline;
+  // $line-height: 0 will prevent inline elements from affecting the line height of their parents should they have their size or font changed
+  @if($line-height) {
+    line-height: $line-height;
+  }
+  @if($vertical-align) {
+    vertical-align: $vertical-align;
+  }
+}
+
 // Add horizontal padding and make sure the last baseline-shifted element gets some bottom padding
 @mixin space-inside($sides: top bottom left right, $suffix: '1\\/4') {
   //If the last child of a bordered element is baseline shifted, it's text lies on the bottom border - so add bottom padding!
