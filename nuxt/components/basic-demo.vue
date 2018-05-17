@@ -171,10 +171,10 @@
     <hr>
 
     <p class="text-6-block">
-      Text size 6
+      Text-size&nbsp;6
     </p>
     <p class="text-5-block">
-      Text size 5
+      Text-size&nbsp;5
     </p>
 
     <h2>This is a heading 2 that should be long enough to line break</h2>
