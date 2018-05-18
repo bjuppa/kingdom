@@ -53,7 +53,7 @@
 
     <hr>
 
-    <form class="form-inline" onsubmit="return false;">
+    <form class="form-inline space-children-horizontally" onsubmit="return false;">
       <button class="button-prime">Prime button</button>
       <button class="button-plain">Plain button</button>
       <button class="button-petty">Petty button</button>
