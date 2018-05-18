@@ -67,7 +67,7 @@ textarea {
 input, textarea, select {
   @extend %font-forms;
 
-  vertical-align: top;
+  vertical-align: bottom;
 
   background: $input-background;
   background-clip: $input-background-clip;

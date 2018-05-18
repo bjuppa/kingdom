@@ -65,7 +65,7 @@ select {
     // Multiple and sized selects may span several lines
     @include length-relative(min-height, 1);
     max-height: 100%;
-    vertical-align: top;
+    vertical-align: bottom;
 
     // https://css-tricks.com/snippets/css/media-queries-for-standard-devices/
     @media screen and (min-device-width: 1200px) { //TODO: Find a better way to target mobile devices for multi-selects than device width

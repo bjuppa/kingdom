@@ -19,7 +19,7 @@ $body-line-height-factor: 1.5 !default;
 
     @if index($sides, top) {
       @if strip-unit($width) > 0 {
-        vertical-align: top; //Get rid of space after a bordered inline-block}
+        vertical-align: bottom; //Get rid of space after a bordered inline-block}
       }
     }
   }
@@ -59,7 +59,7 @@ $body-line-height-factor: 1.5 !default;
 
 // Use this with one-line inline elements (e.g. form inputs) to match their height to surrounding text
 @mixin border-preserving-line-height($line-height: $body-line-height-factor, $width: $border-width) {
-  vertical-align: top;
+  vertical-align: bottom;
   white-space: nowrap;
   line-height: font-size-rem($line-height) - length-rem(2 * $width);
   line-height: calc(var(--line-height, #{$line-height}) - #{2 * $width});

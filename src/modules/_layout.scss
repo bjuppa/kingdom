@@ -9,7 +9,7 @@ $spacing-m-suffix: '1\\/2' !default;
   }
 }
 
-@mixin display-inline-block($vertical-align: top, $line-height: inherit) {
+@mixin display-inline-block($vertical-align: bottom, $line-height: inherit) {
   display: inline-block;
   @if ($line-height) {
     line-height: $line-height;
