@@ -137,7 +137,7 @@
 
     <h3>Utilities</h3>
     <p>
-      These files provides utility classes that you can put directly on your HTML elements.
+      These files provide utility classes that you can put directly on your HTML elements.
       You'll find them in
       <a href="https://github.com/bjuppa/kingdom/tree/master/src/utilities"
          target="_blank"><code>node_modules/kingdom-css/src/utilities/</code></a>
