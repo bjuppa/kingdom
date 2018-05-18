@@ -10,10 +10,6 @@
 
   & > * {
     @include display-inline-block();
-
-    &:not(:last-child) {
-      margin-right: $spacing-base/4;
-    }
   }
 }
 
