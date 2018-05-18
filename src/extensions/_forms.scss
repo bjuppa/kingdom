@@ -207,28 +207,6 @@ button,
   @extend %button;
 }
 
-/* Discreet, link like button */
-.button-petty {
-  @extend %button;
-  border-color: transparent;
-  background-color: transparent;
-  text-decoration: underline;
-  box-shadow: none;
-
-  &:focus {
-    text-decoration: none;
-  }
-
-  &:active {
-    box-shadow: none;
-    text-decoration: none;
-  }
-
-  &:disabled {
-    text-decoration: none;
-  }
-}
-
 /* Big button */
 .button-large {
   @extend %button;
@@ -258,6 +236,28 @@ button,
     &:active {
       color: $button-destructive-text-color;
     }
+  }
+}
+
+/* Discreet, link like button */
+.button-petty {
+  @extend %button;
+  border-color: transparent;
+  background-color: transparent;
+  text-decoration: underline;
+  box-shadow: none;
+
+  &:focus {
+    text-decoration: none;
+  }
+
+  &:active {
+    box-shadow: none;
+    text-decoration: none;
+  }
+
+  &:disabled {
+    text-decoration: none;
   }
 }
 
