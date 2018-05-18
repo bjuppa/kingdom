@@ -67,6 +67,8 @@ textarea {
 input, textarea, select {
   @extend %font-forms;
 
+  vertical-align: top;
+
   background: $input-background;
   background-clip: $input-background-clip;
 
@@ -313,12 +315,5 @@ label:not([for]) {
 
   > textarea:not([cols]) {
     width: auto;
-    vertical-align: middle;
-  }
-
-  > select {
-    &:not([size]):not([multiple]), &[size], &[multiple] {
-      vertical-align: middle;
-    }
   }
 }
