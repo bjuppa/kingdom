@@ -102,7 +102,7 @@
 
     <p>
       Most everything in Kingdom relies on Sass mixins and functions from the <em>modules</em>.
-      But they're not only for internal use&mdash;you can benefit from using them in your own Sass.
+      But they're not just for internal use&mdash;you can benefit from using them in your own Sass.
     </p>
 
     <h3>The four levels</h3>
