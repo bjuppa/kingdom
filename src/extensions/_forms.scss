@@ -177,6 +177,9 @@ label[aria-invalid] {
 
     @include apply-background-color(disabled);
     border-color: get-color(disabled);
+    border-color: transparent;
+
+    box-shadow: none;
   }
 }
 
@@ -190,7 +193,7 @@ button,
 /* Prominent button */
 .button-prime {
   @extend %button;
-  background: $button-color;
+  background-color: $button-color;
   border-color: $button-color;
   color: $button-text-color;
 
@@ -207,8 +210,8 @@ button,
 /* Discreet, link like button */
 .button-petty {
   @extend %button;
-  border: transparent;
-  background: transparent;
+  border-color: transparent;
+  background-color: transparent;
   text-decoration: underline;
   box-shadow: none;
 
@@ -248,7 +251,7 @@ button,
   }
 
   &.button-prime {
-    background: $button-destructive-color;
+    background-color: $button-destructive-color;
     border-color: $button-destructive-color;
     color: $button-destructive-text-color;
 
