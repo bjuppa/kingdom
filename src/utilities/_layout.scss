@@ -75,3 +75,9 @@
 .space-inside {
   @include space-inside();
 }
+
+// Space children - great with minified html where inlined elements stack up against each other
+
+.space-children-horizontally {
+  @include space-children-horizontally();
+}
