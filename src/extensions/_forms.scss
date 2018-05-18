@@ -311,7 +311,7 @@ label:not([for]) {
     @include display-inline();
   }
 
-  > textarea {
+  > textarea:not([cols]) {
     width: auto;
     vertical-align: middle;
   }
