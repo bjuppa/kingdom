@@ -38,6 +38,10 @@ $vertical-margin-utilities: 1 2 3 4 6 9 !default;
   }
 }
 
+.mt-1-children * {
+  @extend %mt-1;
+}
+
 .mb-0 {
   @extend %mb-0;
 }
