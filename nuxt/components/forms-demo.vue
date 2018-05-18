@@ -77,6 +77,7 @@
 
     <form class="form-inline" onsubmit="return false;">
       <input disabled value="disabled">
+      text
       <input readonly value="readonly">
 
       <textarea disabled>disabled</textarea>
@@ -104,6 +105,8 @@
         </optgroup>
         <option>Option 3</option>
       </select>
+
+      <button>Button</button>
     </form>
 
     <hr>
