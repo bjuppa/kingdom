@@ -1,16 +1,20 @@
+$spacing-xs-suffix: '1\\/8' !default;
+$spacing-s-suffix: '1\\/4' !default;
+$spacing-m-suffix: '1\\/2' !default;
+
 @mixin display-block($line-height: inherit) {
   display: block;
-  @if($line-height) {
+  @if ($line-height) {
     line-height: $line-height;
   }
 }
 
 @mixin display-inline-block($vertical-align: bottom, $line-height: inherit) {
   display: inline-block;
-  @if($line-height) {
+  @if ($line-height) {
     line-height: $line-height;
   }
-  @if($vertical-align) {
+  @if ($vertical-align) {
     vertical-align: $vertical-align;
   }
 }
@@ -18,16 +22,16 @@
 @mixin display-inline($vertical-align: baseline, $line-height: 0) {
   display: inline;
   // $line-height: 0 will prevent inline elements from affecting the line height of their parents should they have their size or font changed
-  @if($line-height) {
+  @if ($line-height) {
     line-height: $line-height;
   }
-  @if($vertical-align) {
+  @if ($vertical-align) {
     vertical-align: $vertical-align;
   }
 }
 
 // Add horizontal padding and make sure the last baseline-shifted element gets some bottom padding
-@mixin space-inside($sides: top bottom left right, $suffix: '1\\/4') {
+@mixin space-inside($sides: top bottom left right, $suffix: $spacing-s-suffix) {
   //If the last child of a bordered element is baseline shifted, it's text lies on the bottom border - so add bottom padding!
   @if index($sides, bottom) {
     > %baseline-shift:last-child {
@@ -41,5 +45,12 @@
     @extend %pl-#{$suffix} !optional;
   } @else if index($sides, right) {
     @extend %pr-#{$suffix} !optional;
+  }
+}
+
+// Add horizontal spacing between children
+@mixin space-children-horizontally($suffix: $spacing-s-suffix) {
+  > *:not(:last-child) {
+    @extend %mr-#{$suffix} !optional;
   }
 }
