@@ -8,7 +8,7 @@
       <fieldset class="py-0">
         <legend>A fieldset with legend and no vertical padding</legend>
         <label><input type="checkbox">Checkbox in label</label>
-        <label><input type="checkbox" required>Required checkbox in label</label>
+        <label><input type="checkbox" required>Required checkbox in label with a rather long text</label>
 
         <label><input type="radio" name="radio">Radio A</label>
         <label><input type="radio" name="radio">Radio B</label>
