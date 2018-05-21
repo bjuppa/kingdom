@@ -84,6 +84,7 @@ input, textarea, select {
 
 input, textarea {
   box-shadow: $input-box-shadow;
+
   &::placeholder {
     color: inherit;
     opacity: .5;
@@ -97,6 +98,11 @@ input, textarea {
 [type='checkbox'], [type='radio'] {
   vertical-align: baseline;
   height: auto;
+
+  background: initial;
+  box-shadow: initial;
+  border-style: initial;
+  border-radius: initial;
 
   &[id] {
     &:disabled {
