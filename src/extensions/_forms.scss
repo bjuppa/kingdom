@@ -178,6 +178,7 @@ label[aria-invalid] {
     @include apply-background-color(disabled);
     border-color: get-color(disabled);
     border-color: transparent;
+    background-clip: border-box;
 
     box-shadow: none;
   }
@@ -193,9 +194,10 @@ button,
 /* Prominent button */
 .button-prime {
   @extend %button;
+  color: $button-text-color;
   background-color: $button-color;
   border-color: $button-color;
-  color: $button-text-color;
+  background-clip: border-box;
 
   &:active {
     color: $button-text-color;
