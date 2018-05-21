@@ -165,7 +165,7 @@ label[aria-invalid] {
 
   &:active {
     color: $button-color; //Avoid clicked button "disappearing" when browser inverts text color on a transparent background
-    box-shadow: $input-box-shadow;
+    box-shadow: $button-active-box-shadow;
   }
 
   &:disabled, &.disabled, fieldset:disabled & {
@@ -216,12 +216,13 @@ button,
   color: $button-destructive-color;
   border-color: $button-destructive-color;
 
-  &:active {
-    color: $button-destructive-color;
-  }
-
   &:focus {
     box-shadow: $button-destructive-focus-box-shadow;
+  }
+
+  &:active {
+    color: $button-destructive-color;
+    box-shadow: $button-active-box-shadow;
   }
 
   &.button-prime {
