@@ -52,8 +52,11 @@ input, button, select {
 }
 
 [type='checkbox'], [type='radio'] {
+  border: initial;
   vertical-align: baseline;
   height: auto;
+  line-height: inherit;
+  font-size: inherit;
 }
 
 select {
