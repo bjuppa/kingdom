@@ -174,7 +174,6 @@ label[aria-invalid] {
     @include apply-background-color(disabled);
     border-color: get-color(disabled);
     border-color: transparent;
-    background-clip: border-box;
 
     box-shadow: none;
   }
@@ -193,7 +192,6 @@ button,
   color: $button-text-color;
   background-color: $button-color;
   border-color: $button-color;
-  background-clip: border-box;
 
   &:active {
     color: $button-text-color;
