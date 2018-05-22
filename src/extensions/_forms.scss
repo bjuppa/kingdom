@@ -54,7 +54,7 @@ $button-destructive-focus-box-shadow: set_nth($button-focus-box-shadow, -1, chan
 
 /* Inputs */
 
-input, select:not([size]):not([multiple]) {
+input:not([type='checkbox']):not([type='radio']), select:not([size]):not([multiple]) {
   @include border-preserving-line-height($spacing-base, $input-border-width);
 }
 
@@ -64,8 +64,6 @@ textarea {
 
 input, textarea, select {
   @extend %font-forms;
-
-  vertical-align: bottom;
 
   background: $input-background;
 
@@ -96,13 +94,14 @@ input, textarea {
 }
 
 [type='checkbox'], [type='radio'] {
-  vertical-align: baseline;
-  height: auto;
-
   background: initial;
   box-shadow: initial;
-  border-style: initial;
-  border-radius: initial;
+
+  @supports (bottom: calc((#{if(unitless(nth($line-heights, 1)), 1em, 1)} * var(--line-height) - 1em * var(--baseline-shift-factor)) / 2)) {
+    vertical-align: bottom;
+    position: relative;
+    bottom: calc((#{if(unitless(nth($line-heights, 1)), 1em, 1)} * var(--line-height) - 1em * var(--baseline-shift-factor)) / 2);
+  }
 
   &[id] {
     &:disabled {
