@@ -96,6 +96,7 @@ input, textarea {
 [type='checkbox'], [type='radio'] {
   background: initial;
   box-shadow: initial;
+  border: initial;
 
   @supports (bottom: calc((#{if(unitless(nth($line-heights, 1)), 1em, 1)} * var(--line-height) - 1em * var(--baseline-shift-factor)) / 2)) {
     vertical-align: bottom;
