@@ -55,8 +55,7 @@ input, button, select {
   border: initial;
   vertical-align: baseline;
   height: auto;
-  line-height: inherit;
-  font-size: inherit;
+  @include size-text(inherit, inherit);
 }
 
 select {
