@@ -240,7 +240,7 @@ textarea {
 button, [type='button'], [type='reset'], [type='submit'] {
   &:focus {
     outline: 1px dotted;
-    outline: medium auto -webkit-focus-ring-color;
+    outline: -webkit-focus-ring-color auto 5px; // The Chrome default outline
   }
 }
 
