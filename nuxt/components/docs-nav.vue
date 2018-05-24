@@ -1,6 +1,6 @@
 <template>
   <nav class="space-inside">
-    <ul class="list-inline">
+    <ul class="list-inline space-children-horizontally">
       <li>
         <reload-link to="/">Main</reload-link>
       </li>
