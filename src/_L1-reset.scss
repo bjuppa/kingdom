@@ -255,9 +255,6 @@ button, [type='button'], [type='reset'], [type='submit'] {
 table, caption, colgroup, col, thead, tbody, tfoot, tr, th, td {
   @include border-reset();
   padding: 0;
-}
-
-table {
   border-collapse: collapse;
 }
 
