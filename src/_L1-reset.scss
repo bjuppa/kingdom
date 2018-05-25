@@ -253,6 +253,7 @@ button, [type='button'], [type='reset'], [type='submit'] {
 }
 
 table, caption, colgroup, col, thead, tbody, tfoot, tr, th, td {
+  color: inherit; // Avoid problem with currentColor on borders in Chrome & Opera
   @include border-reset();
   padding: 0;
 }
