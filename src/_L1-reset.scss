@@ -252,13 +252,13 @@ button, [type='button'], [type='reset'], [type='submit'] {
   @include apply-color(visited);
 }
 
-table {
-  border-collapse: collapse;
-}
-
 table, caption, colgroup, col, thead, tbody, tfoot, tr, th, td {
   @include border-reset();
   padding: 0;
+}
+
+table {
+  border-collapse: collapse;
 }
 
 td, th {
