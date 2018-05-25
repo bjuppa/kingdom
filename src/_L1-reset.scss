@@ -265,16 +265,12 @@ td, th {
   @include length-relative(padding-left padding-right, 1/4);
 }
 
-ol, ul {
+ol, ul, dd {
   @include length-relative(padding-left, 1);
 }
 
 dt {
   font-weight: bold;
-}
-
-dd {
-  @include length-relative(margin-left, 1);
 }
 
 @import "placeholders/fonts";
