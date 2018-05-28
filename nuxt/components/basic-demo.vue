@@ -198,9 +198,15 @@
     <hr>
     <p class="border space-inside">Bordered paragraph</p>
     <hr>
-    <div class="border space-inside" style="width: 50%; float: left;"><p>Paragraph within a bordered floated div</p>
+    <div class="border space-inside" style="width: 50%; float: left;">
+      <p>Paragraph within a bordered floated div</p>
     </div>
     <p class="space-inside" style="width: 50%; float: left;">Floated paragraph</p>
+    <hr style="clear: both">
+    <p class="underline">
+      <span class="color-primary text-inherit underline" style="float: right;">A floated element</span>
+      A paragraph with a floated element inside
+    </p>
     <hr style="clear: both">
 
     <form onsubmit="return false;">
