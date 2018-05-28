@@ -228,6 +228,12 @@
         <input id="fieldsetInput2">
       </fieldset>
 
+      <fieldset class="border-0 p-0">
+        <legend>Fieldset without border</legend>
+        <label for="fieldsetInput3">Label in fieldset</label>
+        <input id="fieldsetInput3">
+      </fieldset>
+
       <hr>
 
       <select id="select1">
