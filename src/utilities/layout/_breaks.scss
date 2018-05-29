@@ -1,0 +1,47 @@
+// Utilities for breaks within fragmented elements
+
+// Break inside
+
+.avoid-break-inside {
+  break-inside: avoid;
+}
+
+.allow-break-inside {
+  break-inside: auto;
+}
+
+// Break after
+
+.avoid-break-after {
+  break-after: avoid;
+}
+
+.allow-break-after {
+  break-after: auto;
+}
+
+.column-break-after {
+  break-after: column;
+}
+
+.page-break-after {
+  break-after: page;
+}
+
+// Break before
+
+.avoid-break-before {
+  break-before: avoid;
+}
+
+.allow-break-before {
+  break-before: auto;
+}
+
+.column-break-before {
+  break-before: column;
+}
+
+.page-break-before {
+  break-before: page;
+}
