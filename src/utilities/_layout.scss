@@ -67,6 +67,14 @@
   }
 }
 
+.grid {
+  display: grid;
+
+  > * {
+    @extend %m-0;
+  }
+}
+
 // Visibility
 
 .visible {
