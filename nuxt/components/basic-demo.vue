@@ -198,10 +198,10 @@
     <hr>
     <p class="border space-inside">Bordered paragraph</p>
     <hr>
-    <div class="border space-inside float-left" style="max-width: 50%;">
+    <div class="border space-inside float-left w-max-half">
       <p>Paragraph within a bordered floated div</p>
     </div>
-    <p class="space-inside float-left" style="max-width: 50%;">Floated paragraph</p>
+    <p class="space-inside float-left w-max-half">Floated paragraph</p>
     <hr class="clear-both">
     <p class="underline">
       <span class=" float-right color-primary text-inherit underline">A floated element</span>

@@ -6,12 +6,20 @@ $vertical-sizing-utilities: 1 2 3 4 5 6 7 8 9 10 12 14 16 18 20 24 28 32 36 40 4
   .h-#{$multiple} {
     @extend %h-#{$multiple};
   }
+
+  .h-max-#{$multiple} {
+    @include length-relative('max-height', $multiple);
+  }
 }
 
 $horizontal-sizing-utilities: 1 2 3 4 5 6 7 8 9 10 11 12 13 14 16 18 20 24 28 32 36 40 48 56 64 !default;
 @each $multiple in $horizontal-sizing-utilities {
   .w-#{$multiple} {
     @extend %w-#{$multiple};
+  }
+
+  .w-max-#{$multiple} {
+    @include length-relative('max-width', $multiple);
   }
 }
 
@@ -44,4 +52,24 @@ $fraction-sizing-utilities: (
 .w-readable-children > *,
 .w-readable-paragraphs p {
   @include max-width-readable();
+}
+
+.w-max-half {
+  max-width: 50%;
+}
+
+.w-max-third {
+  max-width: 100%/3;
+}
+
+.w-max-quarter {
+  max-width: 25%;
+}
+
+.w-max-fifth {
+  max-width: 20%;
+}
+
+.w-max-sixth {
+  max-width: 100%/6;
 }
