@@ -31,3 +31,8 @@
 .border-0 {
   @extend %border-0;
 }
+
+.unborder {
+  @extend %border-0;
+  @extend %p-0;
+}
