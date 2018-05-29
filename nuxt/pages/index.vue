@@ -77,7 +77,7 @@
 
     <h2>Not for the faint of heart</h2>
     <p>
-      Kingdom CSS embraces the cascade, is utility-first, has no namespacing,
+      Kingdom CSS embraces the cascade, is utility-first, has no namespacing, extensively extends css classes,
       and does all kinds of other things that might seem scary and are sometimes even frowned upon.
       Not everyone will like it, and there are certainly situations where its not the best fit.
       But there is a thought behind it all, and I hope this documentation will eventually convey both the why and
