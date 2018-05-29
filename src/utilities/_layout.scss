@@ -59,6 +59,16 @@
   display: inline-flex;
 }
 
+// Visibility
+
+.visible {
+  visibility: visible;
+}
+
+.invisible {
+  visibility: hidden;
+}
+
 // Floats
 
 .float-right {
