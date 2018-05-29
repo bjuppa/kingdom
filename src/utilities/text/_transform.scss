@@ -1,0 +1,21 @@
+// Utilities for text transform
+
+.uppercase {
+  text-transform: uppercase;
+}
+
+.lowercase {
+  text-transform: lowercase;
+}
+
+.capitalize {
+  text-transform: capitalize;
+}
+
+.capitalize-first::first-letter {
+  text-transform: uppercase;
+}
+
+.normal-case {
+  text-transform: none;
+}
