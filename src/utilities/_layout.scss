@@ -53,10 +53,18 @@
 
 .flex {
   display: flex;
+
+  > * {
+    @extend %m-0;
+  }
 }
 
 .inline-flex {
   display: inline-flex;
+
+  > * {
+    @extend %m-0;
+  }
 }
 
 // Visibility
