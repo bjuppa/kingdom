@@ -1,6 +1,7 @@
 // Utilities for layout
 @import "../modules/layout";
 @import "../modules/lists";
+@import "../modules/clearfix";
 
 // Lists
 
@@ -56,6 +57,22 @@
 
 .inline-flex {
   display: inline-flex;
+}
+
+.float-right {
+  float: right;
+}
+
+.float-left {
+  float: left;
+}
+
+.float-none {
+  float: none;
+}
+
+.clearfix {
+  @include clearfix;
 }
 
 // Space inside - great for bordered elements
