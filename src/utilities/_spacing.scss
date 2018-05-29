@@ -1,4 +1,5 @@
 // Utilities for spacing
+@import "../modules/spacing";
 
 .my-0 {
   @extend %my-0;
@@ -127,4 +128,29 @@ $fraction-spacing-utilities: (
   .pt-#{$suffix} {
     @extend %pt-#{$suffix};
   }
+}
+
+
+// Space inside - great for bordered elements
+
+.space-inside-l {
+  @include space-inside(left);
+}
+
+.space-inside-r {
+  @include space-inside(right);
+}
+
+.space-inside-b {
+  @include space-inside(bottom);
+}
+
+.space-inside {
+  @include space-inside();
+}
+
+// Space children - great with minified html where inlined elements stack up against each other
+
+.space-children-horizontally {
+  @include space-children-horizontally();
 }

@@ -1,0 +1,58 @@
+// Utilities for display property
+@import "../../modules/layout";
+
+.block,
+.block-children > * {
+  @include display-block();
+}
+
+.inline-block,
+.inline-block-children > *,
+.inline-block-within * {
+  @include display-inline-block();
+}
+
+.inline,
+.inline-within * {
+  @include display-inline();
+}
+
+.table {
+  display: table;
+}
+
+.table-row {
+  display: table-row;
+}
+
+.table-cell {
+  display: table-cell;
+}
+
+.hidden {
+  display: none;
+}
+
+.flex {
+  display: flex;
+
+  > * {
+    @extend %m-0;
+  }
+}
+
+.inline-flex {
+  display: inline-flex;
+
+  > * {
+    @extend %m-0;
+  }
+}
+
+.grid {
+  display: grid;
+
+  > * {
+    @extend %m-0;
+  }
+}

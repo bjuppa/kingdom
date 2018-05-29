@@ -1,0 +1,30 @@
+// Utilities for floats
+@import "../../modules/clearfix";
+
+.float-right {
+  float: right;
+}
+
+.float-left {
+  float: left;
+}
+
+.float-none {
+  float: none;
+}
+
+.clear-both {
+  clear: both;
+}
+
+.clear-left {
+  clear: left;
+}
+
+.clear-right {
+  clear: right;
+}
+
+.clearfix {
+  @include clearfix;
+}
