@@ -59,6 +59,8 @@
   display: inline-flex;
 }
 
+// Floats
+
 .float-right {
   float: right;
 }
@@ -73,6 +75,18 @@
 
 .clearfix {
   @include clearfix;
+}
+
+.clear-both {
+  clear: both;
+}
+
+.clear-left {
+  clear: left;
+}
+
+.clear-right {
+  clear: right;
 }
 
 // Space inside - great for bordered elements
