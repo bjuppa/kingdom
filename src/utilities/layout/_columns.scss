@@ -1,0 +1,30 @@
+// Utilities for columns
+@import "../../modules/sizing";
+
+.columns-2 {
+  column-count: 2;
+}
+
+.columns-3 {
+  column-count: 3;
+}
+
+.columns-4 {
+  column-count: 4;
+}
+
+.columns-readable {
+  column-width: $readable-line-length-min;
+}
+
+.columns-none {
+  columns: auto;
+}
+
+.column-span-all {
+  column-span: all;
+}
+
+.column-span-none {
+  column-span: none;
+}

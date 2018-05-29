@@ -172,7 +172,7 @@
       </ol>
     </aside>
 
-    <div class="w-readable" style="columns: 2;">
+    <div class="w-readable columns-2">
       <h2>Lines not lining up</h2>
       <p>
         As you may see in this section, when texts of different font sizes are in adjacent columns, the lines of text

@@ -1,5 +1,7 @@
 $spacing-base: 1.5rem !default;
-$readable-line-length: 75ch !default; //https://www.smashingmagazine.com/2014/09/balancing-line-length-font-size-responsive-web-design/#line-length-measure-and-reading
+$readable-line-length-min: 45ch !default;
+$readable-line-length-max: 75ch !default;
+//https://www.smashingmagazine.com/2014/09/balancing-line-length-font-size-responsive-web-design/#line-length-measure-and-reading
 
 // Apply one or more length-properties relative to the spacing base
 @mixin length-relative($properties, $factor: 1, $extend-height-multiple: false) {
@@ -27,6 +29,6 @@ $readable-line-length: 75ch !default; //https://www.smashingmagazine.com/2014/09
   }
 }
 
-@mixin max-width-readable($readable-line-length: $readable-line-length) {
-  max-width: $readable-line-length;
+@mixin max-width-readable($max-width: $readable-line-length-max) {
+  max-width: $max-width;
 }

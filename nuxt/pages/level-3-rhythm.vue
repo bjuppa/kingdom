@@ -132,7 +132,7 @@
     </p>
 
 
-    <div class="w-readable visualize-vertical-rhythm" style="columns: 2;">
+    <div class="w-readable visualize-vertical-rhythm columns-2">
       <h2>What about that baseline?</h2>
       <p>
         As you can see, every line of text, regardless of font-size, is positioned in the <em>middle</em> of its line.
