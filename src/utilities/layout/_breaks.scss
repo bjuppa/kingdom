@@ -4,7 +4,8 @@
 
 // Break inside
 
-.avoid-break-inside {
+.avoid-break-inside,
+.avoid-break-inside-children > * {
   break-inside: avoid;
 }
 
