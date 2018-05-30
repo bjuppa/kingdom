@@ -4,9 +4,10 @@
       <small>Utilities:</small>
       Layout
     </h1>
-    <p>
-      Coming soon
-    </p>
+
+    <ul>
+      <li><reload-link to="columns" append>Columns</reload-link></li>
+    </ul>
   </main>
 </template>
 
