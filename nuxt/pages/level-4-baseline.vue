@@ -58,16 +58,16 @@
       yourself.
     </p>
 
-    <aside>
-      <!-- TODO: //Replace columns with flexbox -->
-      <div class="w-readable columns-2">
+    <aside class="clearfix mt-0-within text-center">
+      <div class="w-max-half float-left">
         <p class="text-1-block">Text 1</p>
         <p class="text-2-block">Text 2</p>
         <p class="text-3-block">Text 3</p>
         <p class="text-4-block">Text 4</p>
         <p class="text-5-block">Text 5</p>
         <p class="text-6-block">Text 6</p>
-
+      </div>
+      <div class="w-max-half float-left">
         <p class="text-6-block">Text 6</p>
         <p class="text-5-block">Text 5</p>
         <p class="text-4-block">Text 4</p>
