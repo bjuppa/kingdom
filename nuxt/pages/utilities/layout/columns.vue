@@ -4,7 +4,8 @@
       <small>Layout utilities:</small>
       Columns
     </h1>
-    <div class="columns-readable breaks-readable">
+
+    <div class="columns-readable breaks-readable avoid-break-inside-children">
       <p>
         In supporting browsers, CSS column layouts can be created using the utility classes from
         <a href="https://github.com/bjuppa/kingdom/blob/master/src/utilities/layout/_columns.scss"
@@ -17,17 +18,38 @@
       </p>
       <p>
         This block has class <code>columns-readable</code> applied, making it add columns of a minimum readable
-        line-length, as long as there is available width.
+        line-length, as long as there is available horizontal space.
         In browsers not supporting columns, the block will have a fallback applying a readable max-width.
       </p>
       <p>
         This block also has class <code>breaks-readable</code> from the <reload-link to="breaks">breaks
-        utilities</reload-link> which set the number of orphan lines roughly corresponding to that minimum line-length.
+        utilities</reload-link> which set the number of orphan lines roughly matching the minimum line-length.
         It's useful in situations where the contents would otherwise be split up in many very short columns because of
         the available width.
         The effect is that any paragraph shorter than the column is wide will be not break over two columns.
       </p>
     </div>
+
+    <div class="columns-readable-viewport">
+      <h2>Staying within the viewport</h2>
+      <p>
+        This block has class <code>columns-readable-viewport</code> applied, which keeps the column height within the
+        viewport and adds horizontal scrolling should the number of required columns grow out of the available width.
+      </p>
+
+      <h3>10 paragraphs of Lorem ipsum&hellip;</h3>
+      <p v-for="item in 10">
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore
+        magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+        consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
+        pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est
+        laborum.
+      </p>
+
+      <h3 class="avoid-break-after">&hellip;and a final block</h3>
+      <p>This is the last paragraph of the block.</p>
+    </div>
+
   </main>
 </template>
 

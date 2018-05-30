@@ -1,7 +1,8 @@
 // Utilities for columns
 @import "../../modules/sizing";
 
-.columns-readable {
+.columns-readable,
+.columns-readable-viewport {
   @include max-width-readable();
 }
 
@@ -35,4 +36,13 @@
     column-span: none;
   }
 
+}
+
+@supports (columns: $readable-line-length-min auto) and (max-height: 80vh) and (overflow-x: auto) {
+  .columns-readable-viewport {
+    columns: $readable-line-length-min auto;
+    max-width: none;
+    max-height: 90vh;
+    overflow-x: auto;
+  }
 }
