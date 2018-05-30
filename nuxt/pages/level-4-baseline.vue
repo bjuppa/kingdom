@@ -59,6 +59,7 @@
     </p>
 
     <aside>
+      <!-- TODO: //Replace columns with flexbox -->
       <div class="w-readable columns-2">
         <p class="text-1-block">Text 1</p>
         <p class="text-2-block">Text 2</p>
@@ -77,11 +78,18 @@
     </aside>
 
     <h2>Limitations</h2>
-    <p>
-      The amount of shift applied is calculated using CSS calc from CSS custom properties.
-      In browsers not supporting both (notably IE and Opera Mini) the 4th level of Kingdom has no effect, basically
-      rendering like only <reload-link to="level-3-rhythm">Level&nbsp;3</reload-link> was applied.
-    </p>
+    <ul class="w-readable">
+      <li>
+        The amount of shift applied is calculated using CSS calc from CSS custom properties.
+        In browsers not supporting both (notably IE and Opera Mini) the 4th level of Kingdom has no effect, basically
+        rendering like only <reload-link to="level-3-rhythm">Level&nbsp;3</reload-link> was applied.
+      </li>
+      <li>
+        CSS columns with baseline-shifted elements inside are rendered inconsistently in different browsers.
+        Ascenders may be cut off att column breaks and elements after the columns may be shifted out of the vertical
+        rhythm.
+      </li>
+    </ul>
 
   </main>
 </template>

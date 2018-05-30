@@ -1,5 +1,5 @@
 <template>
-  <main class="space-inside">
+  <main class="space-inside visualize-vertical-rhythm">
     <h1>
       <small>Layout utilities:</small>
       Columns
@@ -53,18 +53,24 @@
       <p>This is the last paragraph.</p>
     </div>
 
-    <div>
-      <h2>Limitations with columns</h2>
-      <ul>
-        <li>
-          Browser support for the break and column properties is far from complete.
-        </li>
-        <li>
-          Safari has trouble with top margins between items at breaks between columns,
-          sometimes leaving a gap before the first item in a column.
-        </li>
-      </ul>
-    </div>
+    <h2>Limitations with columns</h2>
+    <ul class="columns-readable avoid-break-inside-children">
+      <li>
+        Browser support for the break and column properties is far from complete.
+      </li>
+      <li>
+        Safari has trouble with top margins between items at breaks between columns,
+        sometimes leaving a gap before the first item in a column.
+      </li>
+      <li>
+        Browsers have trouble with list items in columns.
+      </li>
+      <li>
+        Columns doesn't work well with <reload-link to="/level-4-baseline">Level&nbsp;4</reload-link> as ascenders from
+        the last row of each column may be cut off and displayed at the top of the next column, or the collapsing of
+        margins at breaks may shift the next element after the columns out of the vertical rhythm.
+      </li>
+    </ul>
 
   </main>
 </template>
