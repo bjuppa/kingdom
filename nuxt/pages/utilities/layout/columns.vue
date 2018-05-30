@@ -12,9 +12,9 @@
            target="_blank"><code>src/utilities/layout/_columns.scss</code></a>.
       </p>
       <p>
-        Most of the column utility classes are wrapped in <code>@supports (column-span: all)</code> to make sure columns
+        Most of the column utility classes are wrapped in supports-clauses to make sure columns
         are not applied in browsers supporting some but not all the column properties required for a good user
-        experience (currently Firefox).
+        experience.
       </p>
       <p>
         This block has class <code>columns-readable</code> applied, making it add columns of a minimum readable
@@ -36,9 +36,12 @@
         This block has class <code>columns-readable-viewport</code> applied, which keeps the column height within the
         viewport and adds horizontal scrolling should the number of required columns grow out of the available width.
       </p>
+      <p>
+        To see the effect you may need to make your browser window narrower, until the last paragraph disappears.
+      </p>
 
-      <h3>10 paragraphs of Lorem ipsum&hellip;</h3>
-      <p v-for="item in 10">
+      <h3>And now, 10 paragraphs of Lorem ipsum&hellip;</h3>
+      <p v-for="item in 10" class="italic">
         Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore
         magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
         consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
@@ -46,8 +49,21 @@
         laborum.
       </p>
 
-      <h3 class="avoid-break-after">&hellip;and a final block</h3>
-      <p>This is the last paragraph of the block.</p>
+      <h3 class="avoid-break-after">&hellip;and finally&hellip;</h3>
+      <p>This is the last paragraph.</p>
+    </div>
+
+    <div>
+      <h2>Limitations with columns</h2>
+      <ul>
+        <li>
+          Browser support for the break and column properties is far from complete.
+        </li>
+        <li>
+          Safari has trouble with top margins between items at breaks between columns,
+          sometimes leaving a gap before the first item in a column.
+        </li>
+      </ul>
     </div>
 
   </main>
