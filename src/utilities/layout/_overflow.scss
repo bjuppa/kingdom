@@ -1,4 +1,4 @@
-// Utilities for overflow
+// Utilities for overflow and scrolling behaviour
 
 .overflow-auto {
   overflow: auto;
@@ -32,10 +32,10 @@
   overflow-y: scroll;
 }
 
-.scrolling-touch {
+.scroll-momentum {
   -webkit-overflow-scrolling: touch;
 }
 
-.scrolling-auto {
+.scroll-regular {
   -webkit-overflow-scrolling: auto;
 }
