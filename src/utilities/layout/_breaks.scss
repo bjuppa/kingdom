@@ -1,4 +1,6 @@
 // Utilities for breaks within fragmented elements
+@import "../../modules/sizing";
+@import "../../modules/flow-rhythm";
 
 // Break inside
 
@@ -44,4 +46,21 @@
 
 .page-break-before {
   break-before: page;
+}
+
+// Orphans and widows
+
+.breaks-readable {
+  orphans: flow-lines($readable-line-length-min);
+  widows: flow-lines($readable-line-length-min/3);
+}
+
+@for $i from 1 through 10 {
+  .orphans-#{i} {
+    orphans: $i;
+  }
+
+  .widows-#{i} {
+    widows: $i;
+  }
 }
