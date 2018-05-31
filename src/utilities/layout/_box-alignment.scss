@@ -33,8 +33,8 @@
   justify-content: space-around;
 }
 
-.align-content-space-evenly {
-  align-content: space-evenly;
+.justify-content-space-evenly {
+  justify-content: space-evenly;
 }
 
 .justify-content-stretch {
@@ -85,7 +85,7 @@
 
 /* Align element within parent (effectively adjusts margins) */
 
-// justify-self along inline axis
+/* justify-self along inline axis */
 
 .justify-self-auto {
   justify-self: auto;
@@ -119,7 +119,7 @@
   justify-self: baseline;
 }
 
-// align-self along cross/block axis
+/* align-self along cross/block axis */
 
 .align-self-auto {
   align-self: auto;
@@ -155,7 +155,7 @@
 
 /* Align items inside box (effectively adjusts child items' margins) */
 
-// justify-items along inline axis (controls child items’ justify-self: auto)
+/* justify-items along inline axis (controls child items’ justify-self: auto) */
 
 .justify-items-start {
   justify-items: start;
@@ -185,7 +185,7 @@
   justify-items: baseline;
 }
 
-// align-items along cross/block axis (controls child items’ align-self: auto)
+/* align-items along cross/block axis (controls child items’ align-self: auto) */
 
 .align-items-start {
   align-items: start;
