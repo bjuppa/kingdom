@@ -86,7 +86,7 @@
       </li>
       <li>
         CSS columns with baseline-shifted elements inside are rendered inconsistently in different browsers.
-        Ascenders may be cut off att column breaks and elements after the columns may be shifted out of the vertical
+        Descenders may be cut off att column breaks and elements after the columns may be shifted out of the vertical
         rhythm.
       </li>
     </ul>

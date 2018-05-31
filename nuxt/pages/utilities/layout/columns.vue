@@ -66,8 +66,8 @@
         Browsers have trouble with list items in columns.
       </li>
       <li>
-        Columns doesn't work well with <reload-link to="/level-4-baseline">Level&nbsp;4</reload-link> as ascenders from
-        the last row of each column may be cut off and displayed at the top of the next column, or the collapsing of
+        Columns doesn't work well with <reload-link to="/level-4-baseline">Level&nbsp;4</reload-link> as descenders from
+        the last line of each column may be cut off and displayed at the top of the next column, or the collapsing of
         margins at breaks may shift the next element after the columns out of the vertical rhythm.
       </li>
     </ul>
