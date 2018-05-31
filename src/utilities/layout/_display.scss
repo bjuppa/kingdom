@@ -32,27 +32,3 @@
 .hidden {
   display: none;
 }
-
-.flex {
-  display: flex;
-
-  > * {
-    @extend %m-0;
-  }
-}
-
-.inline-flex {
-  display: inline-flex;
-
-  > * {
-    @extend %m-0;
-  }
-}
-
-.grid {
-  display: grid;
-
-  > * {
-    @extend %m-0;
-  }
-}

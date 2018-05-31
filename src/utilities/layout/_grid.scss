@@ -1,0 +1,11 @@
+// Utilities for grid
+
+// Display
+
+.grid {
+  display: grid;
+
+  > * {
+    @extend %m-0;
+  }
+}

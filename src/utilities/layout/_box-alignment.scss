@@ -1,0 +1,216 @@
+// Utilities for box alignment
+// https://www.w3.org/TR/css-align-3/#overview
+
+/* Align content within element (effectively adjusts padding) */
+
+// justify-content along main/inline axis
+
+.justify-content-start {
+  justify-content: start;
+}
+
+.justify-content-flex-start {
+  justify-content: flex-start;
+}
+
+.justify-content-center {
+  justify-content: center;
+}
+
+.justify-content-end {
+  justify-content: end;
+}
+
+.justify-content-flex-end {
+  justify-content: flex-end;
+}
+
+.justify-content-space-between {
+  justify-content: space-between;
+}
+
+.justify-content-space-around {
+  justify-content: space-around;
+}
+
+.align-content-space-evenly {
+  align-content: space-evenly;
+}
+
+.justify-content-stretch {
+  justify-content: stretch;
+}
+
+// align-content along cross/block axis (only effects multiple lines in flexbox)
+
+.align-content-start {
+  align-content: start;
+}
+
+.align-content-flex-start {
+  align-content: flex-start;
+}
+
+.align-content-center {
+  align-content: center;
+}
+
+.align-content-end {
+  align-content: end;
+}
+
+.align-content-flex-end {
+  align-content: flex-end;
+}
+
+.align-content-space-between {
+  align-content: space-between;
+}
+
+.align-content-space-around {
+  align-content: space-around;
+}
+
+.align-content-space-evenly {
+  align-content: space-evenly;
+}
+
+.align-content-stretch {
+  align-content: stretch;
+}
+
+.align-content-baseline {
+  align-content: baseline;
+}
+
+/* Align element within parent (effectively adjusts margins) */
+
+// justify-self along inline axis
+
+.justify-self-auto {
+  justify-self: auto;
+}
+
+.justify-self-start {
+  justify-self: start;
+}
+
+.justify-self-flex-start {
+  justify-self: flex-start;
+}
+
+.justify-self-center {
+  justify-self: center;
+}
+
+.justify-self-end {
+  justify-self: end;
+}
+
+.justify-self-flex-end {
+  justify-self: flex-end;
+}
+
+.justify-self-stretch {
+  justify-self: stretch;
+}
+
+.justify-self-baseline {
+  justify-self: baseline;
+}
+
+// align-self along cross/block axis
+
+.align-self-auto {
+  align-self: auto;
+}
+
+.align-self-start {
+  align-self: start;
+}
+
+.align-self-flex-start {
+  align-self: flex-start;
+}
+
+.align-self-center {
+  align-self: center;
+}
+
+.align-self-end {
+  align-self: end;
+}
+
+.align-self-flex-end {
+  align-self: flex-end;
+}
+
+.align-self-stretch {
+  align-self: stretch;
+}
+
+.align-self-baseline {
+  align-self: baseline;
+}
+
+/* Align items inside box (effectively adjusts child items' margins) */
+
+// justify-items along inline axis (controls child items’ justify-self: auto)
+
+.justify-items-start {
+  justify-items: start;
+}
+
+.justify-items-flex-start {
+  justify-items: flex-start;
+}
+
+.justify-items-center {
+  justify-items: center;
+}
+
+.justify-items-end {
+  justify-items: end;
+}
+
+.justify-items-flex-end {
+  justify-items: flex-end;
+}
+
+.justify-items-stretch {
+  justify-items: stretch;
+}
+
+.justify-items-baseline {
+  justify-items: baseline;
+}
+
+// align-items along cross/block axis (controls child items’ align-self: auto)
+
+.align-items-start {
+  align-items: start;
+}
+
+.align-items-flex-start {
+  align-items: flex-start;
+}
+
+.align-items-center {
+  align-items: center;
+}
+
+.align-items-end {
+  align-items: end;
+}
+
+.align-items-flex-end {
+  align-items: flex-end;
+}
+
+.align-items-stretch {
+  align-items: stretch;
+}
+
+.align-items-baseline {
+  align-items: baseline;
+}

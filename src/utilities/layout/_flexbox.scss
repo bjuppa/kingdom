@@ -1,5 +1,23 @@
 // Utilities for flexbox
 
+// Display
+
+.flex {
+  display: flex;
+
+  > * {
+    @extend %m-0;
+  }
+}
+
+.inline-flex {
+  display: inline-flex;
+
+  > * {
+    @extend %m-0;
+  }
+}
+
 // Direction
 
 .flex-row {
@@ -30,94 +48,6 @@
 
 .flex-wrap-reverse {
   flex-wrap: wrap-reverse;
-}
-
-// Align items (along cross-axis)
-
-.items-stretch {
-  align-items: stretch;
-}
-
-.items-start {
-  align-items: flex-start;
-}
-
-.items-center {
-  align-items: center;
-}
-
-.items-end {
-  align-items: flex-end;
-}
-
-.items-baseline {
-  align-items: baseline;
-}
-
-// Align content (multiple lines)
-
-.content-start {
-  align-content: flex-start;
-}
-
-.content-center {
-  align-content: center;
-}
-
-.content-end {
-  align-content: flex-end;
-}
-
-.content-between {
-  align-content: space-between;
-}
-
-.content-around {
-  align-content: space-around;
-}
-
-// Align self (along cross-axis)
-
-.self-auto {
-  align-self: auto;
-}
-
-.self-start {
-  align-self: flex-start;
-}
-
-.self-center {
-  align-self: center;
-}
-
-.self-end {
-  align-self: flex-end;
-}
-
-.self-stretch {
-  align-self: stretch;
-}
-
-// Justify content (along main axis)
-
-.justify-start {
-  justify-content: flex-start;
-}
-
-.justify-center {
-  justify-content: center;
-}
-
-.justify-end {
-  justify-content: flex-end;
-}
-
-.justify-between {
-  justify-content: space-between;
-}
-
-.justify-around {
-  justify-content: space-around;
 }
 
 // Flex, grow & shrink
