@@ -54,7 +54,7 @@
     </div>
 
     <h2>Limitations with columns</h2>
-    <ul class="columns-readable avoid-break-inside-children">
+    <ul class="columns-readable avoid-break-inside-children column-gap-2">
       <li>
         Browser support for the break and column properties is far from complete.
       </li>
@@ -63,7 +63,7 @@
         sometimes leaving a gap before the first item in a column.
       </li>
       <li>
-        Browsers have trouble with list items in columns.
+        Some browsers have trouble with markers on list items in columns, unless the column-gap is wider.
       </li>
       <li>
         Columns doesn't work well with <reload-link to="/level-4-baseline">Level&nbsp;4</reload-link> as descenders from
