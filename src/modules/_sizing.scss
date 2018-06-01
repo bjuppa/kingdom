@@ -32,3 +32,7 @@ $readable-line-length-max: 75ch !default;
 @mixin max-width-readable($max-width: $readable-line-length-max) {
   max-width: $max-width;
 }
+
+@function minmax-readable($min-width: $readable-line-length-min, $max-width: $readable-line-length-max) {
+  @return minmax($min-width, $max-width);
+}
