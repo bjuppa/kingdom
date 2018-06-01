@@ -48,6 +48,10 @@ $body-padding: 0 !default;
   @if not map-has-key($colors, $name) {
     $colors: map-merge($colors, ($name: change_color(get-color(primary), $lightness: (100 - $gray-factor) * 1%, $saturation: 2%)));
   }
+
+  @if length(map-get($colors, $name)) < 2 {
+    $colors: map-merge($colors, ($name: background-text-color-pair(map-get($colors, $name))));
+  }
 }
 
 @import "modules/element-types";
