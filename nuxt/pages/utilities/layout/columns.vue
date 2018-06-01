@@ -26,7 +26,7 @@
         utilities</reload-link> which set the number of orphan lines roughly matching the minimum line-length.
         It's useful in situations where the contents would otherwise be split up in many very short columns because of
         the available width.
-        The effect is that any paragraph shorter than the column is wide will be not break over two columns.
+        The effect is that any paragraph shorter than the column is wide will not break over two columns.
       </p>
     </div>
 
