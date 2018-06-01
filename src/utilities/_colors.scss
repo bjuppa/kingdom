@@ -15,7 +15,7 @@
     @include apply-color($name);
   }
 
-  @if length($color-pair) > 1 {
+  @if (length($color-pair) > 1) {
     .background-color-#{$name} {
       @include apply-background-color($name);
     }
