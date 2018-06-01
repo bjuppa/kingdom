@@ -46,7 +46,7 @@ $body-padding: 0 !default;
 @each $gray-factor in 10 30 50 70 90 {
   $name: gray-#{$gray-factor};
   @if not map-has-key($colors, $name) {
-    $colors: map-merge($colors, ($name: change_color(get-color(primary), $lightness: (100 - $gray-factor) * 1%, $saturation: 5%)));
+    $colors: map-merge($colors, ($name: change_color(get-color(primary), $lightness: (100 - $gray-factor) * 1%, $saturation: 2%)));
   }
 }
 
