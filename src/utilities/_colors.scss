@@ -10,12 +10,16 @@
   }
 }
 
-.color-primary {
-  @include apply-color(primary);
-}
+@each $name, $color-pair in $colors {
+  .color-#{$name} {
+    @include apply-color($name);
+  }
 
-.background-color-primary {
-  @include apply-background-color(primary);
+  @if length($color-pair) > 1 {
+    .background-color-#{$name} {
+      @include apply-background-color($name);
+    }
+  }
 }
 
 .color-transparent {
