@@ -9,3 +9,13 @@
     @extend %m-0;
   }
 }
+
+@for $i from 1 through 10 {
+  .grid-column-span-#{$i} {
+    grid-column-end: span $i;
+  }
+
+  .grid-row-span-#{$i} {
+    grid-row-end: span $i;
+  }
+}
