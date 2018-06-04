@@ -13,10 +13,21 @@ $spacing-fractions: (
   '4\\/3': 4/3,
   '3\\/2': 3/2,
 ) !default;
+$paragraph-spacing-factor: 1 !default;
 
 /* Placeholders for spacing */
 @import "../modules/data-generators";
 @import "../modules/sizing";
+
+:root {
+  --paragraph-spacing-factor: $paragraph-spacing-factor;
+}
+
+/* %mt-paragraph */
+%mt-paragraph {
+  margin-top: $paragraph-spacing-factor * $spacing-base;
+  margin-top: calc(var(--paragraph-spacing-factor) * var(--line-height) * #{if(unitless(nth($line-heights, 1)), 1em, 1)});
+}
 
 // Margin placeholders are ordered with all sides in combination first (only 0) (`m`), being overwritten by:
 // 1. Vertical margin (only 0) (`my`)
