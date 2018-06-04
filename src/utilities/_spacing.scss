@@ -55,8 +55,17 @@ $vertical-margin-utilities: 1 2 3 4 6 9 !default;
   margin-right: auto;
 }
 
-// TODO: do we need more margin-auto utils for different directions? E.g for grid item alignment?
-// https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Grid_Layout/Box_Alignment_in_CSS_Grid_Layout#Alignment_and_auto_margins
+.ml-auto,
+.ml-auto-children > * {
+  /* Align a block to the right */
+  margin-left: auto;
+}
+
+.mr-auto,
+.mr-auto-children > * {
+  /* Align a block to the left */
+  margin-right: auto;
+}
 
 .p-0 {
   @extend %p-0;
