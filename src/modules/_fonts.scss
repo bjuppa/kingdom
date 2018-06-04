@@ -6,7 +6,7 @@ $font-stacks: (
 ) !default;
 
 // Add fonts to the global $font-stacks
-// Use between including this module and usage of set-font()
+// Use between importing this module and usage of font-stack()
 // Example usage:
 // @include register-font-stack('Georgia', (Georgia, serif), 0.62);
 @mixin register-font-stack($stack-name, $font-family, $baseline-shift-factor) {
