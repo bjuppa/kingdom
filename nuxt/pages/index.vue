@@ -47,12 +47,12 @@
       You're free to do that too!
     </p>
     <p>
-      At this stage Kingdom has plenty of Sass mixins, functions, and placeholders to support you in keeping everything
-      consistent throughout <em>your</em> design system.
+      When it comes to this, Kingdom has plenty of Sass mixins, functions, and placeholders to support you in keeping
+      everything consistent throughout <em>your</em> design system.
     </p>
     <p>
-      There's also a point in having a limited, but carefully selected, set of building blocks.
-      It helps you make decisions faster.
+      There's also a point in having a limited, but carefully selected, set of building blocks&mdash;it helps you make
+      decisions faster.
       Do you need some padding inside a bordered element so that its text content doesn't lay tight on the border?
       Just extend <code>.space-inside</code> or include <code>space-inside()</code> and you're set.
       There's no need to think about how many pixels or other length units you need for every specific
