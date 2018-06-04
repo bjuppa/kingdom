@@ -48,6 +48,10 @@ $button-destructive-focus-box-shadow: set_nth($button-focus-box-shadow, -1, chan
 
 /* Inputs */
 
+select {
+  vertical-align: bottom;
+}
+
 input:not([type='checkbox']):not([type='radio']), select:not([size]):not([multiple]) {
   @include border-preserving-line-height($spacing-base, $input-border-width);
 }
