@@ -3,18 +3,10 @@
 @import "../modules/layout";
 
 // Set caution background and text color if not already defined in $colors map
-@if not map-has-key($colors, caution) {
-  $colors: map-merge($colors, (caution: normalize-color(transform-hue-with-contrast(get-color(primary), red))));
-}
-
-@if length(map-get($colors, caution)) < 2 {
-  $colors: map-merge($colors, (caution: background-text-color-pair(map-get($colors, caution))));
-}
+@include register-color(caution, normalize-color(transform-hue-with-contrast(get-color(primary), red)));
 
 // Set disabled background and text color if not already defined in $colors map
-@if not map-has-key($colors, disabled) {
-  $colors: map-merge($colors, (disabled: change_color(get-color(body), $saturation: 1%, $lightness: 90%, $alpha: .75) change_color(get-color(body), $saturation: 1%, $lightness: 50%)));
-}
+@include register-color(disabled, change_color(get-color(body), $saturation: 1%, $lightness: 90%, $alpha: .75) change_color(get-color(body), $saturation: 1%, $lightness: 50%));
 
 $input-border-color: change_color(get-color(body), $saturation: 5%, $lightness: 75%) !default;
 $input-border-width: 1px !default;

@@ -6,10 +6,8 @@ $body-line-height-factor: 1.5 !default;
 @import "../modules/element-types";
 @import "../modules/colors";
 
-// Set border color if not already defined in $colors map
-@if not map-has-key($colors, border) {
-  $colors: map-merge($colors, (border: currentColor));
-}
+// Register a border color if not already defined in $colors map
+@include register-color(border, currentColor);
 
 @mixin border-for-fixed-height($sides: top bottom left right, $width: $border-width) {
   @each $side in $sides {

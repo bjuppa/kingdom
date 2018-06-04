@@ -44,6 +44,22 @@ $colors: () !default;
 
 // Generate a text color suitable for a background
 @function text-color-for-background($background-color) {
+  @if $background-color == currentColor {
+    @return null;
+  }
+  @if $background-color == inherit {
+    @return currentColor;
+  }
+  @if $background-color == initial {
+    @return currentColor;
+  }
+  @if $background-color == unset {
+    @return currentColor;
+  }
+  @if $background-color == transparent {
+    @return currentColor;
+  }
+
   @if lightness($background-color) > 50% {
     @return scale_color($background-color, $lightness: -95%, $saturation: -50%);
   } @else {
@@ -53,10 +69,11 @@ $colors: () !default;
 
 // Append a suitable text color to a background color
 @function background-text-color-pair($background-color) {
-  @return $background-color text-color-for-background(nth($background-color, 1));
+  @return nth($background-color, 1) text-color-for-background(nth($background-color, 1));
 }
 
 // Set a color property from the global map
+//TODO: rename $use-text-color to $apply-text-color
 @mixin apply-color($name: primary, $property: color, $use-text-color: false) {
   #{$property}: get-color($name, $use-text-color);
   $var_name: --color-#{$name};
@@ -67,9 +84,21 @@ $colors: () !default;
 }
 
 // Set a background color (and text color) from the global map
+//TODO: rename $set-text-color to $apply-text-color
 @mixin apply-background-color($name, $set-text-color: true) {
   @include apply-color($name, background-color);
   @if ($set-text-color) {
     @include apply-color($name, $use-text-color: true);
+  }
+}
+
+// Add a color (with corresponding text color) to the global $colors map unless already registered
+// Use between importing this module and importing the Level
+@mixin register-color($name, $color-values, $ensure-text-color: true) {
+  @if not map-has-key($colors, $name) {
+    $colors: map-merge($colors, ($name: $color-values)) !global;
+  }
+  @if $ensure-text-color and length(map-get($colors, $name)) < 2 {
+    $colors: map-merge($colors, ($name: background-text-color-pair(map-get($colors, $name)))) !global;
   }
 }

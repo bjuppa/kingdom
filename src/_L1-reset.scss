@@ -11,47 +11,27 @@ $body-padding: 0 !default;
 @import "modules/sizing";
 
 // Generate a primary color and corresponding text color if not already defined in $colors map
-@if not map-has-key($colors, primary) {
-  $colors: map-merge($colors, (primary: hsl(random(361), 30+random(60), 20+random(60))));
-}
-
-@if length(map-get($colors, primary)) < 2 {
-  $colors: map-merge($colors, (primary: background-text-color-pair(map-get($colors, primary))));
-}
+@include register-color(primary, hsl(random(361), 30+random(60), 20+random(60)));
 
 // Set body background and text color if not already defined in $colors map
-@if not map-has-key($colors, body) {
-  @if lightness(get-color(primary)) < 50% {
-    $colors: map-merge($colors, (body: scale_color(adjust_hue(get-color(primary), 120deg), $lightness: 99%, $saturation: -75%)));
-  } @else {
-    $colors: map-merge($colors, (body: scale_color(adjust_hue(get-color(primary), -120deg), $lightness: -70%, $saturation: -85%)));
-  }
-}
-
-@if length(map-get($colors, body)) < 2 {
-  $colors: map-merge($colors, (body: background-text-color-pair(map-get($colors, body))));
+@if lightness(get-color(primary)) < 50% {
+  @include register-color(body, scale_color(adjust_hue(get-color(primary), 120deg), $lightness: 99%, $saturation: -75%));
+} @else {
+  @include register-color(body, scale_color(adjust_hue(get-color(primary), -120deg), $lightness: -70%, $saturation: -85%));
 }
 
 // Set link color if not already defined in $colors map
-@if not map-has-key($colors, link) {
-  $colors: map-merge($colors, (link: mix(change_color(transform-hue(get-color(primary), blue), $lightness: 50%, $saturation: 100%), desaturate(get-color(body, true), 100%), 50%)));
-}
+@include register-color(link, mix(change_color(transform-hue(get-color(primary), blue), $lightness: 50%, $saturation: 100%), desaturate(get-color(body, true), 100%), 50%), $ensure-text-color: false);
 
 // Set visited link color if not already defined in $colors map
-@if not map-has-key($colors, visited) {
-  $colors: map-merge($colors, (visited: get-color(link)));
-}
+@include register-color(visited, get-color(link), $ensure-text-color: false);
 
 // Set gray colors if not already defined in $colors map
+// TODO: set name-lightness pairs for gray colors
+// TODO: move gray colors generation to color utilities
 @each $gray-factor in 10 30 50 70 90 {
   $name: gray-#{$gray-factor};
-  @if not map-has-key($colors, $name) {
-    $colors: map-merge($colors, ($name: change_color(get-color(primary), $lightness: (100 - $gray-factor) * 1%, $saturation: 2%)));
-  }
-
-  @if length(map-get($colors, $name)) < 2 {
-    $colors: map-merge($colors, ($name: background-text-color-pair(map-get($colors, $name))));
-  }
+  @include register-color($name, change_color(get-color(primary), $lightness: (100 - $gray-factor) * 1%, $saturation: 2%));
 }
 
 @import "modules/element-types";

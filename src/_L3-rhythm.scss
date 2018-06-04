@@ -29,9 +29,8 @@ $line-heights: ();
 
 /* Kingdom CSS Level 3 - Vertical Rhythm */
 
-@if not map-has-key($colors, border) {
-  $colors: map-merge($colors, (border: currentColor));
-}
+// Register a border color if not already defined in $colors map
+@include register-color(border, currentColor);
 
 @for $i from 1 through length($font-sizes) {
   /* %text-#{$i}-tight for vertical rhythm */
