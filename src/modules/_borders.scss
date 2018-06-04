@@ -14,12 +14,10 @@ $body-line-height-factor: 1.5 !default;
     border-#{$side}-width: $width;
     --border-#{$side}-width: $width;
     border-#{$side}-width: var(--border-#{$side}-width);
+  }
 
-    @if index($sides, top) {
-      @if strip-unit($width) > 0 {
-        vertical-align: bottom; //Get rid of space after a bordered inline-block}
-      }
-    }
+  @if index($sides, top) and strip-unit($width) > 0 {
+    vertical-align: bottom; //Get rid of space after a bordered inline-block}
   }
 }
 
