@@ -86,7 +86,7 @@ $colors: () !default;
 @mixin apply-background-color($name, $apply-text-color: true) {
   @include apply-color($name, background-color);
   @if ($apply-text-color) {
-    @include apply-color($name, $use-text-color: true);
+    @include apply-color($name, $apply-text-color: true);
   }
 }
 
