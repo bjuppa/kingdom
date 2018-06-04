@@ -26,12 +26,6 @@ $body-padding: 0 !default;
 // Set visited link color if not already defined in $colors map
 @include register-color(visited, get-color(link), $ensure-text-color: false);
 
-// Set gray colors if not already defined in $colors map
-// TODO: move gray colors generation to color utilities
-@each $gray-name, $gray-lightness in (900: 10%, 700: 30%, 500: 50%, 300: 70%, 100: 90%) {
-  @include register-color(gray-#{$gray-name}, change_color(get-color(primary), $lightness: $gray-lightness, $saturation: 2%));
-}
-
 @import "modules/element-types";
 @import "modules/borders";
 
