@@ -19,4 +19,14 @@
   .print-only-inline {
     @include display-inline();
   }
+
+  h1, h2, h3, h4, h5, h6, hgroup {
+    page-break-after: avoid;
+    break-after: avoid;
+  }
+
+  nav, header, footer, table, hgroup {
+    page-break-inside: avoid;
+    break-inside: avoid;
+  }
 }
