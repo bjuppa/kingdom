@@ -64,7 +64,7 @@
     break-after: avoid;
   }
 
-  nav, header, footer, table, hgroup {
+  nav, header, footer, table, hgroup, ul, ol, img, article {
     page-break-inside: avoid;
     break-inside: avoid;
   }
