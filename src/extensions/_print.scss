@@ -8,6 +8,8 @@
 }
 
 @media print {
+
+  // Print only
   .print-only-block {
     @include display-block();
   }
@@ -20,6 +22,34 @@
     @include display-inline();
   }
 
+  // Print links
+  // https://www.smashingmagazine.com/2013/03/tips-and-tricks-for-print-style-sheets/#expand-external-links-for-print
+  .print-href {
+    &:after {
+      content: " <" attr(href) "> ";
+    }
+  }
+
+  .print-links-inside {
+    *:link {
+      text-decoration: none;
+      font-weight: bolder;
+
+      &[href^=http] {
+        @extend .print-href;
+      }
+
+      &:local-link {
+        content: "";
+      }
+    }
+  }
+
+  article {
+    @extend .print-links-inside;
+  }
+
+  // Avoid page breaks
   h1, h2, h3, h4, h5, h6, hgroup {
     page-break-after: avoid;
     break-after: avoid;
