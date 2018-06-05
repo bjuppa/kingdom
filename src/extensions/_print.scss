@@ -13,7 +13,16 @@
     background: #fff;
   }
 
-  // Print only
+  .print-hidden,
+  nav,
+  aside {
+    display: none;
+  }
+
+  .print-block {
+    @include display-block();
+  }
+
   .print-only-block {
     @include display-block();
   }
