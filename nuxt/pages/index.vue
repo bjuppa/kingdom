@@ -182,6 +182,12 @@
       <li>
         <reload-link to="/extensions/tables">Tables</reload-link>
       </li>
+      <li>
+        <reload-link to="/extensions/print">Print</reload-link>
+      </li>
+      <li>
+        <reload-link to="/extensions/code">Code</reload-link>
+      </li>
     </ul>
 
     <h3>Modules</h3>
