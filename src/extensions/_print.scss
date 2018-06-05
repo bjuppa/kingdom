@@ -1,0 +1,22 @@
+/* Kingdom CSS Extension - Print */
+@import "../modules/layout";
+
+.print-only-block,
+.print-only-inline-block,
+.print-only-inline {
+  display: none;
+}
+
+@media print {
+  .print-only-block {
+    @include display-block();
+  }
+
+  .print-only-inline-block {
+    @include display-inline-block();
+  }
+
+  .print-only-inline {
+    @include display-inline();
+  }
+}
