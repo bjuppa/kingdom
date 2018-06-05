@@ -14,5 +14,6 @@
 </script>
 
 <style lang="scss">
-  @import "~assets/forms-L1.scss";
+  @import "~assets/L1.scss";
+  @import "../../../src/extensions/forms";
 </style>
