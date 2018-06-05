@@ -17,7 +17,7 @@
     <div class="print-only-block italic border space-inside float-right w-max-half">
       This floated block is only displayed in print using class <code>print-only-block</code>.
     </div>
-    <p class="mt-0 print-exact-backgrounds">
+    <p class="mt-0 print-background-exact">
       The classes <code>print-only-block</code>, <code>print-only-inline-block</code>, and
       <code>print-only-inline</code> can be used to hide content except when printing.
 
@@ -47,11 +47,15 @@
     </p>
 
     <h2>Printing backgrounds</h2>
-    <p class="background-color-gray-100 print-exact-backgrounds">
+    <p class="background-color-gray-100 print-background-exact">
       Most browsers won't print backgrounds by default but in WebKit and Firefox the class
-      <code>print-exact-backgrounds</code> will make backgrounds print.
-      If you want to not print backgrounds inside, there's a class <code
-      class="background-color-gray-300 print-economy-backgrounds">print-economy-backgrounds</code> to override.
+      <code>print-exact-backgrounds</code> will make backgrounds print on color printers.
+      If you don't want to print backgrounds, there's a class
+      <code class="background-color-gray-300 print-background-economy">print-economy-backgrounds</code>
+      to override and also
+      <code class="background-color-gray-300 print-background-transparent">print-background-transparent</code>
+      that will remove the background and set color to <code>currentColor</code> for contrast on black & white printers
+      too.
     </p>
   </main>
 </template>

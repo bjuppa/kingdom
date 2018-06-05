@@ -8,10 +8,8 @@
 }
 
 @media print {
-  body {
-    color: #000;
-    background: #fff;
-  }
+
+  // Display
 
   .print-hidden {
     display: none;
@@ -72,7 +70,8 @@
     @extend .print-links-inside;
   }
 
-  // Avoid page breaks
+  // Page breaks
+
   h1, h2, h3, h4, h5, h6, hgroup {
     page-break-after: avoid;
     break-after: avoid;
@@ -83,8 +82,20 @@
     break-inside: avoid;
   }
 
+  // Backgrounds
+
+  body {
+    color: #000;
+    background: #fff;
+  }
+
+  .print-background-transparent {
+    background: transparent;
+    color: currentColor;
+  }
+
   @media (color) {
-    .print-exact-backgrounds {
+    .print-background-exact {
       -webkit-print-color-adjust: exact;
       color-adjust: exact;
 
@@ -94,7 +105,7 @@
       }
     }
 
-    .print-economy-backgrounds {
+    .print-background-economy {
       -webkit-print-color-adjust: economy;
       color-adjust: economy;
     }
