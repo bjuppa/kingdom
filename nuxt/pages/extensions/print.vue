@@ -34,9 +34,16 @@
     <h2 id="printing-links">Printing links</h2>
     <p>
       Any <code>article</code> element, or elements with class <code>print-links-inside</code> will have it's contained
-      links printed inline.
-      The class <code>print-href</code> can be used on an <a href="#printing-links" class="print-href">individual
-      element</a> to print its <code>href</code> attribute.
+      links printed inline, if the <code>href</code> contain the protocol.
+      The class <code>print-href</code> can be used on an
+      <reload-link to="#printing-links" relative class="print-href">individual element</reload-link>
+      to print its <code>href</code> attribute.
+    </p>
+    <p class="print-links-inside">
+      The class <code>hide-href</code> can be used to override the printing of href on
+      <a href="https://github.com/bjuppa/kingdom/blob/master/src/extensions/_print.scss"
+         target="_blank" class="hide-href">individual links</a>
+      which can be useful on image links.
     </p>
   </main>
 </template>

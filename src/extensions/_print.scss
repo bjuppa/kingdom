@@ -44,8 +44,8 @@
         content: "";
       }
 
-      &:local-link {
-        @extend .hide-href;
+      &:local-link:after {
+        content: "";
       }
     }
   }
