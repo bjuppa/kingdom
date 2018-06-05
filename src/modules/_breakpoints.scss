@@ -1,18 +1,53 @@
 // Breakpoints inspired by David Gilbertson
 // https://medium.freecodecamp.com/the-100-correct-way-to-do-css-breakpoints-88d6a5ba1862
 
+$device-breakpoints: (tablet-portait: 600px, tablet-landscape: 900px, desktop: 1200px, big-desktop: 1800px) !default;
+$named-breakpoints: () !default;
+
+@function get-breakpoint($name) {
+  @return map-get(map-merge($device-breakpoints, $named-breakpoints), $name);
+}
+
+@if variable-exists(readable-line-length-min) {
+  $named-breakpoints: map-merge($named-breakpoints, (readable-line-length-min: $readable-line-length-min));
+}
+
+@if variable-exists(readable-line-length-max) {
+  $named-breakpoints: map-merge($named-breakpoints, (readable-line-length-max: $readable-line-length-max));
+}
+
 @mixin for-phone-only {
-  @media (max-width: 599px) { @content; }
+  @media (max-width: get-breakpoint(tablet-portait) - 1) {
+    @content;
+  }
 }
+
 @mixin for-tablet-portrait-up {
-  @media (min-width: 600px) { @content; }
+  @media (min-width: get-breakpoint(tablet-portait)) {
+    @content;
+  }
 }
+
 @mixin for-tablet-landscape-up {
-  @media (min-width: 900px) { @content; }
+  @media (min-width: get-breakpoint(tablet-landscape)) {
+    @content;
+  }
 }
+
 @mixin for-desktop-up {
-  @media (min-width: 1200px) { @content; }
+  @media (min-width: get-breakpoint(desktop)) {
+    @content;
+  }
 }
+
 @mixin for-big-desktop-up {
-  @media (min-width: 1800px) { @content; }
+  @media (min-width: get-breakpoint(big-desktop)) {
+    @content;
+  }
+}
+
+:root {
+  @each $breakpoint-name, $breakpoint-value in map-merge($device-breakpoints, $named-breakpoints) {
+    --breakpoint-#{$breakpoint-name}: $breakpoint-value;
+  }
 }
