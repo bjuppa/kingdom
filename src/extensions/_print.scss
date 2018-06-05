@@ -82,4 +82,21 @@
     page-break-inside: avoid;
     break-inside: avoid;
   }
+
+  @media (color) {
+    .print-exact-backgrounds {
+      -webkit-print-color-adjust: exact;
+      color-adjust: exact;
+
+      * {
+        -webkit-print-color-adjust: inherit;
+        color-adjust: inherit;
+      }
+    }
+
+    .print-economy-backgrounds {
+      -webkit-print-color-adjust: economy;
+      color-adjust: economy;
+    }
+  }
 }

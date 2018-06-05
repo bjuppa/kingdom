@@ -17,7 +17,7 @@
     <div class="print-only-block italic border space-inside float-right w-max-half">
       This floated block is only displayed in print using class <code>print-only-block</code>.
     </div>
-    <p class="mt-0">
+    <p class="mt-0 print-exact-backgrounds">
       The classes <code>print-only-block</code>, <code>print-only-inline-block</code>, and
       <code>print-only-inline</code> can be used to hide content except when printing.
 
@@ -44,6 +44,14 @@
       <a href="https://github.com/bjuppa/kingdom/blob/master/src/extensions/_print.scss"
          target="_blank" class="hide-href">individual links</a>
       which can be useful on image links.
+    </p>
+
+    <h2>Printing backgrounds</h2>
+    <p class="background-color-gray-100 print-exact-backgrounds">
+      Most browsers won't print backgrounds by default but in WebKit and Firefox the class
+      <code>print-exact-backgrounds</code> will make backgrounds print.
+      If you want to not print backgrounds inside, there's a class <code
+      class="background-color-gray-300 print-economy-backgrounds">print-economy-backgrounds</code> to override.
     </p>
   </main>
 </template>
