@@ -45,7 +45,7 @@
     font-weight: bolder;
 
     &:after {
-      content: " <" attr(href) "> ";
+      content: " <" attr(href) ">";
     }
   }
 
