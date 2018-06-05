@@ -85,13 +85,13 @@
   // Backgrounds
 
   body {
-    color: #000;
-    background: #fff;
+    color: black !important;
+    background: white !important;
   }
 
   .print-background-transparent {
-    background: transparent;
-    color: inherit;
+    background: transparent !important;
+    color: inherit !important;
   }
 
   @media (color) {
