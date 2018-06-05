@@ -117,4 +117,14 @@
     box-shadow: none !important;
     text-shadow: none !important;
   }
+
+  // Abbreviations
+
+  abbr[title] {
+    text-decoration: none;
+
+    &:after {
+      content: " (" attr(title) ")";
+    }
+  }
 }
