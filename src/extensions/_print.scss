@@ -39,13 +39,13 @@
         @extend .print-href;
       }
 
-      &.hide-print-href:after {
-        /* Add class hide-print-href on a link to stop the printing */
+      &.hide-href:after {
+        /* Add class hide-href on a link to stop the printing */
         content: "";
       }
 
       &:local-link {
-        @extend .hide-print-href;
+        @extend .hide-href;
       }
     }
   }
