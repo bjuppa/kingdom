@@ -40,7 +40,7 @@
       }
 
       &.hide-href:after {
-        /* Add class hide-href on a link to stop the printing */
+        /* Add class hide-href on a link to not print a link */
         content: "";
       }
 
