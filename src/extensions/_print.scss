@@ -15,12 +15,12 @@
     display: none;
   }
 
-  nav, aside {
-    @extend .print-hidden;
+  .print-invisible {
+    visibility: hidden;
   }
 
-  .print-block {
-    @include display-block();
+  nav, aside {
+    @extend .print-hidden;
   }
 
   .print-only-block,
@@ -110,6 +110,8 @@
       color-adjust: economy;
     }
   }
+
+  //Shadows
 
   .print-remove-shadows {
     box-shadow: none !important;

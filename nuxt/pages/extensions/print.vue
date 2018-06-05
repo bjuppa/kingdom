@@ -5,12 +5,21 @@
       Print
     </h1>
     <p class="print-links-inside">
-      The printing module contains utility classes for printing web pages.
+      The printing module contains utility classes and default styles for printing web pages.
       You'll find it in <a href="https://github.com/bjuppa/kingdom/blob/master/src/extensions/_print.scss"
                            target="_blank"><code>src/extensions/_print.scss</code></a>.
     </p>
     <p>
-      Print this page as a pdf to see the effects!
+      When printing the <code>&lt;body&gt;</code> is set to black text on white background by default,
+      while <code>&lt;nav&gt;</code> and <code>&lt;aside&gt;</code> are hidden completely.
+      <span class="print-hidden">The class <code>print-hidden</code> can be used to remove an element</span>
+      &hellip;<span class="print-invisible"> the class <code>print-invisible</code></span> will hide contents when
+      printing.
+      Hidden elements can be brought back using classes <code>print-block</code>, <code>print-inline-block</code> &
+      <code>print-inline</code>.
+      All <abbr title="abbreviation"><code>&lt;abbr&gt;</code></abbr> elements have their <code>title</code> printed
+      after them.
+      <strong class="print-hidden">Print this page as a pdf to see the effects!</strong>
     </p>
 
     <h2>Displaying content only for print</h2>
