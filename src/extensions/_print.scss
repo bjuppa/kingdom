@@ -8,6 +8,10 @@
 }
 
 @media print {
+  body {
+    color: #000;
+    background: #fff;
+  }
 
   // Print only
   .print-only-block {
