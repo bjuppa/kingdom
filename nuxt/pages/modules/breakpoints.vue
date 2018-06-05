@@ -4,6 +4,9 @@
       <small>Module:</small>
       Breakpoints
     </h1>
+    <p>
+      Coming soon
+    </p>
     <p class="current-device-breakpoint">
       Current device breakpoint:
     </p>
