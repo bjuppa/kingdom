@@ -110,4 +110,9 @@
       color-adjust: economy;
     }
   }
+
+  .print-remove-shadows {
+    box-shadow: none !important;
+    text-shadow: none !important;
+  }
 }

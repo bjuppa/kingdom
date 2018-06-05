@@ -56,6 +56,7 @@
       <code class="background-color-gray-300 print-background-transparent">print-background-transparent</code>
       that will remove the background and set color to <code>inherit</code> for contrast on black & white printers
       too.
+      Class <code>print-remove-shadows</code> will remove any box- and text-shadows when printing.
     </p>
   </main>
 </template>
