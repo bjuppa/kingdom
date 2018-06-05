@@ -45,7 +45,7 @@
       }
 
       &:local-link:after {
-        content: "";
+        content: ""; // Can't extend .hide-href because :local-link is not a valid css selector (yet)
       }
     }
   }
