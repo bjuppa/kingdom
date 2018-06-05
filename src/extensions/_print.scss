@@ -91,7 +91,7 @@
 
   .print-background-transparent {
     background: transparent;
-    color: currentColor;
+    color: inherit;
   }
 
   @media (color) {

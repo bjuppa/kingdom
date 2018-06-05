@@ -49,12 +49,12 @@
     <h2>Printing backgrounds</h2>
     <p class="background-color-gray-100 print-background-exact">
       Most browsers won't print backgrounds by default but in WebKit and Firefox the class
-      <code>print-exact-backgrounds</code> will make backgrounds print on color printers.
+      <code>print-background-exact</code> will make backgrounds print on color printers.
       If you don't want to print backgrounds, there's a class
-      <code class="background-color-gray-300 print-background-economy">print-economy-backgrounds</code>
+      <code class="background-color-gray-300 print-background-economy">print-background-economy</code>
       to override and also
       <code class="background-color-gray-300 print-background-transparent">print-background-transparent</code>
-      that will remove the background and set color to <code>currentColor</code> for contrast on black & white printers
+      that will remove the background and set color to <code>inherit</code> for contrast on black & white printers
       too.
     </p>
   </main>
