@@ -1,5 +1,5 @@
 <template>
-  <nav class="space-inside background-color-gray-100 baseline-shift-off">
+  <nav class="space-inside background-color-gray-500 baseline-shift-off">
     <ul class="list-inline space-children-horizontally text-3">
       <li>
         <reload-link to="/" class="block p-1 color-inherit no-underline">Main</reload-link>
@@ -20,9 +20,13 @@
         <reload-link to="/level-4-baseline"
                      class="block py-1 color-inherit no-underline">L4</reload-link>
       </li>
+      <li>
+        <reload-link to="/demo" target="basic-demo"
+                     class="block p-1 color-inherit no-underline">Demo</reload-link>
+      </li>
       <li class="float-right">
         <a href="https://github.com/bjuppa/kingdom/" target="_blank"
-           class="block py-1 color-inherit no-underline">GitHub</a>
+           class="block p-1 color-inherit no-underline">GitHub</a>
       </li>
     </ul>
   </nav>
