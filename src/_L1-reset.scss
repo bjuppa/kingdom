@@ -8,7 +8,7 @@ $body-padding: 0 !default;
 // https://github.com/shankariyerr/tinyreset
 
 
-// Set up colors
+// Register default colors
 @import "modules/colors";
 
 // Generate a primary color and corresponding text color if not already defined in $colors map
@@ -27,10 +27,18 @@ $body-padding: 0 !default;
 // Set visited link color if not already defined in $colors map
 @include register-color(visited, get-color(link), $ensure-text-color: false);
 
+// Set caution background and text color if not already defined in $colors map
+@include register-color(caution, normalize-color(transform-hue-with-contrast(get-color(primary), red)));
+
+// Set disabled background and text color if not already defined in $colors map
+@include register-color(disabled, change_color(get-color(body), $saturation: 1%, $lightness: 90%, $alpha: .75) change_color(get-color(body), $saturation: 1%, $lightness: 50%));
+
 // Import other modules
 @import "modules/sizing";
 @import "modules/element-types";
 @import "modules/borders";
+
+// Start resetting
 
 body {
   padding: $body-padding;

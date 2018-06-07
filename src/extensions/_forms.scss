@@ -2,12 +2,6 @@
 @import "../modules/colors";
 @import "../modules/layout";
 
-// Set caution background and text color if not already defined in $colors map
-@include register-color(caution, normalize-color(transform-hue-with-contrast(get-color(primary), red)));
-
-// Set disabled background and text color if not already defined in $colors map
-@include register-color(disabled, change_color(get-color(body), $saturation: 1%, $lightness: 90%, $alpha: .75) change_color(get-color(body), $saturation: 1%, $lightness: 50%));
-
 $input-border-color: change_color(get-color(body), $saturation: 5%, $lightness: 75%) !default;
 $input-border-width: 1px !default;
 $input-border-radius: $spacing-base/8 !default;
