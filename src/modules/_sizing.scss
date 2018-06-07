@@ -24,7 +24,7 @@ $readable-line-length-max: 75ch !default;
       $factor: round($line-height/$spacing-base);
       --line-height: calc(#{$factor} * var(--spacing-base, #{$spacing-base}));
     } @else {
-      --line-height: $line-height;
+      --line-height: #{$line-height};
     }
     line-height: var(--line-height);
   }

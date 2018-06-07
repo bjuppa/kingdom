@@ -19,8 +19,8 @@ $spacing-fractions: (
 @import "../modules/sizing";
 
 :root {
-  --spacing-base: $spacing-base;
-  --paragraph-spacing-factor: $paragraph-spacing-factor;
+  --spacing-base: #{$spacing-base};
+  --paragraph-spacing-factor: #{$paragraph-spacing-factor};
 }
 
 /* %mt-paragraph */
