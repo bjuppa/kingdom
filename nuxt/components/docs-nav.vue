@@ -1,6 +1,6 @@
 <template>
   <nav class="space-inside background-color-gray-500 baseline-shift-off">
-    <ul class="list-inline space-children-horizontally text-3">
+    <ul class="list-inline space-children-horizontally text-3-block font-headings mt-0">
       <li>
         <reload-link to="/" class="block p-1 color-inherit no-underline">Main</reload-link>
       </li>
