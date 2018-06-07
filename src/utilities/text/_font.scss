@@ -1,0 +1,17 @@
+// Utilities for fonts
+
+.font-body {
+  @extend %font-body;
+}
+
+.font-headings {
+  @extend %font-headings;
+}
+
+.font-forms {
+  @extend %font-forms;
+}
+
+.font-monospace {
+  @extend %font-monospace;
+}
