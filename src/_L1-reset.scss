@@ -7,8 +7,9 @@ $body-padding: 0 !default;
 // https://github.com/tailwindcss/tailwindcss/blob/master/css/preflight.css
 // https://github.com/shankariyerr/tinyreset
 
+
+// Set up colors
 @import "modules/colors";
-@import "modules/sizing";
 
 // Generate a primary color and corresponding text color if not already defined in $colors map
 @include register-color(primary, hsl(random(361), 30+random(60), 20+random(60)));
@@ -26,6 +27,8 @@ $body-padding: 0 !default;
 // Set visited link color if not already defined in $colors map
 @include register-color(visited, get-color(link), $ensure-text-color: false);
 
+// Import other modules
+@import "modules/sizing";
 @import "modules/element-types";
 @import "modules/borders";
 
