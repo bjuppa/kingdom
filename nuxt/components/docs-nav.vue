@@ -2,7 +2,7 @@
   <nav class="space-inside background-color-gray-100 baseline-shift-off">
     <ul class="list-inline space-children-horizontally text-3">
       <li>
-        <reload-link to="/" class="block py-1 color-inherit no-underline">Main</reload-link>
+        <reload-link to="/" class="block p-1 color-inherit no-underline">Main</reload-link>
       </li>
       <li>
         <reload-link to="/level-1-reset"
