@@ -14,23 +14,26 @@ $body-padding: 0 !default;
 // Generate a primary color and corresponding text color if not already defined in $colors map
 @include register-color(primary, hsl(random(361), 30+random(60), 20+random(60)));
 
-// Set body background and text color if not already defined in $colors map
+// Generate body background and text color if not already defined in $colors map
 @if lightness(get-color(primary)) < 50% {
   @include register-color(body, scale_color(adjust_hue(get-color(primary), 120deg), $lightness: 99%, $saturation: -75%));
 } @else {
   @include register-color(body, scale_color(adjust_hue(get-color(primary), -120deg), $lightness: -70%, $saturation: -85%));
 }
 
-// Set link color if not already defined in $colors map
+// Generate link color if not already defined in $colors map
 @include register-color(link, mix(change_color(transform-hue(get-color(primary), blue), $lightness: 50%, $saturation: 100%), desaturate(get-color(body, true), 100%), 50%), $ensure-text-color: false);
 
-// Set visited link color if not already defined in $colors map
+// Generate visited link color if not already defined in $colors map
 @include register-color(visited, get-color(link), $ensure-text-color: false);
 
-// Set caution background and text color if not already defined in $colors map
+// Generate a border color if not already defined in $colors map
+@include register-color(border, currentColor);
+
+// Generate caution background and text color if not already defined in $colors map
 @include register-color(caution, normalize-color(transform-hue-with-contrast(get-color(primary), red)));
 
-// Set disabled background and text color if not already defined in $colors map
+// Generate disabled background and text color if not already defined in $colors map
 @include register-color(disabled, change_color(get-color(body), $saturation: 1%, $lightness: 90%, $alpha: .75) change_color(get-color(body), $saturation: 1%, $lightness: 50%));
 
 // Import other modules
