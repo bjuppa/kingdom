@@ -1,7 +1,7 @@
 <template>
-    <a v-bind:href="href">
-        <slot></slot>
-    </a>
+  <a v-bind:href="href" v-bind:aria-current="current">
+    <slot></slot>
+  </a>
 </template>
 
 <script>
@@ -13,8 +13,14 @@
       append: Boolean
     },
     computed: {
+      route () {
+        return this.$router.resolve(this.to, this.$route, this.append);
+      },
       href () {
-        return this.$router.resolve(this.to, this.$route, this.append).href;
+        return this.route.href;
+      },
+      current () {
+        return this.$route.fullPath == this.href ? 'page' : false;
       }
     }
   };

@@ -41,3 +41,10 @@
     }
   };
 </script>
+
+
+<style>
+  a[aria-current="page"] {
+    text-decoration: underline;
+  }
+</style>
