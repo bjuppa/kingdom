@@ -21,7 +21,10 @@ h1, h2, h3, h4, h5, h6, legend, caption {
   }
 }
 
-.baseline-shift-off,
-.baseline-shift-off-inside * {
+.baseline-shift-off {
   @extend %baseline-shift-off;
+
+  %baseline-shift {
+    @extend %baseline-shift-off;
+  }
 }
