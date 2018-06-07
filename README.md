@@ -41,7 +41,7 @@ $colors: (primary: rgb(71, 40, 43));
 // Here's a quick example of a card component you could write:
 .my-card {
   @extend %border;
-  @include set-space-inside();
+  @include space-inside();
 }
 // ...
 ```
