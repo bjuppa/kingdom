@@ -40,12 +40,12 @@
         but of course also here on this unstyled element.
       </li>
       <li>The
-        <reload-link to="" :append="true" style="color: var(--color-link)"><code>link</code> color</reload-link>
+        <reload-link to="" append class="color-link"><code>link</code> color</reload-link>
         on the body background.
       </li>
       <li>The
-        <reload-link to="" :append="true" style="color: var(--color-visited)"><code>visited</code> link
-          color</reload-link> on the body background.
+        <reload-link to="" append class="color-visited"><code>visited</code> link color</reload-link>
+        on the body background.
       </li>
       <li>
         <div class="border inline-block space-inside">
@@ -53,10 +53,12 @@
         </div>
       </li>
       <li>
-        The <code class="color-caution">caution</code> color can be used for warnings and errors.
+        The <code class="color-caution">caution</code> color
+        and its <span class="background-color-caution">text color</span>
+        can be used for warnings and errors.
       </li>
       <li>
-        The <code class="background-color-disabled">disabled</code> background and text colors can be used to indicate
+        The <code class="background-color-disabled">disabled</code> background & text colors can be used to indicate
         disabled elements.
       </li>
     </ul>
