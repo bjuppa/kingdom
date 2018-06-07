@@ -38,7 +38,7 @@ $button-destructive-focus-box-shadow: set_nth($button-focus-box-shadow, -1, chan
 
 /* %label-disabled */
 %label-disabled {
-  color: get-color(disabled, true);
+  @include apply-color(disabled, $apply-text-color: true);
 }
 
 /* %label-invalid */
@@ -70,11 +70,11 @@ input, textarea, select {
   border-radius: $input-border-radius;
 
   &:invalid, &[aria-invalid] {
-    border-color: get-color(caution);
+    @include apply-color(caution, border-color);
   }
 
   &:disabled {
-    background-color: get-color(disabled);
+    @include apply-background-color(disabled, $apply-text-color: false);
   }
 
   &:focus {
@@ -99,7 +99,7 @@ input, textarea {
   }
 
   &:read-only {
-    background-color: get-color(disabled);
+    @include apply-background-color(disabled, $apply-text-color: false);
   }
 }
 
@@ -192,7 +192,7 @@ label[aria-invalid] {
     pointer-events: none;
 
     @include apply-background-color(disabled);
-    border-color: get-color(disabled);
+    border-color: get-color(disabled); // For browsers that don't support transparent
     border-color: transparent;
 
     box-shadow: none;
