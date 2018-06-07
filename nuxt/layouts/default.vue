@@ -14,3 +14,9 @@
     }
   };
 </script>
+
+<style>
+  .nuxt-progress + * {
+    margin-top: 0;
+  }
+</style>
