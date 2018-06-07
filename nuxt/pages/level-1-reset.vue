@@ -52,6 +52,13 @@
           The <code>border</code> color defaults to <code>currentColor</code>.
         </div>
       </li>
+      <li>
+        The <code class="color-caution">caution</code> color can be used for warnings and errors.
+      </li>
+      <li>
+        The <code class="background-color-disabled">disabled</code> background and text colors can be used to indicate
+        disabled elements.
+      </li>
     </ul>
 
     <h3>Sans-serif font for bright text</h3>
