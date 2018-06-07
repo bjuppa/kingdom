@@ -1,11 +1,11 @@
 <template>
-  <nav class="space-inside">
-    <ul class="list-inline space-children-horizontally">
+  <nav class="space-inside background-color-gray-100">
+    <ul class="list-inline space-children-horizontally text-3">
       <li>
-        <reload-link to="/">Main</reload-link>
+        <reload-link to="/" class="block py-1 color-inherit no-underline">Main</reload-link>
       </li>
       <li>
-        <a href="https://github.com/bjuppa/kingdom/" target="_blank">GitHub</a>
+        <a href="https://github.com/bjuppa/kingdom/" target="_blank" class="block py-1 color-inherit no-underline">GitHub</a>
       </li>
     </ul>
   </nav>
