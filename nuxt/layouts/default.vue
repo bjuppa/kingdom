@@ -20,7 +20,7 @@
   export default {
     components: {
       ReloadLink,
-      'docs-nav': DocsNav
+      DocsNav
     }
   };
 </script>
