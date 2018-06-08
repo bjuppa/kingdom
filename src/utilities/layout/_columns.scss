@@ -3,7 +3,7 @@
 
 .columns-readable,
 .columns-readable-viewport {
-  @include width-readable();
+  max-width: $readable-line-length-max;
 }
 
 @supports (column-span: all) {
