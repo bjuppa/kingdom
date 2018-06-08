@@ -4,10 +4,6 @@
 
 .flex {
   display: flex;
-
-  > * {
-    @extend %m-0;
-  }
 }
 
 .inline-flex {
