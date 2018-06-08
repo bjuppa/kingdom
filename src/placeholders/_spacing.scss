@@ -26,7 +26,7 @@ $spacing-fractions: (
 /* %mt-paragraph */
 %mt-paragraph {
   margin-top: $paragraph-spacing-factor * $spacing-base;
-  margin-top: calc(var(--paragraph-spacing-factor) * var(--line-height) * #{if(unitless(nth($line-heights, 1)), 1em, 1)});
+  margin-top: calc(var(--paragraph-spacing-factor) * var(--spacing-base));
 }
 
 // Margin placeholders are ordered with all sides in combination first (only 0) (`m`), being overwritten by:
