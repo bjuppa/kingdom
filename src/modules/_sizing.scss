@@ -30,8 +30,10 @@ $readable-line-length-max: 75ch !default;
   }
 }
 
-@mixin max-width-readable($max-width: $readable-line-length-max) {
+@mixin width-readable($max-width: 100%, $min-width: auto, $desired-width: $readable-line-length-max) {
   max-width: $max-width;
+  width: $desired-width;
+  min-width: $min-width;
 }
 
 @function minmax-readable($min-width: $readable-line-length-min, $max-width: $readable-line-length-max) {

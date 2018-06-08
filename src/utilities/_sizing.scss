@@ -51,7 +51,7 @@ $fraction-sizing-utilities: (
 .w-readable,
 .w-readable-children > *,
 .w-readable-paragraphs p {
-  @include max-width-readable();
+  @include width-readable();
 }
 
 .w-max-full {
