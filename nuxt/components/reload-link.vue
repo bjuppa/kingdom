@@ -20,7 +20,7 @@
         return this.route.href;
       },
       current () {
-        return this.$route.fullPath == this.href ? 'page' : false;
+        return this.$route.fullPath == this.route.route.fullPath ? 'page' : false;
       }
     }
   };
