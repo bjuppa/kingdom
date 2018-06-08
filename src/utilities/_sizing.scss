@@ -63,7 +63,7 @@ $fraction-sizing-utilities: (
 }
 
 .w-max-third {
-  max-width: 100%/3;
+  max-width: calc(100%/3);
 }
 
 .w-max-quarter {
@@ -75,7 +75,7 @@ $fraction-sizing-utilities: (
 }
 
 .w-max-sixth {
-  max-width: 100%/6;
+  max-width: calc(100%/6);
 }
 
 .w-fit-content {
