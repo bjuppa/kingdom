@@ -30,6 +30,13 @@
       applies in Level&nbsp;3 too.
     </p>
 
+    <aside class="visualize-vertical-rhythm">
+      <p>
+        You can see some sections on this and other pages in the documentation display a thin line for each rhythm unit
+        in the background using the class <code>visualize-vertical-rhythm</code>.
+      </p>
+    </aside>
+
     <h2>Consistent text</h2>
     <p>
       Whereas <reload-link to="/level-2-sizing">the 2nd level of Kingdom</reload-link> generates font-sizes following a
