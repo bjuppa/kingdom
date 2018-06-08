@@ -5,7 +5,9 @@
     <nuxt/>
     <div class="background-color-primary mt-3 space-inside">
       <nav class="text-center">
-        <reload-link to="#top" relative class="inline-block p-1 color-inherit">&#10224; To top of page &#10224;</reload-link>
+        <reload-link to="#top" relative class="inline-block p-1 color-inherit">
+          &#10224; To top of page &#10224;
+        </reload-link>
       </nav>
     </div>
   </div>
