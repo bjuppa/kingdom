@@ -1,5 +1,5 @@
 <template>
-  <nav class="space-inside background-color-primary baseline-shift-off clearfix">
+  <nav class="space-inside background-color-primary baseline-shift-off clearfix my-0">
     <ul class="list-inline space-children-horizontally text-3-block font-headings font-thin my-0">
       <li>
         <reload-link to="/" class="block p-1 color-inherit no-underline">Main</reload-link>
