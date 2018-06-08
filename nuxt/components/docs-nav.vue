@@ -5,19 +5,19 @@
         <reload-link to="/" class="block p-1 color-inherit no-underline">Main</reload-link>
       </li>
       <li>
-        <reload-link to="/level-1-reset"
+        <reload-link to="/level-1-reset" title="Level 1"
                      class="block py-1 color-inherit no-underline">L1</reload-link>
       </li>
       <li>
-        <reload-link to="/level-2-sizing"
+        <reload-link to="/level-2-sizing" title="Level 2"
                      class="block py-1 color-inherit no-underline">L2</reload-link>
       </li>
       <li>
-        <reload-link to="/level-3-rhythm"
+        <reload-link to="/level-3-rhythm" title="Level 3"
                      class="block py-1 color-inherit no-underline">L3</reload-link>
       </li>
       <li>
-        <reload-link to="/level-4-baseline"
+        <reload-link to="/level-4-baseline" title="Level 4"
                      class="block py-1 color-inherit no-underline">L4</reload-link>
       </li>
       <li>
