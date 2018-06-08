@@ -43,7 +43,7 @@
 </script>
 
 
-<style>
+<style scoped>
   a[aria-current="page"] {
     text-decoration: underline;
   }
