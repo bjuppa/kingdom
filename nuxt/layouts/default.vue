@@ -1,9 +1,10 @@
 <template>
-  <div>
-    <reload-link to="#main" relative class="sr-only-focusable inline-block mx-1/4">Skip to main content<sub aria-hidden="true">&#8617;</sub></reload-link>
+  <div class="flex flex-col h-min-viewport">
+    <reload-link to="#main" relative class="sr-only-focusable inline-block mx-1/4">Skip to main content<sub
+      aria-hidden="true">&#8617;</sub></reload-link>
     <docs-nav></docs-nav>
-    <nuxt id="main"/>
-    <footer class="background-color-primary mt-3 space-inside">
+    <nuxt id="main" class="flex-grow flex-no-shrink"/>
+    <footer class="background-color-primary mt-3 space-inside flex-no-shrink">
       <nav class="text-center">
         <reload-link to="#main" relative class="inline-block p-1 color-inherit">
           <span aria-hidden="true">&#10224; </span>Back to top of main content<span aria-hidden="true"> &#10224;</span>
