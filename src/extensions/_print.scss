@@ -44,7 +44,7 @@
     text-decoration: none;
     font-weight: bolder;
 
-    &:after {
+    &::after {
       content: " <" attr(href) ">";
     }
   }
@@ -55,12 +55,12 @@
         @extend .print-href;
       }
 
-      &.hide-href:after {
+      &.hide-href::after {
         /* Add class hide-href on a link to not print a link */
         content: "";
       }
 
-      &:local-link:after {
+      &:local-link::after {
         content: ""; // Can't extend .hide-href because :local-link is not a valid css selector (yet)
       }
     }
@@ -123,7 +123,7 @@
   abbr[title] {
     text-decoration: none;
 
-    &:after {
+    &::after {
       content: " (" attr(title) ")";
     }
   }

@@ -20,13 +20,13 @@
   & > * {
     @include display-inline();
 
-    &:after {
+    &::after {
       content: ', ';
     }
-    &:nth-last-child(2):after {
+    &:nth-last-child(2)::after {
       content: ' & ';
     }
-    &:last-child:after {
+    &:last-child::after {
       content: '';
     }
   }

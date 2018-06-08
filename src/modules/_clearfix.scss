@@ -1,7 +1,7 @@
 // Clearfix from https://css-tricks.com/snippets/css/clear-fix/
 
 @mixin clearfix {
-  &:after {
+  &::after {
     content: "";
     display: table;
     clear: both;
