@@ -54,6 +54,10 @@ $fraction-sizing-utilities: (
   @include max-width-readable();
 }
 
+.w-max-full {
+  max-width: 100%
+}
+
 .w-max-half {
   max-width: 50%;
 }
