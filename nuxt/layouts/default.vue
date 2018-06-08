@@ -1,6 +1,6 @@
 <template>
   <div>
-    <reload-link to="#main" relative class="sr-only-focusable inline-block mx-1/4">Skip to main content<small aria-hidden="true">&#8617;</small></reload-link>
+    <reload-link to="#main" relative class="sr-only-focusable inline-block mx-1/4">Skip to main content<sub aria-hidden="true">&#8617;</sub></reload-link>
     <docs-nav></docs-nav>
     <nuxt id="main"/>
     <footer class="background-color-primary mt-3 space-inside">
