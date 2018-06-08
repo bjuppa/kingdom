@@ -5,10 +5,6 @@
 
 .grid {
   display: grid;
-
-  > * {
-    @extend %m-0;
-  }
 }
 
 .grid-auto-flow-column {
