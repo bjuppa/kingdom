@@ -10,12 +10,15 @@
       Kingdom's 3rd level helps you achieve this by carefully fitting font-sizes with line-heights that are such
       multiples.
     </p>
-    <p>
-      The absolute line-height of the body text will be equal to the vertical rhythm base, whereas the line-height
-      of a larger heading element could be two multiples, or more, of the vertical rhythm base.
-      Because blocks of text take up the height of all their lines combined, the block itself will also be a
-      multiple of the vertical rhythm base.
-    </p>
+    <div class="w-readable columns-2 visualize-vertical-rhythm">
+      <h2 class="text-4-block color-gray-500">Every space is a whole multiple</h2>
+      <p>
+        The absolute line-height of the body text will be equal to the vertical rhythm base, whereas the line-height
+        of a larger heading element could be two multiples, or more, of the vertical rhythm base.
+        Because blocks of text take up the height of all their lines combined, the block itself will also be a
+        multiple of the vertical rhythm base.
+      </p>
+    </div>
     <p>
       This webpage is displayed with Level&nbsp;3 and all utilities of Kingdom applied so you can quickly see its
       effects in your particular browser.
@@ -102,12 +105,12 @@
     </p>
     <p>
       For most cases it's easiest to just extend your class with the border placeholders
-      or use the border utility classes directly on your elements.
+      or use the <reload-link to="/utilities/borders">border utility classes</reload-link> directly on your elements.
     </p>
 
     <h3>Thematic breaks</h3>
     <p>
-      To make <code>&lt;hr&gt;</code> elements take up one full "line" in the vertical flow, Kingdom gives them a fixed
+      To make <code>&lt;hr&gt;</code> elements not push the vertical flow out of sync, Kingdom gives them a fixed
       height along with a negative <code>margin-bottom</code> of the same amount to move the adjacent sibling closer.
     </p>
     <hr>
