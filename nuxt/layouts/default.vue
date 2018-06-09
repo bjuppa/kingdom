@@ -5,7 +5,7 @@
     <docs-nav></docs-nav>
     <nuxt id="main" class="flex-grow"/>
     <nav class="background-color-gray-700 mt-2 p-1 text-center">
-      <reload-link to="#main" relative class="inline-block p-1 color-inherit">
+      <reload-link to="#main" relative class="inline-block p-1">
         <span aria-hidden="true">&#10224; </span>Back to top of main content<span aria-hidden="true"> &#10224;</span>
       </reload-link>
     </nav>

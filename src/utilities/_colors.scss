@@ -23,6 +23,12 @@ $gray-color-utilities: (900: 10%, 700: 30%, 500: 50%, 300: 70%, 100: 90%) !defau
   @if (length($color-pair) > 1) {
     .background-color-#{$name} {
       @include apply-background-color($name);
+
+      @if ($name != body) {
+        :link, :visited {
+          color: currentColor;
+        }
+      }
     }
   }
 }
