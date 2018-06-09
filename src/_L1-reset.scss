@@ -211,11 +211,11 @@ button, [type='button'], [type='reset'], [type='submit'] {
   }
 }
 
-*:link {
+:link {
   @include apply-color(link);
 }
 
-*:visited {
+:visited {
   @include apply-color(visited);
 }
 
