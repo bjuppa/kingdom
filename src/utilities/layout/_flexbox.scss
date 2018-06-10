@@ -8,10 +8,6 @@
 
 .inline-flex {
   display: inline-flex;
-
-  > * {
-    @extend %m-0;
-  }
 }
 
 // Direction
