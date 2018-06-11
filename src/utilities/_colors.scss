@@ -16,7 +16,7 @@ $gray-color-utilities: (900: 10%, 800: 20%, 700: 30%, 600: 40%, 500: 50%, 400: 6
 }
 
 .links-color-currentColor {
-  :link, :visited {
+  :link, :visited, &:link, &:visited {
     color: currentColor;
   }
 }
@@ -27,7 +27,7 @@ $gray-color-utilities: (900: 10%, 800: 20%, 700: 30%, 600: 40%, 500: 50%, 400: 6
   }
 
   .links-color-#{$name} {
-    :link, :visited {
+    :link, :visited, &:link, &:visited {
       @extend .color-#{$name};
     }
   }
