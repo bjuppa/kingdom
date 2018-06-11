@@ -20,7 +20,15 @@ $gray-color-utilities: (900: 10%, 800: 20%, 700: 30%, 600: 40%, 500: 50%, 400: 6
     @include apply-color($name);
   }
 
+  .border-color-#{$name} {
+    @include apply-color($name, border-color);
+  }
+
   @if (length($color-pair) > 1) {
+    .border-color-#{$name}-text {
+      @include apply-color($name, border-color, $apply-text-color: true);
+    }
+
     .background-color-#{$name} {
       @include apply-background-color($name);
 
@@ -43,4 +51,8 @@ $gray-color-utilities: (900: 10%, 800: 20%, 700: 30%, 600: 40%, 500: 50%, 400: 6
 
 .background-color-transparent {
   background-color: transparent;
+}
+
+.border-color-transparent {
+  border-color: transparent;
 }
