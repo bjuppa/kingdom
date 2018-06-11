@@ -1,4 +1,4 @@
-// Utilities for white-pace & line wrapping
+// Utilities for white-space & line wrapping
 
 .whitespace-normal {
   white-space: normal;
@@ -31,5 +31,4 @@
 .truncate {
   overflow: hidden;
   text-overflow: ellipsis;
-  white-space: nowrap;
 }
