@@ -75,3 +75,25 @@
 .flex-no-shrink {
   flex-shrink: 0;
 }
+
+// Flex basis
+
+.flex-basis-fill {
+  flex-basis: fill;
+}
+
+.flex-basis-max-content {
+  flex-basis: max-content;
+}
+
+.flex-basis-min-content {
+  flex-basis: min-content;
+}
+
+.flex-basis-fit-content {
+  flex-basis: fit-content;
+}
+
+.flex-basis-content {
+  flex-basis: content;
+}
