@@ -1,5 +1,5 @@
 <template>
-  <nav class="space-inside background-color-primary baseline-shift-off clearfix flex text-3-block font-headings font-thin my-0">
+  <nav class="background-color-primary baseline-shift-off clearfix flex text-3-block font-headings font-thin my-0">
     <ul class="list-inline float-left space-children-horizontally my-0">
       <li>
         <reload-link to="/" class="block p-1 no-underline">Main</reload-link>
@@ -25,8 +25,11 @@
                      class="block p-1 no-underline">Demo</reload-link>
       </li>
     </ul>
-    <a href="https://github.com/bjuppa/kingdom/" target="_blank"
-       class="block float-right ml-auto p-1 no-underline">GitHub</a>
+    <ul class="list-inline float-right ml-auto align-self-start space-children-horizontally background-color-gray-700 my-0">
+      <li>
+        <a href="https://github.com/bjuppa/kingdom/" target="_blank" class="block p-1 no-underline">GitHub</a>
+      </li>
+    </ul>
   </nav>
 </template>
 
