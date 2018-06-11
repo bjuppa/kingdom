@@ -1,7 +1,7 @@
 // Utilities for colors
 @import "../modules/colors";
 
-$gray-color-utilities: (900: 10%, 700: 30%, 500: 50%, 300: 70%, 100: 90%) !default;
+$gray-color-utilities: (900: 10%, 800: 20%, 700: 30%, 600: 40%, 500: 50%, 400: 60%, 300: 70%, 200: 80%, 100: 90%) !default;
 @each $gray-color-suffix, $gray-color-lightness in $gray-color-utilities {
   @include register-color(gray-#{$gray-color-suffix}, change_color(get-color(primary), $lightness: $gray-color-lightness, $saturation: 2%));
 }
