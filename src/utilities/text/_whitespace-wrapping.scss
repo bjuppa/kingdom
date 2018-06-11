@@ -21,11 +21,11 @@
 }
 
 .break-words {
-  word-wrap: break-word;
+  overflow-wrap: break-word;
 }
 
 .break-normal {
-  word-wrap: normal;
+  overflow-wrap: normal;
 }
 
 .truncate {
