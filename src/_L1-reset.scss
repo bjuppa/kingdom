@@ -55,6 +55,8 @@ html {
 
 hr {
   border-top-width: 1px;
+  // Firefox default hr color is gray
+  color: inherit;
 }
 
 // Make sure elements are not displayed
