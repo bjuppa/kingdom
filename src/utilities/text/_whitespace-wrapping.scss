@@ -32,3 +32,15 @@
   overflow: hidden;
   text-overflow: ellipsis;
 }
+
+.hyphens-none {
+  hyphens: none;
+}
+
+.hyphens-manual {
+  hyphens: manual;
+}
+
+.hyphens-auto {
+  hyphens: auto;
+}
