@@ -47,19 +47,19 @@
       text-2-block with <span class="text-1">text-1</span> inside
       and some more text to break lines
     </p>
-    <hr>
+    <hr class="h-px">
     <p>
       This is a&hellip;<br>
       text-1-block with <span class="text-2">text-2</span> inside
       and some more text to break lines
     </p>
-    <hr>
+    <hr class="h-px">
     <p class="text-1-block">
       This is a&hellip;<br>
       text-1-block with <span class="text-4">text-4</span> inside
       and some more text to break lines
     </p>
-    <hr>
+    <hr class="h-px">
 
     <ul>
       <li>Normal list</li>
@@ -108,7 +108,7 @@
       <dd>Etiam porta sem malesuada magna mollis euismod.</dd>
     </dl>
 
-    <hr>
+    <hr class="h-px">
 
     <table>
       <caption>Simple table</caption>
@@ -131,7 +131,7 @@
       </tbody>
     </table>
 
-    <hr>
+    <hr class="h-px">
 
     <table class="border">
       <caption>Advanced table</caption>
@@ -168,7 +168,7 @@
       </tfoot>
     </table>
 
-    <hr>
+    <hr class="h-px">
 
     <p class="text-6-block">
       Text-size&nbsp;6
@@ -178,63 +178,63 @@
     </p>
 
     <h2>This is a heading 2 that should be long enough to line break</h2>
-    <hr>
+    <hr class="h-px">
     <h3>This is a heading 3 that should be long enough to line break</h3>
-    <hr>
+    <hr class="h-px">
     <h4>This is a heading 4 that should be long enough to line break because it has more words</h4>
-    <hr>
+    <hr class="h-px">
     <h5>This is a heading 5 that should be long enough to line break because it has more words</h5>
-    <hr>
+    <hr class="h-px">
 
     <div class="h-1">Fixed height div</div>
-    <hr>
+    <hr class="h-px">
     <p class="h-1">Fixed height paragraph</p>
-    <hr>
+    <hr class="h-px">
     <div class="h-2 border space-inside">Fixed height bordered div</div>
-    <hr>
+    <hr class="h-px">
     <p class="h-2 border space-inside">Fixed height bordered paragraph</p>
-    <hr>
+    <hr class="h-px">
     <div class="border space-inside">Bordered div</div>
-    <hr>
+    <hr class="h-px">
     <p class="border space-inside">Bordered paragraph</p>
-    <hr>
+    <hr class="h-px">
     <div class="border space-inside float-left w-max-half">
       <p>Paragraph within a bordered floated div</p>
     </div>
     <p class="space-inside float-left w-max-half">Floated paragraph</p>
-    <hr class="clear-both">
+    <hr class="clear-both h-px">
     <p class="underline">
       <span class=" float-right color-primary text-inherit underline">A floated element</span>
       A paragraph with a floated element inside
     </p>
-    <hr class="clear-both">
+    <hr class="clear-both h-px">
     <div>
       <p class=" float-right color-primary underline">A floated paragraph</p>
       <p class="underline">
         A paragraph with a floated element outside
       </p>
     </div>
-    <hr class="clear-both">
+    <hr class="clear-both h-px">
 
     <form onsubmit="return false;">
       <label for="input1">A label</label>
       <input id="input1" placeholder="input" size="4">
-      <hr>
+      <hr class="h-px">
       <label><input type="checkbox">Checkbox A</label>
       <label><input type="checkbox">Checkbox B</label>
-      <hr>
+      <hr class="h-px">
       <label><input type="radio" name="radio">Radio A</label>
       <label><input type="radio" name="radio">Radio B</label>
-      <hr>
+      <hr class="h-px">
       <button>Button</button>
 
-      <hr>
+      <hr class="h-px">
 
       <fieldset>
         <label for="fieldsetInput1">Label in fieldset</label>
         <input id="fieldsetInput1">
       </fieldset>
-      <hr>
+      <hr class="h-px">
       <fieldset>
         <legend>Fieldset with a legend</legend>
         <label for="fieldsetInput2">Label in fieldset</label>
@@ -247,12 +247,12 @@
         <input id="fieldsetInput3">
       </fieldset>
 
-      <hr>
+      <hr class="h-px">
 
       <select id="select1">
         <option>Select</option>
       </select>
-      <hr>
+      <hr class="h-px">
       <select id="selectMultiple" multiple>
         <option>Option 1</option>
         <option>Option 2</option>
@@ -263,15 +263,15 @@
         <option>Option 3</option>
       </select>
 
-      <hr>
+      <hr class="h-px">
 
       <label for="textarea1">A label</label>
       <textarea id="textarea1" placeholder="Textarea"></textarea>
-      <hr>
+      <hr class="h-px">
       <input type="button" value="Button input">
     </form>
 
-    <hr>
+    <hr class="h-px">
 
     <form onsubmit="return false;">
       Inputs on a line
@@ -287,7 +287,7 @@
       ...and some text after.
     </form>
 
-    <hr>
+    <hr class="h-px">
 
   </div>
 

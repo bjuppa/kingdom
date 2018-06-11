@@ -51,7 +51,7 @@
 
     </form>
 
-    <hr>
+    <hr class="h-px">
 
     <form class="form-inline space-children-horizontally mt-1-children mt-0" onsubmit="return false;">
       <button class="button-prime">Prime button</button>
@@ -73,7 +73,7 @@
       <button class="button-petty" disabled>Petty disabled button</button>
     </form>
 
-    <hr>
+    <hr class="h-px">
 
     <form class="form-inline" onsubmit="return false;">
       <input disabled value="disabled">
@@ -109,7 +109,7 @@
       <button>Button</button>
     </form>
 
-    <hr>
+    <hr class="h-px">
 
   </div>
 </template>

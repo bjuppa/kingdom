@@ -115,12 +115,19 @@
       or use the <reload-link to="/utilities/borders">border utility classes</reload-link> directly on your elements.
     </p>
 
-    <h3>Thematic breaks</h3>
-    <p>
-      To make <code>&lt;hr&gt;</code> elements not push the vertical flow out of sync, Kingdom gives them a fixed
-      height along with a negative <code>margin-bottom</code> of the same amount to move the adjacent sibling closer.
-    </p>
-    <hr>
+    <div class="visualize-vertical-rhythm">
+      <h3>Thematic breaks</h3>
+      <p>
+        To make <code>&lt;hr&gt;</code> elements not push the vertical flow out of sync, Kingdom gives them a fixed
+        height and makes the background image a centered <code>1px</code> line.
+      </p>
+      <hr>
+      <p>
+        If you want tighter spacing around the line you may use the utility class <code>h-px</code> to reduce the vertical
+        space taken up by the <code>&lt;hr&gt;</code> to none.
+      </p>
+      <hr class="h-px">
+    </div>
 
     <h3>Form elements</h3>
     <p>
@@ -156,13 +163,13 @@
 </template>
 
 <style lang="scss">
-  @import "~assets/_variables.scss";
-  @import "~assets/L3.scss";
+@import "~assets/_variables.scss";
+@import "~assets/L3.scss";
 </style>
 <script>
-  import ReloadLink from '../components/reload-link';
+import ReloadLink from "../components/reload-link";
 
-  export default {
-    components: { ReloadLink }
-  };
+export default {
+  components: { ReloadLink }
+};
 </script>
