@@ -15,6 +15,12 @@ $gray-color-utilities: (900: 10%, 800: 20%, 700: 30%, 600: 40%, 500: 50%, 400: 6
   }
 }
 
+.links-currentColor {
+  :link, :visited {
+    color: currentColor;
+  }
+}
+
 @each $name, $color-pair in $colors {
   .color-#{$name} {
     @include apply-color($name);
@@ -33,9 +39,7 @@ $gray-color-utilities: (900: 10%, 800: 20%, 700: 30%, 600: 40%, 500: 50%, 400: 6
       @include apply-background-color($name);
 
       @if ($name != body) {
-        :link, :visited {
-          color: currentColor;
-        }
+        @extend .links-currentColor;
       }
     }
   }
