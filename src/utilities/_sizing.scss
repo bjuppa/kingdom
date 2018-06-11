@@ -66,8 +66,32 @@ $fraction-sizing-utilities: (
   max-width: 100%
 }
 
+.w-max-five-sixths {
+  max-width: 83.33333%;
+}
+
+.w-max-four-fifths {
+  max-width: 80%;
+}
+
+.w-max-three-quarters {
+  max-width: 75%;
+}
+
+.w-max-two-thirds {
+  max-width: 66.66666%;
+}
+
+.w-max-three-fifths {
+  max-width: 60%;
+}
+
 .w-max-half {
   max-width: 50%;
+}
+
+.w-max-two-fifths {
+  max-width: 40%;
 }
 
 .w-max-third {
