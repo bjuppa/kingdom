@@ -32,10 +32,10 @@
 
     <div class="overflow-x-auto">
       <div class="columns-readable-viewport">
-        <h2>Staying within the viewport</h2>
+        <h2>Going horizontal</h2>
         <p>
-          This block has class <code>columns-readable-viewport</code> applied, which keeps the column height within the
-          viewport.
+          This block has class <code>columns-readable-viewport</code> applied, which keeps the column height comfortably
+          within the viewport.
           Around it is a wrapper with utility class <code>overflow-x-auto</code> that adds horizontal scrolling should
           the number of required columns grow out of the available width.
         </p>
