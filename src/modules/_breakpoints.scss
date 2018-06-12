@@ -4,16 +4,20 @@
 $device-breakpoints: (tablet-portait: 600px, tablet-landscape: 900px, desktop: 1200px, big-desktop: 1800px) !default;
 $named-breakpoints: () !default;
 
+@import "converters";
+
 @function get-breakpoint($name) {
   @return map-get(map-merge($device-breakpoints, $named-breakpoints), $name);
 }
 
 @if variable-exists(readable-line-length-min) {
-  $named-breakpoints: map-merge($named-breakpoints, (readable-line-length-min: $readable-line-length-min));
+  $named-breakpoints: map-merge($named-breakpoints, (readable-line-length-min: length-rem($readable-line-length-min)));
+  // Two column breakpoint includes default gutter and some horizontal padding
+  $named-breakpoints: map-merge($named-breakpoints, (two-columns: length-rem(2 * $readable-line-length-min) + length-rem(1em) + length-rem(1 * $spacing-base)));
 }
 
 @if variable-exists(readable-line-length-max) {
-  $named-breakpoints: map-merge($named-breakpoints, (readable-line-length-max: $readable-line-length-max));
+  $named-breakpoints: map-merge($named-breakpoints, (readable-line-length-max: length-rem($readable-line-length-max)));
 }
 
 @mixin for-phone-only {
