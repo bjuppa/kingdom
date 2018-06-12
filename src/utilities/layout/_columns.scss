@@ -40,7 +40,7 @@
 
 }
 
-@media screen and (min-width: #{length-rem(get-breakpoint(two-columns)) + length-rem($spacing-base)}) {
+@media screen and (min-width: #{get-breakpoint(two-columns)}) {
   @supports (columns: length-rem($readable-line-length-min) auto) and (max-height: calc(100vh - 6 * var(--spacing-base))) {
     .columns-readable-viewport {
       columns: length-rem($readable-line-length-min) auto;
