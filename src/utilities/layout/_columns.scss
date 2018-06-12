@@ -1,5 +1,7 @@
 // Utilities for columns
 @import "../../modules/sizing";
+@import "../../modules/breakpoints";
+@import "../../modules/converters";
 
 .columns-readable,
 .columns-readable-viewport {
@@ -38,11 +40,13 @@
 
 }
 
-@supports (columns: $readable-line-length-min auto) and (max-height: 80vh) and (overflow-x: auto) {
-  .columns-readable-viewport {
-    columns: $readable-line-length-min auto;
-    max-width: none;
-    max-height: 85vh;
-    overflow-x: auto;
+@media screen and (min-width: #{get-breakpoint(two-columns) + length-rem($spacing-base)}) {
+  @supports (columns: length-rem($readable-line-length-min) auto) and (max-height: calc(100vh - 6 * var(--spacing-base))) {
+    .columns-readable-viewport {
+      columns: length-rem($readable-line-length-min) auto;
+      max-width: none;
+      min-width: calc(100% + #{length-rem($spacing-base)});
+      max-height: calc(100vh - 6 * var(--spacing-base));
+    }
   }
 }

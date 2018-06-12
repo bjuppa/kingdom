@@ -30,27 +30,32 @@
       </p>
     </div>
 
-    <div class="columns-readable-viewport">
-      <h2>Staying within the viewport</h2>
-      <p>
-        This block has class <code>columns-readable-viewport</code> applied, which keeps the column height within the
-        viewport and adds horizontal scrolling should the number of required columns grow out of the available width.
-      </p>
-      <p>
-        To see the effect you may need to make your browser window narrower, until the last paragraph disappears.
-      </p>
+    <div class="overflow-x-auto">
+      <div class="columns-readable-viewport">
+        <h2>Staying within the viewport</h2>
+        <p>
+          This block has class <code>columns-readable-viewport</code> applied, which keeps the column height within the
+          viewport.
+          Around it is a wrapper with utility class <code>overflow-x-auto</code> that adds horizontal scrolling should
+          the number of required columns grow out of the available width.
+        </p>
+        <p>
+          To see the effect you may need to make your browser window narrower, until the
+          <reload-link to="#last-paragraph" relative>last paragraph</reload-link> disappears.
+        </p>
 
-      <h3>And now, 10 paragraphs of Lorem ipsum&hellip;</h3>
-      <p v-for="item in 10" class="italic color-gray-300">
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore
-        magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-        consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
-        pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est
-        laborum.
-      </p>
+        <h3>And now, 10 paragraphs of Lorem ipsum&hellip;</h3>
+        <p v-for="item in 10" class="italic color-gray-300">
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore
+          magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+          consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
+          pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est
+          laborum.
+        </p>
 
-      <h3 class="avoid-break-after">&hellip;and finally&hellip;</h3>
-      <p>This is the last paragraph.</p>
+        <h3 id="last-paragraph" class="avoid-break-after">&hellip;and finally&hellip;</h3>
+        <p>This is the last paragraph.</p>
+      </div>
     </div>
 
     <h2>Limitations with columns</h2>
