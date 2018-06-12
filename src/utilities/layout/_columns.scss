@@ -49,6 +49,7 @@
 
       .overflow-x-auto & {
         min-width: calc(100% + #{length-rem($spacing-base)});
+        @include length-relative(padding-bottom);
       }
     }
   }
