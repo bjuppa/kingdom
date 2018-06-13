@@ -12,6 +12,30 @@
                            target="_blank"><code>src/extensions/_forms.scss</code></a>.
     </p>
 
+    <h2>Form layout</h2>
+    <p>
+      The biggest thing the forms extension does is actually turning <code>&lt;label&gt;</code> elements into blocks.
+      The consequence is that you can stack up labels and their inputs in your HTML without any wrapping elements
+      whatsoever and get a decent looking form.
+      But if you have wrapping elements around labels and "form controls", that's fine, it works that way too!
+    </p>
+    <p>
+      There's one exception and that is labels that come just after their checkbox or radiobutton, they go inline.
+      And if you really want an inline form there's a helper class <code>form-inline</code> for that.
+    </p>
+    <h3>Spacing</h3>
+    <p>
+      If you find an element in your form having spacing where you don't want it, just add class <code>mt-0</code>.
+      If you want to group some elements or bring one element to a new line with spacing above (like a button),
+      just wrap it in a simple <code>&lt;div&gt;</code>!
+    </p>
+    <h3>Checkboxes & radiobuttons</h3>
+    <p>
+      The position of checkboxes and radiobuttons is adjusted using the <code>baseline-shift-factor</code>,
+      so if you ever find them being misaligned, make sure your <var>$forms-font-stack</var> is correctly registered
+      in the <reload-link to="/modules/fonts">fonts module</reload-link>.
+    </p>
+
     <h2>Buttons</h2>
     <div class="w-readable">
       Buttons come in three base variants, with classes:
@@ -35,13 +59,6 @@
       &hellip;and of course there are variants for focused, active, and disabled states as well that you can see on
       <reload-link to="/forms-demo" target="forms-demo">the forms demo page</reload-link>.
     </div>
-
-    <h2>Checkboxes & radiobuttons</h2>
-    <p>
-      The position of checkboxes and radiobuttons is adjusted using the <code>baseline-shift-factor</code>,
-      so if you ever find them being misaligned, make sure your <var>$forms-font-stack</var> is correctly registered
-      in the <reload-link to="/modules/fonts">fonts module</reload-link>.
-    </p>
 
   </main>
 </template>
