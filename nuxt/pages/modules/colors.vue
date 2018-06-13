@@ -95,6 +95,49 @@
         unless <code>$apply-text-color: false</code> is supplied.
       </li>
     </ul>
+    <h3>Getting a color value in Sass</h3>
+    <p>
+      If you need to pull out a color value from the <var>$colors</var> map, perhaps to transform it or apply it
+      within a shadow declaration you can use function <code>get-color</code>.
+    </p>
+
+    <h2>Functions for generating and transforming colors</h2>
+    <ul class="w-readable-children">
+      <li>
+        Function <code>transform-hue</code> returns a color with similar "feel" to the supplied color but shifted into
+        the hue of another color.
+        Basically it keeps the angles between hues in multiples of 30&deg;.
+        For example the default <code class="color-link">link</code> color is the
+        <code class="color-primary">primary</code> color shifted into the <span style="color: blue;">blue</span>
+        spectrum.
+      </li>
+      <li>
+        Function <code>ensure-hue-contrast</code> will compare a given color to another color and shift it away in the
+        hue spectrum if they're within 15&deg; of each other.
+        For example the default <code class="color-link">link</code> color is checked against the
+        <code class="color-primary">primary</code> color that it's derieved from so that if they're both blue, they're
+        at least different hues of blue.
+      </li>
+      <li>
+        Function <code>transform-hue-with-contrast</code> combines the two above functions for convenience.
+      </li>
+      <li>
+        Function <code>normalize-color</code> will adjust a color to a minimum saturation and so that its not to dark or
+        too light.
+        For example the default <code class="color-caution">caution</code> color is derieved from the
+        <code class="color-primary">primary</code> color, but normalized so that it's not as extreme, should the primary
+        color be that.
+      </li>
+      <li>
+        Function <code>text-color-for-background</code> will generate a contrasting text color to use on a given
+        background.
+        Basically it reduces saturation and makes the text color dark if the background is light and vice versa.
+      </li>
+      <li>
+        Function <code>background-text-color-pair</code> will append a corresponding text color to the given background
+        color and return them as a list, suitable for insertion into the <var>$colors</var> map.
+      </li>
+    </ul>
 
   </main>
 </template>
