@@ -107,8 +107,9 @@
     <p>
       Whenever you add a top or bottom border to a block of text, its height will no longer be a multiple of the
       line-height.
-      Kingdom's borders module provide mixins that help shifting the element slightly up using relative positioning, and
-      applying appropriate negative margin in combination with the border.
+      Kingdom's <reload-link to="/modules/borders">borders module</reload-link> provide mixins that help shifting the
+      element slightly up using relative positioning, and applying appropriate negative margin in combination with the
+      border.
     </p>
     <p>
       For most cases it's easiest to just extend your class with the border placeholders
