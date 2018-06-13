@@ -30,14 +30,18 @@
       </p>
     </div>
 
-    <div class="overflow-x-auto">
-      <div class="columns-readable-viewport">
+    <div class="columns-readable-horizontal-scroll">
+      <div class="columns-readable-horizontal">
         <h2>Going horizontal</h2>
         <p>
-          This block has class <code>columns-readable-viewport</code> applied, which keeps the column height comfortably
-          within the viewport.
-          Around it is a wrapper with utility class <code>overflow-x-auto</code> that adds horizontal scrolling should
-          the number of required columns grow out of the available width.
+          This block has class <code>columns-readable-horizontal</code> applied, which keeps the column height
+          comfortably within the viewport, but only when the viewport is wide enought for at least two columns of text.
+        </p>
+        <p>
+          Around it is a wrapper with class <code>columns-readable-horizontal-scroll</code> that adds horizontal
+          scrolling and makes the content slightly larger than its container to hint there is more content.
+          If you don't want that hint you may just add utility class <code>overflow-x-scroll</code> instead.
+          This horizontal columns with scroll works best on full width wrappers.
         </p>
         <p>
           To see the effect you may need to make your browser window narrower, until the

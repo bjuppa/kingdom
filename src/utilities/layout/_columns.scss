@@ -3,8 +3,7 @@
 @import "../../modules/breakpoints";
 @import "../../modules/converters";
 
-.columns-readable,
-.columns-readable-viewport {
+.columns-readable {
   max-width: $readable-line-length-max;
 }
 
@@ -40,16 +39,26 @@
 
 }
 
-@media screen and (min-width: #{get-breakpoint(two-columns)}) {
-  @supports (columns: length-rem($readable-line-length-min) auto) and (max-height: calc(100vh - 6 * var(--spacing-base))) {
-    .columns-readable-viewport {
-      columns: length-rem($readable-line-length-min) auto;
-      max-width: none;
-      max-height: calc(100vh - 6 * var(--spacing-base));
+.columns-readable-horizontal {
+  max-width: $readable-line-length-max;
 
-      .overflow-x-auto & {
-        min-width: calc(100% + #{length-rem($spacing-base)});
-        @include length-relative(padding-bottom);
+  @media screen and (min-width: #{get-breakpoint(two-columns)}) {
+    @supports (columns: length-rem($readable-line-length-min) auto) and (max-height: calc(100vh - 6 * var(--spacing-base))) {
+      & {
+        columns: length-rem($readable-line-length-min) auto;
+        max-width: none;
+        max-height: calc(100vh - 6 * var(--spacing-base));
+      }
+
+      @at-root {
+        .columns-readable-horizontal-scroll {
+          overflow-x: auto;
+          @include length-relative(padding-bottom);
+
+          > * {
+            min-width: calc(100% + #{length-rem($spacing-base)});
+          }
+        }
       }
     }
   }
