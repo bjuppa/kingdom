@@ -38,19 +38,19 @@
     <h2>Buttons</h2>
     <div class="w-readable mt-0-children">
       Buttons come in three base variants, with classes:
-      <ul class="list-inline space-children-horizontally flex flex-wrap justify-content-space-evenly">
+      <ul class="list-inline space-children-horizontally flex flex-wrap justify-content-space-evenly mt-1-children pb-1">
         <li><code class="button-prime">button-prime</code></li>
         <li><code class="button-plain">button-plain</code></li>
         <li><code class="button-petty">button-petty</code></li>
       </ul>
-      &hellip;all combinable with modifiers to make them larger:
-      <ul class="list-inline space-children-horizontally flex flex-wrap justify-content-space-evenly">
+      &hellip;all combinable with modifiers for double size:
+      <ul class="list-inline space-children-horizontally flex flex-wrap justify-content-space-evenly mt-1-children pb-1">
         <li><code class="button-prime button-large">button-prime button-large</code></li>
         <li><code class="button-plain button-large">button-plain button-large</code></li>
         <li><code class="button-petty button-large">button-petty button-large</code></li>
       </ul>
-      &hellip;modifiers to communicate caution:
-      <ul class="list-inline space-children-horizontally flex flex-wrap justify-content-space-evenly">
+      &hellip;as well as modifiers to communicate caution:
+      <ul class="list-inline space-children-horizontally flex flex-wrap justify-content-space-evenly mt-1-children pb-1">
         <li><code class="button-prime button-destructive">button-prime button-destructive</code></li>
         <li><code class="button-plain button-destructive">button-plain button-destructive</code></li>
         <li><code class="button-petty button-destructive">button-petty button-destructive</code></li>
