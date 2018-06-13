@@ -36,9 +36,23 @@
     <p>
       Every part of Kingdom that needs some color will generate and register that color unless it's already set in the
       <var>$colors</var> Sass-map.
-      A good example is the <reload-link to="/level-1-reset">CSS reset</reload-link>, that will register
-      <code>primary</code>, <code>body</code>, <code>link</code> and <code>visited</code> colors unless already defined.
     </p>
+    <div class="w-readable">
+      A good example is the <reload-link to="/level-1-reset">CSS reset</reload-link>, that through
+      <a href="https://github.com/bjuppa/kingdom/blob/master/src/modules/_colors-register-defaults.scss"
+         target="_blank"><code>src/modules/_colors-register-defaults.scss</code></a>
+      will register
+      <ul class="list-comma-separated">
+        <li><code>primary</code></li>
+        <li><code>body</code></li>
+        <li><code>link</code></li>
+        <li><code>visited</code></li>
+        <li><code>border</code></li>
+        <li><code>caution</code></li>
+        <li><code>disabled</code></li>
+      </ul>
+      colors unless already defined.
+    </div>
     <p>
       Above your import of your selected Kingdom level, make sure to set the <var>$colors</var> Sass-map with any colors
       that you care about.
