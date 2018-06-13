@@ -5,7 +5,7 @@
       Print
     </h1>
     <p class="print-links-inside">
-      The printing module contains utility classes and default styles for printing web pages.
+      The print extension contains utility classes and default styles for printing web pages.
       You'll find it in <a href="https://github.com/bjuppa/kingdom/blob/master/src/extensions/_print.scss"
                            target="_blank"><code>src/extensions/_print.scss</code></a>.
     </p>
