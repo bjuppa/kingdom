@@ -74,6 +74,28 @@
       anywhere in your Sass.
     </p>
 
+    <h2>Applying colors</h2>
+    <p>
+      The colors module provides two mixins for applying a named color within CSS selectors.
+      Both pull color values from the <var>$colors</var> map and they both set properties referencing CSS custom
+      properties, for those browsers that support them.
+      Using the custom properties makes changing the colors dynamically easier, both via javascript and the CSS cascade.
+    </p>
+    <ul class="w-readable-children">
+      <li>
+        The mixin <code>apply-color</code> takes a color <var>$name</var> and an optional <var>$property</var> to
+        set&mdash;which of course defaults to the <code>color</code> property when not supplied.
+        If you want to apply not the named color itself, but its corresponding text color, just supply
+        <code>$apply-text-color: true</code> as well.
+      </li>
+      <li>
+        The mixin <code>apply-background-color</code> takes a color <var>$name</var> that it applies to the
+        <code>background-color</code> property.
+        But it also applies that background color's corresponding text color to the <code>color</code> property,
+        unless <code>$apply-text-color: false</code> is supplied.
+      </li>
+    </ul>
+
   </main>
 </template>
 
