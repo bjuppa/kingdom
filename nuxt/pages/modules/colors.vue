@@ -6,6 +6,8 @@
     </h1>
     <p>
       The purpose of the colors module is to keep track of combinations of appropriate background and text colors.
+      You'll find it in <a href="https://github.com/bjuppa/kingdom/blob/master/src/modules/_colors.scss"
+                           target="_blank"><code>src/modules/_colors.scss</code></a>.
     </p>
     <p>
       All colors should be registered in the global Sass-map named <var>$colors</var>.
