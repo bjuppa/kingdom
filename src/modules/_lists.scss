@@ -1,7 +1,8 @@
 @import "layout";
 
 @mixin list-unstyled {
-  padding: 0;
+  padding-left: 0;
+  padding-right: 0;
   list-style: none;
 }
 
