@@ -9,6 +9,8 @@
       You'll find it in <a href="https://github.com/bjuppa/kingdom/blob/master/src/modules/_colors.scss"
                            target="_blank"><code>src/modules/_colors.scss</code></a>.
     </p>
+
+    <h2>The global <var>$colors</var> map</h2>
     <p>
       All colors should be registered in the global Sass-map named <var>$colors</var>.
       For every key in the <var>$colors</var> map, there should be a Sass-list containing one or more color values.
@@ -53,10 +55,19 @@
       </ul>
       colors unless already defined.
     </div>
+
+    <h3>Registering colors in <var>$colors</var></h3>
     <p>
       Above your import of your selected Kingdom level, make sure to set the <var>$colors</var> Sass-map with any colors
       that you care about.
+      You can also use the <code>register-color</code> mixin to which you supply a <var>$name</var>
+      and a list of one or two <var>$color-values</var>,
+      the second being the text color to use on a backround of the first color.
+      If you only supply one color, the mixin will automatically generate a contrasting text color unless
+      <var>$ensure-text-color</var> is set to <code>false</code>.
     </p>
+
+    <h3>Debugging <var>$colors</var></h3>
     <p>
       You can check what colors are registered with
       <code class="language-sass">@debug $colors;</code>
