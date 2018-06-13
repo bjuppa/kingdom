@@ -1,5 +1,5 @@
 <template>
-  <main class="space-inside w-readable">
+  <main class="space-inside w-readable-paragraphs">
     <h1>
       <small>Extension:</small>
       Code
@@ -10,7 +10,7 @@
                            target="_blank"><code>src/extensions/_code.scss</code></a>.
     </p>
     <h2>Monospace</h2>
-    <div>
+    <div class="w-readable">
       The code extension makes sure appropriate elements&mdash;such as
       <ul class="list-comma-separated">
         <li><code>&lt;code&gt;</code></li>
