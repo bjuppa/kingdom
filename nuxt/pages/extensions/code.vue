@@ -5,7 +5,7 @@
       Code
     </h1>
     <p>
-      The code extension contains default styles for displaying code and related elements in html.
+      The code extension contains default styles for displaying code and related elements in HTML.
       You'll find it in <a href="https://github.com/bjuppa/kingdom/blob/master/src/extensions/_code.scss"
                            target="_blank"><code>src/extensions/_code.scss</code></a>.
     </p>
