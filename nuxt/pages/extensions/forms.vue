@@ -8,8 +8,6 @@
       The forms extension contains default styles for displaying form inputs and related elements in HTML.
       Check out the <reload-link to="/forms-demo" target="forms-demo">the forms demo page</reload-link>
       to see it in action!
-      You'll find it in <a href="https://github.com/bjuppa/kingdom/blob/master/src/extensions/_forms.scss"
-                           target="_blank"><code>src/extensions/_forms.scss</code></a>.
     </p>
 
     <h2>Form layout</h2>
@@ -17,15 +15,16 @@
       The biggest thing the forms extension does is actually turning <code>&lt;label&gt;</code> elements into blocks.
       The consequence is that you can stack up labels and their inputs in your HTML without any wrapping elements
       whatsoever and get a decent looking form.
-      But if you have wrapping elements around labels and "form controls", that's fine, it works that way too!
+      But if you have wrapping elements grouping labels and form controls, that's fine, it works that way too!
     </p>
     <p>
-      There's one exception and that is labels that come just after their checkbox or radiobutton, they go inline.
+      There's one exception and that is labels that come just after their checkbox or radiobutton&mdash;they go inline.
       And if you really want an inline form there's a helper class <code>form-inline</code> for that.
     </p>
     <h3>Spacing</h3>
     <p>
-      If you find an element in your form having spacing where you don't want it, just add class <code>mt-0</code>.
+      If you find an element in your form having vertical spacing where you don't want it, just add class
+      <code>mt-0</code>.
       If you want to group some elements or bring one element to a new line with spacing above (like a button),
       just wrap it in a simple <code>&lt;div&gt;</code>!
     </p>
@@ -37,7 +36,7 @@
     </p>
 
     <h2>Buttons</h2>
-    <div class="w-readable">
+    <div class="w-readable mt-0-children">
       Buttons come in three base variants, with classes:
       <ul class="list-inline space-children-horizontally flex flex-wrap justify-content-space-evenly">
         <li><code class="button-prime">button-prime</code></li>
@@ -59,6 +58,15 @@
       &hellip;and of course there are variants for focused, active, and disabled states as well that you can see on
       <reload-link to="/forms-demo" target="forms-demo">the forms demo page</reload-link>.
     </div>
+
+    <h2>Customization</h2>
+    <p>
+      Should you want to customize the colors, borders, shadows, backgrounds, outlines, padding, transitions,
+      or text-decoration of inputs and button variants there's an abundance of default variables at the top of the
+      extension's source code that you are free to override with your own values before including it.
+      You'll find it in <a href="https://github.com/bjuppa/kingdom/blob/master/src/extensions/_forms.scss"
+                           target="_blank"><code>src/extensions/_forms.scss</code></a>.
+    </p>
 
   </main>
 </template>
