@@ -64,8 +64,8 @@
       The 4th level is the only one in Kingdom that applies fonts by default; for headlines a sans-serif font and for
       body text a font with serifs.
       It's just for the purpose of demonstration, whenever you're in a situation where you reach for baseline shift
-      you will likely have very specific fonts you want to use, and calculate the <code>baseline-shift-factor</code>
-      yourself.
+      you will likely have very specific <reload-link to="/modules/fonts">font-stacks</reload-link> you want to use,
+      and calculate the <code>baseline-shift-factor</code> yourself.
     </p>
 
     <aside class="clearfix mt-0-within text-center w-readable">
@@ -86,6 +86,16 @@
         <p class="text-1-block">Text 1</p>
       </div>
     </aside>
+
+    <h4>Font inheritance</h4>
+    <p>
+      Whenever a <reload-link to="/modules/fonts">font-stack</reload-link> is applied through Kingdom,
+      that font is inherited by all child elements, so browsers' default fonts on all elements are reset.
+      If you need a monospace font back on <code>&lt;code&gt;</code> and other similar elements in Level 4,
+      just include the <reload-link to="/extensions/code">code extension</reload-link>.
+      Likewise, if you don't want the body font-stack on inputs and form elements you can include the
+      <reload-link to="/extensions/forms">forms extension</reload-link>.
+    </p>
 
     <h2>Limitations</h2>
     <ul class="w-readable">
