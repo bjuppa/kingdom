@@ -10,9 +10,10 @@
                            target="_blank"><code>src/modules/_breakpoints.scss</code></a>.
     </p>
     <p>
-      If you want more than just mixins, consider importing the
+      If you want more than just mixins, e.g. breakpoints in CSS custom properties, consider importing the
       <reload-link to="/extensions/breakpoints">breakpoints extension</reload-link>.
     </p>
+
     <h2>Device breakpoints</h2>
     <p>
       The device breakpoints are inspired by David Gilbertson's somewhat controversial article
@@ -35,12 +36,12 @@
     <p>
       The function <code>get-breakpoint</code> will find a breakpoint value from the <var>$device-breakpoins</var>
       and <var>$named-breakpoints</var> Sass maps combined.
-      You can use the function in your own media queries.
+      You can use this function in your own media queries.
     </p>
     <p>
       Configure your own breakpoints by setting the Sass maps before importing the module.
-      Some (most?) of you won't like the device breakpoints, and if so you can add your own
-      "small"/"medium"/"large"/etc breakpoints to <var>$named-breakpoints</var>.
+      Some (i.e. most) of you won't like the device breakpoints, and if so you can add your own
+      small/medium/large/etc breakpoints to <var>$named-breakpoints</var>.
     </p>
     <p>
       Some breakpoints will be automatically registered if the Sass variables they depend on have been set by other
