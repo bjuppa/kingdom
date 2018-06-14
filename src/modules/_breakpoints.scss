@@ -49,9 +49,3 @@ $named-breakpoints: () !default;
     @content;
   }
 }
-
-:root {
-  @each $breakpoint-name, $breakpoint-value in map-merge($device-breakpoints, $named-breakpoints) {
-    --breakpoint-#{$breakpoint-name}: #{$breakpoint-value};
-  }
-}
