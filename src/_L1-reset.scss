@@ -32,8 +32,8 @@ html {
 }
 
 *,
-*::before,
-*::after {
+::before,
+::after {
   box-sizing: inherit;
 }
 
@@ -48,8 +48,8 @@ html {
   @include border-reset();
 }
 
-*::before,
-*::after {
+::before,
+::after {
   @include border-reset();
 }
 
@@ -86,8 +86,8 @@ img {
   @extend %text-inline;
 }
 
-*::before,
-*::after {
+::before,
+::after {
   @extend %text-inline;
 }
 
