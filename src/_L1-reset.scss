@@ -86,6 +86,11 @@ img {
   @extend %text-inline;
 }
 
+*::before,
+*::after {
+  @extend %text-inline;
+}
+
 // Prevent sub- and superscript from affecting the line height of their parents
 sub, sup {
   position: relative;
