@@ -1,11 +1,15 @@
 <template>
-  <main class="space-inside">
+  <main class="space-inside w-readable-paragraphs">
     <h1>
       <small>Module:</small>
       Clearfix
     </h1>
     <p>
-      Coming soon
+      The clearfix module contains a <code>clearfix</code> mixin that makes an element contain its floated content
+      without overflowing.
+      From <a href="https://css-tricks.com/snippets/css/clear-fix/" target="_blank">Chris Coyier's article</a>,
+      you'll find it in <a href="https://github.com/bjuppa/kingdom/blob/master/src/modules/_clearfix.scss"
+                           target="_blank"><code>src/modules/_clearfix.scss</code></a>.
     </p>
   </main>
 </template>
