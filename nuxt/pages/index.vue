@@ -188,6 +188,9 @@
       <li>
         <reload-link to="/extensions/code">Code</reload-link>
       </li>
+      <li>
+        <reload-link to="/extensions/breakpoints">Breakpoints</reload-link>
+      </li>
     </ul>
 
     <h3>Modules</h3>
