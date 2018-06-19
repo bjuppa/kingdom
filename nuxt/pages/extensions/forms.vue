@@ -32,7 +32,7 @@
     <p>
       The position of checkboxes and radiobuttons is adjusted using the <code>baseline-shift-factor</code>,
       so if you ever find them being misaligned, make sure your <var>$forms-font-stack</var> is correctly registered
-      in the <reload-link to="/modules/fonts">fonts module</reload-link>.
+      in the <reload-link to="/modules/fonts">Fonts module</reload-link>.
     </p>
 
     <h2>Buttons</h2>

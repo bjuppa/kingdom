@@ -47,7 +47,7 @@
     <p>
       The shift is created using relative positioning and the amount of shift is specific to each font.
       Therefore, every font you want to use with the baseline rhythm needs to be registered with its specific
-      <code>baseline-shift-factor</code> in the Kingdom <reload-link to="/modules/fonts">fonts module</reload-link>.
+      <code>baseline-shift-factor</code> in the Kingdom <reload-link to="/modules/fonts">Fonts module</reload-link>.
     </p>
 
     <div class="baseline-shift-off">

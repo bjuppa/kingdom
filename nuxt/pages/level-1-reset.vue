@@ -25,7 +25,7 @@
     <p>
       The reset utilises some basic colors.
       If not set beforehand in the <var>$colors</var> Sass-map, the reset will generate these colors
-      automatically and register them with the Kingdom <reload-link to="/modules/colors">colors module</reload-link>.
+      automatically and register them with the Kingdom <reload-link to="/modules/colors">Colors module</reload-link>.
       Most of the colors have a matching text color to use on a colored background.
     </p>
 
