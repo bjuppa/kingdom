@@ -169,6 +169,9 @@
       <li>
         <reload-link to="/utilities/opacity">Opacity</reload-link>
       </li>
+      <li>
+        <reload-link to="/utilities/shadows">Shadows</reload-link>
+      </li>
     </ul>
 
     <h3>Extensions</h3>
