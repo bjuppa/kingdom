@@ -59,11 +59,14 @@ $colors: () !default;
   @if $background-color == transparent {
     @return currentColor;
   }
+  @if alpha($background-color) < .5 {
+    @return currentColor;
+  }
 
   @if lightness($background-color) > 50% {
-    @return scale_color($background-color, $lightness: -95%, $saturation: -50%);
+    @return scale_color($background-color, $lightness: -95%, $saturation: -50%, $alpha: 100%);
   } @else {
-    @return scale_color($background-color, $lightness: 90%, $saturation: -50%);
+    @return scale_color($background-color, $lightness: 90%, $saturation: -50%, $alpha: 100%);
   }
 }
 
