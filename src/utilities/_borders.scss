@@ -1,6 +1,8 @@
 // Utilities for borders
 @import "../modules/borders";
 
+// Utility classes for adding borders
+
 .border-l {
   @extend %border-l;
 }
@@ -28,6 +30,8 @@
 .border {
   @extend %border;
 }
+
+// Utility classes for removing borders
 
 .border-0 {
   @extend %border-0;
