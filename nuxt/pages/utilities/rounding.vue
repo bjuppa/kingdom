@@ -8,14 +8,14 @@
       Coming soon
     </p>
 
-    <aside class="flex align-contents-start mt-0-children space-children-horizontally">
-      <div class="rounded-sm background-color-gray-300 h-2 space-inside">
+    <aside class="flex mt-1-children space-children-horizontally w-readable">
+      <div class="rounded-sm background-color-gray-300 space-inside">
         Small rounded corners with class <code>rounded-sm</code>
       </div>
-      <div class="rounded background-color-gray-300 h-2 space-inside">
+      <div class="rounded background-color-gray-300 space-inside">
         Medium rounded corners with class <code>rounded</code>
       </div>
-      <div class="rounded-lg background-color-gray-300 h-2 space-inside">
+      <div class="rounded-lg background-color-gray-300 space-inside">
         Large rounded corners with class <code>rounded-lg</code>
       </div>
     </aside>
