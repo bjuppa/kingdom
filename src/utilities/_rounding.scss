@@ -38,12 +38,6 @@ $rounding-large-factor: 1/3 !default;
     }
   }
 
-  .rounded#{$suffix}-px	{
-    @each $property in $properties {
-      #{$property}: 1px;
-    }
-  }
-
   .rounded#{$suffix}-none {
     @each $property in $properties {
       #{$property}: 0;
