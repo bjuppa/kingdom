@@ -28,6 +28,10 @@ $rounding-large-factor: 1/3 !default;
     @include length-relative($properties, $rounding-large-factor);
   }
 
+  .rounded#{$suffix}#{-1} {
+    @include length-relative($properties, 1);
+  }
+
   .rounded#{$suffix}-full	{
     @each $property in $properties {
       #{$property}: 9999px;

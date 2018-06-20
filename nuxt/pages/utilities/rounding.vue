@@ -8,7 +8,7 @@
       Coming soon
     </p>
 
-    <aside class="flex mt-1-children space-children-horizontally w-readable">
+    <aside class="flex flex-basis-min-content mt-1-children space-children-horizontally w-readable text-center">
       <div class="rounded-sm background-color-gray-300 space-inside">
         Small rounded corners with class <code>rounded-sm</code>
       </div>
@@ -17,6 +17,9 @@
       </div>
       <div class="rounded-lg background-color-gray-300 space-inside">
         Large rounded corners with class <code>rounded-lg</code>
+      </div>
+      <div class="rounded-1 background-color-gray-300 p-1">
+        Line-high rounded corners with class <code>rounded-1</code>
       </div>
     </aside>
 
