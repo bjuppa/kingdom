@@ -1,0 +1,26 @@
+// Utilities for rounding border corners
+$rounding-small-factor: 1/10 !default;
+$rounding-medium-factor: 1/6 !default;
+$rounding-large-factor: 1/3 !default;
+
+@import "../modules/sizing";
+
+.rounded {
+  @include length-relative(border-radius, $rounding-medium-factor);
+}
+
+.rounded-sm {
+  @include length-relative(border-radius, $rounding-small-factor);
+}
+
+.rounded-lg {
+  @include length-relative(border-radius, $rounding-large-factor);
+}
+
+.rounded-full	{
+  border-radius: 9999px;
+}
+
+.rounded-none {
+  border-radius: 0;
+}

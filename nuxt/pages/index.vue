@@ -163,6 +163,9 @@
       <li>
         <reload-link to="/utilities/text">Text</reload-link>
       </li>
+      <li>
+        <reload-link to="/utilities/rounding">Rounding</reload-link>
+      </li>
     </ul>
 
     <h3>Extensions</h3>
