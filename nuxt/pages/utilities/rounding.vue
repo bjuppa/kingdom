@@ -19,6 +19,16 @@
         Large rounded corners with class <code>rounded-lg</code>
       </div>
     </aside>
+
+    <aside class="flex mt-1-children space-children-horizontally align-items-center justify-content-space-around w-readable">
+      <code class="rounded-full block h-4 w-4 background-color-gray-300 flex text-center align-items-center">
+        rounded-full
+      </code>
+      <code class="rounded-full block pt-1/2 px-1 background-color-gray-300">
+        rounded-full
+      </code>
+    </aside>
+
   </main>
 </template>
 
