@@ -166,6 +166,9 @@
       <li>
         <reload-link to="/utilities/rounding">Rounding</reload-link>
       </li>
+      <li>
+        <reload-link to="/utilities/opacity">Opacity</reload-link>
+      </li>
     </ul>
 
     <h3>Extensions</h3>

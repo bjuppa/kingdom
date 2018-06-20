@@ -1,0 +1,9 @@
+// Utilities for opacity
+
+$opacity-utilities: 0 25 50 75 100 !default;
+
+@each $opacity in $opacity-utilities {
+  .opacity-#{$opacity} {
+    opacity: $opacity/100;
+  }
+}
