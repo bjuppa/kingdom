@@ -162,7 +162,8 @@ $fraction-spacing-utilities: (
   @include space-inside(bottom);
 }
 
-.space-inside {
+.space-inside,
+.space-inside-children > * {
   @include space-inside();
 }
 
