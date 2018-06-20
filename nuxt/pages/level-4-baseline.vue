@@ -50,11 +50,11 @@
       <code>baseline-shift-factor</code> in the Kingdom <reload-link to="/modules/fonts">Fonts module</reload-link>.
     </p>
 
-    <div class="baseline-shift-off">
+    <div class="baseline-shift-none">
       <h3>Resetting the baseline-shift</h3>
       <p>
         If you ever find that you want to remove the baseline-shift that is applied to or inside an element, apply the
-        class <code>baseline-shift-off</code> on a shifted element, or an ancestor.
+        class <code>baseline-shift-none</code> on a shifted element, or an ancestor.
         This section has it, and the navigation at the top of this page also need it for its list items.
       </p>
     </div>
