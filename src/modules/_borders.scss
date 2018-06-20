@@ -1,6 +1,5 @@
 $border-width: 1px !default;
 $border-style: solid !default;
-$body-line-height-factor: 1.5 !default;
 
 @import "../modules/strip-unit";
 @import "../modules/element-types";
@@ -51,7 +50,7 @@ $body-line-height-factor: 1.5 !default;
 }
 
 // Use this with one-line inline elements (e.g. form inputs) to match their height to surrounding text
-@mixin border-preserving-line-height($line-height: $body-line-height-factor, $width: $border-width) {
+@mixin border-preserving-line-height($line-height, $width: $border-width) {
   vertical-align: bottom;
   white-space: nowrap;
   line-height: font-size-rem($line-height) - length-rem(2 * $width);
