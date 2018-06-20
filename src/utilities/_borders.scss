@@ -1,4 +1,5 @@
 // Utilities for borders
+@import "../modules/borders";
 
 .border-l {
   @extend %border-l;
@@ -33,6 +34,6 @@
 }
 
 .unborder {
-  @extend %border-0;
-  @extend %p-0;
+  @include border-for-auto-height($width: 0px);
+  padding: 0;
 }
