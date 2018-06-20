@@ -30,6 +30,13 @@
       The <code>set-readable-max-width</code> mixin applies <code>max-width</code> from <var>$readable-line-length</var>
       (default&nbsp;<code>75ch</code>).
     </p>
+
+    <h2>Customizable Sass variables</h2>
+    <ul class="w-readable-children">
+      <li><var>$spacing-base</var> is usually set by the main Kingdom level file</li>
+      <li><var>$readable-line-length-min</var> defaults to <code>45ch</code></li>
+      <li><var>$readable-line-length-max</var> defaults to <code>75ch</code></li>
+    </ul>
   </main>
 </template>
 

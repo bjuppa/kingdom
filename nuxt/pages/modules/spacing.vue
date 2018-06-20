@@ -25,6 +25,21 @@
       Optional parameter to this mixin is <var>$suffix</var> that can be used to pick other sized margin placeholder
       than the default.
     </p>
+
+    <h2>Caveats</h2>
+    <p>
+      As these mixins extend Sass placeholders from the global scope they can't be included within other scopes,
+      like media-queries.
+      However, if you're already doing media-queries, you probably have little use for these mixins in the component
+      you're working on anyway (but you may be interested in using the spacing suffix variables directly).
+    </p>
+
+    <h2>Customizable Sass variables</h2>
+    <p>
+      At the top of the module file there are defaults for what placeholder suffix to use for utilities with
+      <code>xs</code>, <code>s</code>, and <code>m</code> sized spaces.
+      They map to fractions of the base spacing unit.
+    </p>
   </main>
 </template>
 

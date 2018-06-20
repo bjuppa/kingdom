@@ -41,6 +41,12 @@
       <li><code>inline-block-elements</code></li>
       <li><code>inline-elements</code></li>
     </ul>
+
+    <h2>Customizing element types</h2>
+    <p>
+      At the top of the module file you'll find Sass lists containing the default elements of each category.
+      Should you need to, you may overide those lists before importing the module.
+    </p>
   </main>
 </template>
 

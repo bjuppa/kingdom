@@ -30,10 +30,17 @@
       The <code>responsive-rhythm</code> mixin can help creating multiple breakpoints that gradually increase a length
       property from a <var>$start-multiple</var> to an <code>$end-multiple</code> in discrete steps.
     </p>
-    <div class="responsive-height-3-10-lines background-color-gray-300">
+    <aside class="responsive-height-3-10-lines background-color-gray-300">
       Example going from <code>3</code> to <code>10</code> lines
       between <code>600px</code> and <code>1800px</code> viewport width.
-    </div>
+    </aside>
+
+    <h2>Customizing the rhythm</h2>
+    <p>
+      At the top of the module's file there are default Sass variables setting the vertical rhythm base unit, as well as
+      the desired line height span between body text and headings.
+      These in turn are used to calculate <var>$font-size-normal</var>, but that variable can be overridden too.
+    </p>
 
   </main>
 </template>
