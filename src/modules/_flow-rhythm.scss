@@ -1,7 +1,6 @@
 $vertical-rhythm-base: 2rem !default;
 $body-line-height-factor: 1.5 !default;
 $min-line-height-factor: 1.2 !default;
-$baseline-shift-factor-normal: 0.71 !default; // This shifts text down to the baseline, adjust it to your liking (it's relative em and differs for every font)
 
 @import "converters";
 @import "sizing";
