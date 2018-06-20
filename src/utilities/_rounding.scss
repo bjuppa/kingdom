@@ -5,22 +5,38 @@ $rounding-large-factor: 1/3 !default;
 
 @import "../modules/sizing";
 
-.rounded {
-  @include length-relative(border-radius, $rounding-medium-factor);
-}
+@each $suffix, $properties in (
+  '': border-radius,
+  '-t': border-top-left-radius border-top-right-radius,
+  '-b': border-bottom-left-radius border-bottom-right-radius,
+  '-l': border-top-left-radius border-bottom-left-radius,
+  '-r': border-top-right-radius border-bottom-right-radius,
+  '-tl': border-top-left-radius,
+  '-tr': border-top-right-radius,
+  '-bl': border-bottom-left-radius,
+  '-br': border-bottom-right-radius,
+) {
+  .rounded#{$suffix} {
+    @include length-relative($properties, $rounding-medium-factor);
+  }
 
-.rounded-sm {
-  @include length-relative(border-radius, $rounding-small-factor);
-}
+  .rounded#{$suffix}-sm {
+    @include length-relative($properties, $rounding-small-factor);
+  }
 
-.rounded-lg {
-  @include length-relative(border-radius, $rounding-large-factor);
-}
+  .rounded#{$suffix}-lg {
+    @include length-relative($properties, $rounding-large-factor);
+  }
 
-.rounded-full	{
-  border-radius: 9999px;
-}
+  .rounded#{$suffix}-full	{
+    @each $property in $properties {
+      #{$property}: 9999px;
+    }
+  }
 
-.rounded-none {
-  border-radius: 0;
+  .rounded#{$suffix}-none {
+    @each $property in $properties {
+      #{$property}: 0;
+    }
+  }
 }
