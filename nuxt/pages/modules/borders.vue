@@ -13,11 +13,17 @@
 
     <h2>Reset borders first</h2>
     <p>
-      It all works by first resetting borders to a default style and color, but with a width of <code>0</code>.
+      It all works by first resetting borders to a default style and color&mdash;but with a width of <code>0</code>.
       Then borders can easily be applied by just setting <code>border-width</code> on appropriate sides of an element.
       This idea came from <a href="https://tailwindcss.com/docs/border-width/" target="_blank">Tailwind</a> and this
       module does just that through mixin <code>border-reset</code>.
     </p>
+
+    <h3>Default variables to optionally override before import</h3>
+    <ul>
+      <li><var>$border-width</var> defaults to <code>1px</code></li>
+      <li><var>$border-style</var> defaults to <code>solid</code></li>
+    </ul>
 
     <h2>Keeping the vertical rhythm</h2>
     <p>
