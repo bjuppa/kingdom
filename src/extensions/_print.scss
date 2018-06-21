@@ -1,9 +1,9 @@
 /* Kingdom CSS Extension - Print */
 @import "../modules/layout";
 
-.print-only-block,
-.print-only-inline-block,
-.print-only-inline {
+.print-only\:block,
+.print-only\:inline-block,
+.print-only\:inline {
   display: none;
 }
 
@@ -11,36 +11,36 @@
 
   // Display
 
-  .print-hidden {
+  .print\:hidden {
     display: none;
   }
 
-  .print-invisible {
+  .print\:invisible {
     visibility: hidden;
   }
 
   nav, aside {
-    @extend .print-hidden;
+    @extend .print\:hidden;
   }
 
-  .print-only-block,
-  .print-block {
+  .print-only\:block,
+  .print\:block {
     @include display-block();
   }
 
-  .print-only-inline-block,
-  .print-inline-block {
+  .print-only\:inline-block,
+  .print\:inline-block {
     @include display-inline-block();
   }
 
-  .print-only-inline,
-  .print-inline {
+  .print-only\:inline,
+  .print\:inline {
     @include display-inline();
   }
 
   // Print links
   // https://www.smashingmagazine.com/2013/03/tips-and-tricks-for-print-style-sheets/#expand-external-links-for-print
-  .print-href {
+  .print\:href {
     text-decoration: none;
     font-weight: bolder;
 
@@ -49,25 +49,25 @@
     }
   }
 
-  .print-links-inside {
+  .print\:links-inside {
     *:link {
       &[href^=http] {
-        @extend .print-href;
+        @extend .print\:href;
       }
 
-      &.hide-href::after {
-        /* Add class hide-href on a link to not print a link */
+      &.print\:href-none::after {
+        /* Add class print:href-none on a link to not print a link */
         content: "";
       }
 
       &:local-link::after {
-        content: ""; // Can't extend .hide-href because :local-link is not a valid css selector (yet)
+        content: ""; // Can't extend .print:href-none because :local-link is not a valid css selector (yet)
       }
     }
   }
 
   article {
-    @extend .print-links-inside;
+    @extend .print\:links-inside;
   }
 
   // Page breaks
@@ -89,13 +89,13 @@
     background: white !important;
   }
 
-  .print-background-transparent {
+  .print\:background-transparent {
     background: transparent !important;
     color: inherit !important;
   }
 
   @media (color) {
-    .print-background-exact {
+    .print:\background-exact {
       -webkit-print-color-adjust: exact;
       color-adjust: exact;
 
@@ -105,7 +105,7 @@
       }
     }
 
-    .print-background-economy {
+    .print\:background-economy {
       -webkit-print-color-adjust: economy;
       color-adjust: economy;
     }
@@ -113,7 +113,7 @@
 
   //Shadows
 
-  .print-remove-shadows {
+  .print\:shadow-none {
     box-shadow: none !important;
     text-shadow: none !important;
   }
