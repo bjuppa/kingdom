@@ -12,11 +12,11 @@
   // Display
 
   .print\:hidden {
-    display: none;
+    display: none !important;
   }
 
   .print\:invisible {
-    visibility: hidden;
+    visibility: hidden !important;
   }
 
   nav, aside {
