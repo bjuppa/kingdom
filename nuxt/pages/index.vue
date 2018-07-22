@@ -25,6 +25,13 @@
       Instead, Kingdom is a foundation with sensible defaults for building your own custom design (system).
     </p>
     <p>
+      With proper semantic HTML, Kingdom can help you implement
+      <a href="https://brutalist-web.design" target="_blank">Brutalist Web Design</a>.
+      The basic styling of Kingdom doesn't go against what is considered standard behaviour of web pages,
+      for example that
+      <a href="https://brutalist-web.design/#hyperlinks" target="_blank">links are underlined and buttons look like buttons</a>.
+    </p>
+    <p>
       Much like <a href="https://tailwindcss.com/docs/what-is-tailwind/" target="_blank">Tailwind</a>, Kingdom is
       utility-first&mdash;meaning it has CSS classes that can be combined on your HTML elements to quickly create more
       complex looks.
@@ -277,16 +284,16 @@
 </template>
 
 <script>
-  import ReloadLink from '~/components/reload-link.vue';
+import ReloadLink from "~/components/reload-link.vue";
 
-  export default {
-    components: {
-      'reload-link': ReloadLink
-    }
-  };
+export default {
+  components: {
+    "reload-link": ReloadLink
+  }
+};
 </script>
 
 <style lang="scss">
-  @import "~assets/_variables.scss";
-  @import "~assets/L3.scss";
+@import "~assets/_variables.scss";
+@import "~assets/L3.scss";
 </style>
