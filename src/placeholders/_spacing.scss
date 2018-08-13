@@ -197,12 +197,9 @@ $spacing-fractions: (
 // Fractional vertical margin placeholders compensate with top and bottom padding and remove any set height
 // Placed last to overwrite all other spacing/sizing properties
 @each $suffix, $fraction in $spacing-fractions {
-  $counter-fraction: ceil($fraction) - $fraction;
   /* %mt-#{$suffix} Compensates with vertical padding */
   %mt-#{$suffix} {
-    @include length-relative(margin-top, $fraction);
-    @include length-relative(padding-top, $counter-fraction);
-    @include length-relative(padding-bottom, ceil($counter-fraction));
+    @include margin-relative(top, $fraction);
     height: auto;
   }
 }
