@@ -6,8 +6,12 @@ $readable-line-length-max: 75ch !default;
 // Apply one or more length-properties relative to the spacing base
 @mixin length-relative($properties, $factor: 1, $extend-height-multiple: false) {
   @each $property in $properties {
-    #{$property}: $factor * $spacing-base;
-    #{$property}: calc(#{$factor} * var(--spacing-base, #{$spacing-base}));
+    @if($factor != 0) {
+      #{$property}: $factor * $spacing-base;
+      #{$property}: calc(#{$factor} * var(--spacing-base, #{$spacing-base}));
+    } @else {
+      #{$property}: 0;
+    }
     @if ($extend-height-multiple and $property == height and round($factor) == $factor) {
       @extend %height-multiple !optional;
     }
