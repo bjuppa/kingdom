@@ -17,5 +17,6 @@ Anything pushed to the `master` branch will be live on [bjuppa.github.io/kingdom
 
 1. Tag a new version locally using [`npm version ...`](https://docs.npmjs.com/cli/version)
 2. Publish the new version using [`npm publish`](https://docs.npmjs.com/getting-started/publishing-npm-packages#how-to-update-the-version-number)
+    - Log in with `npm adduser` if you're not logged in
 3. Push with tags to git using `git push --tags`
 4. Find and edit the release notes on [GitHub](https://github.com/bjuppa/kingdom/releases)
