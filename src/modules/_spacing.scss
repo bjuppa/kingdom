@@ -15,8 +15,7 @@ $spacing-m-suffix: '1\\/2' !default;
     $counter-fraction: ceil($fraction) - $fraction + floor($fraction);
     @if(map-has-key($paddings, top)) {
       $paddings: map-merge($paddings, (bottom: $counter-fraction));
-    }
-    @else if(map-has-key($paddings, bottom)) {
+    } @else if(map-has-key($paddings, bottom)) {
       $paddings: map-merge($paddings, (top: $counter-fraction));
     }
   }
