@@ -4,6 +4,19 @@ $spacing-m-suffix: '1\\/2' !default;
 
 @import "sizing";
 
+// Add marging, compensating with padding to a whole spacing base unit vertically
+@mixin margin-relative($sides: top, $fraction: 1) {
+  @each $side in $sides {
+    @include length-relative(margin-#{$side}, $fraction);
+  }
+
+  @if(index($sides, top) and $fraction != round($fraction)) {
+    $counter-fraction: ceil($fraction) - $fraction + floor($fraction);
+    @include length-relative(padding-top, $counter-fraction);
+    @include length-relative(padding-bottom, ceil($counter-fraction));
+  }
+}
+
 // Add padding, totalling to a whole spacing base unit vertically
 @mixin padding-relative($sides: top bottom left right, $fraction: 1) {
   $paddings: ();
