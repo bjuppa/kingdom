@@ -18,6 +18,7 @@ $spacing-fractions: (
 /* Placeholders for spacing */
 @import "../modules/data-generators";
 @import "../modules/sizing";
+@import "../modules/spacing";
 
 :root {
   --spacing-base: #{$spacing-base};
@@ -126,75 +127,70 @@ $spacing-fractions: (
 
 /* %py-0 */
 %py-0 {
-  padding-top: 0;
-  padding-bottom: 0;
+  @include padding-relative(top bottom, 0);
 }
 
 @each $suffix, $factor in map-merge-natural-numbers($spacing-fractions, $max-spacing-multiple) {
   @if (round($factor*2) == $factor*2) {
     /* %py-#{$suffix} */
     %py-#{$suffix} {
-      @include length-relative(padding-top padding-bottom, $factor);
+      @include padding-relative(top bottom, $factor);
     }
   }
 }
 
 /* %px-0 */
 %px-0 {
-  padding-left: 0;
-  padding-right: 0;
+  @include padding-relative(left right, 0);
 }
 
 @each $suffix, $factor in map-merge-natural-numbers($spacing-fractions, $max-spacing-multiple) {
   /* %px-#{$suffix} */
   %px-#{$suffix} {
-    @include length-relative(padding-left padding-right, $factor);
+    @include padding-relative(left right, $factor);
   }
 
   /* %pl-#{$suffix} */
   %pl-#{$suffix} {
-    @include length-relative(padding-left, $factor);
+    @include padding-relative(left, $factor);
   }
 
   /* %pr-#{$suffix} */
   %pr-#{$suffix} {
-    @include length-relative(padding-right, $factor);
+    @include padding-relative(right, $factor);
   }
 }
 
 /* %pt-0 */
 %pt-0 {
-  padding-top: 0;
+  @include padding-relative(top, 0);
 }
 
 /* %pb-0 */
 %pb-0 {
-  padding-bottom: 0;
+  @include padding-relative(bottom, 0);
 }
 
 @each $suffix, $factor in map-merge-natural-numbers((), $max-spacing-multiple) {
   /* %pt-#{$suffix} */
   %pt-#{$suffix} {
-    @include length-relative(padding-top, $factor);
+    @include padding-relative(top, $factor);
   }
 
   /* %pb-#{$suffix} */
   %pb-#{$suffix} {
-    @include length-relative(padding-bottom, $factor);
+    @include padding-relative(bottom, $factor);
   }
 }
 
 @each $suffix, $fraction in $spacing-fractions {
-  $counter-fraction: ceil($fraction) - $fraction + floor($fraction);
   /* %pt-#{$suffix} Compensates with padding-bottom */
   %pt-#{$suffix} {
-    @include length-relative(padding-top, $fraction);
-    @include length-relative(padding-bottom, $counter-fraction);
+    @include padding-relative(top, $fraction);
   }
   /* %pb-#{$suffix} Compensates with padding-top */
   %pb-#{$suffix} {
-    @include length-relative(padding-bottom, $fraction);
-    @include length-relative(padding-top, $counter-fraction);
+    @include padding-relative(bottom, $fraction);
   }
 }
 
