@@ -37,10 +37,6 @@ $vertical-margin-utilities: 1 2 3 4 6 9 !default;
   }
 }
 
-.mt-1-adjacent-children > * + * {
-  @extend %mt-1;
-}
-
 .mb-0 {
   @extend %mb-0;
 }
@@ -213,3 +209,4 @@ $gap-utilities: 1 2 3 4 !default;
 }
 
 @include extend-for-children(mt-0 mt-1);
+@include extend-for-subselector(mt-1, 'adjacent-children\\:', '> * + *')
