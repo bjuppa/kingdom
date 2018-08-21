@@ -151,8 +151,7 @@ $fraction-spacing-utilities: (
   @include space-inside(bottom);
 }
 
-.space-inside,
-.space-inside-children > * {
+.space-inside {
   @include space-inside();
 }
 
@@ -208,5 +207,5 @@ $gap-utilities: 1 2 3 4 !default;
   column-gap: normal;
 }
 
-@include extend-for-children(mt-0 mt-1);
+@include extend-for-children(mt-0 mt-1 space-inside);
 @include extend-for-subselector(mt-1, 'adjacent-children\\:', '> * + *')

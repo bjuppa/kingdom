@@ -8,7 +8,7 @@
       Coming soon
     </p>
 
-    <aside class="flex children:mt-1 children:space-horizontally w-readable text-center space-inside-children">
+    <aside class="flex children:mt-1 children:space-horizontally w-readable text-center children:space-inside">
       <div class="rounded-sm background-color-gray-100 py-1">
         Small rounded corners with class <code>rounded-sm</code>
       </div>
