@@ -246,6 +246,9 @@
         <reload-link to="/modules/element-types">Element types</reload-link>
       </li>
       <li>
+        <reload-link to="/modules/extenders">Extenders</reload-link>
+      </li>
+      <li>
         <reload-link to="/modules/flow-rhythm">Flow rhythm</reload-link>
       </li>
       <li>
