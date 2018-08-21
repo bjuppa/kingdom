@@ -162,7 +162,7 @@ $fraction-spacing-utilities: (
 
 // Space children - great with minified html where inlined elements stack up against each other
 
-.space-children-horizontally {
+.children\:space-horizontally {
   @include space-children-horizontally();
 }
 
