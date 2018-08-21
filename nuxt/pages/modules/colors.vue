@@ -81,7 +81,7 @@
       properties, for those browsers that support them.
       Using the custom properties makes changing the colors dynamically easier, both via javascript and the CSS cascade.
     </p>
-    <ul class="w-readable-children">
+    <ul class="children:w-readable">
       <li>
         The mixin <code>apply-color</code> takes a color <var>$name</var> and an optional <var>$property</var> to
         set&mdash;which of course defaults to the <code>color</code> property when not supplied.
@@ -102,7 +102,7 @@
     </p>
 
     <h2>Functions for generating and transforming colors</h2>
-    <ul class="w-readable-children">
+    <ul class="children:w-readable">
       <li>
         Function <code>transform-hue</code> returns a color with similar "feel" to the supplied color but shifted into
         the hue of another color.

@@ -39,7 +39,7 @@
     <p>
       For good readability it's recommended to keep lines of text between 45 and 85 characters long on screens.
       Class <code>w-readable</code> will apply such a <code>max-width</code> to an element, while classes
-      <code>w-readable-children</code> and <code>w-readable-paragraphs</code> will apply to elements within.
+      <code>children:w-readable</code> and <code>w-readable-paragraphs</code> will apply to elements within.
       This documentation uses the latter to allow headings, lists, and other blocks to be wider, while keeping the
       body text easy to follow.
     </p>

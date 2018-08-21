@@ -14,7 +14,7 @@
     </p>
 
     <h2>Lists of elements</h2>
-    <ul class="w-readable-children">
+    <ul class="children:w-readable">
       <li>
         <var>$html-block-elements</var> are elements that are set to <code>display: block;</code> by default.
       </li>

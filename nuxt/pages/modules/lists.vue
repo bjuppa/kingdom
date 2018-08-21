@@ -10,7 +10,7 @@
                            target="_blank"><code>src/modules/_lists.scss</code></a>.
     </p>
 
-    <ul class="w-readable-children mt-1-adjacent-children">
+    <ul class="children:w-readable mt-1-adjacent-children">
       <li>
         Mixin <code>list-unstyled</code> removes:
         <ul class="list-unstyled mt-0">

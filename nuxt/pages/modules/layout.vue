@@ -12,7 +12,7 @@
                            target="_blank"><code>src/modules/_layout.scss</code></a>.
     </p>
 
-    <ul class="w-readable-children">
+    <ul class="children:w-readable">
       <li>
         Mixin <code>display-block</code> is for creating blocks and applies <code>line-height: inherit</code> by
         default.

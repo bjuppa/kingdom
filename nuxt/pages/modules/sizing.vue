@@ -32,7 +32,7 @@
     </p>
 
     <h2>Customizable Sass variables</h2>
-    <ul class="w-readable-children">
+    <ul class="children:w-readable">
       <li><var>$spacing-base</var> is usually set by the main Kingdom level file</li>
       <li><var>$readable-line-length-min</var> defaults to <code>45ch</code></li>
       <li><var>$readable-line-length-max</var> defaults to <code>75ch</code></li>

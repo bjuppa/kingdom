@@ -1,5 +1,6 @@
 // Utilities for sizing
 @import "../modules/sizing";
+@import "../modules/extenders";
 
 $vertical-sizing-utilities: 1 2 3 4 5 6 7 8 9 10 12 14 16 18 20 24 28 32 36 40 48 56 64 !default;
 @each $multiple in $vertical-sizing-utilities {
@@ -57,7 +58,6 @@ $fraction-sizing-utilities: (
 }
 
 .w-readable,
-.w-readable-children > *,
 .w-readable-paragraphs p {
   @include width-readable();
 }
@@ -117,3 +117,5 @@ $fraction-sizing-utilities: (
 .w-max-fit-content {
   max-width: fit-content;
 }
+
+@include extend-for-children(w-readable);

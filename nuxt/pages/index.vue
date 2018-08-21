@@ -119,7 +119,7 @@
          target="_blank"><code>node_modules/kingdom-css/src/</code></a>
       and you should pick and import only one.
     </p>
-    <ol class="w-readable-children">
+    <ol class="children:w-readable">
       <li>
         The <reload-link to="/level-1-reset"> 1st level</reload-link> is an opinionated <strong>CSS reset</strong>,
         laying a foundation for the other levels.

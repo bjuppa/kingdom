@@ -33,7 +33,7 @@
       and in other CSS selectors.
     </p>
 
-    <ul class="w-readable-children">
+    <ul class="children:w-readable">
       <li>
         Mixin <code>border-for-fixed-height</code> puts borders on the specified sides of fixed height elements.
         There's no need to shift fixed height elements as long as <code>box-sizing: border-box;</code> and the borders
