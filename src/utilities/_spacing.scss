@@ -1,6 +1,7 @@
 // Utilities for spacing
 @import "../modules/spacing";
 @import "../modules/sizing";
+@import "../modules/extenders";
 
 .my-0 {
   @extend %my-0;
@@ -25,10 +26,6 @@ $horizontal-margin-utilities: 1 2 3 4 6 !default;
   @extend %mt-0;
 }
 
-.mt-0-children > * {
-  @extend %mt-0;
-}
-
 .mt-0-within * {
   @extend %mt-0;
 }
@@ -38,10 +35,6 @@ $vertical-margin-utilities: 1 2 3 4 6 9 !default;
   .mt-#{$multiple} {
     @extend %mt-#{$multiple};
   }
-}
-
-.mt-1-children > * {
-  @extend %mt-1;
 }
 
 .mt-1-adjacent-children > * + * {
@@ -218,3 +211,5 @@ $gap-utilities: 1 2 3 4 !default;
 .column-gap-normal {
   column-gap: normal;
 }
+
+@include extend-for-children(mt-0 mt-1);

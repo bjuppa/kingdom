@@ -53,7 +53,7 @@
 
     <hr class="h-px">
 
-    <form class="form-inline space-children-horizontally mt-1-children mt-0" onsubmit="return false;">
+    <form class="form-inline space-children-horizontally children:mt-1 mt-0" onsubmit="return false;">
       <button class="button-prime">Prime button</button>
       <button class="button-plain">Plain button</button>
       <button class="button-petty">Petty button</button>

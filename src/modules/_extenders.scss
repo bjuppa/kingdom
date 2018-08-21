@@ -1,0 +1,13 @@
+@mixin extend-for-subselector($classnames, $prefix, $selector) {
+  @each $classname in $classnames {
+    .#{$prefix}#{$classname} #{$selector} {
+      // holabaloo!
+      // .#{$prefix}#{$classname} #{$selector}
+      @extend .#{$classname} !optional;
+    }
+  }
+}
+
+@mixin extend-for-children($classnames, $prefix: 'children\\:') {
+  @include extend-for-subselector($classnames, $prefix, '> *');
+}
