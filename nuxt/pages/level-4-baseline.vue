@@ -1,5 +1,5 @@
 <template>
-  <main class="space-inside w-readable-paragraphs visualize-vertical-rhythm">
+  <main class="space-inside paragraphs:w-readable visualize-vertical-rhythm">
     <h1>
       <small>Level&nbsp;4:</small>
       Baseline Rhythm

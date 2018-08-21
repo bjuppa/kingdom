@@ -57,8 +57,7 @@ $fraction-sizing-utilities: (
   min-height: 100vh;
 }
 
-.w-readable,
-.w-readable-paragraphs p {
+.w-readable {
   @include width-readable();
 }
 
@@ -119,3 +118,4 @@ $fraction-sizing-utilities: (
 }
 
 @include extend-for-children(w-readable);
+@include extend-for-subselector(w-readable, 'paragraphs\\:', 'p');

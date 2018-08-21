@@ -1,5 +1,5 @@
 <template>
-  <main class="space-inside w-readable-paragraphs">
+  <main class="space-inside paragraphs:w-readable">
     <h1>Kingdom CSS</h1>
     <p>
       A CSS framework, written in <a href="http://sass-lang.com" target="_blank">Sass</a>,

@@ -1,5 +1,5 @@
 <template>
-  <main class="space-inside w-readable-paragraphs">
+  <main class="space-inside paragraphs:w-readable">
     <h1>
       <small>Level&nbsp;1:</small>
       CSS Reset
