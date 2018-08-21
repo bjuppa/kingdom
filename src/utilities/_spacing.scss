@@ -41,21 +41,18 @@ $vertical-margin-utilities: 1 2 3 4 6 9 !default;
   @extend %mb-0;
 }
 
-.mx-auto,
-.mx-auto-children > * {
+.mx-auto {
   /* Horizontally center a block */
   margin-left: auto;
   margin-right: auto;
 }
 
-.ml-auto,
-.ml-auto-children > * {
+.ml-auto {
   /* Align a block to the right */
   margin-left: auto;
 }
 
-.mr-auto,
-.mr-auto-children > * {
+.mr-auto {
   /* Align a block to the left */
   margin-right: auto;
 }
@@ -207,5 +204,5 @@ $gap-utilities: 1 2 3 4 !default;
   column-gap: normal;
 }
 
-@include extend-for-children(mt-0 mt-1 space-inside);
+@include extend-for-children(mt-0 mt-1 space-inside mx-auto ml-auto mr-auto);
 @include extend-for-subselector(mt-1, 'adjacent-children\\:', '> * + *')
