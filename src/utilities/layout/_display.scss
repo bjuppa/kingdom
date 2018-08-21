@@ -1,13 +1,12 @@
 // Utilities for display property
 @import "../../modules/layout";
+@import "../../modules/extenders";
 
-.block,
-.block-children > * {
+.block {
   @include display-block();
 }
 
 .inline-block,
-.inline-block-children > *,
 .inline-block-within * {
   @include display-inline-block();
 }
@@ -32,3 +31,5 @@
 .hidden {
   display: none;
 }
+
+@include extend-for-children(block inline-block);
