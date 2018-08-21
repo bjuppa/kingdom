@@ -25,6 +25,10 @@
   justify-content: flex-end;
 }
 
+.justify-content-stretch {
+  justify-content: stretch;
+}
+
 .justify-content-space-between {
   justify-content: space-between;
 }
@@ -35,10 +39,6 @@
 
 .justify-content-space-evenly {
   justify-content: space-evenly;
-}
-
-.justify-content-stretch {
-  justify-content: stretch;
 }
 
 // align-content along cross/block axis (only effects multiple lines in flexbox)
@@ -63,6 +63,14 @@
   align-content: flex-end;
 }
 
+.align-content-stretch {
+  align-content: stretch;
+}
+
+.align-content-baseline {
+  align-content: baseline;
+}
+
 .align-content-space-between {
   align-content: space-between;
 }
@@ -73,14 +81,6 @@
 
 .align-content-space-evenly {
   align-content: space-evenly;
-}
-
-.align-content-stretch {
-  align-content: stretch;
-}
-
-.align-content-baseline {
-  align-content: baseline;
 }
 
 /* Align element within parent (effectively adjusts margins) */
