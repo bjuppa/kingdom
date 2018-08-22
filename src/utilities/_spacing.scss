@@ -21,7 +21,8 @@ $horizontal-margin-utilities: 1 2 3 4 6 !default;
     @extend %mr-#{$multiple};
   }
 
-  @include extend-for-children(mx-#{$multiple});
+  @include extend-for-children(mx-#{$multiple} ml-#{$multiple} mr-#{$multiple});
+  @include extend-for-adjacent-children(ml-#{$multiple} mr-#{$multiple});
 }
 
 .mt-0 {
@@ -129,6 +130,9 @@ $fraction-spacing-utilities: (
   .pt-#{$suffix} {
     @extend %pt-#{$suffix};
   }
+
+  @include extend-for-children(mx-#{$suffix} ml-#{$suffix} mr-#{$suffix});
+  @include extend-for-adjacent-children(ml-#{$suffix} mr-#{$suffix});
 }
 
 
