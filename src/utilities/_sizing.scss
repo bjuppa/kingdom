@@ -118,4 +118,4 @@ $fraction-sizing-utilities: (
 }
 
 @include extend-for-children(w-readable);
-@include extend-for-subselector(w-readable, 'paragraphs\\:', 'p');
+@include extend-for-paragraphs(w-readable);
