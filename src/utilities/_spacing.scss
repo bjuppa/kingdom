@@ -1,6 +1,7 @@
 // Utilities for spacing
 @import "../modules/spacing";
 @import "../modules/sizing";
+@import "../modules/extenders";
 
 .my-0 {
   @extend %my-0;
@@ -19,17 +20,12 @@ $horizontal-margin-utilities: 1 2 3 4 6 !default;
   .mr-#{$multiple} {
     @extend %mr-#{$multiple};
   }
+
+  @include extend-for-children(mx-#{$multiple} ml-#{$multiple} mr-#{$multiple});
+  @include extend-for-adjacent-children(ml-#{$multiple} mr-#{$multiple});
 }
 
 .mt-0 {
-  @extend %mt-0;
-}
-
-.mt-0-children > * {
-  @extend %mt-0;
-}
-
-.mt-0-within * {
   @extend %mt-0;
 }
 
@@ -40,33 +36,22 @@ $vertical-margin-utilities: 1 2 3 4 6 9 !default;
   }
 }
 
-.mt-1-children > * {
-  @extend %mt-1;
-}
-
-.mt-1-adjacent-children > * + * {
-  @extend %mt-1;
-}
-
 .mb-0 {
   @extend %mb-0;
 }
 
-.mx-auto,
-.mx-auto-children > * {
+.mx-auto {
   /* Horizontally center a block */
   margin-left: auto;
   margin-right: auto;
 }
 
-.ml-auto,
-.ml-auto-children > * {
+.ml-auto {
   /* Align a block to the right */
   margin-left: auto;
 }
 
-.mr-auto,
-.mr-auto-children > * {
+.mr-auto {
   /* Align a block to the left */
   margin-right: auto;
 }
@@ -145,6 +130,9 @@ $fraction-spacing-utilities: (
   .pt-#{$suffix} {
     @extend %pt-#{$suffix};
   }
+
+  @include extend-for-children(mx-#{$suffix} ml-#{$suffix} mr-#{$suffix});
+  @include extend-for-adjacent-children(ml-#{$suffix} mr-#{$suffix});
 }
 
 
@@ -162,14 +150,13 @@ $fraction-spacing-utilities: (
   @include space-inside(bottom);
 }
 
-.space-inside,
-.space-inside-children > * {
+.space-inside {
   @include space-inside();
 }
 
 // Space children - great with minified html where inlined elements stack up against each other
 
-.space-children-horizontally {
+.children\:space-horizontally {
   @include space-children-horizontally();
 }
 
@@ -218,3 +205,7 @@ $gap-utilities: 1 2 3 4 !default;
 .column-gap-normal {
   column-gap: normal;
 }
+
+@include extend-for-children(mt-0 mt-1 space-inside mx-auto ml-auto mr-auto);
+@include extend-for-adjacent-children(mt-1);
+@include extend-for-descendants(mt-0);

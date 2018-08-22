@@ -1,0 +1,28 @@
+$extend-for-children-prefix: children\: !default;
+$extend-for-adjacent-children-prefix: adjacent-children\: !default;
+$extend-for-descendants-prefix: descendants\: !default;
+$extend-for-paragraphs-prefix: paragraphs\: !default;
+
+@mixin extend-for-subselector($classnames, $prefix, $selector) {
+  @each $classname in $classnames {
+    .#{$prefix}#{$classname} #{$selector} {
+      @extend .#{$classname} !optional;
+    }
+  }
+}
+
+@mixin extend-for-children($classnames, $prefix: $extend-for-children-prefix) {
+  @include extend-for-subselector($classnames, $prefix, '> *');
+}
+
+@mixin extend-for-adjacent-children($classnames, $prefix: $extend-for-adjacent-children-prefix) {
+  @include extend-for-subselector($classnames, $prefix, '> * + *');
+}
+
+@mixin extend-for-descendants($classnames, $prefix: $extend-for-descendants-prefix) {
+  @include extend-for-subselector($classnames, $prefix, '*');
+}
+
+@mixin extend-for-paragraphs($classnames, $prefix: $extend-for-paragraphs-prefix) {
+  @include extend-for-subselector($classnames, $prefix, 'p');
+}

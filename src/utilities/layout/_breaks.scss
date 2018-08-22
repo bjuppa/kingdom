@@ -1,11 +1,11 @@
 // Utilities for breaks within fragmented elements
 @import "../../modules/sizing";
 @import "../../modules/flow-rhythm";
+@import "../../modules/extenders";
 
 // Break inside
 
-.avoid-break-inside,
-.avoid-break-inside-children > * {
+.avoid-break-inside {
   break-inside: avoid;
 }
 
@@ -65,3 +65,5 @@
     widows: $i;
   }
 }
+
+@include extend-for-children(avoid-break-inside);

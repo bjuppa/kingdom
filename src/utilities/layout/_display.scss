@@ -1,19 +1,16 @@
 // Utilities for display property
 @import "../../modules/layout";
+@import "../../modules/extenders";
 
-.block,
-.block-children > * {
+.block {
   @include display-block();
 }
 
-.inline-block,
-.inline-block-children > *,
-.inline-block-within * {
+.inline-block {
   @include display-inline-block();
 }
 
-.inline,
-.inline-within * {
+.inline {
   @include display-inline();
 }
 
@@ -32,3 +29,6 @@
 .hidden {
   display: none;
 }
+
+@include extend-for-children(block inline-block table-row table-cell);
+@include extend-for-descendants(inline inline-block);

@@ -8,7 +8,7 @@
       Coming soon
     </p>
 
-    <aside class="flex mt-1-children space-children-horizontally w-readable text-center space-inside-children">
+    <aside class="flex children:mt-1 children:space-horizontally w-readable text-center children:space-inside">
       <div class="rounded-sm background-color-gray-100 py-1">
         Small rounded corners with class <code>rounded-sm</code>
       </div>
@@ -20,7 +20,7 @@
       </div>
     </aside>
 
-    <aside class="flex mt-1-children space-children-horizontally w-readable text-center align-items-center justify-content-space-around ">
+    <aside class="flex children:mt-1 children:space-horizontally w-readable text-center align-items-center justify-content-space-around ">
       <div class="rounded-1 background-color-gray-100 py-1 space-inside visualize-vertical-rhythm">
         Line-high radius with class <code>rounded-1</code>
       </div>

@@ -86,7 +86,7 @@
       </li>
     </ul>
 
-    <ul class="list-inline space-children-horizontally">
+    <ul class="list-inline children:space-horizontally">
       <li>Inline&hellip;</li>
       <li>&hellip;list</li>
     </ul>

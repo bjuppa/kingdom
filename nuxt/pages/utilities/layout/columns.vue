@@ -5,7 +5,7 @@
       Columns
     </h1>
 
-    <div class="columns-readable breaks-readable avoid-break-inside-children">
+    <div class="columns-readable breaks-readable children:avoid-break-inside">
       <p>
         In supporting browsers, CSS column layouts can be created using the utility classes from
         <a href="https://github.com/bjuppa/kingdom/blob/master/src/utilities/layout/_columns.scss"
@@ -63,7 +63,7 @@
     </div>
 
     <h2>Limitations with columns</h2>
-    <ul class="columns-readable avoid-break-inside-children column-gap-2">
+    <ul class="columns-readable children:avoid-break-inside column-gap-2">
       <li>
         Browser support for the break and column properties is far from complete.
       </li>

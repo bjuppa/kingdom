@@ -1,5 +1,5 @@
 <template>
-  <main class="space-inside w-readable-paragraphs">
+  <main class="space-inside paragraphs:w-readable">
     <h1>
       <small>Module:</small>
       Converters
@@ -10,7 +10,7 @@
                            target="_blank"><code>src/modules/_converters.scss</code></a>.
     </p>
 
-    <ul class="w-readable-children">
+    <ul class="children:w-readable">
       <li>
         Function <code>length-rem</code> converts any length unit to an approximate equivalent in <code>rem</code>.
       </li>

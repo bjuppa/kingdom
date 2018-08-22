@@ -1,5 +1,5 @@
 <template>
-  <main class="space-inside w-readable-paragraphs visualize-vertical-rhythm">
+  <main class="space-inside paragraphs:w-readable visualize-vertical-rhythm">
     <h1>
       <small>Level&nbsp;4:</small>
       Baseline Rhythm
@@ -68,7 +68,7 @@
       and calculate the <code>baseline-shift-factor</code> yourself.
     </p>
 
-    <aside class="clearfix mt-0-within text-center w-readable">
+    <aside class="clearfix descendants:mt-0 text-center w-readable">
       <div class="w-max-half float-left">
         <p class="text-1-block">Text 1</p>
         <p class="text-2-block">Text 2</p>
