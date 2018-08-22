@@ -1,4 +1,5 @@
 $extend-for-children-prefix: children\: !default;
+$extend-for-adjacent-children-prefix: adjacent-children\: !default;
 
 @mixin extend-for-subselector($classnames, $prefix, $selector) {
   @each $classname in $classnames {
@@ -10,4 +11,8 @@ $extend-for-children-prefix: children\: !default;
 
 @mixin extend-for-children($classnames, $prefix: $extend-for-children-prefix) {
   @include extend-for-subselector($classnames, $prefix, '> *');
+}
+
+@mixin extend-for-adjacent-children($classnames, $prefix: $extend-for-adjacent-children-prefix) {
+  @include extend-for-subselector($classnames, $prefix, '> * + *');
 }

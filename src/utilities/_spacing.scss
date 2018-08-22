@@ -205,4 +205,4 @@ $gap-utilities: 1 2 3 4 !default;
 }
 
 @include extend-for-children(mt-0 mt-1 space-inside mx-auto ml-auto mr-auto);
-@include extend-for-subselector(mt-1, 'adjacent-children\\:', '> * + *')
+@include extend-for-adjacent-children(mt-1);
