@@ -6,13 +6,11 @@
   @include display-block();
 }
 
-.inline-block,
-.inline-block-within * {
+.inline-block {
   @include display-inline-block();
 }
 
-.inline,
-.inline-within * {
+.inline {
   @include display-inline();
 }
 
@@ -33,3 +31,4 @@
 }
 
 @include extend-for-children(block inline-block);
+@include extend-for-descendants(inline inline-block);
