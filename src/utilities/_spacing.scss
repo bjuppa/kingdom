@@ -26,10 +26,6 @@ $horizontal-margin-utilities: 1 2 3 4 6 !default;
   @extend %mt-0;
 }
 
-.mt-0-within * {
-  @extend %mt-0;
-}
-
 $vertical-margin-utilities: 1 2 3 4 6 9 !default;
 @each $multiple in $vertical-margin-utilities {
   .mt-#{$multiple} {
@@ -206,3 +202,4 @@ $gap-utilities: 1 2 3 4 !default;
 
 @include extend-for-children(mt-0 mt-1 space-inside mx-auto ml-auto mr-auto);
 @include extend-for-adjacent-children(mt-1);
+@include extend-for-descendants(mt-0);
