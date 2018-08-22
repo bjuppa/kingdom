@@ -20,6 +20,8 @@ $horizontal-margin-utilities: 1 2 3 4 6 !default;
   .mr-#{$multiple} {
     @extend %mr-#{$multiple};
   }
+
+  @include extend-for-children(mx-#{$multiple});
 }
 
 .mt-0 {
