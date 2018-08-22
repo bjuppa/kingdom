@@ -30,5 +30,5 @@
   display: none;
 }
 
-@include extend-for-children(block inline-block);
+@include extend-for-children(block inline-block table-row table-cell);
 @include extend-for-descendants(inline inline-block);
