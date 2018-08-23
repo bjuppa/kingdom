@@ -1,3 +1,4 @@
+$text-direction-is-ltr: true !default;
 $spacing-xs-suffix: '1\\/8' !default;
 $spacing-s-suffix: '1\\/4' !default;
 $spacing-m-suffix: '1\\/2' !default;
@@ -57,8 +58,8 @@ $spacing-m-suffix: '1\\/2' !default;
 }
 
 // Add horizontal spacing between children
-@mixin space-children-horizontally($suffix: $spacing-s-suffix) {
+@mixin space-children-horizontally($suffix: $spacing-s-suffix, $ltr: $text-direction-is-ltr) {
   > *:not(:last-child) {
-    @extend %mr-#{$suffix} !optional;
+    @extend %m#{if($ltr, r, l)}-#{$suffix} !optional;
   }
 }

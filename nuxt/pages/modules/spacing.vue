@@ -20,10 +20,11 @@
     </p>
 
     <p>
-      The <code>space-children-horizontally</code> mixin adds right margins to all but the last item.
+      The <code>space-children-horizontally</code> mixin adds a left <em>or</em> right margin to all but the last item.
       Great for inline lists.
-      Optional parameter to this mixin is <var>$suffix</var> that can be used to pick other sized margin placeholder
-      than the default.
+      Optional parameters to this mixin are <var>$ltr</var> for switching text-direction
+      (set to <code>false</code> to use left margins in a right-to-left context)
+      and <var>$suffix</var> that can be used to pick another sized margin placeholder than the default.
     </p>
 
     <h2>Caveats</h2>
