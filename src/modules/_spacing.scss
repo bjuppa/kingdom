@@ -1,7 +1,6 @@
+//TODO: get rid of the ltr option, it should not be needed
 $text-direction-is-ltr: true !default;
-$spacing-xs-suffix: '1\\/8' !default;
-$spacing-s-suffix: '1\\/4' !default;
-$spacing-m-suffix: '1\\/2' !default;
+$default-spacing-fraction: 1/4 !default;
 
 @import "sizing";
 
@@ -40,26 +39,25 @@ $spacing-m-suffix: '1\\/2' !default;
 }
 
 // Add horizontal padding and make sure the last baseline-shifted element gets some bottom padding
-@mixin space-inside($sides: top bottom left right, $suffix: $spacing-s-suffix) {
+@mixin space-inside($sides: top bottom left right, $fraction: $default-spacing-fraction) {
   //If the last child of a bordered element is baseline shifted, it's text lies on the bottom border - so add bottom padding!
   @if index($sides, bottom) {
     > %baseline-shift:last-child {
-      @extend %pb-1 !optional;
+      @include padding-relative(bottom, 1);
     }
   }
 
-  @if index($sides, left) and index($sides, right) {
-    @extend %px-#{$suffix} !optional;
-  } @else if index($sides, left) {
-    @extend %pl-#{$suffix} !optional;
-  } @else if index($sides, right) {
-    @extend %pr-#{$suffix} !optional;
+  @if index($sides, left) {
+    @include padding-relative(left, $fraction);
+  }
+  @if index($sides, right) {
+    @include padding-relative(right, $fraction);
   }
 }
 
 // Add horizontal spacing between children
-@mixin space-children-horizontally($suffix: $spacing-s-suffix, $ltr: $text-direction-is-ltr) {
+@mixin space-children-horizontally($fraction: $default-spacing-fraction, $ltr: $text-direction-is-ltr) {
   > *:not(:last-child) {
-    @extend %m#{if($ltr, r, l)}-#{$suffix} !optional;
+    @include length-relative(margin-#{if($ltr, right, left)}, $fraction);
   }
 }
