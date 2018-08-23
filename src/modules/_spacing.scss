@@ -56,6 +56,7 @@ $default-spacing-fraction: 1/4 !default;
 }
 
 // Add horizontal spacing between children
+//TODO: use some language directive relative thingy here
 @mixin space-children-horizontally($fraction: $default-spacing-fraction, $ltr: $text-direction-is-ltr) {
   > *:not(:last-child) {
     @include length-relative(margin-#{if($ltr, right, left)}, $fraction);
