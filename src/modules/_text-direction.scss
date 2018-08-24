@@ -1,11 +1,11 @@
 @mixin for-ltr {
-  :not([dir="rtl"]), [dir="ltr"], [dir="ltr"] :not([dir="rtl"]), [dir] [dir="ltr"] > {
+  :dir(ltr):dir(ltr):dir(ltr):dir(ltr), *, [dir=ltr], [dir=rtl] [dir=ltr], [dir=ltr] [dir=rtl] [dir=ltr] {
     @content;
   }
 }
 
 @mixin for-rtl {
-  [dir="rtl"], [dir="rtl"] :not([dir="ltr"]), [dir] [dir="rtl"] > {
+  :dir(rtl):dir(rtl):dir(rtl):dir(rtl), [dir=rtl], [dir=ltr] [dir=rtl], [dir=rtl] [dir=ltr] [dir=rtl] {
     @content;
   }
 }
