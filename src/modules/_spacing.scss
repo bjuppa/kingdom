@@ -56,12 +56,14 @@ $default-spacing-fraction: 1/4 !default;
 
 // Add horizontal spacing between children
 @mixin space-children-horizontally($fraction: $default-spacing-fraction) {
-  > *:not(:last-child) {
-    @include for-ltr {
+  @include for-ltr {
+    > *:not(:last-child) {
       @include length-relative(margin-right, $fraction);
       margin-left: 0;
     }
-    @include for-rtl {
+  }
+  @include for-rtl {
+    > *:not(:last-child) {
       @include length-relative(margin-left, $fraction);
       margin-right: 0;
     }
