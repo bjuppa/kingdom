@@ -1,5 +1,5 @@
 @mixin for-ltr {
-  :dir(ltr):dir(ltr):dir(ltr):dir(ltr), *, [dir=ltr], [dir=rtl] [dir=ltr], [dir=ltr] [dir=rtl] [dir=ltr] {
+  :dir(ltr):dir(ltr):dir(ltr):dir(ltr), [dir=ltr], [dir=rtl] [dir=ltr], [dir=ltr] [dir=rtl] [dir=ltr], * {
     @content;
   }
 }
