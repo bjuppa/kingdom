@@ -2,6 +2,7 @@
 @import "../modules/spacing";
 @import "../modules/sizing";
 @import "../modules/extenders";
+@import "../modules/text-direction";
 
 .my-0 {
   @extend %my-0;
@@ -56,7 +57,29 @@ $vertical-margin-utilities: 1 2 3 4 6 9 !default;
   margin-right: auto;
 }
 
-//TODO: add text-direction relative margin auto utils .m-end-auto and .m-start-auto
+.m-start-auto {
+  /* Horizontally push a block in the text direction */
+  @include for-ltr {
+    margin-left: auto;
+    margin-right: 0;
+  }
+  @include for-rtl {
+    margin-right: auto;
+    margin-left: 0;
+  }
+}
+
+.m-end-auto {
+  /* Horizontally push a block opposite of the text direction */
+  @include for-ltr {
+    margin-right: auto;
+    margin-left: 0;
+  }
+  @include for-rtl {
+    margin-left: auto;
+    margin-right: 0;
+  }
+}
 
 .p-0 {
   @extend %p-0;
