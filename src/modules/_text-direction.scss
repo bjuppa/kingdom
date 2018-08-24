@@ -1,3 +1,4 @@
+//TODO: consider different cases where you'd want to apply depending on the element's intrinsic text direction or the containing element's text direction
 @mixin for-ltr {
   /* See ltr-specific treatment for #{&} */
   &:dir(ltr):dir(ltr):dir(ltr):dir(ltr), [dir=ltr] &, &[dir=ltr], [dir=rtl] [dir=ltr] &, [dir=rtl] &[dir=ltr], [dir=ltr] [dir=rtl] [dir=ltr] &, [dir=ltr] [dir=rtl] &[dir=ltr], & {
