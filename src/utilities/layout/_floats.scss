@@ -1,5 +1,6 @@
 // Utilities for floats
 @import "../../modules/clearfix";
+@import "../../modules/text-direction";
 
 .float-right {
   float: right;
@@ -29,4 +30,20 @@
   @include clearfix;
 }
 
-//TODO: add text-direction relative floats .float-end and .float-start
+.float-start {
+  @include for-ltr {
+    float: left;
+  }
+  @include for-rtl {
+    float: right;
+  }
+}
+
+.float-end {
+  @include for-ltr {
+    float: right;
+  }
+  @include for-rtl {
+    float: left;
+  }
+}
