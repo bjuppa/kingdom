@@ -57,6 +57,8 @@ $vertical-margin-utilities: 1 2 3 4 6 9 !default;
   margin-right: auto;
 }
 
+//TODO: consider renaming (and perhaps moving) .m-start-auto & .m-end-auto
+//As they reset the opposite margin to 0 with a very high specificity they don't really belong here
 .m-start-auto {
   /* Horizontally push a block in the text direction */
   @include for-ltr {
