@@ -1,6 +1,7 @@
 @mixin for-ltr {
   /* See ltr-specific treatment for #{&} */
   &:dir(ltr):dir(ltr):dir(ltr):dir(ltr), [dir=ltr] &, &[dir=ltr], [dir=rtl] [dir=ltr] &, [dir=rtl] &[dir=ltr], [dir=ltr] [dir=rtl] [dir=ltr] &, [dir=ltr] [dir=rtl] &[dir=ltr], & {
+    /* ltr-specific treatment */
     @content;
   }
 }
@@ -8,6 +9,7 @@
 @mixin for-rtl {
   /* See rtl-specific treatment for #{&} */
   &:dir(rtl):dir(rtl):dir(rtl):dir(rtl), [dir=rtl] &, &[dir=rtl], [dir=ltr] [dir=rtl] &, [dir=ltr] &[dir=rtl], [dir=rtl] [dir=ltr] [dir=rtl] &, [dir=rtl] [dir=ltr] &[dir=rtl] {
+    /* rtl-specific treatment */
     @content;
   }
 }
