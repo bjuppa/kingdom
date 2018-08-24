@@ -1,12 +1,12 @@
 @mixin for-ltr {
-  /* ltr-specific treatment for #{&} */
+  /* See ltr-specific treatment for #{&} */
   &:dir(ltr):dir(ltr):dir(ltr):dir(ltr), [dir=ltr] &, &[dir=ltr], [dir=rtl] [dir=ltr] &, [dir=rtl] &[dir=ltr], [dir=ltr] [dir=rtl] [dir=ltr] &, [dir=ltr] [dir=rtl] &[dir=ltr], & {
     @content;
   }
 }
 
 @mixin for-rtl {
-  /* rtl-specific treatment for #{&} */
+  /* See rtl-specific treatment for #{&} */
   &:dir(rtl):dir(rtl):dir(rtl):dir(rtl), [dir=rtl] &, &[dir=rtl], [dir=ltr] [dir=rtl] &, [dir=ltr] &[dir=rtl], [dir=rtl] [dir=ltr] [dir=rtl] &, [dir=rtl] [dir=ltr] &[dir=rtl] {
     @content;
   }
