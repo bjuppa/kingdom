@@ -1,11 +1,11 @@
 @mixin for-ltr {
-  :dir(ltr):dir(ltr):dir(ltr):dir(ltr), [dir=ltr], [dir=rtl] [dir=ltr], [dir=ltr] [dir=rtl] [dir=ltr], * {
+  :dir(ltr):dir(ltr):dir(ltr):dir(ltr) &, [dir=ltr] &, [dir=rtl] [dir=ltr] &, [dir=ltr] [dir=rtl] [dir=ltr] &, & {
     @content;
   }
 }
 
 @mixin for-rtl {
-  :dir(rtl):dir(rtl):dir(rtl):dir(rtl), [dir=rtl], [dir=ltr] [dir=rtl], [dir=rtl] [dir=ltr] [dir=rtl] {
+  :dir(rtl):dir(rtl):dir(rtl):dir(rtl) &, [dir=rtl] &, [dir=ltr] [dir=rtl] &, [dir=rtl] [dir=ltr] [dir=rtl] & {
     @content;
   }
 }
