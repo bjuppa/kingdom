@@ -272,6 +272,9 @@
       <li>
         <reload-link to="/modules/strip-unit">Strip unit</reload-link>
       </li>
+      <li>
+        <reload-link to="/modules/text-direction">Text direction</reload-link>
+      </li>
     </ul>
 
     <h2>Testing</h2>

@@ -1,0 +1,31 @@
+@mixin in-ltr-context {
+  /* #{&} has specific treatment when in a left-to-right parent */
+  :dir(ltr):dir(ltr):dir(ltr):dir(ltr) > &, [dir=ltr] &, [dir=rtl] [dir=ltr] &, [dir=ltr] [dir=rtl] [dir=ltr] &, * > & {
+    /* In left-to-right parent */
+    @content;
+  }
+}
+
+@mixin in-rtl-context {
+  /* #{&} has specific treatment when in a right-to-left parent */
+  :dir(rtl):dir(rtl):dir(rtl):dir(rtl) > &, [dir=rtl] &, [dir=ltr] [dir=rtl] &, [dir=rtl] [dir=ltr] [dir=rtl] & {
+    /* In right-to-left parent */
+    @content;
+  }
+}
+
+@mixin for-ltr {
+  /* #{&} has specific left-to-right treatment */
+  &:dir(ltr):dir(ltr):dir(ltr):dir(ltr):dir(ltr), [dir=ltr] &, &[dir=ltr][dir=ltr], [dir=rtl] [dir=ltr] &, [dir=rtl] &[dir=ltr][dir=ltr], [dir=ltr] [dir=rtl] [dir=ltr] &, [dir=ltr] [dir=rtl] &[dir=ltr][dir=ltr], & {
+    /* left-to-right */
+    @content;
+  }
+}
+
+@mixin for-rtl {
+  /* #{&} has specific right-to-left treatment */
+  &:dir(rtl):dir(rtl):dir(rtl):dir(rtl):dir(rtl), [dir=rtl] &, &[dir=rtl][dir=rtl], [dir=ltr] [dir=rtl] &, [dir=ltr] &[dir=rtl][dir=rtl], [dir=rtl] [dir=ltr] [dir=rtl] &, [dir=rtl] [dir=ltr] &[dir=rtl][dir=rtl] {
+    /* right-to-left */
+    @content;
+  }
+}

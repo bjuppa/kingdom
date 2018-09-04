@@ -1,8 +1,7 @@
-//TODO: get rid of the ltr option, it should not be needed
-$text-direction-is-ltr: true !default;
 $default-spacing-fraction: 1/4 !default;
 
 @import "sizing";
+@import "text-direction";
 
 // Add marging, compensating with padding to a whole spacing base unit vertically
 @mixin margin-relative($sides: top, $fraction: 1) {
@@ -56,8 +55,17 @@ $default-spacing-fraction: 1/4 !default;
 }
 
 // Add horizontal spacing between children
-@mixin space-children-horizontally($fraction: $default-spacing-fraction, $ltr: $text-direction-is-ltr) {
-  > *:not(:last-child) {
-    @include length-relative(margin-#{if($ltr, right, left)}, $fraction);
+@mixin space-children-horizontally($fraction: $default-spacing-fraction) {
+  @include for-ltr {
+    > *:not(:last-child) {
+      @include length-relative(margin-right, $fraction);
+      margin-left: 0;
+    }
+  }
+  @include for-rtl {
+    > *:not(:last-child) {
+      @include length-relative(margin-left, $fraction);
+      margin-right: 0;
+    }
   }
 }

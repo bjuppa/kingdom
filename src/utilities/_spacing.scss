@@ -2,6 +2,7 @@
 @import "../modules/spacing";
 @import "../modules/sizing";
 @import "../modules/extenders";
+@import "../modules/text-direction";
 
 .my-0 {
   @extend %my-0;
@@ -54,6 +55,32 @@ $vertical-margin-utilities: 1 2 3 4 6 9 !default;
 .mr-auto {
   /* Align a block to the left */
   margin-right: auto;
+}
+
+//TODO: consider renaming (and perhaps moving) .m-start-auto & .m-end-auto
+//As they reset the opposite margin to 0 with a very high specificity they don't really belong here
+.m-start-auto {
+  /* Horizontally push a block in the text direction */
+  @include in-ltr-context {
+    margin-left: auto;
+    margin-right: 0;
+  }
+  @include in-rtl-context {
+    margin-right: auto;
+    margin-left: 0;
+  }
+}
+
+.m-end-auto {
+  /* Horizontally push a block opposite of the text direction */
+  @include in-ltr-context {
+    margin-right: auto;
+    margin-left: 0;
+  }
+  @include in-rtl-context {
+    margin-left: auto;
+    margin-right: 0;
+  }
 }
 
 .p-0 {

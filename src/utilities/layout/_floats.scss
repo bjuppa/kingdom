@@ -1,5 +1,6 @@
 // Utilities for floats
 @import "../../modules/clearfix";
+@import "../../modules/text-direction";
 
 .float-right {
   float: right;
@@ -27,4 +28,22 @@
 
 .clearfix {
   @include clearfix;
+}
+
+.float-start {
+  @include in-ltr-context {
+    float: left;
+  }
+  @include in-rtl-context {
+    float: right;
+  }
+}
+
+.float-end {
+  @include in-ltr-context {
+    float: right;
+  }
+  @include in-rtl-context {
+    float: left;
+  }
 }
