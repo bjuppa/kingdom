@@ -50,7 +50,7 @@
   }
 
   .print\:links-inside {
-    *:link {
+    :link {
       &[href^=http] {
         @extend .print\:href;
       }
