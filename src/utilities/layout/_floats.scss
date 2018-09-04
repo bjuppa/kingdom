@@ -30,22 +30,20 @@
   @include clearfix;
 }
 
-//TODO: .float-start and .float-end could benefit from checking text-direction on parent/ancestor instead of the element itself
-//TODO: can we try moving the mixin call to the top-level?
 .float-start {
-  @include for-ltr {
+  @include in-ltr-context {
     float: left;
   }
-  @include for-rtl {
+  @include in-rtl-context {
     float: right;
   }
 }
 
 .float-end {
-  @include for-ltr {
+  @include in-ltr-context {
     float: right;
   }
-  @include for-rtl {
+  @include in-rtl-context {
     float: left;
   }
 }
