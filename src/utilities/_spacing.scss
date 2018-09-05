@@ -41,25 +41,23 @@ $vertical-margin-utilities: 1 2 3 4 6 9 !default;
   @extend %mb-0;
 }
 
-.mx-auto {
+.mx-auto, .mx-center {
   /* Horizontally center a block */
   margin-left: auto;
   margin-right: auto;
 }
 
-.ml-auto {
+.ml-auto, .mx-right {
   /* Align a block to the right */
   margin-left: auto;
 }
 
-.mr-auto {
+.mr-auto, .mx-left {
   /* Align a block to the left */
   margin-right: auto;
 }
 
-//TODO: consider renaming (and perhaps moving) .m-start-auto & .m-end-auto
-//As they reset the opposite margin to 0 with a very high specificity they don't really belong here
-.m-start-auto {
+.mx-end {
   /* Horizontally push a block in the text direction */
   @include in-ltr-context {
     margin-left: auto;
@@ -71,7 +69,7 @@ $vertical-margin-utilities: 1 2 3 4 6 9 !default;
   }
 }
 
-.m-end-auto {
+.mx-start {
   /* Horizontally push a block opposite of the text direction */
   @include in-ltr-context {
     margin-right: auto;
