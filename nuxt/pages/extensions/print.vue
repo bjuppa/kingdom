@@ -15,28 +15,30 @@
       <span class="print:hidden">The class <code>print:hidden</code> can be used to remove an element</span>
       &hellip;<span class="print:invisible"> the class <code>print:invisible</code></span> will hide contents when
       printing.
-      Hidden elements can be brought back using classes <code>print:block</code>, <code>print:inline-block</code> &
-      <code>print:inline</code>.
       All <abbr title="abbreviation"><code>&lt;abbr&gt;</code></abbr> elements have their <code>title</code> printed
       after them.
       <strong class="print:hidden">Print this page as a pdf to see the effects!</strong>
     </p>
 
     <h2>Displaying content only for print</h2>
-    <div class="print-only:block italic border space-inside float-right w-max-half">
-      This floated block is only displayed in print using class <code>print-only:block</code>.
+    <div class="hidden print:block italic border space-inside float-right w-max-half">
+      This floated block is only displayed in print using classes <code>hidden</code> and <code>print:block</code>.
     </div>
     <p class="mt-0 print:background-exact">
-      The classes <code>print-only:block</code>, <code>print-only:inline-block</code>, and
-      <code>print-only:inline</code> can be used to hide content except when printing.
+      The class <code>hidden</code> from the <reload-link to="/utilities/layout/display">display utilities</reload-link>
+      combined with either of the classes
+      <code>print:block</code>,
+      <code>print:inline-block</code>, or
+      <code>print:inline</code>
+      can be used to hide content except when printing.
 
-      <span class="print-only:inline italic background-color-gray-100">
-        This span is only displayed in print using class
-        <code>print-only:inline</code>.
+      <span class="hidden print:inline italic background-color-gray-100">
+        This span is only displayed in print using classes <code>hidden</code> and
+        <code>print:inline</code>.
       </span>
-      <span class="print-only:inline-block italic background-color-gray-100 space-inside">
-        This span is only displayed in print using class
-        <code>print-only:inline-block</code>.
+      <span class="hidden print:inline-block italic background-color-gray-100 space-inside">
+        This span is only displayed in print using classes <code>hidden</code> and
+        <code>print:inline-block</code>.
       </span>
     </p>
 
