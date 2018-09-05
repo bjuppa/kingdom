@@ -4,7 +4,7 @@
       <small>Extension:</small>
       Print
     </h1>
-    <p class="print:links-inside">
+    <p class="print:links">
       The print extension contains utility classes and default styles for printing web pages.
       You'll find it in <a href="https://github.com/bjuppa/kingdom/blob/master/src/extensions/_print.scss"
                            target="_blank"><code>src/extensions/_print.scss</code></a>.
@@ -44,13 +44,13 @@
 
     <h2 id="printing-links">Printing links</h2>
     <p>
-      Any <code>article</code> element, or elements with class <code>print:links-inside</code> will have its contained
-      links printed inline, if the <code>href</code> contain the protocol.
+      Any <code>article</code> element, or elements with class <code>print:links</code> will have its contained
+      links printed inline, if the <code>href</code> attribute contain the protocol.
       The class <code>print:href</code> can be used on an
       <reload-link to="#printing-links" relative class="print:href">individual element</reload-link>
       to print its <code>href</code> attribute.
     </p>
-    <p class="print:links-inside">
+    <p class="print:links">
       The class <code>print:href-none</code> can be used to override the printing of <code>href</code> on
       <a href="https://github.com/bjuppa/kingdom/blob/master/src/extensions/_print.scss"
          target="_blank" class="print:href-none">individual links</a>

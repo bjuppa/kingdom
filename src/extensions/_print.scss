@@ -46,7 +46,7 @@
     }
   }
 
-  .print\:links-inside {
+  .print\:links {
     :link {
       &[href^=http] {
         @extend .print\:href;
@@ -64,7 +64,7 @@
   }
 
   article {
-    @extend .print\:links-inside;
+    @extend .print\:links;
   }
 
   // Page breaks
