@@ -9,10 +9,6 @@
     display: none !important;
   }
 
-  .print\:invisible {
-    visibility: hidden !important;
-  }
-
   nav, aside {
     @extend .print\:hidden;
   }
@@ -27,6 +23,16 @@
 
   .print\:inline {
     @include display-inline();
+  }
+
+  // Visibility
+
+  .print\:visible {
+    visibility: visible;
+  }
+
+  .print\:invisible {
+    visibility: hidden !important;
   }
 
   // Print links
