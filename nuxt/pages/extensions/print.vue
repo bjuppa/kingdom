@@ -10,14 +10,14 @@
                            target="_blank"><code>src/extensions/_print.scss</code></a>.
     </p>
     <p>
-      When printing the <code>&lt;body&gt;</code> is set to black text on white background by default,
+      When printing, the <code>&lt;body&gt;</code> is set to black text on white background by default,
       while <code>&lt;nav&gt;</code> and <code>&lt;aside&gt;</code> are hidden completely.
       <span class="print:hidden">The class <code>print:hidden</code> can be used to remove an element</span>
       &hellip;<span class="print:invisible"> the class <code>print:invisible</code></span> will hide contents when
       printing.
       All <abbr title="abbreviation"><code>&lt;abbr&gt;</code></abbr> elements have their <code>title</code> printed
       after them.
-      <strong class="print:hidden">Print this page as a pdf to see the effects!</strong>
+      <strong class="print:hidden">Print this page as a PDF to see the effects!</strong>
     </p>
 
     <h2>Displaying content only for print</h2>
