@@ -3,7 +3,7 @@
 
 /* Align content within element (effectively adjusts padding) */
 
-// justify-content along main/inline axis
+/* justify-content along main/inline axis */
 
 .justify-content-start {
   justify-content: start;
@@ -41,7 +41,7 @@
   justify-content: space-evenly;
 }
 
-// align-content along cross/block axis (only effects multiple lines in flexbox)
+/* align-content along cross/block axis (only effects multiple lines in flexbox) */
 
 .align-content-start {
   align-content: start;
