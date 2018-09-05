@@ -41,23 +41,27 @@ $vertical-margin-utilities: 1 2 3 4 6 9 !default;
   @extend %mb-0;
 }
 
-.mx-auto, .mx-center {
+.m-auto {
+  margin: auto;
+}
+
+.mx-auto, .mx-align-center {
   /* Horizontally center a block */
   margin-left: auto;
   margin-right: auto;
 }
 
-.ml-auto, .mx-right {
+.ml-auto, .mx-align-right {
   /* Align a block to the right */
   margin-left: auto;
 }
 
-.mr-auto, .mx-left {
+.mr-auto, .mx-align-left {
   /* Align a block to the left */
   margin-right: auto;
 }
 
-.mx-end {
+.mx-align-end {
   /* Horizontally push a block in the text direction */
   @include in-ltr-context {
     margin-left: auto;
@@ -69,7 +73,7 @@ $vertical-margin-utilities: 1 2 3 4 6 9 !default;
   }
 }
 
-.mx-start {
+.mx-align-start {
   /* Horizontally push a block opposite of the text direction */
   @include in-ltr-context {
     margin-right: auto;
