@@ -15,7 +15,7 @@
 
 // Generate visited link color if not already defined in $colors map
 // See https://www.nngroup.com/articles/change-the-color-of-visited-links/
-@include register-color(visited, adjust-color(get-color(link), $hue: 30deg), $ensure-text-color: false);
+@include register-color(visited, adjust-color(get-color(link), $hue: 45deg), $ensure-text-color: false);
 
 // Generate a border color if not already defined in $colors map
 @include register-color(border, currentColor);
