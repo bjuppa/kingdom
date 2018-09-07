@@ -82,11 +82,7 @@ img {
 }
 
 // Prevent inline elements from affecting the line height of their parents should they have their size changed
-@include inline-elements() {
-  @extend %text-inline;
-}
-
-p a {
+@include inline-elements($including: (p a)) {
   @extend %text-inline;
 }
 
