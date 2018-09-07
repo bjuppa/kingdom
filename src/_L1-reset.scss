@@ -86,6 +86,10 @@ img {
   @extend %text-inline;
 }
 
+p a {
+  @extend %text-inline;
+}
+
 ::before,
 ::after {
   @extend %text-inline;
