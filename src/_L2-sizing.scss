@@ -48,7 +48,7 @@ h1, h2, h3, h4, h5, h6 {
   }
 }
 
-@include inline-elements($including: a) {
+@include inline-elements($including: a del ins) {
   // Reset vertical spacing on inline elements
   @extend %mt-0;
 }
