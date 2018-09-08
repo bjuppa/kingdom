@@ -18,9 +18,11 @@
   @include list-unstyled();
   @include display-inline();
 
-  & > * {
+  & * {
     @include display-inline();
+  }
 
+  & > * {
     &::after {
       content: ', ';
     }
