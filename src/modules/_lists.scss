@@ -16,9 +16,8 @@
 
 @mixin list-comma-separated {
   @include list-unstyled();
-  @include display-inline();
 
-  * {
+  &, * {
     @include display-inline();
   }
 
