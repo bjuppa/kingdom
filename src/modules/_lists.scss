@@ -21,15 +21,13 @@
     @include display-inline();
   }
 
-  > * {
-    &::after {
-      content: ', ';
-    }
-    &:nth-last-child(2)::after {
-      content: ' & ';
-    }
-    &:last-child::after {
-      content: '';
-    }
+  > ::after {
+    content: ', ';
+  }
+  > :nth-last-child(2)::after {
+  content: ' & ';
+  }
+  > :last-child::after {
+    content: '';
   }
 }
