@@ -9,7 +9,7 @@
 @mixin list-inline {
   @include list-unstyled();
 
-  & > * {
+  > * {
     @include display-inline-block();
   }
 }
@@ -18,11 +18,11 @@
   @include list-unstyled();
   @include display-inline();
 
-  & * {
+  * {
     @include display-inline();
   }
 
-  & > * {
+  > * {
     &::after {
       content: ', ';
     }
