@@ -2,6 +2,7 @@
 
 @import "../../modules/overflow";
 
+/* Combine .word-wrap with .hyphens-auto to add hyphens when breaking */
 .word-wrap {
   @include word-wrap;
 }
