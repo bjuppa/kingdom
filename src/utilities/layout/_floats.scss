@@ -30,6 +30,14 @@
   @include clearfix;
 }
 
+.clearfix-unless-flex {
+  @include clearfix((display: flex));
+}
+
+.clearfix-unless-grid {
+  @include clearfix((display: grid));
+}
+
 .float-start {
   @include in-ltr-context {
     float: left;
