@@ -1,9 +1,20 @@
 // Clearfix from https://css-tricks.com/snippets/css/clear-fix/
 
-@mixin clearfix {
+// Add a supports-condition to disable the clearfix when the condition is supported
+// Example:
+// @include clearfix((display: flex) or (display: grid));
+@mixin clearfix($supports-condition: false) {
   &::after {
     content: "";
     display: table;
     clear: both;
+  }
+
+  @if($supports-condition) {
+    @supports (#{$supports-condition}) {
+      &:after {
+        display: none;
+      }
+    }
   }
 }
