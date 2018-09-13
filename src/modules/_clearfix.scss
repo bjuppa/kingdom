@@ -10,7 +10,7 @@
 
   @if($supports-condition) {
     @supports(#{$supports-condition}) {
-      &:after {
+      &::after {
         display: none;
       }
     }
