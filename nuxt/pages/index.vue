@@ -261,6 +261,9 @@
         <reload-link to="/modules/lists">Lists</reload-link>
       </li>
       <li>
+        <reload-link to="/modules/overflow">Overflow</reload-link>
+      </li>
+      <li>
         <reload-link to="/modules/responsive-locks">Responsive locks</reload-link>
       </li>
       <li>

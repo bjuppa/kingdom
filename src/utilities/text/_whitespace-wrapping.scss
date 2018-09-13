@@ -1,5 +1,15 @@
 // Utilities for white-space & line wrapping
 
+@import "../../modules/overflow";
+
+.word-wrap {
+  @include word-wrap;
+}
+
+.truncate {
+  @include ellipsis;
+}
+
 .whitespace-normal {
   white-space: normal;
 }
@@ -26,11 +36,6 @@
 
 .break-normal {
   overflow-wrap: normal;
-}
-
-.truncate {
-  overflow: hidden;
-  text-overflow: ellipsis;
 }
 
 .hyphens-none {
