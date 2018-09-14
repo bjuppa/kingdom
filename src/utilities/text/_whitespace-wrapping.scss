@@ -47,6 +47,7 @@
   hyphens: manual;
 }
 
+/* Beware that browser hyphenation is language specific and tends to also break quite short words whenever they overflow the container */
 .hyphens-auto {
   hyphens: auto;
 }
