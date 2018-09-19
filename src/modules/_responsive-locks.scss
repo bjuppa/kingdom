@@ -1,7 +1,7 @@
 // Inspired by Indrek Paas http://www.sassmeister.com/gist/7f22e44ace49b5124eec
 // and Florens Verschelde https://fvsch.com/code/css-locks/
 //
-// Make sure to use the same units for viewport widths and the min and max values
+// Make sure to use the same units for viewport widths and the start and end values
 @import "strip-unit";
 
 // Set up responsive transitions happening between two viewport widths, not affecting anything outside the "lock"
