@@ -15,6 +15,11 @@
         Function <code>length-rem</code> converts any length unit to an approximate equivalent in <code>rem</code>.
       </li>
       <li>
+        Function <code>length-px</code> converts any length unit to an approximate equivalent in <code>px</code>,
+        but it also takes a given font-size into account.
+        This function is useful for creating media-queries from a font-size-relative length value.
+      </li>
+      <li>
         Function <code>font-size-rem</code> converts any font-size to an approximate equivalent in <code>rem</code>,
         even from named font-sizes like <code>x-small</code> and <code>larger</code>,
         as well as relative values in percentage and decimals.

@@ -55,6 +55,19 @@ $relative-font-sizes: (
   @return $length/($px-rem-ratio*1px)*1rem;
 }
 
+// Convert css length-value to approximate equivalent in px, taking a specific font-size into account
+@function length-px($length, $font-size: 1rem) {
+  @if (unit($length) == 'px') {
+    @return $length;
+  }
+
+  @if(index('ex' 'ch' 'em' 'rem', unit($length)) != null) {
+    $length: $length * strip-unit(font-size-rem($font-size));
+  }
+
+  @return strip-unit(length-rem($length))*$px-rem-ratio*1px;
+}
+
 // Convert font-size to approximate equivalent in rem
 @function font-size-rem($font-size) {
   @if map-has_key($absolute-font-sizes, $font-size) {
