@@ -103,6 +103,8 @@
       <a href="https://developer.mozilla.org/en-US/docs/Web/Guide/HTML/Content_categories#Phrasing_content"
          target="_blank">inline elements</a>
       would also mess up most designs, so their <code>margin-top</code> is also set to <code>0</code>.
+      This includes <code>&lt;a&gt;</code>, <code>&lt;del&gt;</code>, and <code>&lt;ins&gt;</code> tags,
+      as well as buttons, form inputs and images within paragraphs, although techically they're not inline elements.
     </p>
 
     <h2>Consistent text</h2>

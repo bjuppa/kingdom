@@ -53,7 +53,7 @@ h1, h2, h3, h4, h5, h6 {
   @extend %mt-0;
 }
 
-@include inline-block-elements {
+@include inline-block-elements($except: (img), $including: (p img)) {
   // Reset vertical spacing on inline-block elements
   @extend %mt-0;
 }
