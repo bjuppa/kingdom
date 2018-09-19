@@ -12,6 +12,8 @@ $font-sizes: font-size-rem($desired-body-font-size) !default;
   $font-sizes: append($font-sizes, font-size-rem(nth($font-sizes, length($font-sizes))) * $modular-scale);
 }
 
+$body-font-size: nth($font-sizes, 1);
+
 // If not already set, fill $line-heights with 6 relative factors going linearly from $body-line-height-factor down to $min-line-height-factor
 $line-heights: $body-line-height-factor !default;
 @while (length($line-heights) < 6) {

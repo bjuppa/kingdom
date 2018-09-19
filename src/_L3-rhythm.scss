@@ -20,6 +20,8 @@ flow-font-size(2, $min-line-height-factor),
 flow-font-size(3, $min-line-height-factor),
 flow-font-size(4, $min-line-height-factor) !default;
 
+$body-font-size: nth($font-sizes, 1);
+
 $line-heights: ();
 @each $font-size in $font-sizes {
   $line-heights: append($line-heights, flow-line-height($font-size));
