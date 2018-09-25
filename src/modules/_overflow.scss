@@ -2,7 +2,7 @@
 
 // Break words when neccessary to stop overflow
 // Use with hyphens: auto to add hyphens when breaking
-@mixin word-wrap() {
+@mixin overflow-wrap() {
   overflow-wrap: break-word;
   word-wrap: break-word;
 }

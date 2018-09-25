@@ -2,9 +2,9 @@
 
 @import "../../modules/overflow";
 
-/* Combine .word-wrap with .hyphens-auto to add hyphens when breaking */
-.word-wrap {
-  @include word-wrap;
+/* Combine .overflow-wrap with .hyphens-auto to add hyphens when breaking */
+.overflow-wrap {
+  @include overflow-wrap;
 }
 
 .word-break {
