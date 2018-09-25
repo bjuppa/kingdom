@@ -6,6 +6,7 @@
     </h1>
     <p>
       The overflow module contains mixins <code>overflow-wrap</code> that helps breaking long words when neccessary,
+      <code>word-break</code> that aggressively breaks any word at the container edge,
       and <code>ellipsis</code> that truncates overflow with &hellip;
     </p>
     <p>
