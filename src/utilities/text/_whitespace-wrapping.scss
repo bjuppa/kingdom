@@ -7,6 +7,10 @@
   @include word-wrap;
 }
 
+.word-break {
+  @include word-break;
+}
+
 .truncate {
   @include ellipsis;
 }

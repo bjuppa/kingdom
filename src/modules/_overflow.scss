@@ -7,6 +7,13 @@
   word-wrap: break-word;
 }
 
+// Break words at end of container
+// Use with hyphens: auto to add hyphens when breaking
+@mixin word-break() {
+  word-break: break-all;
+  word-break: break-word;
+}
+
 // Truncate overflow with ...
 @mixin ellipsis() {
   overflow: hidden;
