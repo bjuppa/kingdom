@@ -5,21 +5,22 @@
 @import "../modules/text-direction";
 
 .my-0 {
-  @extend %my-0;
+  margin-top: 0;
+  margin-bottom: 0;
 }
 
 $horizontal-margin-utilities: 1 2 3 4 6 !default;
 @each $multiple in $horizontal-margin-utilities {
   .mx-#{$multiple} {
-    @extend %mx-#{$multiple};
+    @include length-relative(margin-left margin-right, $multiple);
   }
 
   .ml-#{$multiple} {
-    @extend %ml-#{$multiple};
+    @include length-relative(margin-left, $multiple);
   }
 
   .mr-#{$multiple} {
-    @extend %mr-#{$multiple};
+    @include length-relative(margin-right, $multiple);
   }
 
   @include extend-for-children(mx-#{$multiple} ml-#{$multiple} mr-#{$multiple});
@@ -27,18 +28,18 @@ $horizontal-margin-utilities: 1 2 3 4 6 !default;
 }
 
 .mt-0 {
-  @extend %mt-0;
+  margin-top: 0;
 }
 
 $vertical-margin-utilities: 1 2 3 4 6 9 !default;
 @each $multiple in $vertical-margin-utilities {
   .mt-#{$multiple} {
-    @extend %mt-#{$multiple};
+    @include length-relative(margin-top, $multiple);
   }
 }
 
 .mb-0 {
-  @extend %mb-0;
+  margin-bottom: 0;
 }
 
 .m-auto {
@@ -86,45 +87,45 @@ $vertical-margin-utilities: 1 2 3 4 6 9 !default;
 }
 
 .p-0 {
-  @extend %p-0;
+  padding: 0;
 }
 
 .px-0 {
-  @extend %px-0;
+  @include padding-relative(left right, 0);
 }
 
 .py-0 {
-  @extend %py-0;
+  @include padding-relative(top bottom, 0);
 }
 
 .pt-0 {
-  @extend %pt-0;
+  @include padding-relative(top, 0);
 }
 
 .pb-0 {
-  @extend %pb-0;
+  @include padding-relative(bottom, 0);
 }
 
 $padding-utilities: 1 2 3 4 !default;
 @each $multiple in $padding-utilities {
   .p-#{$multiple} {
-    @extend %p-#{$multiple};
+    @include length-relative(padding, $multiple);
   }
 
   .px-#{$multiple} {
-    @extend %px-#{$multiple};
+    @include padding-relative(left right, $multiple);
   }
 
   .py-#{$multiple} {
-    @extend %py-#{$multiple};
+    @include padding-relative(top bottom, $multiple);
   }
 
   .pt-#{$multiple} {
-    @extend %pt-#{$multiple};
+    @include padding-relative(top, $multiple);
   }
 
   .pb-#{$multiple} {
-    @extend %pb-#{$multiple};
+    @include padding-relative(bottom, $multiple);
   }
 }
 
@@ -137,27 +138,27 @@ $fraction-spacing-utilities: (
 ) !default;
 @each $suffix, $factor in $fraction-spacing-utilities {
   .mx-#{$suffix} {
-    @extend %mx-#{$suffix};
+    @include length-relative(margin-left margin-right, $factor);
   }
 
   .mt-#{$suffix} {
-    @extend %mt-#{$suffix};
+    @include length-relative(margin-top, $factor);
   }
 
   .ml-#{$suffix} {
-    @extend %ml-#{$suffix};
+    @include length-relative(margin-left, $factor);
   }
 
   .mr-#{$suffix} {
-    @extend %mr-#{$suffix};
+    @include length-relative(margin-right, $factor);
   }
 
   .px-#{$suffix} {
-    @extend %px-#{$suffix};
+    @include padding-relative(left right, $factor);
   }
 
   .pt-#{$suffix} {
-    @extend %pt-#{$suffix};
+    @include padding-relative(top, $factor);
   }
 
   @include extend-for-children(mx-#{$suffix} ml-#{$suffix} mr-#{$suffix});
