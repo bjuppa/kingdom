@@ -1,5 +1,10 @@
 // Utilities for text sizing
 
+// Note: These text sizing utility classes extend placeholders which is not ideal.
+// The reason is that those placeholders handle nesting of differently sized
+// text applied within another sized block of text, and for this to work the
+// placeholders are needed to keep track of what needs that special treatment.
+
 @for $i from 1 through length($font-sizes) {
   .text-#{$i} {
     @extend %text-#{$i};
