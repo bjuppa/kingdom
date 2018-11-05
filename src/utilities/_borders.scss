@@ -4,37 +4,43 @@
 // Utility classes for adding borders
 
 .border-l {
-  @extend %border-l;
+  $sides: left;
+  @include border-for-auto-height($sides);
 }
 
 .border-r {
-  @extend %border-r;
+  $sides: right;
+  @include border-for-auto-height($sides);
 }
 
 .border-lr {
-  @extend %border-lr;
+  $sides: left right;
+  @include border-for-auto-height($sides);
 }
 
 .border-t {
-  @extend %border-t;
+  $sides: top;
+  @include border-for-auto-height($sides);
 }
 
 .border-b {
-  @extend %border-b;
+  $sides: bottom;
+  @include border-for-auto-height($sides);
 }
 
 .border-tb {
-  @extend %border-tb;
+  $sides: top bottom;
+  @include border-for-auto-height($sides);
 }
 
 .border {
-  @extend %border;
+  @include border-for-auto-height();
 }
 
 // Utility classes for removing borders
 
 .border-0 {
-  @extend %border-0;
+  @include border-for-auto-height($width: 0px);
 }
 
 .unborder {

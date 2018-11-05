@@ -1,17 +1,17 @@
 // Utilities for fonts
 
 .font-body {
-  @extend %font-body;
+  @include font-stack($body-font-stack);
 }
 
 .font-headings {
-  @extend %font-headings;
+  @include font-stack($headings-font-stack);
 }
 
 .font-forms {
-  @extend %font-forms;
+  @include font-stack($forms-font-stack)
 }
 
 .font-monospace {
-  @extend %font-monospace;
+  @include font-stack($monospace-font-stack)
 }

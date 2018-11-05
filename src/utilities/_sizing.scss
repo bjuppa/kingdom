@@ -5,7 +5,7 @@
 $vertical-sizing-utilities: 1 2 3 4 5 6 7 8 9 10 12 14 16 18 20 24 28 32 36 40 48 56 64 !default;
 @each $multiple in $vertical-sizing-utilities {
   .h-#{$multiple} {
-    @extend %h-#{$multiple};
+    @include length-relative(height, $multiple, $extend-height-multiple: true);
   }
 
   .h-max-#{$multiple} {
@@ -16,7 +16,7 @@ $vertical-sizing-utilities: 1 2 3 4 5 6 7 8 9 10 12 14 16 18 20 24 28 32 36 40 4
 $horizontal-sizing-utilities: 1 2 3 4 5 6 7 8 9 10 11 12 13 14 16 18 20 24 28 32 36 40 48 56 64 !default;
 @each $multiple in $horizontal-sizing-utilities {
   .w-#{$multiple} {
-    @extend %w-#{$multiple};
+    @include length-relative(width, $multiple);
   }
 
   .w-max-#{$multiple} {
@@ -41,12 +41,12 @@ $fraction-sizing-utilities: (
 ) !default;
 @each $suffix, $factor in $fraction-sizing-utilities {
   .w-#{$suffix} {
-    @extend %w-#{$suffix};
+    @include length-relative(width, $factor);
   }
 }
 
 .h-px {
-  @extend %h-px;
+  height: 1px;
 }
 
 .h-full {
