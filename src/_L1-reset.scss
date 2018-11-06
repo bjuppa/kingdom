@@ -162,7 +162,7 @@ button:-moz-focusring,
 
 fieldset {
   border-width: 1px; // Restore border removed by the border reset
-  @include length-relative(padding, 1/2);
+  @include length-relative(padding, 1/3);
 }
 
 // https://github.com/necolas/normalize.css
@@ -233,7 +233,7 @@ table, caption, colgroup, col, thead, tbody, tfoot, tr, th, td {
 }
 
 td, th {
-  @include length-relative(padding-left padding-right, 1/4);
+  @include length-relative(padding-left padding-right, 1/3);
 }
 
 ol, ul, dd {
