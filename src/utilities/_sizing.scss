@@ -46,7 +46,7 @@ $fraction-sizing-utilities: (
 }
 
 .h-px {
-  height: 1px;
+  @extend %h-px;
 }
 
 .h-full {
