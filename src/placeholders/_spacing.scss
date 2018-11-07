@@ -211,3 +211,8 @@ $spacing-fractions: (
     @extend %mt-1;
   }
 }
+
+%height-multiple {
+  //A fixed-height element should not compensate margin for next element
+  margin-bottom: 0;
+}
