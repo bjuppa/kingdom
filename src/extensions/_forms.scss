@@ -313,7 +313,7 @@ label:not([for]) {
     }
   }
 
-  div {
+  div, ul, ol {
     &[id] {
       // Remove space before descriptive block elements that come after their input
       @extend %mt-0;
