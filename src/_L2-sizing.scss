@@ -42,7 +42,7 @@ p + * {
   @extend %mt-paragraph;
 }
 
-dt, li, hgroup,
+dt, li, label, legend, hgroup,
 h1, h2, h3, h4, h5, h6 {
   // Reset vertical spacing on adjacent siblings on closely related elements
   + * {
@@ -78,10 +78,6 @@ figure, picture, object, select, table, audio, video, map {
 
 fieldset {
   @extend %py-1\/2;
-
-  > legend + * {
-    @extend %mt-0;
-  }
 }
 
 textarea:not([cols]) {
