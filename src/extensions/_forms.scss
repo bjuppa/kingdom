@@ -128,7 +128,7 @@ input, textarea {
 }
 
 %input-width-full {
-  &:only-child {
+  &:first-child:only-of-type {
     width: 100%;
   }
 }
