@@ -28,7 +28,7 @@
   },
   "homepage": "https://github.com/bjuppa/kingdom#readme",
   "devDependencies": {
-    "node-sass": "^4.9.4",
+    "node-sass": "^4.10.0",
     "nuxt": "^1.4.4",
     "sass-loader": "^7.1.0"
   }
