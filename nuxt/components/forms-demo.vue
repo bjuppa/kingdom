@@ -8,8 +8,8 @@
       <div>
         <label for="input2">"Wrapped", invalid form control</label>
         <div>
-          <input id="input2" type="text" aria-describedby="input2description" aria-invalid="true">
-          <span id="input2description">This is an error message</span>
+          <input id="input2" type="text" aria-describedby="input2errors" aria-invalid="true">
+          <span id="input2errors">This is an error message</span>
         </div>
       </div>
 

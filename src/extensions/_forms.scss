@@ -163,6 +163,11 @@ label[aria-invalid] {
   @extend %label-invalid;
 }
 
+// Error messages
+[id*='error' i] {
+  @extend %label-invalid;
+}
+
 /* Buttons */
 
 /* %button base for all buttons  */
