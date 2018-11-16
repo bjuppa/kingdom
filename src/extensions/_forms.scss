@@ -127,6 +127,22 @@ input, textarea {
   border-radius: 50%;
 }
 
+%input-width-full {
+  &:only-child {
+    width: 100%;
+  }
+}
+
+[type='text'], textarea:not([cols]) {
+  @extend %input-width-full;
+  max-width: $readable-line-length-max;
+}
+
+[type='email'], [type='tel'], [type='password'], [type='search'] {
+  @extend %input-width-full;
+  max-width: $readable-line-length-max/2;
+}
+
 /* Labels */
 label {
   @extend %font-forms;
