@@ -84,7 +84,7 @@
     <hr class="h-px">
 
     <form class="form-inline" onsubmit="return false;">
-      <input disabled value="disabled">
+      <input type="text" disabled value="disabled">
       text
       <input readonly value="readonly">
 

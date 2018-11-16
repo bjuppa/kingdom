@@ -133,9 +133,7 @@ input, textarea {
 }
 
 %input-width-full {
-  label + * > &:first-child:only-of-type {
-    width: 100%;
-  }
+  width: 100%;
 }
 
 [type='text'], textarea:not([cols]) {
@@ -353,7 +351,9 @@ label:not([for]) {
     @include display-inline();
   }
 
-  > textarea:not([cols]) {
-    width: auto;
+  > {
+    textarea:not([cols]), input {
+      width: auto;
+    }
   }
 }
