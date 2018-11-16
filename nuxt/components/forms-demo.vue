@@ -6,7 +6,7 @@
       <span id="input1description">Pretty long field description/instruction that cover multiple lines</span>
 
       <div>
-        <label for="input2">"Wrapped", invalid form control</label>
+        <label for="input2" class="invalid">"Wrapped", invalid form control</label>
         <div>
           <input id="input2" type="text" aria-describedby="input2errors" aria-invalid="true">
           <span id="input2errors">This is an error message</span>
