@@ -352,7 +352,8 @@ label:not([for]) {
   }
 
   > {
-    textarea:not([cols]), input {
+    textarea:not([cols]),
+    input {
       width: auto;
     }
   }
