@@ -40,6 +40,11 @@ $button-destructive-focus-box-shadow: set_nth($button-focus-box-shadow, -1, chan
   @include apply-color(caution);
 }
 
+/* %error-message */
+%error-message {
+  @include apply-color(caution);
+}
+
 /* Inputs */
 
 select {
@@ -165,7 +170,7 @@ label[aria-invalid] {
 
 // Error messages
 [id*='error' i] {
-  @extend %label-invalid;
+  @extend %error-message;
 }
 
 /* Buttons */
