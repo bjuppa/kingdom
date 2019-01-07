@@ -2,8 +2,16 @@
   <div class="space-inside visualize-vertical-rhythm">
     <form>
       <label for="input1">Label for input 1</label>
-      <input id="input1" aria-describedby="input1description">
+      <input id="input1" type="text" aria-describedby="input1description">
       <span id="input1description">Pretty long field description/instruction that cover multiple lines</span>
+
+      <div>
+        <label for="input2" class="invalid">"Wrapped", invalid form control</label>
+        <div>
+          <input id="input2" type="text" aria-describedby="input2errors" aria-invalid="true">
+          <span id="input2errors">This is an error message</span>
+        </div>
+      </div>
 
       <fieldset class="py-0">
         <legend>A fieldset with legend and no vertical padding</legend>
@@ -43,9 +51,9 @@
         <option>Option 3</option>
       </select>
 
-      <label for="input2">Label for input 2</label>
-      <input id="input2" required placeholder="required input" aria-describedby="input2description">
-      <small id="input2description">Field description/instructions</small>
+      <label for="input3">Label for input 3</label>
+      <input id="input3" required placeholder="required input" aria-describedby="input3description">
+      <small id="input3description">Field description/instructions</small>
 
       <button type="submit">Submit button</button>
 
@@ -76,7 +84,7 @@
     <hr class="h-px">
 
     <form class="form-inline" onsubmit="return false;">
-      <input disabled value="disabled">
+      <input type="text" disabled value="disabled">
       text
       <input readonly value="readonly">
 

@@ -40,6 +40,11 @@ $button-destructive-focus-box-shadow: set_nth($button-focus-box-shadow, -1, chan
   @include apply-color(caution);
 }
 
+/* %error-message */
+%error-message {
+  @include apply-color(caution);
+}
+
 /* Inputs */
 
 select {
@@ -127,6 +132,20 @@ input, textarea {
   border-radius: 50%;
 }
 
+%input-width-full {
+  width: 100%;
+}
+
+[type='text'], textarea:not([cols]) {
+  @extend %input-width-full;
+  max-width: $readable-line-length-max;
+}
+
+[type='email'], [type='tel'], [type='password'], [type='search'] {
+  @extend %input-width-full;
+  max-width: $readable-line-length-max/2;
+}
+
 /* Labels */
 label {
   @extend %font-forms;
@@ -145,6 +164,11 @@ label.invalid,
 label:invalid,
 label[aria-invalid] {
   @extend %label-invalid;
+}
+
+// Error messages
+[id*='error' i] {
+  @extend %error-message;
 }
 
 /* Buttons */
@@ -327,7 +351,10 @@ label:not([for]) {
     @include display-inline();
   }
 
-  > textarea:not([cols]) {
-    width: auto;
+  > {
+    textarea:not([cols]),
+    input {
+      width: auto;
+    }
   }
 }
