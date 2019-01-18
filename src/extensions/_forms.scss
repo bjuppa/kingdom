@@ -68,7 +68,7 @@ input, textarea, select {
   border-style: $input-border-style;
   border-radius: $input-border-radius;
 
-  &:invalid, &[aria-invalid] {
+  &[aria-invalid] {
     @include apply-color(caution, border-color);
   }
 
@@ -120,7 +120,7 @@ input, textarea {
       }
     }
 
-    &:invalid, &[aria-invalid] {
+    &[aria-invalid] {
       + label[for] {
         @extend %label-invalid;
       }
@@ -161,7 +161,6 @@ fieldset:disabled label:not([for]) {
 
 // Labels for invalid form controls
 label.invalid,
-label:invalid,
 label[aria-invalid] {
   @extend %label-invalid;
 }
