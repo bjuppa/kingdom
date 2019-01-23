@@ -166,7 +166,8 @@ label[aria-invalid] {
 }
 
 // Error messages
-[id*='error' i] {
+[id*='error'],
+[id*='Error'] {
   @extend %error-message;
 }
 
