@@ -31,11 +31,11 @@
 }
 
 .clearfix-unless-flex {
-  @include clearfix((display: flex));
+  @include clearfix('display: flex');
 }
 
 .clearfix-unless-grid {
-  @include clearfix((display: grid));
+  @include clearfix('display: grid');
 }
 
 .float-start {
