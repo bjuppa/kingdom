@@ -42,3 +42,21 @@ $readable-line-length-max: 75ch !default;
 @function minmax-readable($min-width: $readable-line-length-min, $max-width: $readable-line-length-max) {
   @return minmax($min-width, $max-width);
 }
+
+@function shadow-relative($factor: 1, $blur: 1, $x-fraction: 0, $y-fraction: 1, $spread: 0) {
+  $radius-total: $blur + $spread;
+  @if($radius-total > 1) {
+    $blur: $blur / $radius-total;
+    $spread: $spread / $radius-total;
+  }
+  $length: #{$factor} * var(--spacing-base, #{$spacing-base});
+  $spread-radius: #{$length} * #{$spread};
+  $blur-radius: #{$length} * #{$blur} / 2;
+  $offset: #{$length} - #{$blur-radius} - #{$spread-radius};
+  $shadow: calc(#{$x-fraction} * (#{$offset})) calc(#{$y-fraction} * (#{$offset})) calc(#{$blur-radius});
+  @if($spread != 0) {
+    $shadow: append($shadow, calc(#{$spread-radius}));
+  }
+
+  @return $shadow;
+}
