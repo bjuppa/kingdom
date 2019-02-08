@@ -51,8 +51,8 @@ $readable-line-length-max: 75ch !default;
   }
   $spacing-base-var: var(--spacing-base, #{$spacing-base});
   $spread-factor: $factor * $spread;
-  $blur-factor: $factor * $blur / 2;
-  $offset-factor: $factor * (1 - $blur-factor - $spread-factor);
+  $blur-factor: $factor * $blur / 3;
+  $offset-factor: $factor * (1 - $blur / 2 - $spread);
   $shadow: calc(#{$x-fraction * $offset-factor} * #{$spacing-base-var}) calc(#{$y-fraction * $offset-factor} * #{$spacing-base-var}) calc(#{$blur-factor} * #{$spacing-base-var});
   @if($spread != 0) {
     $shadow: append($shadow, calc(#{$spread-factor} * #{$spacing-base-var}));
