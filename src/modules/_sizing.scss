@@ -49,13 +49,13 @@ $readable-line-length-max: 75ch !default;
     $blur: $blur / $radius-total;
     $spread: $spread / $radius-total;
   }
-  $length: #{$factor} * var(--spacing-base, #{$spacing-base});
-  $spread-radius: #{$length} * #{$spread};
-  $blur-radius: #{$length} * #{$blur} / 2;
-  $offset: #{$length} - #{$blur-radius} - #{$spread-radius};
-  $shadow: calc(#{$x-fraction} * (#{$offset})) calc(#{$y-fraction} * (#{$offset})) calc(#{$blur-radius});
+  $spacing-base-var: var(--spacing-base, #{$spacing-base});
+  $spread-factor: $factor * $spread;
+  $blur-factor: $factor * $blur / 2;
+  $offset-factor: $factor * (1 - $blur-factor - $spread-factor);
+  $shadow: calc(#{$x-fraction * $offset-factor} * #{$spacing-base-var}) calc(#{$y-fraction * $offset-factor} * #{$spacing-base-var}) calc(#{$blur-factor} * #{$spacing-base-var});
   @if($spread != 0) {
-    $shadow: append($shadow, calc(#{$spread-radius}));
+    $shadow: append($shadow, calc(#{$spread-factor} * #{$spacing-base-var}));
   }
 
   @return $shadow;
