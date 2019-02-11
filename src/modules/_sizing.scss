@@ -43,7 +43,7 @@ $readable-line-length-max: 75ch !default;
   @return minmax($min-width, $max-width);
 }
 
-@function shadow-relative($factor: 1, $blur: 1.5, $x-fraction: 0, $y-fraction: 1, $spread: 0) {
+@function shadow-relative($factor: 1, $blur: 10/7, $x-fraction: 0, $y-fraction: 1, $spread: 0) {
   @if($spread > 1) {
     $spread: 1;
   }
