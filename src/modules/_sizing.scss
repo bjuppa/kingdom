@@ -54,7 +54,7 @@ $readable-line-length-max: 75ch !default;
   $spacing-base-var: var(--spacing-base, #{$spacing-base});
 
   $spread-factor: $factor * $spread;
-  $blur-factor: $factor * $blur / 2 * .97; // This is slightly less than 1/2 because Firefox's shadow blur goes outside the specified radius
+  $blur-factor: $factor * $blur / 2 * .8; // This is slightly less than 1/2 because Firefox's shadow blur goes outside the specified radius
   $offset-factor: $factor * (1 - ($blur / 2 + $spread));
 
   $shadow: calc(#{$x-fraction * $offset-factor} * #{$spacing-base-var}) calc(#{$y-fraction * $offset-factor} * #{$spacing-base-var}) calc(#{$blur-factor} * #{$spacing-base-var});
