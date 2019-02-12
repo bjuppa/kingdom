@@ -1,20 +1,20 @@
 module.exports = {
-  srcDir: 'nuxt',
+  srcDir: "nuxt",
   generate: {
-    dir: 'docs'
+    dir: "docs"
   },
   router: {
-    base: process.env.DEPLOY_ENV === 'GH_PAGES' ? '/kingdom/' : '/'
+    base: process.env.DEPLOY_ENV === "GH_PAGES" ? "/kingdom/" : "/"
   },
   head: {
     meta: [
-      { charset: 'utf-8' },
-      { 'http-equiv': 'X-UA-Compatible', content: 'IE=edge' },
-      { name: 'viewport', content: 'width=device-width, initial-scale=1' }
+      { charset: "utf-8" },
+      { "http-equiv": "X-UA-Compatible", content: "IE=edge" },
+      { name: "viewport", content: "width=device-width, initial-scale=1" }
     ],
-    title: 'Kingdom CSS',
+    title: "Kingdom CSS",
     htmlAttrs: {
-      lang: 'en',
+      lang: "en"
     },
     build: {
       cssSourceMap: true,
@@ -27,10 +27,10 @@ module.exports = {
       },
       loaders: {
         scss: {
-          outputStyle: 'expanded'
+          outputStyle: "expanded"
         },
         sass: {
-          outputStyle: 'expanded'
+          outputStyle: "expanded"
         },
         vue: {
           minimize: false
