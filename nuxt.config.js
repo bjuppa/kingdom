@@ -1,8 +1,7 @@
 module.exports = {
   srcDir: 'nuxt',
   generate: {
-    dir: 'docs',
-    minify: false,
+    dir: 'docs'
   },
   router: {
     base: process.env.DEPLOY_ENV === 'GH_PAGES' ? '/kingdom/' : '/'
@@ -16,33 +15,27 @@ module.exports = {
     title: 'Kingdom CSS',
     htmlAttrs: {
       lang: 'en',
-    }
-  },
-  build: {
-    cssSourceMap: true,
-    postcss: {
-      plugins: {
-        // Customize `postcss-cssnext` default options
-        'postcss-cssnext': {
-          features: {
-            // Even with preserve set to true, the custom properties plugin adds a lot of duplication (that is removed by minification)
-            // As we have minification turned off, we'll also keep custom properties off
-            customProperties: false,
-          }
+    },
+    build: {
+      cssSourceMap: true,
+      optimizeCSS: false,
+      html: {
+        minify: false
+      },
+      optimization: {
+        minimize: false
+      },
+      loaders: {
+        scss: {
+          outputStyle: 'expanded'
+        },
+        sass: {
+          outputStyle: 'expanded'
+        },
+        vue: {
+          minimize: false
         }
       }
-    },
-    extend (config) {
-      const vueLoader = config.module.rules.find((rule) => rule.loader === 'vue-loader');
-      Object.values(vueLoader.options.loaders).map((loader) => {
-        if (loader instanceof Array) {
-          loader.map((loader) => {
-            if (loader.options.minimize === true) {
-              loader.options.minimize = false;
-            }
-          });
-        }
-      });
     }
   }
 };
