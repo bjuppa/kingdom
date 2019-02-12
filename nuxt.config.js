@@ -34,6 +34,11 @@ module.exports = {
           outputStyle: "expanded"
         },
         vue: {
+          compilerOptions: {
+            minimize: false
+          }
+        },
+        vueStyle: {
           minimize: false
         }
       },
