@@ -1,5 +1,7 @@
 // Utilities for shadows
 @import "../modules/colors";
+@import "../modules/shadows";
+@import "../modules/sizing";
 
 .shadow {
   box-shadow:
@@ -25,4 +27,34 @@
 
 .shadow-none {
   box-shadow: none;
+}
+
+.shadow-2 {
+  box-shadow:
+    shadow-relative($factor: 2/1) rgba(black, .12),
+    shadow-relative($factor: 2/2) rgba(black, .06);
+}
+
+.shadow-1 {
+  box-shadow:
+    shadow-relative($factor: 1/1) rgba(black, .12),
+    shadow-relative($factor: 1/2) rgba(black, .06);
+}
+
+.shadow-1\/2 {
+  box-shadow:
+    shadow-relative($factor: 1/2) rgba(black, .12),
+    shadow-relative($factor: 1/4) rgba(black, .06);
+}
+
+.shadow-1\/3 {
+  box-shadow:
+    shadow-relative($factor: 1/3) rgba(black, .12),
+    shadow-relative($factor: 1/6) rgba(black, .06);
+}
+
+.shadow-1\/4 {
+  box-shadow:
+    shadow-relative($factor: 1/4) rgba(black, .12),
+    shadow-relative($factor: 1/8) rgba(black, .06);
 }
