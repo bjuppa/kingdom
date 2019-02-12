@@ -23,7 +23,8 @@ module.exports = {
         minify: false
       },
       optimization: {
-        minimize: false
+        minimize: false,
+        minimizer: []
       },
       loaders: {
         scss: {
@@ -34,6 +35,11 @@ module.exports = {
         },
         vue: {
           minimize: false
+        }
+      },
+      postcss: {
+        plugins: {
+          cssnano: false
         }
       }
     }
