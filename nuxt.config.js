@@ -15,37 +15,25 @@ module.exports = {
     title: "Kingdom CSS",
     htmlAttrs: {
       lang: "en"
+    }
+  },
+  build: {
+    cssSourceMap: true,
+    optimizeCSS: false,
+    html: {
+      minify: false
     },
-    build: {
-      cssSourceMap: true,
-      optimizeCSS: false,
-      html: {
-        minify: false
-      },
-      optimization: {
-        minimize: false,
-        minimizer: []
-      },
-      loaders: {
-        scss: {
-          outputStyle: "expanded"
-        },
-        sass: {
-          outputStyle: "expanded"
-        },
-        vue: {
-          compilerOptions: {
-            minimize: false
-          }
-        },
-        vueStyle: {
-          minimize: false
-        }
-      },
-      postcss: {
-        plugins: {
-          cssnano: false
-        }
+    optimization: {
+      minimize: false
+    },
+    loaders: {
+      scss: {
+        outputStyle: "expanded"
+      }
+    },
+    postcss: {
+      plugins: {
+        cssnano: false
       }
     }
   }
