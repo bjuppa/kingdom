@@ -34,7 +34,8 @@ module.exports = {
     postcss: {
       preset: {
         features: {
-          "custom-properties": false
+          "custom-properties": false,
+          "dir-pseudo-class": false
         }
       },
       plugins: {
