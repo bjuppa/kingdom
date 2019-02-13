@@ -32,6 +32,11 @@ module.exports = {
       }
     },
     postcss: {
+      preset: {
+        features: {
+          "custom-properties": false
+        }
+      },
       plugins: {
         cssnano: false
       }
