@@ -19,17 +19,8 @@ module.exports = {
   },
   build: {
     cssSourceMap: true,
-    optimizeCSS: false,
     html: {
       minify: false
-    },
-    optimization: {
-      minimize: false
-    },
-    loaders: {
-      scss: {
-        outputStyle: "expanded"
-      }
     },
     postcss: {
       preset: {
