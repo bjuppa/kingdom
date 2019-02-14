@@ -27,9 +27,9 @@ $standard-shadow-utility: ".shadow-1\\/3" !default;
   @extend #{$standard-shadow-utility};
 }
 
-$inner-shadow-factor: 1/4 !default;
+$inner-shadow: inset shadow-relative(1/4) change_color(get-color(shadow), $alpha: .1) !default;
 .shadow-inner {
-  box-shadow: inset shadow-relative($inner-shadow-factor) change_color(get-color(shadow), $alpha: .1);
+  box-shadow: $inner-shadow;
 }
 
 .shadow-none {
