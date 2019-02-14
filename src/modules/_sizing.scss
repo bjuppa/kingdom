@@ -42,3 +42,25 @@ $readable-line-length-max: 75ch !default;
 @function minmax-readable($min-width: $readable-line-length-min, $max-width: $readable-line-length-max) {
   @return minmax($min-width, $max-width);
 }
+
+@function shadow-relative($factor: 1, $blur: 10/7, $x-fraction: 0, $y-fraction: 1, $spread: 0) {
+  @if($spread > 1) {
+    $spread: 1;
+  }
+  @if(($blur / 2 + $spread) > 1) {
+    $blur: (1 - $spread) * 2;
+  }
+
+  $spacing-base-var: var(--spacing-base, #{$spacing-base});
+
+  $spread-factor: $factor * $spread;
+  $blur-factor: $factor * $blur / 2 * .8; // This is slightly less than 1/2 because Firefox's shadow blur goes outside the specified radius
+  $offset-factor: $factor * (1 - ($blur / 2 + $spread));
+
+  $shadow: calc(#{$x-fraction * $offset-factor} * #{$spacing-base-var}) calc(#{$y-fraction * $offset-factor} * #{$spacing-base-var}) calc(#{$blur-factor} * #{$spacing-base-var});
+  @if($spread != 0) {
+    $shadow: append($shadow, calc(#{$spread-factor} * #{$spacing-base-var}));
+  }
+
+  @return $shadow;
+}
