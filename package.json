@@ -26,7 +26,7 @@
   "bugs": {
     "url": "https://github.com/bjuppa/kingdom/issues"
   },
-  "homepage": "https://github.com/bjuppa/kingdom#readme",
+  "homepage": "https://bjuppa.github.io/kingdom",
   "devDependencies": {
     "node-sass": "^4.11.0",
     "nuxt": "^2.0.0",
