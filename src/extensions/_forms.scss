@@ -7,6 +7,7 @@ $input-border-color: change_color(get-color(body), $saturation: 5%, $lightness: 
 $input-border-width: 1px !default;
 $input-border-radius: $spacing-base/8 !default;
 $input-border-style: solid !default;
+$input-text-color: black !default;
 $input-background: white !default;
 $input-box-shadow: if(variable-exists(inner-shadow), $inner-shadow, inset shadow-relative(1/4) change_color(get-color(shadow), $alpha: .1)) !default;
 $input-focus-box-shadow: 0 0 4px 2px #5E9ED6 !default; // Color from Mac
@@ -64,6 +65,7 @@ input, textarea, select {
   @extend %font-forms;
 
   background: $input-background;
+  color: $input-text-color;
 
   border-color: $input-border-color;
   border-style: $input-border-style;
