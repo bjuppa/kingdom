@@ -194,7 +194,6 @@ $fraction-spacing-utilities: (
 
 @each $suffix, $factor in $fraction-spacing-utilities {
   .column-gap-#{$suffix} {
-    @include length-relative(grid-column-gap, $factor);
     @include length-relative(column-gap, $factor);
   }
 }
@@ -202,33 +201,27 @@ $fraction-spacing-utilities: (
 $gap-utilities: 1 2 3 4 !default;
 @each $multiple in $gap-utilities {
   .gap-#{$multiple} {
-    @include length-relative(grid-gap, $multiple);
     @include length-relative(gap, $multiple);
   }
 
   .column-gap-#{$multiple} {
-    @include length-relative(grid-column-gap, $multiple);
     @include length-relative(column-gap, $multiple);
   }
 
   .row-gap-#{$multiple} {
-    @include length-relative(grid-row-gap, $multiple);
     @include length-relative(row-gap, $multiple);
   }
 }
 
 .gap-0 {
-  grid-gap: 0;
   gap: 0;
 }
 
 .column-gap-0 {
-  grid-column-gap: 0;
   column-gap: 0;
 }
 
 .row-gap-0 {
-  grid-row-gap: 0;
   row-gap: 0;
 }
 
