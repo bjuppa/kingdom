@@ -25,7 +25,6 @@ module.exports = {
     postcss: {
       preset: {
         features: {
-          "custom-properties": false,
           "dir-pseudo-class": false
         }
       },

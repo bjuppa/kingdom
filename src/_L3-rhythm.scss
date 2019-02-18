@@ -40,10 +40,9 @@ $line-heights: ();
 
 hr {
   @extend %h-1;
-  $hr-color: get-color(border);
-  @supports (background-image: linear-gradient($hr-color, $hr-color)) {
+  @supports (background-image: linear-gradient(get-color(border), get-color(border))) {
     border: 0;
-    background-image: linear-gradient($hr-color, $hr-color);
+    background-image: linear-gradient(color-var(border), color-var(border));
   }
   background-size: 1px 1px;
   background-repeat: repeat-x;
@@ -116,14 +115,12 @@ fieldset {
 
 legend {
   // Keep legend centered on the line when the fieldset is moved up because of border
-  padding-top: $fieldset-border-width;
-  padding-top: calc(var(--border-top-width, #{$fieldset-border-width}));
+  padding-top: var(--border-top-width, #{$fieldset-border-width});
 }
 
 .visualize-vertical-rhythm {
   $grid-color: transparentize(transform-hue(get-color(primary), red), 0.85);
   // This doesn't work very well when $vertical-rhythm-base doesn't correspond to a whole pixel value
   background-image: linear-gradient($grid-color, $grid-color 1px, transparent 1px);
-  background-size: 1px $vertical-rhythm-base;
   background-size: 1px var(--spacing-base, $vertical-rhythm-base);
 }
