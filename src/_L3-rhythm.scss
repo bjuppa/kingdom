@@ -40,10 +40,9 @@ $line-heights: ();
 
 hr {
   @extend %h-1;
-  $hr-color: get-color(border);
-  @supports (background-image: linear-gradient($hr-color, $hr-color)) {
+  @supports (background-image: linear-gradient(get-color(border), get-color(border))) {
     border: 0;
-    background-image: linear-gradient($hr-color, $hr-color);
+    background-image: linear-gradient(color-var(border), color-var(border));
   }
   background-size: 1px 1px;
   background-repeat: repeat-x;
