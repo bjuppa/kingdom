@@ -3,12 +3,15 @@ $readable-line-length-min: 45ch !default;
 $readable-line-length-max: 75ch !default;
 //https://www.smashingmagazine.com/2014/09/balancing-line-length-font-size-responsive-web-design/#line-length-measure-and-reading
 
+@function spacing-base-var() {
+  @return var(--spacing-base, $spacing-base);
+}
+
 // Apply one or more length-properties relative to the spacing base
 @mixin length-relative($properties, $factor: 1, $extend-height-multiple: false) {
   @each $property in $properties {
     @if($factor != 0) {
-      #{$property}: $factor * $spacing-base;
-      #{$property}: calc(#{$factor} * var(--spacing-base, #{$spacing-base}));
+      #{$property}: calc(#{$factor} * #{spacing-base-var()});
     } @else {
       #{$property}: 0;
     }
@@ -21,15 +24,16 @@ $readable-line-length-max: 75ch !default;
 // Apply font size and line height, and put the line-height in a CSS custom property for use in other calculations
 @mixin size-text($font-size, $line-height) {
   font-size: $font-size;
-  line-height: $line-height;
   @if (type-of($line-height) == 'number' and $line-height != 0) {
     @if (unit($line-height) == unit($spacing-base)) {
       $factor: round($line-height/$spacing-base);
-      --line-height: calc(#{$factor} * var(--spacing-base, #{$spacing-base}));
+      --line-height: calc(#{$factor} * #{spacing-base-var()});
     } @else {
       --line-height: #{$line-height};
     }
-    line-height: var(--line-height);
+    line-height: var(--line-height, #{$line-height});
+  } @else {
+    line-height: $line-height;
   }
 }
 
@@ -51,15 +55,13 @@ $readable-line-length-max: 75ch !default;
     $blur: (1 - $spread) * 2;
   }
 
-  $spacing-base-var: var(--spacing-base, #{$spacing-base});
-
   $spread-factor: $factor * $spread;
   $blur-factor: $factor * $blur / 2 * .8; // This is slightly less than 1/2 because Firefox's shadow blur goes outside the specified radius
   $offset-factor: $factor * (1 - ($blur / 2 + $spread));
 
-  $shadow: calc(#{$x-fraction * $offset-factor} * #{$spacing-base-var}) calc(#{$y-fraction * $offset-factor} * #{$spacing-base-var}) calc(#{$blur-factor} * #{$spacing-base-var});
+  $shadow: calc(#{$x-fraction * $offset-factor} * #{spacing-base-var()}) calc(#{$y-fraction * $offset-factor} * #{spacing-base-var()}) calc(#{$blur-factor} * #{spacing-base-var()});
   @if($spread != 0) {
-    $shadow: append($shadow, calc(#{$spread-factor} * #{$spacing-base-var}));
+    $shadow: append($shadow, calc(#{$spread-factor} * #{spacing-base-var()}));
   }
 
   @return $shadow;

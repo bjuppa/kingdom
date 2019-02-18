@@ -27,8 +27,7 @@ $spacing-fractions: (
 
 /* %mt-paragraph */
 %mt-paragraph {
-  margin-top: $paragraph-spacing-factor * $spacing-base;
-  margin-top: calc(var(--paragraph-spacing-factor) * var(--spacing-base));
+  margin-top: calc(var(--paragraph-spacing-factor, #{$paragraph-spacing-factor}) * #{spacing-base-var()});
 }
 
 // Margin placeholders are ordered with all sides in combination first (only 0) (`m`), being overwritten by:

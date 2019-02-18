@@ -7,9 +7,8 @@ $border-style: solid !default;
 
 @mixin border-for-fixed-height($sides: top bottom left right, $width: $border-width) {
   @each $side in $sides {
-    border-#{$side}-width: $width;
     --border-#{$side}-width: #{$width};
-    border-#{$side}-width: var(--border-#{$side}-width);
+    border-#{$side}-width: var(--border-#{$side}-width, $width);
   }
 
   @if index($sides, top) and strip-unit($width) > 0 {
@@ -23,8 +22,7 @@ $border-style: solid !default;
   @if index($sides, top) {
     @if strip-unit($width) > 0 {
       position: relative;
-      top: -$width;
-      top: calc(0px - var(--border-top-width));
+      top: calc(0px - var(--border-top-width, #{$width}));
     } @else {
       position: initial;
       top: initial;
@@ -32,8 +30,7 @@ $border-style: solid !default;
   }
 
   @if index($sides, top) or index($sides, bottom) {
-    margin-bottom: 0 - if(index($sides, top), $width, 0) - if(index($sides, bottom), $width, 0);
-    margin-bottom: calc(0px - var(--border-top-width, 0px) - var(--border-bottom-width, 0px));
+    margin-bottom: calc(0px - var(--border-top-width, #{if(index($sides, top), $width, 0)}) - var(--border-bottom-width, #{if(index($sides, bottom), $width, 0)}));
     &%height-multiple {
       //A fixed-height element should not compensate margin for next element (when box-sizing is border-box)
       margin-bottom: 0;
@@ -53,14 +50,11 @@ $border-style: solid !default;
 @mixin border-preserving-line-height($line-height, $width: $border-width) {
   vertical-align: bottom;
   white-space: nowrap;
-  line-height: font-size-rem($line-height) - length-rem(2 * $width);
   line-height: calc(var(--line-height, #{$line-height}) - #{2 * $width});
   border-width: $width;
   padding-top: 0;
   padding-bottom: 0;
-  height: font-size-rem($line-height);
   height: var(--line-height, font-size-rem($line-height));
-  max-height: font-size-rem($line-height);
   max-height: var(--line-height, font-size-rem($line-height));
 }
 
