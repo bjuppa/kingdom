@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html data-n-head-ssr lang="en" data-n-head="lang">
   <head data-n-head="">
-    <title data-n-head="true">Kingdom CSS</title><meta data-n-head="true" charset="utf-8"/><meta data-n-head="true" http-equiv="X-UA-Compatible" content="IE=edge"/><meta data-n-head="true" name="viewport" content="width=device-width, initial-scale=1"/><base href="/kingdom/"><link rel="preload" href="/kingdom/_nuxt/4ee23a424f59df4f5c43.js" as="script"><link rel="preload" href="/kingdom/_nuxt/753cca17dff8666fabd2.js" as="script"><link rel="preload" href="/kingdom/_nuxt/4c2be766547a729af41b.js" as="script"><link rel="preload" href="/kingdom/_nuxt/3a1d01124f415217a9bd.js" as="script"><style data-vue-ssr-id="17cfdfa9:0 d08fb9ec:0">
+    <title data-n-head="true">Kingdom CSS</title><meta data-n-head="true" charset="utf-8"/><meta data-n-head="true" http-equiv="X-UA-Compatible" content="IE=edge"/><meta data-n-head="true" name="viewport" content="width=device-width, initial-scale=1"/><base href="/kingdom/"><link rel="preload" href="/kingdom/_nuxt/9254bac4bdc28752f6db.js" as="script"><link rel="preload" href="/kingdom/_nuxt/753cca17dff8666fabd2.js" as="script"><link rel="preload" href="/kingdom/_nuxt/4c2be766547a729af41b.js" as="script"><link rel="preload" href="/kingdom/_nuxt/e6947f1f4706118deee0.js" as="script"><style data-vue-ssr-id="17cfdfa9:0 d08fb9ec:0">
 .nuxt-progress {
   position: fixed;
   top: 0px;
@@ -25,10 +25,10 @@
 /* Kingdom CSS Level 1 - Reset */
 body {
   padding: 0;
-  background-color: #272f30;
-  background-color: var(--color-body, #272f30);
-  color: #e9ebeb;
-  color: var(--color-body-text, #e9ebeb);
+  background-color: #fdfdfd;
+  background-color: var(--color-body, #fdfdfd);
+  color: #0d0d0c;
+  color: var(--color-body-text, #0d0d0c);
 }
 html, body {
   margin: 0;
@@ -159,12 +159,12 @@ button:focus, [type='button']:focus, [type='reset']:focus, [type='submit']:focus
   outline: -webkit-focus-ring-color auto 5px;
 }
 :link {
-  color: #8675f4;
-  color: var(--color-link, #8675f4);
+  color: #170686;
+  color: var(--color-link, #170686);
 }
 :visited {
-  color: #e575f4;
-  color: var(--color-visited, #e575f4);
+  color: #770686;
+  color: var(--color-visited, #770686);
 }
 table, caption, colgroup, col, thead, tbody, tfoot, tr, th, td {
   border: 0 solid;
@@ -188,13 +188,6 @@ dt {
 }
 /* Placeholders for fonts */
 /* %font-body */
-body {
-  font-family: Verdana, sans-serif;
-  --baseline-shift-factor: 0.75;
-}
-body * {
-    font-family: inherit;
-}
 /* %font-headings */
 /* %font-forms */
 input, textarea, select, label, button,
@@ -2230,15 +2223,15 @@ fieldset > label:first-of-type, label:not([for]) + label:not([for]), [aria-descr
   font-weight: 900;
 }
 .font-body {
-  font-family: Verdana, sans-serif;
-  --baseline-shift-factor: 0.75;
+  font-family: "Times New Roman", Times, serif;
+  --baseline-shift-factor: 0.66;
 }
 .font-body * {
     font-family: inherit;
 }
 .font-headings {
-  font-family: Verdana, sans-serif;
-  --baseline-shift-factor: 0.75;
+  font-family: "Times New Roman", Times, serif;
+  --baseline-shift-factor: 0.66;
 }
 .font-headings * {
     font-family: inherit;
@@ -3192,18 +3185,18 @@ fieldset > label:first-of-type, label:not([for]) + label:not([for]), [aria-descr
   align-items: baseline;
 }
 :root {
-  --color-primary: #e141cc;
-  --color-primary-text: #0a0509;
-  --color-body: #272f30;
-  --color-body-text: #e9ebeb;
-  --color-link: #8675f4;
-  --color-visited: #e575f4;
+  --color-primary: #601f58;
+  --color-primary-text: #f1e7ef;
+  --color-body: #fdfdfd;
+  --color-body-text: #0d0d0c;
+  --color-link: #170686;
+  --color-visited: #770686;
   --color-border: currentColor;
-  --color-caution: #e15741;
-  --color-caution-text: #0a0505;
-  --color-disabled: rgba(229, 230, 230, 0.75);
-  --color-disabled-text: #7e8081;
-  --color-shadow: rgba(5, 37, 46, 0.1);
+  --color-caution: #a33929;
+  --color-caution-text: #f4eceb;
+  --color-disabled: rgba(230, 230, 229, 0.75);
+  --color-disabled-text: #80817e;
+  --color-shadow: rgba(0, 24, 51, 0.1);
   --color-shadow-text: currentColor;
   --color-gray-900: #1a191a;
   --color-gray-900-text: #e8e8e8;
@@ -3228,56 +3221,56 @@ fieldset > label:first-of-type, label:not([for]) + label:not([for]), [aria-descr
   color: currentColor;
 }
 .color-primary, .links-color-primary :link, .links-color-primary :visited, .links-color-primary:link, .links-color-primary:visited {
-  color: #e141cc;
-  color: var(--color-primary, #e141cc);
+  color: #601f58;
+  color: var(--color-primary, #601f58);
 }
 .border-color-primary {
-  border-color: #e141cc;
-  border-color: var(--color-primary, #e141cc);
+  border-color: #601f58;
+  border-color: var(--color-primary, #601f58);
 }
 .border-color-primary-text {
-  border-color: #0a0509;
-  border-color: var(--color-primary-text, #0a0509);
+  border-color: #f1e7ef;
+  border-color: var(--color-primary-text, #f1e7ef);
 }
 .background-color-primary {
-  background-color: #e141cc;
-  background-color: var(--color-primary, #e141cc);
-  color: #0a0509;
-  color: var(--color-primary-text, #0a0509);
+  background-color: #601f58;
+  background-color: var(--color-primary, #601f58);
+  color: #f1e7ef;
+  color: var(--color-primary-text, #f1e7ef);
 }
 .color-body, .links-color-body :link, .links-color-body :visited, .links-color-body:link, .links-color-body:visited {
-  color: #272f30;
-  color: var(--color-body, #272f30);
+  color: #fdfdfd;
+  color: var(--color-body, #fdfdfd);
 }
 .border-color-body {
-  border-color: #272f30;
-  border-color: var(--color-body, #272f30);
+  border-color: #fdfdfd;
+  border-color: var(--color-body, #fdfdfd);
 }
 .border-color-body-text {
-  border-color: #e9ebeb;
-  border-color: var(--color-body-text, #e9ebeb);
+  border-color: #0d0d0c;
+  border-color: var(--color-body-text, #0d0d0c);
 }
 .background-color-body {
-  background-color: #272f30;
-  background-color: var(--color-body, #272f30);
-  color: #e9ebeb;
-  color: var(--color-body-text, #e9ebeb);
+  background-color: #fdfdfd;
+  background-color: var(--color-body, #fdfdfd);
+  color: #0d0d0c;
+  color: var(--color-body-text, #0d0d0c);
 }
 .color-link, .links-color-link :link, .links-color-link :visited, .links-color-link:link, .links-color-link:visited {
-  color: #8675f4;
-  color: var(--color-link, #8675f4);
+  color: #170686;
+  color: var(--color-link, #170686);
 }
 .border-color-link {
-  border-color: #8675f4;
-  border-color: var(--color-link, #8675f4);
+  border-color: #170686;
+  border-color: var(--color-link, #170686);
 }
 .color-visited, .links-color-visited :link, .links-color-visited :visited, .links-color-visited:link, .links-color-visited:visited {
-  color: #e575f4;
-  color: var(--color-visited, #e575f4);
+  color: #770686;
+  color: var(--color-visited, #770686);
 }
 .border-color-visited {
-  border-color: #e575f4;
-  border-color: var(--color-visited, #e575f4);
+  border-color: #770686;
+  border-color: var(--color-visited, #770686);
 }
 .color-border, .links-color-border :link, .links-color-border :visited, .links-color-border:link, .links-color-border:visited {
   color: currentColor;
@@ -3288,56 +3281,56 @@ fieldset > label:first-of-type, label:not([for]) + label:not([for]), [aria-descr
   border-color: var(--color-border, currentColor);
 }
 .color-caution, .links-color-caution :link, .links-color-caution :visited, .links-color-caution:link, .links-color-caution:visited {
-  color: #e15741;
-  color: var(--color-caution, #e15741);
+  color: #a33929;
+  color: var(--color-caution, #a33929);
 }
 .border-color-caution {
-  border-color: #e15741;
-  border-color: var(--color-caution, #e15741);
+  border-color: #a33929;
+  border-color: var(--color-caution, #a33929);
 }
 .border-color-caution-text {
-  border-color: #0a0505;
-  border-color: var(--color-caution-text, #0a0505);
+  border-color: #f4eceb;
+  border-color: var(--color-caution-text, #f4eceb);
 }
 .background-color-caution {
-  background-color: #e15741;
-  background-color: var(--color-caution, #e15741);
-  color: #0a0505;
-  color: var(--color-caution-text, #0a0505);
+  background-color: #a33929;
+  background-color: var(--color-caution, #a33929);
+  color: #f4eceb;
+  color: var(--color-caution-text, #f4eceb);
 }
 .color-disabled, .links-color-disabled :link, .links-color-disabled :visited, .links-color-disabled:link, .links-color-disabled:visited {
-  color: rgba(229, 230, 230, 0.75);
-  color: var(--color-disabled, rgba(229, 230, 230, 0.75));
+  color: rgba(230, 230, 229, 0.75);
+  color: var(--color-disabled, rgba(230, 230, 229, 0.75));
 }
 .border-color-disabled {
-  border-color: rgba(229, 230, 230, 0.75);
-  border-color: var(--color-disabled, rgba(229, 230, 230, 0.75));
+  border-color: rgba(230, 230, 229, 0.75);
+  border-color: var(--color-disabled, rgba(230, 230, 229, 0.75));
 }
 .border-color-disabled-text {
-  border-color: #7e8081;
-  border-color: var(--color-disabled-text, #7e8081);
+  border-color: #80817e;
+  border-color: var(--color-disabled-text, #80817e);
 }
 .background-color-disabled {
-  background-color: rgba(229, 230, 230, 0.75);
-  background-color: var(--color-disabled, rgba(229, 230, 230, 0.75));
-  color: #7e8081;
-  color: var(--color-disabled-text, #7e8081);
+  background-color: rgba(230, 230, 229, 0.75);
+  background-color: var(--color-disabled, rgba(230, 230, 229, 0.75));
+  color: #80817e;
+  color: var(--color-disabled-text, #80817e);
 }
 .color-shadow, .links-color-shadow :link, .links-color-shadow :visited, .links-color-shadow:link, .links-color-shadow:visited {
-  color: rgba(5, 37, 46, 0.1);
-  color: var(--color-shadow, rgba(5, 37, 46, 0.1));
+  color: rgba(0, 24, 51, 0.1);
+  color: var(--color-shadow, rgba(0, 24, 51, 0.1));
 }
 .border-color-shadow {
-  border-color: rgba(5, 37, 46, 0.1);
-  border-color: var(--color-shadow, rgba(5, 37, 46, 0.1));
+  border-color: rgba(0, 24, 51, 0.1);
+  border-color: var(--color-shadow, rgba(0, 24, 51, 0.1));
 }
 .border-color-shadow-text {
   border-color: currentColor;
   border-color: var(--color-shadow-text, currentColor);
 }
 .background-color-shadow {
-  background-color: rgba(5, 37, 46, 0.1);
-  background-color: var(--color-shadow, rgba(5, 37, 46, 0.1));
+  background-color: rgba(0, 24, 51, 0.1);
+  background-color: var(--color-shadow, rgba(0, 24, 51, 0.1));
   color: currentColor;
   color: var(--color-shadow-text, currentColor);
 }
@@ -3769,36 +3762,36 @@ fieldset > label:first-of-type, label:not([for]) + label:not([for]), [aria-descr
   opacity: 1;
 }
 .shadow-2 {
-  box-shadow: calc(0 * 1.5rem) calc(0.57143 * 1.5rem) calc(1.14286 * 1.5rem) rgba(5, 37, 46, 0.32438), calc(0 * 1.5rem) calc(0.28571 * 1.5rem) calc(0.57143 * 1.5rem) rgba(5, 37, 46, 0.16219);
-  box-shadow: calc(0 * var(--spacing-base, 1.5rem)) calc(0.57143 * var(--spacing-base, 1.5rem)) calc(1.14286 * var(--spacing-base, 1.5rem)) rgba(5, 37, 46, 0.32438), calc(0 * var(--spacing-base, 1.5rem)) calc(0.28571 * var(--spacing-base, 1.5rem)) calc(0.57143 * var(--spacing-base, 1.5rem)) rgba(5, 37, 46, 0.16219);
+  box-shadow: calc(0 * 1.5rem) calc(0.57143 * 1.5rem) calc(1.14286 * 1.5rem) rgba(0, 24, 51, 0.14365), calc(0 * 1.5rem) calc(0.28571 * 1.5rem) calc(0.57143 * 1.5rem) rgba(0, 24, 51, 0.071825);
+  box-shadow: calc(0 * var(--spacing-base, 1.5rem)) calc(0.57143 * var(--spacing-base, 1.5rem)) calc(1.14286 * var(--spacing-base, 1.5rem)) rgba(0, 24, 51, 0.14365), calc(0 * var(--spacing-base, 1.5rem)) calc(0.28571 * var(--spacing-base, 1.5rem)) calc(0.57143 * var(--spacing-base, 1.5rem)) rgba(0, 24, 51, 0.071825);
 }
 .shadow-3\/2 {
-  box-shadow: calc(0 * 1.5rem) calc(0.42857 * 1.5rem) calc(0.85714 * 1.5rem) rgba(5, 37, 46, 0.32438), calc(0 * 1.5rem) calc(0.21429 * 1.5rem) calc(0.42857 * 1.5rem) rgba(5, 37, 46, 0.16219);
-  box-shadow: calc(0 * var(--spacing-base, 1.5rem)) calc(0.42857 * var(--spacing-base, 1.5rem)) calc(0.85714 * var(--spacing-base, 1.5rem)) rgba(5, 37, 46, 0.32438), calc(0 * var(--spacing-base, 1.5rem)) calc(0.21429 * var(--spacing-base, 1.5rem)) calc(0.42857 * var(--spacing-base, 1.5rem)) rgba(5, 37, 46, 0.16219);
+  box-shadow: calc(0 * 1.5rem) calc(0.42857 * 1.5rem) calc(0.85714 * 1.5rem) rgba(0, 24, 51, 0.14365), calc(0 * 1.5rem) calc(0.21429 * 1.5rem) calc(0.42857 * 1.5rem) rgba(0, 24, 51, 0.071825);
+  box-shadow: calc(0 * var(--spacing-base, 1.5rem)) calc(0.42857 * var(--spacing-base, 1.5rem)) calc(0.85714 * var(--spacing-base, 1.5rem)) rgba(0, 24, 51, 0.14365), calc(0 * var(--spacing-base, 1.5rem)) calc(0.21429 * var(--spacing-base, 1.5rem)) calc(0.42857 * var(--spacing-base, 1.5rem)) rgba(0, 24, 51, 0.071825);
 }
 .shadow-1 {
-  box-shadow: calc(0 * 1.5rem) calc(0.28571 * 1.5rem) calc(0.57143 * 1.5rem) rgba(5, 37, 46, 0.32438), calc(0 * 1.5rem) calc(0.14286 * 1.5rem) calc(0.28571 * 1.5rem) rgba(5, 37, 46, 0.16219);
-  box-shadow: calc(0 * var(--spacing-base, 1.5rem)) calc(0.28571 * var(--spacing-base, 1.5rem)) calc(0.57143 * var(--spacing-base, 1.5rem)) rgba(5, 37, 46, 0.32438), calc(0 * var(--spacing-base, 1.5rem)) calc(0.14286 * var(--spacing-base, 1.5rem)) calc(0.28571 * var(--spacing-base, 1.5rem)) rgba(5, 37, 46, 0.16219);
+  box-shadow: calc(0 * 1.5rem) calc(0.28571 * 1.5rem) calc(0.57143 * 1.5rem) rgba(0, 24, 51, 0.14365), calc(0 * 1.5rem) calc(0.14286 * 1.5rem) calc(0.28571 * 1.5rem) rgba(0, 24, 51, 0.071825);
+  box-shadow: calc(0 * var(--spacing-base, 1.5rem)) calc(0.28571 * var(--spacing-base, 1.5rem)) calc(0.57143 * var(--spacing-base, 1.5rem)) rgba(0, 24, 51, 0.14365), calc(0 * var(--spacing-base, 1.5rem)) calc(0.14286 * var(--spacing-base, 1.5rem)) calc(0.28571 * var(--spacing-base, 1.5rem)) rgba(0, 24, 51, 0.071825);
 }
 .shadow-3\/4 {
-  box-shadow: calc(0 * 1.5rem) calc(0.21429 * 1.5rem) calc(0.42857 * 1.5rem) rgba(5, 37, 46, 0.32438), calc(0 * 1.5rem) calc(0.10714 * 1.5rem) calc(0.21429 * 1.5rem) rgba(5, 37, 46, 0.16219);
-  box-shadow: calc(0 * var(--spacing-base, 1.5rem)) calc(0.21429 * var(--spacing-base, 1.5rem)) calc(0.42857 * var(--spacing-base, 1.5rem)) rgba(5, 37, 46, 0.32438), calc(0 * var(--spacing-base, 1.5rem)) calc(0.10714 * var(--spacing-base, 1.5rem)) calc(0.21429 * var(--spacing-base, 1.5rem)) rgba(5, 37, 46, 0.16219);
+  box-shadow: calc(0 * 1.5rem) calc(0.21429 * 1.5rem) calc(0.42857 * 1.5rem) rgba(0, 24, 51, 0.14365), calc(0 * 1.5rem) calc(0.10714 * 1.5rem) calc(0.21429 * 1.5rem) rgba(0, 24, 51, 0.071825);
+  box-shadow: calc(0 * var(--spacing-base, 1.5rem)) calc(0.21429 * var(--spacing-base, 1.5rem)) calc(0.42857 * var(--spacing-base, 1.5rem)) rgba(0, 24, 51, 0.14365), calc(0 * var(--spacing-base, 1.5rem)) calc(0.10714 * var(--spacing-base, 1.5rem)) calc(0.21429 * var(--spacing-base, 1.5rem)) rgba(0, 24, 51, 0.071825);
 }
 .shadow-1\/2 {
-  box-shadow: calc(0 * 1.5rem) calc(0.14286 * 1.5rem) calc(0.28571 * 1.5rem) rgba(5, 37, 46, 0.32438), calc(0 * 1.5rem) calc(0.07143 * 1.5rem) calc(0.14286 * 1.5rem) rgba(5, 37, 46, 0.16219);
-  box-shadow: calc(0 * var(--spacing-base, 1.5rem)) calc(0.14286 * var(--spacing-base, 1.5rem)) calc(0.28571 * var(--spacing-base, 1.5rem)) rgba(5, 37, 46, 0.32438), calc(0 * var(--spacing-base, 1.5rem)) calc(0.07143 * var(--spacing-base, 1.5rem)) calc(0.14286 * var(--spacing-base, 1.5rem)) rgba(5, 37, 46, 0.16219);
+  box-shadow: calc(0 * 1.5rem) calc(0.14286 * 1.5rem) calc(0.28571 * 1.5rem) rgba(0, 24, 51, 0.14365), calc(0 * 1.5rem) calc(0.07143 * 1.5rem) calc(0.14286 * 1.5rem) rgba(0, 24, 51, 0.071825);
+  box-shadow: calc(0 * var(--spacing-base, 1.5rem)) calc(0.14286 * var(--spacing-base, 1.5rem)) calc(0.28571 * var(--spacing-base, 1.5rem)) rgba(0, 24, 51, 0.14365), calc(0 * var(--spacing-base, 1.5rem)) calc(0.07143 * var(--spacing-base, 1.5rem)) calc(0.14286 * var(--spacing-base, 1.5rem)) rgba(0, 24, 51, 0.071825);
 }
 .shadow-1\/3, .shadow {
-  box-shadow: calc(0 * 1.5rem) calc(0.09524 * 1.5rem) calc(0.19048 * 1.5rem) rgba(5, 37, 46, 0.32438), calc(0 * 1.5rem) calc(0.04762 * 1.5rem) calc(0.09524 * 1.5rem) rgba(5, 37, 46, 0.16219);
-  box-shadow: calc(0 * var(--spacing-base, 1.5rem)) calc(0.09524 * var(--spacing-base, 1.5rem)) calc(0.19048 * var(--spacing-base, 1.5rem)) rgba(5, 37, 46, 0.32438), calc(0 * var(--spacing-base, 1.5rem)) calc(0.04762 * var(--spacing-base, 1.5rem)) calc(0.09524 * var(--spacing-base, 1.5rem)) rgba(5, 37, 46, 0.16219);
+  box-shadow: calc(0 * 1.5rem) calc(0.09524 * 1.5rem) calc(0.19048 * 1.5rem) rgba(0, 24, 51, 0.14365), calc(0 * 1.5rem) calc(0.04762 * 1.5rem) calc(0.09524 * 1.5rem) rgba(0, 24, 51, 0.071825);
+  box-shadow: calc(0 * var(--spacing-base, 1.5rem)) calc(0.09524 * var(--spacing-base, 1.5rem)) calc(0.19048 * var(--spacing-base, 1.5rem)) rgba(0, 24, 51, 0.14365), calc(0 * var(--spacing-base, 1.5rem)) calc(0.04762 * var(--spacing-base, 1.5rem)) calc(0.09524 * var(--spacing-base, 1.5rem)) rgba(0, 24, 51, 0.071825);
 }
 .shadow-1\/4 {
-  box-shadow: calc(0 * 1.5rem) calc(0.07143 * 1.5rem) calc(0.14286 * 1.5rem) rgba(5, 37, 46, 0.32438), calc(0 * 1.5rem) calc(0.03571 * 1.5rem) calc(0.07143 * 1.5rem) rgba(5, 37, 46, 0.16219);
-  box-shadow: calc(0 * var(--spacing-base, 1.5rem)) calc(0.07143 * var(--spacing-base, 1.5rem)) calc(0.14286 * var(--spacing-base, 1.5rem)) rgba(5, 37, 46, 0.32438), calc(0 * var(--spacing-base, 1.5rem)) calc(0.03571 * var(--spacing-base, 1.5rem)) calc(0.07143 * var(--spacing-base, 1.5rem)) rgba(5, 37, 46, 0.16219);
+  box-shadow: calc(0 * 1.5rem) calc(0.07143 * 1.5rem) calc(0.14286 * 1.5rem) rgba(0, 24, 51, 0.14365), calc(0 * 1.5rem) calc(0.03571 * 1.5rem) calc(0.07143 * 1.5rem) rgba(0, 24, 51, 0.071825);
+  box-shadow: calc(0 * var(--spacing-base, 1.5rem)) calc(0.07143 * var(--spacing-base, 1.5rem)) calc(0.14286 * var(--spacing-base, 1.5rem)) rgba(0, 24, 51, 0.14365), calc(0 * var(--spacing-base, 1.5rem)) calc(0.03571 * var(--spacing-base, 1.5rem)) calc(0.07143 * var(--spacing-base, 1.5rem)) rgba(0, 24, 51, 0.071825);
 }
 .shadow-inner {
-  box-shadow: inset calc(0 * 1.5rem) calc(0.07143 * 1.5rem) calc(0.14286 * 1.5rem) rgba(5, 37, 46, 0.1);
-  box-shadow: inset calc(0 * var(--spacing-base, 1.5rem)) calc(0.07143 * var(--spacing-base, 1.5rem)) calc(0.14286 * var(--spacing-base, 1.5rem)) rgba(5, 37, 46, 0.1);
+  box-shadow: inset calc(0 * 1.5rem) calc(0.07143 * 1.5rem) calc(0.14286 * 1.5rem) rgba(0, 24, 51, 0.1);
+  box-shadow: inset calc(0 * var(--spacing-base, 1.5rem)) calc(0.07143 * var(--spacing-base, 1.5rem)) calc(0.14286 * var(--spacing-base, 1.5rem)) rgba(0, 24, 51, 0.1);
 }
 .shadow-none {
   box-shadow: none;
@@ -3809,20 +3802,20 @@ fieldset > label:first-of-type, label:not([for]) + label:not([for]), [aria-descr
 label[disabled],
 label:disabled,
 fieldset:disabled label:not([for]) {
-  color: #7e8081;
-  color: var(--color-disabled-text, #7e8081);
+  color: #80817e;
+  color: var(--color-disabled-text, #80817e);
 }
 /* %label-invalid */
 [type='checkbox'][id][aria-invalid] + label[for], [type='radio'][id][aria-invalid] + label[for], label.invalid,
 label[aria-invalid] {
-  color: #e15741;
-  color: var(--color-caution, #e15741);
+  color: #a33929;
+  color: var(--color-caution, #a33929);
 }
 /* %error-message */
 [id*='error'],
 [id*='Error'] {
-  color: #e15741;
-  color: var(--color-caution, #e15741);
+  color: #a33929;
+  color: var(--color-caution, #a33929);
 }
 /* Inputs */
 select {
@@ -3873,17 +3866,17 @@ textarea.h-1, textarea.h-2, textarea.h-3, textarea.h-4, textarea.h-5, textarea.h
 input, textarea, select {
   background: #fdfcfd;
   color: #080307;
-  border-color: #bcc2c2;
+  border-color: #c2c2bc;
   border-style: solid;
   border-radius: 0.1875rem;
 }
 input[aria-invalid], textarea[aria-invalid], select[aria-invalid] {
-    border-color: #e15741;
-    border-color: var(--color-caution, #e15741);
+    border-color: #a33929;
+    border-color: var(--color-caution, #a33929);
 }
 input:disabled, textarea:disabled, select:disabled {
-    background-color: rgba(229, 230, 230, 0.75);
-    background-color: var(--color-disabled, rgba(229, 230, 230, 0.75));
+    background-color: rgba(230, 230, 229, 0.75);
+    background-color: var(--color-disabled, rgba(230, 230, 229, 0.75));
 }
 input:focus, textarea:focus, select:focus {
     outline: none;
@@ -3896,8 +3889,8 @@ input:focus, textarea:focus, select:focus {
 }
 }
 input, textarea {
-  box-shadow: inset calc(0 * 1.5rem) calc(0.07143 * 1.5rem) calc(0.14286 * 1.5rem) rgba(5, 37, 46, 0.1);
-  box-shadow: inset calc(0 * var(--spacing-base, 1.5rem)) calc(0.07143 * var(--spacing-base, 1.5rem)) calc(0.14286 * var(--spacing-base, 1.5rem)) rgba(5, 37, 46, 0.1);
+  box-shadow: inset calc(0 * 1.5rem) calc(0.07143 * 1.5rem) calc(0.14286 * 1.5rem) rgba(0, 24, 51, 0.1);
+  box-shadow: inset calc(0 * var(--spacing-base, 1.5rem)) calc(0.07143 * var(--spacing-base, 1.5rem)) calc(0.14286 * var(--spacing-base, 1.5rem)) rgba(0, 24, 51, 0.1);
 }
 input::-webkit-input-placeholder, textarea::-webkit-input-placeholder {
     color: inherit;
@@ -3916,12 +3909,12 @@ input::placeholder, textarea::placeholder {
     opacity: .5;
 }
 input:-moz-read-only, textarea:-moz-read-only {
-    background-color: rgba(229, 230, 230, 0.75);
-    background-color: var(--color-disabled, rgba(229, 230, 230, 0.75));
+    background-color: rgba(230, 230, 229, 0.75);
+    background-color: var(--color-disabled, rgba(230, 230, 229, 0.75));
 }
 input:read-only, textarea:read-only {
-    background-color: rgba(229, 230, 230, 0.75);
-    background-color: var(--color-disabled, rgba(229, 230, 230, 0.75));
+    background-color: rgba(230, 230, 229, 0.75);
+    background-color: var(--color-disabled, rgba(230, 230, 229, 0.75));
 }
 [type="checkbox"],
 [type="radio"] {
@@ -3959,7 +3952,7 @@ button,
 [type='button'],
 [type='reset'],
 [type='submit'], .button-prime, .button-plain, .button-large, .button-destructive, .button-petty {
-  color: #e141cc;
+  color: #601f58;
   background: transparent;
   display: inline-block;
   vertical-align: bottom;
@@ -3973,11 +3966,11 @@ button,
   height: var(--line-height, 1.5rem);
   max-height: 1.5rem;
   max-height: var(--line-height, 1.5rem);
-  border-color: #e141cc;
+  border-color: #601f58;
   border-style: solid;
   border-radius: 0.1875rem;
-  box-shadow: calc(0 * 1.5rem) calc(0.09524 * 1.5rem) calc(0.19048 * 1.5rem) rgba(5, 37, 46, 0.32438), calc(0 * 1.5rem) calc(0.04762 * 1.5rem) calc(0.09524 * 1.5rem) rgba(5, 37, 46, 0.16219);
-  box-shadow: calc(0 * var(--spacing-base, 1.5rem)) calc(0.09524 * var(--spacing-base, 1.5rem)) calc(0.19048 * var(--spacing-base, 1.5rem)) rgba(5, 37, 46, 0.32438), calc(0 * var(--spacing-base, 1.5rem)) calc(0.04762 * var(--spacing-base, 1.5rem)) calc(0.09524 * var(--spacing-base, 1.5rem)) rgba(5, 37, 46, 0.16219);
+  box-shadow: calc(0 * 1.5rem) calc(0.09524 * 1.5rem) calc(0.19048 * 1.5rem) rgba(0, 24, 51, 0.14365), calc(0 * 1.5rem) calc(0.04762 * 1.5rem) calc(0.09524 * 1.5rem) rgba(0, 24, 51, 0.071825);
+  box-shadow: calc(0 * var(--spacing-base, 1.5rem)) calc(0.09524 * var(--spacing-base, 1.5rem)) calc(0.19048 * var(--spacing-base, 1.5rem)) rgba(0, 24, 51, 0.14365), calc(0 * var(--spacing-base, 1.5rem)) calc(0.04762 * var(--spacing-base, 1.5rem)) calc(0.09524 * var(--spacing-base, 1.5rem)) rgba(0, 24, 51, 0.071825);
   padding-left: 0.375rem;
   padding-right: 0.375rem;
   text-decoration: none;
@@ -3988,15 +3981,15 @@ button:focus,
   :focus[type='reset'],
   :focus[type='submit'], .button-prime:focus, .button-plain:focus, .button-large:focus, .button-destructive:focus, .button-petty:focus {
     outline: none;
-    box-shadow: 0 0 0 0.2rem #f1a7e7;
+    box-shadow: 0 0 0 0.2rem #e6b2df;
 }
 button:active,
   :active[type='button'],
   :active[type='reset'],
   :active[type='submit'], .button-prime:active, .button-plain:active, .button-large:active, .button-destructive:active, .button-petty:active {
-    color: #e141cc;
-    box-shadow: inset calc(0 * 1.5rem) calc(0.09524 * 1.5rem) calc(0.19048 * 1.5rem) rgba(5, 37, 46, 0.1);
-    box-shadow: inset calc(0 * var(--spacing-base, 1.5rem)) calc(0.09524 * var(--spacing-base, 1.5rem)) calc(0.19048 * var(--spacing-base, 1.5rem)) rgba(5, 37, 46, 0.1);
+    color: #601f58;
+    box-shadow: inset calc(0 * 1.5rem) calc(0.09524 * 1.5rem) calc(0.19048 * 1.5rem) rgba(0, 24, 51, 0.1);
+    box-shadow: inset calc(0 * var(--spacing-base, 1.5rem)) calc(0.09524 * var(--spacing-base, 1.5rem)) calc(0.19048 * var(--spacing-base, 1.5rem)) rgba(0, 24, 51, 0.1);
 }
 button:disabled,
   :disabled[type='button'],
@@ -4009,22 +4002,22 @@ button:disabled,
   fieldset:disabled [type='reset'],
   fieldset:disabled [type='submit'], fieldset:disabled .button-prime, fieldset:disabled .button-plain, fieldset:disabled .button-large, fieldset:disabled .button-destructive, fieldset:disabled .button-petty {
     pointer-events: none;
-    background-color: rgba(229, 230, 230, 0.75);
-    background-color: var(--color-disabled, rgba(229, 230, 230, 0.75));
-    color: #7e8081;
-    color: var(--color-disabled-text, #7e8081);
-    border-color: rgba(229, 230, 230, 0.75);
+    background-color: rgba(230, 230, 229, 0.75);
+    background-color: var(--color-disabled, rgba(230, 230, 229, 0.75));
+    color: #80817e;
+    color: var(--color-disabled-text, #80817e);
+    border-color: rgba(230, 230, 229, 0.75);
     border-color: transparent;
     box-shadow: none;
 }
 /* Prominent button */
 .button-prime {
-  color: #0a0509;
-  background-color: #e141cc;
-  border-color: #e141cc;
+  color: #f1e7ef;
+  background-color: #601f58;
+  border-color: #601f58;
 }
 .button-prime:active {
-    color: #0a0509;
+    color: #f1e7ef;
 }
 /* Standard button */
 /* Big button */
@@ -4047,24 +4040,24 @@ button:disabled,
 }
 /* Cautionary button */
 .button-destructive {
-  color: #e15741;
-  border-color: #e15741;
+  color: #a33929;
+  border-color: #a33929;
 }
 .button-destructive:focus {
-    box-shadow: 0 0 0 0.2rem #f1b1a7;
+    box-shadow: 0 0 0 0.2rem #ebb6ad;
 }
 .button-destructive:active {
-    color: #e15741;
-    box-shadow: inset calc(0 * 1.5rem) calc(0.09524 * 1.5rem) calc(0.19048 * 1.5rem) rgba(5, 37, 46, 0.1);
-    box-shadow: inset calc(0 * var(--spacing-base, 1.5rem)) calc(0.09524 * var(--spacing-base, 1.5rem)) calc(0.19048 * var(--spacing-base, 1.5rem)) rgba(5, 37, 46, 0.1);
+    color: #a33929;
+    box-shadow: inset calc(0 * 1.5rem) calc(0.09524 * 1.5rem) calc(0.19048 * 1.5rem) rgba(0, 24, 51, 0.1);
+    box-shadow: inset calc(0 * var(--spacing-base, 1.5rem)) calc(0.09524 * var(--spacing-base, 1.5rem)) calc(0.19048 * var(--spacing-base, 1.5rem)) rgba(0, 24, 51, 0.1);
 }
 .button-destructive.button-prime {
-    background-color: #e15741;
-    border-color: #e15741;
-    color: #0a0505;
+    background-color: #a33929;
+    border-color: #a33929;
+    color: #f4eceb;
 }
 .button-destructive.button-prime:active {
-      color: #0a0505;
+      color: #f4eceb;
 }
 /* Discreet, link like button */
 .button-petty {
@@ -4114,6 +4107,6 @@ label {
     <div data-server-rendered="true" id="__nuxt"><!----><div id="__layout"><div class="space-inside visualize-vertical-rhythm"><form><label for="input1">Label for input 1</label> <input id="input1" type="text" aria-describedby="input1description"> <span id="input1description">Pretty long field description/instruction that cover multiple lines</span> <div><label for="input2" class="invalid">&quot;Wrapped&quot;, invalid form control</label> <div><input id="input2" type="text" aria-describedby="input2errors" aria-invalid="true"> <span id="input2errors">This is an error message</span></div></div> <fieldset class="py-0"><legend>A fieldset with legend and no vertical padding</legend> <label><input type="checkbox">Checkbox in label</label> <label><input type="checkbox" required="required">Required checkbox in label with a rather long text</label> <label><input type="radio" name="radio">Radio A</label> <label><input type="radio" name="radio">Radio B</label> <input type="checkbox" id="checkboxA"><label for="checkboxA">Checkbox with adjacent label</label> <input type="checkbox" id="checkboxB" required="required"><label for="checkboxB">Required checkbox with adjacent
       label</label></fieldset> <label for="textarea1">Label for textarea 1</label> <textarea id="textarea1"></textarea> <label for="select1">Label for select 1</label> <select id="select1"><option>Option 1</option> <option>Option 2</option> <optgroup label="Optgroup A"><option>Option A1</option> <option>Option A2</option></optgroup> <option>Option 3</option></select> <label for="select2">Label for multiple select</label> <select id="select2" multiple="multiple"><option>Option 1</option> <option>Option 2</option> <optgroup label="Optgroup A"><option>Option A1</option> <option>Option A2</option></optgroup> <option>Option 3</option></select> <label for="input3">Label for input 3</label> <input id="input3" required="required" placeholder="required input" aria-describedby="input3description"> <small id="input3description">Field description/instructions</small> <button type="submit">Submit button</button></form> <hr class="h-px"> <form onsubmit="return false;" class="form-inline children:space-horizontally children:mt-1 mt-0"><button class="button-prime">Prime button</button> <button class="button-plain">Plain button</button> <button class="button-petty">Petty button</button> <button class="button-large">Large button</button> <button class="button-prime button-destructive">Prime destructive button</button> <button class="button-plain button-destructive">Plain destructive button</button> <button class="button-petty button-destructive">Petty destructive button</button> <a href="/kingdom/forms-demo/L1" aria-current="page" class="button-prime">Prime button link</a> <a href="/kingdom/forms-demo/L1" aria-current="page" class="button-plain">Plain button link</a> <a href="/kingdom/forms-demo/L1" aria-current="page" class="button-petty">Petty button link</a> <a href="/kingdom/forms-demo/L1" aria-current="page">Unstyled link</a> <button disabled="disabled" class="button-prime">Prime disabled button</button> <button disabled="disabled" class="button-plain">Plain disabled button</button> <button disabled="disabled" class="button-petty">Petty disabled button</button></form> <hr class="h-px"> <form onsubmit="return false;" class="form-inline"><input type="text" disabled="disabled" value="disabled">
     text
-    <input readonly="readonly" value="readonly"> <textarea disabled="disabled">disabled</textarea> <textarea readonly="readonly">readonly</textarea> <label class="disabled"><input type="checkbox" disabled="disabled">Disabled checkbox in label</label> <input type="checkbox" disabled="disabled" id="checkboxC"><label for="checkboxC">Checkbox with adjacent label C</label> <select disabled="disabled"><option>Option 1</option> <option>Option 2</option> <optgroup label="Optgroup A"><option>Option A1</option> <option>Option A2</option></optgroup> <option>Option 3</option></select> <select multiple="multiple" disabled="disabled"><option>Option 1</option> <option>Option 2</option> <optgroup label="Optgroup A"><option>Option A1</option> <option>Option A2</option></optgroup> <option>Option 3</option></select> <button>Button</button></form> <hr class="h-px"></div></div></div><script>window.__NUXT__={layout:"demo",data:[{}],error:null,serverRendered:true};</script><script src="/kingdom/_nuxt/4ee23a424f59df4f5c43.js" defer></script><script src="/kingdom/_nuxt/3a1d01124f415217a9bd.js" defer></script><script src="/kingdom/_nuxt/753cca17dff8666fabd2.js" defer></script><script src="/kingdom/_nuxt/4c2be766547a729af41b.js" defer></script>
+    <input readonly="readonly" value="readonly"> <textarea disabled="disabled">disabled</textarea> <textarea readonly="readonly">readonly</textarea> <label class="disabled"><input type="checkbox" disabled="disabled">Disabled checkbox in label</label> <input type="checkbox" disabled="disabled" id="checkboxC"><label for="checkboxC">Checkbox with adjacent label C</label> <select disabled="disabled"><option>Option 1</option> <option>Option 2</option> <optgroup label="Optgroup A"><option>Option A1</option> <option>Option A2</option></optgroup> <option>Option 3</option></select> <select multiple="multiple" disabled="disabled"><option>Option 1</option> <option>Option 2</option> <optgroup label="Optgroup A"><option>Option A1</option> <option>Option A2</option></optgroup> <option>Option 3</option></select> <button>Button</button></form> <hr class="h-px"></div></div></div><script>window.__NUXT__={layout:"demo",data:[{}],error:null,serverRendered:true};</script><script src="/kingdom/_nuxt/9254bac4bdc28752f6db.js" defer></script><script src="/kingdom/_nuxt/e6947f1f4706118deee0.js" defer></script><script src="/kingdom/_nuxt/753cca17dff8666fabd2.js" defer></script><script src="/kingdom/_nuxt/4c2be766547a729af41b.js" defer></script>
   </body>
 </html>
