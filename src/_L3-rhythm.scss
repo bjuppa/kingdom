@@ -122,5 +122,5 @@ legend {
   $grid-color: transparentize(transform-hue(get-color(primary), red), 0.85);
   // This doesn't work very well when $vertical-rhythm-base doesn't correspond to a whole pixel value
   background-image: linear-gradient($grid-color, $grid-color 1px, transparent 1px);
-  background-size: 1px var(--spacing-base, $vertical-rhythm-base);
+  background-size: 1px spacing-base-var();
 }
