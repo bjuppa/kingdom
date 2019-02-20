@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html data-n-head-ssr lang="en" data-n-head="lang">
   <head data-n-head="">
-    <title data-n-head="true">Kingdom CSS</title><meta data-n-head="true" charset="utf-8"/><meta data-n-head="true" http-equiv="X-UA-Compatible" content="IE=edge"/><meta data-n-head="true" name="viewport" content="width=device-width, initial-scale=1"/><base href="/kingdom/"><link rel="preload" href="/kingdom/_nuxt/9254bac4bdc28752f6db.js" as="script"><link rel="preload" href="/kingdom/_nuxt/753cca17dff8666fabd2.js" as="script"><link rel="preload" href="/kingdom/_nuxt/4c2be766547a729af41b.js" as="script"><link rel="preload" href="/kingdom/_nuxt/4dbe3894377770f144a3.js" as="script"><style data-vue-ssr-id="17cfdfa9:0 ba6ca1bc:0 5313df58:0 081522f0:0">
+    <title data-n-head="true">Kingdom CSS</title><meta data-n-head="true" charset="utf-8"/><meta data-n-head="true" http-equiv="X-UA-Compatible" content="IE=edge"/><meta data-n-head="true" name="viewport" content="width=device-width, initial-scale=1"/><base href="/kingdom/"><link rel="preload" href="/kingdom/_nuxt/872e018315b2a2aafd1d.js" as="script"><link rel="preload" href="/kingdom/_nuxt/753cca17dff8666fabd2.js" as="script"><link rel="preload" href="/kingdom/_nuxt/4c2be766547a729af41b.js" as="script"><link rel="preload" href="/kingdom/_nuxt/fe7d6fc7111d99f1aefe.js" as="script"><style data-vue-ssr-id="17cfdfa9:0 ba6ca1bc:0 5313df58:0 081522f0:0">
 .nuxt-progress {
   position: fixed;
   top: 0px;
@@ -1087,10 +1087,11 @@ select[multiple]:not([size]) {
   max-height: calc(3 * 1.6875rem);
   max-height: calc(3 * var(--spacing-base, 1.6875rem));
 }
-select:not([multiple]):not([size]):not(*:root) {
-  /* Hack to not apply in Edge, see http://browserhacks.com/#hack-f4ade0540d8e891e8190065f75acb186 */
+select:not([multiple]):not([size]) {
   /* Force dropdown selects out of Safari default styling, to fit on one line */
   -webkit-appearance: menulist-button;
+  /* menulist-button has no arrows in Firefox so return it to normal */
+  -moz-appearance: menulist;
 }
 textarea {
   --border-top-width: 1px;
@@ -4013,6 +4014,6 @@ hr.unborder, .unborder.h-1, .unborder.h-2, .unborder.h-3, .unborder.h-4, .unbord
     Letter-spacing
   </h1> <p>
     Coming soon
-  </p> <p><a href="https://github.com/bjuppa/kingdom/blob/master/src/utilities/text/_letter-spacing.scss" target="_blank"><code>src/utilities/layout/_letter-spacing.scss</code></a></p></main> <nav class="background-color-gray-700 mt-2 p-1 text-center"><a href="/kingdom/utilities/text/letter-spacing#main" relative="" class="inline-block p-1"><span aria-hidden="true">⟰ </span>Back to top of main content<span aria-hidden="true"> ⟰</span></a></nav></div></div></div><script>window.__NUXT__={layout:"default",data:[{}],error:null,serverRendered:true};</script><script src="/kingdom/_nuxt/9254bac4bdc28752f6db.js" defer></script><script src="/kingdom/_nuxt/4dbe3894377770f144a3.js" defer></script><script src="/kingdom/_nuxt/753cca17dff8666fabd2.js" defer></script><script src="/kingdom/_nuxt/4c2be766547a729af41b.js" defer></script>
+  </p> <p><a href="https://github.com/bjuppa/kingdom/blob/master/src/utilities/text/_letter-spacing.scss" target="_blank"><code>src/utilities/layout/_letter-spacing.scss</code></a></p></main> <nav class="background-color-gray-700 mt-2 p-1 text-center"><a href="/kingdom/utilities/text/letter-spacing#main" relative="" class="inline-block p-1"><span aria-hidden="true">⟰ </span>Back to top of main content<span aria-hidden="true"> ⟰</span></a></nav></div></div></div><script>window.__NUXT__={layout:"default",data:[{}],error:null,serverRendered:true};</script><script src="/kingdom/_nuxt/872e018315b2a2aafd1d.js" defer></script><script src="/kingdom/_nuxt/fe7d6fc7111d99f1aefe.js" defer></script><script src="/kingdom/_nuxt/753cca17dff8666fabd2.js" defer></script><script src="/kingdom/_nuxt/4c2be766547a729af41b.js" defer></script>
   </body>
 </html>
