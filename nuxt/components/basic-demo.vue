@@ -254,6 +254,7 @@
 
       <select id="select1">
         <option>Select</option>
+        <option>A second option</option>
       </select>
       <hr class="h-px">
       <select id="selectMultiple" multiple>
