@@ -92,12 +92,10 @@ select {
   }
 
   &:not([multiple]):not([size]) {
-    &:not(*:root) {
-      /* Hack to not apply in Edge, see http://browserhacks.com/#hack-f4ade0540d8e891e8190065f75acb186 */
-      /* Force dropdown selects out of Safari default styling, to fit on one line */
-      -webkit-appearance: menulist-button;
-    }
-
+    /* Force dropdown selects out of Safari default styling, to fit on one line */
+    -webkit-appearance: menulist-button;
+    /* menulist-button has no arrows in Firefox so return it to normal */
+    -moz-appearance: menulist;
   }
 }
 
