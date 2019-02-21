@@ -67,22 +67,23 @@ select {
   //TODO: dropdown selects are 1px too high in IE 11
 
   &[multiple], &[size] {
-    // Multiple and sized selects may span several lines
-    @include length-relative(min-height, 1);
+    //Multiple and sized selects may span several lines...
+    height: auto;
+    //...but not in mobile Safari/Chrome where the select will be a button
+    @media (pointer: coarse) { //Target modern mobile browsers
+      @supports not (-moz-appearance: none) { //except Firefox
+        height: var(--line-height, $vertical-rhythm-base);
+        -webkit-appearance: menulist-button;
+      }
+    }
     max-height: 100%;
     vertical-align: bottom;
 
-    // https://css-tricks.com/snippets/css/media-queries-for-standard-devices/
-    @media screen and (min-device-width: 1200px) { //TODO: Find a better way to target mobile devices for multi-selects than device width
-      // Enable vertical growth on multiple and sized selects, but not on mobile devices that should keep the button style
-      height: auto;
-      @supports (-webkit-appearance:none) {
-        /* Hack to not apply in IE, see http://browserhacks.com/#hack-8a0d11a6b2e3d172711eed35cb7237b9 */
-        font-size: 3*$vertical-rhythm-base/4/$safari-select-line-height; //Fit four options into three lines of the vertical rhythm in Safari
-        * {
-          //If any browser can set line-height on options/optgroup it's here for consistency
-          line-height: $safari-select-line-height;
-        }
+    @media (pointer: fine) { //Target modern desktop browsers
+      font-size: 3*$vertical-rhythm-base/4/$safari-select-line-height; //Fit four options into three lines of the vertical rhythm in Safari
+      * {
+        //If any browser can set line-height on options/optgroup it's here for consistency
+        line-height: $safari-select-line-height;
       }
     }
   }
@@ -92,7 +93,7 @@ select {
   }
 
   &:not([multiple]):not([size]) {
-    /* Force dropdown selects out of Safari default styling, to fit on one line */
+    /* Force dropdown selects out of Safari default menulist styling, to fit on one line */
     -webkit-appearance: menulist-button;
     /* menulist-button has no arrows in Firefox so return it to normal */
     -moz-appearance: menulist;
