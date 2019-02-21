@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html data-n-head-ssr lang="en" data-n-head="lang">
   <head data-n-head="">
-    <title data-n-head="true">Kingdom CSS</title><meta data-n-head="true" charset="utf-8"/><meta data-n-head="true" http-equiv="X-UA-Compatible" content="IE=edge"/><meta data-n-head="true" name="viewport" content="width=device-width, initial-scale=1"/><base href="/kingdom/"><link rel="preload" href="/kingdom/_nuxt/872e018315b2a2aafd1d.js" as="script"><link rel="preload" href="/kingdom/_nuxt/753cca17dff8666fabd2.js" as="script"><link rel="preload" href="/kingdom/_nuxt/4c2be766547a729af41b.js" as="script"><link rel="preload" href="/kingdom/_nuxt/66fc823d3f8e376e1035.js" as="script"><style data-vue-ssr-id="17cfdfa9:0 ba6ca1bc:0 5313df58:0 be19a654:0">
+    <title data-n-head="true">Kingdom CSS</title><meta data-n-head="true" charset="utf-8"/><meta data-n-head="true" http-equiv="X-UA-Compatible" content="IE=edge"/><meta data-n-head="true" name="viewport" content="width=device-width, initial-scale=1"/><base href="/kingdom/"><link rel="preload" href="/kingdom/_nuxt/13858fc4918bcbec7ac7.js" as="script"><link rel="preload" href="/kingdom/_nuxt/753cca17dff8666fabd2.js" as="script"><link rel="preload" href="/kingdom/_nuxt/4c2be766547a729af41b.js" as="script"><link rel="preload" href="/kingdom/_nuxt/6f913d43cc3ffed2e26b.js" as="script"><style data-vue-ssr-id="17cfdfa9:0 ba6ca1bc:0 5313df58:0 be19a654:0">
 .nuxt-progress {
   position: fixed;
   top: 0px;
@@ -1064,23 +1064,25 @@ input, button, select {
   line-height: inherit;
 }
 select[multiple], select[size] {
-  min-height: calc(1 * 1.6875rem);
-  min-height: calc(1 * var(--spacing-base, 1.6875rem));
+  height: auto;
   max-height: 100%;
   vertical-align: bottom;
 }
-@media screen and (min-device-width: 1200px) {
+@media (pointer: coarse) {
+@supports not (-moz-appearance: none) {
 select[multiple], select[size] {
-      height: auto;
+        height: 1.6875rem;
+        height: var(--line-height, 1.6875rem);
+        -webkit-appearance: menulist-button;
 }
-@supports (-webkit-appearance: none) {
+}
+}
+@media (pointer: fine) {
 select[multiple], select[size] {
-          /* Hack to not apply in IE, see http://browserhacks.com/#hack-8a0d11a6b2e3d172711eed35cb7237b9 */
-          font-size: 1.03316rem;
+      font-size: 1.03316rem;
 }
 select[multiple] *, select[size] * {
-            line-height: 1.225;
-}
+        line-height: 1.225;
 }
 }
 select[multiple]:not([size]) {
@@ -1088,7 +1090,7 @@ select[multiple]:not([size]) {
   max-height: calc(3 * var(--spacing-base, 1.6875rem));
 }
 select:not([multiple]):not([size]) {
-  /* Force dropdown selects out of Safari default styling, to fit on one line */
+  /* Force dropdown selects out of Safari default menulist styling, to fit on one line */
   -webkit-appearance: menulist-button;
   /* menulist-button has no arrows in Firefox so return it to normal */
   -moz-appearance: menulist;
@@ -4012,6 +4014,6 @@ hr.unborder, .unborder.h-1, .unborder.h-2, .unborder.h-3, .unborder.h-4, .unbord
   <body data-n-head="">
     <div data-server-rendered="true" id="__nuxt"><!----><div id="__layout"><div class="flex flex-col h-min-viewport"><a href="/kingdom/utilities/text#main" relative="" class="sr-only-focusable inline-block mx-auto">Skip to main content<sub aria-hidden="true">↩</sub></a> <nav class="background-color-primary baseline-shift-none clearfix flex text-3-block font-headings font-thin my-0" data-v-29f9e762><ul class="list-inline float-left children:space-horizontally my-0" data-v-29f9e762><li data-v-29f9e762><a href="/kingdom/" class="block p-1 no-underline" data-v-29f9e762>Main</a></li> <li data-v-29f9e762><a href="/kingdom/level-1-reset" title="Level 1" class="block py-1 no-underline" data-v-29f9e762>L1</a></li> <li data-v-29f9e762><a href="/kingdom/level-2-sizing" title="Level 2" class="block py-1 no-underline" data-v-29f9e762>L2</a></li> <li data-v-29f9e762><a href="/kingdom/level-3-rhythm" title="Level 3" class="block py-1 no-underline" data-v-29f9e762>L3</a></li> <li data-v-29f9e762><a href="/kingdom/level-4-baseline" title="Level 4" class="block py-1 no-underline" data-v-29f9e762>L4</a></li> <li data-v-29f9e762><a href="/kingdom/demo" target="basic-demo" class="block p-1 no-underline" data-v-29f9e762>Demo</a></li></ul> <ul class="list-inline float-right ml-auto align-self-start children:space-horizontally background-color-gray-700 my-0" data-v-29f9e762><li data-v-29f9e762><a href="https://github.com/bjuppa/kingdom/" target="_blank" class="block p-1 no-underline" data-v-29f9e762>GitHub</a></li></ul></nav> <main id="main" class="space-inside flex-grow"><h1><small>Utilities:</small>
     Text
-  </h1> <ul><li><a href="/kingdom/utilities/text/antialias">Antialias</a></li> <li><a href="/kingdom/utilities/text/decoration">Decoration</a></li> <li><a href="/kingdom/utilities/text/font">Font</a></li> <li><a href="/kingdom/utilities/text/letter-spacing">Letter-spacing</a></li> <li><a href="/kingdom/utilities/text/sizing">Sizing</a></li> <li><a href="/kingdom/utilities/text/style">Style</a></li> <li><a href="/kingdom/utilities/text/text-align">Text-align</a></li> <li><a href="/kingdom/utilities/text/transform">Transform</a></li> <li><a href="/kingdom/utilities/text/vertical-align">Vertical-align</a></li> <li><a href="/kingdom/utilities/text/weight">Weight</a></li> <li><a href="/kingdom/utilities/text/whitespace-wrapping">Whitespace-wrapping</a></li></ul></main> <nav class="background-color-gray-700 mt-2 p-1 text-center"><a href="/kingdom/utilities/text#main" relative="" class="inline-block p-1"><span aria-hidden="true">⟰ </span>Back to top of main content<span aria-hidden="true"> ⟰</span></a></nav></div></div></div><script>window.__NUXT__={layout:"default",data:[{}],error:null,serverRendered:true};</script><script src="/kingdom/_nuxt/872e018315b2a2aafd1d.js" defer></script><script src="/kingdom/_nuxt/66fc823d3f8e376e1035.js" defer></script><script src="/kingdom/_nuxt/753cca17dff8666fabd2.js" defer></script><script src="/kingdom/_nuxt/4c2be766547a729af41b.js" defer></script>
+  </h1> <ul><li><a href="/kingdom/utilities/text/antialias">Antialias</a></li> <li><a href="/kingdom/utilities/text/decoration">Decoration</a></li> <li><a href="/kingdom/utilities/text/font">Font</a></li> <li><a href="/kingdom/utilities/text/letter-spacing">Letter-spacing</a></li> <li><a href="/kingdom/utilities/text/sizing">Sizing</a></li> <li><a href="/kingdom/utilities/text/style">Style</a></li> <li><a href="/kingdom/utilities/text/text-align">Text-align</a></li> <li><a href="/kingdom/utilities/text/transform">Transform</a></li> <li><a href="/kingdom/utilities/text/vertical-align">Vertical-align</a></li> <li><a href="/kingdom/utilities/text/weight">Weight</a></li> <li><a href="/kingdom/utilities/text/whitespace-wrapping">Whitespace-wrapping</a></li></ul></main> <nav class="background-color-gray-700 mt-2 p-1 text-center"><a href="/kingdom/utilities/text#main" relative="" class="inline-block p-1"><span aria-hidden="true">⟰ </span>Back to top of main content<span aria-hidden="true"> ⟰</span></a></nav></div></div></div><script>window.__NUXT__={layout:"default",data:[{}],error:null,serverRendered:true};</script><script src="/kingdom/_nuxt/13858fc4918bcbec7ac7.js" defer></script><script src="/kingdom/_nuxt/6f913d43cc3ffed2e26b.js" defer></script><script src="/kingdom/_nuxt/753cca17dff8666fabd2.js" defer></script><script src="/kingdom/_nuxt/4c2be766547a729af41b.js" defer></script>
   </body>
 </html>

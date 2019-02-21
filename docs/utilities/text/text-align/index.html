@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html data-n-head-ssr lang="en" data-n-head="lang">
   <head data-n-head="">
-    <title data-n-head="true">Kingdom CSS</title><meta data-n-head="true" charset="utf-8"/><meta data-n-head="true" http-equiv="X-UA-Compatible" content="IE=edge"/><meta data-n-head="true" name="viewport" content="width=device-width, initial-scale=1"/><base href="/kingdom/"><link rel="preload" href="/kingdom/_nuxt/872e018315b2a2aafd1d.js" as="script"><link rel="preload" href="/kingdom/_nuxt/753cca17dff8666fabd2.js" as="script"><link rel="preload" href="/kingdom/_nuxt/4c2be766547a729af41b.js" as="script"><link rel="preload" href="/kingdom/_nuxt/3d5599b77e0dd54fd7e3.js" as="script"><style data-vue-ssr-id="17cfdfa9:0 ba6ca1bc:0 5313df58:0 30cddee0:0">
+    <title data-n-head="true">Kingdom CSS</title><meta data-n-head="true" charset="utf-8"/><meta data-n-head="true" http-equiv="X-UA-Compatible" content="IE=edge"/><meta data-n-head="true" name="viewport" content="width=device-width, initial-scale=1"/><base href="/kingdom/"><link rel="preload" href="/kingdom/_nuxt/13858fc4918bcbec7ac7.js" as="script"><link rel="preload" href="/kingdom/_nuxt/753cca17dff8666fabd2.js" as="script"><link rel="preload" href="/kingdom/_nuxt/4c2be766547a729af41b.js" as="script"><link rel="preload" href="/kingdom/_nuxt/059b85bb8cc927bca44f.js" as="script"><style data-vue-ssr-id="17cfdfa9:0 ba6ca1bc:0 5313df58:0 30cddee0:0">
 .nuxt-progress {
   position: fixed;
   top: 0px;
@@ -1064,23 +1064,25 @@ input, button, select {
   line-height: inherit;
 }
 select[multiple], select[size] {
-  min-height: calc(1 * 1.6875rem);
-  min-height: calc(1 * var(--spacing-base, 1.6875rem));
+  height: auto;
   max-height: 100%;
   vertical-align: bottom;
 }
-@media screen and (min-device-width: 1200px) {
+@media (pointer: coarse) {
+@supports not (-moz-appearance: none) {
 select[multiple], select[size] {
-      height: auto;
+        height: 1.6875rem;
+        height: var(--line-height, 1.6875rem);
+        -webkit-appearance: menulist-button;
 }
-@supports (-webkit-appearance: none) {
+}
+}
+@media (pointer: fine) {
 select[multiple], select[size] {
-          /* Hack to not apply in IE, see http://browserhacks.com/#hack-8a0d11a6b2e3d172711eed35cb7237b9 */
-          font-size: 1.03316rem;
+      font-size: 1.03316rem;
 }
 select[multiple] *, select[size] * {
-            line-height: 1.225;
-}
+        line-height: 1.225;
 }
 }
 select[multiple]:not([size]) {
@@ -1088,7 +1090,7 @@ select[multiple]:not([size]) {
   max-height: calc(3 * var(--spacing-base, 1.6875rem));
 }
 select:not([multiple]):not([size]) {
-  /* Force dropdown selects out of Safari default styling, to fit on one line */
+  /* Force dropdown selects out of Safari default menulist styling, to fit on one line */
   -webkit-appearance: menulist-button;
   /* menulist-button has no arrows in Firefox so return it to normal */
   -moz-appearance: menulist;
@@ -4014,6 +4016,6 @@ hr.unborder, .unborder.h-1, .unborder.h-2, .unborder.h-3, .unborder.h-4, .unbord
     Text-align
   </h1> <p>
     Coming soon
-  </p> <p><a href="https://github.com/bjuppa/kingdom/blob/master/src/utilities/text/_text-align.scss" target="_blank"><code>src/utilities/layout/_text-align.scss</code></a></p></main> <nav class="background-color-gray-700 mt-2 p-1 text-center"><a href="/kingdom/utilities/text/text-align#main" relative="" class="inline-block p-1"><span aria-hidden="true">⟰ </span>Back to top of main content<span aria-hidden="true"> ⟰</span></a></nav></div></div></div><script>window.__NUXT__={layout:"default",data:[{}],error:null,serverRendered:true};</script><script src="/kingdom/_nuxt/872e018315b2a2aafd1d.js" defer></script><script src="/kingdom/_nuxt/3d5599b77e0dd54fd7e3.js" defer></script><script src="/kingdom/_nuxt/753cca17dff8666fabd2.js" defer></script><script src="/kingdom/_nuxt/4c2be766547a729af41b.js" defer></script>
+  </p> <p><a href="https://github.com/bjuppa/kingdom/blob/master/src/utilities/text/_text-align.scss" target="_blank"><code>src/utilities/layout/_text-align.scss</code></a></p></main> <nav class="background-color-gray-700 mt-2 p-1 text-center"><a href="/kingdom/utilities/text/text-align#main" relative="" class="inline-block p-1"><span aria-hidden="true">⟰ </span>Back to top of main content<span aria-hidden="true"> ⟰</span></a></nav></div></div></div><script>window.__NUXT__={layout:"default",data:[{}],error:null,serverRendered:true};</script><script src="/kingdom/_nuxt/13858fc4918bcbec7ac7.js" defer></script><script src="/kingdom/_nuxt/059b85bb8cc927bca44f.js" defer></script><script src="/kingdom/_nuxt/753cca17dff8666fabd2.js" defer></script><script src="/kingdom/_nuxt/4c2be766547a729af41b.js" defer></script>
   </body>
 </html>
