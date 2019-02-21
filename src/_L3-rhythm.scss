@@ -103,7 +103,6 @@ textarea {
   padding-top: 0;
   padding-bottom: 0;
   @include length-relative(min-height, 2);
-  //TODO: Textareas doesn't quite fill up two lines in IE 11
 }
 
 fieldset {
