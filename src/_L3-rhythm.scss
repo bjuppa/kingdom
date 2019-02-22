@@ -62,27 +62,21 @@ input, button, select {
 }
 
 select {
-  $safari-select-line-height: 1.225; //This line height is calculated for Safari
-
   &[multiple], &[size] {
+    vertical-align: bottom;
     //Multiple and sized selects may span several lines...
     height: auto;
+    max-height: 100%;
     //...but not in mobile Safari/Chrome where the select will be a button
     @media (pointer: coarse) { //Target modern mobile browsers
       @supports not (-moz-appearance: none) { //except Firefox
-        height: var(--line-height, $vertical-rhythm-base);
+        height: var(--line-height, spacing-base-var());
         -webkit-appearance: menulist-button;
       }
     }
-    max-height: 100%;
-    vertical-align: bottom;
 
     @media (pointer: fine) { //Target modern desktop browsers
-      font-size: 3*$vertical-rhythm-base/4/$safari-select-line-height; //Fit four options into three lines of the vertical rhythm in Safari
-      * {
-        //If any browser can set line-height on options/optgroup it's here for consistency
-        line-height: $safari-select-line-height;
-      }
+      font-size: calc((3 * #{spacing-base-var()} - 2 * #{$input-border-width} - 1.8ex) / 4); //Fit four options into three lines of the vertical rhythm in Safari
     }
   }
 
