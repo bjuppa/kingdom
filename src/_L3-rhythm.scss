@@ -76,7 +76,11 @@ select {
     }
 
     @media (pointer: fine) { //Target modern desktop browsers
-      font-size: calc((3 * #{spacing-base-var()} - 2 * #{$input-border-width} - 1.8ex) / 4); //Fit four options into three lines of the vertical rhythm in Safari
+      // Fit four options into three lines of the vertical rhythm in Safari
+      // This is a bit of a hack, attempting to guess the "medium" line-height
+      // It's only relevant for desktop Safari where the last option is hidden if it doesn't fit entirely in the select
+      $line-height: 1.1;
+      font-size: calc((3 * #{spacing-base-var()} - 2 * #{$input-border-width}) / 4 / #{$line-height});
     }
   }
 
