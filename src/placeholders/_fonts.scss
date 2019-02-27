@@ -11,6 +11,13 @@ $monospace-font-stack: Courier !default;
   @include font-stack($body-font-stack);
 }
 
+/* Keep browser's font for form inputs until specifically set */
+input,
+textarea,
+select {
+  font-family: initial;
+}
+
 /* %font-headings */
 %font-headings {
   @include font-stack($headings-font-stack);
@@ -18,10 +25,10 @@ $monospace-font-stack: Courier !default;
 
 /* %font-forms */
 %font-forms {
-  @include font-stack($forms-font-stack)
+  @include font-stack($forms-font-stack);
 }
 
 /* %font-monospace */
 %font-monospace {
-  @include font-stack($monospace-font-stack)
+  @include font-stack($monospace-font-stack);
 }
