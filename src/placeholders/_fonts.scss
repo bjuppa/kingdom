@@ -1,6 +1,6 @@
 $body-font-stack: Times !default;
 $headings-font-stack: $body-font-stack !default;
-$forms-font-stack: Verdana !default;
+$forms-font-stack: system-ui !default;
 $monospace-font-stack: Courier !default;
 
 /* Placeholders for fonts */
@@ -24,12 +24,12 @@ select * {
   @include font-stack($headings-font-stack);
 }
 
-/* %font-forms */
-%font-forms {
-  @include font-stack($forms-font-stack);
-}
-
 /* %font-monospace */
 %font-monospace {
   @include font-stack($monospace-font-stack);
+}
+
+/* %font-forms */
+%font-forms {
+  @include font-stack($forms-font-stack);
 }
