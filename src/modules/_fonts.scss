@@ -3,6 +3,7 @@ $font-stacks: (
   Verdana: (font-family: (Verdana, sans-serif), baseline-shift-factor: 0.75),
   Helvetica: (font-family: (Helvetica, Arial, sans-serif), baseline-shift-factor: 0.68),
   Courier: (font-family: (Courier, sans-serif), baseline-shift-factor: 0.62),
+  system-ui: (font-family: (system-ui, sans-serif)),
 ) !default;
 
 // Add fonts to the global $font-stacks
@@ -22,7 +23,10 @@ $font-stacks: (
   }
 
   font-family: map-get($stack, font-family);
-  --baseline-shift-factor: #{map-get($stack, baseline-shift-factor)};
+  $baseline-shift-factor: map-get($stack, baseline-shift-factor);
+  @if($baseline-shift-factor) {
+    --baseline-shift-factor: #{$baseline-shift-factor};
+  }
 
   * {
     font-family: inherit;
