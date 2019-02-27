@@ -24,12 +24,12 @@ select * {
   @include font-stack($headings-font-stack);
 }
 
-/* %font-forms */
-%font-forms {
-  @include font-stack($forms-font-stack);
-}
-
 /* %font-monospace */
 %font-monospace {
   @include font-stack($monospace-font-stack);
+}
+
+/* %font-forms */
+%font-forms {
+  @include font-stack($forms-font-stack);
 }
