@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html data-n-head-ssr lang="en" data-n-head="lang">
   <head data-n-head="">
-    <title data-n-head="true">Kingdom CSS</title><meta data-n-head="true" charset="utf-8"/><meta data-n-head="true" http-equiv="X-UA-Compatible" content="IE=edge"/><meta data-n-head="true" name="viewport" content="width=device-width, initial-scale=1"/><base href="/kingdom/"><link rel="preload" href="/kingdom/_nuxt/13858fc4918bcbec7ac7.js" as="script"><link rel="preload" href="/kingdom/_nuxt/753cca17dff8666fabd2.js" as="script"><link rel="preload" href="/kingdom/_nuxt/4c2be766547a729af41b.js" as="script"><link rel="preload" href="/kingdom/_nuxt/6bab80006c3bdd921ec2.js" as="script"><style data-vue-ssr-id="17cfdfa9:0 ba6ca1bc:0 5313df58:0 e829c520:0">
+    <title data-n-head="true">Kingdom CSS</title><meta data-n-head="true" charset="utf-8"/><meta data-n-head="true" http-equiv="X-UA-Compatible" content="IE=edge"/><meta data-n-head="true" name="viewport" content="width=device-width, initial-scale=1"/><base href="/kingdom/"><link rel="preload" href="/kingdom/_nuxt/cca6894d6ac6c1bc457a.js" as="script"><link rel="preload" href="/kingdom/_nuxt/753cca17dff8666fabd2.js" as="script"><link rel="preload" href="/kingdom/_nuxt/6f9412b84f04b2539301.js" as="script"><link rel="preload" href="/kingdom/_nuxt/ad2bbaf37b0e1287c2f9.js" as="script"><style data-vue-ssr-id="17cfdfa9:0 ba6ca1bc:0 5313df58:0 e829c520:0">
 .nuxt-progress {
   position: fixed;
   top: 0px;
@@ -198,9 +198,16 @@ dt {
 }
 /* Placeholders for fonts */
 /* %font-body */
+/* Keep browser's font for form inputs until specifically set */
+input,
+textarea,
+select,
+select * {
+  font-family: system-ui, -apple-system, Segoe UI, Roboto, Ubuntu, Cantarell, Noto Sans, sans-serif;
+}
 /* %font-headings */
-/* %font-forms */
 /* %font-monospace */
+/* %font-forms */
 /* Placeholders for text */
 /* %text-1 */
 .text-1, .text-body {
@@ -1063,31 +1070,45 @@ input, button, select {
   font-size: inherit;
   line-height: inherit;
 }
+@supports (bottom: calc((1 * var(--line-height) - 1em * var(--baseline-shift-factor)) / 2)) {
+[type="checkbox"],
+    [type="radio"] {
+      vertical-align: baseline;
+      vertical-align: var(--baseline-vertical-align, baseline);
+      position: static;
+      position: var(--baseline-position, static);
+      bottom: calc((1 * var(--line-height) - 1em * var(--baseline-shift-factor)) / 2);
+}
+}
 select[multiple], select[size] {
+  vertical-align: bottom;
   height: auto;
   max-height: 100%;
-  vertical-align: bottom;
 }
 @media (pointer: coarse) {
 @supports not (-moz-appearance: none) {
 select[multiple], select[size] {
-        height: 1.6875rem;
-        height: var(--line-height, 1.6875rem);
+        height: var(--spacing-base, 1.6875rem);
+        height: var(--line-height, var(--spacing-base, 1.6875rem));
         -webkit-appearance: menulist-button;
 }
 }
 }
 @media (pointer: fine) {
 select[multiple], select[size] {
-      font-size: 1.03316rem;
-}
-select[multiple] *, select[size] * {
-        line-height: 1.225;
+      font-size: calc((3 * 1.6875rem - 2 * 1px) / 4 / 1.2);
+      font-size: calc((3 * var(--spacing-base, 1.6875rem) - 2 * 1px) / 4 / 1.2);
 }
 }
 select[multiple]:not([size]) {
   max-height: calc(3 * 1.6875rem);
   max-height: calc(3 * var(--spacing-base, 1.6875rem));
+}
+@media (pointer: fine) {
+select[multiple]:not([size]) {
+      height: calc(3 * 1.6875rem);
+      height: calc(3 * var(--spacing-base, 1.6875rem));
+}
 }
 select:not([multiple]):not([size]) {
   /* Force dropdown selects out of Safari default menulist styling, to fit on one line */
@@ -2441,6 +2462,8 @@ legend {
 }
 .font-body * {
     font-family: inherit;
+    --baseline-vertical-align: bottom;
+    --baseline-position: relative;
 }
 .font-headings {
   font-family: "Times New Roman", Times, serif;
@@ -2448,13 +2471,16 @@ legend {
 }
 .font-headings * {
     font-family: inherit;
+    --baseline-vertical-align: bottom;
+    --baseline-position: relative;
 }
 .font-forms {
-  font-family: Verdana, sans-serif;
-  --baseline-shift-factor: 0.75;
+  font-family: system-ui, -apple-system, Segoe UI, Roboto, Ubuntu, Cantarell, Noto Sans, sans-serif;
 }
 .font-forms * {
     font-family: inherit;
+    --baseline-vertical-align: baseline;
+    --baseline-position: static;
 }
 .font-monospace {
   font-family: Courier, sans-serif;
@@ -2462,6 +2488,8 @@ legend {
 }
 .font-monospace * {
     font-family: inherit;
+    --baseline-vertical-align: bottom;
+    --baseline-position: relative;
 }
 .border-l {
   --border-left-width: 1px;
@@ -4016,6 +4044,6 @@ hr.unborder, .unborder.h-1, .unborder.h-2, .unborder.h-3, .unborder.h-4, .unbord
     Weight
   </h1> <p>
     Coming soon
-  </p> <p><a href="https://github.com/bjuppa/kingdom/blob/master/src/utilities/text/_weight.scss" target="_blank"><code>src/utilities/layout/_weight.scss</code></a></p></main> <nav class="background-color-gray-700 mt-2 p-1 text-center"><a href="/kingdom/utilities/text/weight#main" relative="" class="inline-block p-1"><span aria-hidden="true">⟰ </span>Back to top of main content<span aria-hidden="true"> ⟰</span></a></nav></div></div></div><script>window.__NUXT__={layout:"default",data:[{}],error:null,serverRendered:true};</script><script src="/kingdom/_nuxt/13858fc4918bcbec7ac7.js" defer></script><script src="/kingdom/_nuxt/6bab80006c3bdd921ec2.js" defer></script><script src="/kingdom/_nuxt/753cca17dff8666fabd2.js" defer></script><script src="/kingdom/_nuxt/4c2be766547a729af41b.js" defer></script>
+  </p> <p><a href="https://github.com/bjuppa/kingdom/blob/master/src/utilities/text/_weight.scss" target="_blank"><code>src/utilities/layout/_weight.scss</code></a></p></main> <nav class="background-color-gray-700 mt-2 p-1 text-center"><a href="/kingdom/utilities/text/weight#main" relative="" class="inline-block p-1"><span aria-hidden="true">⟰ </span>Back to top of main content<span aria-hidden="true"> ⟰</span></a></nav></div></div></div><script>window.__NUXT__={layout:"default",data:[{}],error:null,serverRendered:true};</script><script src="/kingdom/_nuxt/cca6894d6ac6c1bc457a.js" defer></script><script src="/kingdom/_nuxt/ad2bbaf37b0e1287c2f9.js" defer></script><script src="/kingdom/_nuxt/753cca17dff8666fabd2.js" defer></script><script src="/kingdom/_nuxt/6f9412b84f04b2539301.js" defer></script>
   </body>
 </html>

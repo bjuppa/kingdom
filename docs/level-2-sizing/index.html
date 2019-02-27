@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html data-n-head-ssr lang="en" data-n-head="lang">
   <head data-n-head="">
-    <title data-n-head="true">Kingdom CSS</title><meta data-n-head="true" charset="utf-8"/><meta data-n-head="true" http-equiv="X-UA-Compatible" content="IE=edge"/><meta data-n-head="true" name="viewport" content="width=device-width, initial-scale=1"/><base href="/kingdom/"><link rel="preload" href="/kingdom/_nuxt/13858fc4918bcbec7ac7.js" as="script"><link rel="preload" href="/kingdom/_nuxt/753cca17dff8666fabd2.js" as="script"><link rel="preload" href="/kingdom/_nuxt/4c2be766547a729af41b.js" as="script"><link rel="preload" href="/kingdom/_nuxt/d7cfe830cab488326f6c.js" as="script"><style data-vue-ssr-id="17cfdfa9:0 ba6ca1bc:0 5313df58:0 a322f03e:0">
+    <title data-n-head="true">Kingdom CSS</title><meta data-n-head="true" charset="utf-8"/><meta data-n-head="true" http-equiv="X-UA-Compatible" content="IE=edge"/><meta data-n-head="true" name="viewport" content="width=device-width, initial-scale=1"/><base href="/kingdom/"><link rel="preload" href="/kingdom/_nuxt/cca6894d6ac6c1bc457a.js" as="script"><link rel="preload" href="/kingdom/_nuxt/753cca17dff8666fabd2.js" as="script"><link rel="preload" href="/kingdom/_nuxt/6f9412b84f04b2539301.js" as="script"><link rel="preload" href="/kingdom/_nuxt/1740f28570e490b9b3df.js" as="script"><style data-vue-ssr-id="17cfdfa9:0 ba6ca1bc:0 5313df58:0 a322f03e:0">
 .nuxt-progress {
   position: fixed;
   top: 0px;
@@ -198,9 +198,16 @@ dt {
 }
 /* Placeholders for fonts */
 /* %font-body */
+/* Keep browser's font for form inputs until specifically set */
+input,
+textarea,
+select,
+select * {
+  font-family: system-ui, -apple-system, Segoe UI, Roboto, Ubuntu, Cantarell, Noto Sans, sans-serif;
+}
 /* %font-headings */
-/* %font-forms */
 /* %font-monospace */
+/* %font-forms */
 /* Placeholders for text */
 /* %text-1 */
 .text-1, .text-body {
@@ -2280,6 +2287,8 @@ select * {
 }
 .font-body * {
     font-family: inherit;
+    --baseline-vertical-align: bottom;
+    --baseline-position: relative;
 }
 .font-headings {
   font-family: "Times New Roman", Times, serif;
@@ -2287,13 +2296,16 @@ select * {
 }
 .font-headings * {
     font-family: inherit;
+    --baseline-vertical-align: bottom;
+    --baseline-position: relative;
 }
 .font-forms {
-  font-family: Verdana, sans-serif;
-  --baseline-shift-factor: 0.75;
+  font-family: system-ui, -apple-system, Segoe UI, Roboto, Ubuntu, Cantarell, Noto Sans, sans-serif;
 }
 .font-forms * {
     font-family: inherit;
+    --baseline-vertical-align: baseline;
+    --baseline-position: static;
 }
 .font-monospace {
   font-family: Courier, sans-serif;
@@ -2301,6 +2313,8 @@ select * {
 }
 .font-monospace * {
     font-family: inherit;
+    --baseline-vertical-align: bottom;
+    --baseline-position: relative;
 }
 .border-l {
   --border-left-width: 1px;
@@ -3966,6 +3980,6 @@ select * {
       trouble in multi-column layouts.
       This is where <a href="/kingdom/level-3-rhythm">Level 3 can help apply a consistent <em>vertical
       rhythm</em></a> to your typography!
-    </p></div></main> <nav class="background-color-gray-700 mt-2 p-1 text-center"><a href="/kingdom/level-2-sizing#main" relative="" class="inline-block p-1"><span aria-hidden="true">⟰ </span>Back to top of main content<span aria-hidden="true"> ⟰</span></a></nav></div></div></div><script>window.__NUXT__={layout:"default",data:[{}],error:null,serverRendered:true};</script><script src="/kingdom/_nuxt/13858fc4918bcbec7ac7.js" defer></script><script src="/kingdom/_nuxt/d7cfe830cab488326f6c.js" defer></script><script src="/kingdom/_nuxt/753cca17dff8666fabd2.js" defer></script><script src="/kingdom/_nuxt/4c2be766547a729af41b.js" defer></script>
+    </p></div></main> <nav class="background-color-gray-700 mt-2 p-1 text-center"><a href="/kingdom/level-2-sizing#main" relative="" class="inline-block p-1"><span aria-hidden="true">⟰ </span>Back to top of main content<span aria-hidden="true"> ⟰</span></a></nav></div></div></div><script>window.__NUXT__={layout:"default",data:[{}],error:null,serverRendered:true};</script><script src="/kingdom/_nuxt/cca6894d6ac6c1bc457a.js" defer></script><script src="/kingdom/_nuxt/1740f28570e490b9b3df.js" defer></script><script src="/kingdom/_nuxt/753cca17dff8666fabd2.js" defer></script><script src="/kingdom/_nuxt/6f9412b84f04b2539301.js" defer></script>
   </body>
 </html>
