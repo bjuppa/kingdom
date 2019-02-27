@@ -2,6 +2,7 @@
 @import "../modules/colors";
 @import "../modules/layout";
 @import "../modules/sizing";
+@import "../modules/fonts";
 
 $input-border-color: change_color(get-color(body), $saturation: 5%, $lightness: 75%) !default;
 $input-border-width: 1px !default;
@@ -62,7 +63,7 @@ textarea {
 }
 
 input, textarea, select {
-  @extend %font-forms;
+  @extend %font-forms !optional;
 
   background: $input-background;
   color: $input-text-color;
@@ -110,12 +111,7 @@ input, textarea {
   box-shadow: initial;
   border: initial;
 
-  $bottom: calc((#{if(unitless(nth($line-heights, 1)), 1em, 1)} * var(--line-height) - 1em * var(--baseline-shift-factor, 0.75)) / 2);
-  @supports (bottom: $bottom) {
-    vertical-align: bottom;
-    position: relative;
-    bottom: $bottom;
-  }
+  @include baseline-align;
 
   &[id] {
     &:disabled {

@@ -56,7 +56,7 @@ input, button, select {
 
 [type='checkbox'], [type='radio'] {
   border: initial;
-  vertical-align: baseline;
+  @include baseline-align;
   height: auto;
   @include size-text(inherit, inherit);
 }
