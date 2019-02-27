@@ -15,7 +15,7 @@ $monospace-font-stack: Courier !default;
 input,
 textarea,
 select {
-  font-family: initial;
+  font-family: system-ui, sans-serif;
 }
 
 /* %font-headings */
