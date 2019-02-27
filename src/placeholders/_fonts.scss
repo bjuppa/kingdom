@@ -14,7 +14,8 @@ $monospace-font-stack: Courier !default;
 /* Keep browser's font for form inputs until specifically set */
 input,
 textarea,
-select {
+select,
+select * {
   font-family: system-ui, sans-serif;
 }
 
