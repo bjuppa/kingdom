@@ -18,7 +18,7 @@ module.exports = {
     }
   },
   build: {
-    cssSourceMap: true,
+    cssSourceMap: false,
     html: {
       minify: false
     },
