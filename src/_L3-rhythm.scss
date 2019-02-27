@@ -64,11 +64,11 @@ input, button, select {
 select {
   &[multiple], &[size] {
     vertical-align: bottom;
-    //Multiple and sized selects may span several lines...
+    // Multiple and sized selects may span several lines...
     height: auto;
     max-height: 100%;
     //...but not in mobile Safari/Chrome where the select will be a button
-    @media (pointer: coarse) { //Target modern mobile browsers
+    @media (pointer: coarse) { //Target modern mobile browsers...
       @supports not (-moz-appearance: none) { //except Firefox
         height: var(--line-height, spacing-base-var());
         -webkit-appearance: menulist-button;
@@ -79,13 +79,17 @@ select {
       // Fit four options into three lines of the vertical rhythm in Safari
       // This is a bit of a hack, attempting to guess the "medium" line-height
       // It's only relevant for desktop Safari where the last option is hidden if it doesn't fit entirely in the select
-      $line-height: 1.1;
+      $line-height: 1.2;
       font-size: calc((3 * #{spacing-base-var()} - 2 * #{$input-border-width}) / 4 / #{$line-height});
     }
   }
 
   &[multiple]:not([size]) {
     @include length-relative(max-height, 3);
+
+    @media (pointer: fine) { //Target modern desktop browsers
+      @include length-relative(height, 3);
+    }
   }
 
   &:not([multiple]):not([size]) {
