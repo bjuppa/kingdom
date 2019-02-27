@@ -76,7 +76,7 @@ select {
     }
 
     @media (pointer: fine) { //Target modern desktop browsers
-      // Fit four options into three lines of the vertical rhythm in Safari
+      // Fit four options into three lines of the vertical rhythm
       // This is a bit of a hack, attempting to guess the "medium" line-height
       // It's only relevant for desktop Safari where the last option is hidden if it doesn't fit entirely in the select
       $line-height: 1.2;
