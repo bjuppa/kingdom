@@ -26,8 +26,7 @@ $readable-line-length-max: 75ch !default;
   font-size: $font-size;
   @if (type-of($line-height) == 'number' and $line-height != 0) {
     @if (unit($line-height) == unit($spacing-base)) {
-      $factor: round($line-height/$spacing-base);
-      --line-height: calc(#{$factor} * #{spacing-base-var()});
+      --line-height: calc(#{$line-height/$spacing-base} * #{spacing-base-var()});
     } @else if (unitless($line-height)) {
       --line-height: #{$line-height}em;
     } @else {
