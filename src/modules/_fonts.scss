@@ -37,12 +37,10 @@ $font-stacks: (
 
 @mixin baseline-align {
   vertical-align: baseline;
-  @if(variable-exists(line-heights)) {
-    $bottom: calc((#{if(unitless(nth($line-heights, 1)), 1em, 1)} * var(--line-height) - 1em * var(--baseline-shift-factor)) / 2);
-    @supports(bottom: $bottom) {
-      vertical-align: var(--baseline-vertical-align, baseline);
-      position: var(--baseline-position, static);
-      bottom: $bottom;
-    }
+  $bottom: calc((var(--line-height) - 1em * var(--baseline-shift-factor)) / 2);
+  @supports(bottom: $bottom) {
+    vertical-align: var(--baseline-vertical-align, baseline);
+    position: var(--baseline-position, static);
+    bottom: $bottom;
   }
 }
