@@ -3,6 +3,8 @@
 @import "../modules/layout";
 @import "../modules/sizing";
 @import "../modules/fonts";
+@import "../modules/shadows";
+
 
 $input-border-color: change_color(get-color(body), $saturation: 5%, $lightness: 75%) !default;
 $input-border-width: 1px !default;
