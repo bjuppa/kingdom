@@ -28,6 +28,8 @@ $readable-line-length-max: 75ch !default;
     @if (unit($line-height) == unit($spacing-base)) {
       $factor: round($line-height/$spacing-base);
       --line-height: calc(#{$factor} * #{spacing-base-var()});
+    } @else if (unitless($line-height)) {
+      --line-height: #{$line-height}em;
     } @else {
       --line-height: #{$line-height};
     }
