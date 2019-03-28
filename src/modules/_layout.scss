@@ -1,13 +1,17 @@
 @mixin display-block($line-height: inherit) {
   display: block;
-  @if ($line-height) {
+  @if ($line-height == inherit) {
+    line-height: var(--line-height, inherit);
+  } @else if($line-height) {
     line-height: $line-height;
   }
 }
 
 @mixin display-inline-block($vertical-align: bottom, $line-height: inherit) {
   display: inline-block;
-  @if ($line-height) {
+  @if ($line-height == inherit) {
+    line-height: var(--line-height, inherit);
+  } @else if($line-height) {
     line-height: $line-height;
   }
   @if ($vertical-align) {

@@ -42,7 +42,7 @@ $font-size-smaller: smaller !default;
 /* %text-small-block */
 %text-small-block {
   @include size-text(font-size-em($font-size-smaller), inherit);
-  display: block;
+  @include display-block();
 }
 
 /* %text-x-small */
@@ -56,7 +56,7 @@ $font-size-smaller: smaller !default;
 %text-x-small-block {
   $font-size-smaller: font-size-em($font-size-smaller);
   @include size-text($font-size-smaller*strip-unit($font-size-smaller), inherit);
-  display: block;
+  @include display-block();
 }
 
 /* %text-inherit */
