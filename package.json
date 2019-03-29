@@ -1,6 +1,6 @@
 {
   "name": "kingdom-css",
-  "version": "0.10.2",
+  "version": "0.11.0",
   "description": "A CSS framework for consistent sizing, spacing and typography.",
   "scripts": {
     "dev": "nuxt dev",
