@@ -34,7 +34,11 @@ $readable-line-length-max: 75ch !default;
     }
     line-height: var(--line-height, #{$line-height});
   } @else {
-    line-height: $line-height;
+    @if ($line-height == inherit) {
+      line-height: var(--line-height, inherit);
+    } @else if($line-height) {
+      line-height: $line-height;
+    }
   }
 }
 

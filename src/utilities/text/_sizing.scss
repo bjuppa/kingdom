@@ -35,6 +35,10 @@
   @extend %text-1;
 }
 
+.text-body-block {
+  @extend %text-1-block;
+}
+
 .text-inherit {
   @extend %text-inherit;
 }
