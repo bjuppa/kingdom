@@ -44,6 +44,7 @@
 
   @media screen and (min-width: #{get-breakpoint(two-columns)}) {
     @supports (columns: length-rem($readable-line-length-min) auto) and (max-height: calc(100vh - 6 * var(--spacing-base))) {
+      // TODO: remove this unnecessary &
       & {
         columns: length-rem($readable-line-length-min) auto;
         max-width: none;
