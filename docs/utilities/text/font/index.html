@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html data-n-head-ssr lang="en" data-n-head="lang">
   <head data-n-head="">
-    <title data-n-head="true">Kingdom CSS</title><meta data-n-head="true" charset="utf-8"/><meta data-n-head="true" http-equiv="X-UA-Compatible" content="IE=edge"/><meta data-n-head="true" name="viewport" content="width=device-width, initial-scale=1"/><base href="/kingdom/"><link rel="preload" href="/kingdom/_nuxt/cca6894d6ac6c1bc457a.js" as="script"><link rel="preload" href="/kingdom/_nuxt/753cca17dff8666fabd2.js" as="script"><link rel="preload" href="/kingdom/_nuxt/6f9412b84f04b2539301.js" as="script"><link rel="preload" href="/kingdom/_nuxt/b43abd50c733c964f66d.js" as="script"><style data-vue-ssr-id="17cfdfa9:0 ba6ca1bc:0 5313df58:0 332a0160:0">
+    <title data-n-head="true">Kingdom CSS</title><meta data-n-head="true" charset="utf-8"/><meta data-n-head="true" http-equiv="X-UA-Compatible" content="IE=edge"/><meta data-n-head="true" name="viewport" content="width=device-width, initial-scale=1"/><base href="/kingdom/"><link rel="preload" href="/kingdom/_nuxt/0dcf953ee70bc14a6c99.js" as="script"><link rel="preload" href="/kingdom/_nuxt/753cca17dff8666fabd2.js" as="script"><link rel="preload" href="/kingdom/_nuxt/6f9412b84f04b2539301.js" as="script"><link rel="preload" href="/kingdom/_nuxt/9b1042c399d2d4f85be8.js" as="script"><style data-vue-ssr-id="17cfdfa9:0 ba6ca1bc:0 5313df58:0 332a0160:0">
 .nuxt-progress {
   position: fixed;
   top: 0px;
@@ -217,7 +217,7 @@ select * {
   line-height: var(--line-height, 1.6875rem);
 }
 /* %text-1-block */
-body, h4, .text-1-block {
+body, h4, .text-1-block, .text-body-block {
   font-size: 1.125rem;
   --line-height: calc(1 * var(--spacing-base, 1.6875rem));
   line-height: 1.6875rem;
@@ -302,29 +302,30 @@ h1, .text-4-block {
 /* %text-small */
 small, .text-small {
   font-size: 0.83333em;
-  line-height: 0;
 }
 /* %text-small-block */
 h5, .text-small-block {
   font-size: 0.83333em;
   line-height: inherit;
+  line-height: var(--line-height, inherit);
   display: block;
 }
 /* %text-x-small */
 sub, sup, .text-x-small {
   font-size: 0.69444em;
-  line-height: 0;
 }
 /* %text-x-small-block */
 h6, .text-x-small-block {
   font-size: 0.69444em;
   line-height: inherit;
+  line-height: var(--line-height, inherit);
   display: block;
 }
 /* %text-inherit */
 *, .text-inherit {
   font-size: inherit;
   line-height: inherit;
+  line-height: var(--line-height, inherit);
 }
 /* %text-inline */
 abbr, acronym, b, bdo, big, br, cite, code, dfn, em, i, kbd, label, map, q, samp, small, span, strong, sub, sup, time, tt, var, p a, ::before,
@@ -334,7 +335,7 @@ abbr, acronym, b, bdo, big, br, cite, code, dfn, em, i, kbd, label, map, q, samp
   vertical-align: baseline;
 }
 /* %text-tight */
-body .text-4, h4 .text-4, .text-1-block .text-4, body .text-5, h4 .text-5, .text-1-block .text-5, body .text-6, h4 .text-6, .text-1-block .text-6, h3 .text-4, .text-2-block .text-4, h3 .text-5, .text-2-block .text-5, h3 .text-6, .text-2-block .text-6, h2 .text-4, .text-3-block .text-4, h2 .text-5, .text-3-block .text-5, h2 .text-6, .text-3-block .text-6, h1 .text-5, .text-4-block .text-5, h1 .text-6, .text-4-block .text-6, .text-5-block .text-6 {
+body .text-4, h4 .text-4, .text-1-block .text-4, .text-body-block .text-4, body .text-5, h4 .text-5, .text-1-block .text-5, .text-body-block .text-5, body .text-6, h4 .text-6, .text-1-block .text-6, .text-body-block .text-6, h3 .text-4, .text-2-block .text-4, h3 .text-5, .text-2-block .text-5, h3 .text-6, .text-2-block .text-6, h2 .text-4, .text-3-block .text-4, h2 .text-5, .text-3-block .text-5, h2 .text-6, .text-3-block .text-6, h1 .text-5, .text-4-block .text-5, h1 .text-6, .text-4-block .text-6, .text-5-block .text-6 {
   line-height: 1;
 }
 /* Placeholders for sizing */
@@ -1021,17 +1022,17 @@ select * {
 /* %text-2-tight for vertical rhythm */
 /* %text-3-tight for vertical rhythm */
 /* %text-4-tight for vertical rhythm */
-body .text-4, h4 .text-4, .text-1-block .text-4, h3 .text-4, .text-2-block .text-4, h2 .text-4, .text-3-block .text-4 {
+body .text-4, h4 .text-4, .text-1-block .text-4, .text-body-block .text-4, h3 .text-4, .text-2-block .text-4, h2 .text-4, .text-3-block .text-4 {
   line-height: calc(2 * 1.6875rem);
   line-height: calc(2 * var(--spacing-base, 1.6875rem));
 }
 /* %text-5-tight for vertical rhythm */
-body .text-5, h4 .text-5, .text-1-block .text-5, h3 .text-5, .text-2-block .text-5, h2 .text-5, .text-3-block .text-5, h1 .text-5, .text-4-block .text-5 {
+body .text-5, h4 .text-5, .text-1-block .text-5, .text-body-block .text-5, h3 .text-5, .text-2-block .text-5, h2 .text-5, .text-3-block .text-5, h1 .text-5, .text-4-block .text-5 {
   line-height: calc(3 * 1.6875rem);
   line-height: calc(3 * var(--spacing-base, 1.6875rem));
 }
 /* %text-6-tight for vertical rhythm */
-body .text-6, h4 .text-6, .text-1-block .text-6, h3 .text-6, .text-2-block .text-6, h2 .text-6, .text-3-block .text-6, h1 .text-6, .text-4-block .text-6, .text-5-block .text-6 {
+body .text-6, h4 .text-6, .text-1-block .text-6, .text-body-block .text-6, h3 .text-6, .text-2-block .text-6, h2 .text-6, .text-3-block .text-6, h1 .text-6, .text-4-block .text-6, .text-5-block .text-6 {
   line-height: calc(4 * 1.6875rem);
   line-height: calc(4 * var(--spacing-base, 1.6875rem));
 }
@@ -1069,15 +1070,16 @@ input, button, select {
   height: auto;
   font-size: inherit;
   line-height: inherit;
+  line-height: var(--line-height, inherit);
 }
-@supports (bottom: calc((1 * var(--line-height) - 1em * var(--baseline-shift-factor)) / 2)) {
+@supports (bottom: calc((var(--line-height) - 1em * var(--baseline-shift-factor)) / 2)) {
 [type="checkbox"],
     [type="radio"] {
       vertical-align: baseline;
       vertical-align: var(--baseline-vertical-align, baseline);
       position: static;
       position: var(--baseline-position, static);
-      bottom: calc((1 * var(--line-height) - 1em * var(--baseline-shift-factor)) / 2);
+      bottom: calc((var(--line-height) - 1em * var(--baseline-shift-factor)) / 2);
 }
 }
 select[multiple], select[size] {
@@ -2651,6 +2653,7 @@ hr.unborder, .unborder.h-1, .unborder.h-2, .unborder.h-3, .unborder.h-4, .unbord
 .list-inline > * {
     display: inline-block;
     line-height: inherit;
+    line-height: var(--line-height, inherit);
     vertical-align: bottom;
 }
 .list-comma-separated {
@@ -2675,10 +2678,12 @@ hr.unborder, .unborder.h-1, .unborder.h-2, .unborder.h-3, .unborder.h-4, .unbord
 .block, .children\:block > * {
   display: block;
   line-height: inherit;
+  line-height: var(--line-height, inherit);
 }
 .inline-block, .children\:inline-block > *, .descendants\:inline-block * {
   display: inline-block;
   line-height: inherit;
+  line-height: var(--line-height, inherit);
   vertical-align: bottom;
 }
 .inline, .descendants\:inline * {
@@ -4044,6 +4049,6 @@ hr.unborder, .unborder.h-1, .unborder.h-2, .unborder.h-3, .unborder.h-4, .unbord
     Font
   </h1> <p>
     Coming soon
-  </p> <p><a href="https://github.com/bjuppa/kingdom/blob/master/src/utilities/text/_font.scss" target="_blank"><code>src/utilities/layout/_font.scss</code></a></p></main> <nav class="background-color-gray-700 mt-2 p-1 text-center"><a href="/kingdom/utilities/text/font#main" relative="" class="inline-block p-1"><span aria-hidden="true">⟰ </span>Back to top of main content<span aria-hidden="true"> ⟰</span></a></nav></div></div></div><script>window.__NUXT__={layout:"default",data:[{}],error:null,serverRendered:true};</script><script src="/kingdom/_nuxt/cca6894d6ac6c1bc457a.js" defer></script><script src="/kingdom/_nuxt/b43abd50c733c964f66d.js" defer></script><script src="/kingdom/_nuxt/753cca17dff8666fabd2.js" defer></script><script src="/kingdom/_nuxt/6f9412b84f04b2539301.js" defer></script>
+  </p> <p><a href="https://github.com/bjuppa/kingdom/blob/master/src/utilities/text/_font.scss" target="_blank"><code>src/utilities/layout/_font.scss</code></a></p></main> <nav class="background-color-gray-700 mt-2 p-1 text-center"><a href="/kingdom/utilities/text/font#main" relative="" class="inline-block p-1"><span aria-hidden="true">⟰ </span>Back to top of main content<span aria-hidden="true"> ⟰</span></a></nav></div></div></div><script>window.__NUXT__={layout:"default",data:[{}],error:null,serverRendered:true};</script><script src="/kingdom/_nuxt/0dcf953ee70bc14a6c99.js" defer></script><script src="/kingdom/_nuxt/9b1042c399d2d4f85be8.js" defer></script><script src="/kingdom/_nuxt/753cca17dff8666fabd2.js" defer></script><script src="/kingdom/_nuxt/6f9412b84f04b2539301.js" defer></script>
   </body>
 </html>

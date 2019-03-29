@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html data-n-head-ssr lang="en" data-n-head="lang">
   <head data-n-head="">
-    <title data-n-head="true">Kingdom CSS</title><meta data-n-head="true" charset="utf-8"/><meta data-n-head="true" http-equiv="X-UA-Compatible" content="IE=edge"/><meta data-n-head="true" name="viewport" content="width=device-width, initial-scale=1"/><base href="/kingdom/"><link rel="preload" href="/kingdom/_nuxt/cca6894d6ac6c1bc457a.js" as="script"><link rel="preload" href="/kingdom/_nuxt/753cca17dff8666fabd2.js" as="script"><link rel="preload" href="/kingdom/_nuxt/6f9412b84f04b2539301.js" as="script"><link rel="preload" href="/kingdom/_nuxt/1e6c3dad469f415f2e5a.js" as="script"><style data-vue-ssr-id="17cfdfa9:0 ba6ca1bc:0 5313df58:0 ac2acf7e:0">
+    <title data-n-head="true">Kingdom CSS</title><meta data-n-head="true" charset="utf-8"/><meta data-n-head="true" http-equiv="X-UA-Compatible" content="IE=edge"/><meta data-n-head="true" name="viewport" content="width=device-width, initial-scale=1"/><base href="/kingdom/"><link rel="preload" href="/kingdom/_nuxt/0dcf953ee70bc14a6c99.js" as="script"><link rel="preload" href="/kingdom/_nuxt/753cca17dff8666fabd2.js" as="script"><link rel="preload" href="/kingdom/_nuxt/6f9412b84f04b2539301.js" as="script"><link rel="preload" href="/kingdom/_nuxt/f1cd98d10aedd75ea25e.js" as="script"><style data-vue-ssr-id="17cfdfa9:0 ba6ca1bc:0 5313df58:0 ac2acf7e:0">
 .nuxt-progress {
   position: fixed;
   top: 0px;
@@ -212,14 +212,14 @@ select * {
 /* %text-1 */
 .text-1, .text-body {
   font-size: medium;
-  --line-height: 1.5;
+  --line-height: 1.5em;
   line-height: 1.5;
   line-height: var(--line-height, 1.5);
 }
 /* %text-1-block */
-.text-1-block {
+.text-1-block, .text-body-block {
   font-size: medium;
-  --line-height: 1.5;
+  --line-height: 1.5em;
   line-height: 1.5;
   line-height: var(--line-height, 1.5);
   display: block;
@@ -227,14 +227,14 @@ select * {
 /* %text-2 */
 .text-2 {
   font-size: large;
-  --line-height: 1.4;
+  --line-height: 1.4em;
   line-height: 1.4;
   line-height: var(--line-height, 1.4);
 }
 /* %text-2-block */
 .text-2-block {
   font-size: large;
-  --line-height: 1.4;
+  --line-height: 1.4em;
   line-height: 1.4;
   line-height: var(--line-height, 1.4);
   display: block;
@@ -242,14 +242,14 @@ select * {
 /* %text-3 */
 .text-3 {
   font-size: x-large;
-  --line-height: 1.3;
+  --line-height: 1.3em;
   line-height: 1.3;
   line-height: var(--line-height, 1.3);
 }
 /* %text-3-block */
 .text-3-block {
   font-size: x-large;
-  --line-height: 1.3;
+  --line-height: 1.3em;
   line-height: 1.3;
   line-height: var(--line-height, 1.3);
   display: block;
@@ -257,14 +257,14 @@ select * {
 /* %text-4 */
 .text-4 {
   font-size: xx-large;
-  --line-height: 1.2;
+  --line-height: 1.2em;
   line-height: 1.2;
   line-height: var(--line-height, 1.2);
 }
 /* %text-4-block */
 .text-4-block {
   font-size: xx-large;
-  --line-height: 1.2;
+  --line-height: 1.2em;
   line-height: 1.2;
   line-height: var(--line-height, 1.2);
   display: block;
@@ -272,29 +272,30 @@ select * {
 /* %text-small */
 .text-small {
   font-size: 0.8em;
-  line-height: 0;
 }
 /* %text-small-block */
 .text-small-block {
   font-size: 0.8em;
   line-height: inherit;
+  line-height: var(--line-height, inherit);
   display: block;
 }
 /* %text-x-small */
 .text-x-small {
   font-size: 0.64em;
-  line-height: 0;
 }
 /* %text-x-small-block */
 .text-x-small-block {
   font-size: 0.64em;
   line-height: inherit;
+  line-height: var(--line-height, inherit);
   display: block;
 }
 /* %text-inherit */
 .text-inherit {
   font-size: inherit;
   line-height: inherit;
+  line-height: var(--line-height, inherit);
 }
 /* %text-inline */
 abbr, acronym, b, bdo, big, br, cite, code, dfn, em, i, kbd, label, map, q, samp, small, span, strong, sub, sup, time, tt, var, p a, ::before,
@@ -304,7 +305,7 @@ abbr, acronym, b, bdo, big, br, cite, code, dfn, em, i, kbd, label, map, q, samp
   vertical-align: baseline;
 }
 /* %text-tight */
-.text-1-block .text-4, .text-2-block .text-4, .text-3-block .text-4 {
+.text-1-block .text-4, .text-body-block .text-4, .text-2-block .text-4, .text-3-block .text-4 {
   line-height: 1;
 }
 /* Placeholders for sizing */
@@ -2420,6 +2421,7 @@ abbr, acronym, b, bdo, big, br, cite, code, dfn, em, i, kbd, label, map, q, samp
 .list-inline > * {
     display: inline-block;
     line-height: inherit;
+    line-height: var(--line-height, inherit);
     vertical-align: bottom;
 }
 .list-comma-separated {
@@ -2444,10 +2446,12 @@ abbr, acronym, b, bdo, big, br, cite, code, dfn, em, i, kbd, label, map, q, samp
 .block, .children\:block > * {
   display: block;
   line-height: inherit;
+  line-height: var(--line-height, inherit);
 }
 .inline-block, .children\:inline-block > *, .descendants\:inline-block * {
   display: inline-block;
   line-height: inherit;
+  line-height: var(--line-height, inherit);
   vertical-align: bottom;
 }
 .inline, .descendants\:inline * {
@@ -3892,6 +3896,6 @@ abbr, acronym, b, bdo, big, br, cite, code, dfn, em, i, kbd, label, map, q, samp
     they're at your browser's defaults.
     This is where <a href="/kingdom/level-2-sizing">Level 2 can help apply some <em>spacing</em> and
     <em>sizing</em></a>!
-  </p></main> <nav class="background-color-gray-700 mt-2 p-1 text-center"><a href="/kingdom/level-1-reset#main" relative="" class="inline-block p-1"><span aria-hidden="true">⟰ </span>Back to top of main content<span aria-hidden="true"> ⟰</span></a></nav></div></div></div><script>window.__NUXT__={layout:"default",data:[{}],error:null,serverRendered:true};</script><script src="/kingdom/_nuxt/cca6894d6ac6c1bc457a.js" defer></script><script src="/kingdom/_nuxt/1e6c3dad469f415f2e5a.js" defer></script><script src="/kingdom/_nuxt/753cca17dff8666fabd2.js" defer></script><script src="/kingdom/_nuxt/6f9412b84f04b2539301.js" defer></script>
+  </p></main> <nav class="background-color-gray-700 mt-2 p-1 text-center"><a href="/kingdom/level-1-reset#main" relative="" class="inline-block p-1"><span aria-hidden="true">⟰ </span>Back to top of main content<span aria-hidden="true"> ⟰</span></a></nav></div></div></div><script>window.__NUXT__={layout:"default",data:[{}],error:null,serverRendered:true};</script><script src="/kingdom/_nuxt/0dcf953ee70bc14a6c99.js" defer></script><script src="/kingdom/_nuxt/f1cd98d10aedd75ea25e.js" defer></script><script src="/kingdom/_nuxt/753cca17dff8666fabd2.js" defer></script><script src="/kingdom/_nuxt/6f9412b84f04b2539301.js" defer></script>
   </body>
 </html>
