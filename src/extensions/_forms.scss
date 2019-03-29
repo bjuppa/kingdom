@@ -48,6 +48,18 @@ $button-destructive-focus-box-shadow: set_nth($button-focus-box-shadow, -1, chan
 /* %error-message */
 %error-message {
   @include apply-color(caution);
+  @extend %description;
+}
+
+/* %description */
+%description {
+  @extend %mt-0;
+}
+
+span, small {
+  &%description {
+    @include display-inline-block();
+  }
 }
 
 /* Inputs */
@@ -331,20 +343,10 @@ label:not([for]) {
   }
 }
 
-[aria-describedby] + {
-  span, small {
-    &[id] {
-      // Turn descriptive inline elements that come after their input into blocks
-      @include display-inline-block();
-    }
-  }
-
-  div, ul, ol {
-    &[id] {
-      // Remove space before descriptive block elements that come after their input
-      @extend %mt-0;
-    }
-  }
+// Input descriptions
+[id*='description'],
+[id*='Description'] {
+  @extend %description;
 }
 
 /* .form-inline make a form's contents go inline */
