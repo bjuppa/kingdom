@@ -17,7 +17,7 @@ $input-focus-box-shadow: 0 0 4px 2px #5E9ED6 !default; // Color from Mac
 $input-focus-outline: -webkit-focus-ring-color auto 5px !default; // Set $input-focus-outline to literal none to use $input-focus-box-shadow on focus in all browsers
 
 $button-color: get-color(primary) !default;
-$button-text-color: get-color(primary, true) !default;
+$button-text-color: get-text-color(primary) !default;
 $button-border-color: $button-color !default;
 $button-border-width: $input-border-width !default;
 $button-border-radius: $input-border-radius !default;
@@ -32,12 +32,12 @@ $button-horizontal-padding: $spacing-base/4 !default;
 $button-text-decoration: none !default;
 
 $button-destructive-color: get-color(caution) !default;
-$button-destructive-text-color: get-color(caution, true) !default;
+$button-destructive-text-color: get-text-color(caution) !default;
 $button-destructive-focus-box-shadow: set_nth($button-focus-box-shadow, -1, change_color($button-destructive-color, $lightness: 80%)) !default;
 
 /* %label-disabled */
 %label-disabled {
-  @include apply-color(disabled, $apply-text-color: true);
+  @include apply-text-color(disabled);
 }
 
 /* %label-invalid */

@@ -11,7 +11,7 @@
 }
 
 // Generate link color if not already defined in $colors map
-@include register-color(link, mix(change_color(transform-hue(get-color(primary), blue), $lightness: 50%, $saturation: 100%), desaturate(get-color(body, true), 100%), 50%), $ensure-text-color: false);
+@include register-color(link, mix(change_color(transform-hue(get-color(primary), blue), $lightness: 50%, $saturation: 100%), desaturate(get-text-color(body), 100%), 50%), $ensure-text-color: false);
 
 // Generate visited link color if not already defined in $colors map
 // See https://www.nngroup.com/articles/change-the-color-of-visited-links/
