@@ -83,9 +83,9 @@ $colors: () !default;
   }
 
   @if lightness($background-color) > 50% {
-    @return scale_color(complement($background-color), $lightness: -95%, $saturation: -50%, $alpha: 100%);
+    @return scale_color(complement($background-color), $lightness: -99%, $saturation: -50%, $alpha: 100%);
   } @else {
-    @return scale_color(complement($background-color), $lightness: 95%, $saturation: -50%, $alpha: 100%);
+    @return scale_color(complement($background-color), $lightness: 99%, $saturation: -50%, $alpha: 100%);
   }
 }
 
