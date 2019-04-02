@@ -10,7 +10,7 @@ $gray-color-utilities: (900: 10%, 800: 20%, 700: 30%, 600: 40%, 500: 50%, 400: 6
   @each $name, $color-pair in $colors {
     --color-#{$name}: #{get-color($name)};
     @if (length($color-pair) > 1) {
-      --color-#{$name}-text: #{get-color($name, true)};
+      --color-#{$name}-text: #{get-text-color($name)};
     }
   }
 }

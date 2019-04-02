@@ -15,7 +15,7 @@ $body-padding: 0 !default;
 body {
   padding: $body-padding;
   @include apply-background-color(body);
-  @if (lightness(get-color(body, true)) > 50%) {
+  @if (lightness(get-text-color(body)) > 50%) {
     $body-font-stack: Verdana !default !global;
     @extend %font-body;
   }

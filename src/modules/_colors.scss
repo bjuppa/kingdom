@@ -9,12 +9,23 @@ $colors: () !default;
   @return nth($list, if($get-text-color, 2, 1));
 }
 
+// Get a color's corresponding text color from the global $colors map
+@function get-text-color($name) {
+  @return get-color($name, true);
+}
+
+// Get a color CSS var() string
 @function color-var($name: primary, $apply-text-color: false) {
   $var_name: --color-#{$name};
   @if ($apply-text-color) {
     $var_name: $var_name + '-text';
   }
   @return var($var-name, get-color($name, $apply-text-color));
+}
+
+// Get a text color CSS var() string
+@function text-color-var($name: primary) {
+  @return color-var($name, true);
 }
 
 // Shift a color into the hue spectrum of another color
@@ -72,9 +83,9 @@ $colors: () !default;
   }
 
   @if lightness($background-color) > 50% {
-    @return scale_color($background-color, $lightness: -95%, $saturation: -50%, $alpha: 100%);
+    @return scale_color(complement($background-color), $lightness: -99%, $saturation: -50%, $alpha: 100%);
   } @else {
-    @return scale_color($background-color, $lightness: 90%, $saturation: -50%, $alpha: 100%);
+    @return scale_color(complement($background-color), $lightness: 99%, $saturation: -50%, $alpha: 100%);
   }
 }
 
@@ -93,11 +104,16 @@ $colors: () !default;
   #{$property}: color-var($name, $apply-text-color);
 }
 
+// Set a text color property from the global map
+@mixin apply-text-color($name: primary, $property: color) {
+  @include apply-color($name, $property, true);
+}
+
 // Set a background color (and text color) from the global map
 @mixin apply-background-color($name, $apply-text-color: true) {
   @include apply-color($name, background-color);
   @if ($apply-text-color) {
-    @include apply-color($name, $apply-text-color: true);
+    @include apply-text-color($name);
   }
 }
 
