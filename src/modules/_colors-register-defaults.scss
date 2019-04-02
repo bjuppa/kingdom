@@ -24,7 +24,7 @@
 @include register-color(caution, normalize-color(transform-hue-with-contrast(get-color(primary), red)));
 
 // Generate disabled background and text color if not already defined in $colors map
-@include register-color(disabled, change_color(get-color(body), $saturation: 1%, $lightness: 90%, $alpha: .75) change_color(get-color(body), $saturation: 1%, $lightness: 50%));
+@include register-color(disabled, change_color(get-color(body), $saturation: 1%, $lightness: 95%, $alpha: .8) change_color(get-color(body), $saturation: 1%, $lightness: 50%));
 
 // Generate a shadow color if not already defined in $colors map
 @include register-color(shadow, change_color(mix(saturate(complement(get-color(primary)), 100%), blue), $lightness: 10%, $alpha: .1));

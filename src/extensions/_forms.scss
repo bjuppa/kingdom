@@ -10,7 +10,7 @@ $input-border-color: change_color(get-color(body), $saturation: 5%, $lightness: 
 $input-border-width: 1px !default;
 $input-border-radius: $spacing-base/8 !default;
 $input-border-style: solid !default;
-$input-text-color: change_color(get-color(primary), $saturation: 50%, $lightness: 2%) !default;
+$input-text-color: black !default;
 $input-background: change_color(get-color(primary), $saturation: 10%, $lightness: 99%) !default;
 $input-box-shadow: if(variable-exists(inner-shadow), $inner-shadow, inset shadow-relative(1/4) change_color(get-color(shadow), $alpha: .1)) !default;
 $input-focus-box-shadow: 0 0 4px 2px #5E9ED6 !default; // Color from Mac
@@ -40,6 +40,30 @@ $button-destructive-focus-box-shadow: set_nth($button-focus-box-shadow, -1, chan
   @include apply-text-color(disabled);
 }
 
+/* %input-disabled */
+%input-disabled {
+  @include apply-background-color(disabled);
+  color: graytext;
+}
+
+/* %option-disabled */
+%option-disabled {
+  @include apply-text-color(disabled);
+  color: graytext;
+}
+
+/* %button-disabled */
+%button-disabled {
+  pointer-events: none;
+
+  @include apply-background-color(disabled);
+  color: graytext;
+  border-color: get-color(disabled); // For browsers that don't support transparent
+  border-color: transparent;
+
+  box-shadow: none;
+}
+
 /* %label-invalid */
 %label-invalid {
   @include apply-color(caution);
@@ -66,6 +90,18 @@ span, small {
 
 select {
   vertical-align: bottom;
+
+  &:disabled {
+    optgroup, option {
+      @extend %option-disabled;
+    }
+  }
+}
+
+optgroup, option {
+  &:disabled {
+    @extend %option-disabled;
+  }
 }
 
 input:not([type='checkbox']):not([type='radio']), select:not([size]):not([multiple]) {
@@ -91,9 +127,8 @@ input, textarea, select {
   }
 
   &:disabled {
-    @include apply-background-color(disabled, $apply-text-color: false);
+    @extend %input-disabled;
   }
-
   &:focus {
     outline: none;
     box-shadow: $input-focus-box-shadow;
@@ -221,13 +256,7 @@ label[aria-invalid] {
   }
 
   &:disabled, &.disabled, fieldset:disabled & {
-    pointer-events: none;
-
-    @include apply-background-color(disabled);
-    border-color: get-color(disabled); // For browsers that don't support transparent
-    border-color: transparent;
-
-    box-shadow: none;
+    @extend %button-disabled;
   }
 }
 
