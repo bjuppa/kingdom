@@ -1,6 +1,6 @@
 // Clearfix from https://css-tricks.com/snippets/css/clear-fix/
 
-// Add a supports-condition to disable the clearfix when the condition is supported
+// Provide the $supports-condition to disable the clearfix when that condition is supported
 @mixin clearfix($supports-condition: false) {
   &::after {
     content: "";
@@ -8,8 +8,8 @@
     clear: both;
   }
 
-  @if($supports-condition) {
-    @supports(#{$supports-condition}) {
+  @if ($supports-condition) {
+    @supports (#{"(" + $supports-condition + ")"}) {
       &::after {
         display: none;
       }
