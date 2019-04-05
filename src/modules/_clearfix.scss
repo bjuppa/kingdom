@@ -8,8 +8,8 @@
     clear: both;
   }
 
-  @if($supports-condition) {
-    @supports(#{$supports-condition}) {
+  @if ($supports-condition) {
+    @supports (#{$supports-condition}) {
       &::after {
         display: none;
       }
