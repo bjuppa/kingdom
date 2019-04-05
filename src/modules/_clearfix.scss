@@ -9,7 +9,7 @@
   }
 
   @if ($supports-condition) {
-    @supports (#{ '(' + $supports-condition + ')' }) {
+    @supports (#{"(" + $supports-condition + ")"}) {
       &::after {
         display: none;
       }
