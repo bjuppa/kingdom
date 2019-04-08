@@ -1,7 +1,7 @@
 @import "colors";
 
 // Generate a random primary color and corresponding text color if not already defined in $colors map
-@include register-color(primary, hsl(random(361), 30+random(60), 20+random(60)));
+@include register-color(primary, hsl(random(361), 50 + (2*round(random()) - 1) * (4 + random(16)), 20+random(60)));
 
 // Generate body background and text color if not already defined in $colors map
 @if lightness(get-color(primary)) < 50% {
