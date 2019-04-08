@@ -31,15 +31,6 @@
   @extend %text-x-small-block;
 }
 
-// TODO: remove text-body utilities? One should use .text-1 if needed anyway.
-.text-body {
-  @extend %text-1;
-}
-
-.text-body-block {
-  @extend %text-1-block;
-}
-
 .text-inherit {
   @extend %text-inherit;
 }
