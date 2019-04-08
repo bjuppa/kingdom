@@ -3,25 +3,48 @@
 @import "../../modules/breakpoints";
 @import "../../modules/converters";
 
-.columns-readable {
+.columns-readable,
+.columns-readable-horizontal {
   max-width: $readable-line-length-max;
 }
 
 @supports (column-span: all) {
+  %invert-vertical-spacing {
+    > {
+      margin-top: 0;
+      margin-bottom: spacing-base-var();
+    }
+
+    > {
+      dt, li, label, legend, hgroup,
+      h1, h2, h3, h4, h5, h6 {
+        margin-bottom: 0;
+      }
+    }
+  }
+
   .columns-readable {
+    @extend %invert-vertical-spacing;
     max-width: none;
     column-width: $readable-line-length-min;
   }
 
+  .columns-readable-horizontal {
+    @extend %invert-vertical-spacing;
+  }
+
   .columns-2 {
+    @extend %invert-vertical-spacing;
     column-count: 2;
   }
 
   .columns-3 {
+    @extend %invert-vertical-spacing;
     column-count: 3;
   }
 
   .columns-4 {
+    @extend %invert-vertical-spacing;
     column-count: 4;
   }
 
@@ -39,26 +62,20 @@
 
 }
 
-.columns-readable-horizontal {
-  max-width: $readable-line-length-max;
+@media screen and (min-width: #{get-breakpoint(two-columns)}) {
+  @supports (columns: length-rem($readable-line-length-min) auto) and (max-height: calc(100vh - 6 * var(--spacing-base))) {
+    .columns-readable-horizontal {
+      columns: length-rem($readable-line-length-min) auto;
+      max-width: none;
+      max-height: calc(100vh - 6 * var(--spacing-base));
+    }
 
-  @media screen and (min-width: #{get-breakpoint(two-columns)}) {
-    @supports (columns: length-rem($readable-line-length-min) auto) and (max-height: calc(100vh - 6 * var(--spacing-base))) {
-      & {
-        columns: length-rem($readable-line-length-min) auto;
-        max-width: none;
-        max-height: calc(100vh - 6 * var(--spacing-base));
-      }
+    .columns-readable-horizontal-scroll {
+      overflow-x: auto;
+      @include length-relative(padding-bottom);
 
-      @at-root {
-        .columns-readable-horizontal-scroll {
-          overflow-x: auto;
-          @include length-relative(padding-bottom);
-
-          > * {
-            min-width: calc(100% + #{length-rem($spacing-base)});
-          }
-        }
+      > * {
+        min-width: calc(100% + #{length-rem($spacing-base)});
       }
     }
   }
