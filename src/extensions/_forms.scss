@@ -345,6 +345,11 @@ button,
   }
 }
 
+// Submit buttons in invalid forms
+:invalid [type="submit"]:not([formnovalidate]) {
+  opacity: .5;
+}
+
 /* Form layout */
 
 label {
