@@ -55,7 +55,7 @@ input, button, select {
   outline-offset: -2px; //Same focus ring size for same border in Safari
 }
 
-[type='checkbox'], [type='radio'] {
+[type="checkbox"], [type="radio"] {
   border: initial;
   @include baseline-align;
   height: auto;
