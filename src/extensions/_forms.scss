@@ -87,8 +87,8 @@ span, small {
 }
 
 // Input descriptions
-[id*='description'],
-[id*='Description'] {
+[id*="description"],
+[id*="Description"] {
   @extend %description;
 }
 
@@ -110,7 +110,7 @@ optgroup, option {
   }
 }
 
-input:not([type='checkbox']):not([type='radio']), select:not([size]):not([multiple]) {
+input:not([type="checkbox"]):not([type="radio"]), select:not([size]):not([multiple]) {
   @include border-preserving-line-height($spacing-base, $input-border-width);
 }
 
@@ -161,7 +161,7 @@ input, textarea {
   }
 }
 
-[type='checkbox'], [type='radio'] {
+[type="checkbox"], [type="radio"] {
   background: initial;
   box-shadow: initial;
   border: initial;
@@ -183,7 +183,7 @@ input, textarea {
   }
 }
 
-[type='radio'] {
+[type="radio"] {
   border-radius: 50%;
 }
 
@@ -191,12 +191,12 @@ input, textarea {
   width: 100%;
 }
 
-[type='text'], textarea:not([cols]) {
+[type="text"], textarea:not([cols]) {
   @extend %input-width-full;
   max-width: $readable-line-length-max;
 }
 
-[type='email'], [type='tel'], [type='password'], [type='search'] {
+[type="email"], [type="tel"], [type="password"], [type="search"] {
   @extend %input-width-full;
   max-width: $readable-line-length-max/2;
 }
@@ -221,8 +221,8 @@ label[aria-invalid] {
 }
 
 // Error messages
-[id*='error'],
-[id*='Error'] {
+[id*="error"],
+[id*="Error"] {
   @extend %error-message;
 }
 
@@ -267,9 +267,9 @@ label[aria-invalid] {
 }
 
 button,
-[type='button'],
-[type='reset'],
-[type='submit'] {
+[type="button"],
+[type="reset"],
+[type="submit"] {
   @extend %button;
 }
 
