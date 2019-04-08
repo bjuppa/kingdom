@@ -205,6 +205,13 @@ input, textarea {
   max-width: $readable-line-length-max/2;
 }
 
+[type="number"],
+[type="datetime-local"], [type="time"], [type="date"], [type="month"], [type="week"],
+[type="tel"],
+[type="range"] {
+  font-variant-numeric: tabular-nums;
+}
+
 /* Labels */
 label {
   @extend %font-forms;
