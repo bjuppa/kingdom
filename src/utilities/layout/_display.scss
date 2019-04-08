@@ -26,10 +26,5 @@
   display: table-cell;
 }
 
-//TODO: remove the .hidden util? One should use the hidden html attribute anyway
-.hidden {
-  display: none;
-}
-
 @include extend-for-children(block inline-block table-row table-cell);
 @include extend-for-descendants(inline inline-block);
