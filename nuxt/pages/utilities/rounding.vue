@@ -5,7 +5,9 @@
       Rounding
     </h1>
     <p>
-      Coming soon
+      Element corners can be rounded using utilities from
+      <a href="https://github.com/bjuppa/kingdom/blob/master/src/utilities/_rounding.scss"
+        target="_blank"><code>src/utilities/_rounding.scss</code></a>.
     </p>
 
     <aside class="flex children:mt-1 children:space-horizontally w-readable text-center children:space-inside">
