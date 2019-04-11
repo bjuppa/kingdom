@@ -10,7 +10,7 @@
 
 @supports (column-span: all) {
   %invert-vertical-spacing {
-    > {
+    > * {
       margin-top: 0;
       margin-bottom: spacing-base-var();
     }
