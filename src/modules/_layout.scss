@@ -28,6 +28,7 @@
 
   > * {
     @include line-height($line-height);
+    @extend %mt-0 !optional;
   }
 }
 
@@ -40,6 +41,6 @@
 
   > * {
     @include line-height($line-height);
+    @extend %mt-0 !optional;
   }
 }
-
