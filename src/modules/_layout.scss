@@ -25,11 +25,7 @@
 @mixin display-flex($line-height: inherit) {
   display: flex;
   @include line-height($line-height);
-
-  > * {
-    @include line-height($line-height);
-    @extend %mt-0 !optional;
-  }
+  @include reset-child-item-layout();
 }
 
 @mixin display-inline-flex($vertical-align: bottom, $line-height: inherit) {
@@ -38,9 +34,27 @@
   @if ($vertical-align) {
     vertical-align: $vertical-align;
   }
+  @include reset-child-item-layout();
+}
 
+@mixin display-grid($line-height: inherit) {
+  display: grid;
+  @include line-height($line-height);
+  @include reset-child-item-layout();
+}
+
+@mixin display-inline-grid($vertical-align: bottom, $line-height: inherit) {
+  display: inline-grid;
+  @include line-height($line-height);
+  @if ($vertical-align) {
+    vertical-align: $vertical-align;
+  }
+  @include reset-child-item-layout();
+}
+
+@mixin reset-child-item-layout() {
   > * {
-    @include line-height($line-height);
+    @include line-height(inherit);
     @extend %mt-0 !optional;
   }
 }
