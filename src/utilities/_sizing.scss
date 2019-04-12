@@ -46,6 +46,7 @@ $fraction-sizing-utilities: (
 }
 
 .h-px {
+  //TODO: the .h-px utility should probably set height directly, not extend placeholder.
   @extend %h-px;
 }
 

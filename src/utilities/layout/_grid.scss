@@ -1,10 +1,15 @@
 // Utilities for grid
 @import "../../modules/sizing";
+@import "../../modules/layout";
 
 // Display
 
 .grid {
-  display: grid;
+  @include display-grid();
+}
+
+.inline-grid {
+  @include display-inline-grid();
 }
 
 .grid-auto-flow-column {
