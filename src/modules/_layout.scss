@@ -21,3 +21,12 @@
     vertical-align: $vertical-align;
   }
 }
+
+@mixin display-flex($line-height: inherit) {
+  display: flex;
+  @include line-height($line-height);
+
+  > * {
+    @include line-height($line-height);
+  }
+}
