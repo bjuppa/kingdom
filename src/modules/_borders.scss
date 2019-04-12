@@ -1,9 +1,9 @@
 $border-width: 1px !default;
 $border-style: solid !default;
 
-@import "../modules/strip-unit";
-@import "../modules/element-types";
-@import "../modules/colors";
+@import "strip-unit";
+@import "element-types";
+@import "colors";
 
 @mixin border-for-fixed-height($sides: top bottom left right, $width: $border-width) {
   @each $side in $sides {
