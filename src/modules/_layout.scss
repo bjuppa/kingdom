@@ -30,3 +30,16 @@
     @include line-height($line-height);
   }
 }
+
+@mixin display-inline-flex($vertical-align: bottom, $line-height: inherit) {
+  display: inline-flex;
+  @include line-height($line-height);
+  @if ($vertical-align) {
+    vertical-align: $vertical-align;
+  }
+
+  > * {
+    @include line-height($line-height);
+  }
+}
+

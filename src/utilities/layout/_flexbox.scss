@@ -8,7 +8,7 @@
 }
 
 .inline-flex {
-  display: inline-flex;
+  @include display-inline-flex();
 }
 
 // Direction
