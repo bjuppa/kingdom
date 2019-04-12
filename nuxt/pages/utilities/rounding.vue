@@ -17,7 +17,7 @@
       All of the rounded-utilities can be combined with suffixes to only affect top, bottom, left & right corners.
     </p>
 
-    <aside class="flex children:mt-1 children:space-horizontally w-readable text-center children:space-inside">
+    <aside class="flex children:space-horizontally w-readable text-center children:space-inside">
       <div class="rounded-sm background-color-gray-100 py-1">
         Small rounded corners with class <code>rounded-sm</code>
       </div>
@@ -29,20 +29,20 @@
       </div>
     </aside>
 
-    <aside class="flex children:mt-1 children:space-horizontally w-readable text-center align-items-center justify-content-space-around ">
+    <aside class="flex children:space-horizontally w-readable text-center align-items-center justify-content-space-around ">
       <div class="rounded-1 background-color-gray-100 py-1 space-inside visualize-vertical-rhythm">
         Line-high radius with class <code>rounded-1</code>
       </div>
-      <code class="rounded-full block h-4 w-4 flex-no-shrink background-color-gray-100 flex align-items-center">
+      <code class="rounded-full h-4 w-4 flex-no-shrink background-color-gray-100 flex align-items-center">
         rounded-full
       </code>
-      <code class="rounded-full block flex-no-shrink pt-1/2 px-1/2 background-color-gray-100">
+      <code class="rounded-full flex-no-shrink pt-1/2 px-1/2 background-color-gray-100">
         rounded-full
       </code>
     </aside>
 
     <aside class="w-readable">
-      <ul class="list-unstyled children:mt-1">
+      <ul class="list-unstyled adjacent-children:mt-1">
         <li v-for="sizeSuffix in ['-sm', '', '-lg', '-1', '-full', '-none']" :class="'rounded'.concat(sizeSuffix)" class="background-color-gray-100 text-center py-1">
           <code>rounded{{ sizeSuffix }}</code>
           <ul class="list-inline mt-0 children:space-horizontally children:mt-1">

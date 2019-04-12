@@ -8,7 +8,7 @@
       Coming soon
     </p>
 
-    <aside class="flex flex-wrap children:space-horizontally justify-content-space-around children:mt-1 children:space-inside">
+    <aside class="mt-0 flex flex-wrap children:space-horizontally justify-content-space-around children:mt-1 children:space-inside">
       <div class="shadow"><code>shadow</code></div>
       <div class="shadow-inner"><code>shadow-inner</code></div>
       <div class="shadow-none"><code>shadow-none</code></div>
