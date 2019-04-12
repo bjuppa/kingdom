@@ -1,19 +1,13 @@
+@import "sizing";
+
 @mixin display-block($line-height: inherit) {
   display: block;
-  @if ($line-height == inherit) {
-    line-height: var(--line-height, inherit);
-  } @else if($line-height) {
-    line-height: $line-height;
-  }
+  @include line-height($line-height);
 }
 
 @mixin display-inline-block($vertical-align: bottom, $line-height: inherit) {
   display: inline-block;
-  @if ($line-height == inherit) {
-    line-height: var(--line-height, inherit);
-  } @else if($line-height) {
-    line-height: $line-height;
-  }
+  @include line-height($line-height);
   @if ($vertical-align) {
     vertical-align: $vertical-align;
   }
@@ -22,9 +16,7 @@
 @mixin display-inline($vertical-align: baseline, $line-height: 0) {
   display: inline;
   // $line-height: 0 will prevent inline elements from affecting the line height of their parents should they have their size or font changed
-  @if ($line-height) {
-    line-height: $line-height;
-  }
+  @include line-height($line-height);
   @if ($vertical-align) {
     vertical-align: $vertical-align;
   }
