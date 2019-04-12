@@ -1,13 +1,14 @@
 // Utilities for flexbox
+@import "../../modules/layout";
 
 // Display
 
 .flex {
-  display: flex;
+  @include display-flex();
 }
 
 .inline-flex {
-  display: inline-flex;
+  @include display-inline-flex();
 }
 
 // Direction

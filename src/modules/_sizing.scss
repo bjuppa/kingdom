@@ -21,9 +21,14 @@ $readable-line-length-max: 75ch !default;
   }
 }
 
-// Apply font size and line height, and put the line-height in a CSS custom property for use in other calculations
+// Apply font size and line height
 @mixin size-text($font-size, $line-height) {
   font-size: $font-size;
+  @include line-height($line-height);
+}
+
+// Apply line-height and put it in a CSS custom property for use in other calculations
+@mixin line-height($line-height) {
   @if (type-of($line-height) == 'number' and $line-height != 0) {
     @if (unit($line-height) == unit($spacing-base)) {
       --line-height: calc(#{$line-height/$spacing-base} * #{spacing-base-var()});
