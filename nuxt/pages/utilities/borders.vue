@@ -15,40 +15,41 @@
       text contents and the borders.
     </p>
 
-    <figure class="w-readable mt-0 flex flex-wrap children:space-horizontally children:space-inside children:mt-1 justify-content-space-evenly">
-      <div class="border">
-        <code>border</code>
-      </div>
+    <figure class="w-readable">
+      <div class="border pb-1 flex flex-wrap children:space-horizontally children:space-inside children:mt-1 justify-content-space-evenly">
+        <div class="border">
+          <code>border</code>
+        </div>
 
-      <div class="border-l">
-        <code>border-l</code>
-      </div>
-      <div class="border-r">
-        <code>border-r</code>
-      </div>
-      <div class="border-lr">
-        <code>border-lr</code>
-      </div>
+        <div class="border-l">
+          <code>border-l</code>
+        </div>
+        <div class="border-r">
+          <code>border-r</code>
+        </div>
+        <div class="border-lr">
+          <code>border-lr</code>
+        </div>
 
 
-      <div class="border-t">
-        <code>border-t</code>
-      </div>
-      <div class="border-b">
-        <code>border-b</code>
-      </div>
-      <div class="border-tb">
-        <code>border-tb</code>
-      </div>
+        <div class="border-t">
+          <code>border-t</code>
+        </div>
+        <div class="border-b">
+          <code>border-b</code>
+        </div>
+        <div class="border-tb">
+          <code>border-tb</code>
+        </div>
 
-      <div class="border-0 background-color-gray-100">
-        Use <code>border-0</code> to remove borders
+        <div class="border-0 background-color-gray-100">
+          Use <code>border-0</code> to remove borders
+        </div>
+        <div class="unborder background-color-gray-100">
+          Use <code>unborder</code> to remove borders and any padding
+        </div>
       </div>
-      <div class="unborder background-color-gray-100">
-        Use <code>unborder</code> to remove borders and any padding
-      </div>
-
-      <figcaption class="w-full text-center">Examples of the border utility classes</figcaption>
+      <figcaption>Examples of the border utility classes</figcaption>
     </figure>
 
   </main>
