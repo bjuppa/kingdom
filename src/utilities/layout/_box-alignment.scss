@@ -1,9 +1,23 @@
 // Utilities for box alignment
 // https://www.w3.org/TR/css-align-3/#overview
+// https://rachelandrew.co.uk/css/cheatsheets/box-alignment
 
-/* Align content within element (effectively adjusts padding) */
+/*
 
-/* justify-content along main/inline axis */
+  `align-self` / `align-items` on the block/column/cross axis, within "lines".
+
+  `align-content` in any additional space on the block/column/cross axis of the container.
+  - No effect in flexbox unless there are multiple "lines" on the cross axis with `wrap`.
+
+  `justify-self` / `justify-items` on the inline/row axis, within "columns".
+  - In flexbox, use auto margin instead.
+
+  `justify-content` in any additional space on the inline/row/main axis of the container.
+
+*/
+
+
+/* justify-content in additional space along the inline axis */
 
 .justify-content-start {
   justify-content: start;
@@ -41,7 +55,7 @@
   justify-content: space-evenly;
 }
 
-/* align-content along cross/block axis (only effects multiple lines in flexbox) */
+/* align-content in additional space along the block axis */
 
 .align-content-start {
   align-content: start;
@@ -83,9 +97,7 @@
   align-content: space-evenly;
 }
 
-/* Align element within parent (effectively adjusts margins) */
-
-/* justify-self along inline axis */
+/* justify-self along the inline axis */
 
 .justify-self-auto {
   justify-self: auto;
@@ -119,7 +131,7 @@
   justify-self: baseline;
 }
 
-/* align-self along cross/block axis */
+/* align-self along the block axis */
 
 .align-self-auto {
   align-self: auto;
@@ -153,9 +165,7 @@
   align-self: baseline;
 }
 
-/* Align items inside box (effectively adjusts child items' margins) */
-
-/* justify-items along inline axis (controls child items’ justify-self: auto) */
+/* justify-items along the inline axis (controls child items’ justify-self: auto) */
 
 .justify-items-start {
   justify-items: start;
@@ -185,7 +195,7 @@
   justify-items: baseline;
 }
 
-/* align-items along cross/block axis (controls child items’ align-self: auto) */
+/* align-items along the block axis (controls child items’ align-self: auto) */
 
 .align-items-start {
   align-items: start;
