@@ -12,6 +12,7 @@
       >
         <code>src/utilities/layout/_breaks.scss</code>
       </a>
+      and are useful together with the <reload-link to="columns">column utilities</reload-link>.
     </p>
     <ul class="adjacent-children:mt-1 descendants:mt-0 list-unstyled">
       <li>
