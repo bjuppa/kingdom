@@ -57,11 +57,11 @@
 }
 
 @for $i from 1 through 10 {
-  .orphans-#{i} {
+  .orphans-#{$i} {
     orphans: $i;
   }
 
-  .widows-#{i} {
+  .widows-#{$i} {
     widows: $i;
   }
 }
