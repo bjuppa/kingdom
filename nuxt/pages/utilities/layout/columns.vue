@@ -9,7 +9,8 @@
       <p>
         In supporting browsers, CSS column layouts can be created using the utility classes from
         <a href="https://github.com/bjuppa/kingdom/blob/master/src/utilities/layout/_columns.scss"
-           target="_blank"><code>src/utilities/layout/_columns.scss</code></a>.
+           target="_blank"><code>src/utilities/layout/_columns.scss</code></a>
+          in combination with the <reload-link to="breaks">breaks utilities</reload-link>.
       </p>
       <p>
         Most of the column utility classes are wrapped in supports-clauses to make sure columns
@@ -26,7 +27,6 @@
         utilities</reload-link> which set the number of orphan lines roughly matching the minimum line-length.
         It's useful in situations where the contents would otherwise be split up in many very short columns because of
         the available width.
-        The effect is that any paragraph shorter than the column is wide will not break over two columns.
       </p>
     </div>
 
@@ -48,7 +48,7 @@
           <reload-link to="#last-paragraph" relative>last paragraph</reload-link> disappears.
         </p>
 
-        <h3>And now, 10 paragraphs of Lorem ipsum&hellip;</h3>
+        <h3 class="avoid-break-after">And now, 10 paragraphs of Lorem ipsum&hellip;</h3>
         <p v-for="item in 10" class="italic color-gray-300">
           Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore
           magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
